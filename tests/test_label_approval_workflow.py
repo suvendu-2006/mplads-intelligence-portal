@@ -132,11 +132,11 @@ def test_confirmed_fraud_rejects_unbacked_placeholders(setup_isolated_env):
         )
 
 
-def test_confirmed_fraud_with_stored_authentic_document(setup_isolated_env):
+def test_confirmed_fraud_with_stored_authentic_document(setup_isolated_env, tmp_path):
     session, work_id = setup_isolated_env
-    # Store real non-empty evidence
+    # Store real non-empty evidence in test tmp_path
     content = b"%PDF-1.4 Official CAG Audit Findings - Site 999999 non-existent."
-    saved_path, checksum = store_evidence_document("cag_audit_999999.pdf", content)
+    saved_path, checksum = store_evidence_document("cag_audit_999999.pdf", content, target_dir=tmp_path)
 
     label = record_human_audit_feedback(
         session=session,

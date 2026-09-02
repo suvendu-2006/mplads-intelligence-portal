@@ -11,12 +11,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 load_dotenv()
 
 from mplads_fraud_detection.foundation.schema import Base
+from mplads_fraud_detection.config import get_absolute_db_path
 
 # Alembic Config object
 config = context.config
 
 # Read DATABASE_URL from environment
-database_url = os.getenv("DATABASE_URL", "sqlite:///mplads_dev.db")
+database_url = get_absolute_db_path(os.getenv("DATABASE_URL", "sqlite:///mplads_dev.db"))
 config.set_main_option("sqlalchemy.url", database_url)
 
 # Interpret the config file for Python logging

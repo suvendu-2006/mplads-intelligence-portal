@@ -43,13 +43,14 @@ def compute_file_sha256(filepath: Path) -> str:
     return sha256.hexdigest()
 
 
-def store_evidence_document(filename: str, content: bytes) -> Tuple[str, str]:
+def store_evidence_document(filename: str, content: bytes, target_dir: Optional[Path] = None) -> Tuple[str, str]:
     """
     Stores an official audit evidence document into the immutable evidence store.
 
     Args:
         filename: Original file name (e.g. 'cag_audit_krishna_2026.pdf')
         content: Binary content of the uploaded document
+        target_dir: Optional directory to store document (defaults to EVIDENCE_DIR)
 
     Returns:
         Tuple of (stored_relative_path, sha256_checksum)
@@ -64,12 +65,13 @@ def store_evidence_document(filename: str, content: bytes) -> Tuple[str, str]:
     if checksum == EMPTY_FILE_SHA256:
         raise ValueError("Evidence document cannot have the empty-file SHA-256 hash.")
 
-    EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
+    dest_dir = Path(target_dir) if target_dir is not None else EVIDENCE_DIR
+    dest_dir.mkdir(parents=True, exist_ok=True)
 
     # Sanitize filename
     clean_filename = re.sub(r"[^\w\.-]", "_", Path(filename).name)
     stored_name = f"{checksum[:16]}_{clean_filename}"
-    target_path = EVIDENCE_DIR / stored_name
+    target_path = dest_dir / stored_name
 
     # Write file immutably (do not overwrite if already exists with same content)
     if not target_path.exists():

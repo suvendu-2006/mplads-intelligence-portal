@@ -5,6 +5,8 @@ A high-performance Streamlit application for forensic auditing of India's MPLADS
 
 import os
 import json
+from datetime import datetime, timezone
+from typing import NamedTuple, Optional
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -76,15 +78,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+class DashboardData(NamedTuple):
+    metrics: Optional[dict]
+    df_anom: Optional[pd.DataFrame]
+    df_ent: Optional[pd.DataFrame]
+    df_works: Optional[pd.DataFrame]
+    df_rq: Optional[pd.DataFrame]
+    df_preds: Optional[pd.DataFrame]
+    last_run_time: Optional[str]
+
+
 @st.cache_data(ttl=60)
-def load_dashboard_data():
+def load_dashboard_data() -> DashboardData:
     """Loads consolidated pipeline metrics and anomaly records."""
     init_db()
     session = SessionLocal()
     try:
         latest_run = session.query(PipelineRun).filter(PipelineRun.status == "COMPLETED").order_by(PipelineRun.started_at.desc()).first()
         if not latest_run:
-            return None, None, None, None
+            return DashboardData(None, None, None, None, None, None, None)
 
         run_id = latest_run.run_id
         metrics = generate_verified_metrics(session, run_id)
@@ -169,7 +181,7 @@ def load_dashboard_data():
 
         last_run_time = latest_run.completed_at.strftime("%Y-%m-%d %H:%M UTC") if latest_run.completed_at else "Active"
 
-        return metrics, df_anom, df_ent, df_works, df_rq, df_preds, last_run_time
+        return DashboardData(metrics, df_anom, df_ent, df_works, df_rq, df_preds, last_run_time)
     finally:
         session.close()
 
@@ -302,11 +314,12 @@ st.warning(
 )
 
 # Top KPI Metric Row: 5 Action Triage Tiers
+total_works_count = metrics.get('total_works', 0)
+q_exp = metrics.get('questioned_expenditure_cr', metrics.get('total_fraud_value_cr', metrics.get('deduplicated_fraud_value_crores', 0.0)))
 k1, k2, k3, k4, k5 = st.columns(5)
 with k1:
-    st.metric("Total Works Screened", f"{metrics['total_works']:,}", "8,512 Unified")
+    st.metric("Total Works Screened", f"{total_works_count:,}", f"{total_works_count:,} Unified")
 with k2:
-    q_exp = metrics.get('deduplicated_fraud_value_crores', 348.53)
     st.metric("Questioned Expenditure", f"₹{q_exp:.2f} Cr", "Under Review")
 with k3:
     audit_count = metrics['risk_tier_distribution'].get('Audit Now', 0)

@@ -37,12 +37,29 @@ if not WORKS_COMPLETED_DETAILED_CSV.exists():
     ALL_MPS_SUMMARY_CSV = BASE_DIR / "03_MPs_Data" / "all_mps_summary.csv"
     ALL_DISTRICTS_MPLADS_SUMMARY_CSV = BASE_DIR / "10_District_Level_Data" / "all_districts_mplads_summary.csv"
 
+if not EXPENDITURES_CSV.exists():
+    fallback_exp = BASE_DIR / "07_Expenditures" / "expenditures.csv"
+    if fallback_exp.exists():
+        EXPENDITURES_CSV = fallback_exp
+
+
+def get_absolute_db_path(url: str) -> str:
+    """Convert relative SQLite path to absolute based on BASE_DIR."""
+    if url.startswith("sqlite:///"):
+        path_part = url[len("sqlite:///"):]
+        if path_part != ":memory:":
+            p = Path(path_part)
+            if not p.is_absolute():
+                return f"sqlite:///{BASE_DIR / p}"
+    return url
+
+
 from dotenv import load_dotenv
 load_dotenv()
 
 # Application Environment: development | staging | production
 APP_ENV = os.environ.get("APP_ENV", "development")
-DATABASE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/mplads_dev.db")
+DATABASE_URL = get_absolute_db_path(os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/mplads_dev.db"))
 
 # Production validation check
 if APP_ENV == "production":

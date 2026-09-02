@@ -8,6 +8,12 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/ssl:/var/lib/postgresql/ssl:ro
+    command: >
+      postgres
+      -c ssl=on
+      -c ssl_cert_file=/var/lib/postgresql/ssl/server.crt
+      -c ssl_key_file=/var/lib/postgresql/ssl/server.key
     networks:
       - mplads_internal
     healthcheck:

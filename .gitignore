@@ -51,6 +51,7 @@ backups/
 *.h5
 artifacts/*.pkl
 artifacts/*.log
+artifacts/*test*
 
 # IDE & OS files
 .DS_Store
@@ -58,3 +59,17 @@ artifacts/*.log
 .idea/
 *.swp
 *~
+
+# Operational logs & audit evidence uploads
+logs/
+*.log
+data/evidence/*
+!data/evidence/.gitkeep
+
+# SSL Certificates & Private Keys
+*.key
+docker/postgres/ssl/*.key
+docker/postgres/ssl/*.crt
+!docker/postgres/ssl/.gitkeep
+
+

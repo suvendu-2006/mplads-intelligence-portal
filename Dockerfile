@@ -16,9 +16,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install python dependencies with deterministic lockfile
-COPY pyproject.toml requirements.lock ./
+ARG ML_ENABLED=true
+COPY pyproject.toml requirements.lock requirements-minimal.lock* ./
 RUN pip install --upgrade pip setuptools wheel && \
-    pip install -r requirements.lock && \
+    if [ "$ML_ENABLED" = "false" ] && [ -f requirements-minimal.lock ]; then \
+      pip install -r requirements-minimal.lock; \
+    else \
+      pip install -r requirements.lock; \
+    fi && \
     pip install --no-deps .
 
 # Copy application source

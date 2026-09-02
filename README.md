@@ -89,3 +89,31 @@ SIH-DATA/
 |-- MPLADS_Master_Summary.xlsx (Multi-tab Excel Workbook with 10+ analysis sheets)
 `-- README.md
 ```
+
+---
+
+## Evidence Store Policy
+
+The `data/evidence/` directory contains cryptographically verified audit evidence documents.
+- All files are stored immutably as `{sha256[:16]}_{filename}`.
+- Empty-file hashes (`e3b0c442...`) and unbacked placeholder paths are strictly rejected.
+- Test or fabricated evidence is prohibited from the operational evidence store.
+
+---
+
+## Working Directory & Execution Guidelines
+
+Always run commands from the project root directory:
+
+```bash
+# ✅ CORRECT (resolves all datasets and settings accurately)
+cd /path/to/SIH-DATA
+python -m mplads_fraud_detection.pipeline
+alembic upgrade head
+pytest
+
+# ❌ WRONG
+cd /tmp
+python -m mplads_fraud_detection.pipeline
+```
+

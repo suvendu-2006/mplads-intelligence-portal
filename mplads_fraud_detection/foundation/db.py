@@ -38,14 +38,36 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def init_db():
     """
-    Ensures database schema is initialized.
+    Ensures database schema is initialized and verifies schema completeness.
     In staging and production, schema MUST be managed via Alembic migrations.
     Direct create_all() is permitted only in local development/isolated testing.
     """
+    import logging
+    from sqlalchemy import inspect
     from mplads_fraud_detection.settings import settings
-    if settings.APP_ENV in ["production", "staging"]:
-        return
-    Base.metadata.create_all(bind=engine)
+    logger = logging.getLogger("mplads_db")
+
+    if settings.APP_ENV not in ("production", "staging"):
+        Base.metadata.create_all(bind=engine)
+
+    # Verify critical tables exist
+    inspector = inspect(engine)
+    required_tables = [
+        'works', 'fraud_labels', 'label_history',
+        'anomalies', 'pipeline_runs', 'users', 'audit_logs'
+    ]
+
+    existing_tables = inspector.get_table_names()
+    missing_tables = [t for t in required_tables if t not in existing_tables]
+
+    if missing_tables and settings.APP_ENV in ("staging", "production"):
+        raise RuntimeError(
+            f"Database schema incomplete. Missing tables: {missing_tables}. "
+            f"Run 'alembic upgrade head' to initialize schema."
+        )
+
+    if missing_tables:
+        logger.warning(f"Missing tables in development database: {missing_tables}")
 
 
 @contextmanager

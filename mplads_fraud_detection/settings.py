@@ -9,13 +9,16 @@ from typing import Literal, Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field, field_validator, model_validator
 
+from pathlib import Path
+
 logger = logging.getLogger("mplads_settings")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
     """Application runtime configuration with fail-closed security gates."""
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=(str(PROJECT_ROOT / ".env"), ".env"),
         env_file_encoding="utf-8",
         extra="ignore"
     )
@@ -33,6 +36,12 @@ class Settings(BaseSettings):
     SMTP_USER: Optional[str] = None
     SMTP_PASS: Optional[str] = None
     ALERT_EMAIL: str = "admin@agency.gov.in"
+
+    @field_validator("DATABASE_URL")
+    @classmethod
+    def ensure_absolute_db_path(cls, v: str) -> str:
+        from mplads_fraud_detection.config import get_absolute_db_path
+        return get_absolute_db_path(v)
 
     @field_validator("SECRET_KEY")
     @classmethod

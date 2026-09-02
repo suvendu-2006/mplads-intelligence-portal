@@ -373,7 +373,33 @@ def export_stratified_audit_sample(session: Session, run_id: str, output_path: O
     df_ranked = pd.DataFrame(work_rows).sort_values("rank_score", ascending=False).reset_index(drop=True)
     df_critical = df_ranked.iloc[:500].sample(min(400, len(df_ranked.iloc[:500])), random_state=42)
     df_high = df_ranked.iloc[500:1000].sample(min(300, len(df_ranked.iloc[500:1000])), random_state=42) if len(df_ranked) > 500 else pd.DataFrame()
-    df_watch = df_ranked.iloc[2000:].sample(min(200, len(df_ranked.iloc[2000:])), random_state=42) if len(df_ranked) > 2000 else pd.DataFrame()
+
+    selected_ids = set(df_critical["work_id"]).union(set(df_high["work_id"]))
+
+    # Behavioral / Soft detectors stratum (timing, bulk completion, vague description, plausibility mismatch)
+    behavioral_detectors = {
+        "timing_anomaly", "bulk_completion", "vague_description", "plausibility_mismatch",
+        "d7_timing_anomaly", "d8_bulk_completion", "d10_vague_description", "d11_plausibility_mismatch"
+    }
+
+    def has_behavioral_detector(dets_str: str) -> bool:
+        dets = [d.strip().lower() for d in str(dets_str).split(",")]
+        return any(d in behavioral_detectors for d in dets)
+
+    df_behavioral_candidates = df_ranked[
+        (~df_ranked["work_id"].isin(selected_ids)) &
+        (df_ranked["detectors_triggered"].apply(has_behavioral_detector))
+    ]
+
+    if len(df_behavioral_candidates) >= 200:
+        df_watch = df_behavioral_candidates.sample(200, random_state=42)
+    elif len(df_behavioral_candidates) > 0:
+        needed = 200 - len(df_behavioral_candidates)
+        remaining = df_ranked[~df_ranked["work_id"].isin(selected_ids.union(set(df_behavioral_candidates["work_id"])))]
+        supp = remaining.sample(min(needed, len(remaining)), random_state=42) if len(remaining) > 0 else pd.DataFrame()
+        df_watch = pd.concat([df_behavioral_candidates, supp], ignore_index=True)
+    else:
+        df_watch = df_ranked.iloc[1000:].sample(min(200, len(df_ranked.iloc[1000:])), random_state=42) if len(df_ranked) > 1000 else pd.DataFrame()
 
     # Clean works sample
     flagged_ids = set(df_ranked["work_id"])

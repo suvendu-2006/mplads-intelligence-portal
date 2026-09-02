@@ -51,4 +51,5 @@ def test_valid_development_settings():
         ML_PREDICTIONS_ENABLED=False
     )
     assert s.APP_ENV == "development"
-    assert s.DATABASE_URL == "sqlite:///test.db"
+    assert s.DATABASE_URL.endswith("/test.db")
+    assert s.DATABASE_URL.startswith("sqlite:////")

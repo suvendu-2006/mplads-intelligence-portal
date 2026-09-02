@@ -2,7 +2,7 @@
 set -e
 
 echo "================================================================="
-echo "  PRODUCTION-READY ACCEPTANCE GATE - MPLADS AUDIT TRIAGE (v3.6)  "
+echo "  PRODUCTION-READY ACCEPTANCE GATE - MPLADS AUDIT TRIAGE (v3.7)  "
 echo "================================================================="
 
 # [1/16] Security: No hardcoded credentials
@@ -189,6 +189,6 @@ echo "[16/16] Executing Staging Smoke Test (PostgreSQL TLS & Migration DDL)..."
 
 echo ""
 echo "================================================================="
-echo "  ✅ ALL 16 COMPREHENSIVE ACCEPTANCE GATES PASSED (v3.6)"
-echo "  Evidence Verification, Lockfile, and Staging TLS Fully Certified"
+echo "  ✅ ALL 16 COMPREHENSIVE ACCEPTANCE GATES PASSED (v3.7)"
+echo "  Production-Hardened System Certified (Zero Contamination & Secure)"
 echo "================================================================="

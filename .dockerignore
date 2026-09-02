@@ -1,0 +1,68 @@
+# .dockerignore
+# Exclude development files, virtual environments, and database dumps from Docker build context
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Database files & backups
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.db.backup
+mplads_fraud.db.backup
+backups/
+test_*.db
+
+# Version control & CI
+.git/
+.github/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Secrets & Environment
+.env
+!.env.example
+
+# Logs & Evidence
+logs/
+*.log
+data/evidence/*
+!data/evidence/.gitkeep
+
+# Heavy ML Models & Quarantine
+artifacts/*.pkl
+artifacts/*.h5
+artifacts/*.joblib
+quarantine/
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Docs build
+docs/_build/
