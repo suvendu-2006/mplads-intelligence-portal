@@ -8,10 +8,11 @@ import json
 import pandas as pd
 import numpy as np
 import streamlit as st
+import bcrypt
 from sqlalchemy.orm import Session
 
 from mplads_fraud_detection.foundation.db import SessionLocal, init_db
-from mplads_fraud_detection.foundation.schema import Work, Anomaly, EntityRisk, PipelineRun, ReviewQueueItem, Prediction, FraudLabel
+from mplads_fraud_detection.foundation.schema import Work, Anomaly, EntityRisk, PipelineRun, ReviewQueueItem, Prediction, FraudLabel, User, AuditLog
 from mplads_fraud_detection.foundation.utils import generate_verified_metrics, calculate_composite_score
 from mplads_fraud_detection.review_queue.priority_router import record_human_audit_feedback
 from mplads_fraud_detection.pipeline import run_full_pipeline
@@ -167,10 +168,60 @@ def load_dashboard_data():
         session.close()
 
 
+# ==========================================
+# AUTHENTICATION & RBAC ACCESS GATE
+# ==========================================
+def check_authentication():
+    if st.session_state.get("authenticated", False):
+        return True
+
+    col_a, col_b, col_c = st.columns([1, 2, 1])
+    with col_b:
+        st.markdown("<div style='text-align: center; margin-top: 3rem;'><h2>🛡️ MPLADS Audit Triage Hub</h2><p style='color: #64748B;'>Restricted Forensic Access & Audit Verification Platform</p></div>", unsafe_allow_html=True)
+        with st.form("login_form"):
+            user_input = st.text_input("Username", key="login_username")
+            pass_input = st.text_input("Password", type="password", key="login_password")
+            submit = st.form_submit_button("Sign In to Secure Audit Hub", use_container_width=True, type="primary")
+
+            if submit:
+                session = SessionLocal()
+                try:
+                    user = session.query(User).filter_by(username=user_input, is_active=True).first()
+                    if user and bcrypt.checkpw(pass_input.encode("utf-8"), user.password_hash.encode("utf-8")):
+                        st.session_state["authenticated"] = True
+                        st.session_state["username"] = user.username
+                        st.session_state["role"] = user.role
+                        st.session_state["user_id"] = user.user_id
+
+                        log = AuditLog(
+                            user_id=user.user_id,
+                            action="USER_LOGIN_SUCCESS",
+                            entity_type="USER_SESSION",
+                            entity_id=user.user_id,
+                            details_json={"role": user.role}
+                        )
+                        session.add(log)
+                        session.commit()
+                        st.rerun()
+                    else:
+                        st.error("Authentication failed: Invalid username or password.")
+                finally:
+                    session.close()
+
+        st.caption("Default administrative credentials: username `admin` / password `ChangeMe123!`")
+    return False
+
+if not check_authentication():
+    st.stop()
+
+
 # Sidebar Controls
 st.sidebar.image("https://img.icons8.com/fluency/96/shield.png", width=64)
 st.sidebar.title("MPLADS Forensic Hub")
-st.sidebar.caption("Canonical Rev-4.1 Architecture")
+st.sidebar.markdown(f"👤 **{st.session_state.get('username', 'User')}** (`{st.session_state.get('role', 'Viewer')}`)")
+if st.sidebar.button("🚪 Logout", use_container_width=True):
+    st.session_state.clear()
+    st.rerun()
 
 metrics, df_anom, df_ent, df_works, df_rq, df_preds, last_run_time = load_dashboard_data()
 
@@ -550,3 +601,34 @@ with tab_run:
         file_name="mplads_flagged_anomalies.csv",
         mime="text/csv"
     )
+
+    if st.session_state.get("role") == "Admin":
+        st.markdown("---")
+        st.markdown("##### 👥 User & RBAC Management (Admin Only)")
+        session = SessionLocal()
+        try:
+            users_list = session.query(User).all()
+            user_data = [{"Username": u.username, "Role": u.role, "Active": u.is_active, "Created At": str(u.created_at)} for u in users_list]
+            st.dataframe(pd.DataFrame(user_data), use_container_width=True, hide_index=True)
+
+            st.markdown("###### ➕ Register New Auditor / Analyst Account")
+            with st.form("new_user_form"):
+                new_u = st.text_input("New Username")
+                new_p = st.text_input("New Password", type="password")
+                new_r = st.selectbox("Assign Role", ["Viewer", "Analyst", "Auditor", "SeniorReviewer", "Admin"])
+                create_submit = st.form_submit_button("Create Account")
+
+                if create_submit:
+                    if len(new_u) >= 3 and len(new_p) >= 8:
+                        hashed = bcrypt.hashpw(new_p.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+                        new_user_obj = User(username=new_u, password_hash=hashed, role=new_r, is_active=True)
+                        session.add(new_user_obj)
+                        session.commit()
+                        st.success(f"User '{new_u}' successfully registered with role {new_r}!")
+                        st.rerun()
+                    else:
+                        st.error("Username must be >= 3 characters and password >= 8 characters.")
+        finally:
+            session.close()
+    else:
+        st.info("System administration and user management restricted to Admin role.")
