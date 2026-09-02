@@ -15,10 +15,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install python dependencies
-COPY pyproject.toml .
+# Install python dependencies with deterministic lockfile
+COPY pyproject.toml requirements.lock ./
 RUN pip install --upgrade pip setuptools wheel && \
-    pip install . pydantic-settings psycopg2-binary
+    pip install -r requirements.lock && \
+    pip install --no-deps .
 
 # Copy application source
 COPY . .

@@ -56,10 +56,8 @@ def record_human_audit_feedback(
 
     # Validate evidence requirements
     if label_class == "CONFIRMED_FRAUD":
-        if not evidence_document_path or not evidence_checksum:
-            raise ValueError(
-                "CONFIRMED_FRAUD requires evidence_document_path and SHA-256 checksum"
-            )
+        from mplads_fraud_detection.foundation.evidence_store import validate_evidence
+        validate_evidence(evidence_document_path, evidence_checksum)
 
     label_id = str(uuid.uuid4())
     now_utc = datetime.now(timezone.utc)

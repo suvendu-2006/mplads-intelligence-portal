@@ -1,5 +1,5 @@
 """
-Unit tests for Dual-Review Label Approval Workflow & Evidence Verification.
+Unit tests for Dual-Review Label Approval Workflow & Cryptographic Evidence Verification.
 Guaranteed to run against isolated_test_db fixture to prevent contaminating operational database.
 """
 
@@ -9,6 +9,11 @@ from datetime import datetime, timezone
 import streamlit as st
 
 from mplads_fraud_detection.foundation.schema import Work, FraudLabel, LabelHistory, AuditLog, User
+from mplads_fraud_detection.foundation.evidence_store import (
+    EMPTY_FILE_SHA256,
+    store_evidence_document,
+    validate_evidence
+)
 from mplads_fraud_detection.review_queue.priority_router import (
     record_human_audit_feedback,
     approve_audit_label,
@@ -66,7 +71,7 @@ def test_auditor_submits_pending_review_label(setup_isolated_env):
 def test_confirmed_fraud_requires_evidence_and_checksum(setup_isolated_env):
     session, work_id = setup_isolated_env
     # Should raise ValueError without evidence
-    with pytest.raises(ValueError, match="CONFIRMED_FRAUD requires evidence_document_path and SHA-256 checksum"):
+    with pytest.raises(ValueError, match="CONFIRMED_FRAUD requires a valid evidence_document_path"):
         record_human_audit_feedback(
             session=session,
             work_id=work_id,
@@ -76,19 +81,76 @@ def test_confirmed_fraud_requires_evidence_and_checksum(setup_isolated_env):
             audit_notes="Non-existent site"
         )
 
-    # Should succeed with evidence
+
+def test_confirmed_fraud_rejects_empty_file_hash(setup_isolated_env):
+    session, work_id = setup_isolated_env
+    with pytest.raises(ValueError, match="empty file"):
+        record_human_audit_feedback(
+            session=session,
+            work_id=work_id,
+            label_class="CONFIRMED_FRAUD",
+            auditor_id="auditor_02",
+            auditor_name="Auditor Two",
+            audit_notes="Fake empty evidence test",
+            evidence_document_path="https://cag.gov.in/report.pdf",
+            evidence_checksum=EMPTY_FILE_SHA256
+        )
+
+
+def test_confirmed_fraud_rejects_mismatched_checksum(setup_isolated_env, tmp_path):
+    session, work_id = setup_isolated_env
+    # Create real file with specific content
+    test_file = tmp_path / "actual_inspection.pdf"
+    test_file.write_bytes(b"Genuine site inspection report content for testing.")
+
+    # Pass an incorrect 64-hex checksum
+    wrong_hash = "1" * 64
+    with pytest.raises(ValueError, match="Cryptographic evidence mismatch"):
+        record_human_audit_feedback(
+            session=session,
+            work_id=work_id,
+            label_class="CONFIRMED_FRAUD",
+            auditor_id="auditor_02",
+            auditor_name="Auditor Two",
+            audit_notes="Mismatched evidence test",
+            evidence_document_path=str(test_file),
+            evidence_checksum=wrong_hash
+        )
+
+
+def test_confirmed_fraud_rejects_unbacked_placeholders(setup_isolated_env):
+    session, work_id = setup_isolated_env
+    with pytest.raises(ValueError, match="unbacked placeholder path"):
+        record_human_audit_feedback(
+            session=session,
+            work_id=work_id,
+            label_class="CONFIRMED_FRAUD",
+            auditor_id="auditor_02",
+            auditor_name="Auditor Two",
+            evidence_document_path="/evidence/cag_inspection_2026.pdf",
+            evidence_checksum="a" * 64
+        )
+
+
+def test_confirmed_fraud_with_stored_authentic_document(setup_isolated_env):
+    session, work_id = setup_isolated_env
+    # Store real non-empty evidence
+    content = b"%PDF-1.4 Official CAG Audit Findings - Site 999999 non-existent."
+    saved_path, checksum = store_evidence_document("cag_audit_999999.pdf", content)
+
     label = record_human_audit_feedback(
         session=session,
         work_id=work_id,
         label_class="CONFIRMED_FRAUD",
         auditor_id="auditor_02",
         auditor_name="Auditor Two",
-        audit_notes="Non-existent site confirmed by physical audit",
-        evidence_document_path="/evidence/cag_report_2026.pdf",
-        evidence_checksum="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        audit_notes="Non-existent site confirmed by physical CAG audit",
+        evidence_document_path=saved_path,
+        evidence_checksum=checksum
     )
     assert label.review_status == "PENDING_REVIEW"
-    assert label.evidence_checksum_sha256 == "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    assert label.evidence_checksum_sha256 == checksum
+    assert label.evidence_document_path == saved_path
 
 
 def test_viewer_cannot_approve_label(setup_isolated_env):

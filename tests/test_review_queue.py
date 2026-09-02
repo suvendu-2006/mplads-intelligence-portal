@@ -38,8 +38,8 @@ def test_record_human_audit_feedback(isolated_test_db):
         auditor_id="CAG_Team_01",
         confidence="HIGH",
         evidence_summary="Physical inspection confirmed non-existent foundation.",
-        evidence_document_path="/evidence/cag_audit_krishna_2026.pdf",
-        evidence_checksum="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        evidence_document_path="https://cag.gov.in/reports/audit_krishna_2026_work5001.pdf",
+        evidence_checksum="aa5ba0c73b580436de5b029b411cdbd0cca415a365839c8c2bbea541d153ec71"
     )
 
     assert label.work_id == 5001

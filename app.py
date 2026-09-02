@@ -592,9 +592,37 @@ with tab_audit:
             evidence_doc = None
             evidence_sha = None
             if audit_verdict == "CONFIRMED_FRAUD":
-                st.warning("⚠️ CONFIRMED_FRAUD requires verified inspection documentation and SHA-256 checksum.")
-                evidence_doc = st.text_input("Evidence Document Path / URL", "/evidence/cag_inspection_2026.pdf")
-                evidence_sha = st.text_input("Evidence Document SHA-256 Checksum", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
+                st.warning("⚠️ CONFIRMED_FRAUD requires verified non-empty inspection documentation and a valid SHA-256 checksum.")
+                evidence_mode = st.radio(
+                    "Evidence Input Method",
+                    ["Upload Document File", "Official Remote URL / URI"],
+                    horizontal=True
+                )
+                if evidence_mode == "Upload Document File":
+                    uploaded_doc = st.file_uploader(
+                        "Upload Signed Audit / Inspection Report (PDF, PNG, JPG, ZIP)",
+                        type=["pdf", "png", "jpg", "jpeg", "zip", "docx"],
+                        help="Uploaded files are stored immutably and verified via SHA-256 hash."
+                    )
+                    if uploaded_doc is not None:
+                        from mplads_fraud_detection.foundation.evidence_store import store_evidence_document
+                        doc_bytes = uploaded_doc.read()
+                        if len(doc_bytes) > 0:
+                            saved_path, comp_sha = store_evidence_document(uploaded_doc.name, doc_bytes)
+                            evidence_doc = saved_path
+                            evidence_sha = comp_sha
+                            st.success(f"✓ Document stored immutably. SHA-256: `{comp_sha}`")
+                        else:
+                            st.error("Uploaded document is empty (0 bytes).")
+                else:
+                    evidence_doc = st.text_input(
+                        "Official Remote Document URL / URI",
+                        placeholder="https://cag.gov.in/reports/audit_report_2026.pdf"
+                    )
+                    evidence_sha = st.text_input(
+                        "Document SHA-256 Checksum (64 hex characters)",
+                        placeholder="Enter genuine 64-character SHA-256 checksum of document"
+                    )
 
             @require_role("Auditor", "SeniorReviewer", "Admin")
             def save_field_audit_feedback(wid, verdict, auditor, notes, doc_path, doc_sha):
