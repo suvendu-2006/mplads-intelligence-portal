@@ -41,8 +41,15 @@ htmlcov/
 *.db.backup
 backups/
 
-# Caches & Embeddings Artifacts
-artifacts/embeddings_cache.pkl
+# Environment files
+.env
+!.env.example
+
+# Caches & Model Artifacts
+*.pkl
+*.joblib
+*.h5
+artifacts/*.pkl
 artifacts/*.log
 
 # IDE & OS files
