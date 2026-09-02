@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DB_FILE = BASE_DIR / "mplads_fraud.db"
+DB_FILE = BASE_DIR / "mplads_dev.db"
 BACKUP_DIR = BASE_DIR / "backups"
 
 
