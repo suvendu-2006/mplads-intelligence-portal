@@ -15,23 +15,16 @@ from mplads_fraud_detection.detectors.detector_05_bill_splitting import run_dete
 from mplads_fraud_detection.detectors.detector_08_bulk_completion import run_detector_08_bulk_completion
 
 
-@pytest.fixture(scope="module")
-def setup_injection_db():
-    init_db()
-    session = SessionLocal()
+@pytest.fixture(scope="function")
+def setup_injection_db(isolated_test_db):
+    session, engine = isolated_test_db
     run_id = str(uuid.uuid4())
 
     run_record = PipelineRun(run_id=run_id, run_key="test_synthetic_injections", status="RUNNING")
     session.add(run_record)
     session.commit()
 
-    # Clear works table for isolated injection tests
-    session.query(Work).delete()
-    session.commit()
-
-    yield session, run_id
-
-    session.close()
+    return session, run_id
 
 
 def test_synthetic_fraud_injections(setup_injection_db):

@@ -141,15 +141,28 @@ def run_full_pipeline(
         sample_path = export_stratified_audit_sample(session, run_id)
         logger.info(f"Saved stratified audit ground-truth sample to {sample_path}")
 
-        # Commit All Detector Records
+        # Update PipelineRun status directly within active transaction
+        active_run = session.query(PipelineRun).filter(PipelineRun.run_id == run_id).first()
+        if active_run:
+            active_run.status = "COMPLETED"
+            active_run.completed_at = datetime.now(timezone.utc)
+
+        # Commit All Detector Records and Status Atomically
         session.commit()
-        update_pipeline_run_status(run_id, "COMPLETED")
         logger.info("Pipeline Transaction Committed Successfully!")
 
     except Exception as e:
         session.rollback()
         logger.error(f"Pipeline Execution Failed: {e}", exc_info=True)
-        update_pipeline_run_status(run_id, "FAILED", error_msg=str(e))
+        try:
+            fail_run = session.query(PipelineRun).filter(PipelineRun.run_id == run_id).first()
+            if fail_run:
+                fail_run.status = "FAILED"
+                fail_run.error_message = str(e)
+                fail_run.completed_at = datetime.now(timezone.utc)
+                session.commit()
+        except Exception:
+            pass
         raise e
     finally:
         session.close()

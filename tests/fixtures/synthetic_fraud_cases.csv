@@ -1,0 +1,6 @@
+work_id,work_description,cost,category,location,district,mp_name,completion_date,recommended_date,status,has_payments,total_paid,fraud_pattern
+2001,"Construction of CC Road 100 meters in Fraud Village",1500000.0,"Roads - CC","Sector A","TEST_DISTRICT","MP Alpha","2024-06-15","2024-01-10","completed",1,1500000.0,"CPWD_OVERRUN"
+2002,"Construction of Anganwadi Centre Building",1200000.0,"Public Buildings","Sector B","TEST_DISTRICT","MP Ghost","2024-07-20","2024-02-14","completed",0,0.0,"GHOST_WORK"
+2003,"Construction of Concrete Road Section 1",490000.0,"Roads - CC","Main Street","SPLIT_DISTRICT","MP Smurf","2024-08-10","2024-03-01","completed",1,490000.0,"BILL_SPLITTING"
+2004,"Construction of Concrete Road Section 2",495000.0,"Roads - CC","Main Street","SPLIT_DISTRICT","MP Smurf","2024-08-10","2024-03-01","completed",1,495000.0,"BILL_SPLITTING"
+2005,"Drinking Water Purification Unit",500000.0,"Drinking Water","Cluster X","CLONE_DISTRICT","MP CopyPaste","2024-09-12","2024-04-05","completed",1,500000.0,"COPY_PASTE_CLONE"

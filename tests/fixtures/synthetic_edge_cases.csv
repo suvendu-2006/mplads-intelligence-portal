@@ -1,0 +1,6 @@
+work_id,work_description,cost,category,location,district,mp_name,completion_date,recommended_date,status,has_payments,total_paid,edge_case_type
+3001,"Zero rupee sanctioned work",0.0,"Normal/Others","Loc 1","EDGE_DISTRICT","MP Edge",,, "completed",0,0.0,"ZERO_COST"
+3002,"",500000.0,"Normal/Others","Loc 2","EDGE_DISTRICT","MP Edge","2024-05-10","2024-01-01","completed",1,500000.0,"EMPTY_DESCRIPTION"
+3003,"Extreme outlier project",990000000.0,"Mega Project","Loc 3","EDGE_DISTRICT","MP Edge","2025-01-01","2024-01-01","completed",1,990000000.0,"EXTREME_COST"
+3004,"Negative cost entry",-250000.0,"Roads","Loc 4","EDGE_DISTRICT","MP Edge","2024-06-01","2024-02-01","completed",0,0.0,"NEGATIVE_COST"
+3005,"Work completed before recommendation",450000.0,"Community Hall","Loc 5","EDGE_DISTRICT","MP Edge","2023-01-01","2024-01-01","completed",1,450000.0,"TEMPORAL_INVERSION"

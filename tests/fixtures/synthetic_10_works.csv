@@ -1,0 +1,11 @@
+work_id,work_description,cost,category,location,district,mp_name,completion_date,recommended_date,status,has_payments,total_paid
+1001,"Construction of CC Road 200m in Peddapuram",640000.0,"Roads - CC","Peddapuram","EAST GODAVARI","Shri P. Ramana","2024-11-10","2024-05-15","completed",1,640000.0
+1002,"Supply and Installation of 10 Solar Street Lights",240000.0,"Solar Street Light","Samalkota","EAST GODAVARI","Shri P. Ramana","2024-12-05","2024-06-10","completed",1,240000.0
+1003,"Construction of Additional Classroom in ZPHS School",1150000.0,"School Classroom","Kakinada Rural","KAKINADA","Smt. M. Vani","2025-01-20","2024-04-12","completed",1,1150000.0
+1004,"Installation of High Mast Lighting System at Market Yard",480000.0,"High Mast Light","Anakapalli Town","ANAKAPALLI","Shri K. Rao","2025-02-14","2024-08-01","completed",1,480000.0
+1005,"Drilling of Borewell and Handpump with Platform",125000.0,"Drinking Water - Borewell","Chodavaram","ANAKAPALLI","Shri K. Rao","2024-10-18","2024-03-22","completed",1,125000.0
+1006,"Laying of Paver Block Flooring in Community Hall",320000.0,"Roads - Paver","Narsipatnam","ANAKAPALLI","Shri K. Rao","2024-09-30","2024-02-18","completed",1,320000.0
+1007,"Construction of Compound Wall for Govt Junior College",420000.0,"Boundary Wall","Eluru Urban","ELURU","Shri T. Srinivas","2025-03-12","2024-07-05","completed",1,420000.0
+1008,"Setting up of 1000 LPH RO Water Purification Plant",680000.0,"Drinking Water - RO Plant","Denduluru","ELURU","Shri T. Srinivas","2024-12-28","2024-06-25","completed",1,680000.0
+1009,"Construction of CC Drain and Culvert in Ward 4",540000.0,"Drainage","Bhimavaram","WEST GODAVARI","Shri R. Raju","2025-01-15","2024-05-30","completed",1,540000.0
+1010,"Supply of Desktop Computers to Govt High School",350000.0,"Education Equipment","Palakollu","WEST GODAVARI","Shri R. Raju","2024-11-22","2024-08-10","completed",1,350000.0
