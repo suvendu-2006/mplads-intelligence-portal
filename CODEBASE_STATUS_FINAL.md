@@ -499,7 +499,7 @@ STARTING MPLADS FRAUD DETECTION PIPELINE [run_key=master_snapshot_v1]
 ...
 Total Works Audited:          17,039
 Unique Flagged Works:         X,XXX (XX%)
-Deduplicated Fraud Value:     ₹XX.XX Crore
+Questioned Expenditure Under Review: ₹XX.XX Crore
 ...
 ```
 

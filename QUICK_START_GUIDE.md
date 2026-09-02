@@ -61,7 +61,7 @@ python -m mplads_fraud_detection.pipeline
 - D14: MP Risk — Member of Parliament profiling
 
 ### Phase 4: Metrics Generation (2s)
-- Computes deduplicated fraud value
+- Computes deduplicated questioned expenditure value
 - Generates per-detector anomaly counts
 - Calculates risk tier distribution
 - Exports JSON artifact to `artifacts/metrics_master_snapshot_v1.json`
@@ -74,9 +74,9 @@ python -m mplads_fraud_detection.pipeline
 ============================================================
  MPLADS FORENSIC PIPELINE EXECUTION SUMMARY [master_snapshot_v1]
 ============================================================
-Total Works Audited:          17,039
+Total Works Audited:          8,512
 Unique Flagged Works:         X,XXX (XX.X%)
-Deduplicated Fraud Value:     ₹XX.XX Crore
+Questioned Expenditure Under Review: ₹XX.XX Crore
 
 Per-Detector Anomaly Breakdown (Natural Overlap):
   • unusual_pattern        :   XXX works | ₹XX.XX Cr

@@ -106,30 +106,37 @@ def run_full_pipeline(
         # ETL Ingestion
         load_works_into_db(session)
 
+        def run_safe_detector(func, *args, **kwargs):
+            try:
+                with session.begin_nested():
+                    func(*args, **kwargs)
+            except Exception as err:
+                logger.error(f"Detector {func.__name__} failed (rolled back savepoint): {err}", exc_info=True)
+
         # Execute 13 Work-Level Detectors in Logical Dependency Order
         logger.info("Executing Batch 1: Core Financial & Temporal Forensics...")
-        run_detector_03_cost_overruns(session, run_id)
-        run_detector_04_ghost_works(session, run_id)
-        run_detector_06_delay_violation(session, run_id)
-        run_detector_08_bulk_completion(session, run_id)
+        run_safe_detector(run_detector_03_cost_overruns, session, run_id)
+        run_safe_detector(run_detector_04_ghost_works, session, run_id)
+        run_safe_detector(run_detector_06_delay_violation, session, run_id)
+        run_safe_detector(run_detector_08_bulk_completion, session, run_id)
 
         logger.info("Executing Batch 2: Statistical & Structural Anomaly Screens...")
-        run_detector_01_unusual_patterns(session, run_id)
-        run_detector_05_bill_splitting(session, run_id)
-        run_detector_07_timing_anomaly(session, run_id)
-        run_detector_09_benford_anomaly(session, run_id)
+        run_safe_detector(run_detector_01_unusual_patterns, session, run_id)
+        run_safe_detector(run_detector_05_bill_splitting, session, run_id)
+        run_safe_detector(run_detector_07_timing_anomaly, session, run_id)
+        run_safe_detector(run_detector_09_benford_anomaly, session, run_id)
 
         logger.info("Executing Batch 3: Content Forensics & Boundary Reconciliation...")
-        run_detector_02_duplicate_works(session, run_id)
-        run_detector_10_vague_description(session, run_id)
-        run_detector_11_plausibility_mismatch(session, run_id)
-        run_detector_12_verification_gap(session, run_id)
-        run_detector_15_copy_paste_pricing(session, run_id)
+        run_safe_detector(run_detector_02_duplicate_works, session, run_id)
+        run_safe_detector(run_detector_10_vague_description, session, run_id)
+        run_safe_detector(run_detector_11_plausibility_mismatch, session, run_id)
+        run_safe_detector(run_detector_12_verification_gap, session, run_id)
+        run_safe_detector(run_detector_15_copy_paste_pricing, session, run_id)
 
         # Execute Entity-Level Risk Profilers (D13 & D14)
         logger.info("Executing Meta Batch: Entity-Level Forensic Profilers...")
-        run_detector_13_ida_risk(session, run_id)
-        run_detector_14_mp_risk(session, run_id)
+        run_safe_detector(run_detector_13_ida_risk, session, run_id)
+        run_safe_detector(run_detector_14_mp_risk, session, run_id)
 
         # Generate Verified Metrics
         logger.info("Computing Deduplicated Runtime Metrics & Precision Ranks...")
@@ -158,20 +165,19 @@ def run_full_pipeline(
             fail_run = session.query(PipelineRun).filter(PipelineRun.run_id == run_id).first()
             if fail_run:
                 fail_run.status = "FAILED"
-                fail_run.error_message = str(e)
                 fail_run.completed_at = datetime.now(timezone.utc)
-                session.commit()
+            session.commit()
         except Exception:
-            pass
+            session.rollback()
         raise e
     finally:
         session.close()
 
     # 4. Save Verified Metrics Artifact
-    metrics_path = ARTIFACTS_DIR / f"metrics_{run_key}.json"
-    with open(metrics_path, "w") as f:
-        json.dump(metrics, f, indent=2)
-    logger.info(f"Saved verified metrics to {metrics_path}")
+    metrics_file = ARTIFACTS_DIR / f"metrics_{run_key}.json"
+    with open(metrics_file, "w") as f:
+        json.dump(metrics, f, indent=2, default=str)
+    logger.info(f"Saved verified metrics to {metrics_file}")
 
     # Print Summary Report
     print("\n" + "="*70)
@@ -179,7 +185,8 @@ def run_full_pipeline(
     print("="*70)
     print(f"Total Works Audited:          {metrics['total_works']:,}")
     print(f"Unique Flagged Works:         {metrics['unique_flagged_works']:,} ({metrics['unique_flagged_pct']}%)")
-    print(f"Deduplicated Fraud Value:     ₹{metrics['total_fraud_value_cr']:,.2f} Crore")
+    q_val = metrics.get('questioned_expenditure_cr', metrics.get('total_fraud_value_cr', 0.0))
+    print(f"Questioned Expenditure Value: ₹{q_val:,.2f} Crore")
     print("\nPer-Detector Anomaly Breakdown (Natural Overlap):")
     for d, count in metrics["per_detector_counts"].items():
         val = metrics["per_detector_value_cr"].get(d, 0.0)

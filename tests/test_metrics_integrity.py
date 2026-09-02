@@ -15,7 +15,7 @@ def test_metrics_mathematical_integrity():
 
     total_works = metrics["total_works"]
     unique_flagged = metrics["unique_flagged_works"]
-    total_fraud_cr = metrics["total_fraud_value_cr"]
+    q_exp_cr = metrics["questioned_expenditure_cr"]
     per_det_counts = metrics["per_detector_counts"]
     per_det_cr = metrics["per_detector_value_cr"]
     tier_dist = metrics["risk_tier_distribution"]
@@ -29,7 +29,7 @@ def test_metrics_mathematical_integrity():
     assert unique_flagged <= sum_individual_counts, "Unique flagged count exceeds individual sum"
 
     sum_individual_cr = sum(per_det_cr.values())
-    assert total_fraud_cr <= round(sum_individual_cr + 0.01, 2), "Deduplicated fraud value exceeds individual sum"
+    assert q_exp_cr <= round(sum_individual_cr + 0.01, 2), "Deduplicated questioned expenditure exceeds individual sum"
 
     # 3. Database Anomaly Record Verification
     session = SessionLocal()

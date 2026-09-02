@@ -27,5 +27,5 @@ def test_idempotent_pipeline_execution():
     metrics2 = run_full_pipeline(run_key="test_idempotency_key")
 
     assert metrics1["unique_flagged_works"] == metrics2["unique_flagged_works"]
-    assert metrics1["total_fraud_value_cr"] == metrics2["total_fraud_value_cr"]
+    assert metrics1["questioned_expenditure_cr"] == metrics2["questioned_expenditure_cr"]
     assert metrics1["per_detector_counts"] == metrics2["per_detector_counts"]
