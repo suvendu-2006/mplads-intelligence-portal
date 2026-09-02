@@ -38,6 +38,8 @@ htmlcov/
 *.db-shm
 *.sqlite
 *.sqlite3
+*.db.backup
+backups/
 
 # Caches & Embeddings Artifacts
 artifacts/embeddings_cache.pkl
