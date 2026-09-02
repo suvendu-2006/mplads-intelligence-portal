@@ -92,6 +92,17 @@ SIH-DATA/
 
 ---
 
+## Documentation
+
+Full operational, governance, technical, and compliance documentation is organized under [`docs/`](file:///Users/suvendu/Downloads/SIH-DATA/docs/README.md):
+
+* **Getting Started**: [`QUICK_START_GUIDE.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/QUICK_START_GUIDE.md) & [`USER_GUIDE.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/USER_GUIDE.md)
+* **Production & Deployment**: [`DEPLOYMENT.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/DEPLOYMENT.md), [`OPERATIONS.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/OPERATIONS.md), & [`ROLLBACK.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/ROLLBACK.md)
+* **Governance & Ethics**: [`AUDIT_PROTOCOL.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/AUDIT_PROTOCOL.md), [`ETHICS.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/ETHICS.md), & [`RETENTION_POLICY.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/RETENTION_POLICY.md)
+* **Data Provenance**: [`DATA_PROVENANCE.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/DATA_PROVENANCE.md) & [`OFFICIAL_DATA_PROVENANCE_AND_LIMITS.md`](file:///Users/suvendu/Downloads/SIH-DATA/docs/OFFICIAL_DATA_PROVENANCE_AND_LIMITS.md)
+
+---
+
 ## Evidence Store Policy
 
 The `data/evidence/` directory contains cryptographically verified audit evidence documents.
