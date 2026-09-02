@@ -370,10 +370,39 @@ class FraudLabel(Base):
     evidence_summary = Column(Text, nullable=True)
     evidence_documents = Column(JSON, nullable=True)
     audit_outcome_id = Column(String(50), ForeignKey("audit_outcomes.audit_id"), nullable=True)
-    review_status = Column(String(50), default="VERIFIED")
+    review_status = Column(String(50), default="PENDING_REVIEW") # PENDING_REVIEW, VERIFIED, REJECTED
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
 
+    # Dual-Review & Verification Fields
+    auditor_user_id = Column(String(36), ForeignKey("users.user_id"), nullable=True)
+    submitted_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=True)
+    verified_by = Column(String(200), nullable=True)
+    verified_by_user_id = Column(String(36), ForeignKey("users.user_id"), nullable=True)
+    verified_at = Column(DateTime, nullable=True)
+    evidence_document_path = Column(String(500), nullable=True)
+    evidence_checksum_sha256 = Column(String(64), nullable=True)
+    confidence_score = Column(Float, nullable=True)
+
+    # Rejection Fields
+    rejection_reason = Column(Text, nullable=True)
+    rejected_by = Column(String(200), nullable=True)
+    rejected_by_user_id = Column(String(36), ForeignKey("users.user_id"), nullable=True)
+    rejected_at = Column(DateTime, nullable=True)
+
     work = relationship("Work", back_populates="fraud_labels")
+
+
+class LabelHistory(Base):
+    """Immutable Audit Trail for Label State Transitions."""
+    __tablename__ = "label_history"
+
+    history_id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    label_id = Column(String(50), ForeignKey("fraud_labels.label_id", ondelete="CASCADE"), nullable=False, index=True)
+    previous_status = Column(String(50), nullable=True)
+    new_status = Column(String(50), nullable=False)
+    changed_by = Column(String(36), ForeignKey("users.user_id"), nullable=True)
+    changed_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    reason = Column(Text, nullable=True)
 
 
 class LabelReview(Base):

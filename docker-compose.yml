@@ -5,11 +5,11 @@ services:
     environment:
       POSTGRES_DB: mplads_prod
       POSTGRES_USER: mplads_user
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_postgres_password_123}
-    ports:
-      - "5432:5432"
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - mplads_internal
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U mplads_user -d mplads_prod"]
       interval: 5s
@@ -24,13 +24,20 @@ services:
         condition: service_healthy
     environment:
       APP_ENV: production
-      DATABASE_URL: postgresql://mplads_user:${DB_PASSWORD:-secure_postgres_password_123}@db:5432/mplads_prod?sslmode=require
+      DATABASE_URL: postgresql://mplads_user:${DB_PASSWORD}@db:5432/mplads_prod?sslmode=require
       SECRET_KEY: ${SECRET_KEY}
+      DB_PASSWORD: ${DB_PASSWORD}
       ML_PREDICTIONS_ENABLED: "false"
       DEMO_MODE: "false"
     ports:
       - "8501:8501"
-    restart: unless-stopped
+    networks:
+      - mplads_internal
+    restart: on-failure:3
+
+networks:
+  mplads_internal:
+    driver: bridge
 
 volumes:
   postgres_data:

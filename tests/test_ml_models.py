@@ -8,7 +8,15 @@ import pandas as pd
 from mplads_fraud_detection.models.baseline_model import train_baseline_model
 from mplads_fraud_detection.models.gradient_boosting import train_gradient_boosting_model
 from mplads_fraud_detection.models.calibration import calculate_expected_calibration_error
-from mplads_fraud_detection.models.ensemble import CalibratedFraudEnsemble
+from quarantine.ml_system_phase7_blocked.ensemble import CalibratedFraudEnsemble
+import subprocess
+import sys
+
+
+def test_ml_training_script_is_gated():
+    res = subprocess.run([sys.executable, "scripts/train_model.py"], capture_output=True, text=True)
+    assert res.returncode == 1
+    assert "ML system gated until 300+ verified labels collected" in res.stdout
 
 
 @pytest.fixture

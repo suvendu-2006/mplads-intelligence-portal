@@ -37,9 +37,12 @@ def test_record_human_audit_feedback(isolated_test_db):
         label_class="CONFIRMED_FRAUD",
         auditor_id="CAG_Team_01",
         confidence="HIGH",
-        evidence_summary="Physical inspection confirmed non-existent foundation."
+        evidence_summary="Physical inspection confirmed non-existent foundation.",
+        evidence_document_path="/evidence/cag_audit_krishna_2026.pdf",
+        evidence_checksum="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     )
 
     assert label.work_id == 5001
     assert label.label_class == "CONFIRMED_FRAUD"
+    assert label.review_status == "PENDING_REVIEW"
     assert session.query(FraudLabel).count() == 1

@@ -22,6 +22,7 @@ RUN pip install --upgrade pip setuptools wheel && \
 
 # Copy application source
 COPY . .
+RUN chmod +x /app/docker-entrypoint.sh /app/check_env.sh
 
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
@@ -29,4 +30,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 EXPOSE 8501
 
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["/app/docker-entrypoint.sh"]

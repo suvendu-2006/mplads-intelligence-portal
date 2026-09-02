@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session
 from mplads_fraud_detection.foundation.db import SessionLocal, init_db
 from mplads_fraud_detection.foundation.schema import Work, Anomaly, EntityRisk, PipelineRun, ReviewQueueItem, Prediction, FraudLabel, User, AuditLog
 from mplads_fraud_detection.foundation.utils import generate_verified_metrics, calculate_composite_score
-from mplads_fraud_detection.review_queue.priority_router import record_human_audit_feedback
+from mplads_fraud_detection.review_queue.priority_router import record_human_audit_feedback, approve_audit_label, reject_audit_label
 from mplads_fraud_detection.pipeline import run_full_pipeline
 from mplads_fraud_detection.config import (
     DETECTOR_GROUPS, ENTITY_RISK_WEIGHTS, CPWD_BENCHMARK_RATES_CSV, UNIT_PRICES_MASTER_CSV,
@@ -228,12 +228,38 @@ if st.sidebar.button("🚪 Logout", use_container_width=True):
 metrics, df_anom, df_ent, df_works, df_rq, df_preds, last_run_time = load_dashboard_data()
 
 if metrics is None or df_anom is None:
-    st.warning("⚠️ No completed pipeline run found in database.")
-    if st.button("🚀 Initialize & Run Forensic Screening Pipeline"):
-        with st.spinner("Executing 15-detector forensic screening pipeline..."):
-            metrics = run_full_pipeline(run_key="master_snapshot_v1")
-            st.cache_data.clear()
-            st.rerun()
+    st.warning("⚠️ No pipeline run detected. System requires initial setup.")
+
+    # Only Admin can run first pipeline
+    if st.session_state.get("role") != "Admin":
+        session = SessionLocal()
+        try:
+            from mplads_fraud_detection.foundation.schema import AuditLog
+            log = AuditLog(
+                user_id=st.session_state.get("user_id"),
+                action="UNAUTHORIZED_PIPELINE_ATTEMPT",
+                entity_type="PIPELINE",
+                timestamp=datetime.now(timezone.utc),
+                details_json={"attempted_by": st.session_state.get("username", "anonymous")}
+            )
+            session.add(log)
+            session.commit()
+        finally:
+            session.close()
+
+        st.error("❌ Initial pipeline setup requires Admin role.")
+        st.info("Contact your system administrator to run the initial detection pipeline.")
+        st.stop()
+
+    if st.button("🔐 Run Initial Pipeline (Admin Only)", type="primary"):
+        @require_role("Admin")
+        def run_initial_setup():
+            with st.spinner("Executing initial 15-detector pipeline..."):
+                metrics_res = run_full_pipeline(run_key="master_snapshot_v1")
+                st.success("✅ Initial pipeline completed successfully!")
+                st.cache_data.clear()
+                st.rerun()
+        run_initial_setup()
     st.stop()
 
 # Status Indicator in Sidebar
@@ -548,34 +574,122 @@ with tab_audit:
             )
         with col_q2:
             st.markdown("##### 📝 Record Field Audit Finding")
-            st.caption("Submit official ground-truth findings to build supervised fraud-risk calibration.")
+            st.caption("Submit official ground-truth findings as DRAFT for Senior Reviewer approval.")
             sample_ids = df_sample["work_id"].head(50).tolist() if "work_id" in df_sample.columns else []
             selected_wid = st.selectbox("Select Audited Work ID", sample_ids)
             audit_verdict = st.selectbox("Official Finding", [
-                "CONFIRMED_FRAUD",
+                "CLEARED_OR_LEGITIMATE",
                 "SUSPICIOUS_UNCONFIRMED",
-                "CLEARED_OR_LEGITIMATE"
+                "CONFIRMED_FRAUD"
             ])
-            auditor_name = st.text_input("Auditor / Inspection Officer", "Principal Accountant General / Vigilance Team")
+            auditor_name = st.text_input("Auditor / Inspection Officer", st.session_state.get("username", "Principal Accountant General / Vigilance Team"))
             audit_notes = st.text_area("Audit Finding Summary", "Physical site inspection confirmed asset adherence to DPR specifications.")
+
+            evidence_doc = None
+            evidence_sha = None
+            if audit_verdict == "CONFIRMED_FRAUD":
+                st.warning("⚠️ CONFIRMED_FRAUD requires verified inspection documentation and SHA-256 checksum.")
+                evidence_doc = st.text_input("Evidence Document Path / URL", "/evidence/cag_inspection_2026.pdf")
+                evidence_sha = st.text_input("Evidence Document SHA-256 Checksum", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855")
+
             @require_role("Auditor", "SeniorReviewer", "Admin")
-            def save_field_audit_feedback(wid, verdict, auditor, notes):
+            def save_field_audit_feedback(wid, verdict, auditor, notes, doc_path, doc_sha):
                 session = SessionLocal()
                 try:
                     record_human_audit_feedback(
                         session=session,
                         work_id=int(wid),
                         label_class=verdict,
-                        auditor_id=auditor,
-                        evidence_summary=notes
+                        auditor_id=st.session_state.get("user_id", auditor),
+                        auditor_name=auditor,
+                        audit_notes=notes,
+                        evidence_document_path=doc_path,
+                        evidence_checksum=doc_sha
                     )
                     st.cache_data.clear()
-                    st.success(f"Official finding committed for Work #{wid}!")
+                    st.success(f"Draft audit finding submitted for Work #{wid}! Status: PENDING_REVIEW.")
+                    st.rerun()
+                except Exception as err:
+                    st.error(f"Submission failed: {err}")
                 finally:
                     session.close()
 
-            if st.button("💾 Commit Verified Ground-Truth Label"):
-                save_field_audit_feedback(selected_wid, audit_verdict, auditor_name, audit_notes)
+            if st.button("💾 Submit Finding for Senior Review"):
+                save_field_audit_feedback(selected_wid, audit_verdict, auditor_name, audit_notes, evidence_doc, evidence_sha)
+
+        # Senior Reviewer Adjudication Desk (Dual Review)
+        st.markdown("---")
+        st.markdown("##### ⚖️ Senior Reviewer Adjudication Desk (Dual-Review Protocol)")
+        st.caption("Inspect pending draft audit findings submitted by field auditors. Approve or reject before inclusion in ML calibration.")
+
+        session_adj = SessionLocal()
+        try:
+            pending_labels = session_adj.query(FraudLabel).filter(FraudLabel.review_status == "PENDING_REVIEW").all()
+            if pending_labels:
+                pending_data = [{
+                    "Label ID": l.label_id[:8] + "...",
+                    "Work ID": l.work_id,
+                    "Verdict": l.label_class,
+                    "Auditor": l.labeler_id,
+                    "Submitted At": str(l.submitted_at)[:19] if l.submitted_at else "N/A",
+                    "Has Evidence": bool(l.evidence_document_path),
+                    "Notes": (l.evidence_summary or "")[:60]
+                } for l in pending_labels]
+                st.dataframe(pd.DataFrame(pending_data), use_container_width=True, hide_index=True)
+
+                if st.session_state.get("role") in ["SeniorReviewer", "Admin"]:
+                    adjudicate_id = st.selectbox(
+                        "Select Pending Label ID to Adjudicate",
+                        [l.label_id for l in pending_labels],
+                        format_func=lambda x: f"Label {x[:8]}... (Work #{[l.work_id for l in pending_labels if l.label_id==x][0]})"
+                    )
+                    col_adj1, col_adj2 = st.columns(2)
+                    with col_adj1:
+                        conf_score = st.slider("Verification Confidence Score", 0.50, 1.00, 0.95, 0.05)
+                        if st.button("✅ Approve Ground-Truth Label", type="primary"):
+                            @require_role("SeniorReviewer", "Admin")
+                            def do_approve(lid, c_score):
+                                s = SessionLocal()
+                                try:
+                                    approve_audit_label(
+                                        session=s,
+                                        label_id=lid,
+                                        reviewer_id=st.session_state.get("user_id", "admin_user"),
+                                        reviewer_name=st.session_state.get("username", "Senior Reviewer"),
+                                        confidence_score=c_score
+                                    )
+                                    st.success(f"Label {lid[:8]}... approved as VERIFIED!")
+                                    st.cache_data.clear()
+                                    st.rerun()
+                                finally:
+                                    s.close()
+                            do_approve(adjudicate_id, conf_score)
+                    with col_adj2:
+                        rej_reason = st.text_input("Rejection Reason", "Insufficient site inspection evidence")
+                        if st.button("❌ Reject Finding"):
+                            @require_role("SeniorReviewer", "Admin")
+                            def do_reject(lid, reason):
+                                s = SessionLocal()
+                                try:
+                                    reject_audit_label(
+                                        session=s,
+                                        label_id=lid,
+                                        reviewer_id=st.session_state.get("user_id", "admin_user"),
+                                        reviewer_name=st.session_state.get("username", "Senior Reviewer"),
+                                        rejection_reason=reason
+                                    )
+                                    st.warning(f"Label {lid[:8]}... marked as REJECTED.")
+                                    st.cache_data.clear()
+                                    st.rerun()
+                                finally:
+                                    s.close()
+                            do_reject(adjudicate_id, rej_reason)
+                else:
+                    st.info("ℹ️ Adjudication actions are restricted to Senior Reviewer and Admin roles.")
+            else:
+                st.success("✅ No draft findings currently pending review. All submitted labels are reconciled.")
+        finally:
+            session_adj.close()
     else:
         st.warning("Audit sample file not generated yet. Execute pipeline to export stratified audit dataset.")
 
