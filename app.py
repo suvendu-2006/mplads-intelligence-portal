@@ -112,6 +112,7 @@ def load_dashboard_data() -> DashboardData:
                 "explanation": a.explanation,
                 "evidence": a.evidence,
                 "cost": a.work.cost if a.work else 0.0,
+                "state": a.work.state if a.work and a.work.state else "Unknown",
                 "district": a.work.district if a.work else "",
                 "mp_name": a.work.mp_name if a.work else "",
                 "category": a.work.category if a.work else "",
@@ -157,6 +158,7 @@ def load_dashboard_data() -> DashboardData:
         works_records = [{
             "work_id": w.work_id,
             "cost": w.cost,
+            "state": w.state if w.state else "Unknown",
             "district": w.district,
             "mp_name": w.mp_name,
             "category": w.category,
@@ -285,10 +287,29 @@ st.sidebar.success(f"🟢 Pipeline Active (Run: {last_run_time})")
 st.sidebar.markdown("---")
 st.sidebar.subheader("🔍 Forensic Filters")
 
-all_districts = ["All Districts"] + sorted(df_works["district"].unique().tolist())
+# 1. Filter State
+states_list = sorted([s for s in df_works["state"].dropna().unique().tolist() if s and s != "Unknown"])
+all_states = ["All States"] + states_list
+selected_state = st.sidebar.selectbox("Filter State / UT", all_states)
+
+# Filter districts dynamically based on selected state
+if selected_state != "All States":
+    districts_pool = df_works[df_works["state"] == selected_state]["district"].dropna().unique().tolist()
+else:
+    districts_pool = df_works["district"].dropna().unique().tolist()
+
+all_districts = ["All Districts"] + sorted(districts_pool)
 selected_district = st.sidebar.selectbox("Filter District (IDA)", all_districts)
 
-all_mps = ["All MPs"] + sorted(df_works["mp_name"].unique().tolist())
+# Filter MPs dynamically based on selected state and district
+if selected_district != "All Districts":
+    mps_pool = df_works[df_works["district"] == selected_district]["mp_name"].dropna().unique().tolist()
+elif selected_state != "All States":
+    mps_pool = df_works[df_works["state"] == selected_state]["mp_name"].dropna().unique().tolist()
+else:
+    mps_pool = df_works["mp_name"].dropna().unique().tolist()
+
+all_mps = ["All MPs"] + sorted(mps_pool)
 selected_mp = st.sidebar.selectbox("Filter Member of Parliament", all_mps)
 
 all_detectors = sorted(list(DETECTOR_GROUPS.keys()))
@@ -296,6 +317,8 @@ selected_detectors = st.sidebar.multiselect("Filter Detector Types", all_detecto
 
 # Filter Data
 filtered_anom = df_anom.copy()
+if selected_state != "All States":
+    filtered_anom = filtered_anom[filtered_anom["state"] == selected_state]
 if selected_district != "All Districts":
     filtered_anom = filtered_anom[filtered_anom["district"] == selected_district]
 if selected_mp != "All MPs":
@@ -394,6 +417,65 @@ with tab_exec:
             st.button("⚙️ Generating Audit Sample...", disabled=True, use_container_width=True)
 
     st.markdown("---")
+    st.subheader("🗺️ State-Wise Flagged Works & Questioned Expenditure")
+    st.caption("Comprehensive state-by-state geographic breakdown of flagged infrastructure projects and questioned expenditure exposure.")
+
+    # Compute State Summary
+    works_by_state = df_works.groupby("state").agg(
+        total_works=("work_id", "count"),
+        total_cost=("cost", "sum")
+    ).reset_index()
+
+    if not df_anom.empty:
+        anom_unique_works = df_anom.drop_duplicates(subset=["work_id"])
+        flagged_by_state = anom_unique_works.groupby("state").agg(
+            flagged_works=("work_id", "count"),
+            flagged_cost=("cost", "sum")
+        ).reset_index()
+
+        total_flags_by_state = df_anom.groupby("state").agg(
+            total_flags=("work_id", "count")
+        ).reset_index()
+
+        df_state_summary = pd.merge(works_by_state, flagged_by_state, on="state", how="left").fillna(0)
+        df_state_summary = pd.merge(df_state_summary, total_flags_by_state, on="state", how="left").fillna(0)
+        df_state_summary["flagged_pct"] = (df_state_summary["flagged_works"] / df_state_summary["total_works"] * 100).round(1)
+        df_state_summary["questioned_cr"] = (df_state_summary["flagged_cost"] / 1e7).round(2)
+        df_state_summary["total_cost_cr"] = (df_state_summary["total_cost"] / 1e7).round(2)
+        df_state_summary = df_state_summary.sort_values("flagged_works", ascending=False).reset_index(drop=True)
+    else:
+        df_state_summary = pd.DataFrame()
+
+    col_chart1, col_chart2 = st.columns([1, 1])
+    with col_chart1:
+        st.markdown("##### 📊 Top States by Flagged Works Count")
+        if not df_state_summary.empty:
+            st.bar_chart(df_state_summary.set_index("state")[["flagged_works"]].head(10), color="#DC2626")
+    with col_chart2:
+        st.markdown("##### 💰 Top States by Questioned Expenditure (₹ Crores)")
+        if not df_state_summary.empty:
+            st.bar_chart(df_state_summary.set_index("state")[["questioned_cr"]].head(10), color="#D97706")
+
+    # Complete State-Wise Breakdown Table
+    st.markdown("##### 📋 Complete State-Wise Audit Breakdown Table")
+    st.dataframe(
+        df_state_summary[[
+            "state", "total_works", "flagged_works", "flagged_pct", "total_flags", "questioned_cr", "total_cost_cr"
+        ]],
+        use_container_width=True,
+        column_config={
+            "state": st.column_config.TextColumn("State / UT"),
+            "total_works": st.column_config.NumberColumn("Total Works Screened", format="%d"),
+            "flagged_works": st.column_config.NumberColumn("Flagged Works", format="%d"),
+            "flagged_pct": st.column_config.ProgressColumn("% Flagged", min_value=0, max_value=100, format="%.1f%%"),
+            "total_flags": st.column_config.NumberColumn("Total Anomaly Flags", format="%d"),
+            "questioned_cr": st.column_config.NumberColumn("Questioned Exp (₹ Cr)", format="₹%.2f Cr"),
+            "total_cost_cr": st.column_config.NumberColumn("Total Value (₹ Cr)", format="₹%.2f Cr")
+        },
+        hide_index=True
+    )
+
+    st.markdown("---")
     st.subheader("🧩 Detector Co-occurrence Overlap Matrix")
     st.caption("Quantifies multi-detector convergence on identical physical infrastructure works.")
     df_overlap = pd.DataFrame(metrics["overlap_matrix"]).fillna(0).astype(int)
@@ -407,7 +489,7 @@ with tab_anom:
         st.info("No anomalies match the selected filters.")
     else:
         # Display Table
-        display_cols = ["work_id", "detector_type", "severity", "cost", "district", "mp_name", "category", "explanation"]
+        display_cols = ["work_id", "detector_type", "severity", "cost", "state", "district", "mp_name", "category", "explanation"]
         st.dataframe(
             filtered_anom[display_cols].sort_values("severity", ascending=False),
             use_container_width=True,
@@ -425,7 +507,7 @@ with tab_anom:
         w_sample = work_anoms.iloc[0]
         
         st.markdown(f"**Description:** {w_sample['description']}")
-        st.markdown(f"**District:** `{w_sample['district']}` | **MP:** `{w_sample['mp_name']}` | **Category:** `{w_sample['category']}` | **Cost:** `₹{w_sample['cost']:,.0f}`")
+        st.markdown(f"**State:** `{w_sample.get('state', 'Unknown')}` | **District:** `{w_sample['district']}` | **MP:** `{w_sample['mp_name']}` | **Category:** `{w_sample['category']}` | **Cost:** `₹{w_sample['cost']:,.0f}`")
         
         for _, anom_row in work_anoms.iterrows():
             with st.expander(f"🚩 Detector: {anom_row['detector_type']} (Severity: {anom_row['severity']:.2f})", expanded=True):
