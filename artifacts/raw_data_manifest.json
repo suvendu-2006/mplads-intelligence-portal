@@ -1,0 +1,23 @@
+{
+  "06_Works/cpwd_benchmark_rates.csv": "f1e3292e890dd8ae955004fca2e29aad46c5263c1345ebecad96a0c8f5cc7889",
+  "06_Works/derived_project_unit_prices.csv": "aba20242de6eeb82b1a8717544e55f2bad205147e3b28ed594941df1f772f49f",
+  "06_Works/unit_prices_master.csv": "55563bf6fa19ff59ec4706ded86040e3317fe35b5858ed65e5b177b2ff4ec71d",
+  "06_Works/all_mplads_works.csv": "3c7346d5370d85217dd3babd45edca70be7de9e1a3efdc6a438e7634084604de",
+  "06_Works/works_completed_detailed.csv": "251e3d0d853d1ef60714890daea765678d3e4ffe5c6313bb17bd1fb872942f3b",
+  "06_Works/works_completed.csv": "71234a9c10f4b65c7e4578c943f3e1b125b2e51d76957894611c798981d4344b",
+  "06_Works/works_categories.csv": "e9b394672ae601a1d1be0eaa7393fd2465006ec9bc792bafeb44938b48824f06",
+  "06_Works/works_completed_detailed_clean.csv": "ff0f692b5780afaa278eb3e5da18bf4f775f9f160f50f1bbc75be280e1247982",
+  "06_Works/works_recommended.csv": "8197f250881354f6bf135eae1de37989fd4594d1a32b31f0c12fdd2901f2af2f",
+  "07_Expenditures/all_mps_financial_breakdown.csv": "de045491575665ac284ad54eca539f6cb705285df00f5bf61504ed1f56fe359b",
+  "07_Expenditures/expenditures_clean.csv": "ff3a32b819e342752ddf8169ebe2b0159b0ac66f708914ea38a08ee7490645d9",
+  "07_Expenditures/expenditures.csv": "1658caf3387974a05be400e53b16b37292261e638c37226fa86c7e17310449d1",
+  "data/all_districts_mplads_summary.csv": "b55587d320c6a7eaa27c9825e0574a6a5b6e12a5d16cafff8de9c58e6f47e90d",
+  "data/cpwd_benchmark_rates.csv": "f1e3292e890dd8ae955004fca2e29aad46c5263c1345ebecad96a0c8f5cc7889",
+  "data/all_mps_financial_breakdown.csv": "de045491575665ac284ad54eca539f6cb705285df00f5bf61504ed1f56fe359b",
+  "data/expenditures.csv": "1658caf3387974a05be400e53b16b37292261e638c37226fa86c7e17310449d1",
+  "data/unit_prices_master.csv": "55563bf6fa19ff59ec4706ded86040e3317fe35b5858ed65e5b177b2ff4ec71d",
+  "data/works_completed_detailed.csv": "251e3d0d853d1ef60714890daea765678d3e4ffe5c6313bb17bd1fb872942f3b",
+  "data/works_completed.csv": "71234a9c10f4b65c7e4578c943f3e1b125b2e51d76957894611c798981d4344b",
+  "data/works_recommended.csv": "8197f250881354f6bf135eae1de37989fd4594d1a32b31f0c12fdd2901f2af2f",
+  "data/all_mps_summary.csv": "431e2685a3d6983d3bf4fa45880245e8f7f5dd212a19bb913714f06eb2759fef"
+}
