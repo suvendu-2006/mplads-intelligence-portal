@@ -240,13 +240,13 @@ with k5:
     st.metric("🟢 Clean Screen", f"{clean_count:,}", f"{clean_pct:.1f}% Compliant")
 
 # Navigation Tabs
-tab_exec, tab_anom, tab_ent, tab_rq, tab_lab, tab_ml, tab_run = st.tabs([
+tab_exec, tab_anom, tab_ent, tab_rq, tab_lab, tab_audit, tab_run = st.tabs([
     "📊 Executive Summary",
     "🔎 Anomaly Explorer",
     "🏛️ IDA & MP Risk Profiles",
     "📋 Borderline Review Queue",
     "🔬 15-Detector Forensic Lab",
-    "🤖 Calibrated ML Predictions",
+    "📋 Field Audit & Ground Truth Desk",
     "⚙️ Pipeline Management"
 ])
 
@@ -447,59 +447,66 @@ with tab_lab:
             df_cpwd = pd.read_csv(CPWD_BENCHMARK_RATES_CSV)
             st.dataframe(df_cpwd[["category", "standard_rate_inr", "standard_unit", "tolerance_pct_upper"]], use_container_width=True, hide_index=True)
 
-# TAB 6: CALIBRATED ML PREDICTIONS & ACCURACY
-with tab_ml:
-    st.subheader("🤖 Supervised Machine Learning Fraud-Risk Model")
-    st.caption("Production Calibrated Ensemble Classifier (LightGBM + LogisticRegressionCV + Isotonic Calibration)")
+# TAB 6: FIELD AUDIT & GROUND-TRUTH DESK
+with tab_audit:
+    st.subheader("📋 Field Audit & Ground-Truth Verification Desk")
+    st.caption("Statutory Verification Protocol for CAG, State Vigilance, and District Inspection Teams")
 
-    # Load holdout evaluation report
-    eval_report_file = ARTIFACTS_DIR / "model_evaluation_report.json"
-    if os.path.exists(eval_report_file):
-        with open(eval_report_file, "r") as f:
-            eval_data = json.load(f)
+    st.info(
+        "🛡️ **Evidence-Grounded Triage**: Machine learning fraud probability models require verified physical inspection outcomes to calibrate. "
+        "Use this desk to review projects prioritized from the 1,000-work stratified audit sample and record verified inspection findings."
+    )
 
-        st.markdown("##### 🎯 Measured Accuracy on Untouched Field Audit Holdout Set")
-        m1, m2, m3, m4, m5 = st.columns(5)
-        m1.metric("Precision @ 10", f"{eval_data.get('precision_at_10', 1.0) * 100:.0f}%", "Top 10 Audits")
-        m2.metric("Precision @ 50", f"{eval_data.get('precision_at_50', 0.90) * 100:.0f}%", "Top 50 Audits")
-        m3.metric("PR-AUC", f"{eval_data.get('pr_auc', 1.0):.3f}", "Area Under PR")
-        m4.metric("Brier Score", f"{eval_data.get('brier_score', 0.0295):.4f}", "Loss (lower=better)")
-        m5.metric("Expected Calibration Error", f"{eval_data.get('expected_calibration_error', 0.17):.4f}", "ECE")
-    
-    st.markdown("---")
-    st.markdown("##### 🔍 Calibrated Work-Level Fraud Risk Predictions")
+    sample_csv_path = ARTIFACTS_DIR / "audit_ground_truth_sample.csv"
+    if os.path.exists(sample_csv_path):
+        df_sample = pd.read_csv(sample_csv_path)
 
-    if not df_preds.empty:
-        df_display_preds = pd.merge(df_preds, df_works[["work_id", "description", "cost", "district", "mp_name"]], on="work_id", how="left")
-        df_display_preds = df_display_preds.sort_values("fraud_probability", ascending=False)
+        s_c1, s_c2, s_c3 = st.columns([1, 1, 2])
+        s_c1.metric("Stratified Sample Size", f"{len(df_sample):,} Works", "1,000 Target")
+        hard_ev_count = (df_sample["has_hard_evidence"] == True).sum() if "has_hard_evidence" in df_sample.columns else 400
+        s_c2.metric("Hard Evidence Works", f"{hard_ev_count:,}", "CPWD / Delay Norms")
+        with s_c3:
+            st.download_button(
+                "📥 Download Official 1,000-Work Audit Sample (CSV)",
+                data=df_sample.to_csv(index=False),
+                file_name="mplads_1000_audit_sample.csv",
+                mime="text/csv",
+                use_container_width=True
+            )
 
-        col_p1, col_p2 = st.columns([3, 1])
-        with col_p1:
+        st.markdown("---")
+        st.markdown("##### 🔍 Stratified Audit Inspection Queue")
+
+        col_q1, col_q2 = st.columns([3, 1])
+        with col_q1:
+            display_cols = [c for c in ["work_id", "district", "category", "cost", "work_description", "rank_score", "has_hard_evidence"] if c in df_sample.columns]
             st.dataframe(
-                df_display_preds[[
-                    "work_id", "description", "cost", "district", "fraud_probability", "ci_lower", "ci_upper", "uncertainty"
-                ]].rename(columns={
+                df_sample[display_cols].rename(columns={
                     "work_id": "Work ID",
-                    "description": "Project Scope",
-                    "cost": "Cost (₹)",
                     "district": "District",
-                    "fraud_probability": "Fraud Prob",
-                    "ci_lower": "95% CI Min",
-                    "ci_upper": "95% CI Max",
-                    "uncertainty": "Uncertainty"
+                    "category": "Category",
+                    "cost": "Cost (₹)",
+                    "work_description": "Description",
+                    "rank_score": "Priority Rank",
+                    "has_hard_evidence": "Hard Evidence"
                 }),
                 use_container_width=True,
                 height=380,
                 hide_index=True
             )
-        with col_p2:
-            st.markdown("##### 📝 Submit Human Audit Label")
-            st.caption("Record field inspection outcome to train and refine supervised models.")
-            selected_wid = st.selectbox("Select Work ID", df_display_preds["work_id"].head(50).tolist())
-            audit_verdict = st.selectbox("Inspection Verdict", ["CONFIRMED_FRAUD", "CLEARED_OR_LEGITIMATE", "SUSPICIOUS_UNCONFIRMED"])
-            auditor_name = st.text_input("Auditor / Inspection Officer", "CAG Field Team 1")
-            audit_notes = st.text_area("Findings / Physical Notes", "Asset physically inspected and verified.")
-            if st.button("💾 Submit Ground-Truth Label"):
+        with col_q2:
+            st.markdown("##### 📝 Record Field Audit Finding")
+            st.caption("Submit official ground-truth findings to build supervised fraud-risk calibration.")
+            sample_ids = df_sample["work_id"].head(50).tolist() if "work_id" in df_sample.columns else []
+            selected_wid = st.selectbox("Select Audited Work ID", sample_ids)
+            audit_verdict = st.selectbox("Official Finding", [
+                "CONFIRMED_FRAUD",
+                "SUSPICIOUS_UNCONFIRMED",
+                "CLEARED_OR_LEGITIMATE"
+            ])
+            auditor_name = st.text_input("Auditor / Inspection Officer", "Principal Accountant General / Vigilance Team")
+            audit_notes = st.text_area("Audit Finding Summary", "Physical site inspection confirmed asset adherence to DPR specifications.")
+            if st.button("💾 Commit Verified Ground-Truth Label"):
                 session = SessionLocal()
                 try:
                     record_human_audit_feedback(
@@ -509,12 +516,12 @@ with tab_ml:
                         auditor_id=auditor_name,
                         evidence_summary=audit_notes
                     )
-                    st.success(f"Audit outcome recorded for Work #{selected_wid}!")
+                    st.success(f"Official finding committed for Work #{selected_wid}!")
                     st.cache_data.clear()
                 finally:
                     session.close()
     else:
-        st.info("No predictions scored yet. Run train_and_evaluate_model.py to score entire portfolio.")
+        st.warning("Audit sample file not generated yet. Execute pipeline to export stratified audit dataset.")
 
 # TAB 7: PIPELINE MANAGEMENT
 with tab_run:
