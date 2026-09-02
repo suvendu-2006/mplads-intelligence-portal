@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: mplads_db
+    environment:
+      POSTGRES_DB: mplads_prod
+      POSTGRES_USER: mplads_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_postgres_password_123}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mplads_user -d mplads_prod"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    container_name: mplads_web
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_ENV: production
+      DATABASE_URL: postgresql://mplads_user:${DB_PASSWORD:-secure_postgres_password_123}@db:5432/mplads_prod?sslmode=disable
+      SECRET_KEY: ${SECRET_KEY}
+      ML_PREDICTIONS_ENABLED: "false"
+      DEMO_MODE: "false"
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

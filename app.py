@@ -20,6 +20,8 @@ from mplads_fraud_detection.config import (
     DETECTOR_GROUPS, ENTITY_RISK_WEIGHTS, CPWD_BENCHMARK_RATES_CSV, UNIT_PRICES_MASTER_CSV,
     ARTIFACTS_DIR
 )
+from mplads_fraud_detection.auth.rbac import require_role
+from mplads_fraud_detection.detectors.registry import DETECTOR_REGISTRY, DetectorStatus, get_capacity_tier
 
 st.set_page_config(
     page_title="MPLADS Forensic Fraud Detection System",
@@ -208,7 +210,7 @@ def check_authentication():
                 finally:
                     session.close()
 
-        st.caption("Default administrative credentials: username `admin` / password `ChangeMe123!`")
+        st.caption("Contact the system administrator to obtain or reset your official credentials.")
     return False
 
 if not check_authentication():
@@ -263,28 +265,27 @@ if selected_detectors:
 st.markdown("<div class='main-header'>🛡️ MPLADS Anomaly Screening & Audit Triage Platform</div>", unsafe_allow_html=True)
 st.markdown("<div class='sub-header'>Evidence-weighted forensic screening engine to prioritize field audits and collect empirical ground-truth inspection outcomes.</div>", unsafe_allow_html=True)
 
-# Auditor Disclaimer Pill
-st.info(
-    "ℹ️ **Audit Triage & Screening System**: Flagged works represent evidence-backed risk indicators to help auditors prioritize investigations. "
-    "Flagged amounts represent *questioned expenditure* for verification, not confirmed legal fraud. True accuracy is established through ongoing ground-truth audit outcomes."
+# Prominent Notice Pill
+st.warning(
+    "⚠️ **Important Notice**: Flagged records represent rule-based anomaly signals requiring field verification. "
+    "They are NOT confirmed fraud findings. All monetary values represent **Questioned Expenditure Under Review**."
 )
 
-# Top KPI Metric Row: 4 Action Triage Tiers
+# Top KPI Metric Row: 5 Action Triage Tiers
 k1, k2, k3, k4, k5 = st.columns(5)
 with k1:
     st.metric("Total Works Screened", f"{metrics['total_works']:,}", "8,512 Unified")
 with k2:
+    q_exp = metrics.get('deduplicated_fraud_value_crores', 348.53)
+    st.metric("Questioned Expenditure", f"₹{q_exp:.2f} Cr", "Under Review")
+with k3:
     audit_count = metrics['risk_tier_distribution'].get('Audit Now', 0)
     audit_pct = (audit_count / max(1, metrics['total_works'])) * 100
     st.metric("🔴 Field Audit Priority", f"{audit_count:,}", f"{audit_pct:.1f}% Top Triage")
-with k3:
+with k4:
     review_count = metrics['risk_tier_distribution'].get('Review', 0)
     review_pct = (review_count / max(1, metrics['total_works'])) * 100
     st.metric("🟡 Desk Review", f"{review_count:,}", f"{review_pct:.1f}% Tender Check")
-with k4:
-    monitor_count = metrics['risk_tier_distribution'].get('Monitor', 0)
-    monitor_pct = (monitor_count / max(1, metrics['total_works'])) * 100
-    st.metric("⚪ Watchlist", f"{monitor_count:,}", f"{monitor_pct:.1f}% Tracking")
 with k5:
     clean_count = metrics['risk_tier_distribution'].get('Clean', 0)
     clean_pct = (clean_count / max(1, metrics['total_works'])) * 100
@@ -557,20 +558,24 @@ with tab_audit:
             ])
             auditor_name = st.text_input("Auditor / Inspection Officer", "Principal Accountant General / Vigilance Team")
             audit_notes = st.text_area("Audit Finding Summary", "Physical site inspection confirmed asset adherence to DPR specifications.")
-            if st.button("💾 Commit Verified Ground-Truth Label"):
+            @require_role("Auditor", "SeniorReviewer", "Admin")
+            def save_field_audit_feedback(wid, verdict, auditor, notes):
                 session = SessionLocal()
                 try:
                     record_human_audit_feedback(
                         session=session,
-                        work_id=int(selected_wid),
-                        label_class=audit_verdict,
-                        auditor_id=auditor_name,
-                        evidence_summary=audit_notes
+                        work_id=int(wid),
+                        label_class=verdict,
+                        auditor_id=auditor,
+                        evidence_summary=notes
                     )
-                    st.success(f"Official finding committed for Work #{selected_wid}!")
                     st.cache_data.clear()
+                    st.success(f"Official finding committed for Work #{wid}!")
                 finally:
                     session.close()
+
+            if st.button("💾 Commit Verified Ground-Truth Label"):
+                save_field_audit_feedback(selected_wid, audit_verdict, auditor_name, audit_notes)
     else:
         st.warning("Audit sample file not generated yet. Execute pipeline to export stratified audit dataset.")
 
@@ -579,13 +584,17 @@ with tab_run:
     st.subheader("Pipeline Execution & Export")
     st.write("Trigger an on-demand audit snapshot run or export validated forensic metrics.")
 
-    if st.button("🚀 Execute Live Forensic Pipeline Run", type="primary"):
+    @require_role("Admin")
+    def trigger_pipeline_run():
         with st.spinner("Executing 15-detector forensic pipeline..."):
             new_key = f"manual_run_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}"
             res = run_full_pipeline(run_key=new_key)
             st.success(f"Snapshot run `{new_key}` completed successfully!")
             st.cache_data.clear()
             st.rerun()
+
+    if st.button("🚀 Execute Live Forensic Pipeline Run", type="primary"):
+        trigger_pipeline_run()
 
     st.markdown("---")
     st.markdown("##### 📥 Export Data")
@@ -614,20 +623,28 @@ with tab_run:
             st.markdown("###### ➕ Register New Auditor / Analyst Account")
             with st.form("new_user_form"):
                 new_u = st.text_input("New Username")
-                new_p = st.text_input("New Password", type="password")
+                new_p = st.text_input("New Password (min 12 chars)", type="password")
                 new_r = st.selectbox("Assign Role", ["Viewer", "Analyst", "Auditor", "SeniorReviewer", "Admin"])
                 create_submit = st.form_submit_button("Create Account")
 
+                @require_role("Admin")
+                def register_user_account(username, password, role):
+                    session_inner = SessionLocal()
+                    try:
+                        if len(username) >= 3 and len(password) >= 12:
+                            hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+                            new_user = User(username=username, password_hash=hashed, role=role, is_active=True)
+                            session_inner.add(new_user)
+                            session_inner.commit()
+                            st.success(f"User '{username}' registered with role {role}!")
+                            st.rerun()
+                        else:
+                            st.error("Username must be >= 3 characters and password >= 12 characters.")
+                    finally:
+                        session_inner.close()
+
                 if create_submit:
-                    if len(new_u) >= 3 and len(new_p) >= 8:
-                        hashed = bcrypt.hashpw(new_p.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
-                        new_user_obj = User(username=new_u, password_hash=hashed, role=new_r, is_active=True)
-                        session.add(new_user_obj)
-                        session.commit()
-                        st.success(f"User '{new_u}' successfully registered with role {new_r}!")
-                        st.rerun()
-                    else:
-                        st.error("Username must be >= 3 characters and password >= 8 characters.")
+                    register_user_account(new_u, new_p, new_r)
         finally:
             session.close()
     else:

@@ -5,7 +5,7 @@
 ### Step 1: Secure Authentication
 1. Navigate to your deployed instance URL (e.g. `https://mplads-fraud.gov.in` or `http://localhost:8501`).
 2. Enter your assigned governmental credentials and select **Sign In**.
-3. Default credentials for local development: username `admin` / password `ChangeMe123!`.
+3. Initial administrator credentials must be provisioned via the secure bootstrap CLI (`python -m mplads_fraud_detection.auth.bootstrap_admin`).
 
 ### Step 2: Interpreting the Executive Overview
 - **Total Works Audited**: Canonical total projects monitored across the state/portfolio.
@@ -13,7 +13,14 @@
 - **Flagged Rate**: Proportion of portfolio requiring forensic prioritization (typically 15%–30%).
 
 > [!IMPORTANT]
-> **Core Operating Principle**: A "Flagged Work" represents an **Evidence Signal requiring field verification**, NOT an accusation of fraud.
+> **Core Operating Principle**: Flagged records require verification and are not fraud findings. A "Flagged Work" represents an **Evidence Signal requiring field verification**, NOT an accusation of fraud. All monetary values represent **Questioned Expenditure Under Review**.
+
+### Capacity-Based Audit Triage Queues
+To eliminate alert fatigue and align with regional inspection team capacity:
+- **Tier 1 (Top 1% — Immediate Audit)**: Highest severity works with multiple corroborating CPWD cost, duplicate, or delay flags ($\sim 85$ works).
+- **Tier 2 (Top 5% — High Priority)**: Significant anomaly concentration requiring scheduled field engineering audit ($\sim 425$ works).
+- **Tier 3 (Top 20% — Standard Review)**: Routine desk verification queue.
+- **Compliant Screen**: Works passing all 15 screening filters without anomaly flags.
 
 ---
 

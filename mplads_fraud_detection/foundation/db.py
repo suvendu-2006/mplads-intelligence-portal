@@ -37,7 +37,14 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 def init_db():
-    """Create all database tables."""
+    """
+    Ensures database schema is initialized.
+    In staging and production, schema MUST be managed via Alembic migrations.
+    Direct create_all() is permitted only in local development/isolated testing.
+    """
+    from mplads_fraud_detection.settings import settings
+    if settings.APP_ENV in ["production", "staging"]:
+        return
     Base.metadata.create_all(bind=engine)
 
 
