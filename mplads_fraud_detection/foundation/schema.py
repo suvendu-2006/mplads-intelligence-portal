@@ -32,6 +32,44 @@ class PipelineRun(Base):
     predictions = relationship("Prediction", back_populates="pipeline_run", cascade="all, delete-orphan")
 
 
+class Dataset(Base):
+    """Authoritative Registry for all Ingested External Data Files."""
+    __tablename__ = "datasets"
+
+    dataset_id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    dataset_name = Column(String(255), nullable=False)
+    source_organization = Column(String(255), nullable=True)
+    source_url = Column(Text, nullable=True)
+    file_checksum_sha256 = Column(String(64), nullable=False, unique=True, index=True)
+    row_count = Column(Integer, nullable=True)
+    data_origin = Column(String(50), CheckConstraint(
+        "data_origin IN ('OFFICIAL', 'VERIFIED_AUDIT', 'SYNTHETIC_DEMO')"
+    ), nullable=False)
+    retrieved_at = Column(DateTime, nullable=False)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    works = relationship("Work", back_populates="dataset")
+
+
+class IngestionRun(Base):
+    """Tracks batch ETL ingestion cycles with full row count reconciliation."""
+    __tablename__ = "ingestion_runs"
+
+    run_id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    git_commit_hash = Column(String(40), nullable=True)
+    etl_version = Column(String(20), default="v5.0", nullable=True)
+    raw_row_count = Column(Integer, nullable=True)
+    valid_row_count = Column(Integer, nullable=True)
+    duplicate_row_count = Column(Integer, nullable=True)
+    rejected_row_count = Column(Integer, nullable=True)
+    reconciliation_summary = Column(JSON, nullable=True)
+    started_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    completed_at = Column(DateTime, nullable=True)
+    status = Column(String(20), default="RUNNING")  # RUNNING, COMPLETED, FAILED
+
+    works = relationship("Work", back_populates="ingestion_run")
+
+
 class Work(Base):
     """Canonical Single-Source-of-Truth for all MPLADS Infrastructure Works."""
     __tablename__ = "works"
@@ -55,12 +93,23 @@ class Work(Base):
     ls_term = Column(String(50), nullable=True)
     state = Column(String(100), default="ANDHRA PRADESH", nullable=True)
 
-    # Lineage / Provenance Tracking (Phase 2)
+    # Lineage & Provenance Tracking
     source_file = Column(String(255), nullable=True)
     source_file_checksum = Column(String(64), nullable=True)
     source_url = Column(Text, nullable=True)
     retrieved_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=True)
-    etl_version = Column(String(20), default="v4.1", nullable=True)
+    etl_version = Column(String(20), default="v5.0", nullable=True)
+
+    # Phase 2 Data Quality & Source Association
+    data_origin = Column(String(50), default="OFFICIAL", nullable=False)
+    data_quality_status = Column(String(20), default="COMPLETE")  # COMPLETE, PARTIAL, MISSING
+    payment_data_status = Column(String(30), default="NOT_APPLICABLE")  # VERIFIED, MISSING, PARTIAL, NOT_APPLICABLE
+    data_completeness_score = Column(Float, default=1.0)  # 0.0 to 1.0
+    source_dataset_id = Column(String(36), ForeignKey("datasets.dataset_id"), nullable=True)
+    ingestion_run_id = Column(String(36), ForeignKey("ingestion_runs.run_id"), nullable=True)
+
+    dataset = relationship("Dataset", back_populates="works")
+    ingestion_run = relationship("IngestionRun", back_populates="works")
 
     anomalies = relationship("Anomaly", back_populates="work", cascade="all, delete-orphan")
     tenders = relationship("Tender", back_populates="work", cascade="all, delete-orphan")
@@ -361,3 +410,40 @@ class Prediction(Base):
 
     work = relationship("Work", back_populates="predictions")
     pipeline_run = relationship("PipelineRun", back_populates="predictions")
+
+
+# ==========================================
+# AUTHENTICATION & AUDIT TRAIL (RBAC)
+# ==========================================
+
+class User(Base):
+    """Authenticated user accounts with Role-Based Access Control (RBAC)."""
+    __tablename__ = "users"
+
+    user_id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    username = Column(String(50), nullable=False, unique=True, index=True)
+    password_hash = Column(String(255), nullable=False)
+    role = Column(String(20), CheckConstraint(
+        "role IN ('Viewer', 'Analyst', 'Auditor', 'SeniorReviewer', 'Admin')"
+    ), nullable=False)
+    is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    last_login = Column(DateTime, nullable=True)
+
+    audit_logs = relationship("AuditLog", back_populates="user")
+
+
+class AuditLog(Base):
+    """Immutable Audit Trail recording all security and investigative events."""
+    __tablename__ = "audit_logs"
+
+    log_id = Column(String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = Column(String(36), ForeignKey("users.user_id"), nullable=True)
+    action = Column(String(100), nullable=False, index=True)
+    entity_type = Column(String(50), nullable=True)
+    entity_id = Column(String(36), nullable=True)
+    timestamp = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    details_json = Column(JSON, nullable=True)
+
+    user = relationship("User", back_populates="audit_logs")
+

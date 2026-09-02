@@ -37,8 +37,17 @@ if not WORKS_COMPLETED_DETAILED_CSV.exists():
     ALL_MPS_SUMMARY_CSV = BASE_DIR / "03_MPs_Data" / "all_mps_summary.csv"
     ALL_DISTRICTS_MPLADS_SUMMARY_CSV = BASE_DIR / "10_District_Level_Data" / "all_districts_mplads_summary.csv"
 
-# Database Configuration
-DATABASE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/mplads_fraud.db")
+from dotenv import load_dotenv
+load_dotenv()
+
+# Application Environment: development | staging | production
+APP_ENV = os.environ.get("APP_ENV", "development")
+DATABASE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/mplads_dev.db")
+
+# Production validation check
+if APP_ENV == "production":
+    assert DATABASE_URL.startswith("postgresql://"), "Production MUST use PostgreSQL, not SQLite"
+    assert "mplads_fraud.db" not in DATABASE_URL, "Production cannot use local dev database file"
 
 # Global Severity Thresholds (Canonical 5-class system)
 SEVERITY_FLOOR = 0.50  # Global minimum threshold to insert into anomalies table
