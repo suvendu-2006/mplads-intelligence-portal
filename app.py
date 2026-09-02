@@ -22,6 +22,10 @@ from mplads_fraud_detection.config import (
 )
 from mplads_fraud_detection.auth.rbac import require_role
 from mplads_fraud_detection.detectors.registry import DETECTOR_REGISTRY, DetectorStatus, get_capacity_tier
+from mplads_fraud_detection.settings import settings
+from mplads_fraud_detection.logging_config import setup_logging
+
+setup_logging(log_level=settings.LOG_LEVEL, log_file="logs/mplads_app.log")
 
 st.set_page_config(
     page_title="MPLADS Forensic Fraud Detection System",

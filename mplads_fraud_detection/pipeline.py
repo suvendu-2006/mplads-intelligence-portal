@@ -179,23 +179,23 @@ def run_full_pipeline(
         json.dump(metrics, f, indent=2, default=str)
     logger.info(f"Saved verified metrics to {metrics_file}")
 
-    # Print Summary Report
-    print("\n" + "="*70)
-    print(f" MPLADS FORENSIC PIPELINE EXECUTION SUMMARY [{run_key}]")
-    print("="*70)
-    print(f"Total Works Audited:          {metrics['total_works']:,}")
-    print(f"Unique Flagged Works:         {metrics['unique_flagged_works']:,} ({metrics['unique_flagged_pct']}%)")
+    # Log Summary Report
+    logger.info("=" * 70)
+    logger.info(f"MPLADS FORENSIC PIPELINE EXECUTION SUMMARY [{run_key}]")
+    logger.info("=" * 70)
+    logger.info(f"Total Works Audited:          {metrics['total_works']:,}")
+    logger.info(f"Unique Flagged Works:         {metrics['unique_flagged_works']:,} ({metrics['unique_flagged_pct']}%)")
     q_val = metrics.get('questioned_expenditure_cr', metrics.get('total_fraud_value_cr', 0.0))
-    print(f"Questioned Expenditure Value: ₹{q_val:,.2f} Crore")
-    print("\nPer-Detector Anomaly Breakdown (Natural Overlap):")
+    logger.info(f"Questioned Expenditure Value: ₹{q_val:,.2f} Crore")
+    logger.info("Per-Detector Anomaly Breakdown (Natural Overlap):")
     for d, count in metrics["per_detector_counts"].items():
         val = metrics["per_detector_value_cr"].get(d, 0.0)
-        print(f"  • {d:<25}: {count:>5,} works | ₹{val:>8.2f} Cr")
-    print("\nRisk Tier Distribution (Works):")
+        logger.info(f"  • {d:<25}: {count:>5,} works | ₹{val:>8.2f} Cr")
+    logger.info("Risk Tier Distribution (Works):")
     for tier, count in metrics["risk_tier_distribution"].items():
         pct = (count / metrics['total_works']) * 100
-        print(f"  • {tier:<15}: {count:>6,} works ({pct:>5.1f}%)")
-    print("="*70 + "\n")
+        logger.info(f"  • {tier:<15}: {count:>6,} works ({pct:>5.1f}%)")
+    logger.info("=" * 70)
 
     return metrics
 

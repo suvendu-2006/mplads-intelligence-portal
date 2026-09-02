@@ -4,9 +4,12 @@ Enforces fail-closed configuration in production environments.
 """
 
 import os
+import logging
 from typing import Literal, Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field, field_validator, model_validator
+
+logger = logging.getLogger("mplads_settings")
 
 
 class Settings(BaseSettings):
@@ -73,7 +76,7 @@ class Settings(BaseSettings):
 settings = Settings()
 
 if settings.APP_ENV == "production":
-    print("✓ Production configuration validated:")
-    print("  - Database: PostgreSQL with SSL")
-    print(f"  - ML Predictions: {settings.ML_PREDICTIONS_ENABLED}")
-    print(f"  - Demo Mode: {settings.DEMO_MODE}")
+    logger.info("✓ Production configuration validated:")
+    logger.info("  - Database: PostgreSQL with SSL")
+    logger.info(f"  - ML Predictions: {settings.ML_PREDICTIONS_ENABLED}")
+    logger.info(f"  - Demo Mode: {settings.DEMO_MODE}")
