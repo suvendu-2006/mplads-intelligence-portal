@@ -36,35 +36,54 @@ except ValueError:
 print('  ✓ PASS: Configuration fail-closed validated')
 "
 
-# [3/15] Data Integrity
-echo "[3/15] Verifying data integrity and lineage..."
+# [3/15] Data Integrity & Source Lineage
+echo "[3/15] Verifying data integrity, multi-source dataset lineage, and reconciliation..."
 .venv/bin/python3 -c "
 from mplads_fraud_detection.foundation.db import SessionLocal
-from mplads_fraud_detection.foundation.schema import Work, Dataset
+from mplads_fraud_detection.foundation.schema import Work, Dataset, IngestionRun
 session = SessionLocal()
 work_count = session.query(Work).count()
 dataset_count = session.query(Dataset).count()
+missing_lineage = session.query(Work).filter(
+    (Work.source_file == None) | (Work.source_file_checksum == None) | (Work.source_url == None)
+).count()
+latest_run = session.query(IngestionRun).order_by(IngestionRun.started_at.desc()).first()
+
 session.close()
 assert work_count == 8512, f'Expected 8512 works, got {work_count}'
-assert dataset_count > 0, 'No datasets registered'
-print(f'  ✓ PASS: {work_count:,} works, {dataset_count} datasets registered')
+assert dataset_count >= 3, f'Expected at least 3 registered datasets, got {dataset_count}'
+assert missing_lineage == 0, f'{missing_lineage} works lack source file/checksum/URL lineage'
+assert latest_run is not None and latest_run.raw_row_count == 18190, 'IngestionRun raw row count incorrect'
+assert latest_run.duplicate_row_count == 9678, 'IngestionRun duplicate row count incorrect'
+print(f'  ✓ PASS: {work_count:,} works with complete lineage, {dataset_count} datasets, 18,190 raw / 9,678 duplicates reconciled')
 "
 
 # [4/15] Pandera Validation
 echo "[4/15] Testing data validation and quarantine routing..."
 .venv/bin/pytest tests/test_data_validation.py -v --tb=short
 
-# [5/15] Anti-Synthetic Audit
-echo "[5/15] Verifying zero synthetic/fabricated records..."
+# [5/15] Anti-Synthetic & Test Contamination Audit
+echo "[5/15] Verifying zero synthetic records and zero test/demo audit labels..."
 .venv/bin/python3 -c "
 from mplads_fraud_detection.foundation.db import SessionLocal
-from mplads_fraud_detection.foundation.schema import Work
+from mplads_fraud_detection.foundation.schema import Work, FraudLabel, LabelHistory
 
 session = SessionLocal()
 synthetic_works = session.query(Work).filter_by(data_origin='SYNTHETIC_DEMO').count()
 assert synthetic_works == 0, f'Found {synthetic_works} synthetic works'
 
-print('  ✓ PASS: Zero synthetic records in operational tables')
+label_count = session.query(FraudLabel).count()
+history_count = session.query(LabelHistory).count()
+assert label_count == 0, f'Found {label_count} test/demo fraud labels in operational database'
+assert history_count == 0, f'Found {history_count} test/demo label history records in operational database'
+
+# Check honest status terminology
+overstated_quality = session.query(Work).filter_by(data_quality_status='VERIFIED_COMPLIANT').count()
+assert overstated_quality == 0, f'Found {overstated_quality} works with overstated VERIFIED_COMPLIANT status'
+overstated_payment = session.query(Work).filter_by(payment_data_status='NO_DISBURSEMENT_RECORD').count()
+assert overstated_payment == 0, f'Found {overstated_payment} works with unjustified NO_DISBURSEMENT_RECORD status'
+
+print('  ✓ PASS: Zero synthetic records, zero test labels, and honest portal status terminology confirmed')
 session.close()
 "
 
