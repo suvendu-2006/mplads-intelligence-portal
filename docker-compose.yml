@@ -24,7 +24,7 @@ services:
         condition: service_healthy
     environment:
       APP_ENV: production
-      DATABASE_URL: postgresql://mplads_user:${DB_PASSWORD:-secure_postgres_password_123}@db:5432/mplads_prod?sslmode=disable
+      DATABASE_URL: postgresql://mplads_user:${DB_PASSWORD:-secure_postgres_password_123}@db:5432/mplads_prod?sslmode=require
       SECRET_KEY: ${SECRET_KEY}
       ML_PREDICTIONS_ENABLED: "false"
       DEMO_MODE: "false"
