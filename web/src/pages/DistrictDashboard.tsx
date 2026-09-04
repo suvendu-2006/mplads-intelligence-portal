@@ -284,7 +284,7 @@ export const DistrictDashboard: React.FC = () => {
                       <th className="p-3 font-bold">Recommending MP</th>
                       <th className="p-3 font-bold">Category</th>
                       <th className="p-3 font-bold">Status</th>
-                      <th className="p-3 font-bold text-right">Action</th>
+                      {isAuthorized && <th className="p-3 font-bold text-right">Action</th>}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -312,21 +312,23 @@ export const DistrictDashboard: React.FC = () => {
                             {w.status}
                           </span>
                         </td>
-                        <td className="p-3 text-right">
-                          {verifiedMBWorks.includes(w.workId) ? (
-                            <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1">
-                              <CheckCircle2 size={13} />
-                              <span>MB Certified</span>
-                            </span>
-                          ) : (
-                            <button
-                              onClick={() => setSelectedMBWork(w)}
-                              className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm"
-                            >
-                              Verify MB
-                            </button>
-                          )}
-                        </td>
+                        {isAuthorized && (
+                          <td className="p-3 text-right">
+                            {verifiedMBWorks.includes(w.workId) ? (
+                              <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1">
+                                <CheckCircle2 size={13} />
+                                <span>MB Certified</span>
+                              </span>
+                            ) : (
+                              <button
+                                onClick={() => setSelectedMBWork(w)}
+                                className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm"
+                              >
+                                Verify MB
+                              </button>
+                            )}
+                          </td>
+                        )}
                       </tr>
                     ))}
                   </tbody>
@@ -500,7 +502,7 @@ export const DistrictDashboard: React.FC = () => {
       )}
 
       {/* Measurement Book (MB) Verification Dialog */}
-      {selectedMBWork && (
+      {isAuthorized && selectedMBWork && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
           <div className="lux-card max-w-xl w-full p-6 relative shadow-2xl space-y-4">
             <button
