@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb2",
+    "name": "LOVELY ANAND",
+    "constituency": "SHEOHAR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 43561211,
+    "utilizationPercentage": 29.6334768707483,
+    "completedWorksCount": 24,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 25156665,
+    "inProgressPayments": 18404546,
+    "paymentGapPercentage": 42.24984929826675,
+    "completionRate": 26.373626373626376,
+    "pendingWorks": 43,
+    "unspentAmount": 103438789,
+    "totalRecommendedAmount": 60812595,
+    "name_hi": "LOVELY ANAND",
+    "constituency_hi": "SHEOHAR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43561211,
+      "totalEntries": 39,
+      "avgExpenditure": 1116954.1282051282,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10492581,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33068630,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43561211,
+        "transactionCount": 39,
+        "avgAmount": 1116954.1282051282
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 24,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9be",
+        "workCategory": "Normal/Others",
+        "workDescription": "The enclosed Annexure recommends approval of Rs 1000000 for construction of PCC work from Kailash Thakurs house to Sanjay Singhs house in Singahi village of Belwa Panchayat under Piprahi Block",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 993491
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e78b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Enclosure attached Recommendation of 700000 for construction of Sidhi Ghat in Telhara Village Telhara Kala Panchayat Dhaka Block District Motihari",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 694621
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e721",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of the stairway ghat at the Hirapur government pond in the Telhara Kala Panchayat under the Dhaka block Cost amount 1000000 Ten lakhs Rupees",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 995978
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbad",
+        "workCategory": "Normal/Others",
+        "workDescription": "1. In the East Champaran district, under the Chiraiya block, from the Mirpur R.W.D. road to the path leading to Mirpur, PCC work will be done from the field of Kameshwar Prasad to the field of Dr. Akhtar Ansari. The estimated cost is approximately 1500000 (fifteen lakh) only.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 1498817
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbaf",
+        "workCategory": "Normal/Others",
+        "workDescription": "2. East Champaran district in the Chiraiya block PCC work from the Mirpur Panchayat towards Mirpur via the road from Chiraiya Raghunathpur R.W.D to Bhantu Mansuri house starting from Lorik Rai field Estimated cost 1500000",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 1498109
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.417Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddfa",
+    "name": "Bhagirath Chaudhary",
+    "constituency": "AJMER",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47473080,
+    "utilizationPercentage": 32.294612244897955,
+    "completedWorksCount": 58,
+    "recommendedWorksCount": 99,
+    "completedWorksValue": 34238822,
+    "inProgressPayments": 13234258,
+    "paymentGapPercentage": 27.877394936245974,
+    "completionRate": 36.94267515923567,
+    "pendingWorks": 41,
+    "unspentAmount": 99526920,
+    "totalRecommendedAmount": 72667871,
+    "name_hi": "Bhagirath Chaudhary",
+    "constituency_hi": "AJMER",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47473080,
+      "totalEntries": 643,
+      "avgExpenditure": 73830.6065318818,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 19072615,
+        "transactionCount": 255
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28400465,
+        "transactionCount": 388
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47473080,
+        "transactionCount": 643,
+        "avgAmount": 73830.6065318818
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 58,
+    "recommendedCount": 99,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cd9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Community hall and boundary wall construction in Gudli, Panchayat Bir",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 499419
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e924",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cemented block road from Khandal Brahmin Hostel to the main road in front of Jaipur Road.",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 729357
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e718",
+        "workCategory": "Normal/Others",
+        "workDescription": "Community hall construction work in ward no 59",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 440462
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e823",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of open verandah near Samarthpura Ramdin ji  mill, Gram Panchayat Jaswantpura",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 286219
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e822",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of open verandah near Samarthpura Mataji temple, Gram Panchayat Jaswantpura",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 398549
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.443Z"
+}

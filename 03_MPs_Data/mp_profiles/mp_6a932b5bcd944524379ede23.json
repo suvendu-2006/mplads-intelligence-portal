@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede23",
+    "name": "DAGGUMALLA PRASADA RAO",
+    "constituency": "CHITTOOR",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76341346,
+    "utilizationPercentage": 51.932888435374146,
+    "completedWorksCount": 111,
+    "recommendedWorksCount": 115,
+    "completedWorksValue": 58562176,
+    "inProgressPayments": 17779170,
+    "paymentGapPercentage": 23.289044445194875,
+    "completionRate": 49.11504424778761,
+    "pendingWorks": 4,
+    "unspentAmount": 70658654,
+    "totalRecommendedAmount": 73035100,
+    "name_hi": "DAGGUMALLA PRASADA RAO",
+    "constituency_hi": "CHITTOOR",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76341346,
+      "totalEntries": 156,
+      "avgExpenditure": 489367.60256410256,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13958318,
+        "transactionCount": 35
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 33715133,
+        "transactionCount": 79
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28667895,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76341346,
+        "transactionCount": 156,
+        "avgAmount": 489367.60256410256
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 111,
+    "recommendedCount": 115,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e453",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing  Under Ground Drainage System from K Raghunadha Reddy House to Gangamma Temple in M.Boyapalli Habitation of Madhavaram GP in Thavanampalli Mandal, Puthalapattu Constituency.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 483170
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e44c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Under Ground Drainage System from Jaganadha Reddy House to MPPS M.Boyanapalle  in M.Boyapalli Habitation of Madhavaram GP in Thavanampalli Mandal, Puthalapattu Constituency.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 266665
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e451",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Under Ground Drainage System from Gangamma Temple to Kuyyavanka in M.Boyapalli Habitation of Madhavaram GP in Thavanampalli Mandal, Puthalapattu Constituency.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 481703
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Building at nellimandapalli Madiga Wada Village, Peraiahgaripalle GP in Irala Mandal of Puthalapattu Constituency.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 497965
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e316",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Gravelling road to the ZPHS to Gurram Vari Indlu at allamadugu GP in Vedurukuppam Mandal.",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 349737
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.443Z"
+}

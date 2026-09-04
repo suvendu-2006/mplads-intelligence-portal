@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a7",
+    "name": "Shri Shambhu Sharan Patel (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 237168443.49,
+    "totalExpenditure": 175484824,
+    "utilizationPercentage": 73.99164130678251,
+    "completedWorksCount": 199,
+    "recommendedWorksCount": 109,
+    "completedWorksValue": 157543823,
+    "inProgressPayments": 17941001,
+    "paymentGapPercentage": 10.223676663914825,
+    "completionRate": 64.6103896103896,
+    "pendingWorks": -90,
+    "unspentAmount": 61683619.49000001,
+    "totalRecommendedAmount": 70031089,
+    "name_hi": "Shri Shambhu Sharan Patel (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 175484824,
+      "totalEntries": 221,
+      "avgExpenditure": 794048.9773755656,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 18698162,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 53191177,
+        "transactionCount": 44
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 78704702,
+        "transactionCount": 113
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24890783,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 175484824,
+        "transactionCount": 221,
+        "avgAmount": 794048.9773755656
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 199,
+    "recommendedCount": 109,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32324",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dr. Bhimrao Ambedkar Awasiya Vidyalaya, Balirajpur, Block-Rahika, Dist.- Madhubani  Qty. 4 Nos",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 176000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32319",
+        "workCategory": "Normal/Others",
+        "workDescription": "Govt. Utkramit Middle School Ganguli, Block- Benipatti, Dist.- Madhubani  Qty. 4 Nos",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 176000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32331",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sri Bachcha Jha Janta 2 School, Arer,BlockBenipatti,Dist.MadhubaniQty. 4 Nos.",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 176000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3232f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Saryug Anant High School Jafra, Block- Bisfi, Dist.- Madhubani    Qty. 4 Nos",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 176000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32321",
+        "workCategory": "Normal/Others",
+        "workDescription": "SonelalMunilal2HighSchool,Gandhi Nagar, Simari, Block- Bisfi, Dist.- Madhubani Qty. 4 Nos.",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 176000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.804Z"
+}

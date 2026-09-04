@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee28b",
+    "name": "Shri Ramji Lal Suman (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 93005621,
+    "utilizationPercentage": 63.26912993197279,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 35,
+    "completedWorksValue": 48424053,
+    "inProgressPayments": 44581568,
+    "paymentGapPercentage": 47.93427270379712,
+    "completionRate": 45.3125,
+    "pendingWorks": 6,
+    "unspentAmount": 53994379,
+    "totalRecommendedAmount": 49566400,
+    "name_hi": "Shri Ramji Lal Suman (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93005621,
+      "totalEntries": 120,
+      "avgExpenditure": 775046.8416666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 72922033,
+        "transactionCount": 87
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20083588,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93005621,
+        "transactionCount": 120,
+        "avgAmount": 775046.8416666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 35,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30bf5",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF DABAR AT KHET OF BHURI SINGH TO TUBEWALL OF MUKESH VILL-NAGLA LAL SINGH JALESAR (UPSIC ETAH)",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 2182933
+      },
+      {
+        "_id": "6a932bb5cd94452437a30ba5",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF DABAR ROAD TUBEWALL OF KRAPAL SINGHT TO KHET OF JAI SINGH VILL-NAGLA LAL SINGH,JALESAR (UPSIC ETAH )",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 2183120
+      },
+      {
+        "_id": "6a932bb5cd94452437a30bf2",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF DABAR ROAD AT KHET OF GURU DAYAL TO TUBE WALL OF TIPPU VILL-NAGLA LAL SINGH JALESAR ( UPSIC ETAH )",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 2183183
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c92",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF DABAR ROAD AT TIKET LINK ROAD TO KHET OF MUKUNDI LAL VILL-TIKET JALESAR (UPSIC ETAH )",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 2183196
+      },
+      {
+        "_id": "6a932bb5cd94452437a30b90",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF DABAR ROAD AT C.C. ROAD TO KHET OF BOBY MASTER  VILL-TIMRUA,JALESHER (UPSIC ETAH)",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 1360108
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.674Z"
+}

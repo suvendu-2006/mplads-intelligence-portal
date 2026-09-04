@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee4",
+    "name": "NILESH DNYANDEV LANKE",
+    "constituency": "AHMEDNAGAR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23809461,
+    "utilizationPercentage": 16.19691224489796,
+    "completedWorksCount": 12,
+    "recommendedWorksCount": 73,
+    "completedWorksValue": 16354732,
+    "inProgressPayments": 7454729,
+    "paymentGapPercentage": 31.309944395633316,
+    "completionRate": 14.117647058823529,
+    "pendingWorks": 61,
+    "unspentAmount": 123190539,
+    "totalRecommendedAmount": 91000000,
+    "name_hi": "NILESH DNYANDEV LANKE",
+    "constituency_hi": "AHMEDNAGAR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23809461,
+      "totalEntries": 17,
+      "avgExpenditure": 1400556.5294117648,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4168165,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19641296,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23809461,
+        "transactionCount": 17,
+        "avgAmount": 1400556.5294117648
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 12,
+    "recommendedCount": 73,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e72b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community centres and community halls at Dhakanwadi Morkhila Wasti in front of Mahadev Mandir in GP property No 15 3 D Khata No. 1383 Tal Pathardi",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 968030
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dee2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community centers   and community halls at Khadakwadi in front of Sharanpuri Maharaj Mandir GP property No 82 Tal Parner",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 1474746
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dee5",
+        "workCategory": "Normal/Others",
+        "workDescription": "installing paver blocks at Mhasoba Zap in front of Maruti Mandir GP property No 95 Tal Parner",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 999962
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing paver blocks at Nimgaon Ghana in front of Ahilyabai Holkar Samajik Sabhagruha GP property No 92 B Tal Nagar",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d2c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community centers   and community halls at Karjule Harya in front of Swami Samarth Mandir GP property No 1468 Tal Parner",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 995411
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.505Z"
+}

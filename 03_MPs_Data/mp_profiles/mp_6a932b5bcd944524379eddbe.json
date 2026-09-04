@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddbe",
+    "name": "AJENDRA SINGH LODHI",
+    "constituency": "HAMIRPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 48355823,
+    "utilizationPercentage": 32.89511768707483,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 172,
+    "completedWorksValue": 14582276,
+    "inProgressPayments": 33773547,
+    "paymentGapPercentage": 69.84380557435658,
+    "completionRate": 9.947643979057592,
+    "pendingWorks": 153,
+    "unspentAmount": 98644177,
+    "totalRecommendedAmount": 125811000,
+    "name_hi": "AJENDRA SINGH LODHI",
+    "constituency_hi": "HAMIRPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 48355823,
+      "totalEntries": 104,
+      "avgExpenditure": 464959.83653846156,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30825330,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17530493,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 48355823,
+        "transactionCount": 104,
+        "avgAmount": 464959.83653846156
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 172,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a8d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "1High Mast Light Panwari Tigaila",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 321480
+      },
+      {
+        "_id": "6a932bb5cd94452437a1858b",
+        "workCategory": "Normal/Others",
+        "workDescription": "1.High mast light balendra yadav ke makan ke pass",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 322687
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a8d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "1.High mast Light Talab ke pass",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 321480
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a8d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "1.High Mast light ashok ke makan ke pass",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 321480
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a8d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "1.High Mast Light Ramleela Maidan ke pass",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 321480
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.686Z"
+}

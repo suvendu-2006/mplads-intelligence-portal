@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf21",
+    "name": "Raju Bista",
+    "constituency": "DARJEELING",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 43617451,
+    "utilizationPercentage": 29.67173537414966,
+    "completedWorksCount": 73,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 34663226,
+    "inProgressPayments": 8954225,
+    "paymentGapPercentage": 20.528996524808385,
+    "completionRate": 43.19526627218935,
+    "pendingWorks": 23,
+    "unspentAmount": 103382549,
+    "totalRecommendedAmount": 66999676,
+    "name_hi": "Raju Bista",
+    "constituency_hi": "DARJEELING",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43617451,
+      "totalEntries": 92,
+      "avgExpenditure": 474102.72826086957,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 936444,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 33786163,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8894844,
+        "transactionCount": 17
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43617451,
+        "transactionCount": 92,
+        "avgAmount": 474102.72826086957
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 73,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a190b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at Lower Gairi Gaon, Ghayabari-III Gram Panchayat\n\nRef: Sunita Khati (8826297543), Member Ghayabari-III GP",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 411946
+      },
+      {
+        "_id": "6a932bb5cd94452437a17d1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at Upper Gairi Gaon, Ghayabari-III Gram Panchayat\n\nRef: Mahesh Chhetri (6294954606), Member Ghayabari-III GP",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 411948
+      },
+      {
+        "_id": "6a932bb5cd94452437a190d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at Marionbari Garidhura Road, under St Mary's-III GP\n\nRef: Manoj Tamang (8617890253), Member, St Mary's-III GP",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 411946
+      },
+      {
+        "_id": "6a932bb5cd94452437a190c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at Tindharia, Sansad IV/6, Ghayabari-II Gram Panchayat\n\nRef: Sushmita Gazmer (7903442618), Member, Ghayabari-II",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 411946
+      },
+      {
+        "_id": "6a932bb5cd94452437a17d20",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at Rajbari Tindharia, Ward No 248, 249, 250\n\nRef: Esneha Bardewa (8906462621), Samiti Member, Ghayabari-II GP",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 411948
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.254Z"
+}

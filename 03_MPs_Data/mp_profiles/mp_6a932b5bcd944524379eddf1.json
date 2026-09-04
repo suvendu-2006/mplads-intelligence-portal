@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf1",
+    "name": "BALABHADRA MAJHI",
+    "constituency": "NABARANGPUR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147413962.11,
+    "totalExpenditure": 14970212,
+    "utilizationPercentage": 10.155219889435749,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 200,
+    "completedWorksValue": 8646556,
+    "inProgressPayments": 6323656,
+    "paymentGapPercentage": 42.24159283783022,
+    "completionRate": 9.090909090909092,
+    "pendingWorks": 180,
+    "unspentAmount": 132443750.11000001,
+    "totalRecommendedAmount": 89300000,
+    "name_hi": "BALABHADRA MAJHI",
+    "constituency_hi": "NABARANGPUR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14970212,
+      "totalEntries": 128,
+      "avgExpenditure": 116954.78125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 14970212,
+        "transactionCount": 128
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14970212,
+        "transactionCount": 128,
+        "avgAmount": 116954.78125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 200,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d250",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of community centre near Sitala Debi Mandir at UV-2 in Badakumari",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e901",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community centre at Titong",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e900",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre near Hundi Ghar at Chidipalli",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e701",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre near Shri Shri Nilahantheswar Siba Mandir at Kandel village, GP-Somnathpur",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e902",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed and installation of statue of Sahid Gangadhar Madkami at Udupa",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.660Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee209",
+    "name": "Dr. Sasmit Patra (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Odisha",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 31000333,
+    "utilizationPercentage": 15.81133700295946,
+    "completedWorksCount": 42,
+    "recommendedWorksCount": 263,
+    "completedWorksValue": 21585064,
+    "inProgressPayments": 9415269,
+    "paymentGapPercentage": 30.371509235078214,
+    "completionRate": 13.77049180327869,
+    "pendingWorks": 221,
+    "unspentAmount": 165063624.11,
+    "totalRecommendedAmount": 130627195,
+    "name_hi": "Dr. Sasmit Patra (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 31000333,
+      "totalEntries": 123,
+      "avgExpenditure": 252035.2276422764,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 10876393,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 10993363,
+        "transactionCount": 57
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9130577,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 31000333,
+        "transactionCount": 123,
+        "avgAmount": 252035.2276422764
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 42,
+    "recommendedCount": 263,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3238d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Paver Block Road from Mahuria Sahi Prabha Behera House to RD Road of Mardakote",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32351",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community Hall at Hatiota village near G.S. Science College under Hatiota GP",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32257",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road at Kherpada to AWC, Rouldega",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32256",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC and Paver Road From Primary School to Thakurani Mandir, Tentuliapada",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32242",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Paver Block Road from Ghodapada RD Road to Sana Gudiali Thakurani Mandir",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.758Z"
+}

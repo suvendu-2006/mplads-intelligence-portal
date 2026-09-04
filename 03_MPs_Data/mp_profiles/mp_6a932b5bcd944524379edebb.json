@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edebb",
+    "name": "Mahesh Sharma",
+    "constituency": "GAUTAM BUDDHA NAGAR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148816284.11,
+    "totalExpenditure": 83408358,
+    "utilizationPercentage": 56.04787036501149,
+    "completedWorksCount": 68,
+    "recommendedWorksCount": 103,
+    "completedWorksValue": 57908132,
+    "inProgressPayments": 25500226,
+    "paymentGapPercentage": 30.572746678456376,
+    "completionRate": 39.76608187134503,
+    "pendingWorks": 35,
+    "unspentAmount": 65407926.110000014,
+    "totalRecommendedAmount": 89862951.28,
+    "name_hi": "Mahesh Sharma",
+    "constituency_hi": "GAUTAM BUDDHA NAGAR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 83408358,
+      "totalEntries": 130,
+      "avgExpenditure": 641602.7538461538,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 17000003,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 35728417,
+        "transactionCount": 66
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30679938,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 83408358,
+        "transactionCount": 130,
+        "avgAmount": 641602.7538461538
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 68,
+    "recommendedCount": 103,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19825",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Bodha Block Sikandrabad mein Bodha sampark maarg se CC road tak CC road va naalee nirmaan 122 meter",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1597622
+      },
+      {
+        "_id": "6a932bb5cd94452437a1981b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gham Shahpur kalan block Khurja me Kali Sadak se Basu Dev baba ji ke makan ki aur interlocking va Nali nirman 110 meter",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1172606
+      },
+      {
+        "_id": "6a932bb5cd94452437a19821",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Hirdaypur Block Sikandrabad mein main road se Sanjay ke ghar tak interlocking va naalee nirmaan 52 meter",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 288419
+      },
+      {
+        "_id": "6a932bb5cd94452437a19819",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sanwali Block Sikandrabad mein GT Road se panchayat ghar kee or CC va naalee nirmaan 100 meter",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1152939
+      },
+      {
+        "_id": "6a932bb5cd94452437a1981e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Bhatauna Block Gulaothi mein Narender Teotia ke ghar se Swaraj Singh ke ghar kee or interlocking va naalee nirmaan 125 meter",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1444766
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.458Z"
+}

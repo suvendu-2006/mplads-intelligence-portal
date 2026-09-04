@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3e",
+    "name": "Dr Shashi Tharoor",
+    "constituency": "THIRUVANANTHAPURAM",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41754577,
+    "utilizationPercentage": 28.404474149659865,
+    "completedWorksCount": 40,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 33758390,
+    "inProgressPayments": 7996187,
+    "paymentGapPercentage": 19.15044427345055,
+    "completionRate": 35.08771929824561,
+    "pendingWorks": 34,
+    "unspentAmount": 105245423,
+    "totalRecommendedAmount": 60485470,
+    "name_hi": "Dr Shashi Tharoor",
+    "constituency_hi": "THIRUVANANTHAPURAM",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41754577,
+      "totalEntries": 61,
+      "avgExpenditure": 684501.262295082,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12835322,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28919255,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41754577,
+        "transactionCount": 61,
+        "avgAmount": 684501.262295082
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 40,
+    "recommendedCount": 74,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of MML (10 Mtr Minimast 150Wx 6 Nos) near Vrindavan High School",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 230657
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of MML (10 MtrMinimast 150Wx 6 Nos) near Sunago CSI Church",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 230657
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of MML near Amottukonam Chamundeswari Temple",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 230657
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Laptops for Govt Model HSS for Boys Chalai, Chalai Ward, Tvpm Corporation",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 493898
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e252",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of sidewall and canal bridge near Elangom Sri Bhuveneswari Devi temple",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 1236975
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.248Z"
+}

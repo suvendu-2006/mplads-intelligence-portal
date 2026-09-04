@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede60",
+    "name": "GENIBEN NAGAJI THAKOR",
+    "constituency": "BANASKANTHA",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26332572,
+    "utilizationPercentage": 17.913314285714286,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 127,
+    "completedWorksValue": 16146199,
+    "inProgressPayments": 10186373,
+    "paymentGapPercentage": 38.683547509145704,
+    "completionRate": 24.404761904761905,
+    "pendingWorks": 86,
+    "unspentAmount": 120667428,
+    "totalRecommendedAmount": 61330000,
+    "name_hi": "GENIBEN NAGAJI THAKOR",
+    "constituency_hi": "BANASKANTHA",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26332572,
+      "totalEntries": 67,
+      "avgExpenditure": 393023.46268656716,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6247512,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20085060,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26332572,
+        "transactionCount": 67,
+        "avgAmount": 393023.46268656716
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 127,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e205",
+        "workCategory": "Normal/Others",
+        "workDescription": "Scheme to provide indoor and outdoor sports equipment kits along with fitting in primary schools 2024-2025",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e335",
+        "workCategory": "Normal/Others",
+        "workDescription": "Scheme to provide indoor and outdoor sports equipment kits along with fitting in primary schools 2024-2025",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e33b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Scheme to provide indoor and outdoor sports equipment kits along with fitting in primary schools 2024-2025",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e32d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Scheme to provide indoor and outdoor sports equipment kits along with fitting in primary schools 2024-2025",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e338",
+        "workCategory": "Normal/Others",
+        "workDescription": "Scheme to provide indoor and outdoor sports equipment kits along with fitting in primary schools 2024-2025",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.662Z"
+}

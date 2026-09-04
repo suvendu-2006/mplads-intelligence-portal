@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde3",
+    "name": "ASHISH DUBEY",
+    "constituency": "JABALPUR",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23263814,
+    "utilizationPercentage": 15.82572380952381,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 328,
+    "completedWorksValue": 4832336,
+    "inProgressPayments": 18431478,
+    "paymentGapPercentage": 79.22810077487725,
+    "completionRate": 4.373177842565598,
+    "pendingWorks": 313,
+    "unspentAmount": 123736186,
+    "totalRecommendedAmount": 86566957,
+    "name_hi": "ASHISH DUBEY",
+    "constituency_hi": "JABALPUR",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23263814,
+      "totalEntries": 138,
+      "avgExpenditure": 168578.36231884058,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3154286,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20109528,
+        "transactionCount": 121
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23263814,
+        "transactionCount": 138,
+        "avgAmount": 168578.36231884058
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 328,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d7c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall .",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 221569
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d2fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Deepti Choubey house till Deepak Electricals, Ganesh Nagar.",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 219023
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c666",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road near Kavita beauty parlour.",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 211182
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c253",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Soma Shinde house to Ganpat Choudhary house, Shankar Nagar.",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 232918
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d2fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road infront of Gautam ji house , Raksha Nagar.",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 233065
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.731Z"
+}

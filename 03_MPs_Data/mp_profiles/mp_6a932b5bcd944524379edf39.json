@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf39",
+    "name": "RUDRA NARAYAN PANY",
+    "constituency": "DHENKANAL",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 155013957.11,
+    "totalExpenditure": 3039057,
+    "utilizationPercentage": 1.9605054000675848,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 0,
+    "inProgressPayments": 3039057,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 79,
+    "unspentAmount": 151974900.11,
+    "totalRecommendedAmount": 59267000,
+    "name_hi": "RUDRA NARAYAN PANY",
+    "constituency_hi": "DHENKANAL",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 3039057,
+      "totalEntries": 22,
+      "avgExpenditure": 138138.95454545456,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 3039057,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 3039057,
+        "transactionCount": 22,
+        "avgAmount": 138138.95454545456
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 79,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.684Z"
+}

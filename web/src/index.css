@@ -1,0 +1,419 @@
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
+@import '@fontsource/noto-sans-devanagari/400.css';
+@import '@fontsource/noto-sans-devanagari/700.css';
+@import 'leaflet/dist/leaflet.css';
+
+@import "tailwindcss";
+@source "../index.html";
+@source "./**/*.{js,ts,jsx,tsx}";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ============================================================================
+   SATARK-MPLADS Color-Universal Design System
+   Based on Okabe-Ito palette (Nature Methods standard)
+   Verified: ΔE ≥15.7 on all critical pairs under CVD simulation
+   ============================================================================ */
+
+:root, [data-theme="light"] {
+  color-scheme: light;
+
+  /* === BACKGROUNDS & SURFACES (Champagne Ivory Canvas) === */
+  --bg-primary: #F6F5F1;              /* Warm Champagne Ivory canvas */
+  --surface-primary: #FFFFFF;         /* Pure white elevated cards */
+  --surface-alt: #EDEAE3;             /* Warm Champagne zebra/wells */
+  --surface-hover: #F0ECE1;           /* Interactive hover */
+
+  /* === TEXT === */
+  --text-primary: #101D2E;            /* Deep Navy Ink (16:1 contrast) */
+  --text-secondary: #344054;          /* 8.2:1 contrast */
+  --text-tertiary: #667085;           /* 4.6:1 contrast */
+  --text-muted: #475467;              /* 6.4:1 contrast */
+
+  /* === BORDERS === */
+  --border-primary: #E7E2D9;          /* Warm Champagne hairline */
+  --border-subtle: #EFECE6;           /* Subtle divider */
+
+  /* === BRAND IDENTITY === */
+  --brand-primary: #1E3A8A;           /* Ink Navy (10.4:1 white text) */
+  --brand-accent: #B7791F;            /* Champagne Gold (3.64:1 - large text only) */
+  --gold-text: #9C6B1A;               /* Gold for small text (4.63:1 AA) */
+  --gold-soft: rgba(183, 121, 31, 0.10);  /* Hover/backgrounds */
+
+  /* === SEMANTIC (Okabe-Ito compliant) === */
+  --success: #067647;                 /* Emerald (5.7:1) */
+  --warning: #B54708;                 /* Amber (5.4:1) */
+  --danger: #B42318;                  /* Crimson (6.6:1) */
+  --info: #0072B2;                    /* Okabe blue (6.8:1) */
+
+  /* === SHADOWS === */
+  --shadow-lux: 0 2px 8px rgba(101, 93, 82, 0.08);
+  --shadow-card: 0 4px 20px -2px rgba(16, 29, 46, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(183, 121, 31, 0.25);
+
+  /* === TRANSITIONS === */
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 600ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* === INDIAN FLAG (Ceremonial) === */
+  --tricolor-saffron: #FF671F;
+  --tricolor-white: #FFFFFF;
+  --tricolor-green: #138808;
+
+  /* === BACKWARD COMPATIBILITY ALIASES === */
+  --brand-navy: var(--brand-primary);
+  --brand-gold: var(--brand-accent);
+  --neutral-50: var(--bg-primary);
+  --neutral-100: var(--surface-alt);
+  --neutral-200: var(--border-subtle);
+  --neutral-300: var(--border-primary);
+  --neutral-400: #94A3B8;
+  --neutral-500: var(--text-muted);
+  --neutral-600: var(--text-tertiary);
+  --neutral-700: var(--text-secondary);
+  --neutral-800: #1D2939;
+  --neutral-900: var(--text-primary);
+
+  --chart-navy: #0072B2;
+  --chart-emerald: #009E73;
+  --chart-sky: #56B4E9;
+  --chart-amber: #D55E00;
+  --chart-rose: #B42318;
+  --chart-violet: #AA4499;
+  --chart-slate: #5D6C8A;
+  --chart-gold: #B7791F;
+}
+
+[data-theme="dark"],
+[data-theme="dark"] * {
+  color-scheme: dark;
+
+  /* === BACKGROUNDS & SURFACES (Deep Obsidian Black) === */
+  --bg-primary: #06090E;              /* Deep obsidian black */
+  --surface-primary: #0D121D;         /* High-definition dark card surface */
+  --surface-alt: #131826;             /* Structured wells / zebra */
+  --surface-hover: #1A2234;           /* Interactive hover */
+
+  /* === TEXT === */
+  --text-primary: #F8FAFC;            /* Pure high-contrast white */
+  --text-secondary: #94A3B8;          /* Slate secondary */
+  --text-tertiary: #64748B;
+  --text-muted: #64748B;
+
+  /* === BORDERS === */
+  --border-primary: #1B2335;          /* Crisp hairline border */
+  --border-subtle: rgba(255, 255, 255, 0.05);
+
+  /* === BRAND IDENTITY (Vibrant Orange / Amber Accents) === */
+  --brand-primary: #60A5FA;           /* Refined sky blue */
+  --brand-accent: #FF9E3B;            /* Warm luminous orange */
+  --gold-text: #FFA740;               /* Radiant orange-gold for expenditure numerals */
+  --gold-soft: rgba(255, 158, 59, 0.12);
+
+  /* === SEMANTIC === */
+  --success: #2FD0A0;
+  --warning: #FF9E3B;
+  --danger: #FF6B6B;
+  --info: #60A5FA;
+
+  /* === SHADOWS === */
+  --shadow-lux: 0 4px 24px rgba(0, 0, 0, 0.65);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.55);
+  --shadow-focus: 0 0 0 3px rgba(255, 158, 59, 0.3);
+
+  /* === BACKWARD COMPATIBILITY ALIASES === */
+  --brand-navy: var(--brand-primary);
+  --brand-gold: var(--brand-accent);
+  --neutral-50: var(--bg-primary);
+  --neutral-100: var(--surface-alt);
+  --neutral-200: #1C2436;
+  --neutral-300: var(--border-primary);
+  --neutral-400: #4B5565;
+  --neutral-500: var(--text-tertiary);
+  --neutral-600: var(--text-secondary);
+  --neutral-700: #CDD5DF;
+  --neutral-800: #EEF2F6;
+  --neutral-900: var(--text-primary);
+
+  --chart-navy: #6DABF5;
+  --chart-emerald: #2FD0A0;
+  --chart-sky: #8DCBFF;
+  --chart-amber: #FF9E5E;
+  --chart-rose: #FF8080;
+  --chart-violet: #D98BD0;
+  --chart-slate: #A3AEC6;
+  --chart-gold: #E3B341;
+}
+
+/* === PREVENT MACOS SYSTEM DARK MODE OVERRIDE === */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    /* Re-declare light champagne colors to prevent system override */
+    --bg-primary: #F6F5F1;
+    --surface-primary: #FFFFFF;
+    --surface-alt: #EDEAE3;
+    --surface-hover: #F0ECE1;
+    --text-primary: #101D2E;
+    --text-secondary: #344054;
+    --text-tertiary: #667085;
+    --text-muted: #475467;
+    --border-primary: #E7E2D9;
+    --border-subtle: #EFECE6;
+    --brand-primary: #1E3A8A;
+    --brand-accent: #B7791F;
+    --gold-text: #9C6B1A;
+    --gold-soft: rgba(183, 121, 31, 0.10);
+    --success: #067647;
+    --warning: #B54708;
+    --danger: #B42318;
+    --info: #0072B2;
+    --shadow-lux: 0 2px 8px rgba(101, 93, 82, 0.08);
+    --shadow-card: 0 4px 20px -2px rgba(16, 29, 46, 0.06);
+    --shadow-focus: 0 0 0 3px rgba(183, 121, 31, 0.25);
+    --brand-navy: #1E3A8A;
+    --brand-gold: #B7791F;
+    --chart-navy: #0072B2;
+    --chart-emerald: #009E73;
+    --chart-sky: #56B4E9;
+    --chart-amber: #D55E00;
+    --chart-rose: #B42318;
+    --chart-violet: #AA4499;
+    --chart-slate: #5D6C8A;
+    --chart-gold: #B7791F;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+  transition: background-color var(--dur-base) ease, color var(--dur-base) ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* === ANIMATION KEYFRAMES === */
+
+/* Shimmer (GPU-accelerated with transform) */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-alt);
+  border-radius: 8px;
+}
+
+.skeleton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--surface-primary) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.4s infinite linear;
+  will-change: transform;
+}
+
+/* Subtle pulse for live indicators */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Chart container entry */
+@keyframes chartFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chart-container {
+  animation: chartFadeIn var(--dur-slow) var(--ease-entrance) forwards;
+}
+
+/* Tooltip slide-in */
+@keyframes tooltipSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.recharts-tooltip-wrapper {
+  animation: tooltipSlideIn 200ms var(--ease-entrance);
+}
+
+/* === ACCESSIBILITY === */
+
+/* Focus visible states (WCAG 2.1) */
+*:focus-visible {
+  outline: 3px solid var(--brand-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  box-shadow: var(--shadow-focus);
+}
+
+/* Reduced motion (respects user preferences) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep essential feedback */
+  button:active,
+  button:hover {
+    transition: background-color 100ms ease;
+  }
+}
+
+/* === HARDWARE ACCELERATION === */
+.chart-container,
+.lux-card,
+.animated-element {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* === UTILITY CLASSES === */
+
+/* Tabular numerals for currency/dates */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Hero numerals styling — authoritative deep ink */
+.numeral-gold {
+  color: var(--text-primary);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Enhanced lux-card */
+.lux-card {
+  background: var(--surface-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lux);
+  transition: all var(--dur-base) var(--ease-entrance);
+}
+
+.lux-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.lux-card-interactive:hover {
+  border-color: var(--gold-soft);
+  box-shadow: var(--shadow-card), 0 0 0 3px var(--gold-soft);
+}
+
+.lux-panel {
+  background-color: var(--surface-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 14px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Leaflet Theming */
+.leaflet-container {
+  background: var(--surface-alt) !important;
+  font-family: inherit !important;
+  outline: none;
+}
+
+.leaflet-overlay-pane svg {
+  filter: drop-shadow(0 10px 25px rgba(15, 23, 42, 0.12));
+}
+
+[data-theme="dark"] .leaflet-overlay-pane svg {
+  filter: drop-shadow(0 14px 35px rgba(0, 0, 0, 0.6));
+}
+
+[data-theme="light"] .leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #101D2E !important;
+  border: 1px solid #E7E2D9 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12) !important;
+}
+
+[data-theme="dark"] .leaflet-popup-content-wrapper {
+  background: #111520 !important;
+  color: #F4F6FA !important;
+  border: 1px solid #232A3D !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="light"] .leaflet-popup-tip {
+  background: #FFFFFF !important;
+}
+
+[data-theme="dark"] .leaflet-popup-tip {
+  background: #111520 !important;
+}

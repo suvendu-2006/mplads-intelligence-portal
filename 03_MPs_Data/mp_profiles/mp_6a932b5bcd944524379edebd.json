@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edebd",
+    "name": "Mala Rajya Laxmi Shah ",
+    "constituency": "TEHRI GARHWAL",
+    "state": "Uttarakhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57285791,
+    "utilizationPercentage": 38.96992585034014,
+    "completedWorksCount": 84,
+    "recommendedWorksCount": 155,
+    "completedWorksValue": 29487783,
+    "inProgressPayments": 27798008,
+    "paymentGapPercentage": 48.52513601496748,
+    "completionRate": 35.146443514644346,
+    "pendingWorks": 71,
+    "unspentAmount": 89714209,
+    "totalRecommendedAmount": 69378976,
+    "name_hi": "Mala Rajya Laxmi Shah ",
+    "constituency_hi": "TEHRI GARHWAL",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57285791,
+      "totalEntries": 371,
+      "avgExpenditure": 154409.14016172508,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3740065,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24109726,
+        "transactionCount": 129
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29436000,
+        "transactionCount": 239
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57285791,
+        "transactionCount": 371,
+        "avgAmount": 154409.14016172508
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 84,
+    "recommendedCount": 155,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e8f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Dhungi me Kindar singh ke Makan se janak singh ke khet tak Surcha Diwar (Woorkin Agency Block)",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 199757
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e493",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Kali Gaon ke ratmeda name tok me naveen singh gjendra singh adi ke kheto ki Surcha Diwar (wooring Agency Block)",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 485672
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a098",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Rampura ke pura harsukh me bhuri singh, bhagat singh ke ghar ke pass sarvjanik sthan par Samarsevil Pump mai Tanki nirman ( Working agency UP Sidco agra)",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 248687
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a099",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Rampura ke Pura harsukh me Nirpat singh ke ghar ke pass sarvjanik sthan par Samarsevil Pump mai Tanki Nirman ( workin agency UP Sidco agra)",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 248687
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Wazidpur me Jhapo net ke passSarvjanik Sthan par Samarsevil Pump mai Tanki Nirman (Working Agency UP Sidco agra)",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 249164
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.790Z"
+}

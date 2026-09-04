@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee22b",
+    "name": "Shri Chandrakant Damodar Handore (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 91048479,
+    "utilizationPercentage": 61.937740816326524,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 17902582,
+    "inProgressPayments": 73145897,
+    "paymentGapPercentage": 80.33730799610612,
+    "completionRate": 23.684210526315788,
+    "pendingWorks": 20,
+    "unspentAmount": 55951521,
+    "totalRecommendedAmount": 112000000,
+    "name_hi": "Shri Chandrakant Damodar Handore (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91048479,
+      "totalEntries": 26,
+      "avgExpenditure": 3501864.576923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 46296388,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44752091,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91048479,
+        "transactionCount": 26,
+        "avgAmount": 3501864.576923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32196",
+        "workCategory": "Trust and Society",
+        "workDescription": "CONSTRUCTION OF ROOMS AND HALL FOR SCHOOL BUILDING",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 4948358
+      },
+      {
+        "_id": "6a932bb5cd94452437a32096",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Highmast at Laxmiaai Tanda, Taluka and Dist Beed",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 998121
+      },
+      {
+        "_id": "6a932bb5cd94452437a32097",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation of Solar highmast at Laxmiaai Tanda at Khanhoba Tanda",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 998121
+      },
+      {
+        "_id": "6a932bb5cd94452437a3195f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of street lights at Gautam Nagar, Dhule city.",
+        "completedDate": "2025-09-12T00:00:00.000Z",
+        "finalAmount": 996523
+      },
+      {
+        "_id": "6a932bb5cd94452437a318b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of public libraries and reading rooms",
+        "completedDate": "2025-08-26T00:00:00.000Z",
+        "finalAmount": 4966790
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.677Z"
+}

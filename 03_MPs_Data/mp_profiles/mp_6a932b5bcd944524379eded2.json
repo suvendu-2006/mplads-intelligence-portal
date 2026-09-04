@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded2",
+    "name": "MOHIBBULLAH",
+    "constituency": "RAMPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 74744421,
+    "utilizationPercentage": 50.84654489795918,
+    "completedWorksCount": 219,
+    "recommendedWorksCount": 161,
+    "completedWorksValue": 56635005,
+    "inProgressPayments": 18109416,
+    "paymentGapPercentage": 24.228451779698716,
+    "completionRate": 57.631578947368425,
+    "pendingWorks": -58,
+    "unspentAmount": 72255579,
+    "totalRecommendedAmount": 29872800,
+    "name_hi": "MOHIBBULLAH",
+    "constituency_hi": "RAMPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74744421,
+      "totalEntries": 344,
+      "avgExpenditure": 217280.29360465117,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 32763875,
+        "transactionCount": 106
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41980546,
+        "transactionCount": 238
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74744421,
+        "transactionCount": 344,
+        "avgAmount": 217280.29360465117
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 219,
+    "recommendedCount": 161,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cc7b",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT WITH FOUR LED RECOMMENDED IN MY CONSTITUENCY RAMPUR BY IA UPSIC MORADABAD (VILL. Marghati MAI Babusingh ke ghar ke pas Chorahe par",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 174129
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc79",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT WITH FOUR LED RECOMMENDED IN MY CONSTITUENCY RAMPUR BY IA UPSIC MORADABAD (VILL. Chak Khardia KE QABRISTAN MAI)",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 174129
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc82",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT WITH FOUR LED RECOMMENDED IN MY CONSTITUENCY RAMPUR BY IA UPSIC MORADABAD (VILL. Ramnagar Latifpur mai Mazar Ke Pas)",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 174129
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc81",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT WITH FOUR LED RECOMMENDED IN MY CONSTITUENCY RAMPUR BY IA UPSIC MORADABAD (VILL. Jamal Ganj ke Qabristan mai)",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 174129
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc6a",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT WITH FOUR LED RECOMMENDED IN MY CONSTITUENCY RAMPUR BY IA UPSIC MORADABAD (VILL. KHEMPUR KE QABRISTAN MAI)",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 174129
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.835Z"
+}

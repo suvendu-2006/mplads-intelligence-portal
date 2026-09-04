@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf08",
+    "name": "PUSHPENDRA SAROJ",
+    "constituency": "KAUSHAMBI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 56198890,
+    "utilizationPercentage": 38.23053741496599,
+    "completedWorksCount": 607,
+    "recommendedWorksCount": 141,
+    "completedWorksValue": 42926694,
+    "inProgressPayments": 13272196,
+    "paymentGapPercentage": 23.616473563801705,
+    "completionRate": 81.14973262032086,
+    "pendingWorks": -466,
+    "unspentAmount": 90801110,
+    "totalRecommendedAmount": 28971161,
+    "name_hi": "PUSHPENDRA SAROJ",
+    "constituency_hi": "KAUSHAMBI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 56198890,
+      "totalEntries": 907,
+      "avgExpenditure": 61961.28996692393,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16115754,
+        "transactionCount": 436
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40083136,
+        "transactionCount": 471
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 56198890,
+        "transactionCount": 907,
+        "avgAmount": 61961.28996692393
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 607,
+    "recommendedCount": 141,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bffd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vaseem Raishkhan Diya Uparhar",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 73919
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf35",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vijay Lautan Dhawada",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 73926
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf2f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ram Asre Jagannath Badahari",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 73926
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf39",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rajpal Bachai Tikara Dheraha",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 73926
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf38",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sardar Sundar Lal Tikra Dheraha",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 73926
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.733Z"
+}

@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee20b",
+    "name": "Dr. Sikander Kumar (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Himachal Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 207863957.11,
+    "totalExpenditure": 127603852.04,
+    "utilizationPercentage": 61.38815685707023,
+    "completedWorksCount": 169,
+    "recommendedWorksCount": 225,
+    "completedWorksValue": 89654329.04,
+    "inProgressPayments": 37949523,
+    "paymentGapPercentage": 29.74010767958945,
+    "completionRate": 42.89340101522843,
+    "pendingWorks": 56,
+    "unspentAmount": 80260105.07000001,
+    "totalRecommendedAmount": 77092583,
+    "name_hi": "Dr. Sikander Kumar (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Himachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 127603852.04,
+      "totalEntries": 421,
+      "avgExpenditure": 303097.03572446556,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 4531607,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 38540596.83,
+        "transactionCount": 104
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 50562799.21,
+        "transactionCount": 194
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33968849,
+        "transactionCount": 116
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 127603852.04,
+        "transactionCount": 421,
+        "avgAmount": 303097.03572446556
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 169,
+    "recommendedCount": 225,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32480",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Path with retaining wall from the house of Prem Chand towards the house of Parkash Chand Ward No 1 Village Chamned Development Block Bamson District Hamirpur Executing Agency AE Jila Parishad Hamirpur",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31251",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Culvert near crematorium at Village Dhagoh SC Basti Gram Panchayat Badhera Development Block Nadaun District Hamirpur Himachal Pradesh Executing Agency BDO Nadaun",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31252",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cremation ground and boundary wall in the vicinity of cremation ground at Village Dhagoh SC Basti Gram Panchayat Badhera Development Block Nadaun District Hamirpur Himachal Pradesh Executing Agency BDO Nadaun",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31290",
+        "workCategory": "Normal/Others",
+        "workDescription": "Cleaning drainage Renovation of Babdi and protection wall of link road near Babdi at Village Dhagoh SC Basti Gram Panchayat Badhera Development Block Nadaun District Hamirpur Himachal Pradesh Executing Agency BDO Nadaun",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30929",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of open Multi Gym Equipment at Panchayat Delag Tikri, Dev. Block Gohar, Distt. Mandi H.P. (Executing Agency, BDO Gohar)",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498836
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.427Z"
+}

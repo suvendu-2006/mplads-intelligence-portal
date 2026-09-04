@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede85",
+    "name": "Jyotsna Charandas Mahant ",
+    "constituency": "KORBA",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 155153738.11,
+    "totalExpenditure": 74709092,
+    "utilizationPercentage": 48.15165455248856,
+    "completedWorksCount": 136,
+    "recommendedWorksCount": 174,
+    "completedWorksValue": 46950456,
+    "inProgressPayments": 27758636,
+    "paymentGapPercentage": 37.155632944916526,
+    "completionRate": 43.87096774193549,
+    "pendingWorks": 38,
+    "unspentAmount": 80444646.11000001,
+    "totalRecommendedAmount": 67786562,
+    "name_hi": "Jyotsna Charandas Mahant ",
+    "constituency_hi": "KORBA",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74709092,
+      "totalEntries": 432,
+      "avgExpenditure": 172937.71296296295,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 16653744,
+        "transactionCount": 90
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 31875009,
+        "transactionCount": 197
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26180339,
+        "transactionCount": 145
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74709092,
+        "transactionCount": 432,
+        "avgAmount": 172937.71296296295
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 136,
+    "recommendedCount": 174,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cea5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Manch Construction at Gram Panchayat - Nawagaon",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 399960
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cea3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shed construction at Gram Panchayat - Bariumrao",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shed construction at Lotan para",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 399948
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c47e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shed at Muktidham in Binjhapara in Gram Panchayat - Baksahi",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 299735
+      },
+      {
+        "_id": "6a932bb5cd94452437a16c0d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Prayer Room/Shed construction at Primary School at Gram Panchayat - Nirdhi , Vikas Khand - Pali",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 299975
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.694Z"
+}

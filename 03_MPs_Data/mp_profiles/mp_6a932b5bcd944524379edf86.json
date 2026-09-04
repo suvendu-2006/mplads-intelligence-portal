@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf86",
+    "name": "Sivanath Kesineni",
+    "constituency": "VIJAYAWADA",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 6329561,
+    "utilizationPercentage": 4.305823809523809,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 28,
+    "completedWorksValue": 3290032,
+    "inProgressPayments": 3039529,
+    "paymentGapPercentage": 48.02116608087038,
+    "completionRate": 3.4482758620689653,
+    "pendingWorks": 27,
+    "unspentAmount": 140670439,
+    "totalRecommendedAmount": 55064000,
+    "name_hi": "Sivanath Kesineni",
+    "constituency_hi": "VIJAYAWADA",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 6329561,
+      "totalEntries": 3,
+      "avgExpenditure": 2109853.6666666665,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 6329561,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 6329561,
+        "transactionCount": 3,
+        "avgAmount": 2109853.6666666665
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 28,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c33b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of erection of 2300 HP VT Pump and motor -1 No  and electrical and Mechanical works at Vedadri - kanchala lift irrigation scheme on Krishna river in Jaggaiahpeta mandal of NTR District",
+        "completedDate": "2026-01-29T00:00:00.000Z",
+        "finalAmount": 3290032
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.474Z"
+}

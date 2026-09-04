@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede18",
+    "name": "CHARANJIT SINGH CHANNI",
+    "constituency": "JALANDHAR",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26344017,
+    "utilizationPercentage": 17.921100000000003,
+    "completedWorksCount": 58,
+    "recommendedWorksCount": 151,
+    "completedWorksValue": 16142841,
+    "inProgressPayments": 10201176,
+    "paymentGapPercentage": 38.722932801022715,
+    "completionRate": 27.751196172248804,
+    "pendingWorks": 93,
+    "unspentAmount": 120655983,
+    "totalRecommendedAmount": 37905618,
+    "name_hi": "CHARANJIT SINGH CHANNI",
+    "constituency_hi": "JALANDHAR",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26344017,
+      "totalEntries": 210,
+      "avgExpenditure": 125447.7,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8570395,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17773622,
+        "transactionCount": 167
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26344017,
+        "transactionCount": 210,
+        "avgAmount": 125447.7
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 58,
+    "recommendedCount": 151,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c6f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar lights for inside or outside of village Nangal Salempur  Block Jalandhar East",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 190689
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar Lights Inside or Outside of Village Chitti Gram Panchayat Village Chitti Block Jalandhar East",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 190689
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar lights  inside or outside of village Dhirpur village Dhirpur Block Jalandhar West",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 190689
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar Lights for Inside or Outside of Village Ghorewahi Block Bhogpur",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 190689
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar Lights For 4 Streets of Village Nurpur Village Nurpur  Block Adampur",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 190689
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.887Z"
+}

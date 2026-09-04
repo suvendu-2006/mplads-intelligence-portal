@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf31",
+    "name": "RAVINDRA DATTARAM WAIKAR",
+    "constituency": "MUMBAI NORTH WEST",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 53799122,
+    "utilizationPercentage": 36.59804217687075,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 0,
+    "inProgressPayments": 53799122,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 67,
+    "unspentAmount": 93200878,
+    "totalRecommendedAmount": 147000000,
+    "name_hi": "RAVINDRA DATTARAM WAIKAR",
+    "constituency_hi": "MUMBAI NORTH WEST",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53799122,
+      "totalEntries": 24,
+      "avgExpenditure": 2241630.0833333335,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13989374,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39809748,
+        "transactionCount": 16
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53799122,
+        "transactionCount": 24,
+        "avgAmount": 2241630.0833333335
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 67,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:51.207Z"
+}

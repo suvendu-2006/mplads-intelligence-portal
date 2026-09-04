@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc3",
+    "name": "ALOK SHARMA",
+    "constituency": "BHOPAL",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 62492243,
+    "utilizationPercentage": 42.511729931972795,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 14110494,
+    "inProgressPayments": 48381749,
+    "paymentGapPercentage": 77.4204072015786,
+    "completionRate": 24.719101123595504,
+    "pendingWorks": 45,
+    "unspentAmount": 84507757,
+    "totalRecommendedAmount": 110900000,
+    "name_hi": "ALOK SHARMA",
+    "constituency_hi": "BHOPAL",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62492243,
+      "totalEntries": 84,
+      "avgExpenditure": 743955.2738095238,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13837202,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 48655041,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62492243,
+        "transactionCount": 84,
+        "avgAmount": 743955.2738095238
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df09",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of toilet in Cambridge School in eidgah hills",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 974306
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ef0",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cremation",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 498098
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ef1",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cremation",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 498098
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ef2",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cremation",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 498098
+      },
+      {
+        "_id": "6a932bb5cd94452437a17eec",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cremation",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 498098
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.449Z"
+}

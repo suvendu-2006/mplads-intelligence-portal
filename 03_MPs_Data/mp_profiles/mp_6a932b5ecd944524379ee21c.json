@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee21c",
+    "name": "Shri Arun Singh (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 223492764.11,
+    "totalExpenditure": 151462382,
+    "utilizationPercentage": 67.77059767601797,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 65,
+    "completedWorksValue": 50601635,
+    "inProgressPayments": 100860747,
+    "paymentGapPercentage": 66.5912853529532,
+    "completionRate": 41.44144144144144,
+    "pendingWorks": 19,
+    "unspentAmount": 72030382.11000001,
+    "totalRecommendedAmount": 170916000,
+    "name_hi": "Shri Arun Singh (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 151462382,
+      "totalEntries": 197,
+      "avgExpenditure": 768844.5786802031,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 46937867,
+        "transactionCount": 51
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 59839960,
+        "transactionCount": 96
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44684555,
+        "transactionCount": 50
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 151462382,
+        "transactionCount": 197,
+        "avgAmount": 768844.5786802031
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 65,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3059a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of night shelter at public place near Badauna Baba",
+        "completedDate": "2026-01-30T00:00:00.000Z",
+        "finalAmount": 1994193
+      },
+      {
+        "_id": "6a932bb5cd94452437a310cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar street light near Gulton Kol's house in Gram Panchayat Rampur Shaktesgarh Block Rajgarh",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 120805
+      },
+      {
+        "_id": "6a932bb5cd94452437a310cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar street light near Ajay Sonkar's house in Block Rajgarh in Village Panchayat Rampur Sakteshgarh",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 120805
+      },
+      {
+        "_id": "6a932bb5cd94452437a30669",
+        "workCategory": "Normal/Others",
+        "workDescription": "Inter locking length 400m from City Link Road Ithiya to Parman Patti Basti.",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 2497994
+      },
+      {
+        "_id": "6a932bb5cd94452437a3066c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Flat construction on Machhehua drain",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 3994256
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.377Z"
+}

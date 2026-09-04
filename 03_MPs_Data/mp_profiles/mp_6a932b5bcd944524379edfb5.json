@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb5",
+    "name": "UTKARSH VERMA MADHUR",
+    "constituency": "KHERI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 74909150,
+    "utilizationPercentage": 50.958605442176875,
+    "completedWorksCount": 347,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 72238022,
+    "inProgressPayments": 2671128,
+    "paymentGapPercentage": 3.5658234007461034,
+    "completionRate": 96.38888888888889,
+    "pendingWorks": -334,
+    "unspentAmount": 72090850,
+    "totalRecommendedAmount": 24660300,
+    "name_hi": "UTKARSH VERMA MADHUR",
+    "constituency_hi": "KHERI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74909150,
+      "totalEntries": 699,
+      "avgExpenditure": 107166.16595135909,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 43879093,
+        "transactionCount": 422
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31030057,
+        "transactionCount": 277
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74909150,
+        "transactionCount": 699,
+        "avgAmount": 107166.16595135909
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 347,
+    "recommendedCount": 13,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c028",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat koraiya lohana ke gram Lakshmipur me Tirahe par Parmod Verma  ke Makan ke Pass 6th semi High Mast Light ka adhishthapan kary.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 156959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c029",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation work of 6th semi high mast laight near the trisection in village Ayodhyapur in Gram Panchayat Banbudheli.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 156959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db4d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram bijhouli ke Chintapurwa me Shiv Mandir ke pass 1semi High Mast Light 6th ka Adhishtapan kary.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 156959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c027",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation work of 6th semi high mast light near the house of Shri Sardar Rajwant Singh in village Manwapur Farm of Gram Panchayat Bhagoda.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 156959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc5a",
+        "workCategory": "Normal/Others",
+        "workDescription": "R.O. Plant Installation Work for Public Drinking Water System near Gurunanak Vidya Sabha Girls Inter College, Lakhimpur Kheri.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 478463
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:23:50.545Z"
+}

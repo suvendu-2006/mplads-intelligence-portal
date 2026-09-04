@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee233",
+    "name": "Shri Devendra Pratap Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Chhattisgarh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 170837637.76,
+    "totalExpenditure": 8275468,
+    "utilizationPercentage": 4.844054336331746,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 14,
+    "completedWorksValue": 2243280,
+    "inProgressPayments": 6032188,
+    "paymentGapPercentage": 72.89240922688603,
+    "completionRate": 17.647058823529413,
+    "pendingWorks": 11,
+    "unspentAmount": 162562169.76,
+    "totalRecommendedAmount": 13793051,
+    "name_hi": "Shri Devendra Pratap Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 8275468,
+      "totalEntries": 14,
+      "avgExpenditure": 591104.8571428572,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1443280,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6832188,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 8275468,
+        "transactionCount": 14,
+        "avgAmount": 591104.8571428572
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 14,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3216a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Sheds in Communities Building God Samaj bhawan ke pass Riwagahan DhamtariDhamtari",
+        "completedDate": "2026-07-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322f8",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and Paint of Community Building at Kudrikhar Gondwana Bhawan",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3180b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Mobile clinic Ambulance Van",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 1443280
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.241Z"
+}

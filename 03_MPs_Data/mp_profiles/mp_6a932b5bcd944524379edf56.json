@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf56",
+    "name": "Shankar Lalwani",
+    "constituency": "INDORE",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76896131,
+    "utilizationPercentage": 52.31029319727891,
+    "completedWorksCount": 145,
+    "recommendedWorksCount": 137,
+    "completedWorksValue": 55202558,
+    "inProgressPayments": 21693573,
+    "paymentGapPercentage": 28.211527313383293,
+    "completionRate": 51.41843971631206,
+    "pendingWorks": -8,
+    "unspentAmount": 70103869,
+    "totalRecommendedAmount": 61018400,
+    "name_hi": "Shankar Lalwani",
+    "constituency_hi": "INDORE",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76896131,
+      "totalEntries": 272,
+      "avgExpenditure": 282706.36397058825,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 39353315,
+        "transactionCount": 102
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37542816,
+        "transactionCount": 170
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76896131,
+        "transactionCount": 272,
+        "avgAmount": 282706.36397058825
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 145,
+    "recommendedCount": 137,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c6bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tube well mining with Motor pump installation including recharge pit for public use  in dubey ka Bagicha in Sunita Bangar Ji Lane Ward 47 VS Indore-5 District Indore",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 437135
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c695",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tube well mining with Motor pump installation including recharge pit for public use Near arihant Girls Hostel located  at Chandra nagar  ward 44 VS Indore-5 District Indore",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 416673
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c696",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tube well mining with Motor pump installation including recharge pit for public use  Between Gali no. 4, 5, 6 Babulal Nagar  Ward 51 VS Indore-5 District Indore",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 435848
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c694",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tube well mining with Motor pump installation including recharge pit for public use  Near Triveni Garden located at  Jagjivan Ram Nagar   ward 44 VS Indore-5 District Indore",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 437059
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tube well mining with Motor pump installation including recharge pit for public use near  Malwa Mil Chhatri Pancham ki Fale  Ward 46 VS Indore-5 District Indore",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 442178
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.692Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9e",
+    "name": "Kaushalendra Kumar",
+    "constituency": "NALANDA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44912846,
+    "utilizationPercentage": 30.552956462585033,
+    "completedWorksCount": 92,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 44115134,
+    "inProgressPayments": 797712,
+    "paymentGapPercentage": 1.7761332693100766,
+    "completionRate": 55.42168674698795,
+    "pendingWorks": -18,
+    "unspentAmount": 102087154,
+    "totalRecommendedAmount": 32900000,
+    "name_hi": "Kaushalendra Kumar",
+    "constituency_hi": "NALANDA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44912846,
+      "totalEntries": 95,
+      "avgExpenditure": 472766.8,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15689767,
+        "transactionCount": 19
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29223079,
+        "transactionCount": 76
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44912846,
+        "transactionCount": 95,
+        "avgAmount": 472766.8
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 92,
+    "recommendedCount": 74,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Biharsharif block ke nagar nigam ward no. 47 bihar ekangarsarai path se gali kuan tak pcc dhalai.",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 395705
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e969",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tharthari block ke pratapur gaon me anil singh ke ghar se jhuman singh ke ghar tk pcc work",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 296618
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e661",
+        "workCategory": "Normal/Others",
+        "workDescription": "Islampur block ke Ichahos panchayat me gram Manichak me Surya mandir talab me Sidhi ghat ka nirman.",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 398347
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e59c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Islampur Block ke Gram Mahmuda mein lakshmi Asthan ke Chaputra ka Nirman",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 199361
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e887",
+        "workCategory": "Normal/Others",
+        "workDescription": "Islampur Block ke Dhekwaha Panchayat ke gaon Brahmgawan mein mahadev Asthan Mandir se hote hue Madhya Vidhyalay Brahmgawan tak PCC",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 249085
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.897Z"
+}

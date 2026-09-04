@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb2",
+    "name": "Abu Taher Khan",
+    "constituency": "MURSHIDABAD",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 36162113,
+    "utilizationPercentage": 24.6000768707483,
+    "completedWorksCount": 172,
+    "recommendedWorksCount": 156,
+    "completedWorksValue": 29714725,
+    "inProgressPayments": 6447388,
+    "paymentGapPercentage": 17.829124089070792,
+    "completionRate": 52.4390243902439,
+    "pendingWorks": -16,
+    "unspentAmount": 110837887,
+    "totalRecommendedAmount": 68395535,
+    "name_hi": "Abu Taher Khan",
+    "constituency_hi": "MURSHIDABAD",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36162113,
+      "totalEntries": 181,
+      "avgExpenditure": 199790.67955801106,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25955064,
+        "transactionCount": 147
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10207049,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36162113,
+        "transactionCount": 181,
+        "avgAmount": 199790.67955801106
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 172,
+    "recommendedCount": 156,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e429",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary Wall and other works at Lalbagh Seminary Hall under Murshidabad Municipality",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 488983
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c760",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Solar High Mast Light NearKarimpur Mathpara Eidgah maidan Under karimpur-I  GP under Karimpur-I Block",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 150734
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c75f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Solar High Mast Light Near Shri Shri Brahma Mandir Under karimpur-I  GP under Karimpur-I Block",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 150734
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c766",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Solar High Mast Light Near Bashbariya more at bashbariya Village  Under jAMSHERPUR GP under Karimpur-I Block",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 150734
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c755",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Solar High Mast Light Near dHANERPARA BATTALA Under Harekrishnapur GP under Karimpur-I Block",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 150734
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.662Z"
+}

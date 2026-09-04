@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede2a",
+    "name": "DEVESH SHAKYA",
+    "constituency": "ETAH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 81351075,
+    "utilizationPercentage": 55.34086734693877,
+    "completedWorksCount": 220,
+    "recommendedWorksCount": 106,
+    "completedWorksValue": 53713019,
+    "inProgressPayments": 27638056,
+    "paymentGapPercentage": 33.9738055090237,
+    "completionRate": 67.48466257668711,
+    "pendingWorks": -114,
+    "unspentAmount": 65648925,
+    "totalRecommendedAmount": 41183300,
+    "name_hi": "DEVESH SHAKYA",
+    "constituency_hi": "ETAH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 81351075,
+      "totalEntries": 581,
+      "avgExpenditure": 140019.06196213426,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 61391999,
+        "transactionCount": 457
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19959076,
+        "transactionCount": 124
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 81351075,
+        "transactionCount": 581,
+        "avgAmount": 140019.06196213426
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 220,
+    "recommendedCount": 106,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c07e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bahlolpur tirahe par .",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 240824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd4a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Anil yadav ke ghar ke pass sattarpur",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 240824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c090",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagla Bhood Ashok Kumar Ghar ke Pass Veerpal",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 240824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c084",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sohar Road Malawan tiraha par Manmohan ke ghar ke pass",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 240824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c07f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Kangraul Ferry Singh ke ghar ke pass",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 240824
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.700Z"
+}

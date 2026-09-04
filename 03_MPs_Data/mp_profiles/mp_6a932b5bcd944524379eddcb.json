@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddcb",
+    "name": "ANAND KUMAR",
+    "constituency": "BAHRAICH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66987751,
+    "utilizationPercentage": 45.56989863945578,
+    "completedWorksCount": 32,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 38304273,
+    "inProgressPayments": 28683478,
+    "paymentGapPercentage": 42.81898940001733,
+    "completionRate": 28.82882882882883,
+    "pendingWorks": 47,
+    "unspentAmount": 80012249,
+    "totalRecommendedAmount": 104181678,
+    "name_hi": "ANAND KUMAR",
+    "constituency_hi": "BAHRAICH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66987751,
+      "totalEntries": 102,
+      "avgExpenditure": 656742.6568627451,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34649343,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32338408,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66987751,
+        "transactionCount": 102,
+        "avgAmount": 656742.6568627451
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 32,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17ba9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Aminpur Nagraur me Gonda Road Par Sharad Singh ke Ghar se Loha Bhattha ke Saamne tak interlocking road ka nirman karya",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 558813
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ba4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mohalla Raipuraja me Kati Chaurahe ke pass Ajay Singh Ajju ke Ghar ke Samne se Pammu Singh ke Ghar tak Interlocking aur Nali Nirman Karya",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 1249899
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Semari Malmala ke Bhagwandas Farm Nagar Kali Mandir ke Saamne se Shivsharan ke Khet tak C.C. Road ka Nirman Karya",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 1888458
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bb5",
+        "workCategory": "Normal/Others",
+        "workDescription": "bahraich, balrampur sampark marg se shri dharm kaanta se assam road tak khadanja nirmaan kaarya chaandmaari bakshipura",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 663496
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ba6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Maigla Me Maigla Chandanpur Sampark Marg Se Shri Padamsen Chaudhary Ke Ghar Tak C. C. Road ka Nirman Karya",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 1085675
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.251Z"
+}

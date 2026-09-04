@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf59",
+    "name": "SHER SINGH GHUBAYA",
+    "constituency": "FIROZPUR",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 94266196,
+    "utilizationPercentage": 64.12666394557823,
+    "completedWorksCount": 361,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 88106251,
+    "inProgressPayments": 6159945,
+    "paymentGapPercentage": 6.53462774715127,
+    "completionRate": 91.39240506329114,
+    "pendingWorks": -327,
+    "unspentAmount": 52733804,
+    "totalRecommendedAmount": 10162000,
+    "name_hi": "SHER SINGH GHUBAYA",
+    "constituency_hi": "FIROZPUR",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 94266196,
+      "totalEntries": 462,
+      "avgExpenditure": 204039.38528138527,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 5978983,
+        "transactionCount": 47
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55641598,
+        "transactionCount": 253
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32645615,
+        "transactionCount": 162
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 94266196,
+        "transactionCount": 462,
+        "avgAmount": 204039.38528138527
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 361,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a199d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mobile water tankers (steel 3000 ltrs)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 240692
+      },
+      {
+        "_id": "6a932bb5cd94452437a199f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mobile water tankers (steel 3000 ltrs)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 240327
+      },
+      {
+        "_id": "6a932bb5cd94452437a19c59",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of RO System in GPS Chak Khund wala",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 232932
+      },
+      {
+        "_id": "6a932bb5cd94452437a199f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mobile water tankers (steel 3000 ltrs)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 240983
+      },
+      {
+        "_id": "6a932bb5cd94452437a199f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mobile water tankers (steel 3000 ltrs)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 240715
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.971Z"
+}

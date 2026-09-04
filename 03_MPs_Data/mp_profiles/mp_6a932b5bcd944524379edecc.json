@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edecc",
+    "name": "Mansukhbhai Dhanjibhai Vasava",
+    "constituency": "BHARUCH",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 69778294,
+    "utilizationPercentage": 47.46822721088436,
+    "completedWorksCount": 204,
+    "recommendedWorksCount": 194,
+    "completedWorksValue": 58774921,
+    "inProgressPayments": 11003373,
+    "paymentGapPercentage": 15.769048466561822,
+    "completionRate": 51.256281407035175,
+    "pendingWorks": -10,
+    "unspentAmount": 77221706,
+    "totalRecommendedAmount": 60253215,
+    "name_hi": "Mansukhbhai Dhanjibhai Vasava",
+    "constituency_hi": "BHARUCH",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 69778294,
+      "totalEntries": 244,
+      "avgExpenditure": 285976.61475409835,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 35639248,
+        "transactionCount": 114
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34139046,
+        "transactionCount": 130
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 69778294,
+        "transactionCount": 244,
+        "avgAmount": 285976.61475409835
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 204,
+    "recommendedCount": 194,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e492",
+        "workCategory": "Normal/Others",
+        "workDescription": "adivasi fadiyamaa narmadaben lallubhai naa gharthi jagdishbhai naa ghar taraf jata block paving nu kaam",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 298000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "bhersam game kuvali raj faliya ma pevar block nu kam",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 299060
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "karmad gaame tanki faliya maa prakashbhai naa ghar pase block paver nu kaam",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "mirapor game vasava faliya ma c c rasta nu kam",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e99a",
+        "workCategory": "Normal/Others",
+        "workDescription": "limaj gaame limaj road par bhatiji maharajnaa mandir taraf shedni kamgiri",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 348538
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.652Z"
+}

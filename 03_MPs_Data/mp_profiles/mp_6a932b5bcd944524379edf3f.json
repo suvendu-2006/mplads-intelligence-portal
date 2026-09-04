@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3f",
+    "name": "SALENG A SANGMA",
+    "constituency": "TURA",
+    "state": "Meghalaya",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 97120000,
+    "utilizationPercentage": 66.06802721088435,
+    "completedWorksCount": 130,
+    "recommendedWorksCount": 218,
+    "completedWorksValue": 51050000,
+    "inProgressPayments": 46070000,
+    "paymentGapPercentage": 47.43616144975288,
+    "completionRate": 37.35632183908046,
+    "pendingWorks": 88,
+    "unspentAmount": 49880000,
+    "totalRecommendedAmount": 89470000,
+    "name_hi": "SALENG A SANGMA",
+    "constituency_hi": "TURA",
+    "state_hi": "Meghalaya"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 97120000,
+      "totalEntries": 425,
+      "avgExpenditure": 228517.64705882352,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 175000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 69535000,
+        "transactionCount": 276
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27410000,
+        "transactionCount": 147
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 97120000,
+        "transactionCount": 425,
+        "avgAmount": 228517.64705882352
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 130,
+    "recommendedCount": 218,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d156",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of foot bridge at Dajong Spring, Rongsu Dajonggittim.",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a574",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of hospital equipments for Mission Hospital",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18c1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC road at Ronggandigre (Chasingre)",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad49",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of road (earth work) at darechikgre pam pam bagan",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad4a",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of footpath(earthwork) at EFCY Bagan Ronggandigre",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.826Z"
+}

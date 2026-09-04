@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede98",
+    "name": "Kangana Ranaut",
+    "constituency": "MANDI",
+    "state": "Himachal Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50240820,
+    "utilizationPercentage": 34.17742857142857,
+    "completedWorksCount": 68,
+    "recommendedWorksCount": 267,
+    "completedWorksValue": 17346591,
+    "inProgressPayments": 32894229,
+    "paymentGapPercentage": 65.47311329711577,
+    "completionRate": 20.298507462686565,
+    "pendingWorks": 199,
+    "unspentAmount": 96759180,
+    "totalRecommendedAmount": 80290000,
+    "name_hi": "Kangana Ranaut",
+    "constituency_hi": "MANDI",
+    "state_hi": "Himachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50240820,
+      "totalEntries": 318,
+      "avgExpenditure": 157990,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 260715,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 16314396,
+        "transactionCount": 106
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33665709,
+        "transactionCount": 207
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50240820,
+        "transactionCount": 318,
+        "avgAmount": 157990
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 68,
+    "recommendedCount": 267,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a186c9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Link Road from Dagihan to Jarlu Via SC BAsti Taraa in GP Barto. Work Executing Agency BDO Sundernagar.",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a186c5",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF Concrete Road from Badon road to SC Basti Jendrehadu in GP Barto.  Work Executing Agency- BDO Sundernagar.",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a3f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "C/O Mox Dham at Village Dhar, G.P. Lohardi. Work Executive Agency-BDO Balh",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a17f34",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bridge on Ghanghal Khadd, GP Ghanghal.\nWork Executed By- GP Ghangal, Development Block Dhanotu",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18c9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting of Link Road of Dhalwan ward from Ghati to Kharedu in GP Dhalwan.                                           Work Executive Agency- BDO Gopalpur.",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.654Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec2",
+    "name": "MANI. A.",
+    "constituency": "DHARAMAPURI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 164515071.11,
+    "totalExpenditure": 67070637,
+    "utilizationPercentage": 40.768688575136345,
+    "completedWorksCount": 63,
+    "recommendedWorksCount": 315,
+    "completedWorksValue": 40062663,
+    "inProgressPayments": 27007974,
+    "paymentGapPercentage": 40.26795511126575,
+    "completionRate": 16.666666666666664,
+    "pendingWorks": 252,
+    "unspentAmount": 97444434.11000001,
+    "totalRecommendedAmount": 123919500,
+    "name_hi": "MANI. A.",
+    "constituency_hi": "DHARAMAPURI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67070637,
+      "totalEntries": 127,
+      "avgExpenditure": 528115.2519685039,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16097949,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 50972688,
+        "transactionCount": 93
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67070637,
+        "transactionCount": 127,
+        "avgAmount": 528115.2519685039
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 63,
+    "recommendedCount": 315,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dcd7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and supply of Highmast light(LED) new electric pole at Ward No.9 Podur Road privu, Hogenakkal Road Four Road privu Pennagaram Town panchayat",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcd9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and supply of Highmast light(LED) new electric pole at Ward No.8 Bramanar street Eswaram Kovil near Pennagaram Town panchayat",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcd8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and supply of Highmast light(LED) new electric pole at Ward No.15 Nagamarai Bye-pass Road near Pennagaram Town panchayat",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcb4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and supply of Highmast light(LED) new electric pole at Ward No.13 Mulluvadi Primary School Four Road near Pennagaram Town panchayat",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cca6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construciton of Anganwadi Building at Sekkandahalli village Kambainallur Town Panchayat",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1655000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.690Z"
+}

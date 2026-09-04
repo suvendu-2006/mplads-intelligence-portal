@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee204",
+    "name": "Dr. Radha Mohan Das Agrawal (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 203626524.67000002,
+    "totalExpenditure": 72382614,
+    "utilizationPercentage": 35.54675115007942,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 30,
+    "completedWorksValue": 41852495,
+    "inProgressPayments": 30530119,
+    "paymentGapPercentage": 42.178801390068614,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 15,
+    "unspentAmount": 131243910.67000002,
+    "totalRecommendedAmount": 96526800,
+    "name_hi": "Dr. Radha Mohan Das Agrawal (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 72382614,
+      "totalEntries": 54,
+      "avgExpenditure": 1340418.7777777778,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 14134947,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 35866965,
+        "transactionCount": 26
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22380702,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 72382614,
+        "transactionCount": 54,
+        "avgAmount": 1340418.7777777778
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 30,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3073c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Class room in AD gov. kanya inter college Ground floor in gkp",
+        "completedDate": "2025-12-09T00:00:00.000Z",
+        "finalAmount": 11898309
+      },
+      {
+        "_id": "6a932bb5cd94452437a316ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward number 05 Muhalla Manabela mein kuber nath mishra ke makaan se lallan rai (lic) ke makan tak cc rode nali uchchikaran evam patari ka nirman 57 meter",
+        "completedDate": "2025-11-12T00:00:00.000Z",
+        "finalAmount": 784092
+      },
+      {
+        "_id": "6a932bb5cd94452437a319e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "ward number 07 shamser nagar me nandapar ninathapa marg se Gyanendra Shani evam Ashok singh ke makan tak cc road avam nali ka nirman 369 meter",
+        "completedDate": "2025-11-12T00:00:00.000Z",
+        "finalAmount": 2904824
+      },
+      {
+        "_id": "6a932bb5cd94452437a319df",
+        "workCategory": "Normal/Others",
+        "workDescription": "ward number 07 shamser nagar me nandapar ninathapa marg se Gyanendra Sahni road se lagi galiyon me CC road avam nali ka nirman 252 meter",
+        "completedDate": "2025-11-12T00:00:00.000Z",
+        "finalAmount": 2636521
+      },
+      {
+        "_id": "6a932bb5cd94452437a3073b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of class room in AD gov. Kanya inter college 1st floor gkp",
+        "completedDate": "2025-11-12T00:00:00.000Z",
+        "finalAmount": 11907185
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.663Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef0",
+    "name": "Parvatagouda Chandanagouda Gaddigoudar",
+    "constituency": "BAGALKOT",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 167541747.11,
+    "totalExpenditure": 63865076,
+    "utilizationPercentage": 38.118902960985125,
+    "completedWorksCount": 92,
+    "recommendedWorksCount": 136,
+    "completedWorksValue": 45898327,
+    "inProgressPayments": 17966749,
+    "paymentGapPercentage": 28.132353588681237,
+    "completionRate": 40.35087719298245,
+    "pendingWorks": 44,
+    "unspentAmount": 103676671.11000001,
+    "totalRecommendedAmount": 74800000,
+    "name_hi": "Parvatagouda Chandanagouda Gaddigoudar",
+    "constituency_hi": "BAGALKOT",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 63865076,
+      "totalEntries": 232,
+      "avgExpenditure": 275280.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30454563,
+        "transactionCount": 106
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33410513,
+        "transactionCount": 126
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 63865076,
+        "transactionCount": 232,
+        "avgAmount": 275280.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 92,
+    "recommendedCount": 136,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bc4a",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction of College Building of KES Samyukta Padavi Purva College Konnur",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc4f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in CHIKKA HANDIGOL Village Property No.401-1",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18788",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in BALAGANUR Village, Property No.212A",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in KULAHALLI Village Property No.1236",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 499945
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9c7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in INGALAGI Village, Property No.139-A",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.727Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede4d",
+    "name": "DR.K.SUDHAKAR",
+    "constituency": "CHIKBALLAPUR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 37553975,
+    "utilizationPercentage": 25.54692176870748,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 142,
+    "completedWorksValue": 8044009,
+    "inProgressPayments": 29509966,
+    "paymentGapPercentage": 78.58013965232709,
+    "completionRate": 11.25,
+    "pendingWorks": 124,
+    "unspentAmount": 109446025,
+    "totalRecommendedAmount": 96630000,
+    "name_hi": "DR.K.SUDHAKAR",
+    "constituency_hi": "CHIKBALLAPUR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37553975,
+      "totalEntries": 135,
+      "avgExpenditure": 278177.5925925926,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18382593,
+        "transactionCount": 66
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19171382,
+        "transactionCount": 69
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37553975,
+        "transactionCount": 135,
+        "avgAmount": 278177.5925925926
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 142,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df3b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction drainage slab at Hurali Chikkanahalli to Kodagi Tirumalapura Yelahanka Hurali Chikkanahalli GP",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 498466
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a8b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of press club association building Chikkaballpur",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a197fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "High-Must Lighting of public spaces at Doddaballapur (D) Hadonahalli GP Bachha Halli Grama SC Colony",
+        "completedDate": "2025-09-01T00:00:00.000Z",
+        "finalAmount": 249608
+      },
+      {
+        "_id": "6a932bb5cd94452437a1980a",
+        "workCategory": "Normal/Others",
+        "workDescription": "High-mast lighting Lighting of public spaces at Doddaballapur (T) Kodigehalli GP Kodigehalli Grama",
+        "completedDate": "2025-09-01T00:00:00.000Z",
+        "finalAmount": 249600
+      },
+      {
+        "_id": "6a932bb5cd94452437a19806",
+        "workCategory": "Normal/Others",
+        "workDescription": "High-Must  Lighting of public spaces at Doddaballapur(D) Kantanakunte GP Anthara Halli SC Colony",
+        "completedDate": "2025-09-01T00:00:00.000Z",
+        "finalAmount": 249608
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.253Z"
+}

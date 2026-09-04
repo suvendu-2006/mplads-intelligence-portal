@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1fb",
+    "name": "Dr. Kavita Patidar (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 197118521.35000002,
+    "totalExpenditure": 127377000.12,
+    "utilizationPercentage": 64.61949858777184,
+    "completedWorksCount": 142,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 85554362,
+    "inProgressPayments": 41822638.120000005,
+    "paymentGapPercentage": 32.8337439887888,
+    "completionRate": 65.43778801843318,
+    "pendingWorks": -67,
+    "unspentAmount": 69741521.23000002,
+    "totalRecommendedAmount": 63346885,
+    "name_hi": "Dr. Kavita Patidar (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 127377000.12,
+      "totalEntries": 427,
+      "avgExpenditure": 298306.7918501171,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 700000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 45176494,
+        "transactionCount": 190
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 53520440.12,
+        "transactionCount": 164
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27980066,
+        "transactionCount": 72
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 127377000.12,
+        "transactionCount": 427,
+        "avgAmount": 298306.7918501171
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 142,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3034d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road at Village Magarda Janpad Sehore Dist. Sehore",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3187c",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of Rooms in shri madhvashram Nyas mandleshwar Khargone Go Seva for Public Use GP Jalud Jp maheshwar District Khargone",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31953",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of 02 Additional Rooms in School Parisar run by Society Shree Umiya patidar samaj Shaikshanik evam Boudhik Vikas samity in GP Tilllor Khurd JP Indore District  Indore",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30445",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of additional room in samudaiyk bhawa at JamKhurd tehsil Mhow Distl Indore",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3107c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of gutters  from Nayapura to Kodiyar Dham in Gram Tilgara JP Badnawar District Dhar",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.941Z"
+}

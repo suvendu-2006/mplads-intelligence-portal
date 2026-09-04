@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede54",
+    "name": "E.T. MOHAMMED BASHEER",
+    "constituency": "MALAPPURAM",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 163895872.11,
+    "totalExpenditure": 34451493,
+    "utilizationPercentage": 21.020354299635812,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 150,
+    "completedWorksValue": 19026755,
+    "inProgressPayments": 15424738,
+    "paymentGapPercentage": 44.77233541083401,
+    "completionRate": 21.465968586387437,
+    "pendingWorks": 109,
+    "unspentAmount": 129444379.11000001,
+    "totalRecommendedAmount": 80210000,
+    "name_hi": "E.T. MOHAMMED BASHEER",
+    "constituency_hi": "MALAPPURAM",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34451493,
+      "totalEntries": 72,
+      "avgExpenditure": 478492.9583333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 34451493,
+        "transactionCount": 72
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34451493,
+        "transactionCount": 72,
+        "avgAmount": 478492.9583333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 150,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd55",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of School Bus for CAUPS Perimbalam, Anakkayam GP",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 1987170
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cherkakakulam road  , ward 7",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 150190
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e90a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Athiyam Parambath Manjakkad Road, ward 5",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 243349
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of vehicle for BUDS School Mankada, Mankada GP",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1598220
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e70a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Vadakke Poonthala road",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 284001
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.231Z"
+}

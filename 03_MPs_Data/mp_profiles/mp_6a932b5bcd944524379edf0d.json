@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf0d",
+    "name": "Radha Mohan Singh",
+    "constituency": "PURVI CHAMPARAN",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 69803891,
+    "utilizationPercentage": 47.48564013605442,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 64,
+    "completedWorksValue": 59914195,
+    "inProgressPayments": 9889696,
+    "paymentGapPercentage": 14.167829125743147,
+    "completionRate": 48.38709677419355,
+    "pendingWorks": 4,
+    "unspentAmount": 77196109,
+    "totalRecommendedAmount": 70750428,
+    "name_hi": "Radha Mohan Singh",
+    "constituency_hi": "PURVI CHAMPARAN",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 69803891,
+      "totalEntries": 83,
+      "avgExpenditure": 841010.734939759,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 42816150,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26987741,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 69803891,
+        "transactionCount": 83,
+        "avgAmount": 841010.734939759
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 64,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df80",
+        "workCategory": "Normal/Others",
+        "workDescription": "Motihari Nagar Nigam ke Gayatri Mandir Ke Pass Peyjal Aapurti (Samarsebal Boring Ewam Pani Tanki ka) Adhishthapan karya.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 448047
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df7c",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "MOTIHARI NAGAR KE ZILA ATITHI GRIH KE BAGAL ME SDPO,SADAR 2 KE AAWAS KE CHAHARDIWARI KA MARMATTI EWAM SAUNDRYIKARAN KARYA....",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 1486923
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e708",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of three small Chabutara beside footpath at Gandhi Maidan KACHHARI marg and some rcc bench along with footpath.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 960617
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd0d",
+        "workCategory": "Normal/Others",
+        "workDescription": "UV PROTECTOR MAT OF RUBBER SHEET IN CHARKHA PARK OF MOTIHARI NAGAR NIGAM",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 994750
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd0b",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "MOTIHARI NAGAR NIGAM KE GAYATRI  MANDIR KE SAMNE SAMUDAAYIK BHAWAN KA MARMATTI EWAM VIKAS KARYA.",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 497619
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.653Z"
+}

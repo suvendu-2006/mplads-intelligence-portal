@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef4",
+    "name": "Piyush Vedprakash Goyal",
+    "constituency": "MUMBAI NORTH",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30848998,
+    "utilizationPercentage": 20.98571292517007,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 49,
+    "completedWorksValue": 0,
+    "inProgressPayments": 30848998,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 49,
+    "unspentAmount": 116151002,
+    "totalRecommendedAmount": 98000000,
+    "name_hi": "Piyush Vedprakash Goyal",
+    "constituency_hi": "MUMBAI NORTH",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30848998,
+      "totalEntries": 17,
+      "avgExpenditure": 1814646.9411764706,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3597266,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27251732,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30848998,
+        "transactionCount": 17,
+        "avgAmount": 1814646.9411764706
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 49,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:57.226Z"
+}

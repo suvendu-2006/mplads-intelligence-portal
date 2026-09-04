@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde4",
+    "name": "Ashok Kumar Rawat",
+    "constituency": "MISRIKH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 121139986,
+    "utilizationPercentage": 82.4081537414966,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 3,
+    "completedWorksValue": 48614657,
+    "inProgressPayments": 72525329,
+    "paymentGapPercentage": 59.86902540999138,
+    "completionRate": 40,
+    "pendingWorks": 1,
+    "unspentAmount": 25860014,
+    "totalRecommendedAmount": 98162048,
+    "name_hi": "Ashok Kumar Rawat",
+    "constituency_hi": "MISRIKH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 121139986,
+      "totalEntries": 32,
+      "avgExpenditure": 3785624.5625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 48614657,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 72525329,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 121139986,
+        "transactionCount": 32,
+        "avgAmount": 3785624.5625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 3,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1732d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of led semi high mast light at different place in district sitapur",
+        "completedDate": "2025-12-30T00:00:00.000Z",
+        "finalAmount": 28310620
+      },
+      {
+        "_id": "6a932bb5cd94452437a17b5a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of led semi high mast light at 79 diffrent places in district sitapur.",
+        "completedDate": "2025-12-30T00:00:00.000Z",
+        "finalAmount": 20304037
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.680Z"
+}

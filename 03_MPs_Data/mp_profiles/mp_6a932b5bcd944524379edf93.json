@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf93",
+    "name": "Smt Sandhya Ray",
+    "constituency": "BHIND",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 25218035,
+    "utilizationPercentage": 17.155125850340134,
+    "completedWorksCount": 61,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 12175844,
+    "inProgressPayments": 13042191,
+    "paymentGapPercentage": 51.717713136650026,
+    "completionRate": 47.286821705426355,
+    "pendingWorks": 7,
+    "unspentAmount": 121781965,
+    "totalRecommendedAmount": 57491775,
+    "name_hi": "Smt Sandhya Ray",
+    "constituency_hi": "BHIND",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25218035,
+      "totalEntries": 158,
+      "avgExpenditure": 159607.81645569621,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11177824,
+        "transactionCount": 112
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14040211,
+        "transactionCount": 46
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25218035,
+        "transactionCount": 158,
+        "avgAmount": 159607.81645569621
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 61,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19ed1",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI FIREFIGHTER TANKER WATER SYSTEM CAPACITY 5000 LITERS",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ffd",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI FIREFIGHTER WATER SYSTEM CAPACITY 5000 LET.",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ffb",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI FIREFIGHTER WATER SYSTEM CAPACITY 5000 LET.",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ff9",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI FIREFIGHTER WATER SYSTEM CAPACITY 5000 LET.",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ff8",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI FIREFIGHTER WATER SYSTEM CAPACITY 5000 LET.",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 199604
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.251Z"
+}

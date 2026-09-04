@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee21a",
+    "name": "Shri Anil Kumar Yadav Mandadi (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Telangana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 54363174,
+    "utilizationPercentage": 36.98175102040817,
+    "completedWorksCount": 71,
+    "recommendedWorksCount": 35,
+    "completedWorksValue": 53733078,
+    "inProgressPayments": 630096,
+    "paymentGapPercentage": 1.159049322616814,
+    "completionRate": 66.98113207547169,
+    "pendingWorks": -36,
+    "unspentAmount": 92636826,
+    "totalRecommendedAmount": 45436593,
+    "name_hi": "Shri Anil Kumar Yadav Mandadi (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54363174,
+      "totalEntries": 73,
+      "avgExpenditure": 744701.0136986302,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 51537273,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2825901,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54363174,
+        "transactionCount": 73,
+        "avgAmount": 744701.0136986302
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 71,
+    "recommendedCount": 35,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32394",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Retaining wall to Madelaiah Teample Bit-I in Kandukur (V) of Gundlapally(M) Nalgonda Dist",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 495562
+      },
+      {
+        "_id": "6a932bb5cd94452437a32162",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Paver Block Public Street from the House of Sh. Pawan to the House of Sh. Ashok Sharma, Street No. - 7, Ward No. - 11, Kaithal, Distt Kaithal, Haryana",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 416831
+      },
+      {
+        "_id": "6a932bb5cd94452437a32125",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road form Chilkurpandu (H) to Mallapuram Narsimulu (H) and Vadee Amrutha (H) to Vadee Pandaiah (H) at Nakallapally (V) of Moinabad Mandal R R District",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 423508
+      },
+      {
+        "_id": "6a932bb5cd94452437a31feb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 5 KV Solar power system at Govt. B.C Girls College Hostel,  Yakuthpura (Musheerabad)",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 990000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e08",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Additional room to Library at   East  side in Division No.44 of Nizamabad Town",
+        "completedDate": "2025-12-19T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.213Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f2",
+    "name": "Dr. Bhim Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 186200000,
+    "totalExpenditure": 139819329,
+    "utilizationPercentage": 75.09093931256713,
+    "completedWorksCount": 233,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 93849329,
+    "inProgressPayments": 45970000,
+    "paymentGapPercentage": 32.87814376508702,
+    "completionRate": 74.20382165605095,
+    "pendingWorks": -152,
+    "unspentAmount": 46380671,
+    "totalRecommendedAmount": 75354185,
+    "name_hi": "Dr. Bhim Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 139819329,
+      "totalEntries": 281,
+      "avgExpenditure": 497577.6832740214,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 7291574,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 80066842,
+        "transactionCount": 197
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 52460913,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 139819329,
+        "transactionCount": 281,
+        "avgAmount": 497577.6832740214
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 233,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a316b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF PCC ROAD AND UNDERGROUND DRAIN",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 896104
+      },
+      {
+        "_id": "6a932bb5cd94452437a32250",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of 20 feet x 15 feet covered Community Chaupal",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 529465
+      },
+      {
+        "_id": "6a932bb5cd94452437a3223b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of 20 feet x 15 feet covered Community Chaupal",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 529465
+      },
+      {
+        "_id": "6a932bb5cd94452437a3219e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of 20 feet x 15 feet covered Community Chaupal",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 528500
+      },
+      {
+        "_id": "6a932bb5cd94452437a3219a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of 20 x feet 15 feet covered community Chaupal",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 521730
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.773Z"
+}

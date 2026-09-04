@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1a",
+    "name": "CHHATRA PAL SINGH GANGWAR",
+    "constituency": "BAREILLY",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 95712065,
+    "utilizationPercentage": 65.11024829931972,
+    "completedWorksCount": 142,
+    "recommendedWorksCount": 44,
+    "completedWorksValue": 93623211,
+    "inProgressPayments": 2088854,
+    "paymentGapPercentage": 2.1824354118783247,
+    "completionRate": 76.34408602150538,
+    "pendingWorks": -98,
+    "unspentAmount": 51287935,
+    "totalRecommendedAmount": 19418646,
+    "name_hi": "CHHATRA PAL SINGH GANGWAR",
+    "constituency_hi": "BAREILLY",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95712065,
+      "totalEntries": 290,
+      "avgExpenditure": 330041.6034482759,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 55417889,
+        "transactionCount": 167
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40294176,
+        "transactionCount": 123
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95712065,
+        "transactionCount": 290,
+        "avgAmount": 330041.6034482759
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 142,
+    "recommendedCount": 44,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c056",
+        "workCategory": "Normal/Others",
+        "workDescription": "BHOJIPURA KE GRAM ABHAYPUR KESHOPUR, CHAUPARA SHUMALI ME BITHRI KE NAVADIYA ILAKA SINGHAI OR SINGHAI KAYASTHAN ME SHAMSHAN SHED KA NIRMAN",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 260158
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c04e",
+        "workCategory": "Normal/Others",
+        "workDescription": "BHOJIPURA KE GRAM ABHAYPUR KESHOPUR, CHAUPARA SHUMALI ME BITHRI KE NAVADIYA ILAKA SINGHAI OR SINGHAI KAYASTHAN ME SHAMSHAN SHED KA NIRMAN",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 260158
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "GOSAI GAUTIYA ME SHIV MANDIR KUA KE PAS COMMUNITY CENTER KA NIRMAN",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 996555
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "WARD-55, SAIDPUR HAWKINGS ME PRATAP HOSPITAL, WARD 37 NADOSI DEVSTHAN, HANUMAN MANDIR KE PAS, WARD 17 MANSAROVER GARDEN GREEN PARK, MAHAMAYA BIHAR SCHOOL DOHRA ROAD",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 906405
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c4d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "MIRGNJ KE -MANDANPUR, SUJATPUR,LABHEDA,GUGAI,NARELI RASOOLPUR, FATEHGANJ KE KATHOLA BENIRAM, PANTHARIYA, KERA, DHAUR SATUIYA, PACHTAUR, SHERGARH KE ABHAYPURA URF JOKHANPUR, DUNKI ME SHAMSHAN SHED KA NIRMAN",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 351631
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.822Z"
+}

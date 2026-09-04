@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeed",
+    "name": "PARIMAL SUKLABAIDYA",
+    "constituency": "SILCHAR",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148300157.11,
+    "totalExpenditure": 5511762,
+    "utilizationPercentage": 3.716625867032434,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 153,
+    "completedWorksValue": 0,
+    "inProgressPayments": 5511762,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 153,
+    "unspentAmount": 142788395.11,
+    "totalRecommendedAmount": 98800000,
+    "name_hi": "PARIMAL SUKLABAIDYA",
+    "constituency_hi": "SILCHAR",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5511762,
+      "totalEntries": 13,
+      "avgExpenditure": 423981.6923076923,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 5511762,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5511762,
+        "transactionCount": 13,
+        "avgAmount": 423981.6923076923
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 153,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.235Z"
+}

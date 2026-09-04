@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee267",
+    "name": "Shri Mohammed Nadimul Haque (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 45077861,
+    "utilizationPercentage": 30.66521156462585,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 18,
+    "completedWorksValue": 1096933,
+    "inProgressPayments": 43980928,
+    "paymentGapPercentage": 97.56658151991728,
+    "completionRate": 5.263157894736842,
+    "pendingWorks": 17,
+    "unspentAmount": 101922139,
+    "totalRecommendedAmount": 95647500,
+    "name_hi": "Shri Mohammed Nadimul Haque (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 45077861,
+      "totalEntries": 16,
+      "avgExpenditure": 2817366.3125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34670387,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10407474,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 45077861,
+        "transactionCount": 16,
+        "avgAmount": 2817366.3125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 18,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31cc1",
+        "workCategory": "Normal/Others",
+        "workDescription": "BEAUTIFICATION OF BIDHAN SARANI FOOTPATH (PHASE-II) IN FRONT OF SWAMI VIVEKANANDA'S ANCESTRAL HOUSE IN BOROUGH- IV",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 1096933
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.893Z"
+}

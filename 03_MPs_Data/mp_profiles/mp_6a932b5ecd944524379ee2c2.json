@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c2",
+    "name": "Smt. Maya Naroliya (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70041767,
+    "utilizationPercentage": 47.64746054421769,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 140,
+    "completedWorksValue": 16663844,
+    "inProgressPayments": 53377923,
+    "paymentGapPercentage": 76.20870415790624,
+    "completionRate": 10.256410256410255,
+    "pendingWorks": 124,
+    "unspentAmount": 76958233,
+    "totalRecommendedAmount": 89596682,
+    "name_hi": "Smt. Maya Naroliya (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70041767,
+      "totalEntries": 180,
+      "avgExpenditure": 389120.9277777778,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34746667,
+        "transactionCount": 98
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35295100,
+        "transactionCount": 82
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70041767,
+        "transactionCount": 180,
+        "avgAmount": 389120.9277777778
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 140,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30c9e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nalkheda ke patel mohalla main CC road nirman",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e24",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Singouri main Kamal ke ghar se CC road ki aur CC road nirman",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Jamuniya main Sattulal ke ghar se Lakhanlal ke ghar ki aur CC road nirman",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e23",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Katori main panchayat bhawan ki aur CC road nirman",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31063",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Golaguthan me Lakhannath ke ghar se harizan mohalla ki aur CC road nirman",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.896Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea9",
+    "name": "Krishan Pal Gurjar",
+    "constituency": "FARIDABAD",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23658961,
+    "utilizationPercentage": 16.094531292517004,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 76,
+    "completedWorksValue": 4454659,
+    "inProgressPayments": 19204302,
+    "paymentGapPercentage": 81.1713667392241,
+    "completionRate": 7.317073170731707,
+    "pendingWorks": 70,
+    "unspentAmount": 123341039,
+    "totalRecommendedAmount": 63607185,
+    "name_hi": "Krishan Pal Gurjar",
+    "constituency_hi": "FARIDABAD",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23658961,
+      "totalEntries": 46,
+      "avgExpenditure": 514325.23913043475,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 799785,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22859176,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23658961,
+        "transactionCount": 46,
+        "avgAmount": 514325.23913043475
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 76,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Electrification work for Bhagmal wali dhani Bhainsrawali",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 397620
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dhani Connection nearby Ravi Prakash Village Dehkola",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 257893
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const of IPB Street from Water Supply booster to Bharat Bhushan Farm, Ward 5 Hathin",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 1999984
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e047",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Chaupal",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 499954
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d53d",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of Boundary wall and Gate",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 499423
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.225Z"
+}

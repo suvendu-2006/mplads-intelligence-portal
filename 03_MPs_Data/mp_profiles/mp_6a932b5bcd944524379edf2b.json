@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf2b",
+    "name": "Ramprit Mandal",
+    "constituency": "JHANJHARPUR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 107510581,
+    "utilizationPercentage": 73.13644965986394,
+    "completedWorksCount": 90,
+    "recommendedWorksCount": 91,
+    "completedWorksValue": 92399719,
+    "inProgressPayments": 15110862,
+    "paymentGapPercentage": 14.05523238684758,
+    "completionRate": 49.72375690607735,
+    "pendingWorks": 1,
+    "unspentAmount": 39489419,
+    "totalRecommendedAmount": 56964407,
+    "name_hi": "Ramprit Mandal",
+    "constituency_hi": "JHANJHARPUR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 107510581,
+      "totalEntries": 104,
+      "avgExpenditure": 1033755.5865384615,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 9864000,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 65166693,
+        "transactionCount": 62
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32479888,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 107510581,
+        "transactionCount": 104,
+        "avgAmount": 1033755.5865384615
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 90,
+    "recommendedCount": 91,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e74b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bisfi Prakhand ke Jafara Panchayat ke Mokdampur Gaw ke Ward no 7 me Arvind Kumar Ram ke Ghar ke Bagal me Sarak Kinare Samersible ka Adhisthapan Karya",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 198918
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de4e",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK Khajauli VILAT SINGH BALIKA UCHYA MADHYAMIK VIDYALAY MEN LEB UPKARAN KA KARAY EVAM. ADHISTHAPAN KAYA",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1205000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de4d",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK BASOPATTI PROJECT GIRLS HIGH SCHOOL MEHNATPUR MEN LEB UPKARAN KA KARAY EVAM. ADHISTHAPAN KAYA",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1205000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK BASOPATTI B K S PLUS 2 HIGH SCHOOL JATULIYA MEN LEB UPKARAN KA KARAY EVAM. ADHISTHAPAN KAYA",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1205000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c771",
+        "workCategory": "Normal/Others",
+        "workDescription": "block phulpras panchait sugapatti village sugapatti ward no 07 sthith kachhari tola  koshlendra kapar ghar se  ashok kapar bagicha hote hue nahar tk sadak ka nirman karya.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 798476
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.811Z"
+}

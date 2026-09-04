@@ -1,0 +1,93 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee281",
+    "name": "Shri Raghav Chadha (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 237229207.25,
+    "totalExpenditure": 34558312,
+    "utilizationPercentage": 14.567477757315652,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 2,
+    "completedWorksValue": 7086378,
+    "inProgressPayments": 27471934,
+    "paymentGapPercentage": 79.49443248269765,
+    "completionRate": 66.66666666666666,
+    "pendingWorks": -2,
+    "unspentAmount": 202670895.25,
+    "totalRecommendedAmount": 37500000,
+    "name_hi": "Shri Raghav Chadha (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34558312,
+      "totalEntries": 34,
+      "avgExpenditure": 1016420.9411764706,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2010752,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 26206299,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6341261,
+        "transactionCount": 4
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34558312,
+        "transactionCount": 34,
+        "avgAmount": 1016420.9411764706
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 2,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31a0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement of jcb machine,tractor trolly, mud loader for desilting sand depositeon agricultural land and other affected areas in flood hit villages.",
+        "completedDate": "2025-11-07T00:00:00.000Z",
+        "finalAmount": 4954000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30874",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fencing and Benches",
+        "completedDate": "2025-10-09T00:00:00.000Z",
+        "finalAmount": 764000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30a3d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Volleyball Court",
+        "completedDate": "2024-12-25T00:00:00.000Z",
+        "finalAmount": 686677
+      },
+      {
+        "_id": "6a932bb5cd94452437a30a3c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fencing and Benches",
+        "completedDate": "2024-12-25T00:00:00.000Z",
+        "finalAmount": 681701
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.430Z"
+}

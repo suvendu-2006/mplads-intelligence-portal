@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2cc",
+    "name": "Smt. Sagarika Ghose (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47289873,
+    "utilizationPercentage": 32.16998163265306,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 0,
+    "inProgressPayments": 47289873,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 13,
+    "unspentAmount": 99710127,
+    "totalRecommendedAmount": 97500000,
+    "name_hi": "Smt. Sagarika Ghose (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47289873,
+      "totalEntries": 16,
+      "avgExpenditure": 2955617.0625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 35199760,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12090113,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47289873,
+        "transactionCount": 16,
+        "avgAmount": 2955617.0625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 13,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:52.499Z"
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "_id":"6a932b5bcd944524379ee01e",
+    "mpName":"Dileshwar Kamait",
+    "house":"Lok Sabha",
+    "state":"Bihar",
+    "constituency":"SUPAUL",
+    "allocatedAmount":55691994.0,
+    "totalExpenditure":55691994,
+    "completedWorksCount":48,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5bcd944524379ee014",
+    "mpName":"D Ravikumar",
+    "house":"Lok Sabha",
+    "state":"Tamil Nadu",
+    "constituency":"VILUPPURAM",
+    "allocatedAmount":72417768.0,
+    "totalExpenditure":72417768,
+    "completedWorksCount":192,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5bcd944524379ee09d",
+    "mpName":"Ms Mahua Moitra(17th Lok Sabha)",
+    "house":"Lok Sabha",
+    "state":"West Bengal",
+    "constituency":"KRISHNANAGAR",
+    "allocatedAmount":44264088.0,
+    "totalExpenditure":44264088,
+    "completedWorksCount":27,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5bcd944524379ee02b",
+    "mpName":"Dr Mohammad Jawed (17th Lok Sabha)",
+    "house":"Lok Sabha",
+    "state":"Bihar",
+    "constituency":"KISHANGANJ",
+    "allocatedAmount":96394728.0,
+    "totalExpenditure":96394728,
+    "completedWorksCount":124,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5bcd944524379ee0e6",
+    "mpName":"Rajnath Singh(17th Lok Sabha)",
+    "house":"Lok Sabha",
+    "state":"Uttar Pradesh",
+    "constituency":"LUCKNOW",
+    "allocatedAmount":41255160.0,
+    "totalExpenditure":41255160,
+    "completedWorksCount":42,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5ecd944524379ee1a2",
+    "mpName":"Smt Riti Pathak (17th Lok Sabha)",
+    "house":"Lok Sabha",
+    "state":"Madhya Pradesh",
+    "constituency":"SIDHI",
+    "allocatedAmount":2229890.0,
+    "totalExpenditure":2229900,
+    "completedWorksCount":30,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5ecd944524379ee1bf",
+    "mpName":"Sunil Kumar Pintu",
+    "house":"Lok Sabha",
+    "state":"Bihar",
+    "constituency":"SITAMARHI",
+    "allocatedAmount":96767761.0,
+    "totalExpenditure":96767761,
+    "completedWorksCount":179,
+    "utilizationPercentage":100.0
+  },
+  {
+    "_id":"6a932b5bcd944524379ee097",
+    "mpName":"Mohammad Sadique(17th Lok Sabha)",
+    "house":"Lok Sabha",
+    "state":"Punjab",
+    "constituency":"FARIDKOT",
+    "allocatedAmount":70616907.0,
+    "totalExpenditure":70616601,
+    "completedWorksCount":222,
+    "utilizationPercentage":99.999566676
+  },
+  {
+    "_id":"6a932b5bcd944524379ee01b",
+    "mpName":"Dhal Singh Bisen",
+    "house":"Lok Sabha",
+    "state":"Madhya Pradesh",
+    "constituency":"BALAGHAT",
+    "allocatedAmount":48992666.8999999985,
+    "totalExpenditure":48948355,
+    "completedWorksCount":303,
+    "utilizationPercentage":99.9095540153
+  },
+  {
+    "_id":"6a932b5bcd944524379ee0e2",
+    "mpName":"Rajesh Verma",
+    "house":"Lok Sabha",
+    "state":"Uttar Pradesh",
+    "constituency":"SITAPUR",
+    "allocatedAmount":73563957.1099999994,
+    "totalExpenditure":73457235,
+    "completedWorksCount":22,
+    "utilizationPercentage":99.8549260885
+  }
+]

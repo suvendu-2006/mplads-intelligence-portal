@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede45",
+    "name": "DR. MANSUKH MANDAVIYA",
+    "constituency": "PORBANDAR",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 34762587,
+    "utilizationPercentage": 23.64801836734694,
+    "completedWorksCount": 72,
+    "recommendedWorksCount": 238,
+    "completedWorksValue": 27644193,
+    "inProgressPayments": 7118394,
+    "paymentGapPercentage": 20.477169895324536,
+    "completionRate": 23.225806451612904,
+    "pendingWorks": 166,
+    "unspentAmount": 112237413,
+    "totalRecommendedAmount": 114588516,
+    "name_hi": "DR. MANSUKH MANDAVIYA",
+    "constituency_hi": "PORBANDAR",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34762587,
+      "totalEntries": 86,
+      "avgExpenditure": 404216.12790697673,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6627110,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28135477,
+        "transactionCount": 65
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34762587,
+        "transactionCount": 86,
+        "avgAmount": 404216.12790697673
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 72,
+    "recommendedCount": 238,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d4f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of hearse van (Four wheelers) In Bantwa City Municipality.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e609",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Ambulances Van (Four wheelers) in Dhoraji City Nagarpalika",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e835",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Ambulances Van (Four wheelers) in Upleta City, Nagarpalika",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e94c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Paver block work from Main Gate to Girdharbhai Pansuriya house",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e839",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road work from Kishan Day Hydration to New 100 Choiwar",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.214Z"
+}

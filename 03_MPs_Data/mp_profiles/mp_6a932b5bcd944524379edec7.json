@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec7",
+    "name": "MANNA LAL RAWAT",
+    "constituency": "UDAIPUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35533993,
+    "utilizationPercentage": 24.1727843537415,
+    "completedWorksCount": 24,
+    "recommendedWorksCount": 176,
+    "completedWorksValue": 23891612,
+    "inProgressPayments": 11642381,
+    "paymentGapPercentage": 32.76406622807631,
+    "completionRate": 12,
+    "pendingWorks": 152,
+    "unspentAmount": 111466007,
+    "totalRecommendedAmount": 52441798,
+    "name_hi": "MANNA LAL RAWAT",
+    "constituency_hi": "UDAIPUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35533993,
+      "totalEntries": 205,
+      "avgExpenditure": 173336.55121951218,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25145104,
+        "transactionCount": 110
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10388889,
+        "transactionCount": 95
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35533993,
+        "transactionCount": 205,
+        "avgAmount": 173336.55121951218
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 24,
+    "recommendedCount": 176,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18066",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Hall in Vidhya Niketan Sr. Src School Aaspur",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 1916904
+      },
+      {
+        "_id": "6a932bb5cd94452437a16cc8",
+        "workCategory": "Normal/Others",
+        "workDescription": "main road to dekva tak puliya nirman may ringwall",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 1496783
+      },
+      {
+        "_id": "6a932bb5cd94452437a16cc6",
+        "workCategory": "Normal/Others",
+        "workDescription": "??  ??  ??    ??",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 1498999
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a51b",
+        "workCategory": "Normal/Others",
+        "workDescription": "GSSS JOGIVADA- CRICKET KIT SPORTS KIT",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 99000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a524",
+        "workCategory": "Normal/Others",
+        "workDescription": "CRICKET KIT SPORTS KID",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 99000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.216Z"
+}

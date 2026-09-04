@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee26d",
+    "name": "Shri Naveen Jain (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 64773227,
+    "utilizationPercentage": 44.06341972789116,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 158,
+    "completedWorksValue": 17873843,
+    "inProgressPayments": 46899384,
+    "paymentGapPercentage": 72.40550791147089,
+    "completionRate": 5.952380952380952,
+    "pendingWorks": 148,
+    "unspentAmount": 82226773,
+    "totalRecommendedAmount": 117703900,
+    "name_hi": "Shri Naveen Jain (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 64773227,
+      "totalEntries": 94,
+      "avgExpenditure": 689076.8829787234,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28611643,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36161584,
+        "transactionCount": 69
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 64773227,
+        "transactionCount": 94,
+        "avgAmount": 689076.8829787234
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 158,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31907",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Smart Board Furniture And Link Road in PP Mutawai Fatehabad",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 2327948
+      },
+      {
+        "_id": "6a932bb5cd94452437a31906",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Smart Board Furniture And Link Road in PP Gopau Achhnera",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 2677734
+      },
+      {
+        "_id": "6a932bb5cd94452437a31918",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Smart Board Furniture And Link Road from vidhyalaqy to co residence  in PP Vikram Pur Bah",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 2269154
+      },
+      {
+        "_id": "6a932bb5cd94452437a3191a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Smart Board Furniture And Link Road in Composit Vidhyalay in  Vijay Garhi Pinahat",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 1908193
+      },
+      {
+        "_id": "6a932bb5cd94452437a310ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road in village bas sundar from dabar road to vinod house in block etmadpur",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 1800626
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.681Z"
+}

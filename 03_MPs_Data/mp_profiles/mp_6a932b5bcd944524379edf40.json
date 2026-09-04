@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf40",
+    "name": "SAMBIT PATRA",
+    "constituency": "PURI",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 38354750,
+    "utilizationPercentage": 26.09166666666667,
+    "completedWorksCount": 548,
+    "recommendedWorksCount": 175,
+    "completedWorksValue": 31620874,
+    "inProgressPayments": 6733876,
+    "paymentGapPercentage": 17.556824122175218,
+    "completionRate": 75.79529737206086,
+    "pendingWorks": -373,
+    "unspentAmount": 108645250,
+    "totalRecommendedAmount": 82880000,
+    "name_hi": "SAMBIT PATRA",
+    "constituency_hi": "PURI",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38354750,
+      "totalEntries": 847,
+      "avgExpenditure": 45283.05785123967,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14978525,
+        "transactionCount": 383
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23376225,
+        "transactionCount": 464
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38354750,
+        "transactionCount": 847,
+        "avgAmount": 45283.05785123967
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 548,
+    "recommendedCount": 175,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light at Cremation Ground of Notar Village.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 40000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light at Cremation Ground of Baulasahi Village.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 40000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light at Cremation Ground of Kantabania Village.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 40000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light at Cremation Ground of Sankhei Village.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 40000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbc3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre near kali Mandir.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.241Z"
+}

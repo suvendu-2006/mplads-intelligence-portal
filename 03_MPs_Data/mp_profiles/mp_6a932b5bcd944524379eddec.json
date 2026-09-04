@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddec",
+    "name": "BABU SINGH KUSHWAHA",
+    "constituency": "JAUNPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 46048017,
+    "utilizationPercentage": 31.32518163265306,
+    "completedWorksCount": 522,
+    "recommendedWorksCount": 164,
+    "completedWorksValue": 24508010,
+    "inProgressPayments": 21540007,
+    "paymentGapPercentage": 46.77727381832751,
+    "completionRate": 76.0932944606414,
+    "pendingWorks": -358,
+    "unspentAmount": 100951983,
+    "totalRecommendedAmount": 73546300,
+    "name_hi": "BABU SINGH KUSHWAHA",
+    "constituency_hi": "JAUNPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 46048017,
+      "totalEntries": 650,
+      "avgExpenditure": 70843.10307692307,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17668769,
+        "transactionCount": 236
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28379248,
+        "transactionCount": 414
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 46048017,
+        "transactionCount": 650,
+        "avgAmount": 70843.10307692307
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 522,
+    "recommendedCount": 164,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a942",
+        "workCategory": "Normal/Others",
+        "workDescription": "Pradeep Yadav ke ghar ke pas",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 19989
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a93f",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikash yadav ke ghar ke pass",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 19989
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a95d",
+        "workCategory": "Normal/Others",
+        "workDescription": "bharat saroj ke makan ke pass",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 19989
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a949",
+        "workCategory": "Normal/Others",
+        "workDescription": "pushpendra yadav ke makan ke pass",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 19989
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a934",
+        "workCategory": "Normal/Others",
+        "workDescription": "kamlesh vishwakarma ke ghar ke pass",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 19989
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.255Z"
+}

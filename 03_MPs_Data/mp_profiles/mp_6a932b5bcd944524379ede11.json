@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede11",
+    "name": "CAPTAIN BRIJESH CHOWTA",
+    "constituency": "DAKSHINA KANNADA",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50728812,
+    "utilizationPercentage": 34.509395918367346,
+    "completedWorksCount": 75,
+    "recommendedWorksCount": 131,
+    "completedWorksValue": 35669259,
+    "inProgressPayments": 15059553,
+    "paymentGapPercentage": 29.686390053841592,
+    "completionRate": 36.407766990291265,
+    "pendingWorks": 56,
+    "unspentAmount": 96271188,
+    "totalRecommendedAmount": 59430000,
+    "name_hi": "CAPTAIN BRIJESH CHOWTA",
+    "constituency_hi": "DAKSHINA KANNADA",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50728812,
+      "totalEntries": 105,
+      "avgExpenditure": 483131.54285714286,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 23500819,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27227993,
+        "transactionCount": 55
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50728812,
+        "transactionCount": 105,
+        "avgAmount": 483131.54285714286
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 75,
+    "recommendedCount": 131,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e442",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road development of Uppkala part of Balugodu village, Sulya taluk",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 299799
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of Miyaru Palke Quarters Road in Maninalkur Village, Bantwala Taluk",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 498355
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e296",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "concreting work for the road leading to Harihareshwara temple in Harihara village of Sulya Taluk",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 494451
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of Gram Panchayat Office of olamogru village of Puttur taluk",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0db",
+        "workCategory": "Normal/Others",
+        "workDescription": "The road from Sharans house to Shyams house on the 1st cross road in Vaidyanathnagar Ullalabail Ullal taluk",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 499545
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.246Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8e",
+    "name": "Smt Himadri Singh",
+    "constituency": "SHAHDOL",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150724861.11,
+    "totalExpenditure": 57863796,
+    "utilizationPercentage": 38.39034620690121,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 124,
+    "completedWorksValue": 23600212,
+    "inProgressPayments": 34263584,
+    "paymentGapPercentage": 59.2142001883181,
+    "completionRate": 26.627218934911244,
+    "pendingWorks": 79,
+    "unspentAmount": 92861065.11000001,
+    "totalRecommendedAmount": 93153160,
+    "name_hi": "Smt Himadri Singh",
+    "constituency_hi": "SHAHDOL",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57863796,
+      "totalEntries": 168,
+      "avgExpenditure": 344427.35714285716,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3990000,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 32180556,
+        "transactionCount": 102
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21693240,
+        "transactionCount": 60
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57863796,
+        "transactionCount": 168,
+        "avgAmount": 344427.35714285716
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 124,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c013",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of culvert in Garruvah Nala in village Goga. Implementing Agency - Gram Panchayat",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1499800
+      },
+      {
+        "_id": "6a932bb5cd94452437a18cb3",
+        "workCategory": "Normal/Others",
+        "workDescription": "RCC culvert construction work near Nanda Gond farm on the main road Deori to Jamgaon road. Implementing agency - Gram Panchayat",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 999700
+      },
+      {
+        "_id": "6a932bb5cd94452437a1891a",
+        "workCategory": "Normal/Others",
+        "workDescription": "12 solar street light installation work. Implementing Agency - PWD EM, Rewa Division",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 366964
+      },
+      {
+        "_id": "6a932bb5cd94452437a1891d",
+        "workCategory": "Normal/Others",
+        "workDescription": "12 solar street light installation work. Implementing Agency - PWD EM, Rewa Division",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 366964
+      },
+      {
+        "_id": "6a932bb5cd94452437a18914",
+        "workCategory": "Normal/Others",
+        "workDescription": "12 solar street light installation work. Implementing Agency - PWD EM, Rewa Division",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 366964
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.945Z"
+}

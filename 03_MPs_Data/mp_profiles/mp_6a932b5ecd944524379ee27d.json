@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee27d",
+    "name": "Shri Pramod Tiwari (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 100649660,
+    "utilizationPercentage": 51.335116093536435,
+    "completedWorksCount": 64,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 64986789,
+    "inProgressPayments": 35662871,
+    "paymentGapPercentage": 35.432679057236754,
+    "completionRate": 48.854961832061065,
+    "pendingWorks": 3,
+    "unspentAmount": 95414297.11000001,
+    "totalRecommendedAmount": 72411706,
+    "name_hi": "Shri Pramod Tiwari (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 100649660,
+      "totalEntries": 219,
+      "avgExpenditure": 459587.4885844749,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 22399721,
+        "transactionCount": 28
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42558836,
+        "transactionCount": 91
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35691103,
+        "transactionCount": 100
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 100649660,
+        "transactionCount": 219,
+        "avgAmount": 459587.4885844749
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 64,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3226e",
+        "workCategory": "Normal/Others",
+        "workDescription": "For construction of public community and toilets in Gram Panchayat Gajewala (Chak Abadi 25).",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a321cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gravel road construction work in Gram Panchayat-Salkha from Salkha Kannoi Road to Chetanram Bhil Dhani",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a308fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Revised: For gravel road construction work from Suro village to Khuiyala Road.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1480769
+      },
+      {
+        "_id": "6a932bb5cd94452437a32468",
+        "workCategory": "Normal/Others",
+        "workDescription": "For construction of gravel road from link asphalt road to Dhaniya of Bhanwarsingh .\n\nRevised: For the construction of a public reading room in village Moolana, the residence of Bhanwar Singh Sagar.",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3083b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nainadaan jee ka Vaas, Graam Panchaayat- Baarath ka Gaanv mein Saarvajanik Vaachanaalay Nirmaan.",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.267Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf95",
+    "name": "Smt Satabdi Roy (Banerjee)",
+    "constituency": "BIRBHUM",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 48307379.6,
+    "utilizationPercentage": 32.86216299319728,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 35,
+    "completedWorksValue": 46588235.6,
+    "inProgressPayments": 1719144,
+    "paymentGapPercentage": 3.558760616359327,
+    "completionRate": 63.91752577319587,
+    "pendingWorks": -27,
+    "unspentAmount": 98692620.4,
+    "totalRecommendedAmount": 26225000,
+    "name_hi": "Smt Satabdi Roy (Banerjee)",
+    "constituency_hi": "BIRBHUM",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 48307379.6,
+      "totalEntries": 67,
+      "avgExpenditure": 721005.6656716418,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30562930.6,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17744449,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 48307379.6,
+        "transactionCount": 67,
+        "avgAmount": 721005.6656716418
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 35,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a0fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Drainage System, CC Road and Pathways, Executive Agency - Chairman suri Municipality",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 897870
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Instalation of Rig bore tube well, Laying of Pipeline with storage tank for all line drinking facility, Executive Agency - Chairman Suri Municipality",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 598577
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd9c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Instalation of high must Light, G.P - Barla, Nalhati - I, Executive Agency - Prodhan Barla G.P",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 299207
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b5bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Instalation of high must Light, G.P - Barla, Nalhati - I, Executive Agency - Prodhan Barla G.P",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 299237
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a34d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C road at Vill- karamchi, Jahangir sk house to Mirajul house, Dag - 80- 81,J.L  -147, G.P  -Kushmor - II, Murarai - II,",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 474443
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.684Z"
+}

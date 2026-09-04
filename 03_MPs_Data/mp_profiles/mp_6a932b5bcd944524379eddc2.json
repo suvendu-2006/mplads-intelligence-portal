@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc2",
+    "name": "Alok Kumar Suman",
+    "constituency": "GOPALGANJ",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50920280,
+    "utilizationPercentage": 34.639646258503404,
+    "completedWorksCount": 43,
+    "recommendedWorksCount": 112,
+    "completedWorksValue": 42661355,
+    "inProgressPayments": 8258925,
+    "paymentGapPercentage": 16.2193236172307,
+    "completionRate": 27.741935483870968,
+    "pendingWorks": 69,
+    "unspentAmount": 96079720,
+    "totalRecommendedAmount": 95190041,
+    "name_hi": "Alok Kumar Suman",
+    "constituency_hi": "GOPALGANJ",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50920280,
+      "totalEntries": 56,
+      "avgExpenditure": 909290.7142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8339632,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42580648,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50920280,
+        "transactionCount": 56,
+        "avgAmount": 909290.7142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 43,
+    "recommendedCount": 112,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e281",
+        "workCategory": "Normal/Others",
+        "workDescription": "Under the Member of Parliament Local Area Development Scheme, I recommend the allocation of up to seven lakh rupees from my MP fund for the construction of a damaged PCC road from the sub-health center to Bathua Banjari Road in Ward No. 09, 10, and 12 of Parsauni Khas village, Parsauni Khas Panchayat, Uchkagaon block, Gopalganj district.",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 694967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b6fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Under the Member of Parliament Local Area Development Scheme, an amount of up to 14 lakh 95 thousand rupees is recommended from my MP fund for the construction of pillars with Ashoka Stambh on both sides of NH-531 road for the convenience of citizens at the junction of NH-531 and NH-27 in Block- Gopalganj, Gram Panchayat- Banjari of Gopalganj district.",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 1482052
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e096",
+        "workCategory": "Normal/Others",
+        "workDescription": "nder the Member of Parliament Local Area Development Scheme, an amount of Rs 49 lakh 90 thousand is recommended from my MP fund for the supply and installation of 5 high mast lights (including electricity) in Mirganj Municipal Council and Kateya Nagar Panchayat of Gopalganj district.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 995000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e093",
+        "workCategory": "Normal/Others",
+        "workDescription": "nder the Member of Parliament Local Area Development Scheme, an amount of Rs 49 lakh 90 thousand is recommended from my MP fund for the supply and installation of 5 high mast lights (including electricity) in Mirganj Municipal Council and Kateya Nagar Panchayat of Gopalganj district.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 995000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e046",
+        "workCategory": "Normal/Others",
+        "workDescription": "Under the Member of Parliament Local Area Development Scheme, an amount of Rs 49 lakh 90 thousand is recommended from my MP fund for the supply and installation of 5 high mast lights (including electricity) in Hathua Nagar Panchayat and Barauli Nagar Parishad of Gopalganj district.",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 995000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.505Z"
+}

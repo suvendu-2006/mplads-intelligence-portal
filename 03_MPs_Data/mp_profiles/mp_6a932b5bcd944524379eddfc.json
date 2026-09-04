@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddfc",
+    "name": "BHARAT SINGH KUSHWAH",
+    "constituency": "GWALIOR",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151455276.04,
+    "totalExpenditure": 13426652,
+    "utilizationPercentage": 8.865093611168726,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 112,
+    "completedWorksValue": 2987672,
+    "inProgressPayments": 10438980,
+    "paymentGapPercentage": 77.7481981360655,
+    "completionRate": 3.4482758620689653,
+    "pendingWorks": 108,
+    "unspentAmount": 138028624.04,
+    "totalRecommendedAmount": 74813257,
+    "name_hi": "BHARAT SINGH KUSHWAH",
+    "constituency_hi": "GWALIOR",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13426652,
+      "totalEntries": 40,
+      "avgExpenditure": 335666.3,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 640346,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12786306,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13426652,
+        "transactionCount": 40,
+        "avgAmount": 335666.3
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 112,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df32",
+        "workCategory": "Normal/Others",
+        "workDescription": "ladhedi kevat bahicha boundary ball nirman karya",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 906753
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b254",
+        "workCategory": "Normal/Others",
+        "workDescription": "vipdan sangh ke pohari stithi godam parisar me krashk vishram shed (farmer shed) ka nirman karya",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 491425
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc50",
+        "workCategory": "Normal/Others",
+        "workDescription": "hajar bistar hospital me park evm chabutra nirman karya",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 426480
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "ward no 34 kajal talkies ke neeche church ke samne road ke dono taraf swarn rekha nale ke pahle saptahik hat bajar sthal par paber block evm nali nirman",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 1163014
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.485Z"
+}

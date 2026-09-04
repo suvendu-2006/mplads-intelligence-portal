@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc3",
+    "name": "VIRENDRA SINGH",
+    "constituency": "CHANDAULI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 86345853,
+    "utilizationPercentage": 58.73867551020409,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 22,
+    "completedWorksValue": 60651663,
+    "inProgressPayments": 25694190,
+    "paymentGapPercentage": 29.757294771296085,
+    "completionRate": 37.142857142857146,
+    "pendingWorks": 9,
+    "unspentAmount": 60654147,
+    "totalRecommendedAmount": 43654675,
+    "name_hi": "VIRENDRA SINGH",
+    "constituency_hi": "CHANDAULI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86345853,
+      "totalEntries": 49,
+      "avgExpenditure": 1762160.2653061224,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 7808000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 51384179,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27153674,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86345853,
+        "transactionCount": 49,
+        "avgAmount": 1762160.2653061224
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 22,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e652",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking construction work from near the Chaura Mata Temple to Guddu Chauhan house in Gram Sabha Jariyari Cholapur Development Block",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 898780
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e651",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of an interlocking pavement from the main road to Phoolchand Yadav house in Gram Sabha Ugapur Cholapur Development Block",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 116323
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e64f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of an interlocking pavement from Shankars house to Chandrabalis house in Gram Sabha Gahura Harhua Development Block",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 151978
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e650",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of an interlocking pavement from the CC road to Ramesh Singhs house in Gram Sabha Pashchimpura Pindra Development Block",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 906543
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a213",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road in Niyamtabad and Chandauli Sadar by Uttar Pradesh Abhiyantran avum Shram Sahakari Sangh Limited. The details are enclosed in the attachment.",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 894605
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.901Z"
+}

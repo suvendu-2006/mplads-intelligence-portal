@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f7",
+    "name": "Dr. John Brittas (2021-27)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 245063957.11,
+    "totalExpenditure": 57506835,
+    "utilizationPercentage": 23.46605175161982,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 108,
+    "completedWorksValue": 52630093,
+    "inProgressPayments": 4876742,
+    "paymentGapPercentage": 8.48028238730231,
+    "completionRate": 25,
+    "pendingWorks": 72,
+    "unspentAmount": 187557122.11,
+    "totalRecommendedAmount": 161931542,
+    "name_hi": "Dr. John Brittas (2021-27)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57506835,
+      "totalEntries": 57,
+      "avgExpenditure": 1008891.8421052631,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 30922015,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 20189494,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6395326,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57506835,
+        "transactionCount": 57,
+        "avgAmount": 1008891.8421052631
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 108,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30d87",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of Sensory Park and installation of Health/Gym Equipments/Machines in V.K.M. Special School (A project of V.K. Mohamed Charitable Trust), Puramannoor PO, Irimbiliyam Grama Panchayat, Malappuram District.",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 909760
+      },
+      {
+        "_id": "6a932bb5cd94452437a320af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Koottumukham Thazhe Bridge, Sreekandapuram Municipality, Kannur District",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1518584
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c3f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of first floor of Desiya Vayanasala for cultural activities in Ward No: XIII of Mezhuveli Grama Panchayath",
+        "completedDate": "2025-11-11T00:00:00.000Z",
+        "finalAmount": 997581
+      },
+      {
+        "_id": "6a932bb5cd94452437a319cf",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of 2nd Floor atop the existing building viz. \"Snehalayam\" being operated by E.M.S Charitable Society (Reg.No. PTM/TC/14/2013), Konni GP.",
+        "completedDate": "2025-09-29T00:00:00.000Z",
+        "finalAmount": 2804264
+      },
+      {
+        "_id": "6a932bb5cd94452437a30947",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of School Bus for Thimiri Govt. U P School, Alakode GP.",
+        "completedDate": "2025-09-15T00:00:00.000Z",
+        "finalAmount": 1637255
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.693Z"
+}

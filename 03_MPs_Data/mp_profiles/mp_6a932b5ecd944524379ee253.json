@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee253",
+    "name": "Shri Kesridevsinh Jhala (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 26513551,
+    "utilizationPercentage": 15.459796501457726,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 123,
+    "completedWorksValue": 11956415,
+    "inProgressPayments": 14557136,
+    "paymentGapPercentage": 54.90451279045949,
+    "completionRate": 14.583333333333334,
+    "pendingWorks": 102,
+    "unspentAmount": 144986449,
+    "totalRecommendedAmount": 106230700,
+    "name_hi": "Shri Kesridevsinh Jhala (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26513551,
+      "totalEntries": 51,
+      "avgExpenditure": 519873.54901960783,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5451435,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21062116,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26513551,
+        "transactionCount": 51,
+        "avgAmount": 519873.54901960783
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 123,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3249c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shed work for cowshed",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "work of children s playground play equipment in Shaishmalji Bagh which falls under Sayla Gram Panchayat",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 248850
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Grant for the work of C.C. TV and L.E.D. Street lights in Shaishmalji Bagh coming under Sayla Gram Panchayat",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 248900
+      },
+      {
+        "_id": "6a932bb5cd94452437a3214a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Smart board grant to Digvijaynagar Primary School, Wankaner city",
+        "completedDate": "2026-03-27T00:00:00.000Z",
+        "finalAmount": 140000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f15",
+        "workCategory": "Normal/Others",
+        "workDescription": "RCC Benches",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1251924
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.241Z"
+}

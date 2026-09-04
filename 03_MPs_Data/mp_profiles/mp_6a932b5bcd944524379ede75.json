@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede75",
+    "name": "JAGADISH SHETTAR",
+    "constituency": "BELGAUM",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 9847651,
+    "utilizationPercentage": 6.69908231292517,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 171,
+    "completedWorksValue": 499705,
+    "inProgressPayments": 9347946,
+    "paymentGapPercentage": 94.92564267356754,
+    "completionRate": 0.5813953488372093,
+    "pendingWorks": 170,
+    "unspentAmount": 137152349,
+    "totalRecommendedAmount": 93500000,
+    "name_hi": "JAGADISH SHETTAR",
+    "constituency_hi": "BELGAUM",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 9847651,
+      "totalEntries": 29,
+      "avgExpenditure": 339574.1724137931,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 9847651,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 9847651,
+        "transactionCount": 29,
+        "avgAmount": 339574.1724137931
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 171,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c9a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction  of  building for Community cultural activities  near Shri Simi Laxmidevi Devastan.(Near Makannavar Thota) at Badigwad Village",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 499705
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.746Z"
+}

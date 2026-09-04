@@ -1,0 +1,135 @@
+{
+  "success": true,
+  "data": {
+    "utilization": {
+      "yearly": [
+        {
+          "_id": {
+            "year": 2023,
+            "state": null,
+            "house": null
+          },
+          "transactionCount": 776,
+          "year": 2023,
+          "state": null,
+          "house": null,
+          "totalExpenditure": 322266530.01,
+          "uniqueMPCount": 24,
+          "avgExpenditurePerMP": 415291.92
+        },
+        {
+          "_id": {
+            "year": 2024,
+            "state": null,
+            "house": null
+          },
+          "transactionCount": 6351,
+          "year": 2024,
+          "state": null,
+          "house": null,
+          "totalExpenditure": 2944317675.49,
+          "uniqueMPCount": 185,
+          "avgExpenditurePerMP": 463599.07
+        },
+        {
+          "_id": {
+            "year": 2025,
+            "state": null,
+            "house": null
+          },
+          "transactionCount": 49552,
+          "year": 2025,
+          "state": null,
+          "house": null,
+          "totalExpenditure": 18311866340.64,
+          "uniqueMPCount": 641,
+          "avgExpenditurePerMP": 369548.48
+        },
+        {
+          "_id": {
+            "year": 2026,
+            "state": null,
+            "house": null
+          },
+          "transactionCount": 51004,
+          "year": 2026,
+          "state": null,
+          "house": null,
+          "totalExpenditure": 18064493743,
+          "uniqueMPCount": 695,
+          "avgExpenditurePerMP": 354177.98
+        }
+      ],
+      "monthly": [],
+      "categories": [
+        {
+          "_id": null,
+          "yearlyData": [
+            {
+              "year": 2024,
+              "totalExpenditure": 2944317675.49,
+              "transactionCount": 6351
+            },
+            {
+              "year": 2026,
+              "totalExpenditure": 18064493743,
+              "transactionCount": 51004
+            },
+            {
+              "year": 2025,
+              "totalExpenditure": 18311866340.64,
+              "transactionCount": 49552
+            },
+            {
+              "year": 2023,
+              "totalExpenditure": 322266530.01,
+              "transactionCount": 776
+            }
+          ],
+          "totalAcrossYears": 39642944289.14
+        }
+      ]
+    },
+    "works": [
+      {
+        "_id": 2023,
+        "totalWorksCompleted": 35,
+        "totalBeneficiaries": 0,
+        "year": 2023,
+        "totalCost": 60639597,
+        "avgCostPerWork": 1732559.91
+      },
+      {
+        "_id": 2024,
+        "totalWorksCompleted": 2297,
+        "totalBeneficiaries": 0,
+        "year": 2024,
+        "totalCost": 1536132899.52,
+        "avgCostPerWork": 668756.16
+      },
+      {
+        "_id": 2025,
+        "totalWorksCompleted": 20417,
+        "totalBeneficiaries": 0,
+        "year": 2025,
+        "totalCost": 11745825867.4,
+        "avgCostPerWork": 575296.36
+      },
+      {
+        "_id": 2026,
+        "totalWorksCompleted": 20986,
+        "totalBeneficiaries": 0,
+        "year": 2026,
+        "totalCost": 10526727099.69,
+        "avgCostPerWork": 501607.12
+      }
+    ],
+    "period": {
+      "start_year": 2014,
+      "end_year": 2026,
+      "granularity": "yearly"
+    },
+    "filters": {},
+    "lastUpdated": "2026-08-31T17:26:11.553Z"
+  }
+}

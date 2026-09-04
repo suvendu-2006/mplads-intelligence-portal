@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde8",
+    "name": "AVIMANYU SETHI",
+    "constituency": "BHADRAK",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23107575,
+    "utilizationPercentage": 15.719438775510202,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 251,
+    "completedWorksValue": 10250000,
+    "inProgressPayments": 12857575,
+    "paymentGapPercentage": 55.64225151276151,
+    "completionRate": 9.712230215827338,
+    "pendingWorks": 224,
+    "unspentAmount": 123892425,
+    "totalRecommendedAmount": 82645000,
+    "name_hi": "AVIMANYU SETHI",
+    "constituency_hi": "BHADRAK",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23107575,
+      "totalEntries": 67,
+      "avgExpenditure": 344889.17910447763,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4300000,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18807575,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23107575,
+        "transactionCount": 67,
+        "avgAmount": 344889.17910447763
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 251,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre near Sunya Mandap",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e206",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Community Centre near Mahima Gadi at Nalgunda, Nalagunda GP.",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df03",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of C.C. road from Aurobinda Purnaga Shikshya Kendra, Dolapadi to connect main road, Nilok GP.",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc5d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary wall near Sri Sri Gopaljew Nalakula Matha, Mathasahi.",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8d0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of C.C. road from Mangala Temple to Patana Sirapur Primary School village Patana Sirapur, Sajanpur GP.",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.887Z"
+}

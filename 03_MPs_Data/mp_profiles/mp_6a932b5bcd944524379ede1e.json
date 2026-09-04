@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1e",
+    "name": "CHIRAG PASWAN",
+    "constituency": "HAJIPUR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 52494828,
+    "utilizationPercentage": 35.71076734693877,
+    "completedWorksCount": 47,
+    "recommendedWorksCount": 66,
+    "completedWorksValue": 44817407,
+    "inProgressPayments": 7677421,
+    "paymentGapPercentage": 14.62509982888219,
+    "completionRate": 41.5929203539823,
+    "pendingWorks": 19,
+    "unspentAmount": 94505172,
+    "totalRecommendedAmount": 65098600,
+    "name_hi": "CHIRAG PASWAN",
+    "constituency_hi": "HAJIPUR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 52494828,
+      "totalEntries": 55,
+      "avgExpenditure": 954451.4181818182,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15022637,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37472191,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 52494828,
+        "transactionCount": 55,
+        "avgAmount": 954451.4181818182
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 47,
+    "recommendedCount": 66,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e54a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar Parishad Hajipur Ke Ward No. 29 Me Chhoti Marai Me Md Sattar Ke Ghar Se Pro. Nagendra Singh Ke Ghar hote hue Randhir Singh ke Ghar tak PCC Sadak Nirman",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 989845
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e583",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Hajipur, Panchayat Hilalpur, Village Kuari Buzurg Ke Ward No. 13 Me Ram Bahadur Sah ke Ghar Se Bittu Kumar Ke Ghar Tak PCC Sadak Nirman",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 985803
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Lalganj, Panchayat Gurmiya Ke Gram Kishunpur Barhan Ke Ward No. 5 Me Mukesh Kumar Ke Ghar Se Rajendra Paswan ke Ghar Tak PCC Nirman",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 989055
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Bhagwanpur, Panchayat Shambhupur Kunwari, Vill. Jalalpur Ke Ward No. 3 me Lalan Rai Ke Ghar Se Dinesh Rai Ke Ghar Tak PCC Sadak Nirman",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 989297
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Bhagwanpur, Gram Panchayat Ratanpura Ke Ward No.9 Me Sonu Singh Ke Ghar Se Dhaneshwar Paswan Ke Ghar Tak PCC Nirman",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 988172
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.680Z"
+}

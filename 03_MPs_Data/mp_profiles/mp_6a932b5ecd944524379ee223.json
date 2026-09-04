@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee223",
+    "name": "Shri Baburam Nishad (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 136082109.32,
+    "utilizationPercentage": 69.40699929036538,
+    "completedWorksCount": 436,
+    "recommendedWorksCount": 213,
+    "completedWorksValue": 113334752.32,
+    "inProgressPayments": 22747357,
+    "paymentGapPercentage": 16.71590564966119,
+    "completionRate": 67.18027734976889,
+    "pendingWorks": -223,
+    "unspentAmount": 59981847.79000002,
+    "totalRecommendedAmount": 73829823.98,
+    "name_hi": "Shri Baburam Nishad (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 136082109.32,
+      "totalEntries": 595,
+      "avgExpenditure": 228709.42742857142,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 42914323.32,
+        "transactionCount": 126
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 79656356,
+        "transactionCount": 429
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13511430,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 136082109.32,
+        "transactionCount": 595,
+        "avgAmount": 228709.42742857142
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 436,
+    "recommendedCount": 213,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3162a",
+        "workCategory": "Normal/Others",
+        "workDescription": "LED Semi  Mast Light - Poll 9 mtr 180 watt 6 nag LED Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 443787
+      },
+      {
+        "_id": "6a932bb5cd94452437a31629",
+        "workCategory": "Normal/Others",
+        "workDescription": "LED Semi  Mast Light - Poll 9 mtr 180 watt 6 nag LED Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 443787
+      },
+      {
+        "_id": "6a932bb5cd94452437a3162c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Led high  Mast Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 443787
+      },
+      {
+        "_id": "6a932bb5cd94452437a31631",
+        "workCategory": "Normal/Others",
+        "workDescription": "LED Semi  Mast Light - Poll 9 mtr 180 watt 6 nag LED Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 443787
+      },
+      {
+        "_id": "6a932bb5cd94452437a31630",
+        "workCategory": "Normal/Others",
+        "workDescription": "LED Semi  Mast Light - Poll 9 mtr 180 watt 6 nag LED Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 443787
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.184Z"
+}

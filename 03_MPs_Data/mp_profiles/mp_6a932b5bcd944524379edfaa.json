@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfaa",
+    "name": "TANUJ PUNIA",
+    "constituency": "BARABANKI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148198170.11,
+    "totalExpenditure": 83397272,
+    "utilizationPercentage": 56.27415772954445,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 38479343,
+    "inProgressPayments": 44917929,
+    "paymentGapPercentage": 53.86018981532153,
+    "completionRate": 39.39393939393939,
+    "pendingWorks": 7,
+    "unspentAmount": 64800898.110000014,
+    "totalRecommendedAmount": 84983373,
+    "name_hi": "TANUJ PUNIA",
+    "constituency_hi": "BARABANKI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 83397272,
+      "totalEntries": 30,
+      "avgExpenditure": 2779909.066666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 45084735,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38312537,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 83397272,
+        "transactionCount": 30,
+        "avgAmount": 2779909.066666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dfe6",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of boundrywall of Baba Sahab Bhimrao Ambedkar Park in Village Zindpur, Maholiya in Block Nindura",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 1608547
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcae",
+        "workCategory": "Normal/Others",
+        "workDescription": "development of Ambedkar Park in Satrikh Dehat Block Harakh",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 1402916
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b828",
+        "workCategory": "Normal/Others",
+        "workDescription": "road and nali",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1894489
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ac9c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Lighting of Public spaces, parks in loksabha barabanki",
+        "completedDate": "2026-01-09T00:00:00.000Z",
+        "finalAmount": 1181967
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ed7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of 47 Highmast light in many areas of barabanki constituency",
+        "completedDate": "2026-01-09T00:00:00.000Z",
+        "finalAmount": 9866200
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.446Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf1b",
+    "name": "Rajeshbhai Naranbhai Chudasama",
+    "constituency": "JUNAGADH",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 56040284,
+    "utilizationPercentage": 38.12264217687075,
+    "completedWorksCount": 152,
+    "recommendedWorksCount": 147,
+    "completedWorksValue": 47563536,
+    "inProgressPayments": 8476748,
+    "paymentGapPercentage": 15.126168882370402,
+    "completionRate": 50.836120401337794,
+    "pendingWorks": -5,
+    "unspentAmount": 90959716,
+    "totalRecommendedAmount": 51842385,
+    "name_hi": "Rajeshbhai Naranbhai Chudasama",
+    "constituency_hi": "JUNAGADH",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 56040284,
+      "totalEntries": 176,
+      "avgExpenditure": 318410.70454545453,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14210718,
+        "transactionCount": 47
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41829566,
+        "transactionCount": 129
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 56040284,
+        "transactionCount": 176,
+        "avgAmount": 318410.70454545453
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 152,
+    "recommendedCount": 147,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e643",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gir Somnath District,Una Taluka,Nathal Village,Paver block work from the main road to Allarakha Hussain house in Nathal village",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 299892
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gir Somnath District,Una Taluka,Khajudra Villege,CC road work on the road leading from the cyclone center to the crematorium in Khajudra village",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 297369
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e86f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gir Somnath District,Una Taluka,Delwada Village,CC road work in Shyamnagar area of Delwada village",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 493301
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e86e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gir Somnath District,Una Taluka,Kob Village,CC road work on the way to the cemetery in Kob village",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 298649
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ceab",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gir Somnath District,Una Taluka,Khan Villege,CC road work on the road from Delwada Simar Main Road to Damawala Dada in Khan village",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 243877
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.236Z"
+}

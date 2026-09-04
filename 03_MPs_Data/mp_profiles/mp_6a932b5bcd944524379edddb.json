@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edddb",
+    "name": "ARUN BHARTI",
+    "constituency": "JAMUI",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 194924621.11,
+    "totalExpenditure": 132883940,
+    "utilizationPercentage": 68.17196270193637,
+    "completedWorksCount": 218,
+    "recommendedWorksCount": 110,
+    "completedWorksValue": 112774852,
+    "inProgressPayments": 20109088,
+    "paymentGapPercentage": 15.132820414566275,
+    "completionRate": 66.46341463414635,
+    "pendingWorks": -108,
+    "unspentAmount": 62040681.110000014,
+    "totalRecommendedAmount": 34657007,
+    "name_hi": "ARUN BHARTI",
+    "constituency_hi": "JAMUI",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 132883940,
+      "totalEntries": 306,
+      "avgExpenditure": 434261.2418300654,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 37890549,
+        "transactionCount": 71
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 94993391,
+        "transactionCount": 235
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 132883940,
+        "transactionCount": 306,
+        "avgAmount": 434261.2418300654
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 218,
+    "recommendedCount": 110,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e48a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of books in School.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e48f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of books in School.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e48b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of books in School.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e489",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of books in School.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e418",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of books in School.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.224Z"
+}

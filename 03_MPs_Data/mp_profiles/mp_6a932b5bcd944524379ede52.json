@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede52",
+    "name": "Dushyant Singh",
+    "constituency": "JHALAWAR-BARAN",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 6025816,
+    "utilizationPercentage": 4.099194557823129,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 27,
+    "completedWorksValue": 0,
+    "inProgressPayments": 6025816,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 27,
+    "unspentAmount": 140974184,
+    "totalRecommendedAmount": 27888933,
+    "name_hi": "Dushyant Singh",
+    "constituency_hi": "JHALAWAR-BARAN",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 6025816,
+      "totalEntries": 26,
+      "avgExpenditure": 231762.15384615384,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1639081,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4386735,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 6025816,
+        "transactionCount": 26,
+        "avgAmount": 231762.15384615384
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 27,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:02.479Z"
+}

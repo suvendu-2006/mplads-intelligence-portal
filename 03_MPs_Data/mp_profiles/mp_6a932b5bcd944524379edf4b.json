@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4b",
+    "name": "SARABJEET SINGH KHALSA",
+    "constituency": "FARIDKOT",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150850348.15,
+    "totalExpenditure": 93855473,
+    "utilizationPercentage": 62.21760450076893,
+    "completedWorksCount": 227,
+    "recommendedWorksCount": 389,
+    "completedWorksValue": 49705480,
+    "inProgressPayments": 44149993,
+    "paymentGapPercentage": 47.04040328047785,
+    "completionRate": 36.85064935064935,
+    "pendingWorks": 162,
+    "unspentAmount": 56994875.150000006,
+    "totalRecommendedAmount": 89411447,
+    "name_hi": "SARABJEET SINGH KHALSA",
+    "constituency_hi": "FARIDKOT",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93855473,
+      "totalEntries": 703,
+      "avgExpenditure": 133507.07396870555,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 14496394,
+        "transactionCount": 88
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 38567025,
+        "transactionCount": 290
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40792054,
+        "transactionCount": 325
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93855473,
+        "transactionCount": 703,
+        "avgAmount": 133507.07396870555
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 227,
+    "recommendedCount": 389,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cc39",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed and Burner in Sc Creamation ground at Boria sikh commuinty",
+        "completedDate": "2026-07-14T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c98f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of SC Dharamshala",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7c9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of RO with Water Cooler in Govt Primary School",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 90000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d5b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Mobile Steel Water Tanker for Drinking Water Supply.",
+        "completedDate": "2026-03-03T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1924a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed in Shamshan Ghaat at Ajitwaal Road, Patti Jhanda",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.393Z"
+}

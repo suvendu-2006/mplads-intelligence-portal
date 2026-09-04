@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee297",
+    "name": "Shri Sadanand Mhalu Shet Tanavade (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Goa",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 37836353.99,
+    "utilizationPercentage": 22.062013988338194,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 32,
+    "completedWorksValue": 27353916.990000002,
+    "inProgressPayments": 10482437,
+    "paymentGapPercentage": 27.704669965743705,
+    "completionRate": 23.809523809523807,
+    "pendingWorks": 22,
+    "unspentAmount": 133663646.00999999,
+    "totalRecommendedAmount": 87791786,
+    "name_hi": "Shri Sadanand Mhalu Shet Tanavade (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Goa"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37836353.99,
+      "totalEntries": 26,
+      "avgExpenditure": 1455244.3842307692,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20739321.990000002,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17097032,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37836353.99,
+        "transactionCount": 26,
+        "avgAmount": 1455244.3842307692
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 32,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32476",
+        "workCategory": "Normal/Others",
+        "workDescription": "School Bus for Swami Vivekanand Vidyaprasarak Mandals College of Commerce Shirshire Borim Ponda South Goa District Goa 403401.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 2120197
+      },
+      {
+        "_id": "6a932bb5cd94452437a32485",
+        "workCategory": "Normal/Others",
+        "workDescription": "School Bus for Keshav Smruti Higher Secondary School, Alto Dabolim, Vasco Da Gama, South Goa, Goa.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 2400201
+      },
+      {
+        "_id": "6a932bb5cd94452437a3242c",
+        "workCategory": "Normal/Others",
+        "workDescription": "School bus for Chetna Education Society School for Special Children, H. No. 915, Near Govt ITI, Soliem Road, Kakoda, Curchorem, Goa 403706.",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 2094197
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c69",
+        "workCategory": "Normal/Others",
+        "workDescription": "School Bus for Shree Vishwanath Arlekar DADA Arlekar Memorial Higher Secondary School of Arts, Commerce and Science.",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 2569336
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bcd",
+        "workCategory": "Normal/Others",
+        "workDescription": "School Bus for Balram Higher Secondary School, Ardhfond, Poinguinim, Canacona, Goa 403702",
+        "completedDate": "2025-11-03T00:00:00.000Z",
+        "finalAmount": 2776654
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.232Z"
+}

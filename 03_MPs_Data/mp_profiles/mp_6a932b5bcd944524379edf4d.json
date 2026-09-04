@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4d",
+    "name": "SATPAL BRAHAMCHARI",
+    "constituency": "SONEPAT",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35904950,
+    "utilizationPercentage": 24.42513605442177,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 212,
+    "completedWorksValue": 11241216,
+    "inProgressPayments": 24663734,
+    "paymentGapPercentage": 68.69173749023464,
+    "completionRate": 8.225108225108226,
+    "pendingWorks": 193,
+    "unspentAmount": 111095050,
+    "totalRecommendedAmount": 121664729,
+    "name_hi": "SATPAL BRAHAMCHARI",
+    "constituency_hi": "SONEPAT",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35904950,
+      "totalEntries": 209,
+      "avgExpenditure": 171794.01913875598,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4932476,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30972474,
+        "transactionCount": 175
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35904950,
+        "transactionCount": 209,
+        "avgAmount": 171794.01913875598
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 212,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e306",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Nala from Bank wali gali to Bade Govt. School",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 328185
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e307",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Street from main gali to satish s.o satbir home",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 160742
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Street from Vaktanand Aashram to parikrma marg",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 588720
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development work in Aggarwal Bhawan Library",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 496084
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcc9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Nala from Dhanak Samaj Basti to Main PWD Road",
+        "completedDate": "2026-03-27T00:00:00.000Z",
+        "finalAmount": 485865
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.694Z"
+}

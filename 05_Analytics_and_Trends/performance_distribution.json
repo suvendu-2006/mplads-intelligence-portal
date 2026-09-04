@@ -1,0 +1,64 @@
+{
+  "success": true,
+  "data": {
+    "utilizationDistribution": [
+      {
+        "_id": 0,
+        "count": 333,
+        "avgUtilization": 10.704761329899888,
+        "avgAllocation": 137317947.76774776,
+        "avgExpenditure": 16842940.093063064
+      },
+      {
+        "_id": 25,
+        "count": 273,
+        "avgUtilization": 37.18145204074485,
+        "avgAllocation": 157050502.16157508,
+        "avgExpenditure": 58392487.34622711
+      },
+      {
+        "_id": 50,
+        "count": 142,
+        "avgUtilization": 59.82605963239506,
+        "avgAllocation": 163630960.40661973,
+        "avgExpenditure": 98342477.93880281
+      },
+      {
+        "_id": 75,
+        "count": 22,
+        "avgUtilization": 81.47667532525557,
+        "avgAllocation": 197009617.9959091,
+        "avgExpenditure": 160019295.87818182
+      },
+      {
+        "_id": 90,
+        "count": 4,
+        "avgUtilization": 93.77575660906089,
+        "avgAllocation": 161890989.2775,
+        "avgExpenditure": 152009954
+      }
+    ],
+    "houseComparison": [
+      {
+        "_id": "Rajya Sabha",
+        "totalMPs": 231,
+        "house": "Rajya Sabha",
+        "house_hi": "Rajya Sabha",
+        "avgUtilization": 28.27,
+        "totalAllocation": 33638482301.82,
+        "totalExpenditure": 12328282487.69
+      },
+      {
+        "_id": "Lok Sabha",
+        "totalMPs": 543,
+        "house": "Lok Sabha",
+        "house_hi": "Lok Sabha",
+        "avgUtilization": 32.87,
+        "totalAllocation": 83180553325.71,
+        "totalExpenditure": 27314661801.45
+      }
+    ],
+    "filters": {},
+    "lastUpdated": "2026-08-31T17:26:11.751Z"
+  }
+}

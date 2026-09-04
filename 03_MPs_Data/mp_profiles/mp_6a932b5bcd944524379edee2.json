@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee2",
+    "name": "NAVEEN JINDAL",
+    "constituency": "KURUKSHETRA",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61262363,
+    "utilizationPercentage": 41.6750768707483,
+    "completedWorksCount": 113,
+    "recommendedWorksCount": 88,
+    "completedWorksValue": 33440390,
+    "inProgressPayments": 27821973,
+    "paymentGapPercentage": 45.4144627101635,
+    "completionRate": 56.21890547263681,
+    "pendingWorks": -25,
+    "unspentAmount": 85737637,
+    "totalRecommendedAmount": 51236968,
+    "name_hi": "NAVEEN JINDAL",
+    "constituency_hi": "KURUKSHETRA",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61262363,
+      "totalEntries": 257,
+      "avgExpenditure": 238374.953307393,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28814663,
+        "transactionCount": 135
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32447700,
+        "transactionCount": 122
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61262363,
+        "transactionCount": 257,
+        "avgAmount": 238374.953307393
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 113,
+    "recommendedCount": 88,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c41c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Boundry Wall and Gate in Gaushala in panchayat land of village Pharal",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 958150
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of water cooler in Government Primary School Dera Prem Nagar, Jyotisar",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 48996
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3a9",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction of  Wall, Floor Tiles and Paint etc in Ravidas Dharamshala",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 463448
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e067",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const of Iron/Tin Shed in Main Chabutra in Atma Ram Patti 30x45",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 285854
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const of paver block  rasta from Gugmadhi to h/o Daulat Ram",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 362264
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.326Z"
+}

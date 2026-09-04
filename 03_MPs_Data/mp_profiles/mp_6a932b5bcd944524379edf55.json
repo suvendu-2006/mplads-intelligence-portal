@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf55",
+    "name": "SHAMBHAVI",
+    "constituency": "SAMASTIPUR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26689204,
+    "utilizationPercentage": 18.155921088435374,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 111,
+    "completedWorksValue": 12853330,
+    "inProgressPayments": 13835874,
+    "paymentGapPercentage": 51.8407143202922,
+    "completionRate": 12.598425196850393,
+    "pendingWorks": 95,
+    "unspentAmount": 120310796,
+    "totalRecommendedAmount": 74800691,
+    "name_hi": "SHAMBHAVI",
+    "constituency_hi": "SAMASTIPUR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26689204,
+      "totalEntries": 35,
+      "avgExpenditure": 762548.6857142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 26689204,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26689204,
+        "transactionCount": 35,
+        "avgAmount": 762548.6857142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 111,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e5ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC road construction work in Ward-06 of Mordiva Panchayat under Samastipur Block, in the road going north from Samastipur-Rosera main road.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 991111
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6c9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of staircase ghat in Bagmati river near Durga temple located in Hasanpur Panchayat Ward-05 under Khanpur block.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1198612
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e637",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC road construction work from Ajit Prasad Dev Ghar to Wakhar Pokhar in Barheta Panchayat Ward-08 under Kalyanpur Block.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 587511
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of staircase ghat in all four ponds of Purnahi Panchayat Ward-11 under Warisnagar block.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 699269
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e529",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of staircase ghat on the roadside in the canal in front of Sanjeev Mishra camp in Rahua Paschmi Panchayat Ward-01 under Warisnagar block.",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 697631
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.776Z"
+}

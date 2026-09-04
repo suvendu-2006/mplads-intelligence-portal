@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede65",
+    "name": "GOPINATH K",
+    "constituency": "KRISHNAGIRI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 42753233,
+    "utilizationPercentage": 29.083831972789113,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 77,
+    "completedWorksValue": 27542471,
+    "inProgressPayments": 15210762,
+    "paymentGapPercentage": 35.578039209338854,
+    "completionRate": 31.858407079646017,
+    "pendingWorks": 41,
+    "unspentAmount": 104246767,
+    "totalRecommendedAmount": 72446000,
+    "name_hi": "GOPINATH K",
+    "constituency_hi": "KRISHNAGIRI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 42753233,
+      "totalEntries": 57,
+      "avgExpenditure": 750056.7192982456,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11049370,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31703863,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 42753233,
+        "transactionCount": 57,
+        "avgAmount": 750056.7192982456
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 77,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e43a",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road from Thoppur BT Road to Vinayagar Koil (via) Kamal House near and Saritha House to Chithra House in Dhamodharahalli",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 538463
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e34e",
+        "workCategory": "Normal/Others",
+        "workDescription": "RO Plant at Avalapalli in Hosur Corporation",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 1418835
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df53",
+        "workCategory": "Normal/Others",
+        "workDescription": "RO Plant at Somanathapuram in Kurubarapalli in Veppanapalli Block",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 984759
+      },
+      {
+        "_id": "6a932bb5cd94452437a1daf0",
+        "workCategory": "Normal/Others",
+        "workDescription": "RO Plant at PHC in pannandhur Village and Pt.",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 942358
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "RO Plant at Velampatti in Nagojanahalli TP",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 999783
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.448Z"
+}

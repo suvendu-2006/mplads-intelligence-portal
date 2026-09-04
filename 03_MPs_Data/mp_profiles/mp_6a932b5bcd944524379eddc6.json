@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc6",
+    "name": "AMBICA G LAKSHMINARAYANA VALMIKI",
+    "constituency": "ANANTAPUR",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 201899064.11,
+    "totalExpenditure": 62202871,
+    "utilizationPercentage": 30.80889516462058,
+    "completedWorksCount": 42,
+    "recommendedWorksCount": 116,
+    "completedWorksValue": 30751717,
+    "inProgressPayments": 31451154,
+    "paymentGapPercentage": 50.56222244146898,
+    "completionRate": 26.582278481012654,
+    "pendingWorks": 74,
+    "unspentAmount": 139696193.11,
+    "totalRecommendedAmount": 100382396,
+    "name_hi": "AMBICA G LAKSHMINARAYANA VALMIKI",
+    "constituency_hi": "ANANTAPUR",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62202871,
+      "totalEntries": 81,
+      "avgExpenditure": 767936.6790123457,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20726517,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41476354,
+        "transactionCount": 54
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62202871,
+        "transactionCount": 81,
+        "avgAmount": 767936.6790123457
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 42,
+    "recommendedCount": 116,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e284",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repairs to the RO Plant at KSR  Junior College (Girls), Anantapur",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 249938
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e282",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road at Goshala near Collector office, B.K.Samudram mandal",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 499842
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e29c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in Jakkalacheruvu (V), Gooty (M)",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 994208
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d363",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constuction of Compound wall to Community hall at 19th ward, Hindupur",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 2462396
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ddaa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road at Mounagari Temple, Hampapuramu village Rapthadu mandal",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 499976
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.898Z"
+}

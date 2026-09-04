@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee285",
+    "name": "Shri Rajib Bhattacharjee (2024-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tripura",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 122500000,
+    "totalExpenditure": 34210580,
+    "utilizationPercentage": 27.92700408163265,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 19522053,
+    "inProgressPayments": 14688527,
+    "paymentGapPercentage": 42.93562693178543,
+    "completionRate": 31.03448275862069,
+    "pendingWorks": 22,
+    "unspentAmount": 88289420,
+    "totalRecommendedAmount": 65127291,
+    "name_hi": "Shri Rajib Bhattacharjee (2024-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tripura"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34210580,
+      "totalEntries": 39,
+      "avgExpenditure": 877194.358974359,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 19301033,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14909547,
+        "transactionCount": 17
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34210580,
+        "transactionCount": 39,
+        "avgAmount": 877194.358974359
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 40,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31b79",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Community Hall at the premises of Dhaleswar Bedobani Sangha at Dhaleswar Road no-3, Agartala.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1417827
+      },
+      {
+        "_id": "6a932bb5cd94452437a31cd0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Dining Hall including Kitchen (60`X20`) with fixed RCC dining table having glazed tiles and sitting provision along with 10 units of hand washing basin for Mid-day meal purpose in Bijoy Kumar Girls Class XII School premises at Agartala.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 2485776
+      },
+      {
+        "_id": "6a932bb5cd94452437a3218e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CCTV surveillance system at Netaji Subhash Vidyaniketan, Agartala, Sadar",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 430000
+      },
+      {
+        "_id": "6a932bb5cd94452437a320e3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of playground under the management of Saroj Sangha, Jagaharimura, Agartala West Tripura.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1285890
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bd5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Community Hall at the premises of Volcan Club, Nutan Palli, Dhaleswar, Agartala.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.893Z"
+}

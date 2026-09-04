@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddda",
+    "name": "Appalanaidu Kalisetti",
+    "constituency": "VIZIANAGARAM",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 22325622,
+    "utilizationPercentage": 15.187497959183673,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 13915411,
+    "inProgressPayments": 8410211,
+    "paymentGapPercentage": 37.67066825730544,
+    "completionRate": 34.95145631067961,
+    "pendingWorks": 31,
+    "unspentAmount": 124674378,
+    "totalRecommendedAmount": 40207504,
+    "name_hi": "Appalanaidu Kalisetti",
+    "constituency_hi": "VIZIANAGARAM",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 22325622,
+      "totalEntries": 56,
+      "avgExpenditure": 398671.8214285714,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9438723,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12886899,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 22325622,
+        "transactionCount": 56,
+        "avgAmount": 398671.8214285714
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e088",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of 18W LED Based Solar Street Lights 12 Nos at Sigidi Kothapalle Village (10)and Gram Panchayat of Laveru Mandal  Niddam Village(2) Gram Panchayat of G.Sigadam Mandal",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 286382
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e410",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of 18W LED Based Solar Street Lights 10 Nos at Kothakunkam Village and Gram Panchayat of Laveru Mandal",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 238652
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e404",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shifting and Installing Spun Pole to Tower Pole on Public Sake in B.C.colony,V.T.Agraharam of Vizianagaram",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 663999
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c588",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shifting Charges of H.T Line running over the Residences of China Nandabalaga Village in Therlam Mandal",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 88336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of 5 Street Electrical Poles in A. Velagavalasa  Village, Bobbili Mandal",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 101841
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.233Z"
+}

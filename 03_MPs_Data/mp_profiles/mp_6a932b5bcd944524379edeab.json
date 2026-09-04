@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeab",
+    "name": "Krishna Prasad Tenneti",
+    "constituency": "BAPATLA",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 167796849.11,
+    "totalExpenditure": 17516616,
+    "utilizationPercentage": 10.43918052866231,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 118,
+    "completedWorksValue": 2878395,
+    "inProgressPayments": 14638221,
+    "paymentGapPercentage": 83.56763087116826,
+    "completionRate": 4.838709677419355,
+    "pendingWorks": 112,
+    "unspentAmount": 150280233.11,
+    "totalRecommendedAmount": 103730000,
+    "name_hi": "Krishna Prasad Tenneti",
+    "constituency_hi": "BAPATLA",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 17516616,
+      "totalEntries": 24,
+      "avgExpenditure": 729859,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 17516616,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 17516616,
+        "transactionCount": 24,
+        "avgAmount": 729859
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 118,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e0fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Gera Seethaiah house to Pamidipamula Nagamalleswara Rao House in SC Colony of Nalluru South GP, Nalluru Village, Repalle Mandal, Bapatla district",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 599922
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcb8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of public park in Vivekananda colony, 23rd ward, Bapatla Municipality",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 485193
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de51",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LET Street Lights in Chirala Nagaravanam, Chirala Mandal",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 699038
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from R B Road to Akurati Nagendram House in Anjaneya Swamy Colony of Peteru G P",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 418694
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Anand house to Veeranjaneyulu house in Sreesatya Amaravathi Nagar, 13th Ward in Repalle Municipality",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 382500
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.741Z"
+}

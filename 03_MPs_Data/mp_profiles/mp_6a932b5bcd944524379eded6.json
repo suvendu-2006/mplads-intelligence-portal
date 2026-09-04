@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded6",
+    "name": "MUHAMMED HAMDULLAH SAYEED",
+    "constituency": "LAKSHADWEEP",
+    "state": "Lakshadweep",
+    "house": "Lok Sabha",
+    "allocatedAmount": 153942460.41,
+    "totalExpenditure": 39337535,
+    "utilizationPercentage": 25.553401508090133,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 26,
+    "completedWorksValue": 1633047,
+    "inProgressPayments": 37704488,
+    "paymentGapPercentage": 95.84862905110857,
+    "completionRate": 7.142857142857142,
+    "pendingWorks": 24,
+    "unspentAmount": 114604925.41,
+    "totalRecommendedAmount": 89778744,
+    "name_hi": "MUHAMMED HAMDULLAH SAYEED",
+    "constituency_hi": "LAKSHADWEEP",
+    "state_hi": "Lakshadweep"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 39337535,
+      "totalEntries": 20,
+      "avgExpenditure": 1966876.75,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1439441,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37898094,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 39337535,
+        "transactionCount": 20,
+        "avgAmount": 1966876.75
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 26,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d3da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 2 Nos laser jet M635 h Printers to Government Senior Secondary School Kiltan",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 193606
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b779",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 60 Nos Tab for PMSHRI Jawahar Navodaya Vidyalaya, Minicoy island.",
+        "completedDate": "2025-11-20T00:00:00.000Z",
+        "finalAmount": 1439441
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.252Z"
+}

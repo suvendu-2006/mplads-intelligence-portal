@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc5",
+    "name": "AMARSING TISSO",
+    "constituency": "Diphu",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70287578,
+    "utilizationPercentage": 47.81467891156462,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 53,
+    "completedWorksValue": 38163498,
+    "inProgressPayments": 32124080,
+    "paymentGapPercentage": 45.703779976598426,
+    "completionRate": 43.61702127659575,
+    "pendingWorks": 12,
+    "unspentAmount": 76712422,
+    "totalRecommendedAmount": 59300000,
+    "name_hi": "AMARSING TISSO",
+    "constituency_hi": "Diphu",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70287578,
+      "totalEntries": 193,
+      "avgExpenditure": 364184.34196891193,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13141914,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 41914618,
+        "transactionCount": 121
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15231046,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70287578,
+        "transactionCount": 193,
+        "avgAmount": 364184.34196891193
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 53,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18a18",
+        "workCategory": "Normal/Others",
+        "workDescription": "Improvement of water harvesting at Tharvelangso, Longre",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 181264
+      },
+      {
+        "_id": "6a932bb5cd94452437a17f0b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community fishery near the house of Tandarlly waichei at Khillimulong",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 119938
+      },
+      {
+        "_id": "6a932bb5cd94452437a178cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community fishery near the house of Rebecca Phangchopi, W/o Probonson Rongpi and 2 others at Kathar Engti village, Dholajan",
+        "completedDate": "2026-01-01T00:00:00.000Z",
+        "finalAmount": 199904
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bea0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Barrack at Borpathar Police Station, Borpathar, Karbi Anglong",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 1499668
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be9f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Barrack at Bakalia Police Station, Bakalia, Karbi Anglong",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 1499668
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.856Z"
+}

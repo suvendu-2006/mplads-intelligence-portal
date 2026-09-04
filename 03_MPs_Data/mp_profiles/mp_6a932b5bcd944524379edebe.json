@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edebe",
+    "name": "Mala Roy ",
+    "constituency": "KOLKATA DAKSHIN",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61582788,
+    "utilizationPercentage": 41.89305306122449,
+    "completedWorksCount": 32,
+    "recommendedWorksCount": 43,
+    "completedWorksValue": 29777426,
+    "inProgressPayments": 31805362,
+    "paymentGapPercentage": 51.64651200916723,
+    "completionRate": 42.66666666666667,
+    "pendingWorks": 11,
+    "unspentAmount": 85417212,
+    "totalRecommendedAmount": 65726000,
+    "name_hi": "Mala Roy ",
+    "constituency_hi": "KOLKATA DAKSHIN",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61582788,
+      "totalEntries": 65,
+      "avgExpenditure": 947427.5076923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27360722,
+        "transactionCount": 37
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34222066,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61582788,
+        "transactionCount": 65,
+        "avgAmount": 947427.5076923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 32,
+    "recommendedCount": 43,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19e79",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF LIGHTING ARRANGEMENT BY INSTALLATION OF MINI-MAST AT DIFFERENT ROAD CROSSING OF WARD NO. 108, BR-XII UNDER KMC.",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 1139454
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b25b",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF STREET LIGHTING SYSTEM AT SHIL THAKURBARI ROAD, JAMES LONG SARANI BYE LANE, BROJEN MUKHERJEE ROAD, BYE LANE, D.H. ROAD, BYE LANE, AND OTHER AREAS IN WARD NO. 119 UNDER BR - XIII.",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 859393
+      },
+      {
+        "_id": "6a932bb5cd94452437a194f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF STREET LIGHTING SYSTEM BY INSTALLING POLES AND LED FITTINGS AT BASAK BAGAN MORE, POST OFFICE MORE, MULLICK COLONY, SIDDHINATH CHATTERJEE ROAD, PANCHA SHAKTI, JUNCTION OF D.H. ROAD & BRAHMA SAMAJ ROAD AND ADJACENT AREAS IN WARD 130.",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 1487723
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b64e",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF STREET LIGHTING SYSTEM BY MINI-MAST POLE WITH LED LUMINARIES AND NEW POLE WITH LUMINARIES AT DIAMOND PARK, DHALIPARA, KHALPAR, 22 BIGHA LOHAR POOL AND SURROUNDING AREAS IN WARD NO. 143, K.M.C.",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 1499888
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b64a",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF STREET LIGHTING SYSTEM BY MINI-MAST POLE WITH LED LUMINARIES AT BAROBAGAN, PURBAPARA, MAJHIPARA, NIVEDITA SARANI, AND SURROUNDING AREAS IN WARD NO. 124, K.M.C.",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 999876
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.267Z"
+}

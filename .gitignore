@@ -31,8 +31,8 @@ htmlcov/
 .tox/
 .nox/
 
-# Database files & journals (Keep local dev DBs out of source control)
 *.db
+!api/mplads_dev.db
 *.db-journal
 *.db-wal
 *.db-shm
@@ -66,10 +66,13 @@ logs/
 data/evidence/*
 !data/evidence/.gitkeep
 
-# SSL Certificates & Private Keys
-*.key
-docker/postgres/ssl/*.key
-docker/postgres/ssl/*.crt
-!docker/postgres/ssl/.gitkeep
+# Node & Web Frontend
+node_modules/
+web/node_modules/
+web/dist/
+web/.tmp/
+.npm/
 
 
+.vercel
+.env*

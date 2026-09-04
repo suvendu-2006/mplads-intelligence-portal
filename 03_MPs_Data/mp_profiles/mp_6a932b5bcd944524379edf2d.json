@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf2d",
+    "name": "RANJIT DUTTA",
+    "constituency": "Sonitpur",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 68221590,
+    "utilizationPercentage": 46.409244897959184,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 127,
+    "completedWorksValue": 18201665,
+    "inProgressPayments": 50019925,
+    "paymentGapPercentage": 73.31978776806581,
+    "completionRate": 14.76510067114094,
+    "pendingWorks": 105,
+    "unspentAmount": 78778410,
+    "totalRecommendedAmount": 101988387,
+    "name_hi": "RANJIT DUTTA",
+    "constituency_hi": "Sonitpur",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68221590,
+      "totalEntries": 330,
+      "avgExpenditure": 206732.0909090909,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34971798,
+        "transactionCount": 162
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33249792,
+        "transactionCount": 168
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68221590,
+        "transactionCount": 330,
+        "avgAmount": 206732.0909090909
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 127,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b629",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sand gravelling of road from Borjarani Shiv Mandir to Barman Chuburi",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 692450
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d77",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cycle Stand and Culvert at Adarsha Vidyalaya, Sakomatha",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 999845
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f95",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rangamancha at Maghe Rowmari",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1901b",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Gravelling Road From Manik Borah House to Bhujraj House Suburi Link Road",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1885b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Rangchali Sadhubasti Center",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.687Z"
+}

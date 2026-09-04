@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf20",
+    "name": "RAJPALSINH MAHENDRASINH JADAV",
+    "constituency": "PANCHMAHAL",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26159198,
+    "utilizationPercentage": 17.795372789115646,
+    "completedWorksCount": 89,
+    "recommendedWorksCount": 372,
+    "completedWorksValue": 18276551,
+    "inProgressPayments": 7882647,
+    "paymentGapPercentage": 30.13336647400276,
+    "completionRate": 19.305856832971802,
+    "pendingWorks": 283,
+    "unspentAmount": 120840802,
+    "totalRecommendedAmount": 79647900,
+    "name_hi": "RAJPALSINH MAHENDRASINH JADAV",
+    "constituency_hi": "PANCHMAHAL",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26159198,
+      "totalEntries": 125,
+      "avgExpenditure": 209273.584,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11654551,
+        "transactionCount": 55
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14504647,
+        "transactionCount": 70
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26159198,
+        "transactionCount": 125,
+        "avgAmount": 209273.584
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 89,
+    "recommendedCount": 372,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e811",
+        "workCategory": "Normal/Others",
+        "workDescription": "PEWER BLOCK WORK IN BODIDRA KHURD VILLAGE NEAR KAMLESHBHAI NAKUDI FALIYA",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 160000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "KOTHAYDI VILLAGE GOJARIYA NAYAK FILAYA CEMENT COCREAT ROAD WORK",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "KOTHAYDI VILLAGE MAIN FALIYA CEMENT COCNRET ROAD WORK",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "KOTHAYDI VILLAGE GOJARIYA FALIYA CEMENT COCNCRET ROAD WORK",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e264",
+        "workCategory": "Normal/Others",
+        "workDescription": "BORE WELL IN NATVARSIH KALUSINH BAREYA FALIYA",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.688Z"
+}

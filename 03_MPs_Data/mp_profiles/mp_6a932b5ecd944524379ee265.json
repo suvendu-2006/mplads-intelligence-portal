@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee265",
+    "name": "Shri Milind Murli Deora (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 999996,
+    "utilizationPercentage": 0.680269387755102,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 25,
+    "completedWorksValue": 0,
+    "inProgressPayments": 999996,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 25,
+    "unspentAmount": 146000004,
+    "totalRecommendedAmount": 32830000,
+    "name_hi": "Shri Milind Murli Deora (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 999996,
+      "totalEntries": 2,
+      "avgExpenditure": 499998,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 999996,
+        "transactionCount": 2
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 999996,
+        "transactionCount": 2,
+        "avgAmount": 499998
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 25,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.440Z"
+}

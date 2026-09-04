@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee237",
+    "name": "Shri G.C. Chandrashekhar (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 69767504,
+    "utilizationPercentage": 47.460887074829934,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 135,
+    "completedWorksValue": 31430789,
+    "inProgressPayments": 38336715,
+    "paymentGapPercentage": 54.949242558541286,
+    "completionRate": 31.472081218274113,
+    "pendingWorks": 73,
+    "unspentAmount": 77232496,
+    "totalRecommendedAmount": 83270000,
+    "name_hi": "Shri G.C. Chandrashekhar (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 69767504,
+      "totalEntries": 149,
+      "avgExpenditure": 468238.2818791946,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22437538,
+        "transactionCount": 52
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 47329966,
+        "transactionCount": 97
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 69767504,
+        "transactionCount": 149,
+        "avgAmount": 468238.2818791946
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 135,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of kanaka bhavan at Mandya District,Mandya Talluk, Basaralu Village",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 497263
+      },
+      {
+        "_id": "6a932bb5cd94452437a32355",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of concrete road from 12th main road obayya home to muralidhar home at ward no. 178, Bangalore Urban, Jayanagar vidhansabha constituency",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 499494
+      },
+      {
+        "_id": "6a932bb5cd94452437a32358",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cement concrete road and drainage from hesaraghatta to hosahallipalya at yelahanka talluk, hesaraghatta grama panchayath",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 499596
+      },
+      {
+        "_id": "6a932bb5cd94452437a32356",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of road and drainage at Bangalore Urban, Yelahanka taluk, hurali Chikkanahalli grama panchayath, shubhash nagar lataraj home to prasanna home",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 499585
+      },
+      {
+        "_id": "6a932bb5cd94452437a32357",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cement concrete road and drainage from siddaraju home to somanna home at yelahanka talluk, kodagi thirumalapura  village",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 499596
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.652Z"
+}

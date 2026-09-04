@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede7d",
+    "name": "JITAN RAM MANJHI",
+    "constituency": "GAYA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61088844,
+    "utilizationPercentage": 41.557036734693874,
+    "completedWorksCount": 152,
+    "recommendedWorksCount": 108,
+    "completedWorksValue": 42553425,
+    "inProgressPayments": 18535419,
+    "paymentGapPercentage": 30.34174128421877,
+    "completionRate": 58.46153846153847,
+    "pendingWorks": -44,
+    "unspentAmount": 85911156,
+    "totalRecommendedAmount": 54154672,
+    "name_hi": "JITAN RAM MANJHI",
+    "constituency_hi": "GAYA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61088844,
+      "totalEntries": 190,
+      "avgExpenditure": 321520.2315789474,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12366033,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 48722811,
+        "transactionCount": 168
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61088844,
+        "transactionCount": 190,
+        "avgAmount": 321520.2315789474
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 152,
+    "recommendedCount": 108,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e604",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Hand Pump at common place in Village- Badil Bigha near Utkramit Madhya Vidyalaya, Panchayat-Tankuppa, Block-Tankuppa, District Gaya",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 74654
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC and Sewar in  Village- Shivrajpur (Ward No. 9) Mahadalit Tola, near the House of Shri Lalji Manjhi to Vijay Manjhi, District Gaya",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 495544
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e603",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Hand pump at  common place in Village-Jehli Bigha (near the house of Shri Ravindra Das) Panchayat-Barsauna, Block-Tankuppa",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 74654
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Hand pump at common place near the Manjhi Tola, Gram Panchayat-Sekhwara, Block-Bodh Gaya, Gayaji",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 74899
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e601",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Hand pump at common place near the house of Shri Shravan Manjhi in Village-Gram Panchayat-Aaropur, Block-Tan Kuppa, Gaya",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 74538
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.869Z"
+}

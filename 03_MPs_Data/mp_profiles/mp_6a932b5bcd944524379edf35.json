@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf35",
+    "name": "ROBERT BRUCE C",
+    "constituency": "TIRUNELVELI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147475440.11,
+    "totalExpenditure": 55819028,
+    "utilizationPercentage": 37.849711082987994,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 51,
+    "completedWorksValue": 40782129,
+    "inProgressPayments": 15036899,
+    "paymentGapPercentage": 26.938661490128418,
+    "completionRate": 54.054054054054056,
+    "pendingWorks": -9,
+    "unspentAmount": 91656412.11000001,
+    "totalRecommendedAmount": 61839100,
+    "name_hi": "ROBERT BRUCE C",
+    "constituency_hi": "TIRUNELVELI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55819028,
+      "totalEntries": 73,
+      "avgExpenditure": 764644.2191780822,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 26458884,
+        "transactionCount": 41
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29360144,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55819028,
+        "transactionCount": 73,
+        "avgAmount": 764644.2191780822
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 51,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e98b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Pavement at Vadakku Vagaikulam CSI Church South Nadar Street in Vagaikulam Panchayat in Manur Panchayat Union.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1499336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e53c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Paver Block Road in Thalaiyuthu Amman Kovil Street to Sudalai Kovil Street in Manur panchayat Union.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1226411
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e53b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Paver block road in 18th Street L.400 m,  Width.3.7m in Ward No.1 in Suthamalli Panchayat in  Manur Panchayat Union.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1499484
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply Delivery Erection of Minimast Light 12 Metre Height With 6 Nos of 150W LED Fittings at Ambasamudram -Papanasam Main Road Opposite To Kalyani Theatre In Ambasamudram Municipality.",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 430000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of bus shelter in madavakurichi at manur panchayat union",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 799714
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.464Z"
+}

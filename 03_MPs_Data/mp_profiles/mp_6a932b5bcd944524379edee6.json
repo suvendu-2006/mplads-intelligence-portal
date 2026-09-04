@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee6",
+    "name": "Nishikant Dubey",
+    "constituency": "GODDA",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 1785510,
+    "utilizationPercentage": 1.2146326530612244,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 2,
+    "completedWorksValue": 0,
+    "inProgressPayments": 1785510,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 2,
+    "unspentAmount": 145214490,
+    "totalRecommendedAmount": 4285510,
+    "name_hi": "Nishikant Dubey",
+    "constituency_hi": "GODDA",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 1785510,
+      "totalEntries": 1,
+      "avgExpenditure": 1785510,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1785510,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 1785510,
+        "transactionCount": 1,
+        "avgAmount": 1785510
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 2,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.446Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede27",
+    "name": "DEEPENDER SINGH HOODA",
+    "constituency": "ROHTAK",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58916490,
+    "utilizationPercentage": 40.079244897959185,
+    "completedWorksCount": 70,
+    "recommendedWorksCount": 107,
+    "completedWorksValue": 41547909,
+    "inProgressPayments": 17368581,
+    "paymentGapPercentage": 29.479999572275943,
+    "completionRate": 39.548022598870055,
+    "pendingWorks": 37,
+    "unspentAmount": 88083510,
+    "totalRecommendedAmount": 78534000,
+    "name_hi": "DEEPENDER SINGH HOODA",
+    "constituency_hi": "ROHTAK",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58916490,
+      "totalEntries": 147,
+      "avgExpenditure": 400792.44897959183,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 24513983,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34402507,
+        "transactionCount": 94
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58916490,
+        "transactionCount": 147,
+        "avgAmount": 400792.44897959183
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 70,
+    "recommendedCount": 107,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18b36",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Hall near Triveni Dham",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e44e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development works Bar Association Meham",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 488079
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e454",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Hall in Sant Kapoor Maha Sabha Trust",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 499983
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e452",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary Wall at Rashi Wala Community Centre",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 499894
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Bwall of Dr. B R Ambedkar School",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 1099708
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.471Z"
+}

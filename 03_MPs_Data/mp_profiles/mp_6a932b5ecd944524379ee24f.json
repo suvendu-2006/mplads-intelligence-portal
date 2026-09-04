@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee24f",
+    "name": "Shri Kanad Purkayastha (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Assam",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 25601397,
+    "utilizationPercentage": 26.123874489795917,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 50,
+    "completedWorksValue": 0,
+    "inProgressPayments": 25601397,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 50,
+    "unspentAmount": 72398603,
+    "totalRecommendedAmount": 65000000,
+    "name_hi": "Shri Kanad Purkayastha (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25601397,
+      "totalEntries": 34,
+      "avgExpenditure": 752982.2647058824,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 25601397,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25601397,
+        "transactionCount": 34,
+        "avgAmount": 752982.2647058824
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 50,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:54.460Z"
+}

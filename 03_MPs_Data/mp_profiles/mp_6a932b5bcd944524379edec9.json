@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec9",
+    "name": "MANOJ KUMAR",
+    "constituency": "SASARAM",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 95686097,
+    "utilizationPercentage": 65.09258299319728,
+    "completedWorksCount": 82,
+    "recommendedWorksCount": 112,
+    "completedWorksValue": 68255638,
+    "inProgressPayments": 27430459,
+    "paymentGapPercentage": 28.667131234331777,
+    "completionRate": 42.2680412371134,
+    "pendingWorks": 30,
+    "unspentAmount": 51313903,
+    "totalRecommendedAmount": 77324340,
+    "name_hi": "MANOJ KUMAR",
+    "constituency_hi": "SASARAM",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95686097,
+      "totalEntries": 122,
+      "avgExpenditure": 784312.2704918033,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 891351,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 45936351,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 48858395,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95686097,
+        "transactionCount": 122,
+        "avgAmount": 784312.2704918033
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 82,
+    "recommendedCount": 112,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d43c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mahadalit Basti me Ambedakar Pustakale ka nirman kary",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 698587
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gaytri Mandir ke raste rajeshwari nagar wala evam maa knkali wala mandir tak pcc nirman kary, length 800 feet",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 1375025
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d53c",
+        "workCategory": "Normal/Others",
+        "workDescription": "RWD road se bihari ram ke ghar hote hue baliram ke ghar tak pcc nirman kary, length 750",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 1199400
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d53b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary walls of Primary Health buildings telari",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 793764
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d525",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dalit basti me hari ram ke ghar se bindu ram ke ghar hote hue sachchau ram ke ghar tak nali evam pcc nirman kary, Length 400 feet",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 794101
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.244Z"
+}

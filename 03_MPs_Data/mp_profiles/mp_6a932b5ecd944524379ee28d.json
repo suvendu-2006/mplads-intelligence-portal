@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee28d",
+    "name": "Shri Randeep Singh Surjewala (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 61282046,
+    "utilizationPercentage": 31.256150749634333,
+    "completedWorksCount": 55,
+    "recommendedWorksCount": 94,
+    "completedWorksValue": 40284299,
+    "inProgressPayments": 20997747,
+    "paymentGapPercentage": 34.26410893657173,
+    "completionRate": 36.91275167785235,
+    "pendingWorks": 39,
+    "unspentAmount": 134781911.11,
+    "totalRecommendedAmount": 94026076,
+    "name_hi": "Shri Randeep Singh Surjewala (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61282046,
+      "totalEntries": 279,
+      "avgExpenditure": 219648.91039426523,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1200000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 25823859,
+        "transactionCount": 63
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34258187,
+        "transactionCount": 215
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61282046,
+        "transactionCount": 279,
+        "avgAmount": 219648.91039426523
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 55,
+    "recommendedCount": 94,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31e6b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of One Room Veranda in Government Higher Secondary School at 22 Ag",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 798359
+      },
+      {
+        "_id": "6a932bb5cd94452437a31272",
+        "workCategory": "Normal/Others",
+        "workDescription": "Single Phase tube well construction with electric connection at SC/ST Mohalla, Dayal Ki Nangal Village",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 479788
+      },
+      {
+        "_id": "6a932bb5cd94452437a31dce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Work of Cement Concrete (CC) Road from Khati's house toward Ballupura Road at Bajyawas, Dist. - Sikar",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 914751
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ac5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre at Meghwal Muhalla (Khasra No. - 1319, Rakba 0.2400), Village - Bathoth, Dist. - Sikar",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 1177681
+      },
+      {
+        "_id": "6a932bb5cd94452437a322fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Work of Boundary Wall at Rajkiya Uchch Madhyamik Vidyalay, Malkhera 1 Sdr Village",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 567900
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.678Z"
+}

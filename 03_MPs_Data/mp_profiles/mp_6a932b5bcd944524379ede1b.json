@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1b",
+    "name": "CHHATRAPATI SHAHU SHAHAJI",
+    "constituency": "KOLHAPUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 33696592,
+    "utilizationPercentage": 22.922851700680273,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 21542554,
+    "inProgressPayments": 12154038,
+    "paymentGapPercentage": 36.069042234300724,
+    "completionRate": 21.782178217821784,
+    "pendingWorks": 57,
+    "unspentAmount": 113303408,
+    "totalRecommendedAmount": 76286000,
+    "name_hi": "CHHATRAPATI SHAHU SHAHAJI",
+    "constituency_hi": "KOLHAPUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33696592,
+      "totalEntries": 34,
+      "avgExpenditure": 991076.2352941176,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5442064,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28254528,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33696592,
+        "transactionCount": 34,
+        "avgAmount": 991076.2352941176
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e129",
+        "workCategory": "Normal/Others",
+        "workDescription": "Study Construction at Nigve Dumala (Abhyasika)",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 999824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 1499618
+      },
+      {
+        "_id": "6a932bb5cd94452437a1defc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Natha Chopde house to Ram Godse house",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dee4",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "water pipeline repair",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 476199
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.657Z"
+}

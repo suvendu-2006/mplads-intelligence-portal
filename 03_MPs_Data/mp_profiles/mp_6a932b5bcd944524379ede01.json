@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede01",
+    "name": "BHAUSAHEB RAJARAM WAKCHAURE",
+    "constituency": "SHIRDI",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 19420448,
+    "utilizationPercentage": 13.211189115646258,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 126,
+    "completedWorksValue": 8130314,
+    "inProgressPayments": 11290134,
+    "paymentGapPercentage": 58.13529121470318,
+    "completionRate": 8.02919708029197,
+    "pendingWorks": 115,
+    "unspentAmount": 127579552,
+    "totalRecommendedAmount": 88648500,
+    "name_hi": "BHAUSAHEB RAJARAM WAKCHAURE",
+    "constituency_hi": "SHIRDI",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 19420448,
+      "totalEntries": 32,
+      "avgExpenditure": 606889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1697940,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17722508,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 19420448,
+        "transactionCount": 32,
+        "avgAmount": 606889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 126,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e548",
+        "workCategory": "Normal/Others",
+        "workDescription": "Paver block and beautification at Chandragiri Devasthan Gram Panchayat Property No. 268 1 Gram Panchayat Manjari Taluka Rahuri",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 999560
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of paving blocks in Mohta Devi area at Nipani vadgaon taluka shiriampur",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 488701
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfa1",
+        "workCategory": "Normal/Others",
+        "workDescription": "To construct community Hall in G P Property No 159  1 villege Sakirwadi Taluka Akole",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 686339
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfb3",
+        "workCategory": "Normal/Others",
+        "workDescription": "To Construction of common work sheds  common covered sitting area in G P Property No 982 vileege at Bherdapur taluka Shrirampurr",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 495321
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbef",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALATION PEVER BLOK AT HANUMAN MANDIR GAVTHAN KARAJGAON TALUKA RAHURI",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 497764
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.850Z"
+}

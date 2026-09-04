@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede09",
+    "name": "BIJULI KALITA MEDHI",
+    "constituency": "GUWAHATI",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71322647,
+    "utilizationPercentage": 48.518807482993196,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 145,
+    "completedWorksValue": 6650000,
+    "inProgressPayments": 64672647,
+    "paymentGapPercentage": 90.67617330579444,
+    "completionRate": 3.3333333333333335,
+    "pendingWorks": 140,
+    "unspentAmount": 75677353,
+    "totalRecommendedAmount": 134900000,
+    "name_hi": "BIJULI KALITA MEDHI",
+    "constituency_hi": "GUWAHATI",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71322647,
+      "totalEntries": 167,
+      "avgExpenditure": 427081.71856287424,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3240000,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42798394,
+        "transactionCount": 102
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25284253,
+        "transactionCount": 61
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71322647,
+        "transactionCount": 167,
+        "avgAmount": 427081.71856287424
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 145,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1718a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall near Charantola kali Mandir at Dhamar Gaon.",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a171f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of link road from Narayan Kalita house to Sabin Boro house at Jogipara , Dhupdhara.",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 2800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a171a0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Tharka Bazar near kalimandir , Joyramkhusi",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a16ea7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of open community hall at Sri Sri Niranjan Mahaprubhu Pith , Bakaitari.",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a171f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from Harimura bazar to Bijay Hajong house at Patalpur, Matia",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 2500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.214Z"
+}

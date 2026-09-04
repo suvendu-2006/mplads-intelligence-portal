@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8f",
+    "name": "Smt Poonamben Hematbhai Maadam",
+    "constituency": "JAMNAGAR",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 25917848,
+    "utilizationPercentage": 17.631189115646258,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 134,
+    "completedWorksValue": 19856441,
+    "inProgressPayments": 6061407,
+    "paymentGapPercentage": 23.38699956879136,
+    "completionRate": 25.139664804469277,
+    "pendingWorks": 89,
+    "unspentAmount": 121082152,
+    "totalRecommendedAmount": 64725400,
+    "name_hi": "Smt Poonamben Hematbhai Maadam",
+    "constituency_hi": "JAMNAGAR",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25917848,
+      "totalEntries": 60,
+      "avgExpenditure": 431964.13333333336,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4331753,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21586095,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25917848,
+        "transactionCount": 60,
+        "avgAmount": 431964.13333333336
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 134,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e495",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the work of community hall in the Scheduled tribe area near Ukarda Bhagats place in Dudhala village",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 497698
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e96a",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the work of boundary wall around the community hall located in the Scheduled Caste area",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 189460
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the work of community hall in the Scheduled tribe area next to the Gatraal Mataji temple in Pachhtar village",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 498981
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e539",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the work of the community hall at the back of the Ahir samaj  in Shiva village",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 720042
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e923",
+        "workCategory": "Normal/Others",
+        "workDescription": "For paver block work in Padarna Chowk, Mota Bhadukiya village of Kalavad taluka",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 398074
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.248Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede91",
+    "name": "KALIPADA SAREN",
+    "constituency": "JHARGRAM",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71784126,
+    "utilizationPercentage": 48.8327387755102,
+    "completedWorksCount": 40,
+    "recommendedWorksCount": 23,
+    "completedWorksValue": 64525426,
+    "inProgressPayments": 7258700,
+    "paymentGapPercentage": 10.11184561890466,
+    "completionRate": 63.49206349206349,
+    "pendingWorks": -17,
+    "unspentAmount": 75215874,
+    "totalRecommendedAmount": 48971853,
+    "name_hi": "KALIPADA SAREN",
+    "constituency_hi": "JHARGRAM",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71784126,
+      "totalEntries": 49,
+      "avgExpenditure": 1464982.163265306,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 45922811,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25861315,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71784126,
+        "transactionCount": 49,
+        "avgAmount": 1464982.163265306
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 40,
+    "recommendedCount": 23,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b3f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 9 mts. Solar high mast pole with 4 nos. 50 watt light at 4 (four) different place of Belatikri GP in Lalgarh Panchayat Samity of Jhargram district.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1148896
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b3f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 36 (thirty six) nos. single arm 18 watt LED Based solar light at different place of Belatikri GP in Lalgarh Panchayat Samity of Jhargram district.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1224850
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bc9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 9 mtr High Mast pole with 4 nos. 50 watt Solar Light at 2 (two) nos. different place of Bandhgora Gram Panchayat in Jhargram Panchayat Samity of Jhargram district.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 574448
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bc4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 36 (Thirty six) nos. single arm 18 watt LED Based Solar Light at Different place of Bandhgora Gram Panchayat in Jhargram Panchayat Samity of Jhargram district.",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 1224932
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bc0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation 12 mtr High Mast pole with 6 nos 50 watt Solar Light at 6 (six) nos different place of Andhari Gram Panchayat under Sankrail Panchayat Samity within Jhargram District.",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 2266804
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.450Z"
+}

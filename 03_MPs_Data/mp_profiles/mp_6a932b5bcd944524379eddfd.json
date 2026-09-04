@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddfd",
+    "name": "BHARATBHAI MANUBHAI SUTARIYA",
+    "constituency": "AMRELI",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 60836765,
+    "utilizationPercentage": 41.3855544217687,
+    "completedWorksCount": 154,
+    "recommendedWorksCount": 175,
+    "completedWorksValue": 50515379,
+    "inProgressPayments": 10321386,
+    "paymentGapPercentage": 16.965704866128238,
+    "completionRate": 46.808510638297875,
+    "pendingWorks": 21,
+    "unspentAmount": 86163235,
+    "totalRecommendedAmount": 66163310,
+    "name_hi": "BHARATBHAI MANUBHAI SUTARIYA",
+    "constituency_hi": "AMRELI",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 60836765,
+      "totalEntries": 184,
+      "avgExpenditure": 330634.5923913043,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28030616,
+        "transactionCount": 85
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32806149,
+        "transactionCount": 99
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 60836765,
+        "transactionCount": 184,
+        "avgAmount": 330634.5923913043
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 154,
+    "recommendedCount": 175,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e54b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block paving road work in Anida village",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e544",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block paving work in the main bajar  of Dhundhwana village",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e479",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block paving work from Maganbhai Gaudani house to Pareshbhai Gaudani house in the Kankot Nana village.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Model pickup bus stand in Anida village",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 494000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e981",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block paving work in different areas of Ishvariya(Mahadev) village.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.666Z"
+}

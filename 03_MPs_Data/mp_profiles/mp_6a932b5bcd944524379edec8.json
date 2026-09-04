@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec8",
+    "name": "MANOHAR LAL",
+    "constituency": "KARNAL",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 16619897,
+    "utilizationPercentage": 11.30605238095238,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 19,
+    "completedWorksValue": 495787,
+    "inProgressPayments": 16124110,
+    "paymentGapPercentage": 97.01690690381535,
+    "completionRate": 5,
+    "pendingWorks": 18,
+    "unspentAmount": 130380103,
+    "totalRecommendedAmount": 30518470,
+    "name_hi": "MANOHAR LAL",
+    "constituency_hi": "KARNAL",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16619897,
+      "totalEntries": 13,
+      "avgExpenditure": 1278453.6153846155,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 250512,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16369385,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16619897,
+        "transactionCount": 13,
+        "avgAmount": 1278453.6153846155
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 19,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Street road from PWD road to house of Pirthu",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 495787
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.681Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddea",
+    "name": "AZAD KIRTI JHA",
+    "constituency": "BARDHAMAN-DURGAPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 179658399.98,
+    "totalExpenditure": 33156887,
+    "utilizationPercentage": 18.45551725034349,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 106,
+    "completedWorksValue": 11925284,
+    "inProgressPayments": 21231603,
+    "paymentGapPercentage": 64.03376468967066,
+    "completionRate": 5.357142857142857,
+    "pendingWorks": 100,
+    "unspentAmount": 146501512.98,
+    "totalRecommendedAmount": 78651222,
+    "name_hi": "AZAD KIRTI JHA",
+    "constituency_hi": "BARDHAMAN-DURGAPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33156887,
+      "totalEntries": 30,
+      "avgExpenditure": 1105229.5666666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12033665,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21123222,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33156887,
+        "transactionCount": 30,
+        "avgAmount": 1105229.5666666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 106,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd44",
+        "workCategory": "Normal/Others",
+        "workDescription": "Hearse Van as per attached estimate by Bengal Animate Inc.Residents of Durgapur",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1489500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd21",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete road from Santidanga Shidharpur Brick Kiln to Arun Matabbar s Shop",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 391478
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b6df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Crematoriums of Janeja shade at Kusumgram kabarsthan",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 998312
+      },
+      {
+        "_id": "6a932bb5cd94452437a19c2c",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Restroration of Road From Pal Building to Church Via Big Bazar in Ward No 3 Under Burdwan Municipality",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 4175251
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a525",
+        "workCategory": "Normal/Others",
+        "workDescription": "Approach Road beautification project by decorative lighting arrangement from GT Road Raj College More to Burdwan Raj College",
+        "completedDate": "2025-09-25T00:00:00.000Z",
+        "finalAmount": 4271709
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.527Z"
+}

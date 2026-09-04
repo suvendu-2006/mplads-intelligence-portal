@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf15",
+    "name": "RAJA RAM SINGH",
+    "constituency": "KARAKAT",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71841783,
+    "utilizationPercentage": 48.871961224489795,
+    "completedWorksCount": 114,
+    "recommendedWorksCount": 212,
+    "completedWorksValue": 49586273,
+    "inProgressPayments": 22255510,
+    "paymentGapPercentage": 30.978504528485885,
+    "completionRate": 34.96932515337423,
+    "pendingWorks": 98,
+    "unspentAmount": 75158217,
+    "totalRecommendedAmount": 94027920,
+    "name_hi": "RAJA RAM SINGH",
+    "constituency_hi": "KARAKAT",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71841783,
+      "totalEntries": 191,
+      "avgExpenditure": 376134.9895287958,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 29372035,
+        "transactionCount": 72
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42469748,
+        "transactionCount": 119
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71841783,
+        "transactionCount": 191,
+        "avgAmount": 376134.9895287958
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 114,
+    "recommendedCount": 212,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dfd1",
+        "workCategory": "Normal/Others",
+        "workDescription": "prakhand- nasriganj, panchayat- dhanaaw, gram- babhandih madheshwar singh ke ghar se kaali sthan ki or PCC",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 198081
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df61",
+        "workCategory": "Normal/Others",
+        "workDescription": "panchayat karmaini ke bairi gaon me shivji shah ke ghar se saroj singh ke ghar ki or slab sahit naali ewam PCC karya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 592362
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfd2",
+        "workCategory": "Normal/Others",
+        "workDescription": "prakhand- nasriganj, panchayat- dhanaaw, gram- babhandih me mukesh paswan ke ghar se dasai mahto ke ghar ki or PCC",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 198399
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Prakhand- rajpur, panchayat- sakhara, gram- mangraulia me urdu school ke paas chhote lal saah ke ghar se shiv mandir chouk ki or  naali ewam PCC karya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 698626
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c79e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bhadkudia men Pustkalaya bhavan ka nirman, khata - 164, plot- 1108",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 488328
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.423Z"
+}

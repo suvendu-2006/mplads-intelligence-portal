@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edefa",
+    "name": "Pradyut Bordoloi",
+    "constituency": "NOWGONG",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 67647652,
+    "utilizationPercentage": 69.02821632653061,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 202,
+    "completedWorksValue": 6630634,
+    "inProgressPayments": 61017018,
+    "paymentGapPercentage": 90.19827916569817,
+    "completionRate": 6.046511627906977,
+    "pendingWorks": 189,
+    "unspentAmount": 30352348,
+    "totalRecommendedAmount": 90758000,
+    "name_hi": "Pradyut Bordoloi",
+    "constituency_hi": "NOWGONG",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67647652,
+      "totalEntries": 475,
+      "avgExpenditure": 142416.10947368422,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 40285147,
+        "transactionCount": 246
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27362505,
+        "transactionCount": 229
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67647652,
+        "transactionCount": 475,
+        "avgAmount": 142416.10947368422
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 202,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a178ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Natya Chora near Bishnu Mandir, Thekeraguri, Jagiroad",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 499974
+      },
+      {
+        "_id": "6a932bb5cd94452437a18f91",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of public toilet block near Fatimatujahara Madrassatul Bannat at Kataripam Gaon, Ghagua GP, Jagiroad",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 399914
+      },
+      {
+        "_id": "6a932bb5cd94452437a178cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rabha Ghar at Ulukuchi Kali Mandir at Nellie, Jagiroad",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 399970
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ead",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction floor with tiles at Niz-pathari (Burhachuk) Namghar (150), Pathari GP",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a178dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Toilet Block for Dakshinpat Higher Secondary School, Nagaon",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 497000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.124Z"
+}

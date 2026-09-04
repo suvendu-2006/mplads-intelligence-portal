@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2cf",
+    "name": "Smt. Sonia Gandhi (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 73650240,
+    "utilizationPercentage": 50.10220408163265,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 82,
+    "completedWorksValue": 42569181,
+    "inProgressPayments": 31081059,
+    "paymentGapPercentage": 42.200893031713136,
+    "completionRate": 35.9375,
+    "pendingWorks": 36,
+    "unspentAmount": 73349760,
+    "totalRecommendedAmount": 83152654,
+    "name_hi": "Smt. Sonia Gandhi (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 73650240,
+      "totalEntries": 145,
+      "avgExpenditure": 507932.6896551724,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 43485300,
+        "transactionCount": 82
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30164940,
+        "transactionCount": 63
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 73650240,
+        "transactionCount": 145,
+        "avgAmount": 507932.6896551724
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 82,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30dae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Gravel Road from Menuho ki Basti to Matuho ki Basti (2km) at Gram Panchayat Sagron ki Basti, Panchayat Samiti Sam, District Jaisalmer",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 985771
+      },
+      {
+        "_id": "6a932bb5cd94452437a321ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a boundary wall at the Public Library and Toilet at Heer Singh ka Vas, Salkha, Gram Panchayat Salka, Panchayat Samiti and Block Sam, District Jaisalmer",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32412",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Public Library at  Village Meghwalo Ki Dhani, Gram Panchayat Damodra, Panchayat Samiti Sam, District Jaisalmer",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30daf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Public Library at Sodhe Khan ka Vaas, Rojaniyo Basti, Gram Panchayat Sagron ki Basti, Panchayat Samiti Sam, District Jaisalmer",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 991571
+      },
+      {
+        "_id": "6a932bb5cd94452437a323fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community cultural centre at Nemaram Baktharam ke vas, meghwal pada, Gram Panchayat Pabnasar, Panchayat Samiti Fatehgarh, District Jaisalmer",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.648Z"
+}

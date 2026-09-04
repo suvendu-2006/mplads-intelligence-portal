@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf68",
+    "name": "Shri Bhartruhari Mahtab",
+    "constituency": "CUTTACK",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 36110567,
+    "utilizationPercentage": 24.56501156462585,
+    "completedWorksCount": 86,
+    "recommendedWorksCount": 397,
+    "completedWorksValue": 25600877,
+    "inProgressPayments": 10509690,
+    "paymentGapPercentage": 29.10419545613892,
+    "completionRate": 17.805383022774325,
+    "pendingWorks": 311,
+    "unspentAmount": 110889433,
+    "totalRecommendedAmount": 120809520,
+    "name_hi": "Shri Bhartruhari Mahtab",
+    "constituency_hi": "CUTTACK",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36110567,
+      "totalEntries": 272,
+      "avgExpenditure": 132759.4375,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11641627,
+        "transactionCount": 136
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24468940,
+        "transactionCount": 136
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36110567,
+        "transactionCount": 272,
+        "avgAmount": 132759.4375
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 86,
+    "recommendedCount": 397,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e98f",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CLASS ROOM AT KAJIDIHA UGME SCHOOL KAJIDIHA, MADHUPATANA, CUTTACK",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 990000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e594",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF COMMUNITY HALL, AT SARTOL MALLICK SAHI, NEAR MALLICK SAHI CHHAKA, CUTTACK SADAR, CUTTACK",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e705",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF COMMUNITY CENTER NEAR MAA SINDUREI MANDIRA, WARD NO.58",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e500",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SEMI HI MAST LIGHT NEAR LAXMI MANDAP AT BISWAL SAHI CHHAKA, HOLLIPUR. KISHAN NAGAR G.P.(50WATTX4NOS)",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SEMI HI MAST LIGHT AT NAIKULA PATANA NEAR LIBRARY, BALISUKURI, KISHAN NANAR G.P.(50WATTX4NOS)",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.689Z"
+}

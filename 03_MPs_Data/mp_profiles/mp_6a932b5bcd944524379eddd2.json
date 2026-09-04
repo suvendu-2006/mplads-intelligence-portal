@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd2",
+    "name": "ANITA NAGARSINGH CHOUHAN",
+    "constituency": "RATLAM",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55091448,
+    "utilizationPercentage": 37.47717551020408,
+    "completedWorksCount": 74,
+    "recommendedWorksCount": 129,
+    "completedWorksValue": 27376128,
+    "inProgressPayments": 27715320,
+    "paymentGapPercentage": 50.30784451336259,
+    "completionRate": 36.45320197044335,
+    "pendingWorks": 55,
+    "unspentAmount": 91908552,
+    "totalRecommendedAmount": 61504327,
+    "name_hi": "ANITA NAGARSINGH CHOUHAN",
+    "constituency_hi": "RATLAM",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55091448,
+      "totalEntries": 228,
+      "avgExpenditure": 241629.15789473685,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 21690922,
+        "transactionCount": 82
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33400526,
+        "transactionCount": 146
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55091448,
+        "transactionCount": 228,
+        "avgAmount": 241629.15789473685
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 74,
+    "recommendedCount": 129,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ca8d",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad panchayat thandla ki gram panchayat khawasa me pani ka tenkar savikrat kiya gaya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 159200
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca85",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad panchayat jhabua ki gram panchayat kalyanpura me pani ka tenkar savikrat kiya gaya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 159200
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca92",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad panchayat rama ki gram panchayat para me pani ka tenkar savikrat kiya gaya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 159200
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca91",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad panchayat rama ki gram panchayat chudeli me pani ka tenkar savikrat kiya gaya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 159200
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca8e",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad panchayat thandla ki gram panchayat kakanwani me pani ka tenkar savikrat kiya gaya",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 159200
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.447Z"
+}

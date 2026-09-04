@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf29",
+    "name": "RAMESH AWASTHI",
+    "constituency": "KANPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75758324,
+    "utilizationPercentage": 51.53627482993197,
+    "completedWorksCount": 48,
+    "recommendedWorksCount": 66,
+    "completedWorksValue": 49892280,
+    "inProgressPayments": 25866044,
+    "paymentGapPercentage": 34.14284085798941,
+    "completionRate": 42.10526315789473,
+    "pendingWorks": 18,
+    "unspentAmount": 71241676,
+    "totalRecommendedAmount": 43646000,
+    "name_hi": "RAMESH AWASTHI",
+    "constituency_hi": "KANPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75758324,
+      "totalEntries": 98,
+      "avgExpenditure": 773044.1224489796,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30968053,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44790271,
+        "transactionCount": 78
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75758324,
+        "transactionCount": 98,
+        "avgAmount": 773044.1224489796
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 48,
+    "recommendedCount": 66,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d19e",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad kanpur nagar ke vidhan sabha kidwai nagar me 18 nag semi highmast light ka adhisthapan.",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 3796187
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c95c",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad kanpur nagar ke vidhan sabha cant me 9 nag semi highmast light ka adhisthapan.",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1890677
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d19d",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad kanpur nagar ke vidhan sabha Arya nagar me 7 nag semi highmast light ka adhisthapan.",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1473048
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d19c",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad kanpur nagar ke vidhan sabha sisamau me 5 nag semi highmast light ka adhisthapan.",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1052754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "ward no. 53 janpad kanpur nagar ke panki me yatri shed v chabutare ka nirman karya v sundarikaran ka karya.",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 1992861
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.249Z"
+}

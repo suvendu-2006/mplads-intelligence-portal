@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee295",
+    "name": "Shri S. Selvaganabathy (2021-27)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Puducherry",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 292881856.49,
+    "totalExpenditure": 101658946,
+    "utilizationPercentage": 34.70988173126081,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 70,
+    "completedWorksValue": 73122911,
+    "inProgressPayments": 28536035,
+    "paymentGapPercentage": 28.07036283850513,
+    "completionRate": 30.693069306930692,
+    "pendingWorks": 39,
+    "unspentAmount": 191222910.49,
+    "totalRecommendedAmount": 180681869,
+    "name_hi": "Shri S. Selvaganabathy (2021-27)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Puducherry"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 101658946,
+      "totalEntries": 92,
+      "avgExpenditure": 1104988.543478261,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 11049980,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 23897325,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 38320090,
+        "transactionCount": 36
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28391551,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 101658946,
+        "transactionCount": 92,
+        "avgAmount": 1104988.543478261
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 70,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Forming and providing WBM Grade I to the main and internal streets of Lakshmi Narasimmar nagar near Gopalankadai in Oulgaret Constituency",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 2734240
+      },
+      {
+        "_id": "6a932bb5cd94452437a32034",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CCTV cameras in the premises of                           Navalar Nedunchezhian Govt. Hr. Sec. School, Puducherry.",
+        "completedDate": "2026-02-09T00:00:00.000Z",
+        "finalAmount": 353646
+      },
+      {
+        "_id": "6a932bb5cd94452437a3203d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 500 LPH Reverse osmosis based water treatment plant at Navalar Nedunchezhian Govt. Hr. Sec. School, Puducherry.",
+        "completedDate": "2026-02-09T00:00:00.000Z",
+        "finalAmount": 252700
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e61",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing cement concrete road to the main road of Isravel nagar at Gorimedu in Indira nagar Constituency, Puducherry.",
+        "completedDate": "2025-12-30T00:00:00.000Z",
+        "finalAmount": 2833040
+      },
+      {
+        "_id": "6a932bb5cd94452437a31dc4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and laying of CC roads and reconstruction of drains in Brahmandam nagar (Phase II) in Yanam region",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 3728829
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.503Z"
+}

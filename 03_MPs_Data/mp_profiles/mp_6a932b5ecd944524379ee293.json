@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee293",
+    "name": "Shri S. Jaishankar (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 31616893,
+    "utilizationPercentage": 18.43550612244898,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 112,
+    "completedWorksValue": 27596399,
+    "inProgressPayments": 4020494,
+    "paymentGapPercentage": 12.71628429776449,
+    "completionRate": 31.28834355828221,
+    "pendingWorks": 61,
+    "unspentAmount": 139883107,
+    "totalRecommendedAmount": 143498500,
+    "name_hi": "Shri S. Jaishankar (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 31616893,
+      "totalEntries": 60,
+      "avgExpenditure": 526948.2166666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7967427,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23649466,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 31616893,
+        "transactionCount": 60,
+        "avgAmount": 526948.2166666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 112,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31da2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road (650 meter) from Kumbhiya Main Road to Kasturba Gandhi Balika Vidhyalay, Kumbhiya, Ta-Garudeshwar, Narmada",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 4562815
+      },
+      {
+        "_id": "6a932bb5cd94452437a3240b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Smart Class Facility-Integrated Blended Classroom Solution in Gabhana Government Primary School, Garudeshwar, Narmada",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 494505
+      },
+      {
+        "_id": "6a932bb5cd94452437a32408",
+        "workCategory": "Normal/Others",
+        "workDescription": "Smart Class Facility-Integrated Blended Classroom Solution in Devaliya Government Primary School, Tilakwada, Narmada",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 494505
+      },
+      {
+        "_id": "6a932bb5cd94452437a3240c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Smart Class Facility-Integrated Blended Classroom Solution in Kharagada Government Primary School, Garudeshwar, Narmada",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 494505
+      },
+      {
+        "_id": "6a932bb5cd94452437a3240e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Smart Class Facility-Integrated Blended Classroom Solution in Garudeshwar Government Primary School, Garudeshwar, Narmada",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 494505
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.523Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf17",
+    "name": "RAJEEV BHARDWAJ",
+    "constituency": "KANGRA",
+    "state": "Himachal Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 179388967.11,
+    "totalExpenditure": 80773156,
+    "utilizationPercentage": 45.026824838380655,
+    "completedWorksCount": 204,
+    "recommendedWorksCount": 424,
+    "completedWorksValue": 43255732,
+    "inProgressPayments": 37517424,
+    "paymentGapPercentage": 46.44788672117752,
+    "completionRate": 32.48407643312102,
+    "pendingWorks": 220,
+    "unspentAmount": 98615811.11000001,
+    "totalRecommendedAmount": 122563752,
+    "name_hi": "RAJEEV BHARDWAJ",
+    "constituency_hi": "KANGRA",
+    "state_hi": "Himachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 80773156,
+      "totalEntries": 653,
+      "avgExpenditure": 123695.49157733537,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 177599,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 48766347,
+        "transactionCount": 398
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31829210,
+        "transactionCount": 253
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 80773156,
+        "transactionCount": 653,
+        "avgAmount": 123695.49157733537
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 204,
+    "recommendedCount": 424,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19f71",
+        "workCategory": "Normal/Others",
+        "workDescription": "C.O Path with interlock tiles from main road to house of Mahinder Singh ward no 2",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a192e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shamshan Ghat Near Banoi Bridge.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 179524
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a8f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CO PATH TO MOKSH DHAM WARD NO 4",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a192be",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from the house of Karam Chand to Haar.",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 179936
+      },
+      {
+        "_id": "6a932bb5cd94452437a19cfa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Link Road from the shop of Vinod to Village Suder. ward no5",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 176464
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.905Z"
+}

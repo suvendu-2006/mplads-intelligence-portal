@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf1f",
+    "name": "Rajnath Singh",
+    "constituency": "LUCKNOW",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 154808797.11,
+    "totalExpenditure": 74407887,
+    "utilizationPercentage": 48.06437902048239,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 71,
+    "completedWorksValue": 27144116,
+    "inProgressPayments": 47263771,
+    "paymentGapPercentage": 63.51984030940161,
+    "completionRate": 30.392156862745097,
+    "pendingWorks": 40,
+    "unspentAmount": 80400910.11000001,
+    "totalRecommendedAmount": 78576000,
+    "name_hi": "Rajnath Singh",
+    "constituency_hi": "LUCKNOW",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74407887,
+      "totalEntries": 74,
+      "avgExpenditure": 1005511.9864864865,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28128404,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 46279483,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74407887,
+        "transactionCount": 74,
+        "avgAmount": 1005511.9864864865
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 71,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18748",
+        "workCategory": "Normal/Others",
+        "workDescription": "Amberganj Ward ke antargat Neeru Jaiswal ke makan se Ramvilas de makan tak CC Sadak and Nali Nirman Kary. Length 120 Meter",
+        "completedDate": "2026-01-13T00:00:00.000Z",
+        "finalAmount": 552630
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f7a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Roshan Nagar me Sarika evam Alihasan wali gali me interlocking sadak evm nali nirman karya-length-90 meter",
+        "completedDate": "2025-09-04T00:00:00.000Z",
+        "finalAmount": 896953
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f7b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mardankhera mein Ramlekhan ke makan se Sanrise Public School tak avm Manok ke makan hote hue Sohan Lal Yadav ke ghar tak Sadak avm Nali Nirman Karya. Length 115 Meter.",
+        "completedDate": "2025-09-04T00:00:00.000Z",
+        "finalAmount": 975581
+      },
+      {
+        "_id": "6a932bb5cd94452437a192f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dilaaram Baradari main R.K. Garg ke makan se Ramu Sharma ke makan tak CC Sadak ka nirman karya. Length-90 Meter",
+        "completedDate": "2025-07-24T00:00:00.000Z",
+        "finalAmount": 669636
+      },
+      {
+        "_id": "6a932bb5cd94452437a192f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "E-Block main 5/1 se lekar satsang Bhawan tak CC Sadak avm Nali Nirman Karya. Length-130 Meter",
+        "completedDate": "2025-07-24T00:00:00.000Z",
+        "finalAmount": 1637891
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.854Z"
+}

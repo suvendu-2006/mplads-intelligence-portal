@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa3",
+    "name": "SURENDRA PRASAD YADAV",
+    "constituency": "JAHANABAD",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 155325714,
+    "totalExpenditure": 70973331,
+    "utilizationPercentage": 45.69322694373708,
+    "completedWorksCount": 141,
+    "recommendedWorksCount": 161,
+    "completedWorksValue": 38926916,
+    "inProgressPayments": 32046415,
+    "paymentGapPercentage": 45.1527560401526,
+    "completionRate": 46.688741721854306,
+    "pendingWorks": 20,
+    "unspentAmount": 84352383,
+    "totalRecommendedAmount": 78589600,
+    "name_hi": "SURENDRA PRASAD YADAV",
+    "constituency_hi": "JAHANABAD",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70973331,
+      "totalEntries": 201,
+      "avgExpenditure": 353101.14925373136,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6460440,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 64512891,
+        "transactionCount": 185
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70973331,
+        "transactionCount": 201,
+        "avgAmount": 353101.14925373136
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 141,
+    "recommendedCount": 161,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d9d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work at S No 01construction of 400 feet PCC from near Arun Singh mill in Kinjar village to Ganga Sagar Singh garden Assembly constituency Kurtha Block Karpi Kinjar",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 396513
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d06b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Handpump",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 73615
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing of Hand Pumps",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 74238
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d795",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing of Hand Pumps",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 74036
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c801",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing of Hand Pump",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 74238
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.230Z"
+}

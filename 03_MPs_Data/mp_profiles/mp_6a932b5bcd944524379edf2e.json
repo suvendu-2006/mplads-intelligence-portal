@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf2e",
+    "name": "Rao Inderjit Singh",
+    "constituency": "GURGAON",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 22744840,
+    "utilizationPercentage": 15.472680272108844,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 15180698,
+    "inProgressPayments": 7564142,
+    "paymentGapPercentage": 33.25651884119651,
+    "completionRate": 29.166666666666668,
+    "pendingWorks": 20,
+    "unspentAmount": 124255160,
+    "totalRecommendedAmount": 34571723,
+    "name_hi": "Rao Inderjit Singh",
+    "constituency_hi": "GURGAON",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 22744840,
+      "totalEntries": 28,
+      "avgExpenditure": 812315.7142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9839602,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12905238,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 22744840,
+        "transactionCount": 28,
+        "avgAmount": 812315.7142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e85a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundry Wall of Shamshan Ghat and Laying IPB Tiles in Shamshan Ghat",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 944126
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of firni in Village Molhawas Gram Panchayat Bamber",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 1097460
+      },
+      {
+        "_id": "6a932bb5cd94452437a17573",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sewer Line from NH8 to Holi Chowk",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de81",
+        "workCategory": "Normal/Others",
+        "workDescription": "Cont. of street from NH71 to House of Mendaram",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 998674
+      },
+      {
+        "_id": "6a932bb5cd94452437a188e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of street from Main Firni to Govt. School",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.225Z"
+}

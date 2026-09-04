@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb1",
+    "name": "ABHIJIT GANGOPADHYAY",
+    "constituency": "TAMLUK",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 40622867.78,
+    "utilizationPercentage": 27.63460393197279,
+    "completedWorksCount": 74,
+    "recommendedWorksCount": 191,
+    "completedWorksValue": 25363606.78,
+    "inProgressPayments": 15259261,
+    "paymentGapPercentage": 37.563229367850404,
+    "completionRate": 27.92452830188679,
+    "pendingWorks": 117,
+    "unspentAmount": 106377132.22,
+    "totalRecommendedAmount": 69230649,
+    "name_hi": "ABHIJIT GANGOPADHYAY",
+    "constituency_hi": "TAMLUK",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40622867.78,
+      "totalEntries": 125,
+      "avgExpenditure": 324982.94224,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18196268.78,
+        "transactionCount": 57
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22426599,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40622867.78,
+        "transactionCount": 125,
+        "avgAmount": 324982.94224
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 74,
+    "recommendedCount": 191,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e820",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a submersible pump with pipe lines near the house of Ajit Samui at vill.- Babua, Mouza-Babua, J.L. No. 290, Plot No. 284 under Amalhanda G.P.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 198536
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b25f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a concrete road from the house of Pashupati Ghara towards the house of Asit Samanta at Deriachak VI (P. Mahal), J.L. No. 318, Plot No. 208",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 233273
+      },
+      {
+        "_id": "6a932bb5cd94452437a196db",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a concrete road from tube well of Ranjit Mondal to the garden of Panchanan Bera, Mouza- Kanaichak, J.L. No. 260, Plot No. 424 under Baishnabchak G.P., Kolaghat",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 163700
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e578",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a concrete road from the house of Amiya Mandal towards the land of Chandan Adhikari at Bangalpur, J.L. No. 317, Plot No. 779 to 795 under Deriachak G.P.",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 491808
+      },
+      {
+        "_id": "6a932bb5cd94452437a198a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of tube well with submersible pump with pipe lines near the house of Gurupada Ojha at Mouza- Deriachak, J.L. No. 318, Plot No. 1390, Khatian No. 1081 under Deriachak G.P.",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 154668
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.692Z"
+}

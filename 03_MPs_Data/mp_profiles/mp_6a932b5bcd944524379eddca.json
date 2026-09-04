@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddca",
+    "name": "ANAND BHADAURIYA",
+    "constituency": "DHAURAHRA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76758938,
+    "utilizationPercentage": 52.21696462585034,
+    "completedWorksCount": 132,
+    "recommendedWorksCount": 45,
+    "completedWorksValue": 38721345,
+    "inProgressPayments": 38037593,
+    "paymentGapPercentage": 49.554610825907986,
+    "completionRate": 74.57627118644068,
+    "pendingWorks": -87,
+    "unspentAmount": 70241062,
+    "totalRecommendedAmount": 58876879,
+    "name_hi": "ANAND BHADAURIYA",
+    "constituency_hi": "DHAURAHRA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76758938,
+      "totalEntries": 360,
+      "avgExpenditure": 213219.27222222224,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 45417095,
+        "transactionCount": 325
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31341843,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76758938,
+        "transactionCount": 360,
+        "avgAmount": 213219.27222222224
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 132,
+    "recommendedCount": 45,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18a39",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Pasgawan ke Gram Panchayat Fariha Pipariya ke majara Jahan Nagar me Kalicharan ke makan se Santosh Yadav ke makan tak CC road with drainage work- 100 Mtr.",
+        "completedDate": "2026-04-25T00:00:00.000Z",
+        "finalAmount": 856564
+      },
+      {
+        "_id": "6a932bb5cd94452437a17891",
+        "workCategory": "Normal/Others",
+        "workDescription": "One Semi Hight Mast light (6 Lights 200 Watt)in Every village",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 166017
+      },
+      {
+        "_id": "6a932bb5cd94452437a1788d",
+        "workCategory": "Normal/Others",
+        "workDescription": "One Semi Hight Mast light (6 Lights 200 Watt)in Every village",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 166017
+      },
+      {
+        "_id": "6a932bb5cd94452437a17885",
+        "workCategory": "Normal/Others",
+        "workDescription": "One Semi Hight Mast light (6 Lights 200 Watt)in Every village",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 166017
+      },
+      {
+        "_id": "6a932bb5cd94452437a17884",
+        "workCategory": "Normal/Others",
+        "workDescription": "One Semi Hight Mast light (6 Lights 200 Watt)in Every village",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 166017
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.423Z"
+}

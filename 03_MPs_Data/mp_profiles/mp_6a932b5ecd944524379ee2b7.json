@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2b7",
+    "name": "Shri Vivek K. Tankha (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 116275421,
+    "utilizationPercentage": 52.717326313660095,
+    "completedWorksCount": 118,
+    "recommendedWorksCount": 388,
+    "completedWorksValue": 42868866,
+    "inProgressPayments": 73406555,
+    "paymentGapPercentage": 63.1316183323043,
+    "completionRate": 23.3201581027668,
+    "pendingWorks": 270,
+    "unspentAmount": 104288536.11000001,
+    "totalRecommendedAmount": 142097177,
+    "name_hi": "Shri Vivek K. Tankha (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 116275421,
+      "totalEntries": 632,
+      "avgExpenditure": 183980.09651898735,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 2250000,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 41246067,
+        "transactionCount": 230
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42670255,
+        "transactionCount": 196
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30109099,
+        "transactionCount": 195
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 116275421,
+        "transactionCount": 632,
+        "avgAmount": 183980.09651898735
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 118,
+    "recommendedCount": 388,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30def",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Raipur vikaskhand Chichli ke sarvjanik prangan main Pevar Block lagane hetu, Gadarwara, District Narsinghpur (mention in letter no. 3744 at column no.2)",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30653",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sadhna Sinha ke makan se Dinesh Yadav ke makan tak, Soni Colony main Nali nirman kary, Tripuri ward, Vidhan sabha Pashchim, District Jabalpur (mention in letter no.3264 at column no.8)",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 160000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3090a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mahobia ji ke makan se Shrivastava ji ke makan tak CC road nirman kary, Tripuri ward, Vidhan sabha Pashchim, District Jabalpur (mention in letter no.3264 at column no.6)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 213375
+      },
+      {
+        "_id": "6a932bb5cd94452437a30601",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tripathi ji ke makan se Saxena ji ke makan tak, CC Road nirman kary, Gulab Singh ward, Vidhan sabha Pashchim, District Jabalpur (mention in letter no.3264 at column no.10)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 235000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3065f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Verma ji ke makan se Ram coaching tak CC road nirman kary, Indira Gandhi ward, Vidhan sabha Pashchim, District Jabalpur (mention in letter no.3264 at column no.2)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 211000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.708Z"
+}

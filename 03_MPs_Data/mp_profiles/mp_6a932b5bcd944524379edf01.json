@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf01",
+    "name": "Praveen Khandelwal",
+    "constituency": "CHANDINI CHOWK",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147470276,
+    "totalExpenditure": 26487847,
+    "utilizationPercentage": 17.961481946368636,
+    "completedWorksCount": 35,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 18719869,
+    "inProgressPayments": 7767978,
+    "paymentGapPercentage": 29.326573805715505,
+    "completionRate": 50.72463768115942,
+    "pendingWorks": -1,
+    "unspentAmount": 120982429,
+    "totalRecommendedAmount": 45081082.63,
+    "name_hi": "Praveen Khandelwal",
+    "constituency_hi": "CHANDINI CHOWK",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26487847,
+      "totalEntries": 42,
+      "avgExpenditure": 630663.0238095238,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 26487847,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26487847,
+        "transactionCount": 42,
+        "avgAmount": 630663.0238095238
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 35,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e832",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of Open Gym at park Beri Wala Bagh B-3 block, Ashok Vihar ph-II ward no 65 Keshav Puram",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 639562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of Children play Equipments in Park A-1-161 Paschim Vihar - Ward No 58",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 177230
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of Children play Equipments in Park near 282 SFS Paschim Vihar",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 177230
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of children play equipment at park C2-89 Keshav puram Ward No 65",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 86967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4c3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of Children play equipment in Park Beri Wala bagh B-3 Block Ashok Vihar Phase -2 Ward No 65",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 425628
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.777Z"
+}

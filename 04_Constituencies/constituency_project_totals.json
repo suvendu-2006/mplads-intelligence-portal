@@ -1,0 +1,3522 @@
+{
+  "success": true,
+  "data": {
+    "constituencies": [
+      {
+        "constituency": "ADILABAD",
+        "state": "Telangana",
+        "projectCount": 735,
+        "totalAmount": 231332609
+      },
+      {
+        "constituency": "AGRA",
+        "state": "Uttar Pradesh",
+        "projectCount": 146,
+        "totalAmount": 195872433
+      },
+      {
+        "constituency": "AHMEDABAD EAST",
+        "state": "Gujarat",
+        "projectCount": 357,
+        "totalAmount": 180431414
+      },
+      {
+        "constituency": "AHMEDABAD WEST",
+        "state": "Gujarat",
+        "projectCount": 284,
+        "totalAmount": 146330751
+      },
+      {
+        "constituency": "AHMEDNAGAR",
+        "state": "Maharashtra",
+        "projectCount": 159,
+        "totalAmount": 171790089
+      },
+      {
+        "constituency": "AJMER",
+        "state": "Rajasthan",
+        "projectCount": 357,
+        "totalAmount": 191431440
+      },
+      {
+        "constituency": "AKBARPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 235,
+        "totalAmount": 181997700
+      },
+      {
+        "constituency": "AKOLA",
+        "state": "Maharashtra",
+        "projectCount": 203,
+        "totalAmount": 168480203
+      },
+      {
+        "constituency": "ALAPPUZHA",
+        "state": "Kerala",
+        "projectCount": 157,
+        "totalAmount": 162446204
+      },
+      {
+        "constituency": "ALATHUR",
+        "state": "Kerala",
+        "projectCount": 605,
+        "totalAmount": 228002955.24
+      },
+      {
+        "constituency": "ALIGARH",
+        "state": "Uttar Pradesh",
+        "projectCount": 143,
+        "totalAmount": 144861159
+      },
+      {
+        "constituency": "ALIPURDUARS",
+        "state": "West Bengal",
+        "projectCount": 208,
+        "totalAmount": 183907597.34
+      },
+      {
+        "constituency": "ALLAHABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 860,
+        "totalAmount": 173013781
+      },
+      {
+        "constituency": "ALMORA",
+        "state": "Uttarakhand",
+        "projectCount": 1374,
+        "totalAmount": 196612461.71
+      },
+      {
+        "constituency": "ALWAR",
+        "state": "Rajasthan",
+        "projectCount": 149,
+        "totalAmount": 145684184.97
+      },
+      {
+        "constituency": "AMALAPURAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 302,
+        "totalAmount": 210222372
+      },
+      {
+        "constituency": "AMBALA",
+        "state": "Haryana",
+        "projectCount": 157,
+        "totalAmount": 125795208
+      },
+      {
+        "constituency": "AMBEDKAR NAGAR",
+        "state": "Uttar Pradesh",
+        "projectCount": 351,
+        "totalAmount": 205050374
+      },
+      {
+        "constituency": "AMETHI",
+        "state": "Uttar Pradesh",
+        "projectCount": 124,
+        "totalAmount": 173706512
+      },
+      {
+        "constituency": "AMRAVATI",
+        "state": "Maharashtra",
+        "projectCount": 249,
+        "totalAmount": 220784087
+      },
+      {
+        "constituency": "AMRELI",
+        "state": "Gujarat",
+        "projectCount": 588,
+        "totalAmount": 184856693
+      },
+      {
+        "constituency": "AMRITSAR",
+        "state": "Punjab",
+        "projectCount": 412,
+        "totalAmount": 156643307.6
+      },
+      {
+        "constituency": "AMROHA",
+        "state": "Uttar Pradesh",
+        "projectCount": 432,
+        "totalAmount": 197569276
+      },
+      {
+        "constituency": "ANAKAPALLE",
+        "state": "Andhra Pradesh",
+        "projectCount": 164,
+        "totalAmount": 170913007
+      },
+      {
+        "constituency": "ANAND",
+        "state": "Gujarat",
+        "projectCount": 926,
+        "totalAmount": 188191879
+      },
+      {
+        "constituency": "ANANDPUR SAHIB",
+        "state": "Punjab",
+        "projectCount": 602,
+        "totalAmount": 196735734
+      },
+      {
+        "constituency": "ANANTAPUR",
+        "state": "Andhra Pradesh",
+        "projectCount": 359,
+        "totalAmount": 264906164
+      },
+      {
+        "constituency": "ANANTNAG",
+        "state": "Jammu And Kashmir",
+        "projectCount": 481,
+        "totalAmount": 212399120
+      },
+      {
+        "constituency": "ANDAMAN AND NICOBAR ISLANDS",
+        "state": "Andaman And Nicobar Islands",
+        "projectCount": 69,
+        "totalAmount": 160045561
+      },
+      {
+        "constituency": "AONLA",
+        "state": "Uttar Pradesh",
+        "projectCount": 202,
+        "totalAmount": 219716586.1
+      },
+      {
+        "constituency": "ARAKKONAM",
+        "state": "Tamil Nadu",
+        "projectCount": 251,
+        "totalAmount": 242280811
+      },
+      {
+        "constituency": "ARAKU",
+        "state": "Andhra Pradesh",
+        "projectCount": 322,
+        "totalAmount": 198711696
+      },
+      {
+        "constituency": "ARAMBAG",
+        "state": "West Bengal",
+        "projectCount": 365,
+        "totalAmount": 174809368.84
+      },
+      {
+        "constituency": "ARANI",
+        "state": "Tamil Nadu",
+        "projectCount": 420,
+        "totalAmount": 214505312
+      },
+      {
+        "constituency": "ARARIA",
+        "state": "Bihar",
+        "projectCount": 106,
+        "totalAmount": 230179034
+      },
+      {
+        "constituency": "ARRAH",
+        "state": "Bihar",
+        "projectCount": 317,
+        "totalAmount": 266553281
+      },
+      {
+        "constituency": "ARUNACHAL EAST",
+        "state": "Arunachal Pradesh",
+        "projectCount": 297,
+        "totalAmount": 231145508
+      },
+      {
+        "constituency": "ARUNACHAL WEST",
+        "state": "Arunachal Pradesh",
+        "projectCount": 335,
+        "totalAmount": 191476216
+      },
+      {
+        "constituency": "ASANSOL",
+        "state": "West Bengal",
+        "projectCount": 108,
+        "totalAmount": 152939401
+      },
+      {
+        "constituency": "ASKA",
+        "state": "Odisha",
+        "projectCount": 378,
+        "totalAmount": 120505182
+      },
+      {
+        "constituency": "ATTINGAL",
+        "state": "Kerala",
+        "projectCount": 745,
+        "totalAmount": 213066370
+      },
+      {
+        "constituency": "AURANGABAD",
+        "state": "Bihar",
+        "projectCount": 536,
+        "totalAmount": 248154345
+      },
+      {
+        "constituency": "AURANGABAD",
+        "state": "Maharashtra",
+        "projectCount": 181,
+        "totalAmount": 185914169
+      },
+      {
+        "constituency": "AZAMGARH",
+        "state": "Uttar Pradesh",
+        "projectCount": 148,
+        "totalAmount": 146935713
+      },
+      {
+        "constituency": "BADAUN",
+        "state": "Uttar Pradesh",
+        "projectCount": 226,
+        "totalAmount": 177723569.38
+      },
+      {
+        "constituency": "BAGALKOT",
+        "state": "Karnataka",
+        "projectCount": 383,
+        "totalAmount": 192035480
+      },
+      {
+        "constituency": "BAGHPAT",
+        "state": "Uttar Pradesh",
+        "projectCount": 206,
+        "totalAmount": 182657729
+      },
+      {
+        "constituency": "BAHARAMPUR",
+        "state": "West Bengal",
+        "projectCount": 350,
+        "totalAmount": 241469405
+      },
+      {
+        "constituency": "BAHRAICH",
+        "state": "Uttar Pradesh",
+        "projectCount": 174,
+        "totalAmount": 239409768
+      },
+      {
+        "constituency": "BALAGHAT",
+        "state": "Madhya Pradesh",
+        "projectCount": 470,
+        "totalAmount": 150174852
+      },
+      {
+        "constituency": "BALASORE",
+        "state": "Odisha",
+        "projectCount": 628,
+        "totalAmount": 134156688
+      },
+      {
+        "constituency": "BALLIA",
+        "state": "Uttar Pradesh",
+        "projectCount": 411,
+        "totalAmount": 216992193
+      },
+      {
+        "constituency": "BALURGHAT",
+        "state": "West Bengal",
+        "projectCount": 546,
+        "totalAmount": 155392320.8
+      },
+      {
+        "constituency": "BANASKANTHA",
+        "state": "Gujarat",
+        "projectCount": 321,
+        "totalAmount": 150543917
+      },
+      {
+        "constituency": "BANDA",
+        "state": "Uttar Pradesh",
+        "projectCount": 625,
+        "totalAmount": 199025651.66
+      },
+      {
+        "constituency": "BANGALORE CENTRAL",
+        "state": "Karnataka",
+        "projectCount": 75,
+        "totalAmount": 110995251
+      },
+      {
+        "constituency": "BANGALORE NORTH",
+        "state": "Karnataka",
+        "projectCount": 330,
+        "totalAmount": 210787888
+      },
+      {
+        "constituency": "BANGALORE RURAL",
+        "state": "Karnataka",
+        "projectCount": 315,
+        "totalAmount": 208060231
+      },
+      {
+        "constituency": "BANGALORE SOUTH",
+        "state": "Karnataka",
+        "projectCount": 235,
+        "totalAmount": 226400931
+      },
+      {
+        "constituency": "BANGAON",
+        "state": "West Bengal",
+        "projectCount": 99,
+        "totalAmount": 203202004.12
+      },
+      {
+        "constituency": "BANKA",
+        "state": "Bihar",
+        "projectCount": 205,
+        "totalAmount": 210261180
+      },
+      {
+        "constituency": "BANKURA",
+        "state": "West Bengal",
+        "projectCount": 359,
+        "totalAmount": 234381402
+      },
+      {
+        "constituency": "BANSGAON",
+        "state": "Uttar Pradesh",
+        "projectCount": 297,
+        "totalAmount": 176576004
+      },
+      {
+        "constituency": "BANSWARA",
+        "state": "Rajasthan",
+        "projectCount": 238,
+        "totalAmount": 193695862.2
+      },
+      {
+        "constituency": "BAPATLA",
+        "state": "Andhra Pradesh",
+        "projectCount": 246,
+        "totalAmount": 193170114
+      },
+      {
+        "constituency": "BARABANKI",
+        "state": "Uttar Pradesh",
+        "projectCount": 1373,
+        "totalAmount": 195816171.05
+      },
+      {
+        "constituency": "BARAMATI",
+        "state": "Maharashtra",
+        "projectCount": 238,
+        "totalAmount": 163427340
+      },
+      {
+        "constituency": "BARAMULLAH",
+        "state": "Jammu And Kashmir",
+        "projectCount": 371,
+        "totalAmount": 127807061.46
+      },
+      {
+        "constituency": "BARASAT",
+        "state": "West Bengal",
+        "projectCount": 256,
+        "totalAmount": 191229117
+      },
+      {
+        "constituency": "BARDHAMAN PURBA",
+        "state": "West Bengal",
+        "projectCount": 156,
+        "totalAmount": 184055680
+      },
+      {
+        "constituency": "BARDHAMAN-DURGAPUR",
+        "state": "West Bengal",
+        "projectCount": 307,
+        "totalAmount": 202247754
+      },
+      {
+        "constituency": "BARDOLI",
+        "state": "Gujarat",
+        "projectCount": 483,
+        "totalAmount": 150238482
+      },
+      {
+        "constituency": "BAREILLY",
+        "state": "Uttar Pradesh",
+        "projectCount": 261,
+        "totalAmount": 185546323
+      },
+      {
+        "constituency": "BARGARH",
+        "state": "Odisha",
+        "projectCount": 545,
+        "totalAmount": 186482728
+      },
+      {
+        "constituency": "BARMER",
+        "state": "Rajasthan",
+        "projectCount": 258,
+        "totalAmount": 172948397
+      },
+      {
+        "constituency": "BARPETA",
+        "state": "Assam",
+        "projectCount": 305,
+        "totalAmount": 185728000
+      },
+      {
+        "constituency": "BARRACKPUR",
+        "state": "West Bengal",
+        "projectCount": 85,
+        "totalAmount": 235219538
+      },
+      {
+        "constituency": "BASIRHAT",
+        "state": "West Bengal",
+        "projectCount": 62,
+        "totalAmount": 123561865
+      },
+      {
+        "constituency": "BASTAR",
+        "state": "Chhattisgarh",
+        "projectCount": 356,
+        "totalAmount": 178225767
+      },
+      {
+        "constituency": "BASTI",
+        "state": "Uttar Pradesh",
+        "projectCount": 190,
+        "totalAmount": 258558774
+      },
+      {
+        "constituency": "BEED",
+        "state": "Maharashtra",
+        "projectCount": 253,
+        "totalAmount": 214874540
+      },
+      {
+        "constituency": "BEGUSARAI",
+        "state": "Bihar",
+        "projectCount": 143,
+        "totalAmount": 182394812
+      },
+      {
+        "constituency": "BELGAUM",
+        "state": "Karnataka",
+        "projectCount": 355,
+        "totalAmount": 190989014
+      },
+      {
+        "constituency": "BELLARY",
+        "state": "Karnataka",
+        "projectCount": 103,
+        "totalAmount": 192442376
+      },
+      {
+        "constituency": "BERHAMPUR",
+        "state": "Odisha",
+        "projectCount": 336,
+        "totalAmount": 119696752
+      },
+      {
+        "constituency": "BETUL",
+        "state": "Madhya Pradesh",
+        "projectCount": 770,
+        "totalAmount": 205470587
+      },
+      {
+        "constituency": "BHADOHI",
+        "state": "Uttar Pradesh",
+        "projectCount": 604,
+        "totalAmount": 168368738
+      },
+      {
+        "constituency": "BHADRAK",
+        "state": "Odisha",
+        "projectCount": 446,
+        "totalAmount": 141849370
+      },
+      {
+        "constituency": "BHAGALPUR",
+        "state": "Bihar",
+        "projectCount": 166,
+        "totalAmount": 177173465
+      },
+      {
+        "constituency": "BHANDARA-GONDIYA",
+        "state": "Maharashtra",
+        "projectCount": 365,
+        "totalAmount": 247946522
+      },
+      {
+        "constituency": "BHARATPUR",
+        "state": "Rajasthan",
+        "projectCount": 453,
+        "totalAmount": 224625990.13
+      },
+      {
+        "constituency": "BHARUCH",
+        "state": "Gujarat",
+        "projectCount": 623,
+        "totalAmount": 181420548
+      },
+      {
+        "constituency": "BHATINDA",
+        "state": "Punjab",
+        "projectCount": 579,
+        "totalAmount": 209192157.8
+      },
+      {
+        "constituency": "BHAVNAGAR",
+        "state": "Gujarat",
+        "projectCount": 431,
+        "totalAmount": 153827945.9
+      },
+      {
+        "constituency": "BHILWARA",
+        "state": "Rajasthan",
+        "projectCount": 489,
+        "totalAmount": 199032248.5
+      },
+      {
+        "constituency": "BHIND",
+        "state": "Madhya Pradesh",
+        "projectCount": 347,
+        "totalAmount": 138011718
+      },
+      {
+        "constituency": "BHIWANDI",
+        "state": "Maharashtra",
+        "projectCount": 222,
+        "totalAmount": 217347868
+      },
+      {
+        "constituency": "BHIWANI MAHENDRAGARH",
+        "state": "Haryana",
+        "projectCount": 322,
+        "totalAmount": 142143213
+      },
+      {
+        "constituency": "BHONGIR",
+        "state": "Telangana",
+        "projectCount": 862,
+        "totalAmount": 174985079.1
+      },
+      {
+        "constituency": "BHOPAL",
+        "state": "Madhya Pradesh",
+        "projectCount": 303,
+        "totalAmount": 200272266
+      },
+      {
+        "constituency": "BHUBANESWAR",
+        "state": "Odisha",
+        "projectCount": 816,
+        "totalAmount": 170914083
+      },
+      {
+        "constituency": "BIDAR",
+        "state": "Karnataka",
+        "projectCount": 432,
+        "totalAmount": 167977670
+      },
+      {
+        "constituency": "BIJAPUR",
+        "state": "Karnataka",
+        "projectCount": 780,
+        "totalAmount": 253572986
+      },
+      {
+        "constituency": "BIJNOR",
+        "state": "Uttar Pradesh",
+        "projectCount": 284,
+        "totalAmount": 195001050.01
+      },
+      {
+        "constituency": "BIKANER",
+        "state": "Rajasthan",
+        "projectCount": 126,
+        "totalAmount": 120778198
+      },
+      {
+        "constituency": "BILASPUR",
+        "state": "Chhattisgarh",
+        "projectCount": 280,
+        "totalAmount": 169945333.23
+      },
+      {
+        "constituency": "BIRBHUM",
+        "state": "West Bengal",
+        "projectCount": 227,
+        "totalAmount": 141624675.34
+      },
+      {
+        "constituency": "BISHNUPUR",
+        "state": "West Bengal",
+        "projectCount": 180,
+        "totalAmount": 191495364
+      },
+      {
+        "constituency": "BOLANGIR",
+        "state": "Odisha",
+        "projectCount": 756,
+        "totalAmount": 196174349
+      },
+      {
+        "constituency": "BOLPUR",
+        "state": "West Bengal",
+        "projectCount": 261,
+        "totalAmount": 313731976
+      },
+      {
+        "constituency": "BULANDSHAHR",
+        "state": "Uttar Pradesh",
+        "projectCount": 634,
+        "totalAmount": 206680103.7
+      },
+      {
+        "constituency": "BULDHANA",
+        "state": "Maharashtra",
+        "projectCount": 243,
+        "totalAmount": 165689353
+      },
+      {
+        "constituency": "BUXAR",
+        "state": "Bihar",
+        "projectCount": 272,
+        "totalAmount": 240428361
+      },
+      {
+        "constituency": "CHALAKUDY",
+        "state": "Kerala",
+        "projectCount": 240,
+        "totalAmount": 207121009
+      },
+      {
+        "constituency": "CHAMARAJANAGAR",
+        "state": "Karnataka",
+        "projectCount": 234,
+        "totalAmount": 166183016
+      },
+      {
+        "constituency": "CHANDAULI",
+        "state": "Uttar Pradesh",
+        "projectCount": 303,
+        "totalAmount": 176944656.43
+      },
+      {
+        "constituency": "CHANDIGARH",
+        "state": "Chandigarh",
+        "projectCount": 140,
+        "totalAmount": 129182047.82
+      },
+      {
+        "constituency": "CHANDINI CHOWK",
+        "state": "Delhi",
+        "projectCount": 265,
+        "totalAmount": 166137223.63
+      },
+      {
+        "constituency": "CHANDRAPUR",
+        "state": "Maharashtra",
+        "projectCount": 92,
+        "totalAmount": 110743543
+      },
+      {
+        "constituency": "CHATRA",
+        "state": "Jharkhand",
+        "projectCount": 537,
+        "totalAmount": 151671791
+      },
+      {
+        "constituency": "CHELVELLA",
+        "state": "Telangana",
+        "projectCount": 727,
+        "totalAmount": 251243846
+      },
+      {
+        "constituency": "CHENNAI CENTRAL",
+        "state": "Tamil Nadu",
+        "projectCount": 22,
+        "totalAmount": 196408433
+      },
+      {
+        "constituency": "CHENNAI NORTH",
+        "state": "Tamil Nadu",
+        "projectCount": 132,
+        "totalAmount": 261792889
+      },
+      {
+        "constituency": "CHENNAI SOUTH",
+        "state": "Tamil Nadu",
+        "projectCount": 77,
+        "totalAmount": 248687362
+      },
+      {
+        "constituency": "CHHINDWARA",
+        "state": "Madhya Pradesh",
+        "projectCount": 1199,
+        "totalAmount": 171279516.14
+      },
+      {
+        "constituency": "CHHOTA UDAIPUR",
+        "state": "Gujarat",
+        "projectCount": 676,
+        "totalAmount": 174560079
+      },
+      {
+        "constituency": "CHIDAMBARAM",
+        "state": "Tamil Nadu",
+        "projectCount": 162,
+        "totalAmount": 160172261
+      },
+      {
+        "constituency": "CHIKBALLAPUR",
+        "state": "Karnataka",
+        "projectCount": 319,
+        "totalAmount": 177845481
+      },
+      {
+        "constituency": "CHIKKODI",
+        "state": "Karnataka",
+        "projectCount": 361,
+        "totalAmount": 188152239
+      },
+      {
+        "constituency": "CHITRADURGA",
+        "state": "Karnataka",
+        "projectCount": 351,
+        "totalAmount": 186555383
+      },
+      {
+        "constituency": "CHITTOOR",
+        "state": "Andhra Pradesh",
+        "projectCount": 389,
+        "totalAmount": 224774057
+      },
+      {
+        "constituency": "CHITTORGARH",
+        "state": "Rajasthan",
+        "projectCount": 418,
+        "totalAmount": 137915223
+      },
+      {
+        "constituency": "CHURU",
+        "state": "Rajasthan",
+        "projectCount": 405,
+        "totalAmount": 218932749
+      },
+      {
+        "constituency": "COIMBATORE",
+        "state": "Tamil Nadu",
+        "projectCount": 131,
+        "totalAmount": 188180444
+      },
+      {
+        "constituency": "COOCHBEHAR",
+        "state": "West Bengal",
+        "projectCount": 128,
+        "totalAmount": 155846958
+      },
+      {
+        "constituency": "CUDDALORE",
+        "state": "Tamil Nadu",
+        "projectCount": 238,
+        "totalAmount": 169688032
+      },
+      {
+        "constituency": "CUTTACK",
+        "state": "Odisha",
+        "projectCount": 747,
+        "totalAmount": 214605006
+      },
+      {
+        "constituency": "DADRA & NAGAR HAVELI",
+        "state": "The Dadra And Nagar Haveli And Daman And Diu",
+        "projectCount": 2,
+        "totalAmount": 14700000
+      },
+      {
+        "constituency": "DAHOD",
+        "state": "Gujarat",
+        "projectCount": 875,
+        "totalAmount": 204759680
+      },
+      {
+        "constituency": "DAKSHINA KANNADA",
+        "state": "Karnataka",
+        "projectCount": 311,
+        "totalAmount": 168222598
+      },
+      {
+        "constituency": "DAMAN and DIU",
+        "state": "The Dadra And Nagar Haveli And Daman And Diu",
+        "projectCount": 61,
+        "totalAmount": 241786200
+      },
+      {
+        "constituency": "DAMOH",
+        "state": "Madhya Pradesh",
+        "projectCount": 523,
+        "totalAmount": 158022083
+      },
+      {
+        "constituency": "DARBHANGA",
+        "state": "Bihar",
+        "projectCount": 452,
+        "totalAmount": 204241078
+      },
+      {
+        "constituency": "DARJEELING",
+        "state": "West Bengal",
+        "projectCount": 293,
+        "totalAmount": 180629672
+      },
+      {
+        "constituency": "Darrang-Udalguri",
+        "state": "Assam",
+        "projectCount": 502,
+        "totalAmount": 142949999.99
+      },
+      {
+        "constituency": "DAUSA",
+        "state": "Rajasthan",
+        "projectCount": 316,
+        "totalAmount": 164805935
+      },
+      {
+        "constituency": "DAVANAGERE",
+        "state": "Karnataka",
+        "projectCount": 172,
+        "totalAmount": 142384394
+      },
+      {
+        "constituency": "DEORIA",
+        "state": "Uttar Pradesh",
+        "projectCount": 230,
+        "totalAmount": 201176638
+      },
+      {
+        "constituency": "DEWAS",
+        "state": "Madhya Pradesh",
+        "projectCount": 307,
+        "totalAmount": 182874373
+      },
+      {
+        "constituency": "DHANBAD",
+        "state": "Jharkhand",
+        "projectCount": 641,
+        "totalAmount": 204300250
+      },
+      {
+        "constituency": "DHAR",
+        "state": "Madhya Pradesh",
+        "projectCount": 738,
+        "totalAmount": 194601521
+      },
+      {
+        "constituency": "DHARAMAPURI",
+        "state": "Tamil Nadu",
+        "projectCount": 504,
+        "totalAmount": 257900236
+      },
+      {
+        "constituency": "DHARWAD",
+        "state": "Karnataka",
+        "projectCount": 357,
+        "totalAmount": 185575312
+      },
+      {
+        "constituency": "DHAURAHRA",
+        "state": "Uttar Pradesh",
+        "projectCount": 209,
+        "totalAmount": 146227430.38
+      },
+      {
+        "constituency": "DHENKANAL",
+        "state": "Odisha",
+        "projectCount": 244,
+        "totalAmount": 122656651
+      },
+      {
+        "constituency": "DHUBRI",
+        "state": "Assam",
+        "projectCount": 270,
+        "totalAmount": 145650429
+      },
+      {
+        "constituency": "DHULE",
+        "state": "Maharashtra",
+        "projectCount": 192,
+        "totalAmount": 172639942
+      },
+      {
+        "constituency": "DIAMOND HARBOUR",
+        "state": "West Bengal",
+        "projectCount": 474,
+        "totalAmount": 166738634
+      },
+      {
+        "constituency": "DIBRUGARH",
+        "state": "Assam",
+        "projectCount": 219,
+        "totalAmount": 181589085.91
+      },
+      {
+        "constituency": "DINDIGUL",
+        "state": "Tamil Nadu",
+        "projectCount": 263,
+        "totalAmount": 244627244
+      },
+      {
+        "constituency": "DINDORI",
+        "state": "Maharashtra",
+        "projectCount": 284,
+        "totalAmount": 192496224
+      },
+      {
+        "constituency": "Diphu",
+        "state": "Assam",
+        "projectCount": 133,
+        "totalAmount": 195414620
+      },
+      {
+        "constituency": "DOMARIYAGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 168,
+        "totalAmount": 181468500
+      },
+      {
+        "constituency": "DUM DUM",
+        "state": "West Bengal",
+        "projectCount": 124,
+        "totalAmount": 129272450
+      },
+      {
+        "constituency": "DUMKA",
+        "state": "Jharkhand",
+        "projectCount": 785,
+        "totalAmount": 238863818
+      },
+      {
+        "constituency": "DURG",
+        "state": "Chhattisgarh",
+        "projectCount": 350,
+        "totalAmount": 188911719
+      },
+      {
+        "constituency": "EAST DELHI",
+        "state": "Delhi",
+        "projectCount": 137,
+        "totalAmount": 149150372
+      },
+      {
+        "constituency": "ELURU",
+        "state": "Andhra Pradesh",
+        "projectCount": 189,
+        "totalAmount": 191034157
+      },
+      {
+        "constituency": "ERNAKULAM",
+        "state": "Kerala",
+        "projectCount": 152,
+        "totalAmount": 219305909
+      },
+      {
+        "constituency": "ERODE",
+        "state": "Tamil Nadu",
+        "projectCount": 344,
+        "totalAmount": 226613753
+      },
+      {
+        "constituency": "ETAH",
+        "state": "Uttar Pradesh",
+        "projectCount": 433,
+        "totalAmount": 168026945
+      },
+      {
+        "constituency": "ETAWAH",
+        "state": "Uttar Pradesh",
+        "projectCount": 809,
+        "totalAmount": 244114060.45
+      },
+      {
+        "constituency": "FAIZABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 279,
+        "totalAmount": 209166503
+      },
+      {
+        "constituency": "FARIDABAD",
+        "state": "Haryana",
+        "projectCount": 240,
+        "totalAmount": 183891037
+      },
+      {
+        "constituency": "FARIDKOT",
+        "state": "Punjab",
+        "projectCount": 839,
+        "totalAmount": 212233222
+      },
+      {
+        "constituency": "FARRUKHABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 642,
+        "totalAmount": 208216129.01
+      },
+      {
+        "constituency": "FATEHGARH SAHIB",
+        "state": "Punjab",
+        "projectCount": 692,
+        "totalAmount": 180849569
+      },
+      {
+        "constituency": "FATEHPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 152,
+        "totalAmount": 159045364
+      },
+      {
+        "constituency": "FATEHPUR SIKRI",
+        "state": "Uttar Pradesh",
+        "projectCount": 96,
+        "totalAmount": 155489204
+      },
+      {
+        "constituency": "FIROZABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 76,
+        "totalAmount": 142688216.95
+      },
+      {
+        "constituency": "FIROZPUR",
+        "state": "Punjab",
+        "projectCount": 641,
+        "totalAmount": 168881847
+      },
+      {
+        "constituency": "GADCHIROLI-CHIMUR",
+        "state": "Maharashtra",
+        "projectCount": 257,
+        "totalAmount": 207405784
+      },
+      {
+        "constituency": "GANDHINAGAR",
+        "state": "Gujarat",
+        "projectCount": 260,
+        "totalAmount": 113886744
+      },
+      {
+        "constituency": "GANGANAGAR",
+        "state": "Rajasthan",
+        "projectCount": 197,
+        "totalAmount": 151442530.6
+      },
+      {
+        "constituency": "GARHWAL",
+        "state": "Uttarakhand",
+        "projectCount": 377,
+        "totalAmount": 108213145
+      },
+      {
+        "constituency": "GAUTAM BUDDHA NAGAR",
+        "state": "Uttar Pradesh",
+        "projectCount": 260,
+        "totalAmount": 219518756.28
+      },
+      {
+        "constituency": "GAYA",
+        "state": "Bihar",
+        "projectCount": 348,
+        "totalAmount": 164677755
+      },
+      {
+        "constituency": "GHATAL",
+        "state": "West Bengal",
+        "projectCount": 409,
+        "totalAmount": 282293354
+      },
+      {
+        "constituency": "GHAZIABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 109,
+        "totalAmount": 134793905
+      },
+      {
+        "constituency": "GHAZIPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 476,
+        "totalAmount": 207441264
+      },
+      {
+        "constituency": "GHOSI",
+        "state": "Uttar Pradesh",
+        "projectCount": 378,
+        "totalAmount": 180757294.86
+      },
+      {
+        "constituency": "GIRIDIH",
+        "state": "Jharkhand",
+        "projectCount": 1015,
+        "totalAmount": 213103387
+      },
+      {
+        "constituency": "GODDA",
+        "state": "Jharkhand",
+        "projectCount": 2,
+        "totalAmount": 4285510
+      },
+      {
+        "constituency": "GONDA",
+        "state": "Uttar Pradesh",
+        "projectCount": 290,
+        "totalAmount": 197569247
+      },
+      {
+        "constituency": "GOPALGANJ",
+        "state": "Bihar",
+        "projectCount": 259,
+        "totalAmount": 208223023
+      },
+      {
+        "constituency": "GORAKHPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 144,
+        "totalAmount": 93058614.72
+      },
+      {
+        "constituency": "GULBARGA",
+        "state": "Karnataka",
+        "projectCount": 244,
+        "totalAmount": 239631044
+      },
+      {
+        "constituency": "GUNA",
+        "state": "Madhya Pradesh",
+        "projectCount": 85,
+        "totalAmount": 188235113
+      },
+      {
+        "constituency": "GUNTUR",
+        "state": "Andhra Pradesh",
+        "projectCount": 241,
+        "totalAmount": 200141364
+      },
+      {
+        "constituency": "GURDASPUR",
+        "state": "Punjab",
+        "projectCount": 509,
+        "totalAmount": 211032049
+      },
+      {
+        "constituency": "GURGAON",
+        "state": "Haryana",
+        "projectCount": 171,
+        "totalAmount": 137687780
+      },
+      {
+        "constituency": "GUWAHATI",
+        "state": "Assam",
+        "projectCount": 175,
+        "totalAmount": 208549223
+      },
+      {
+        "constituency": "GWALIOR",
+        "state": "Madhya Pradesh",
+        "projectCount": 249,
+        "totalAmount": 158400159.47
+      },
+      {
+        "constituency": "HAJIPUR",
+        "state": "Bihar",
+        "projectCount": 191,
+        "totalAmount": 179617271
+      },
+      {
+        "constituency": "HAMIRPUR",
+        "state": "Himachal Pradesh",
+        "projectCount": 863,
+        "totalAmount": 128719867
+      },
+      {
+        "constituency": "HAMIRPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 342,
+        "totalAmount": 235958299
+      },
+      {
+        "constituency": "HARDOI",
+        "state": "Uttar Pradesh",
+        "projectCount": 53,
+        "totalAmount": 170278642
+      },
+      {
+        "constituency": "HARDWAR",
+        "state": "Uttarakhand",
+        "projectCount": 276,
+        "totalAmount": 138407855
+      },
+      {
+        "constituency": "HASSAN",
+        "state": "Karnataka",
+        "projectCount": 473,
+        "totalAmount": 193873004
+      },
+      {
+        "constituency": "HATHRAS",
+        "state": "Uttar Pradesh",
+        "projectCount": 151,
+        "totalAmount": 219876772
+      },
+      {
+        "constituency": "HATKANANGLE",
+        "state": "Maharashtra",
+        "projectCount": 177,
+        "totalAmount": 126520750.15
+      },
+      {
+        "constituency": "HAVERI",
+        "state": "Karnataka",
+        "projectCount": 361,
+        "totalAmount": 190018876
+      },
+      {
+        "constituency": "HAZARIBAGH",
+        "state": "Jharkhand",
+        "projectCount": 286,
+        "totalAmount": 153938605.31
+      },
+      {
+        "constituency": "HINDUPUR",
+        "state": "Andhra Pradesh",
+        "projectCount": 156,
+        "totalAmount": 141803190
+      },
+      {
+        "constituency": "HINGOLI",
+        "state": "Maharashtra",
+        "projectCount": 229,
+        "totalAmount": 225134155
+      },
+      {
+        "constituency": "HISAR",
+        "state": "Haryana",
+        "projectCount": 776,
+        "totalAmount": 235173496
+      },
+      {
+        "constituency": "HOOGHLY",
+        "state": "West Bengal",
+        "projectCount": 411,
+        "totalAmount": 196077635.43
+      },
+      {
+        "constituency": "HOSHANGABAD",
+        "state": "Madhya Pradesh",
+        "projectCount": 763,
+        "totalAmount": 121089149
+      },
+      {
+        "constituency": "HOSHIARPUR",
+        "state": "Punjab",
+        "projectCount": 726,
+        "totalAmount": 202954220
+      },
+      {
+        "constituency": "HOWRAH",
+        "state": "West Bengal",
+        "projectCount": 365,
+        "totalAmount": 182606939
+      },
+      {
+        "constituency": "HYDERABAD",
+        "state": "Telangana",
+        "projectCount": 87,
+        "totalAmount": 198511375
+      },
+      {
+        "constituency": "IDUKKI",
+        "state": "Kerala",
+        "projectCount": 344,
+        "totalAmount": 218468874
+      },
+      {
+        "constituency": "INDORE",
+        "state": "Madhya Pradesh",
+        "projectCount": 484,
+        "totalAmount": 187691905.92
+      },
+      {
+        "constituency": "INNER MANIPUR",
+        "state": "Manipur",
+        "projectCount": 87,
+        "totalAmount": 213153215
+      },
+      {
+        "constituency": "JABALPUR",
+        "state": "Madhya Pradesh",
+        "projectCount": 705,
+        "totalAmount": 162900771
+      },
+      {
+        "constituency": "JADAVPUR",
+        "state": "West Bengal",
+        "projectCount": 472,
+        "totalAmount": 153788692
+      },
+      {
+        "constituency": "JAGATSINGHPUR",
+        "state": "Odisha",
+        "projectCount": 666,
+        "totalAmount": 230974030
+      },
+      {
+        "constituency": "JAHANABAD",
+        "state": "Bihar",
+        "projectCount": 546,
+        "totalAmount": 212742652
+      },
+      {
+        "constituency": "JAIPUR",
+        "state": "Rajasthan",
+        "projectCount": 138,
+        "totalAmount": 181831650
+      },
+      {
+        "constituency": "JAIPUR RURAL",
+        "state": "Rajasthan",
+        "projectCount": 248,
+        "totalAmount": 164846773
+      },
+      {
+        "constituency": "JAJPUR",
+        "state": "Odisha",
+        "projectCount": 399,
+        "totalAmount": 159765646
+      },
+      {
+        "constituency": "JALANDHAR",
+        "state": "Punjab",
+        "projectCount": 317,
+        "totalAmount": 99924331
+      },
+      {
+        "constituency": "JALAUN",
+        "state": "Uttar Pradesh",
+        "projectCount": 454,
+        "totalAmount": 221067677.8
+      },
+      {
+        "constituency": "JALGAON",
+        "state": "Maharashtra",
+        "projectCount": 191,
+        "totalAmount": 111270063
+      },
+      {
+        "constituency": "JALNA",
+        "state": "Maharashtra",
+        "projectCount": 180,
+        "totalAmount": 175782690
+      },
+      {
+        "constituency": "JALORE",
+        "state": "Rajasthan",
+        "projectCount": 276,
+        "totalAmount": 148435133
+      },
+      {
+        "constituency": "JALPAIGURI",
+        "state": "West Bengal",
+        "projectCount": 68,
+        "totalAmount": 92522582
+      },
+      {
+        "constituency": "JAMMU",
+        "state": "Jammu And Kashmir",
+        "projectCount": 325,
+        "totalAmount": 165282034
+      },
+      {
+        "constituency": "JAMNAGAR",
+        "state": "Gujarat",
+        "projectCount": 431,
+        "totalAmount": 165704526.52
+      },
+      {
+        "constituency": "JAMSHEDPUR",
+        "state": "Jharkhand",
+        "projectCount": 305,
+        "totalAmount": 171797295
+      },
+      {
+        "constituency": "JAMUI",
+        "state": "Bihar",
+        "projectCount": 561,
+        "totalAmount": 206777773
+      },
+      {
+        "constituency": "JANGIPUR",
+        "state": "West Bengal",
+        "projectCount": 412,
+        "totalAmount": 269038493.75
+      },
+      {
+        "constituency": "JANJGIR CHAMPA",
+        "state": "Chhattisgarh",
+        "projectCount": 492,
+        "totalAmount": 163099840
+      },
+      {
+        "constituency": "JAUNPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 907,
+        "totalAmount": 192403319.64
+      },
+      {
+        "constituency": "JHALAWAR-BARAN",
+        "state": "Rajasthan",
+        "projectCount": 338,
+        "totalAmount": 145801432.7
+      },
+      {
+        "constituency": "JHANJHARPUR",
+        "state": "Bihar",
+        "projectCount": 242,
+        "totalAmount": 198210816
+      },
+      {
+        "constituency": "JHANSI",
+        "state": "Uttar Pradesh",
+        "projectCount": 306,
+        "totalAmount": 188881144
+      },
+      {
+        "constituency": "JHARGRAM",
+        "state": "West Bengal",
+        "projectCount": 95,
+        "totalAmount": 189099765.26
+      },
+      {
+        "constituency": "JHUNJHUNU",
+        "state": "Rajasthan",
+        "projectCount": 272,
+        "totalAmount": 134764680.83
+      },
+      {
+        "constituency": "JODHPUR",
+        "state": "Rajasthan",
+        "projectCount": 256,
+        "totalAmount": 162490844.07
+      },
+      {
+        "constituency": "JORHAT",
+        "state": "Assam",
+        "projectCount": 650,
+        "totalAmount": 199816094.14
+      },
+      {
+        "constituency": "JOYNAGAR",
+        "state": "West Bengal",
+        "projectCount": 369,
+        "totalAmount": 169694900
+      },
+      {
+        "constituency": "JUNAGADH",
+        "state": "Gujarat",
+        "projectCount": 470,
+        "totalAmount": 157479153
+      },
+      {
+        "constituency": "KACHCHH",
+        "state": "Gujarat",
+        "projectCount": 545,
+        "totalAmount": 209385615
+      },
+      {
+        "constituency": "KADAPA",
+        "state": "Andhra Pradesh",
+        "projectCount": 434,
+        "totalAmount": 215678974
+      },
+      {
+        "constituency": "KAIRANA",
+        "state": "Uttar Pradesh",
+        "projectCount": 147,
+        "totalAmount": 144548156
+      },
+      {
+        "constituency": "KAISERGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 158,
+        "totalAmount": 215273927
+      },
+      {
+        "constituency": "KAKINADA",
+        "state": "Andhra Pradesh",
+        "projectCount": 151,
+        "totalAmount": 109324271.35
+      },
+      {
+        "constituency": "KALAHANDI",
+        "state": "Odisha",
+        "projectCount": 659,
+        "totalAmount": 198147791
+      },
+      {
+        "constituency": "KALLAKURICHI",
+        "state": "Tamil Nadu",
+        "projectCount": 490,
+        "totalAmount": 270613726
+      },
+      {
+        "constituency": "KALYAN",
+        "state": "Maharashtra",
+        "projectCount": 36,
+        "totalAmount": 73917339
+      },
+      {
+        "constituency": "KANCHEEPURAM",
+        "state": "Tamil Nadu",
+        "projectCount": 668,
+        "totalAmount": 240672368.34
+      },
+      {
+        "constituency": "KANDHAMAL",
+        "state": "Odisha",
+        "projectCount": 442,
+        "totalAmount": 134714302
+      },
+      {
+        "constituency": "KANGRA",
+        "state": "Himachal Pradesh",
+        "projectCount": 973,
+        "totalAmount": 243431366
+      },
+      {
+        "constituency": "KANKER",
+        "state": "Chhattisgarh",
+        "projectCount": 226,
+        "totalAmount": 126125163
+      },
+      {
+        "constituency": "KANNAUJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 358,
+        "totalAmount": 203409454.14
+      },
+      {
+        "constituency": "KANNIYAKUMARI",
+        "state": "Tamil Nadu",
+        "projectCount": 183,
+        "totalAmount": 215139577
+      },
+      {
+        "constituency": "KANNUR",
+        "state": "Kerala",
+        "projectCount": 432,
+        "totalAmount": 184906666
+      },
+      {
+        "constituency": "KANPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 137,
+        "totalAmount": 140998224
+      },
+      {
+        "constituency": "KANTHI",
+        "state": "West Bengal",
+        "projectCount": 155,
+        "totalAmount": 191792475
+      },
+      {
+        "constituency": "KARAKAT",
+        "state": "Bihar",
+        "projectCount": 432,
+        "totalAmount": 216417733
+      },
+      {
+        "constituency": "KARAULI-DHOLPUR",
+        "state": "Rajasthan",
+        "projectCount": 458,
+        "totalAmount": 178413125
+      },
+      {
+        "constituency": "KARIMGANJ",
+        "state": "Assam",
+        "projectCount": 144,
+        "totalAmount": 216311213
+      },
+      {
+        "constituency": "KARIMNAGAR",
+        "state": "Telangana",
+        "projectCount": 1170,
+        "totalAmount": 313384726
+      },
+      {
+        "constituency": "KARNAL",
+        "state": "Haryana",
+        "projectCount": 160,
+        "totalAmount": 140834300
+      },
+      {
+        "constituency": "KARUR",
+        "state": "Tamil Nadu",
+        "projectCount": 354,
+        "totalAmount": 213146129
+      },
+      {
+        "constituency": "KASARAGOD",
+        "state": "Kerala",
+        "projectCount": 493,
+        "totalAmount": 186616124
+      },
+      {
+        "constituency": "KATIHAR",
+        "state": "Bihar",
+        "projectCount": 145,
+        "totalAmount": 131398221
+      },
+      {
+        "constituency": "KAUSHAMBI",
+        "state": "Uttar Pradesh",
+        "projectCount": 845,
+        "totalAmount": 120360655
+      },
+      {
+        "constituency": "Kaziranga",
+        "state": "Assam",
+        "projectCount": 301,
+        "totalAmount": 137315522
+      },
+      {
+        "constituency": "KENDRAPARA",
+        "state": "Odisha",
+        "projectCount": 214,
+        "totalAmount": 183988251
+      },
+      {
+        "constituency": "KEONJHAR",
+        "state": "Odisha",
+        "projectCount": 586,
+        "totalAmount": 234050848
+      },
+      {
+        "constituency": "KHADOOR SAHIB",
+        "state": "Punjab",
+        "projectCount": 149,
+        "totalAmount": 68691240.2
+      },
+      {
+        "constituency": "KHAGARIA",
+        "state": "Bihar",
+        "projectCount": 237,
+        "totalAmount": 129410061
+      },
+      {
+        "constituency": "KHAJURAHO",
+        "state": "Madhya Pradesh",
+        "projectCount": 272,
+        "totalAmount": 209566997.99
+      },
+      {
+        "constituency": "KHAMMAM",
+        "state": "Telangana",
+        "projectCount": 454,
+        "totalAmount": 182498175
+      },
+      {
+        "constituency": "KHANDWA",
+        "state": "Madhya Pradesh",
+        "projectCount": 556,
+        "totalAmount": 194581176
+      },
+      {
+        "constituency": "KHARGONE",
+        "state": "Madhya Pradesh",
+        "projectCount": 638,
+        "totalAmount": 211818946
+      },
+      {
+        "constituency": "KHEDA",
+        "state": "Gujarat",
+        "projectCount": 1013,
+        "totalAmount": 212038872
+      },
+      {
+        "constituency": "KHERI",
+        "state": "Uttar Pradesh",
+        "projectCount": 411,
+        "totalAmount": 144380293.14
+      },
+      {
+        "constituency": "KHUNTI",
+        "state": "Jharkhand",
+        "projectCount": 455,
+        "totalAmount": 188213550
+      },
+      {
+        "constituency": "KISHANGANJ",
+        "state": "Bihar",
+        "projectCount": 328,
+        "totalAmount": 230490428
+      },
+      {
+        "constituency": "KODARMA",
+        "state": "Jharkhand",
+        "projectCount": 669,
+        "totalAmount": 199779885
+      },
+      {
+        "constituency": "KOKRAJHAR",
+        "state": "Assam",
+        "projectCount": 197,
+        "totalAmount": 212948516
+      },
+      {
+        "constituency": "KOLAR",
+        "state": "Karnataka",
+        "projectCount": 286,
+        "totalAmount": 147142897.79
+      },
+      {
+        "constituency": "KOLHAPUR",
+        "state": "Maharashtra",
+        "projectCount": 206,
+        "totalAmount": 195115374
+      },
+      {
+        "constituency": "KOLKATA DAKSHIN",
+        "state": "West Bengal",
+        "projectCount": 132,
+        "totalAmount": 165043915
+      },
+      {
+        "constituency": "KOLKATA UTTAR",
+        "state": "West Bengal",
+        "projectCount": 95,
+        "totalAmount": 164185280
+      },
+      {
+        "constituency": "KOLLAM",
+        "state": "Kerala",
+        "projectCount": 256,
+        "totalAmount": 176255420.34
+      },
+      {
+        "constituency": "KOPPAL",
+        "state": "Karnataka",
+        "projectCount": 494,
+        "totalAmount": 203119209
+      },
+      {
+        "constituency": "KORAPUT",
+        "state": "Odisha",
+        "projectCount": 801,
+        "totalAmount": 257552839
+      },
+      {
+        "constituency": "KORBA",
+        "state": "Chhattisgarh",
+        "projectCount": 420,
+        "totalAmount": 162638091
+      },
+      {
+        "constituency": "KOTA",
+        "state": "Rajasthan",
+        "projectCount": 378,
+        "totalAmount": 207188595.51
+      },
+      {
+        "constituency": "KOTTAYAM",
+        "state": "Kerala",
+        "projectCount": 547,
+        "totalAmount": 264584942
+      },
+      {
+        "constituency": "KOZHIKODE",
+        "state": "Kerala",
+        "projectCount": 490,
+        "totalAmount": 170857681
+      },
+      {
+        "constituency": "KRISHNAGIRI",
+        "state": "Tamil Nadu",
+        "projectCount": 227,
+        "totalAmount": 195064811
+      },
+      {
+        "constituency": "KRISHNANAGAR",
+        "state": "West Bengal",
+        "projectCount": 82,
+        "totalAmount": 162779914
+      },
+      {
+        "constituency": "KURNOOL",
+        "state": "Andhra Pradesh",
+        "projectCount": 573,
+        "totalAmount": 187321008
+      },
+      {
+        "constituency": "KURUKSHETRA",
+        "state": "Haryana",
+        "projectCount": 324,
+        "totalAmount": 148051662.42
+      },
+      {
+        "constituency": "KUSHI NAGAR",
+        "state": "Uttar Pradesh",
+        "projectCount": 382,
+        "totalAmount": 174352733
+      },
+      {
+        "constituency": "LADAKH",
+        "state": "Ladakh",
+        "projectCount": 225,
+        "totalAmount": 146257376
+      },
+      {
+        "constituency": "LAKHIMPUR",
+        "state": "Assam",
+        "projectCount": 265,
+        "totalAmount": 131274458.34
+      },
+      {
+        "constituency": "LAKSHADWEEP",
+        "state": "Lakshadweep",
+        "projectCount": 73,
+        "totalAmount": 290653583
+      },
+      {
+        "constituency": "LALGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 430,
+        "totalAmount": 146579751
+      },
+      {
+        "constituency": "LATUR",
+        "state": "Maharashtra",
+        "projectCount": 222,
+        "totalAmount": 161145062
+      },
+      {
+        "constituency": "LOHARDAGA",
+        "state": "Jharkhand",
+        "projectCount": 335,
+        "totalAmount": 207605523
+      },
+      {
+        "constituency": "LUCKNOW",
+        "state": "Uttar Pradesh",
+        "projectCount": 144,
+        "totalAmount": 146975276
+      },
+      {
+        "constituency": "LUDHIANA",
+        "state": "Punjab",
+        "projectCount": 565,
+        "totalAmount": 185187762
+      },
+      {
+        "constituency": "MACHHLISHAHR",
+        "state": "Uttar Pradesh",
+        "projectCount": 2147,
+        "totalAmount": 186491318.24
+      },
+      {
+        "constituency": "MACHILIPATNAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 155,
+        "totalAmount": 117529700
+      },
+      {
+        "constituency": "MADHA",
+        "state": "Maharashtra",
+        "projectCount": 739,
+        "totalAmount": 174479482
+      },
+      {
+        "constituency": "MADHEPURA",
+        "state": "Bihar",
+        "projectCount": 284,
+        "totalAmount": 244149195
+      },
+      {
+        "constituency": "MADHUBANI",
+        "state": "Bihar",
+        "projectCount": 273,
+        "totalAmount": 178297619
+      },
+      {
+        "constituency": "MADURAI",
+        "state": "Tamil Nadu",
+        "projectCount": 294,
+        "totalAmount": 200022661
+      },
+      {
+        "constituency": "MAHABUBABAD",
+        "state": "Telangana",
+        "projectCount": 558,
+        "totalAmount": 195250166
+      },
+      {
+        "constituency": "MAHABUBNAGAR",
+        "state": "Telangana",
+        "projectCount": 629,
+        "totalAmount": 250204951
+      },
+      {
+        "constituency": "MAHARAJGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 118,
+        "totalAmount": 203772002
+      },
+      {
+        "constituency": "MAHARAJGANJ",
+        "state": "Bihar",
+        "projectCount": 176,
+        "totalAmount": 195292676
+      },
+      {
+        "constituency": "MAHASAMUND",
+        "state": "Chhattisgarh",
+        "projectCount": 270,
+        "totalAmount": 165325561
+      },
+      {
+        "constituency": "MAHESANA",
+        "state": "Gujarat",
+        "projectCount": 1051,
+        "totalAmount": 204067046.6
+      },
+      {
+        "constituency": "MAINPURI",
+        "state": "Uttar Pradesh",
+        "projectCount": 219,
+        "totalAmount": 168564951
+      },
+      {
+        "constituency": "MALAPPURAM",
+        "state": "Kerala",
+        "projectCount": 370,
+        "totalAmount": 181120291
+      },
+      {
+        "constituency": "MALDAHA DAKSHIN",
+        "state": "West Bengal",
+        "projectCount": 438,
+        "totalAmount": 184434753
+      },
+      {
+        "constituency": "MALDAHA UTTAR",
+        "state": "West Bengal",
+        "projectCount": 308,
+        "totalAmount": 108601088.3
+      },
+      {
+        "constituency": "MALKAJGIRI",
+        "state": "Telangana",
+        "projectCount": 338,
+        "totalAmount": 265707278
+      },
+      {
+        "constituency": "MANDI",
+        "state": "Himachal Pradesh",
+        "projectCount": 730,
+        "totalAmount": 166963906
+      },
+      {
+        "constituency": "MANDLA",
+        "state": "Madhya Pradesh",
+        "projectCount": 509,
+        "totalAmount": 165413804
+      },
+      {
+        "constituency": "MANDSOUR",
+        "state": "Madhya Pradesh",
+        "projectCount": 963,
+        "totalAmount": 142713434
+      },
+      {
+        "constituency": "MANDYA",
+        "state": "Karnataka",
+        "projectCount": 290,
+        "totalAmount": 168759361
+      },
+      {
+        "constituency": "MATHURA",
+        "state": "Uttar Pradesh",
+        "projectCount": 198,
+        "totalAmount": 167190405
+      },
+      {
+        "constituency": "MATHURAPUR",
+        "state": "West Bengal",
+        "projectCount": 288,
+        "totalAmount": 149317032
+      },
+      {
+        "constituency": "MAVAL",
+        "state": "Maharashtra",
+        "projectCount": 217,
+        "totalAmount": 199048177
+      },
+      {
+        "constituency": "MAVELIKKARA",
+        "state": "Kerala",
+        "projectCount": 286,
+        "totalAmount": 205048082
+      },
+      {
+        "constituency": "MAYILADUTHURAI",
+        "state": "Tamil Nadu",
+        "projectCount": 275,
+        "totalAmount": 213610212
+      },
+      {
+        "constituency": "MAYURBHANJ",
+        "state": "Odisha",
+        "projectCount": 424,
+        "totalAmount": 205478980
+      },
+      {
+        "constituency": "MEDAK",
+        "state": "Telangana",
+        "projectCount": 371,
+        "totalAmount": 204335614
+      },
+      {
+        "constituency": "MEDINIPUR",
+        "state": "West Bengal",
+        "projectCount": 207,
+        "totalAmount": 185828227
+      },
+      {
+        "constituency": "MEERUT",
+        "state": "Uttar Pradesh",
+        "projectCount": 319,
+        "totalAmount": 179006765
+      },
+      {
+        "constituency": "MIRZAPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 30,
+        "totalAmount": 166432665.54
+      },
+      {
+        "constituency": "MISRIKH",
+        "state": "Uttar Pradesh",
+        "projectCount": 19,
+        "totalAmount": 220094625
+      },
+      {
+        "constituency": "MIZORAM",
+        "state": "Mizoram",
+        "projectCount": 337,
+        "totalAmount": 196894229
+      },
+      {
+        "constituency": "MOHANLALGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 142,
+        "totalAmount": 122232189.84
+      },
+      {
+        "constituency": "MORADABAD",
+        "state": "Uttar Pradesh",
+        "projectCount": 464,
+        "totalAmount": 113817342.84
+      },
+      {
+        "constituency": "MORENA",
+        "state": "Madhya Pradesh",
+        "projectCount": 259,
+        "totalAmount": 143731760.81
+      },
+      {
+        "constituency": "MUMBAI NORTH",
+        "state": "Maharashtra",
+        "projectCount": 83,
+        "totalAmount": 168070000
+      },
+      {
+        "constituency": "MUMBAI NORTH EAST",
+        "state": "Maharashtra",
+        "projectCount": 78,
+        "totalAmount": 184760162
+      },
+      {
+        "constituency": "MUMBAI NORTH WEST",
+        "state": "Maharashtra",
+        "projectCount": 85,
+        "totalAmount": 203000000
+      },
+      {
+        "constituency": "MUMBAI NORTH-CENTRAL",
+        "state": "Maharashtra",
+        "projectCount": 105,
+        "totalAmount": 169423238
+      },
+      {
+        "constituency": "MUMBAI SOUTH",
+        "state": "Maharashtra",
+        "projectCount": 106,
+        "totalAmount": 193802097
+      },
+      {
+        "constituency": "MUMBAI SOUTH CENTRAL",
+        "state": "Maharashtra",
+        "projectCount": 63,
+        "totalAmount": 174641833
+      },
+      {
+        "constituency": "MUNGER",
+        "state": "Bihar",
+        "projectCount": 343,
+        "totalAmount": 131099262
+      },
+      {
+        "constituency": "MURSHIDABAD",
+        "state": "West Bengal",
+        "projectCount": 539,
+        "totalAmount": 307340497
+      },
+      {
+        "constituency": "MUZAFFARNAGAR",
+        "state": "Uttar Pradesh",
+        "projectCount": 281,
+        "totalAmount": 154027519
+      },
+      {
+        "constituency": "MUZAFFARPUR",
+        "state": "Bihar",
+        "projectCount": 193,
+        "totalAmount": 176292561
+      },
+      {
+        "constituency": "MYSORE",
+        "state": "Karnataka",
+        "projectCount": 294,
+        "totalAmount": 162575000
+      },
+      {
+        "constituency": "NABARANGPUR",
+        "state": "Odisha",
+        "projectCount": 504,
+        "totalAmount": 169742179
+      },
+      {
+        "constituency": "NAGALAND",
+        "state": "Nagaland",
+        "projectCount": 71,
+        "totalAmount": 196000000
+      },
+      {
+        "constituency": "NAGAPATTINAM",
+        "state": "Tamil Nadu",
+        "projectCount": 163,
+        "totalAmount": 164490094
+      },
+      {
+        "constituency": "NAGARKURNOOL",
+        "state": "Telangana",
+        "projectCount": 420,
+        "totalAmount": 170985090
+      },
+      {
+        "constituency": "NAGAUR",
+        "state": "Rajasthan",
+        "projectCount": 432,
+        "totalAmount": 191022535
+      },
+      {
+        "constituency": "NAGINA",
+        "state": "Uttar Pradesh",
+        "projectCount": 751,
+        "totalAmount": 170489060
+      },
+      {
+        "constituency": "NAGPUR",
+        "state": "Maharashtra",
+        "projectCount": 107,
+        "totalAmount": 199498434
+      },
+      {
+        "constituency": "NAINITAL UDHAM SINGH NAG.",
+        "state": "Uttarakhand",
+        "projectCount": 785,
+        "totalAmount": 210931855.92
+      },
+      {
+        "constituency": "NALANDA",
+        "state": "Bihar",
+        "projectCount": 454,
+        "totalAmount": 159972226
+      },
+      {
+        "constituency": "NALGONDA",
+        "state": "Telangana",
+        "projectCount": 316,
+        "totalAmount": 132991530
+      },
+      {
+        "constituency": "NAMAKKAL",
+        "state": "Tamil Nadu",
+        "projectCount": 308,
+        "totalAmount": 229361087
+      },
+      {
+        "constituency": "NANDED",
+        "state": "Maharashtra",
+        "projectCount": 290,
+        "totalAmount": 210728883.28
+      },
+      {
+        "constituency": "NANDURBAR",
+        "state": "Maharashtra",
+        "projectCount": 334,
+        "totalAmount": 185033415
+      },
+      {
+        "constituency": "NANDYAL",
+        "state": "Andhra Pradesh",
+        "projectCount": 336,
+        "totalAmount": 172297157.87
+      },
+      {
+        "constituency": "NARASAPURAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 105,
+        "totalAmount": 91527978
+      },
+      {
+        "constituency": "NARASARAOPET",
+        "state": "Andhra Pradesh",
+        "projectCount": 241,
+        "totalAmount": 152118867
+      },
+      {
+        "constituency": "NASHIK",
+        "state": "Maharashtra",
+        "projectCount": 229,
+        "totalAmount": 199519343
+      },
+      {
+        "constituency": "NAVSARI",
+        "state": "Gujarat",
+        "projectCount": 568,
+        "totalAmount": 195959705
+      },
+      {
+        "constituency": "NAWADA",
+        "state": "Bihar",
+        "projectCount": 424,
+        "totalAmount": 202987404
+      },
+      {
+        "constituency": "NELLORE",
+        "state": "Andhra Pradesh",
+        "projectCount": 248,
+        "totalAmount": 191255735
+      },
+      {
+        "constituency": "NEW DELHI",
+        "state": "Delhi",
+        "projectCount": 140,
+        "totalAmount": 167713472
+      },
+      {
+        "constituency": "NILGIRIS",
+        "state": "Tamil Nadu",
+        "projectCount": 238,
+        "totalAmount": 188277826
+      },
+      {
+        "constituency": "NIZAMABAD",
+        "state": "Telangana",
+        "projectCount": 916,
+        "totalAmount": 265293027
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Andhra Pradesh",
+        "projectCount": 195,
+        "totalAmount": 168209842
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Jammu And Kashmir",
+        "projectCount": 185,
+        "totalAmount": 146988063.89
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Tamil Nadu",
+        "projectCount": 27,
+        "totalAmount": 51548688
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Karnataka",
+        "projectCount": 484,
+        "totalAmount": 275291430
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Kerala",
+        "projectCount": 156,
+        "totalAmount": 161132739
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Chandigarh",
+        "projectCount": 24,
+        "totalAmount": 21179021
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "Delhi",
+        "projectCount": 10,
+        "totalAmount": 20904625
+      },
+      {
+        "constituency": "Nominated Rajya Sabha",
+        "state": "West Bengal",
+        "projectCount": 6,
+        "totalAmount": 9510271
+      },
+      {
+        "constituency": "NORTH EAST DELHI",
+        "state": "Delhi",
+        "projectCount": 64,
+        "totalAmount": 170364248
+      },
+      {
+        "constituency": "NORTH GOA",
+        "state": "Goa",
+        "projectCount": 161,
+        "totalAmount": 248533365.61
+      },
+      {
+        "constituency": "NORTH WEST DELHI",
+        "state": "Delhi",
+        "projectCount": 154,
+        "totalAmount": 143222239
+      },
+      {
+        "constituency": "NOWGONG",
+        "state": "Assam",
+        "projectCount": 353,
+        "totalAmount": 144284815
+      },
+      {
+        "constituency": "ONGOLE",
+        "state": "Andhra Pradesh",
+        "projectCount": 366,
+        "totalAmount": 204568254
+      },
+      {
+        "constituency": "OSMANABAD",
+        "state": "Maharashtra",
+        "projectCount": 445,
+        "totalAmount": 273021155
+      },
+      {
+        "constituency": "OUTER MANIPUR",
+        "state": "Manipur",
+        "projectCount": 110,
+        "totalAmount": 178631963
+      },
+      {
+        "constituency": "PALAKKAD",
+        "state": "Kerala",
+        "projectCount": 356,
+        "totalAmount": 175774309
+      },
+      {
+        "constituency": "PALAMU",
+        "state": "Jharkhand",
+        "projectCount": 467,
+        "totalAmount": 178465915
+      },
+      {
+        "constituency": "PALGHAR",
+        "state": "Maharashtra",
+        "projectCount": 175,
+        "totalAmount": 177418588
+      },
+      {
+        "constituency": "PALI",
+        "state": "Rajasthan",
+        "projectCount": 222,
+        "totalAmount": 123809591.5
+      },
+      {
+        "constituency": "PANCHMAHAL",
+        "state": "Gujarat",
+        "projectCount": 934,
+        "totalAmount": 187553576
+      },
+      {
+        "constituency": "PARBHANI",
+        "state": "Maharashtra",
+        "projectCount": 220,
+        "totalAmount": 177967824
+      },
+      {
+        "constituency": "PASCHIM CHAMPARAN",
+        "state": "Bihar",
+        "projectCount": 239,
+        "totalAmount": 111283766
+      },
+      {
+        "constituency": "PATALIPUTRA",
+        "state": "Bihar",
+        "projectCount": 324,
+        "totalAmount": 102159737
+      },
+      {
+        "constituency": "PATAN",
+        "state": "Gujarat",
+        "projectCount": 545,
+        "totalAmount": 186146147.25
+      },
+      {
+        "constituency": "PATHANAMTHITTA",
+        "state": "Kerala",
+        "projectCount": 522,
+        "totalAmount": 229536072.01
+      },
+      {
+        "constituency": "PATIALA",
+        "state": "Punjab",
+        "projectCount": 552,
+        "totalAmount": 188070760.22
+      },
+      {
+        "constituency": "PATNA SAHIB",
+        "state": "Bihar",
+        "projectCount": 286,
+        "totalAmount": 172606179
+      },
+      {
+        "constituency": "PEDDAPALLE",
+        "state": "Telangana",
+        "projectCount": 420,
+        "totalAmount": 153519474
+      },
+      {
+        "constituency": "PERAMBALUR",
+        "state": "Tamil Nadu",
+        "projectCount": 129,
+        "totalAmount": 197073583
+      },
+      {
+        "constituency": "PHULPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 468,
+        "totalAmount": 195374602.52
+      },
+      {
+        "constituency": "PILIBHIT",
+        "state": "Uttar Pradesh",
+        "projectCount": 201,
+        "totalAmount": 154262897.89
+      },
+      {
+        "constituency": "POLLACHI",
+        "state": "Tamil Nadu",
+        "projectCount": 223,
+        "totalAmount": 189446387
+      },
+      {
+        "constituency": "PONNANI",
+        "state": "Kerala",
+        "projectCount": 445,
+        "totalAmount": 237055957
+      },
+      {
+        "constituency": "PORBANDAR",
+        "state": "Gujarat",
+        "projectCount": 489,
+        "totalAmount": 198549404
+      },
+      {
+        "constituency": "PRATAPGARH",
+        "state": "Uttar Pradesh",
+        "projectCount": 874,
+        "totalAmount": 194843062.6
+      },
+      {
+        "constituency": "Puducherry",
+        "state": "Puducherry",
+        "projectCount": 140,
+        "totalAmount": 217833839
+      },
+      {
+        "constituency": "PUNE",
+        "state": "Maharashtra",
+        "projectCount": 133,
+        "totalAmount": 173412600.3
+      },
+      {
+        "constituency": "PURI",
+        "state": "Odisha",
+        "projectCount": 1031,
+        "totalAmount": 210801020
+      },
+      {
+        "constituency": "PURNEA",
+        "state": "Bihar",
+        "projectCount": 271,
+        "totalAmount": 242541359
+      },
+      {
+        "constituency": "PURULIA",
+        "state": "West Bengal",
+        "projectCount": 238,
+        "totalAmount": 164121730
+      },
+      {
+        "constituency": "PURVI CHAMPARAN",
+        "state": "Bihar",
+        "projectCount": 187,
+        "totalAmount": 216822158
+      },
+      {
+        "constituency": "RAE BARELI",
+        "state": "Uttar Pradesh",
+        "projectCount": 1670,
+        "totalAmount": 194178717.86
+      },
+      {
+        "constituency": "RAICHUR",
+        "state": "Karnataka",
+        "projectCount": 332,
+        "totalAmount": 192681370
+      },
+      {
+        "constituency": "RAIGAD",
+        "state": "Maharashtra",
+        "projectCount": 168,
+        "totalAmount": 192796307
+      },
+      {
+        "constituency": "RAIGANJ",
+        "state": "West Bengal",
+        "projectCount": 474,
+        "totalAmount": 194416937
+      },
+      {
+        "constituency": "RAIGARH",
+        "state": "Chhattisgarh",
+        "projectCount": 202,
+        "totalAmount": 138568554
+      },
+      {
+        "constituency": "RAIPUR",
+        "state": "Chhattisgarh",
+        "projectCount": 370,
+        "totalAmount": 210300616
+      },
+      {
+        "constituency": "RAJAHMUNDRY",
+        "state": "Andhra Pradesh",
+        "projectCount": 44,
+        "totalAmount": 184491124
+      },
+      {
+        "constituency": "RAJAMPET",
+        "state": "Andhra Pradesh",
+        "projectCount": 764,
+        "totalAmount": 255805348.92
+      },
+      {
+        "constituency": "RAJGARH",
+        "state": "Madhya Pradesh",
+        "projectCount": 765,
+        "totalAmount": 219900715
+      },
+      {
+        "constituency": "RAJKOT",
+        "state": "Gujarat",
+        "projectCount": 585,
+        "totalAmount": 241497357
+      },
+      {
+        "constituency": "RAJMAHAL",
+        "state": "Jharkhand",
+        "projectCount": 1058,
+        "totalAmount": 212981889
+      },
+      {
+        "constituency": "RAJNANDGAON",
+        "state": "Chhattisgarh",
+        "projectCount": 344,
+        "totalAmount": 155287926
+      },
+      {
+        "constituency": "RAJSAMAND",
+        "state": "Rajasthan",
+        "projectCount": 215,
+        "totalAmount": 163048530
+      },
+      {
+        "constituency": "RAMANATHAPURAM",
+        "state": "Tamil Nadu",
+        "projectCount": 294,
+        "totalAmount": 190891154
+      },
+      {
+        "constituency": "RAMPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 732,
+        "totalAmount": 135429470.84
+      },
+      {
+        "constituency": "RAMTEK",
+        "state": "Maharashtra",
+        "projectCount": 210,
+        "totalAmount": 130326795
+      },
+      {
+        "constituency": "RANAGHAT",
+        "state": "West Bengal",
+        "projectCount": 364,
+        "totalAmount": 182698662
+      },
+      {
+        "constituency": "RANCHI",
+        "state": "Jharkhand",
+        "projectCount": 229,
+        "totalAmount": 146792248
+      },
+      {
+        "constituency": "RATLAM",
+        "state": "Madhya Pradesh",
+        "projectCount": 305,
+        "totalAmount": 162100226
+      },
+      {
+        "constituency": "RATNAGIRI-SINDHUDURG",
+        "state": "Maharashtra",
+        "projectCount": 204,
+        "totalAmount": 156298603
+      },
+      {
+        "constituency": "RAVER",
+        "state": "Maharashtra",
+        "projectCount": 105,
+        "totalAmount": 108037917
+      },
+      {
+        "constituency": "REWA",
+        "state": "Madhya Pradesh",
+        "projectCount": 228,
+        "totalAmount": 208494262
+      },
+      {
+        "constituency": "ROBERTSGANJ",
+        "state": "Uttar Pradesh",
+        "projectCount": 537,
+        "totalAmount": 180392531
+      },
+      {
+        "constituency": "ROHTAK",
+        "state": "Haryana",
+        "projectCount": 355,
+        "totalAmount": 220718655
+      },
+      {
+        "constituency": "SABARKANTHA",
+        "state": "Gujarat",
+        "projectCount": 490,
+        "totalAmount": 168756879
+      },
+      {
+        "constituency": "SAGAR",
+        "state": "Madhya Pradesh",
+        "projectCount": 474,
+        "totalAmount": 251834533
+      },
+      {
+        "constituency": "SAHARANPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 177,
+        "totalAmount": 156023919
+      },
+      {
+        "constituency": "SALEM",
+        "state": "Tamil Nadu",
+        "projectCount": 78,
+        "totalAmount": 102611741.5
+      },
+      {
+        "constituency": "SALEMPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 422,
+        "totalAmount": 250622404
+      },
+      {
+        "constituency": "SAMASTIPUR",
+        "state": "Bihar",
+        "projectCount": 218,
+        "totalAmount": 160358416
+      },
+      {
+        "constituency": "SAMBALPUR",
+        "state": "Odisha",
+        "projectCount": 341,
+        "totalAmount": 240935107
+      },
+      {
+        "constituency": "SAMBHAL",
+        "state": "Uttar Pradesh",
+        "projectCount": 534,
+        "totalAmount": 140990253.85
+      },
+      {
+        "constituency": "SANGLI",
+        "state": "Maharashtra",
+        "projectCount": 245,
+        "totalAmount": 204123043
+      },
+      {
+        "constituency": "SANGRUR",
+        "state": "Punjab",
+        "projectCount": 906,
+        "totalAmount": 175032583.19
+      },
+      {
+        "constituency": "SANT KABIR NAGAR",
+        "state": "Uttar Pradesh",
+        "projectCount": 650,
+        "totalAmount": 200172732.82
+      },
+      {
+        "constituency": "SARAN",
+        "state": "Bihar",
+        "projectCount": 58,
+        "totalAmount": 297212000
+      },
+      {
+        "constituency": "SARGUJA",
+        "state": "Chhattisgarh",
+        "projectCount": 520,
+        "totalAmount": 168960597
+      },
+      {
+        "constituency": "SASARAM",
+        "state": "Bihar",
+        "projectCount": 279,
+        "totalAmount": 193273878
+      },
+      {
+        "constituency": "SATARA",
+        "state": "Maharashtra",
+        "projectCount": 369,
+        "totalAmount": 213012025
+      },
+      {
+        "constituency": "SATNA",
+        "state": "Madhya Pradesh",
+        "projectCount": 600,
+        "totalAmount": 143475318
+      },
+      {
+        "constituency": "SECUNDERABAD",
+        "state": "Telangana",
+        "projectCount": 130,
+        "totalAmount": 169668953
+      },
+      {
+        "constituency": "SHAHDOL",
+        "state": "Madhya Pradesh",
+        "projectCount": 486,
+        "totalAmount": 188506016
+      },
+      {
+        "constituency": "SHAHJAHANPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 423,
+        "totalAmount": 219222657
+      },
+      {
+        "constituency": "SHEOHAR",
+        "state": "Bihar",
+        "projectCount": 179,
+        "totalAmount": 158995885
+      },
+      {
+        "constituency": "SHILLONG",
+        "state": "Meghalaya",
+        "projectCount": 444,
+        "totalAmount": 169185000
+      },
+      {
+        "constituency": "SHIMLA",
+        "state": "Himachal Pradesh",
+        "projectCount": 884,
+        "totalAmount": 178283289
+      },
+      {
+        "constituency": "SHIMOGA",
+        "state": "Karnataka",
+        "projectCount": 487,
+        "totalAmount": 195004354
+      },
+      {
+        "constituency": "SHIRDI",
+        "state": "Maharashtra",
+        "projectCount": 262,
+        "totalAmount": 168144037
+      },
+      {
+        "constituency": "SHIRUR",
+        "state": "Maharashtra",
+        "projectCount": 210,
+        "totalAmount": 191563521
+      },
+      {
+        "constituency": "SHRAWASTI",
+        "state": "Uttar Pradesh",
+        "projectCount": 2420,
+        "totalAmount": 202757389
+      },
+      {
+        "constituency": "SIDHI",
+        "state": "Madhya Pradesh",
+        "projectCount": 371,
+        "totalAmount": 238591741
+      },
+      {
+        "constituency": "SIKAR",
+        "state": "Rajasthan",
+        "projectCount": 246,
+        "totalAmount": 144468703
+      },
+      {
+        "constituency": "SIKKIM",
+        "state": "Sikkim",
+        "projectCount": 174,
+        "totalAmount": 226682145
+      },
+      {
+        "constituency": "SILCHAR",
+        "state": "Assam",
+        "projectCount": 263,
+        "totalAmount": 146505473.33
+      },
+      {
+        "constituency": "SINGHBHUM",
+        "state": "Jharkhand",
+        "projectCount": 279,
+        "totalAmount": 176042810
+      },
+      {
+        "constituency": "SIRSA",
+        "state": "Haryana",
+        "projectCount": 508,
+        "totalAmount": 171268990
+      },
+      {
+        "constituency": "SITAMARHI",
+        "state": "Bihar",
+        "projectCount": 393,
+        "totalAmount": 189928723
+      },
+      {
+        "constituency": "SITAPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 93,
+        "totalAmount": 212356775
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Karnataka",
+        "projectCount": 805,
+        "totalAmount": 985981134
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Odisha",
+        "projectCount": 1051,
+        "totalAmount": 660540764
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Sikkim",
+        "projectCount": 118,
+        "totalAmount": 145830114
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Kerala",
+        "projectCount": 1357,
+        "totalAmount": 1373802142
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Gujarat",
+        "projectCount": 1329,
+        "totalAmount": 833849906
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Himachal Pradesh",
+        "projectCount": 855,
+        "totalAmount": 285711740.04
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Bihar",
+        "projectCount": 1806,
+        "totalAmount": 1678320759
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Andhra Pradesh",
+        "projectCount": 658,
+        "totalAmount": 673618858
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Uttarakhand",
+        "projectCount": 541,
+        "totalAmount": 464954143
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Haryana",
+        "projectCount": 285,
+        "totalAmount": 224514499
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Assam",
+        "projectCount": 493,
+        "totalAmount": 546816070.54
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Punjab",
+        "projectCount": 958,
+        "totalAmount": 858849428.26
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Puducherry",
+        "projectCount": 101,
+        "totalAmount": 253804780
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Rajasthan",
+        "projectCount": 982,
+        "totalAmount": 919438754
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Tripura",
+        "projectCount": 58,
+        "totalAmount": 84649344
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Goa",
+        "projectCount": 42,
+        "totalAmount": 115145702.99
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Tamil Nadu",
+        "projectCount": 1174,
+        "totalAmount": 1370371321
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Nagaland",
+        "projectCount": 77,
+        "totalAmount": 204171000
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Delhi",
+        "projectCount": 156,
+        "totalAmount": 228422906
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Uttar Pradesh",
+        "projectCount": 5803,
+        "totalAmount": 4639104941.93
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Maharashtra",
+        "projectCount": 1019,
+        "totalAmount": 1233961570
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Jharkhand",
+        "projectCount": 1293,
+        "totalAmount": 688453593
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Telangana",
+        "projectCount": 807,
+        "totalAmount": 501173597
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Madhya Pradesh",
+        "projectCount": 1364,
+        "totalAmount": 908392976
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Chhattisgarh",
+        "projectCount": 411,
+        "totalAmount": 358382247
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "West Bengal",
+        "projectCount": 284,
+        "totalAmount": 805660714.68
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Jammu And Kashmir",
+        "projectCount": 34,
+        "totalAmount": 43378690
+      },
+      {
+        "constituency": "Sitting Rajya Sabha",
+        "state": "Manipur",
+        "projectCount": 10,
+        "totalAmount": 19500000
+      },
+      {
+        "constituency": "SIVAGANGA",
+        "state": "Tamil Nadu",
+        "projectCount": 349,
+        "totalAmount": 221710263
+      },
+      {
+        "constituency": "SIWAN",
+        "state": "Bihar",
+        "projectCount": 291,
+        "totalAmount": 241942782
+      },
+      {
+        "constituency": "SOLAPUR",
+        "state": "Maharashtra",
+        "projectCount": 425,
+        "totalAmount": 226088879
+      },
+      {
+        "constituency": "SONEPAT",
+        "state": "Haryana",
+        "projectCount": 364,
+        "totalAmount": 198700471
+      },
+      {
+        "constituency": "Sonitpur",
+        "state": "Assam",
+        "projectCount": 277,
+        "totalAmount": 193180811.32
+      },
+      {
+        "constituency": "SOUTH DELHI",
+        "state": "Delhi",
+        "projectCount": 164,
+        "totalAmount": 197199410
+      },
+      {
+        "constituency": "SOUTH GOA",
+        "state": "Goa",
+        "projectCount": 208,
+        "totalAmount": 203892034
+      },
+      {
+        "constituency": "SREERAMPUR",
+        "state": "West Bengal",
+        "projectCount": 233,
+        "totalAmount": 166451266
+      },
+      {
+        "constituency": "SRIKAKULAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 347,
+        "totalAmount": 210246857
+      },
+      {
+        "constituency": "SRINAGAR",
+        "state": "Jammu And Kashmir",
+        "projectCount": 198,
+        "totalAmount": 84261801.1
+      },
+      {
+        "constituency": "SRIPERUMBUDUR",
+        "state": "Tamil Nadu",
+        "projectCount": 225,
+        "totalAmount": 231433598
+      },
+      {
+        "constituency": "SULTANPUR",
+        "state": "Uttar Pradesh",
+        "projectCount": 132,
+        "totalAmount": 213108219.57
+      },
+      {
+        "constituency": "SUNDARGARH",
+        "state": "Odisha",
+        "projectCount": 341,
+        "totalAmount": 190736295
+      },
+      {
+        "constituency": "SUPAUL",
+        "state": "Bihar",
+        "projectCount": 179,
+        "totalAmount": 186508231
+      },
+      {
+        "constituency": "SURAT",
+        "state": "Gujarat",
+        "projectCount": 283,
+        "totalAmount": 186325687
+      },
+      {
+        "constituency": "SURENDRANAGAR",
+        "state": "Gujarat",
+        "projectCount": 472,
+        "totalAmount": 179443407.61
+      },
+      {
+        "constituency": "TAMLUK",
+        "state": "West Bengal",
+        "projectCount": 494,
+        "totalAmount": 184990671.78
+      },
+      {
+        "constituency": "TEHRI GARHWAL",
+        "state": "Uttarakhand",
+        "projectCount": 712,
+        "totalAmount": 170470845.08
+      },
+      {
+        "constituency": "TENKASI",
+        "state": "Tamil Nadu",
+        "projectCount": 373,
+        "totalAmount": 233283144
+      },
+      {
+        "constituency": "THANE",
+        "state": "Maharashtra",
+        "projectCount": 41,
+        "totalAmount": 96020082
+      },
+      {
+        "constituency": "THANJAVUR",
+        "state": "Tamil Nadu",
+        "projectCount": 126,
+        "totalAmount": 229799056
+      },
+      {
+        "constituency": "THENI",
+        "state": "Tamil Nadu",
+        "projectCount": 184,
+        "totalAmount": 211393274
+      },
+      {
+        "constituency": "THIRUVANANTHAPURAM",
+        "state": "Kerala",
+        "projectCount": 283,
+        "totalAmount": 183883641
+      },
+      {
+        "constituency": "THOOTHUKKUDI",
+        "state": "Tamil Nadu",
+        "projectCount": 116,
+        "totalAmount": 222365107
+      },
+      {
+        "constituency": "THRISSUR",
+        "state": "Kerala",
+        "projectCount": 181,
+        "totalAmount": 196922610.16
+      },
+      {
+        "constituency": "TIKAMGARH",
+        "state": "Madhya Pradesh",
+        "projectCount": 626,
+        "totalAmount": 217574375
+      },
+      {
+        "constituency": "TIRUCHIRAPPALLI",
+        "state": "Tamil Nadu",
+        "projectCount": 232,
+        "totalAmount": 164086209
+      },
+      {
+        "constituency": "TIRUNELVELI",
+        "state": "Tamil Nadu",
+        "projectCount": 211,
+        "totalAmount": 197790260
+      },
+      {
+        "constituency": "TIRUPATI",
+        "state": "Andhra Pradesh",
+        "projectCount": 391,
+        "totalAmount": 207955090
+      },
+      {
+        "constituency": "TIRUPPUR",
+        "state": "Tamil Nadu",
+        "projectCount": 196,
+        "totalAmount": 228619922
+      },
+      {
+        "constituency": "TIRUVALLUR",
+        "state": "Tamil Nadu",
+        "projectCount": 353,
+        "totalAmount": 236201756
+      },
+      {
+        "constituency": "TIRUVANNAMALAI",
+        "state": "Tamil Nadu",
+        "projectCount": 321,
+        "totalAmount": 146497799
+      },
+      {
+        "constituency": "TONK-SAWAI MADHOPUR",
+        "state": "Rajasthan",
+        "projectCount": 155,
+        "totalAmount": 71792386
+      },
+      {
+        "constituency": "TRIPURA EAST",
+        "state": "Tripura",
+        "projectCount": 61,
+        "totalAmount": 192661574
+      },
+      {
+        "constituency": "TRIPURA WEST",
+        "state": "Tripura",
+        "projectCount": 229,
+        "totalAmount": 223259652
+      },
+      {
+        "constituency": "TUMKUR",
+        "state": "Karnataka",
+        "projectCount": 278,
+        "totalAmount": 171636312
+      },
+      {
+        "constituency": "TURA",
+        "state": "Meghalaya",
+        "projectCount": 686,
+        "totalAmount": 229420000
+      },
+      {
+        "constituency": "UDAIPUR",
+        "state": "Rajasthan",
+        "projectCount": 319,
+        "totalAmount": 159970825.54
+      },
+      {
+        "constituency": "UDHAMPUR",
+        "state": "Jammu And Kashmir",
+        "projectCount": 479,
+        "totalAmount": 159713899
+      },
+      {
+        "constituency": "UDUPI CHIKMAGALUR",
+        "state": "Karnataka",
+        "projectCount": 538,
+        "totalAmount": 217705516
+      },
+      {
+        "constituency": "UJJAIN",
+        "state": "Madhya Pradesh",
+        "projectCount": 510,
+        "totalAmount": 171563743.8
+      },
+      {
+        "constituency": "UJJARPUR",
+        "state": "Bihar",
+        "projectCount": 414,
+        "totalAmount": 152723844
+      },
+      {
+        "constituency": "ULUBERIA",
+        "state": "West Bengal",
+        "projectCount": 359,
+        "totalAmount": 167794656
+      },
+      {
+        "constituency": "UNNAO",
+        "state": "Uttar Pradesh",
+        "projectCount": 172,
+        "totalAmount": 199832222
+      },
+      {
+        "constituency": "UTTARA KANNADA",
+        "state": "Karnataka",
+        "projectCount": 247,
+        "totalAmount": 145003127
+      },
+      {
+        "constituency": "VADAKARA",
+        "state": "Kerala",
+        "projectCount": 293,
+        "totalAmount": 187146522
+      },
+      {
+        "constituency": "VADODARA",
+        "state": "Gujarat",
+        "projectCount": 314,
+        "totalAmount": 183582883
+      },
+      {
+        "constituency": "VAISHALI",
+        "state": "Bihar",
+        "projectCount": 134,
+        "totalAmount": 259486523
+      },
+      {
+        "constituency": "VALMIKI NAGAR",
+        "state": "Bihar",
+        "projectCount": 344,
+        "totalAmount": 220456460
+      },
+      {
+        "constituency": "VALSAD",
+        "state": "Gujarat",
+        "projectCount": 534,
+        "totalAmount": 206998139
+      },
+      {
+        "constituency": "VARANASI",
+        "state": "Uttar Pradesh",
+        "projectCount": 513,
+        "totalAmount": 208484222
+      },
+      {
+        "constituency": "VELLORE",
+        "state": "Tamil Nadu",
+        "projectCount": 139,
+        "totalAmount": 164308663
+      },
+      {
+        "constituency": "VIDISHA",
+        "state": "Madhya Pradesh",
+        "projectCount": 432,
+        "totalAmount": 163757417
+      },
+      {
+        "constituency": "VIJAYAWADA",
+        "state": "Andhra Pradesh",
+        "projectCount": 122,
+        "totalAmount": 115596399
+      },
+      {
+        "constituency": "VILUPPURAM",
+        "state": "Tamil Nadu",
+        "projectCount": 480,
+        "totalAmount": 224393218
+      },
+      {
+        "constituency": "VIRUDHUNAGAR",
+        "state": "Tamil Nadu",
+        "projectCount": 213,
+        "totalAmount": 194305347
+      },
+      {
+        "constituency": "VISAKHAPATNAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 95,
+        "totalAmount": 171846163
+      },
+      {
+        "constituency": "VIZIANAGARAM",
+        "state": "Andhra Pradesh",
+        "projectCount": 364,
+        "totalAmount": 144920232
+      },
+      {
+        "constituency": "WARANGEL",
+        "state": "Telangana",
+        "projectCount": 508,
+        "totalAmount": 191325327
+      },
+      {
+        "constituency": "WARDHA",
+        "state": "Maharashtra",
+        "projectCount": 323,
+        "totalAmount": 138698120
+      },
+      {
+        "constituency": "WAYANAD",
+        "state": "Kerala",
+        "projectCount": 162,
+        "totalAmount": 202878206
+      },
+      {
+        "constituency": "WEST DELHI",
+        "state": "Delhi",
+        "projectCount": 161,
+        "totalAmount": 196582339
+      },
+      {
+        "constituency": "YAVATMAL-WASHIM",
+        "state": "Maharashtra",
+        "projectCount": 259,
+        "totalAmount": 199901838.87
+      },
+      {
+        "constituency": "ZAHIRABAD",
+        "state": "Telangana",
+        "projectCount": 928,
+        "totalAmount": 216488697
+      }
+    ],
+    "states": [
+      "Andaman And Nicobar Islands",
+      "Andhra Pradesh",
+      "Arunachal Pradesh",
+      "Assam",
+      "Bihar",
+      "Chandigarh",
+      "Chhattisgarh",
+      "Delhi",
+      "Goa",
+      "Gujarat",
+      "Haryana",
+      "Himachal Pradesh",
+      "Jammu And Kashmir",
+      "Jharkhand",
+      "Karnataka",
+      "Kerala",
+      "Ladakh",
+      "Lakshadweep",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Manipur",
+      "Meghalaya",
+      "Mizoram",
+      "Nagaland",
+      "Odisha",
+      "Puducherry",
+      "Punjab",
+      "Rajasthan",
+      "Sikkim",
+      "Tamil Nadu",
+      "Telangana",
+      "The Dadra And Nagar Haveli And Daman And Diu",
+      "Tripura",
+      "Uttar Pradesh",
+      "Uttarakhand",
+      "West Bengal"
+    ],
+    "totalConstituencies": 579,
+    "totalStates": 36
+  },
+  "lastUpdated": "2026-08-31T17:26:07.235Z"
+}

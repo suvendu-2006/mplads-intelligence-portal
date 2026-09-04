@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee272",
+    "name": "Shri P. Chidambaram (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 236312242.52,
+    "totalExpenditure": 133481597,
+    "utilizationPercentage": 56.485265247611096,
+    "completedWorksCount": 75,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 71448372,
+    "inProgressPayments": 62033225,
+    "paymentGapPercentage": 46.473241551043174,
+    "completionRate": 52.083333333333336,
+    "pendingWorks": -6,
+    "unspentAmount": 102830645.52000001,
+    "totalRecommendedAmount": 112607000,
+    "name_hi": "Shri P. Chidambaram (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 133481597,
+      "totalEntries": 189,
+      "avgExpenditure": 706251.8359788359,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 50943347,
+        "transactionCount": 81
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42296539,
+        "transactionCount": 65
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40241711,
+        "transactionCount": 43
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 133481597,
+        "transactionCount": 189,
+        "avgAmount": 706251.8359788359
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 75,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction new PDS Outlet at Sirukappatti Village Sakkottai Block",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 984563
+      },
+      {
+        "_id": "6a932bb5cd94452437a3230a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional 2 class room for panchyat union elemantary school meenatchipuram",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 3600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c54",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of OHT at Iluppakudi in ward no 1",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e8d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Mahathma Gandhi Library at Government Girls Higher secondary school in Keeramangalam",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 271425
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e8c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Mahathma Gandhi Library at Government Higher secondary school in Maramadakki",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 271689
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.431Z"
+}

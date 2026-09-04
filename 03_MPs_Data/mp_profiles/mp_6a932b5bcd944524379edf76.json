@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf76",
+    "name": "Shri Narendra Modi",
+    "constituency": "VARANASI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 162070276.11,
+    "totalExpenditure": 88819703,
+    "utilizationPercentage": 54.80320335834836,
+    "completedWorksCount": 192,
+    "recommendedWorksCount": 25,
+    "completedWorksValue": 89119541,
+    "inProgressPayments": -299838,
+    "paymentGapPercentage": -0.33758050283054875,
+    "completionRate": 88.47926267281106,
+    "pendingWorks": -167,
+    "unspentAmount": 73250573.11000001,
+    "totalRecommendedAmount": 11871000,
+    "name_hi": "Shri Narendra Modi",
+    "constituency_hi": "VARANASI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 88819703,
+      "totalEntries": 191,
+      "avgExpenditure": 465024.6230366492,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 24897128,
+        "transactionCount": 58
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 63922575,
+        "transactionCount": 133
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 88819703,
+        "transactionCount": 191,
+        "avgAmount": 465024.6230366492
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 192,
+    "recommendedCount": 25,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work from Gram Sabha Tarapur main road to Ramsajivan house in Gram Sabha Akhri Block Kashi Vidyapeeth Length 72 m",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 299838
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e99b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work from Pandit ji gate to Devan house in Gram Milkichak Block Arazilines Length 45 m",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 231634
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e988",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shivpur Ward No 9 Kundan Nagar Colony Interlocking work from Pankaj Upadhyay house S1657 to Gaurishankar Gupta house Length 63 m",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 798152
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e987",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work from Aliyar Prasad house to Ramdular house in Karaudi Ward No 33 Nasirpur Length 75 m",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 194110
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e98a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work from Pintu Pradhan house to La Singh house in Gram Sabha Jagardeopur Block Arazilines Length 90 m",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 448400
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.870Z"
+}

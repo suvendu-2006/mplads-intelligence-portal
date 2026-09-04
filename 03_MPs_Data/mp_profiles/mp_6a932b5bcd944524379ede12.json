@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede12",
+    "name": "CAPTAIN VIRIATO FERNANDES",
+    "constituency": "SOUTH GOA",
+    "state": "Goa",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 48358008,
+    "utilizationPercentage": 32.89660408163265,
+    "completedWorksCount": 47,
+    "recommendedWorksCount": 86,
+    "completedWorksValue": 38023549,
+    "inProgressPayments": 10334459,
+    "paymentGapPercentage": 21.37072933194436,
+    "completionRate": 35.338345864661655,
+    "pendingWorks": 39,
+    "unspentAmount": 98641992,
+    "totalRecommendedAmount": 75585855,
+    "name_hi": "CAPTAIN VIRIATO FERNANDES",
+    "constituency_hi": "SOUTH GOA",
+    "state_hi": "Goa"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 48358008,
+      "totalEntries": 78,
+      "avgExpenditure": 619974.4615384615,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15762686,
+        "transactionCount": 28
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32595322,
+        "transactionCount": 50
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 48358008,
+        "transactionCount": 78,
+        "avgAmount": 619974.4615384615
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 47,
+    "recommendedCount": 86,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e877",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide School bus for students for New Dawn Ashadeep Special School,Mormugao-Goa.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 2171132
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c731",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide IT systems to ST. THERESES HIGH SCHOOL at Mangor Hill, Vasco Da Gama, Goa as per specifications indicated herewith complete with supply, installation, testing end user training, local support service center for minimum 3 years, and minimum 3 years comprehensive onsite warranty.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 1593200
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e434",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide one Tri-Wheeler Motorised bike to Ms. Joao Menezes who is a Differently abled individual under the MPLADS Fund residing at H.no. 134, New Vaddem, Vasco Da Gama, South Goa",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 95915
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c74a",
+        "workCategory": "Normal/Others",
+        "workDescription": "To upgrade Computer Lab by providing IT systems to VELSAO PALE EDUCATION SOCIETY at Velsao Cansaulim, Goa per specifications indicated herewith complete with supply, installation, testing end user training, local support service center for minimum 3 years, and minimum 3 years comprehensive onsite warranty.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 577100
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "To upgrade Computer Lab by providing Furniture and Electrical Items to VELSAO PALE EDUCATION SOCIETY at Velsao Cansaulim, Goa per list indicated herewith complete with supply and installation. Inspection of work is recommended.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 281542
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.987Z"
+}

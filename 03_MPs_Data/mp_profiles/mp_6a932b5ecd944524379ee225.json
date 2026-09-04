@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee225",
+    "name": "Shri Balyogi Umeshnath (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41747000,
+    "utilizationPercentage": 28.39931972789116,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 7950000,
+    "inProgressPayments": 33797000,
+    "paymentGapPercentage": 80.95671545260737,
+    "completionRate": 14.102564102564102,
+    "pendingWorks": 56,
+    "unspentAmount": 105253000,
+    "totalRecommendedAmount": 77745980,
+    "name_hi": "Shri Balyogi Umeshnath (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41747000,
+      "totalEntries": 83,
+      "avgExpenditure": 502975.9036144578,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8650000,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33097000,
+        "transactionCount": 67
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41747000,
+        "transactionCount": 83,
+        "avgAmount": 502975.9036144578
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32317",
+        "workCategory": "Normal/Others",
+        "workDescription": "civil hospital jiwajiganj ujjain me dad body freezar",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32314",
+        "workCategory": "Normal/Others",
+        "workDescription": "civil hospital madhav nagar ujjain me dad body freezar",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32316",
+        "workCategory": "Normal/Others",
+        "workDescription": "jila chiktsalay me ded body freezer 02 nag",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32315",
+        "workCategory": "Normal/Others",
+        "workDescription": "charak bhawan jila chiktasalay me ded body freezer",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ed0",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat binpura sc basti mata ji chowk ke pass karigaro ke liye common work shed nirman",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.253Z"
+}

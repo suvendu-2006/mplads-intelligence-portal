@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf51",
+    "name": "SELJA",
+    "constituency": "SIRSA",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26548478,
+    "utilizationPercentage": 18.060189115646256,
+    "completedWorksCount": 59,
+    "recommendedWorksCount": 251,
+    "completedWorksValue": 12188846,
+    "inProgressPayments": 14359632,
+    "paymentGapPercentage": 54.088343595440755,
+    "completionRate": 19.032258064516128,
+    "pendingWorks": 192,
+    "unspentAmount": 120451522,
+    "totalRecommendedAmount": 91498572,
+    "name_hi": "SELJA",
+    "constituency_hi": "SIRSA",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26548478,
+      "totalEntries": 152,
+      "avgExpenditure": 174661.0394736842,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5263321,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21285157,
+        "transactionCount": 127
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26548478,
+        "transactionCount": 152,
+        "avgAmount": 174661.0394736842
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 59,
+    "recommendedCount": 251,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bf23",
+        "workCategory": "Normal/Others",
+        "workDescription": "To Provide water tanker in Gram Panchayat Karamgarh",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 175000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd82",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide water tanker in Gram Panchayat Gadrana",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 175000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd93",
+        "workCategory": "Normal/Others",
+        "workDescription": "To Provide water tanker in Village Amritsar Khurd",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 175000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd6f",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide water tanker in gram panchayat Kusumbi",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 175000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ae44",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of Shed for Bhagat Namdev Tank Kashtrya Sabha in Village Taruana, Kalanwali",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 706164
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.242Z"
+}

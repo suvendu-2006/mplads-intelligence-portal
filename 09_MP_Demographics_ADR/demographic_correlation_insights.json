@@ -1,0 +1,282 @@
+{
+  "summary": {
+    "total_mps_analyzed": 774,
+    "lok_sabha_mps": 543,
+    "rajya_sabha_mps": 231,
+    "average_assets_inr": 101765230.94,
+    "median_assets_inr": 35000000.0,
+    "crorepati_mps_count": 757,
+    "crorepati_pct": 97.8,
+    "mps_with_criminal_cases": 114,
+    "criminal_cases_pct": 14.73
+  },
+  "asset_bracket_performance": [
+    {
+      "asset_bracket": "1. Under 1 Crore",
+      "mp_count": 17,
+      "avg_utilization": 34.61,
+      "avg_completion_rate": 28.62,
+      "avg_assets_inr": 6622262.88,
+      "total_expenditure": 913051979.0
+    },
+    {
+      "asset_bracket": "2. 1 - 5 Crore",
+      "mp_count": 588,
+      "avg_utilization": 31.11,
+      "avg_completion_rate": 27.68,
+      "avg_assets_inr": 34431902.95,
+      "total_expenditure": 30042966010.14
+    },
+    {
+      "asset_bracket": "3. 5 - 20 Crore",
+      "mp_count": 104,
+      "avg_utilization": 34.7,
+      "avg_completion_rate": 29.99,
+      "avg_assets_inr": 103733478.17,
+      "total_expenditure": 5636150234.0
+    },
+    {
+      "asset_bracket": "4. 20 - 50 Crore",
+      "mp_count": 33,
+      "avg_utilization": 26.55,
+      "avg_completion_rate": 32.49,
+      "avg_assets_inr": 302744284.55,
+      "total_expenditure": 1396159636.0
+    },
+    {
+      "asset_bracket": "5. 50+ Crore (High Net Worth)",
+      "mp_count": 32,
+      "avg_utilization": 31.56,
+      "avg_completion_rate": 25.44,
+      "avg_assets_inr": 1175903382.03,
+      "total_expenditure": 1654616430.0
+    }
+  ],
+  "education_performance": [
+    {
+      "education": "Graduate",
+      "mp_count": 572,
+      "avg_utilization": 30.95,
+      "avg_completion_rate": 26.95,
+      "avg_assets_inr": 65518445.08
+    },
+    {
+      "education": "Post Graduate",
+      "mp_count": 83,
+      "avg_utilization": 32.72,
+      "avg_completion_rate": 30.82,
+      "avg_assets_inr": 248284888.22
+    },
+    {
+      "education": "Graduate Professional",
+      "mp_count": 49,
+      "avg_utilization": 29.28,
+      "avg_completion_rate": 26.6,
+      "avg_assets_inr": 196365682.49
+    },
+    {
+      "education": "12th Pass",
+      "mp_count": 34,
+      "avg_utilization": 37.08,
+      "avg_completion_rate": 37.55,
+      "avg_assets_inr": 205815535.5
+    },
+    {
+      "education": "10th Pass",
+      "mp_count": 13,
+      "avg_utilization": 33.42,
+      "avg_completion_rate": 39.43,
+      "avg_assets_inr": 94187058.08
+    },
+    {
+      "education": "Doctorate",
+      "mp_count": 11,
+      "avg_utilization": 37.21,
+      "avg_completion_rate": 22.4,
+      "avg_assets_inr": 126437286.82
+    },
+    {
+      "education": "Others",
+      "mp_count": 7,
+      "avg_utilization": 31.14,
+      "avg_completion_rate": 37.18,
+      "avg_assets_inr": 196873270.0
+    },
+    {
+      "education": "8th Pass",
+      "mp_count": 4,
+      "avg_utilization": 35.47,
+      "avg_completion_rate": 34.33,
+      "avg_assets_inr": 12273302.25
+    },
+    {
+      "education": "5th Pass",
+      "mp_count": 1,
+      "avg_utilization": 61.87,
+      "avg_completion_rate": 60.0,
+      "avg_assets_inr": 19997783.0
+    }
+  ],
+  "top_parties_performance": [
+    {
+      "party": "Sitting / Incumbent Member",
+      "mp_count": 517,
+      "avg_utilization": 30.93,
+      "avg_completion_rate": 27.25,
+      "total_expenditure": 26605805398.59,
+      "avg_assets_inr": 35000000.0
+    },
+    {
+      "party": "BJP",
+      "mp_count": 128,
+      "avg_utilization": 32.4,
+      "avg_completion_rate": 28.07,
+      "total_expenditure": 6544041029.78,
+      "avg_assets_inr": 209310689.41
+    },
+    {
+      "party": "INC",
+      "mp_count": 40,
+      "avg_utilization": 27.86,
+      "avg_completion_rate": 24.1,
+      "total_expenditure": 1671209073.0,
+      "avg_assets_inr": 397074751.5
+    },
+    {
+      "party": "SP",
+      "mp_count": 20,
+      "avg_utilization": 40.98,
+      "avg_completion_rate": 41.07,
+      "total_expenditure": 1278672153.0,
+      "avg_assets_inr": 241566855.6
+    },
+    {
+      "party": "DMK",
+      "mp_count": 9,
+      "avg_utilization": 39.01,
+      "avg_completion_rate": 45.14,
+      "total_expenditure": 541492591.0,
+      "avg_assets_inr": 514296147.89
+    },
+    {
+      "party": "TDP",
+      "mp_count": 8,
+      "avg_utilization": 27.24,
+      "avg_completion_rate": 40.95,
+      "total_expenditure": 335138101.0,
+      "avg_assets_inr": 154170506.0
+    },
+    {
+      "party": "AITC",
+      "mp_count": 7,
+      "avg_utilization": 31.33,
+      "avg_completion_rate": 42.42,
+      "total_expenditure": 351949128.0,
+      "avg_assets_inr": 120972188.57
+    },
+    {
+      "party": "JD(U)",
+      "mp_count": 6,
+      "avg_utilization": 51.9,
+      "avg_completion_rate": 46.9,
+      "total_expenditure": 459621033.77,
+      "avg_assets_inr": 22911641.17
+    },
+    {
+      "party": "ShivSena (Uddhav Balasaheb Thackeray)",
+      "mp_count": 5,
+      "avg_utilization": 18.92,
+      "avg_completion_rate": 12.82,
+      "total_expenditure": 154443567.0,
+      "avg_assets_inr": 101703831.6
+    },
+    {
+      "party": "Nationalist Congress Party – Sharadchandra Pawar",
+      "mp_count": 5,
+      "avg_utilization": 26.94,
+      "avg_completion_rate": 25.55,
+      "total_expenditure": 202372648.0,
+      "avg_assets_inr": 102912481.6
+    },
+    {
+      "party": "Aazad Samaj Party (Kanshi Ram)",
+      "mp_count": 4,
+      "avg_utilization": 41.79,
+      "avg_completion_rate": 27.28,
+      "total_expenditure": 282750556.0,
+      "avg_assets_inr": 3986581.0
+    },
+    {
+      "party": "Shiv Sena",
+      "mp_count": 4,
+      "avg_utilization": 22.45,
+      "avg_completion_rate": 24.66,
+      "total_expenditure": 132006667.0,
+      "avg_assets_inr": 100121075.75
+    },
+    {
+      "party": "Lok Janshakti Party(Ram Vilas)",
+      "mp_count": 3,
+      "avg_utilization": 41.51,
+      "avg_completion_rate": 43.03,
+      "total_expenditure": 215748517.0,
+      "avg_assets_inr": 52205503.67
+    },
+    {
+      "party": "Jammu & Kashmir National Conference",
+      "mp_count": 2,
+      "avg_utilization": 34.03,
+      "avg_completion_rate": 45.38,
+      "total_expenditure": 101079094.0,
+      "avg_assets_inr": 35793000.0
+    },
+    {
+      "party": "Rashtriya Lok Dal",
+      "mp_count": 2,
+      "avg_utilization": 39.95,
+      "avg_completion_rate": 12.76,
+      "total_expenditure": 117459674.0,
+      "avg_assets_inr": 41613004.0
+    },
+    {
+      "party": "YSRCP",
+      "mp_count": 2,
+      "avg_utilization": 42.32,
+      "avg_completion_rate": 29.5,
+      "total_expenditure": 137563457.0,
+      "avg_assets_inr": 7801906.0
+    },
+    {
+      "party": "AAP",
+      "mp_count": 2,
+      "avg_utilization": 45.04,
+      "avg_completion_rate": 36.12,
+      "total_expenditure": 132424202.0,
+      "avg_assets_inr": 122555880.0
+    },
+    {
+      "party": "AJSU Party",
+      "mp_count": 1,
+      "avg_utilization": 37.44,
+      "avg_completion_rate": 7.27,
+      "total_expenditure": 55034366.0,
+      "avg_assets_inr": 49849182.0
+    },
+    {
+      "party": "CPI(M)",
+      "mp_count": 1,
+      "avg_utilization": 23.03,
+      "avg_completion_rate": 28.65,
+      "total_expenditure": 38165228.0,
+      "avg_assets_inr": 4050109.0
+    },
+    {
+      "party": "Indian Union Muslim League",
+      "mp_count": 1,
+      "avg_utilization": 8.85,
+      "avg_completion_rate": 14.81,
+      "total_expenditure": 15076499.0,
+      "avg_assets_inr": 21977344.0
+    }
+  ]
+}

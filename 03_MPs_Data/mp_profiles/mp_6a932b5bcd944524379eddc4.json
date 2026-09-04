@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc4",
+    "name": "AMAR SHARADRAO KALE",
+    "constituency": "WARDHA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32855968,
+    "utilizationPercentage": 22.35099863945578,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 24499418,
+    "inProgressPayments": 8356550,
+    "paymentGapPercentage": 25.433887688227603,
+    "completionRate": 26.851851851851855,
+    "pendingWorks": 50,
+    "unspentAmount": 114144032,
+    "totalRecommendedAmount": 41813329,
+    "name_hi": "AMAR SHARADRAO KALE",
+    "constituency_hi": "WARDHA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32855968,
+      "totalEntries": 40,
+      "avgExpenditure": 821399.2,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8965898,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23890070,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32855968,
+        "transactionCount": 40,
+        "avgAmount": 821399.2
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e31b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of public Community hall for women self-help group at Madani",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 1869606
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e167",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a gravel road from Mr. Nitin Urkude to Jitendra Dadmal house in Mouja Ubda, Taluka Samudrapur",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 498230
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e12b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of underground drain From Sonegaon Primary School to Mr. Fakir Chand Diwase house at Mouja Ekarjun Taluka Karanja Gha, District Wardha",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 491863
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dff9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road from Mr. Devkaran Baingane to Mr. Anil Khaire house at Mouja Chincholi Taluka Karanja, District Wardha",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 489099
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dad6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a drain from the Gram Panchayat to the Government Hospital (PHC) at Zadshi, Selu Taluka",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 982179
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.691Z"
+}

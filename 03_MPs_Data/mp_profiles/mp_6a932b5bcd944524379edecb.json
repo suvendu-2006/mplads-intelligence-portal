@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edecb",
+    "name": "Manoj Tiwari",
+    "constituency": "NORTH EAST DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 225843858,
+    "totalExpenditure": 28650238,
+    "utilizationPercentage": 12.685861042986609,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 17,
+    "completedWorksValue": 5756284,
+    "inProgressPayments": 22893954,
+    "paymentGapPercentage": 79.90842519353592,
+    "completionRate": 26.08695652173913,
+    "pendingWorks": 11,
+    "unspentAmount": 197193620,
+    "totalRecommendedAmount": 99270603,
+    "name_hi": "Manoj Tiwari",
+    "constituency_hi": "NORTH EAST DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28650238,
+      "totalEntries": 9,
+      "avgExpenditure": 3183359.777777778,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 23889484,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4760754,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28650238,
+        "transactionCount": 9,
+        "avgAmount": 3183359.777777778
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 17,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c5a5",
+        "workCategory": "Normal/Others",
+        "workDescription": "provision of lighting arrangement with street light poles",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 898145
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of Lighting arrangement with Street light poles",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1051705
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c594",
+        "workCategory": "Normal/Others",
+        "workDescription": "provision of 12 mtr SHM pole at Veer Sawarkar Hospital road, Shiv Vihar Tiraha and Near Yamuna Dairy. Dayalpur Ward No. 242, North-East Delhi",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1343500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of SHM Pole with LED Lights",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 695894
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbe9",
+        "workCategory": "Normal/Others",
+        "workDescription": "providing and installation of Open Gym Equipments",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 375687
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.215Z"
+}

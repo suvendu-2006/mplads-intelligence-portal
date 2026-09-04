@@ -1,0 +1,101 @@
+[
+  {
+    "category": "Community Centers & Halls",
+    "total_works": 1207,
+    "completed_works": 930,
+    "recommended_works": 277,
+    "completion_rate_pct": 77.05,
+    "total_expenditure_inr": 1096236245,
+    "average_work_cost_inr": 908232,
+    "csv_file": "06_Works/categorized_datasets/by_category/community_centers_halls.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/community_centers_halls.json"
+  },
+  {
+    "category": "Drinking Water Supply",
+    "total_works": 2099,
+    "completed_works": 1833,
+    "recommended_works": 266,
+    "completion_rate_pct": 87.33,
+    "total_expenditure_inr": 536458078,
+    "average_work_cost_inr": 255577,
+    "csv_file": "06_Works/categorized_datasets/by_category/drinking_water_supply.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/drinking_water_supply.json"
+  },
+  {
+    "category": "Education & School Infrastructure",
+    "total_works": 1693,
+    "completed_works": 1551,
+    "recommended_works": 142,
+    "completion_rate_pct": 91.61,
+    "total_expenditure_inr": 1227643889,
+    "average_work_cost_inr": 725129,
+    "csv_file": "06_Works/categorized_datasets/by_category/education_school_infrastructure.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/education_school_infrastructure.json"
+  },
+  {
+    "category": "Electricity, Lighting & Solar Energy",
+    "total_works": 1940,
+    "completed_works": 1822,
+    "recommended_works": 118,
+    "completion_rate_pct": 93.92,
+    "total_expenditure_inr": 1110878939,
+    "average_work_cost_inr": 572618,
+    "csv_file": "06_Works/categorized_datasets/by_category/electricity_lighting_solar_energy.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/electricity_lighting_solar_energy.json"
+  },
+  {
+    "category": "Health, Sanitation & Public Hygiene",
+    "total_works": 368,
+    "completed_works": 320,
+    "recommended_works": 48,
+    "completion_rate_pct": 86.96,
+    "total_expenditure_inr": 341123105,
+    "average_work_cost_inr": 926964,
+    "csv_file": "06_Works/categorized_datasets/by_category/health_sanitation_public_hygiene.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/health_sanitation_public_hygiene.json"
+  },
+  {
+    "category": "Irrigation & Flood Protection",
+    "total_works": 230,
+    "completed_works": 197,
+    "recommended_works": 33,
+    "completion_rate_pct": 85.65,
+    "total_expenditure_inr": 128934297,
+    "average_work_cost_inr": 560583,
+    "csv_file": "06_Works/categorized_datasets/by_category/irrigation_flood_protection.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/irrigation_flood_protection.json"
+  },
+  {
+    "category": "Other Civil & Development Works",
+    "total_works": 4806,
+    "completed_works": 4171,
+    "recommended_works": 635,
+    "completion_rate_pct": 86.79,
+    "total_expenditure_inr": 2666790655,
+    "average_work_cost_inr": 554887,
+    "csv_file": "06_Works/categorized_datasets/by_category/other_civil_development_works.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/other_civil_development_works.json"
+  },
+  {
+    "category": "Repair, Renovation & Maintenance",
+    "total_works": 64,
+    "completed_works": 56,
+    "recommended_works": 8,
+    "completion_rate_pct": 87.5,
+    "total_expenditure_inr": 41594576,
+    "average_work_cost_inr": 649915,
+    "csv_file": "06_Works/categorized_datasets/by_category/repair_renovation_maintenance.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/repair_renovation_maintenance.json"
+  },
+  {
+    "category": "Roads & Pathways",
+    "total_works": 5783,
+    "completed_works": 4920,
+    "recommended_works": 863,
+    "completion_rate_pct": 85.08,
+    "total_expenditure_inr": 3365324417,
+    "average_work_cost_inr": 581934,
+    "csv_file": "06_Works/categorized_datasets/by_category/roads_pathways.csv",
+    "json_file": "06_Works/categorized_datasets/by_category/roads_pathways.json"
+  }
+]

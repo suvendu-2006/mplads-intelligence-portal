@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "data": {
+    "sectors": [
+      {
+        "name": "Normal/Others",
+        "expenditure": {
+          "total": 0,
+          "transactions": 0,
+          "average": 0
+        },
+        "works": {
+          "count": 49400,
+          "totalCost": 23278089179.26,
+          "avgCost": 471216.3801469635
+        }
+      },
+      {
+        "name": "Repair and Renovation",
+        "expenditure": {
+          "total": 0,
+          "transactions": 0,
+          "average": 0
+        },
+        "works": {
+          "count": 413,
+          "totalCost": 233651210,
+          "avgCost": 565741.4285714285
+        }
+      },
+      {
+        "name": "Trust and Society",
+        "expenditure": {
+          "total": 0,
+          "transactions": 0,
+          "average": 0
+        },
+        "works": {
+          "count": 169,
+          "totalCost": 137653797,
+          "avgCost": 814519.5088757396
+        }
+      },
+      {
+        "name": "N/A",
+        "expenditure": {
+          "total": 0,
+          "transactions": 0,
+          "average": 0
+        },
+        "works": {
+          "count": 18,
+          "totalCost": 14121608,
+          "avgCost": 784533.7777777778
+        }
+      }
+    ],
+    "summary": {
+      "totalSectors": 4,
+      "filters": {
+        "house": "all"
+      }
+    }
+  }
+}

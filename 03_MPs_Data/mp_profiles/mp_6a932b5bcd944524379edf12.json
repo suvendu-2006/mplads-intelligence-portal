@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf12",
+    "name": "RAHUL SINGH LODHI",
+    "constituency": "DAMOH",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 163058785.37,
+    "totalExpenditure": 72714957,
+    "utilizationPercentage": 44.59432028455321,
+    "completedWorksCount": 173,
+    "recommendedWorksCount": 126,
+    "completedWorksValue": 36808824,
+    "inProgressPayments": 35906133,
+    "paymentGapPercentage": 49.37929482651004,
+    "completionRate": 57.859531772575245,
+    "pendingWorks": -47,
+    "unspentAmount": 90343828.37,
+    "totalRecommendedAmount": 51922028,
+    "name_hi": "RAHUL SINGH LODHI",
+    "constituency_hi": "DAMOH",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 72714957,
+      "totalEntries": 342,
+      "avgExpenditure": 212616.83333333334,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4750000,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 33458616,
+        "transactionCount": 186
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34506341,
+        "transactionCount": 133
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 72714957,
+        "transactionCount": 342,
+        "avgAmount": 212616.83333333334
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 173,
+    "recommendedCount": 126,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c54c",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT BELAI ME SAMUDAYIK NIRMAN KARY",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 999980
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cdfd",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT KUNWARPURA KALAN ME 5000 LRT PANEE TENKAR KI KHAREED",
+        "completedDate": "2026-07-16T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cdfa",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT CHAURAI ME 5000 LRT PANEE TENKAR KI KHAREED",
+        "completedDate": "2026-07-16T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cdf8",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT BIRAMPURA ME 5000 LRT PANEE TENKAR KI KHAREED",
+        "completedDate": "2026-07-16T00:00:00.000Z",
+        "finalAmount": 199604
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cdf7",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT DEVPUR PRATHAM ME 5000 LRT PANEE TENKAR KI KHAREED",
+        "completedDate": "2026-07-16T00:00:00.000Z",
+        "finalAmount": 199604
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.646Z"
+}

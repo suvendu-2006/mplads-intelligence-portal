@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf6f",
+    "name": "Shri Jual Oram",
+    "constituency": "SUNDARGARH",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 173096756.91,
+    "totalExpenditure": 65790931,
+    "utilizationPercentage": 38.00818234521133,
+    "completedWorksCount": 89,
+    "recommendedWorksCount": 111,
+    "completedWorksValue": 47778097,
+    "inProgressPayments": 18012834,
+    "paymentGapPercentage": 27.37890120448364,
+    "completionRate": 44.5,
+    "pendingWorks": 22,
+    "unspentAmount": 107305825.91,
+    "totalRecommendedAmount": 70428256,
+    "name_hi": "Shri Jual Oram",
+    "constituency_hi": "SUNDARGARH",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65790931,
+      "totalEntries": 270,
+      "avgExpenditure": 243670.11481481482,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 500000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 40689463,
+        "transactionCount": 149
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24601468,
+        "transactionCount": 120
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65790931,
+        "transactionCount": 270,
+        "avgAmount": 243670.11481481482
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 89,
+    "recommendedCount": 111,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1925b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Conference Hall of Oram Shanskrutika Samaj, Sundargarh (Executing Agency ITDA Sundargarh)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19a67",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of Building of Oram Shanskrutika Samaj, Sundargarh (Executing Agency ITDA Sundargarh)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 990000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Building at Jadaloi",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1768f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Open Pendal of Oram Shanskrutika Samaj, Sundargarh (Executing Agency ITDA Sundargarh)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9de",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of CC Building near Ekal Abhiyan Office, Sector-14",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 700000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.741Z"
+}

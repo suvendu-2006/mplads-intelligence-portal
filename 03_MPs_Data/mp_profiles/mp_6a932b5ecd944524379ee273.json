@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee273",
+    "name": "Shri P. P. Suneer (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 122500000,
+    "totalExpenditure": 18439441,
+    "utilizationPercentage": 15.052604897959185,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 10661718,
+    "inProgressPayments": 7777723,
+    "paymentGapPercentage": 42.179819876318376,
+    "completionRate": 21.59090909090909,
+    "pendingWorks": 50,
+    "unspentAmount": 104060559,
+    "totalRecommendedAmount": 70106250,
+    "name_hi": "Shri P. P. Suneer (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 18439441,
+      "totalEntries": 31,
+      "avgExpenditure": 594820.6774193548,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1175896,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17263545,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 18439441,
+        "transactionCount": 31,
+        "avgAmount": 594820.6774193548
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f98",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of School Bus for Marancheri Govt. Higher Secondary School  for  the transportation of their  students  to School and back.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 2579526
+      },
+      {
+        "_id": "6a932bb5cd94452437a32448",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Mini Mast Light at Town Hall Junction of ward-33,Manjeri Municipality",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 293975
+      },
+      {
+        "_id": "6a932bb5cd94452437a32465",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar MiniMast Light at Mattida Colony-Kovilakam Road Juntion of ward-33 of Manjeri Municipality",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 293975
+      },
+      {
+        "_id": "6a932bb5cd94452437a3243a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Mini Mast light at Pottakulangara Temple Kurukkankunnu Road End  Ward 15 Trikkalangode Grama Panchayat",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 297999
+      },
+      {
+        "_id": "6a932bb5cd94452437a3242e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concrete Work of Kunnath Velayudhan Road",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 827307
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.237Z"
+}

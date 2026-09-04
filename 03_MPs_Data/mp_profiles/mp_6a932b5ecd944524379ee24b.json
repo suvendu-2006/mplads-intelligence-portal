@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee24b",
+    "name": "Shri Jogen Mohan (2026-32)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Assam",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 49000000,
+    "totalExpenditure": 1500000,
+    "utilizationPercentage": 3.061224489795918,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 22,
+    "completedWorksValue": 0,
+    "inProgressPayments": 1500000,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 22,
+    "unspentAmount": 47500000,
+    "totalRecommendedAmount": 30400000,
+    "name_hi": "Shri Jogen Mohan (2026-32)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 1500000,
+      "totalEntries": 1,
+      "avgExpenditure": 1500000,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 1500000,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 1500000,
+        "transactionCount": 1,
+        "avgAmount": 1500000
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 22,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:02.692Z"
+}

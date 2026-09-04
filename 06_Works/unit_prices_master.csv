@@ -1,0 +1,31 @@
+category,item_code,item_name,unit,standard_unit_price_inr,min_unit_price_inr,max_unit_price_inr,benchmark_source,tolerance_upper_pct
+Roads & Pathways,ROAD-001,"Cement Concrete (CC) Road (M20 grade, 3m width)",per meter,3200,2500,4200,CPWD DSR 2023,25
+Roads & Pathways,ROAD-002,Interlocking Paver Block Pathway / Street,per sq. meter,950,750,1200,CPWD DSR 2023,20
+Roads & Pathways,ROAD-003,Bituminous / Black Top Road (WBM + Bitumen),per meter,4500,3600,5800,State PWD SOR,25
+Roads & Pathways,ROAD-004,RCC Box Culvert (Single Vent 2m x 2m),per unit,350000,280000,450000,CPWD DSR 2023,25
+Roads & Pathways,ROAD-005,RCC Covered Side Drainage Drain,per meter,1800,1400,2400,CPWD DSR 2023,25
+Drinking Water,WATER-001,"Borewell Installation with Submersible Pump & Pipe (150mm dia, 100m depth)",per unit,180000,140000,240000,State Jal Nigam / CGWB,30
+Drinking Water,WATER-002,Commercial RO Water Purification Plant (500 LPH with SS Tank),per plant,300000,240000,400000,GeM Marketplace 2023,25
+Drinking Water,WATER-003,Commercial RO Water Purification Plant (1000 LPH Capacity),per plant,480000,380000,620000,GeM Marketplace 2023,25
+Drinking Water,WATER-004,Mark-II Handpump Installation with Concrete Platform & Soakpit,per unit,75000,55000,95000,State Jal Nigam Norms,25
+Drinking Water,WATER-005,Overhead Sintex / Polyethylene Water Tank (5000 Litres on RCC Staging),per unit,125000,95000,165000,CPWD DSR 2023,25
+Sanitation & Public Health,SAN-001,Community Toilet Complex (4 Seater Male/Female with Septic Tank),per complex,550000,450000,700000,CPWD Plinth Rates,20
+Sanitation & Public Health,SAN-002,School Toilet Unit (2 Urinals + 2 WC with Water Supply),per unit,180000,140000,230000,Swachh Bharat Vidyalaya Norms,20
+Sanitation & Public Health,SAN-003,Solid Waste Management Collection E-Rickshaw / Mini Tipper,per vehicle,260000,220000,310000,GeM Portal Rate,15
+Electricity & Energy,ELEC-001,Solar LED Street Light (20W-30W with LiFePO4 Battery & Pole),per pole,24000,19000,31000,MNRE Benchmark Rates 2023,25
+Electricity & Energy,ELEC-002,Solar High-Mast Lighting System (4 x 100W LED with 12m Mast),per mast,280000,220000,360000,MNRE Benchmark Rates 2023,25
+Electricity & Energy,ELEC-003,Grid-Tied Rooftop Solar Power Plant (5 kWp with Net Meter),per plant,250000,200000,320000,MNRE Benchmark Rates 2023,20
+Electricity & Energy,ELEC-004,Distribution Transformer (63 kVA 11/0.433 kV),per unit,185000,150000,230000,State DISCOM Schedule,20
+Education & Community,BLDG-001,"School Additional Classroom Construction (RCC, 400 sq.ft)",per classroom,850000,700000,1100000,CPWD Plinth Rates 2023,20
+Education & Community,BLDG-002,Community Hall / Sansad Bhavan Building (RCC Plinth Area),per sq. feet,1850,1500,2350,CPWD Plinth Rates 2023,20
+Education & Community,BLDG-003,Anganwadi Center Building (Complete with Verandah & Store),per building,1200000,950000,1500000,WCD & CPWD Norms,20
+Education & Community,BLDG-004,School Dual Desk Benches (Wooden/Steel Frame Set of 10 Desks),per set of 10,42000,35000,52000,GeM Rate Contract,20
+Education & Community,BLDG-005,Smart Classroom / Computer Lab Setup (10 PCs + Smart TV/Interactive Board),per lab,650000,520000,800000,GeM Rate Contract,20
+Education & Community,BLDG-006,Brick Masonry Boundary Wall (1.8m Height with Plaster),per meter,3800,3000,4800,CPWD DSR 2023,25
+Health & Family Welfare,HLTH-001,Fully Equipped Mobile Medical Dispensary Van (Fabricated with Diagnostics),per vehicle,2800000,2300000,3400000,MoHFW / GeM Portal,15
+Health & Family Welfare,HLTH-002,Basic Life Support (BLS) Ambulance (Fabricated Vehicle with Oxygen),per ambulance,1800000,1500000,2200000,GeM Portal Rate,15
+Health & Family Welfare,HLTH-003,Hearse Van (Dead Body Transportation Fabricated Van),per vehicle,2000000,1600000,2400000,GeM Portal Rate,15
+Health & Family Welfare,HLTH-004,Hemodialysis Machine with RO Water Plant Setup for District Hospital,per unit,850000,700000,1050000,MoHFW / GeM,15
+Sports & Community,SPRT-001,Open Air Gym Equipment Set (6 Commercial Outdoor Exercise Stations),per set,350000,280000,450000,GeM Marketplace,20
+Sports & Community,SPRT-002,Crematorium / Shamshan Ghat Covered Shed & Burning Platform (RCC/Truss),per shed,950000,750000,1250000,CPWD Plinth Rates,25
+Sports & Community,SPRT-003,High-Mast Flood Lighting for Village Sports Playground (16m Mast),per mast,480000,380000,600000,CPWD Electrical DSR,25

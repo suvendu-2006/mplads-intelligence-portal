@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4e",
+    "name": "Saumitra khan ",
+    "constituency": "BISHNUPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55661990,
+    "utilizationPercentage": 37.86529931972789,
+    "completedWorksCount": 48,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 53932695,
+    "inProgressPayments": 1729295,
+    "paymentGapPercentage": 3.10677897071233,
+    "completionRate": 58.536585365853654,
+    "pendingWorks": -14,
+    "unspentAmount": 91338010,
+    "totalRecommendedAmount": 42771000,
+    "name_hi": "Saumitra khan ",
+    "constituency_hi": "BISHNUPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55661990,
+      "totalEntries": 50,
+      "avgExpenditure": 1113239.8,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17084651,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38577339,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55661990,
+        "transactionCount": 50,
+        "avgAmount": 1113239.8
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 48,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LED High Mast Light with Pole (Pole- 9mtr, 40Watt LED Flood Light 4 pcs, Battery- 12.8 V, 30-36 AH Lithium Ferro Battery, Panel- 150 Wp) Total No. 2nos. X 310000 /-each.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 574443
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e59f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LED Street Light",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 413550
+      },
+      {
+        "_id": "6a932bb5cd94452437a197b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LED Street Light with Pole (Pole- 6mtr, 18Watt, Battery- 12.8V, 24 AH Lithium Ferro Battery, Module- 75Wp Solar Panel) Total Nos. 52Nos. x 38000/- Each",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 1768329
+      },
+      {
+        "_id": "6a932bb5cd94452437a197b4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LED Street Light with Pole (Pole 6mtr, 18Watt, Battery 12.8V, 24 AH Lithium Ferro Battery, Module 75Wp Solar Panel) Total 22 Nos. x 38000/ each",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 748139
+      },
+      {
+        "_id": "6a932bb5cd94452437a194cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar LED Street Light with Pole (Pole 6mtr, 18Watt, Battery 12.8V, 24 AH Lithium Ferro Battery, Module 75Wp Solar Panel) Total 49 Nos. x 38000/ each",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 1663643
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.248Z"
+}

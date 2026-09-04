@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edede",
+    "name": "NARAYAN DAS AHIRWAR",
+    "constituency": "JALAUN",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 51218010.8,
+    "utilizationPercentage": 34.84218421768707,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 331,
+    "completedWorksValue": 8158216.800000001,
+    "inProgressPayments": 43059794,
+    "paymentGapPercentage": 84.07158600544479,
+    "completionRate": 9.809264305177113,
+    "pendingWorks": 295,
+    "unspentAmount": 95781989.2,
+    "totalRecommendedAmount": 115557900,
+    "name_hi": "NARAYAN DAS AHIRWAR",
+    "constituency_hi": "JALAUN",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 51218010.8,
+      "totalEntries": 292,
+      "avgExpenditure": 175404.14657534246,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 23784465.8,
+        "transactionCount": 165
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27433545,
+        "transactionCount": 127
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 51218010.8,
+        "transactionCount": 292,
+        "avgAmount": 175404.14657534246
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 331,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18ed3",
+        "workCategory": "Normal/Others",
+        "workDescription": "MS Pole with LED semi High Mast Light",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 211299
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ed2",
+        "workCategory": "Normal/Others",
+        "workDescription": "MS Pole with LED semi High Mast Light",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 211299
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ed5",
+        "workCategory": "Normal/Others",
+        "workDescription": "MS Pole with LED semi High Mast Light",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 211299
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ed4",
+        "workCategory": "Normal/Others",
+        "workDescription": "MS Pole with LED semi High Mast Light",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 211299
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ed0",
+        "workCategory": "Normal/Others",
+        "workDescription": "MS Pole with LED semi High Mast Light",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 211299
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.444Z"
+}

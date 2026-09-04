@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede03",
+    "name": "Bhola Singh",
+    "constituency": "BULANDSHAHR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 101017522,
+    "utilizationPercentage": 68.71940272108844,
+    "completedWorksCount": 142,
+    "recommendedWorksCount": 148,
+    "completedWorksValue": 70121237,
+    "inProgressPayments": 30896285,
+    "paymentGapPercentage": 30.58507513181723,
+    "completionRate": 48.96551724137931,
+    "pendingWorks": 6,
+    "unspentAmount": 45982478,
+    "totalRecommendedAmount": 64320879,
+    "name_hi": "Bhola Singh",
+    "constituency_hi": "BULANDSHAHR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 101017522,
+      "totalEntries": 250,
+      "avgExpenditure": 404070.088,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 50875984,
+        "transactionCount": 105
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 50141538,
+        "transactionCount": 145
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 101017522,
+        "transactionCount": 250,
+        "avgAmount": 404070.088
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 142,
+    "recommendedCount": 148,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17c1a",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of c.c. road from amar singh house to main road(106mtr) by PCCD",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 613576
+      },
+      {
+        "_id": "6a932bb5cd94452437a17c19",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of c.c. road from pathwari dev sthal to niranjan singh house(200mtr) by PCCD",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 2026545
+      },
+      {
+        "_id": "6a932bb5cd94452437a17c12",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of c.c. road from rampal singh house toward devender house by PCCD",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1307965
+      },
+      {
+        "_id": "6a932bb5cd94452437a17c28",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of c.c. road from aadhar sampark marg to P.C. sharma house by PCCD",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 2035193
+      },
+      {
+        "_id": "6a932bb5cd94452437a17c17",
+        "workCategory": "Normal/Others",
+        "workDescription": "const. of c.c. road from bandour road towards yogendra thakur house(200mtr) by PCCD",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1392538
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.179Z"
+}

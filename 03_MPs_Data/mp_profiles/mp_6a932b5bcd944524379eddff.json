@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddff",
+    "name": "BHARTI PARDHI",
+    "constituency": "BALAGHAT",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 154398389.01,
+    "totalExpenditure": 92426127,
+    "utilizationPercentage": 59.86210581122954,
+    "completedWorksCount": 80,
+    "recommendedWorksCount": 85,
+    "completedWorksValue": 44802146,
+    "inProgressPayments": 47623981,
+    "paymentGapPercentage": 51.52653534860332,
+    "completionRate": 48.484848484848484,
+    "pendingWorks": 5,
+    "unspentAmount": 61972262.00999999,
+    "totalRecommendedAmount": 56380596,
+    "name_hi": "BHARTI PARDHI",
+    "constituency_hi": "BALAGHAT",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 92426127,
+      "totalEntries": 491,
+      "avgExpenditure": 188240.58452138494,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 52920772,
+        "transactionCount": 263
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39505355,
+        "transactionCount": 228
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 92426127,
+        "transactionCount": 491,
+        "avgAmount": 188240.58452138494
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 80,
+    "recommendedCount": 85,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bab3",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT KE AWAS TOLA SE MUKTIDHAM KI OR C.C. ROAD NIRMAN (200 MEETER)",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18280",
+        "workCategory": "Normal/Others",
+        "workDescription": "MENDE NALA MEIN STOP DAM NIRMAN KARYA",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 2499970
+      },
+      {
+        "_id": "6a932bb5cd94452437a1827f",
+        "workCategory": "Normal/Others",
+        "workDescription": "MOHRAI SE JHIMRATOLA MARG PAR SLAB PULIYA NIRMAN KARYA",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 2499909
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdf7",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT SUKLA TEH BARGHAT KE LAMYA MEIN GHAT NIRMAN KARYA.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18283",
+        "workCategory": "Normal/Others",
+        "workDescription": "NH 30 SE JANGALI KHEDA MARG PAR SLAB PILIYA NIRMAN KARYA",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 2499945
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.240Z"
+}

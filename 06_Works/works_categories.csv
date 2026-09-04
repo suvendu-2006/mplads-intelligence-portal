@@ -1,0 +1,11 @@
+﻿_id,workCount,category,category_hi,totalCost,avgCost,status_type,totalEstimatedCost,avgEstimatedCost
+Normal/Others,113173,Normal/Others,Normal/Others,55135627666.04,487180.05,Completed,,
+Repair and Renovation,879,Repair and Renovation,Repair and Renovation,512935270.0,583544.11,Completed,,
+Trust and Society,388,Trust and Society,Trust and Society,335070513.26,863583.8,Completed,,
+N/A,48,N/A,N/A,36145913.0,753039.85,Completed,,
+Bar and Associations,3,Bar and Associations,Bar and Associations,199980.0,66660.0,Completed,,
+Normal/Others,105392,Normal/Others,Normal/Others,,,Recommended,63985303956.21,607117.28
+Trust and Society,1039,Trust and Society,Trust and Society,,,Recommended,1144161633.0,1101214.28
+Repair and Renovation,1560,Repair and Renovation,Repair and Renovation,,,Recommended,1028643567.0,659386.9
+N/A,41,N/A,N/A,,,Recommended,28203379.0,687887.29
+Bar and Associations,18,Bar and Associations,Bar and Associations,,,Recommended,925000.0,51388.89

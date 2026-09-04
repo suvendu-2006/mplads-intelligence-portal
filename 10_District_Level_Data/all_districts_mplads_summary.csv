@@ -1,0 +1,733 @@
+state,district_nodal,total_works,completed_works_count,recommended_works_count,completion_rate_pct,completed_works_value_inr,in_progress_payments_inr,mp_count,mps_active,constituencies_covered,primary_sector
+West Bengal,SOUTH 24 PARGANAS,193,193,0,100.0,0.0,0.0,4,"BAPI HALDAR, Pratima Mondal , SAYANI GHOSH, Shri Abhishek Banerjee","DIAMOND HARBOUR, JADAVPUR, JOYNAGAR, MATHURAPUR",Normal/Others
+Bihar,PATNA,191,191,0,100.0,0.0,0.0,7,"Dr. Bhim Singh (2024-30), Dr. Dharmshila Gupta (2024-30), Dr. Faiyaz Ahmad (2022-28), Ravi Shankar Prasad, Shri Akhilesh Prasad Singh (2024-30), Shri Khiru Mahto (2022-28), Shri Shambhu Sharan Patel (2022-28)","PATNA SAHIB, Sitting Rajya Sabha",Normal/Others
+Jharkhand,RANCHI,179,179,0,100.0,0.0,0.0,6,"KALI CHARAN MUNDA, SUKHDEO BHAGAT, Sanjay Seth , Shri Aditya Prasad (2022-28), Shri Pradip Kumar Varma (2024-30), Smt. Mahua Maji (2022-28)","KHUNTI, LOHARDAGA, RANCHI, Sitting Rajya Sabha",Normal/Others
+Karnataka,BENGALURU URBAN,159,159,0,100.0,0.0,0.0,8,"DR C N MANJUNATH, DR.K.SUDHAKAR, P C Mohan, SHOBHA KARANDLAJE, Shri G.C. Chandrashekhar (2024-30), Shri Jaggesh (2022-28), Shri LS Tejasvi Surya , Shri Narayanasa K. Bhandage (2024-30)","BANGALORE CENTRAL, BANGALORE NORTH, BANGALORE RURAL, BANGALORE SOUTH, CHIKBALLAPUR, Sitting Rajya Sabha",Normal/Others
+Kerala,MALAPPURAM,155,155,0,100.0,0.0,0.0,9,"DR. M.P ABDUSSAMAD SAMADANI, Dr. John Brittas (2021-27), E.T. MOHAMMED BASHEER, Priyanka Gandhi Vadra, Shri Abdul Wahab (2021-27), Shri Haris Beeran (2024-30), Shri P. P. Suneer (2024-30), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","MALAPPURAM, Nominated Rajya Sabha, PONNANI, Sitting Rajya Sabha, WAYANAD",Normal/Others
+Uttar Pradesh,JAUNPUR,150,150,0,100.0,0.0,0.0,6,"BABU SINGH KUSHWAHA, PRIYA SAROJ, Shri Brij Lal (2020-26), Shri Javed Ali Khan (2022-28), Shri Kapil Sibal (2022-28), Smt. Seema Dwivedi (2020-26)","JAUNPUR, MACHHLISHAHR, Sitting Rajya Sabha",Normal/Others
+West Bengal,HOOGHLY,140,140,0,100.0,0.0,0.0,4,"BAG MITALI, Kalyan Banerjee, RACHNA BANERJEE, Smt. Mamata Thakur (2024-30)","ARAMBAG, HOOGHLY, SREERAMPUR, Sitting Rajya Sabha",Normal/Others
+Bihar,MADHUBANI,136,136,0,100.0,0.0,0.0,7,"Ashok Kumar Yadav , Dr. Bhim Singh (2024-30), Dr. Dharmshila Gupta (2024-30), Dr. Faiyaz Ahmad (2022-28), Ramprit Mandal, Shri Sanjay Kumar Jha (2024-30), Shri Shambhu Sharan Patel (2022-28)","JHANJHARPUR, MADHUBANI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,KUSHINAGAR,126,126,0,100.0,0.0,0.0,4,"SHASHANK MANI, Shri Ratanjit Pratap Narain Singh (2024-30), Smt. Sangeeta Yadav (2022-28), Vijay Kumar Dubey","DEORIA, KUSHI NAGAR, Sitting Rajya Sabha",Normal/Others
+Kerala,KANNUR,126,126,0,100.0,0.0,0.0,8,"Dr. John Brittas (2021-27), Dr. V. Sivadasan (2021-27), Shri Abdul Wahab (2021-27), Shri Kumbakudi Sudhakaran, Shri Rajmohan Unnithan , Shri Sandosh Kumar P (2022-28), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","KANNUR, KASARAGOD, Nominated Rajya Sabha, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,MADURAI,125,125,0,100.0,0.0,0.0,6,"Manickam Tagore B, S Venkatesan, Shri R. Dharmar (2022-28), Shri R. Girirajan (2022-28), Shri S. Kalyanasundaram (2022-28), THANGA TAMILSELVAN","MADURAI, Sitting Rajya Sabha, THENI, VIRUDHUNAGAR",Normal/Others
+Kerala,THIRUVANANTHAPURAM,114,114,0,100.0,0.0,0.0,8,"Adv Adoor Prakash , Dr Shashi Tharoor, Dr. John Brittas (2021-27), Shri A. A. Rahim (2022-28), Shri Abdul Wahab (2021-27), Shri Haris Beeran (2024-30), Shri Jose K. Mani (2024-30), Smt. P. T. Usha (2022-28)","ATTINGAL, Nominated Rajya Sabha, Sitting Rajya Sabha, THIRUVANANTHAPURAM",Normal/Others
+Uttar Pradesh,ETAH,113,113,0,100.0,0.0,0.0,4,"DEVESH SHAKYA, Mukesh Rajput, Prof SP Singh Baghel, Shri Ramji Lal Suman (2024-30)","AGRA, ETAH, FARRUKHABAD, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,AGRA,111,111,0,100.0,0.0,0.0,5,"Dr. K. Laxman (2022-28), Prof SP Singh Baghel, Rajkumar Chahar , Shri Mithlesh Kumar (2022-28), Shri Naveen Jain (2024-30)","AGRA, FATEHPUR SIKRI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BALLIA,111,111,0,100.0,0.0,0.0,5,"RAJEEV RAI, RAMASHANKAR RAJBHAR, SANATAN PANDEY, Shri Kapil Sibal (2022-28), Shri Neeraj Shekhar (2020-26)","BALLIA, GHOSI, SALEMPUR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,SALEM,105,105,0,100.0,0.0,0.0,6,"Dr. M. Dhanapal (2025-31), MALAIYARASAN D, MANI. A., Shri I.S. Inbadurai (2025-31), Shri S.R. Sivalingam (2025-31), V S Matheswaran","DHARAMAPURI, KALLAKURICHI, NAMAKKAL, Sitting Rajya Sabha",Normal/Others
+West Bengal,HOWRAH,105,105,0,100.0,0.0,0.0,3,"Kalyan Banerjee, Prasun Banerjee, Smt Sajda Ahmed","HOWRAH, SREERAMPUR, ULUBERIA",Normal/Others
+Gujarat,BANAS KANTHA,103,103,0,100.0,0.0,0.0,5,"Bharatsinhji Shankarji Dabhi, GENIBEN NAGAJI THAKOR, Shri Babubhai Jesangbhai Desai (2023-29), Shri Govindbhai Laljibhai Dholakia (2024-30), Shri Mayankkumar Nayak (2024-30)","BANASKANTHA, PATAN, Sitting Rajya Sabha",Normal/Others
+West Bengal,PURBA MEDINIPUR,103,103,0,100.0,0.0,0.0,4,"ABHIJIT GANGOPADHYAY, ADHIKARI SOUMENDU, Shri Samik Bhattacharya (2024-30), Smt. Mamata Thakur (2024-30)","KANTHI, Sitting Rajya Sabha, TAMLUK",Normal/Others
+Uttar Pradesh,KHERI,102,102,0,100.0,0.0,0.0,3,"ANAND BHADAURIYA, Shri Javed Ali Khan (2022-28), UTKARSH VERMA MADHUR","DHAURAHRA, KHERI, Sitting Rajya Sabha",Normal/Others
+Jharkhand,PALAMU,102,102,0,100.0,0.0,0.0,4,"KALI CHARAN SINGH, Shri Aditya Prasad (2022-28), Shri Pradip Kumar Varma (2024-30), Vishnu Dayal Ram","CHATRA, PALAMU, Sitting Rajya Sabha",Normal/Others
+Punjab,JALANDHAR,101,101,0,100.0,0.0,0.0,5,"CHARANJIT SINGH CHANNI, Dr. Ashok Kumar Mittal (2022-28), Dr. Vikramjit Singh Sahney (2022-28), Shri Harbhajan Singh (2022-28), Shri Sant Balbir Singh (2022-28)","JALANDHAR, Sitting Rajya Sabha",Normal/Others
+Bihar,PURBI CHAMPARAN,101,100,1,99.01,0.0,0.0,7,"Dr. Dharmshila Gupta (2024-30), LOVELY ANAND, Radha Mohan Singh, Shri Akhilesh Prasad Singh (2024-30), Shri Khiru Mahto (2022-28), Shri Manan Kumar Mishra (2024-28), Shri Satish Chandra Dubey (2022-28)","PURVI CHAMPARAN, SHEOHAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,KANPUR NAGAR,98,98,0,100.0,0.0,0.0,2,"Devendra Alias Bhole Singh, RAMESH AWASTHI","AKBARPUR, KANPUR",Normal/Others
+West Bengal,NADIA,98,98,0,100.0,0.0,0.0,3,"Abu Taher Khan, Jagannath Sarkar, Ms Mahua Moitra","KRISHNANAGAR, MURSHIDABAD, RANAGHAT",Normal/Others
+Andhra Pradesh,Y.S.R. KADAPA,373,97,276,26.01,0.0,6456888.0,8,"Appalanaidu Kalisetti, C.M.RAMESH, Maddila Gurumoorthy, Midhun Reddy, Putta Mahesh Kumar, Shri Meda Raghunadha Reddy (2024-30), Shri Ryaga Krishnaiah (2024-28), Y S Avinash Reddy","ANAKAPALLE, ELURU, KADAPA, RAJAMPET, Sitting Rajya Sabha, TIRUPATI, VIZIANAGARAM",Normal/Others
+Kerala,PALAKKAD,97,97,0,100.0,0.0,0.0,9,"DR. M.P ABDUSSAMAD SAMADANI, K RADHAKRISHNAN, Shri Abdul Wahab (2021-27), Shri Haris Beeran (2024-30), Shri Jose K. Mani (2024-30), Shri Sandosh Kumar P (2022-28), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28), Vellalath Kochukrishnan Nair Sreekandan","ALATHUR, Nominated Rajya Sabha, PALAKKAD, PONNANI, Sitting Rajya Sabha",Normal/Others
+Kerala,KOTTAYAM,97,97,0,100.0,0.0,0.0,7,"ADV K FRANCIS GEORGE, Anto Antony, Dr. John Brittas (2021-27), Shri Haris Beeran (2024-30), Shri Jose K. Mani (2024-30), Shri Sandosh Kumar P (2022-28), Shri Suresh Kodikunnil","KOTTAYAM, MAVELIKKARA, PATHANAMTHITTA, Sitting Rajya Sabha",Normal/Others
+Gujarat,SURAT,97,97,0,100.0,0.0,0.0,2,"MUKESHKUMAR CHANDRAKAANT DALAL, Prabhubhai Nagarbhai Vasava","BARDOLI, SURAT",Normal/Others
+Bihar,PASHCHIM CHAMPARAN,97,96,1,98.97,0.0,0.0,2,"Shri Satish Chandra Dubey (2022-28), Sunil Kumar ","Sitting Rajya Sabha, VALMIKI NAGAR",Normal/Others
+Tamil Nadu,TIRUVANNAMALAI,95,95,0,100.0,0.0,0.0,4,"CN Annadurai, Shri K.R.N. Rajeshkumar (2022-28), Shri R. Girirajan (2022-28), THARANIVENTHAN M S","ARANI, Sitting Rajya Sabha, TIRUVANNAMALAI",Normal/Others
+Tamil Nadu,NAMAKKAL,94,94,0,100.0,0.0,0.0,3,"K E PRAKASH, Shri K.R.N. Rajeshkumar (2022-28), V S Matheswaran","ERODE, NAMAKKAL, Sitting Rajya Sabha",Normal/Others
+Maharashtra,AMRAVATI,94,94,0,100.0,0.0,0.0,4,"AMAR SHARADRAO KALE, BALWANT BASWANT WANKHADE, Dr. Anil Sukhdeorao Bonde (2022-28), Shri Imran Pratapgarhi (2022-28)","AMRAVATI, Sitting Rajya Sabha, WARDHA",Normal/Others
+Uttar Pradesh,BAREILLY,93,93,0,100.0,0.0,0.0,6,"CHHATRA PAL SINGH GANGWAR, JITIN PRASADA, NEERAJ MAURYA, Shri Mithlesh Kumar (2022-28), Shri Surendra Singh Nagar (2022-28), Smt. Darshana Singh (2022-28)","AONLA, BAREILLY, PILIBHIT, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,MORADABAD,93,93,0,100.0,0.0,0.0,4,"RUCHI VIRA, Shri Javed Ali Khan (2022-28), Shri Kapil Sibal (2022-28), Shri Surendra Singh Nagar (2022-28)","MORADABAD, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,JABALPUR,91,91,0,100.0,0.0,0.0,4,"ASHISH DUBEY, Shri Vivek K. Tankha (2022-28), Smt. Maya Naroliya (2024-30), Smt. Sumitra Balmik (2022-28)","JABALPUR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,PUDUKKOTTAI,91,91,0,100.0,0.0,0.0,8,"DURAI VAIKO, Kani K Navas, Shri I.S. Inbadurai (2025-31), Shri K.R.N. Rajeshkumar (2022-28), Shri Karti P Chidambaram , Shri P. Chidambaram (2022-28), Shri R. Girirajan (2022-28), Smt S Jothimani","KARUR, RAMANATHAPURAM, SIVAGANGA, Sitting Rajya Sabha, TIRUCHIRAPPALLI",Normal/Others
+West Bengal,BIRBHUM,91,91,0,100.0,0.0,0.0,3,"Asit Kumar Mal , Shri Samik Bhattacharya (2024-30), Smt Satabdi Roy (Banerjee)","BIRBHUM, BOLPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,PRATAPGARH,90,90,0,100.0,0.0,0.0,5,"DR. S P SINGH, Dr. K. Laxman (2022-28), Shri Amar Pal Maurya (2024-30), Shri Kapil Sibal (2022-28), Smt. Sangeeta Yadav (2022-28)","PRATAPGARH, Sitting Rajya Sabha",Normal/Others
+Kerala,KOLLAM,90,90,0,100.0,0.0,0.0,5,"Shri Abdul Wahab (2021-27), Shri Haris Beeran (2024-30), Shri NK Premachandran, Shri Sandosh Kumar P (2022-28), Shri Suresh Kodikunnil","KOLLAM, MAVELIKKARA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BULANDSHAHR,89,89,0,100.0,0.0,0.0,3,"Bhola Singh, Mahesh Sharma, Shri Surendra Singh Nagar (2022-28)","BULANDSHAHR, GAUTAM BUDDHA NAGAR, Sitting Rajya Sabha",Normal/Others
+Bihar,DARBHANGA,88,88,0,100.0,0.0,0.0,3,"Ashok Kumar Yadav , Dr. Dharmshila Gupta (2024-30), Mr Gopal Jee Thakur","DARBHANGA, MADHUBANI, Sitting Rajya Sabha",Normal/Others
+Maharashtra,PUNE,88,88,0,100.0,0.0,0.0,6,"Amol Ramsing Kolhe, Dr. Medha Vishram Kulkarni (2024-30), MURLIDHAR MOHOL, Shri Praful Patel (2024-30), Shrirang Appa Barne, Smt Supriya Sadanand Sule","BARAMATI, MAVAL, PUNE, SHIRUR, Sitting Rajya Sabha",Normal/Others
+Telangana,RANGA REDDY,87,87,0,100.0,0.0,0.0,5,"ARUNA. D. K, EATALA RAJENDER, KONDA VISHWESHWAR REDDY, Shri Anil Kumar Yadav Mandadi (2024-30), Shri Damodar Rao Divakonda (2022-28)","CHELVELLA, MAHABUBNAGAR, MALKAJGIRI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,CHANDAULI,85,85,0,100.0,0.0,0.0,6,"CHHOTELAL, Shri Ramji (2020-26), Smt. Darshana Singh (2022-28), Smt. Sadhna Singh (2024-30), Smt. Sangeeta Yadav (2022-28), VIRENDRA SINGH","CHANDAULI, ROBERTSGANJ, Sitting Rajya Sabha",Normal/Others
+Jharkhand,DHANBAD,85,85,0,100.0,0.0,0.0,2,"DULU MAHATO, Shri Chandra Prakash Choudhary","DHANBAD, GIRIDIH",Normal/Others
+Uttar Pradesh,BUDAUN,84,84,0,100.0,0.0,0.0,3,"ADITYA YADAV, NEERAJ MAURYA, Shri B.L. Verma (2020-26)","AONLA, BADAUN, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,PILIBHIT,84,84,0,100.0,0.0,0.0,2,"Shri Javed Ali Khan (2022-28), Shri Ramji (2020-26)",Sitting Rajya Sabha,Normal/Others
+Tamil Nadu,CHENGALPATTU,84,84,0,100.0,0.0,0.0,5,"Dr. M. Dhanapal (2025-31), Ganesan Selvam, Shri R. Girirajan (2022-28), Shri S. Kalyanasundaram (2022-28), Thalikkottai Rajuthevar Baalu","KANCHEEPURAM, SRIPERUMBUDUR, Sitting Rajya Sabha",Normal/Others
+Punjab,LUDHIANA,84,84,0,100.0,0.0,0.0,4,"AMRINDER SINGH RAJA WARRING, Dr. Ashok Kumar Mittal (2022-28), Dr. Vikramjit Singh Sahney (2022-28), Shri Amar Singh","FATEHGARH SAHIB, LUDHIANA, Sitting Rajya Sabha",Normal/Others
+West Bengal,PASCHIM MEDINIPUR,84,84,0,100.0,0.0,0.0,5,"BAG MITALI, JUNE MALIAH, KALIPADA SAREN, Shri Deepak (Dev) Adhikari , Shri Samik Bhattacharya (2024-30)","ARAMBAG, GHATAL, JHARGRAM, MEDINIPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,MATHURA,83,83,0,100.0,0.0,0.0,2,"Shri Tejveer Singh (2024-30), Smt Hema Malini","MATHURA, Sitting Rajya Sabha",Normal/Others
+Bihar,GAYA,85,82,3,96.47,0.0,1200000.0,3,"ABHAY KUMAR SINHA, Dr. Bhim Singh (2024-30), JITAN RAM MANJHI","AURANGABAD, GAYA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,AURAIYA,82,82,0,100.0,0.0,0.0,4,"AKHILESH YADAV, JITENDRA KUMAR DOHARE, Shri B.L. Verma (2020-26), Smt. Geeta alias Chandraprabha (2020-26)","ETAWAH, KANNAUJ, Sitting Rajya Sabha",Normal/Others
+West Bengal,NORTH 24 PARGANAS,81,81,0,100.0,0.0,0.0,7,"JAGADISH CHANDRA BARMA BASUNIA, Kakoli Ghosh Dastidar , PARTHA BHOWMICK, Prof Sougata Ray, SK NURUL ISLAM, Shri Shantanu Thakur , Smt. Mamata Thakur (2024-30)","BANGAON, BARASAT, BARRACKPUR, BASIRHAT, COOCHBEHAR, DUM DUM, Sitting Rajya Sabha",Normal/Others
+Bihar,SAHARSA,81,81,0,100.0,0.0,0.0,3,"Dinesh Chandra Yadav, Prof. Manoj Kumar Jha (2024-30), RAJESH VERMA","KHAGARIA, MADHEPURA, Sitting Rajya Sabha",Normal/Others
+Bihar,MUZAFFARPUR,80,80,0,100.0,0.0,0.0,2,"RAJ BHUSHAN CHOUDHARY, Smt Veena Devi ","MUZAFFARPUR, VAISHALI",Normal/Others
+Andhra Pradesh,SRI POTTI SRIRAMULU NELLORE,133,79,54,59.4,0.0,6998908.0,5,"Gumma Thanuja Rani, Maddila Gurumoorthy, Magunta Sreenivasulu Reddy, PRABHAKAR REDDY VEMIREDDY, Shri Masthan Rao Yadav Beedha (2024-28)","ARAKU, NELLORE, ONGOLE, Sitting Rajya Sabha, TIRUPATI",Normal/Others
+Madhya Pradesh,INDORE,79,79,0,100.0,0.0,0.0,4,"Dr. Kavita Patidar (2022-28), SAVITRI THAKUR, Shankar Lalwani, Shri Vivek K. Tankha (2022-28)","DHAR, INDORE, Sitting Rajya Sabha",Normal/Others
+Maharashtra,NANDED,78,78,0,100.0,0.0,0.0,6,"AASHTIKAR PATIL NAGESH BAPURAO, DR KALGE SHIVAJI BANDAPPA, Dr. Ajeet Madhavrao Gopchade (2024-30), Ravindra Vasantrao Chavan, Shri Ashokrao Shankarrao Chavan (2024-30), Shri Dhananjay Bhimrao Mahadik (2022-28)","HINGOLI, LATUR, NANDED, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,CUDDALORE,77,77,0,100.0,0.0,0.0,3,"M.K. VISHNUPRASAD, Shri S. Kalyanasundaram (2022-28), Thirumaa Valavan Thol","CHIDAMBARAM, CUDDALORE, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,SAHARANPUR,77,77,0,100.0,0.0,0.0,3,"Dr. Laxmikant Bajpayee (2022-28), IMRAN MASOOD, IQRA CHOUDHARY","KAIRANA, SAHARANPUR, Sitting Rajya Sabha",Normal/Others
+Delhi,SOUTH,77,77,0,100.0,0.0,0.0,4,"Bansuri Swaraj, Ramvir Singh Bidhuri, Shri Narain Dass Gupta (2024-30), Shri Sanjay Singh (2024-30)","NEW DELHI, SOUTH DELHI, Sitting Rajya Sabha",Normal/Others
+Gujarat,MAHESANA,75,75,0,100.0,0.0,0.0,3,"Bharatsinhji Shankarji Dabhi, HARIBHAI PATEL, Shri Mayankkumar Nayak (2024-30)","MAHESANA, PATAN, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,LUCKNOW,75,75,0,100.0,0.0,0.0,6,"Dr. Dinesh Sharma (2023-26), Dr. Sudhanshu Trivedi (2024-30), R.K. CHAUDHARY, Rajnath Singh, Shri Brij Lal (2020-26), Shri Sanjay Seth (2024-30)","LUCKNOW, MOHANLALGANJ, Sitting Rajya Sabha",Normal/Others
+Gujarat,KHEDA,75,75,0,100.0,0.0,0.0,3,"Devusinh Jesingbhai Chauhan, Dr. Parmar Jashvantsinh Salamsinh (2024-30), RAJPALSINH MAHENDRASINH JADAV","KHEDA, PANCHMAHAL, Sitting Rajya Sabha",Normal/Others
+Odisha,NAYAGADA,74,74,0,100.0,0.0,0.0,4,"Dr. Sasmit Patra (2022-28), SAMBIT PATRA, SUKANTA KUMAR PANIGRAHI, Shri Bhartruhari Mahtab","CUTTACK, KANDHAMAL, PURI, Sitting Rajya Sabha",Normal/Others
+Odisha,KHORDHA,74,74,0,100.0,0.0,0.0,4,"Dr. Sasmit Patra (2022-28), Shri Manas Ranjan Mangaraj (2022-28), Shri Subhasish Khuntia (2024-30), Smt Aparajita Sarangi","BHUBANESWAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,AYODHYA,73,73,0,100.0,0.0,0.0,2,"AWADHESH PRASAD, LALJI VERMA","AMBEDKAR NAGAR, FAIZABAD",Normal/Others
+West Bengal,BANKURA,73,73,0,100.0,0.0,0.0,2,"ARUP CHAKRABORTY, Saumitra khan ","BANKURA, BISHNUPUR",Normal/Others
+Bihar,SAMASTIPUR,72,71,1,98.61,0.0,0.0,4,"Dr. Dharmshila Gupta (2024-30), Nityanand Rai, RAJESH VERMA, SHAMBHAVI","KHAGARIA, SAMASTIPUR, Sitting Rajya Sabha, UJJARPUR",Normal/Others
+Gujarat,AMRELI,71,71,0,100.0,0.0,0.0,4,"BHARATBHAI MANUBHAI SUTARIYA, Shri Govindbhai Laljibhai Dholakia (2024-30), Shri Kesridevsinh Jhala (2023-29), Shri Mayankkumar Nayak (2024-30)","AMRELI, Sitting Rajya Sabha",Normal/Others
+Gujarat,RAJKOT,71,71,0,100.0,0.0,0.0,4,"DR. MANSUKH MANDAVIYA, PARSHOTTAMBHAI RUPALA, Shri Govindbhai Laljibhai Dholakia (2024-30), Shri Kesridevsinh Jhala (2023-29)","PORBANDAR, RAJKOT, Sitting Rajya Sabha",Normal/Others
+Bihar,SUPAUL,69,69,0,100.0,0.0,0.0,2,"Dileshwar Kamait , Prof. Manoj Kumar Jha (2024-30)","SUPAUL, Sitting Rajya Sabha",Normal/Others
+Rajasthan,SIKAR,69,69,0,100.0,0.0,0.0,6,"AMRARAM, BRIJENDRA SINGH OLA, Shri Ghanshyam Tiwari (2022-28), Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28)","JHUNJHUNU, SIKAR, Sitting Rajya Sabha",Normal/Others
+Gujarat,VADODARA,69,69,0,100.0,0.0,0.0,3,"DR. HEMANG JOSHI, JASHUBHAI BHILUBHAI RATHVA, Mansukhbhai Dhanjibhai Vasava","BHARUCH, CHHOTA UDAIPUR, VADODARA",Normal/Others
+Andhra Pradesh,CHITTOOR,194,68,126,35.05,0.0,26478884.0,2,"DAGGUMALLA PRASADA RAO, Midhun Reddy","CHITTOOR, RAJAMPET",Normal/Others
+Madhya Pradesh,SAGAR,68,68,0,100.0,0.0,0.0,3,"DR. LATA WANKHEDE, RAHUL SINGH LODHI, Smt. Sumitra Balmik (2022-28)","DAMOH, SAGAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,PRAYAGRAJ,68,68,0,100.0,0.0,0.0,4,"PRAVEEN PATEL, Smt. Seema Dwivedi (2020-26), UJJWAL RAMAN SINGH, VINOD KUMAR BIND","ALLAHABAD, BHADOHI, PHULPUR, Sitting Rajya Sabha",Normal/Others
+Bihar,GOPALGANJ,68,68,0,100.0,0.0,0.0,2,"Alok Kumar Suman, Shri Manan Kumar Mishra (2024-28)","GOPALGANJ, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,KANCHEEPURAM,67,67,0,100.0,0.0,0.0,4,"Ganesan Selvam, Shri R. Girirajan (2022-28), Smt. Rajathi (2025-31), Thalikkottai Rajuthevar Baalu","KANCHEEPURAM, SRIPERUMBUDUR, Sitting Rajya Sabha",Normal/Others
+Uttarakhand,DEHRADUN,67,67,0,100.0,0.0,0.0,5,"Dr. Kalpana Saini (2022-28), Mala Rajya Laxmi Shah , Shri Mahendra Bhatt (2024-30), Shri Naresh Bansal (2020-26), TRIVENDRA SINGH RAWAT","HARDWAR, Sitting Rajya Sabha, TEHRI GARHWAL",Normal/Others
+Maharashtra,CHHATRAPATI SAMBHAJINAGAR,67,67,0,100.0,0.0,0.0,6,"BHUMARE SANDIPANRAO ASARAM, Dr. Ajeet Madhavrao Gopchade (2024-30), Dr. Anil Sukhdeorao Bonde (2022-28), KALYAN VAIJINATHRAO KALE, Shri Imran Pratapgarhi (2022-28), Shri Sanjay Raut (2022-28)","AURANGABAD, JALNA, Sitting Rajya Sabha",Normal/Others
+Odisha,SUNDARAGADA,67,67,0,100.0,0.0,0.0,2,"Dr. Sasmit Patra (2022-28), Shri Jual Oram","SUNDARGARH, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,AZAMGARH,66,66,0,100.0,0.0,0.0,3,"DAROGA PRASAD SAROJ, DHARMENDRA YADAV, Prof. Ram Gopal Yadav (2020-26)","AZAMGARH, LALGANJ, Sitting Rajya Sabha",Normal/Others
+Punjab,HOSHIARPUR,66,66,0,100.0,0.0,0.0,5,"DR. RAJ KUMAR CHABBEWAL, Dr. Ashok Kumar Mittal (2022-28), MALVINDER SINGH KANG, Shri Harbhajan Singh (2022-28), Shri Sant Balbir Singh (2022-28)","ANANDPUR SAHIB, HOSHIARPUR, Sitting Rajya Sabha",Normal/Others
+Himachal Pradesh,KANGRA,66,66,0,100.0,0.0,0.0,4,"Anurag Singh Thakur, Dr. Sikander Kumar (2022-28), RAJEEV BHARDWAJ, Shri Harsh Mahajan (2024-30)","HAMIRPUR, KANGRA, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,ERODE,66,66,0,100.0,0.0,0.0,3,"Andimuthu Raja, K E PRAKASH, K Subbarayan","ERODE, NILGIRIS, TIRUPPUR",Normal/Others
+Tamil Nadu,VILUPPURAM,65,65,0,100.0,0.0,0.0,5,"D Ravikumar , Shri R. Dharmar (2022-28), Shri R. Girirajan (2022-28), Shri S. Kalyanasundaram (2022-28), THARANIVENTHAN M S","ARANI, Sitting Rajya Sabha, VILUPPURAM",Normal/Others
+Maharashtra,DHULE,65,65,0,100.0,0.0,0.0,3,"ADV GOWAAL KAGADA PADAVI, BACHHAV SHOBHA DINESH, Shri Chandrakant Damodar Handore (2024-30)","DHULE, NANDURBAR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,TIRUPPUR,65,65,0,100.0,0.0,0.0,5,"Andimuthu Raja, ESWARASAMY K, GANAPATHY RAJKUMAR P, K E PRAKASH, K Subbarayan","COIMBATORE, ERODE, NILGIRIS, POLLACHI, TIRUPPUR",Normal/Others
+Bihar,KAIMUR,64,64,0,100.0,0.0,0.0,3,"Dr. Bhim Singh (2024-30), MANOJ KUMAR, SUDHAKAR SINGH","BUXAR, SASARAM, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,DHAR,64,64,0,100.0,0.0,0.0,3,"Dr. Kavita Patidar (2022-28), SAVITRI THAKUR, Shri Vivek K. Tankha (2022-28)","DHAR, Sitting Rajya Sabha",Normal/Others
+Gujarat,PANCH MAHALS,64,64,0,100.0,0.0,0.0,3,"Dr. Parmar Jashvantsinh Salamsinh (2024-30), JASHUBHAI BHILUBHAI RATHVA, RAJPALSINH MAHENDRASINH JADAV","CHHOTA UDAIPUR, PANCHMAHAL, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,THIRUVALLUR,63,63,0,100.0,0.0,0.0,3,"S. Jagathrakshakan, Sasikanth Senthil, Shri R. Girirajan (2022-28)","ARAKKONAM, Sitting Rajya Sabha, TIRUVALLUR",Normal/Others
+Tamil Nadu,SIVAGANGA,63,63,0,100.0,0.0,0.0,2,"Shri Karti P Chidambaram , Shri P. Chidambaram (2022-28)","SIVAGANGA, Sitting Rajya Sabha",Normal/Others
+Karnataka,BAGALKOTE,63,63,0,100.0,0.0,0.0,2,"Parvatagouda Chandanagouda Gaddigoudar, Shri Narayanasa K. Bhandage (2024-30)","BAGALKOT, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,VARANASI,62,62,0,100.0,0.0,0.0,6,"Dr. Sudhanshu Trivedi (2024-30), Shri Brij Lal (2020-26), Shri Narendra Modi, Smt. Darshana Singh (2022-28), Smt. Sadhna Singh (2024-30), VIRENDRA SINGH","CHANDAULI, Sitting Rajya Sabha, VARANASI",Normal/Others
+Gujarat,NARMADA,62,62,0,100.0,0.0,0.0,3,"JASHUBHAI BHILUBHAI RATHVA, Mansukhbhai Dhanjibhai Vasava, Shri S. Jaishankar (2023-29)","BHARUCH, CHHOTA UDAIPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,DEORIA,61,61,0,100.0,0.0,0.0,5,"RAMASHANKAR RAJBHAR, SHASHANK MANI, Shri Ratanjit Pratap Narain Singh (2024-30), Shri Sanjay Seth (2024-30), Smt. Sangeeta Yadav (2022-28)","DEORIA, SALEMPUR, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,UJJAIN,61,61,0,100.0,0.0,0.0,4,"Dr. L. Murugan (2024-30), Shri Anil Firojiya, Shri Balyogi Umeshnath (2024-30), Shri Banshilal Gurjar (2024-30)","Sitting Rajya Sabha, UJJAIN",Normal/Others
+Andhra Pradesh,TIRUPATI,308,60,248,19.48,0.0,16066069.0,4,"DAGGUMALLA PRASADA RAO, Maddila Gurumoorthy, Midhun Reddy, Shri Masthan Rao Yadav Beedha (2024-28)","CHITTOOR, RAJAMPET, Sitting Rajya Sabha, TIRUPATI",Normal/Others
+Andhra Pradesh,SRI SATHYA SAI,102,60,42,58.82,0.0,27895458.0,5,"AMBICA G LAKSHMINARAYANA VALMIKI, B K PARTHASARATHI, Lavu Sri Krishna Devarayalu, Shri Ryaga Krishnaiah (2024-28), Shri Yerram Venkata Subba Reddy (2024-30)","ANANTAPUR, HINDUPUR, NARASARAOPET, Sitting Rajya Sabha",Normal/Others
+Bihar,PURNIA,67,60,7,89.55,0.0,2560000.0,2,"Dr Mohammad Jawed, RAJESH RANJAN ALIAS PAPPU YADAV","KISHANGANJ, PURNEA",Normal/Others
+Uttar Pradesh,MAINPURI,60,60,0,100.0,0.0,0.0,5,"Prof. Ram Gopal Yadav (2020-26), Shri Javed Ali Khan (2022-28), Shri Kapil Sibal (2022-28), Smt Dimple Yadav, Smt. Jaya Amitabh Bachchan (2024-30)","MAINPURI, Sitting Rajya Sabha",Normal/Others
+Punjab,AMRITSAR,60,60,0,100.0,0.0,0.0,6,"Dr. Ashok Kumar Mittal (2022-28), Dr. Vikramjit Singh Sahney (2022-28), Shri Gurjeet Singh Aujla, Shri Harbhajan Singh (2022-28), Shri Raghav Chadha (2022-28), Shri Sant Balbir Singh (2022-28)","AMRITSAR, Sitting Rajya Sabha",Normal/Others
+Bihar,BHAGALPUR,60,59,1,98.33,0.0,0.0,2,"Ajay Kumar Mandal, Giridhari Yadav","BANKA, BHAGALPUR",Normal/Others
+Uttar Pradesh,FIROZABAD,59,59,0,100.0,0.0,0.0,2,"AKSHAYA YADAV, Prof. Ram Gopal Yadav (2020-26)","FIROZABAD, Sitting Rajya Sabha",Normal/Others
+Punjab,FEROZEPUR,59,59,0,100.0,0.0,0.0,5,"Dr. Sandeep Kumar Pathak (2022-28), Dr. Vikramjit Singh Sahney (2022-28), SARABJEET SINGH KHALSA, SHER SINGH GHUBAYA, Shri Harbhajan Singh (2022-28)","FARIDKOT, FIROZPUR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,ALWAR,59,59,0,100.0,0.0,0.0,6,"BHUPENDER YADAV, SANJNA JATAV, Shri Ghanshyam Tiwari (2022-28), Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","ALWAR, BHARATPUR, Sitting Rajya Sabha",Normal/Others
+West Bengal,MURSHIDABAD,59,59,0,100.0,0.0,0.0,4,"Abu Taher Khan, Kakoli Ghosh Dastidar , Khalilur Rahaman , PATHAN YUSUF","BAHARAMPUR, BARASAT, JANGIPUR, MURSHIDABAD",Normal/Others
+Kerala,KOZHIKODE,58,58,0,100.0,0.0,0.0,6,"SHAFI PARAMBIL, Shri Abdul Wahab (2021-27), Shri Jose K. Mani (2024-30), Shri M K Raghavan, Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","KOZHIKODE, Nominated Rajya Sabha, Sitting Rajya Sabha, VADAKARA",Normal/Others
+Bihar,AURANGABAD,68,57,11,83.82,0.0,2552293.0,3,"ABHAY KUMAR SINHA, Dr. Bhim Singh (2024-30), RAJA RAM SINGH","AURANGABAD, KARAKAT, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,MAU,57,57,0,100.0,0.0,0.0,3,"DHARMENDRA YADAV, RAJEEV RAI, Smt. Sangeeta Yadav (2022-28)","AZAMGARH, GHOSI, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,THANJAVUR,57,57,0,100.0,0.0,0.0,3,"MURASOLI S, SUDHA R, Shri S. Kalyanasundaram (2022-28)","MAYILADUTHURAI, Sitting Rajya Sabha, THANJAVUR",Normal/Others
+Himachal Pradesh,MANDI,57,57,0,100.0,0.0,0.0,4,"Anurag Singh Thakur, Dr. Sikander Kumar (2022-28), Kangana Ranaut, Shri Harsh Mahajan (2024-30)","HAMIRPUR, MANDI, Sitting Rajya Sabha",Normal/Others
+Karnataka,DAKSHINA KANNADA,57,57,0,100.0,0.0,0.0,2,"CAPTAIN BRIJESH CHOWTA, Dr. Dharmasthala Veerendra Heggade (2022-28)","DAKSHINA KANNADA, Nominated Rajya Sabha",Normal/Others
+Bihar,SIWAN,59,56,3,94.92,0.0,795297.0,2,"Shri Janardan Singh Sigriwal , VIJAYLAKSHMI DEVI","MAHARAJGANJ, SIWAN",Normal/Others
+Uttar Pradesh,MUZAFFARNAGAR,56,56,0,100.0,0.0,0.0,7,"CHANDAN CHAUHAN, Dr. Radha Mohan Das Agrawal (2022-28), HARENDRA SINGH MALIK, Shri B.L. Verma (2020-26), Shri Jayant Chaudhary (2022-28), Shri Kapil Sibal (2022-28), Shri Surendra Singh Nagar (2022-28)","BIJNOR, MUZAFFARNAGAR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,DINDIGUL,56,56,0,100.0,0.0,0.0,2,"SACHITHANANTHAM R, Smt S Jothimani","DINDIGUL, KARUR",Normal/Others
+Andhra Pradesh,SRIKAKULAM,181,55,126,30.39,0.0,14805490.0,2,"Appalanaidu Kalisetti, Kinjarapu Ram Mohan Naidu","SRIKAKULAM, VIZIANAGARAM",Normal/Others
+Uttar Pradesh,RAMPUR,55,55,0,100.0,0.0,0.0,5,"MOHIBBULLAH, Shri Javed Ali Khan (2022-28), Shri Kapil Sibal (2022-28), Shri Neeraj Shekhar (2020-26), Smt. Sangeeta Yadav (2022-28)","RAMPUR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,CHENNAI,55,55,0,100.0,0.0,0.0,6,"Kalanidhi Veeraswamy, Shri K.R.N. Rajeshkumar (2022-28), Shri R. Girirajan (2022-28), T Sumathy (A) Thamizhachi Thangapandian , Thalikkottai Rajuthevar Baalu, Thiru Dayanidhi Maran","CHENNAI CENTRAL, CHENNAI NORTH, CHENNAI SOUTH, SRIPERUMBUDUR, Sitting Rajya Sabha",Normal/Others
+Goa,SOUTH GOA,55,55,0,100.0,0.0,0.0,2,"CAPTAIN VIRIATO FERNANDES, Shri Sadanand Mhalu Shet Tanavade (2023-29)","SOUTH GOA, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,ANNAMAYYA,287,54,233,18.82,0.0,2270454.0,3,"Maddila Gurumoorthy, Midhun Reddy, Shri Meda Raghunadha Reddy (2024-30)","RAJAMPET, Sitting Rajya Sabha, TIRUPATI",Normal/Others
+Himachal Pradesh,HAMIRPUR,54,54,0,100.0,0.0,0.0,3,"Anurag Singh Thakur, Dr. Sikander Kumar (2022-28), Shri Harsh Mahajan (2024-30)","HAMIRPUR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,NAGAUR,54,54,0,100.0,0.0,0.0,3,"MAHIMA KUMARI MEWAR, Shri Hanuman Beniwal, Shri Pramod Tiwari (2022-28)","NAGAUR, RAJSAMAND, Sitting Rajya Sabha",Normal/Others
+Gujarat,NAVSARI,54,54,0,100.0,0.0,0.0,2,"C R Patil, Shri Govindbhai Laljibhai Dholakia (2024-30)","NAVSARI, Sitting Rajya Sabha",Normal/Others
+Kerala,ERNAKULAM,54,54,0,100.0,0.0,0.0,9,"ADV K FRANCIS GEORGE, Adv Dean Kuriakose, Shri A. A. Rahim (2022-28), Shri Benny Behanan, Shri Haris Beeran (2024-30), Shri Hibi Eden, Shri P. P. Suneer (2024-30), Shri Sandosh Kumar P (2022-28), Smt. Jebi Mather Hisham (2022-28)","CHALAKUDY, ERNAKULAM, IDUKKI, KOTTAYAM, Sitting Rajya Sabha",Normal/Others
+Bihar,NALANDA,57,53,4,92.98,0.0,0.0,2,"Dr. Bhim Singh (2024-30), Kaushalendra Kumar","NALANDA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,SHAHJAHANPUR,53,53,0,100.0,0.0,0.0,4,"Shri Arun Kumar Sagar , Shri Javed Ali Khan (2022-28), Shri Mithlesh Kumar (2022-28), Shri Neeraj Shekhar (2020-26)","SHAHJAHANPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,KAUSHAMBI,53,53,0,100.0,0.0,0.0,4,"PUSHPENDRA SAROJ, Shri Javed Ali Khan (2022-28), Smt. Sangeeta Yadav (2022-28), Smt. Seema Dwivedi (2020-26)","KAUSHAMBI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,SONBHADRA,53,53,0,100.0,0.0,0.0,2,"CHHOTELAL, Shri Hardeep Singh Puri (2020-26)","ROBERTSGANJ, Sitting Rajya Sabha",Normal/Others
+Rajasthan,JHUNJHUNU,53,53,0,100.0,0.0,0.0,4,"BRIJENDRA SINGH OLA, Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","JHUNJHUNU, Sitting Rajya Sabha",Normal/Others
+Delhi,EAST,53,53,0,100.0,0.0,0.0,2,"Harsh Malhotra, Manoj Tiwari","EAST DELHI, NORTH EAST DELHI",Normal/Others
+Chhattisgarh,DURG,52,52,0,100.0,0.0,0.0,3,"Shri Rajeev Shukla (2022-28), Smt. Ranjeet Ranjan (2022-28), Vijay Baghel","DURG, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BIJNOR,52,52,0,100.0,0.0,0.0,3,"CHANDAN CHAUHAN, CHANDRA SHEKHAR, Swami Sachchidanandhari Sakshi ji Maharaj ","BIJNOR, NAGINA, UNNAO",Normal/Others
+Uttar Pradesh,RAE BARELI,52,52,0,100.0,0.0,0.0,3,"KISHORI LAL, RAHUL GANDHI, Shri Kapil Sibal (2022-28)","AMETHI, RAE BARELI, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,KURNOOL,130,51,79,39.23,0.0,1497606.0,3,"BASTIPATI NAGARAJU PANCHALINGALA, DR BYREDDY SHABARI, Midhun Reddy","KURNOOL, NANDYAL, RAJAMPET",Normal/Others
+Andhra Pradesh,DR. B.R. AMBEDKAR KONASEEMA,97,51,46,52.58,0.0,5799126.0,2,"GM Harish Balayogi, Shri V. Vijayendra Prasad (2022-28)","AMALAPURAM, Nominated Rajya Sabha",Normal/Others
+Bihar,BHOJPUR,51,51,0,100.0,0.0,0.0,2,"Ramprit Mandal, SUDAMA PRASAD","ARRAH, JHANJHARPUR",Normal/Others
+Tamil Nadu,TENKASI,51,51,0,100.0,0.0,0.0,5,"DR RANI SRI KUMAR, Dr. M. Dhanapal (2025-31), ROBERT BRUCE C, Shri Ilaiyaraaja (2022-28), Shri R. Dharmar (2022-28)","Nominated Rajya Sabha, Sitting Rajya Sabha, TENKASI, TIRUNELVELI",Normal/Others
+Tamil Nadu,TIRUNELVELI,51,51,0,100.0,0.0,0.0,2,"ROBERT BRUCE C, Shri R. Dharmar (2022-28)","Sitting Rajya Sabha, TIRUNELVELI",Normal/Others
+Tamil Nadu,VIRUDHUNAGAR,51,51,0,100.0,0.0,0.0,4,"DR RANI SRI KUMAR, Kani K Navas, Manickam Tagore B, Shri P. Wilson (2025-31)","RAMANATHAPURAM, Sitting Rajya Sabha, TENKASI, VIRUDHUNAGAR",Normal/Others
+Madhya Pradesh,RAJGARH,51,51,0,100.0,0.0,0.0,2,"Rodmal Nagar , Smt. Maya Naroliya (2024-30)","RAJGARH, Sitting Rajya Sabha",Normal/Others
+Odisha,MAYURBHANJ,51,51,0,100.0,0.0,0.0,3,"ANANTA NAYAK, NABA CHARAN MAJHI, Smt. Sulata Deo (2022-28)","KEONJHAR, MAYURBHANJ, Sitting Rajya Sabha",Normal/Others
+Karnataka,KOPPAL,51,51,0,100.0,0.0,0.0,2,"K. RAJASHEKAR BASAVARAJ HITNAL, Smt. Nirmala Sitharaman (2022-28)","KOPPAL, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,ELURU,101,50,51,49.5,0.0,19667001.0,2,"Krishna Prasad Tenneti, Putta Mahesh Kumar","BAPATLA, ELURU",Normal/Others
+Bihar,KATIHAR,53,50,3,94.34,0.0,1930000.0,1,TARIQ ANWAR,KATIHAR,Normal/Others
+Bihar,ROHTAS,51,50,1,98.04,0.0,0.0,4,"MANOJ KUMAR, RAJA RAM SINGH, SUDHAKAR SINGH, Shri Satish Chandra Dubey (2022-28)","BUXAR, KARAKAT, SASARAM, Sitting Rajya Sabha",Normal/Others
+Bihar,SITAMARHI,51,50,1,98.04,0.0,0.0,1,DEVESH CHANDRA THAKUR,SITAMARHI,Normal/Others
+Uttar Pradesh,JHANSI,50,50,0,100.0,0.0,0.0,3,"Anurag Sharma , NARAYAN DAS AHIRWAR, Shri B.L. Verma (2020-26)","JALAUN, JHANSI, Sitting Rajya Sabha",Normal/Others
+Bihar,ARWAL,50,50,0,100.0,0.0,0.0,3,"Dr. Bhim Singh (2024-30), SURENDRA PRASAD YADAV, Shri Akhilesh Prasad Singh (2024-30)","JAHANABAD, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,BETUL,50,50,0,100.0,0.0,0.0,1,Durga Das Uikey ,BETUL,Normal/Others
+Telangana,JAGITIAL,50,50,0,100.0,0.0,0.0,4,"Arvind Dharmapuri, Sanjay Kumar Bandi, Shri Damodar Rao Divakonda (2022-28), VAMSI KRISHNA GADDAM","KARIMNAGAR, NIZAMABAD, PEDDAPALLE, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BANDA,50,50,0,100.0,0.0,0.0,1,KRISHNA DEVI SHIVSHANKER PATEL,BANDA,Normal/Others
+Odisha,KATAKA,50,50,0,100.0,0.0,0.0,5,"BIBHU PRASAD TARAI, Dr. Sasmit Patra (2022-28), Shri Ashwini Vaishnaw (2024-30), Shri Bhartruhari Mahtab, Smt. Sulata Deo (2022-28)","CUTTACK, JAGATSINGHPUR, Sitting Rajya Sabha",Normal/Others
+Gujarat,ANAND,50,50,0,100.0,0.0,0.0,1,Mitesh Rameshbhai Bakabhai Patel,ANAND,Normal/Others
+Kerala,ALAPPUZHA,50,50,0,100.0,0.0,0.0,3,"K. C VENUGOPAL, Shri Suresh Kodikunnil, Smt. Jebi Mather Hisham (2022-28)","ALAPPUZHA, MAVELIKKARA, Sitting Rajya Sabha",Normal/Others
+West Bengal,UTTAR DINAJPUR,50,50,0,100.0,0.0,0.0,1,KARTICK CHANDRA PAUL,RAIGANJ,Normal/Others
+Andhra Pradesh,NANDYAL,172,49,123,28.49,0.0,18198437.0,4,"DR BYREDDY SHABARI, Gumma Thanuja Rani, Maddila Gurumoorthy, Midhun Reddy","ARAKU, NANDYAL, RAJAMPET, TIRUPATI",Normal/Others
+Uttar Pradesh,MAHOBA,49,49,0,100.0,0.0,0.0,2,"AJENDRA SINGH LODHI, Shri Baburam Nishad (2022-28)","HAMIRPUR, Sitting Rajya Sabha",Normal/Others
+Karnataka,MYSURU,49,49,0,100.0,0.0,0.0,6,"Dr. Dharmasthala Veerendra Heggade (2022-28), H.D. KUMARASWAMY, SUNIL BOSE, Shri Jaggesh (2022-28), Shri Lahar Singh Siroya (2022-28), YADUVEER KRISHNADATTA CHAMARAJA WADIYAR","CHAMARAJANAGAR, MANDYA, MYSORE, Nominated Rajya Sabha, Sitting Rajya Sabha",Normal/Others
+West Bengal,KOLKATA,49,49,0,100.0,0.0,0.0,5,"Mala Roy , SAYANI GHOSH, Shri Abhishek Banerjee, Shri Mohammed Nadimul Haque (2024-30), Sudip Bandyopadhyay","DIAMOND HARBOUR, JADAVPUR, KOLKATA DAKSHIN, KOLKATA UTTAR, Sitting Rajya Sabha",Normal/Others
+Gujarat,DAHOD,49,49,0,100.0,0.0,0.0,1,Jaswantsinh Sumanbhai Bhabhor,DAHOD,Normal/Others
+Chhattisgarh,SAKTI,48,48,0,100.0,0.0,0.0,1,KAMLESH JANGDE,JANJGIR CHAMPA,Normal/Others
+Maharashtra,YAVATMAL,48,48,0,100.0,0.0,0.0,4,"AASHTIKAR PATIL NAGESH BAPURAO, DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU, Sanjay Uttamrao Deshmukh, Shri Imran Pratapgarhi (2022-28)","CHANDRAPUR, HINGOLI, Sitting Rajya Sabha, YAVATMAL-WASHIM",Normal/Others
+Maharashtra,SOLAPUR,48,48,0,100.0,0.0,0.0,4,"Dr. Ajeet Madhavrao Gopchade (2024-30), MOHITE PATIL DHAIRYASHEEL RAJSINH, Omprakash Bhupalsinh Alias Pawan Rajenimbalkar, PRANITI SUSHILKUMAR SHINDE","MADHA, OSMANABAD, SOLAPUR, Sitting Rajya Sabha",Normal/Others
+Odisha,KALAHANDI,48,48,0,100.0,0.0,0.0,1,MALVIKA DEVI,KALAHANDI,Normal/Others
+Odisha,KORAPUT,48,48,0,100.0,0.0,0.0,2,"BALABHADRA MAJHI, Saptagiri Sankar Ulaka","KORAPUT, NABARANGPUR",Normal/Others
+Bihar,VAISHALI,50,47,3,94.0,0.0,0.0,1,CHIRAG PASWAN,HAJIPUR,Normal/Others
+Uttar Pradesh,GONDA,47,47,0,100.0,0.0,0.0,3,"KARAN BHUSHAN SINGH, Kirti Vardhan Singh, Shri Javed Ali Khan (2022-28)","GONDA, KAISERGANJ, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,MIRZAPUR,47,47,0,100.0,0.0,0.0,2,"Dr. K. Laxman (2022-28), Shri Arun Singh (2020-26)",Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,CHHINDWARA,47,47,0,100.0,0.0,0.0,1,BUNTY VIVEK SAHU,CHHINDWARA,Normal/Others
+Gujarat,VALSAD,47,47,0,100.0,0.0,0.0,2,"DHAVAL LAXMANBHAI PATEL, Shri Govindbhai Laljibhai Dholakia (2024-30)","Sitting Rajya Sabha, VALSAD",Normal/Others
+Chhattisgarh,SURGUJA,46,46,0,100.0,0.0,0.0,2,"CHINTAMANI MAHARAJ, Smt. Ranjeet Ranjan (2022-28)","SARGUJA, Sitting Rajya Sabha",Normal/Others
+Meghalaya,WEST GARO HILLS,46,46,0,100.0,0.0,0.0,1,SALENG A SANGMA,TURA,Normal/Others
+Punjab,FAZILKA,46,46,0,100.0,0.0,0.0,3,"AMRINDER SINGH RAJA WARRING, SHER SINGH GHUBAYA, Smt Harsimrat Kaur Badal","BHATINDA, FIROZPUR, LUDHIANA",Normal/Others
+Punjab,PATIALA,46,46,0,100.0,0.0,0.0,4,"DR DHARAMVIRA GANDHI, Dr. Ashok Kumar Mittal (2022-28), Dr. Vikramjit Singh Sahney (2022-28), Shri Harbhajan Singh (2022-28)","PATIALA, Sitting Rajya Sabha",Normal/Others
+Uttarakhand,HARIDWAR,46,46,0,100.0,0.0,0.0,3,"Dr. Kalpana Saini (2022-28), Shri Naresh Bansal (2020-26), TRIVENDRA SINGH RAWAT","HARDWAR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DUNGARPUR,46,46,0,100.0,0.0,0.0,4,"MANNA LAL RAWAT, RAJ KUMAR ROAT, Shri Chunnilal Garasiya (2024-30), Shri Randeep Singh Surjewala (2022-28)","BANSWARA, Sitting Rajya Sabha, UDAIPUR",Normal/Others
+Uttar Pradesh,GHAZIPUR,46,46,0,100.0,0.0,0.0,4,"AFZAL ANSARI, Dr. Sangeeta Balwant (2024-30), SANATAN PANDEY, Shri Neeraj Shekhar (2020-26)","BALLIA, GHAZIPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,ALIGARH,45,45,0,100.0,0.0,0.0,2,"ANOOP PRADHAN BALMIKI, Shri Satish Kumar Gautam ","ALIGARH, HATHRAS",Normal/Others
+Tamil Nadu,THIRUVARUR,45,45,0,100.0,0.0,0.0,3,"MURASOLI S, SELVARAJ V, Shri K.R.N. Rajeshkumar (2022-28)","NAGAPATTINAM, Sitting Rajya Sabha, THANJAVUR",Normal/Others
+Karnataka,SHIVAMOGGA,45,45,0,100.0,0.0,0.0,1,Shri B Y Raghavendra ,SHIMOGA,Normal/Others
+Uttar Pradesh,SIDDHARTHNAGAR,45,45,0,100.0,0.0,0.0,1,Shri Brij Lal (2020-26),Sitting Rajya Sabha,Normal/Others
+Tamil Nadu,TIRUCHIRAPPALLI,45,45,0,100.0,0.0,0.0,3,"ARUN NEHRU, DURAI VAIKO, Smt S Jothimani","KARUR, PERAMBALUR, TIRUCHIRAPPALLI",Normal/Others
+Maharashtra,NASHIK,45,45,0,100.0,0.0,0.0,4,"BACHHAV SHOBHA DINESH, BHASKAR MURLIDHAR BHAGARE, RAJABHAU, Shri Dhananjay Bhimrao Mahadik (2022-28)","DHULE, DINDORI, NASHIK, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,ANANTHAPURAMU,142,44,98,30.99,0.0,40607489.0,2,"AMBICA G LAKSHMINARAYANA VALMIKI, B K PARTHASARATHI","ANANTAPUR, HINDUPUR",Normal/Others
+Sikkim,PAKYONG,44,44,0,100.0,0.0,0.0,2,"Indra Hang Subba, Shri Dorjee Tshering Lepcha (2024-30)","SIKKIM, Sitting Rajya Sabha",Normal/Others
+Gujarat,GANDHINAGAR,44,44,0,100.0,0.0,0.0,4,"HARIBHAI PATEL, Hasmukh Bhai Soma Bhai Patel, Shri Amit Shah, Shri Babubhai Jesangbhai Desai (2023-29)","AHMEDABAD EAST, GANDHINAGAR, MAHESANA, Sitting Rajya Sabha",Normal/Others
+Telangana,SIDDIPET,44,44,0,100.0,0.0,0.0,5,"CHAMALA KIRAN KUMAR REDDY, MADHAVANENI RAGHUNANDAN RAO, Sanjay Kumar Bandi, Shri Damodar Rao Divakonda (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","BHONGIR, KARIMNAGAR, MEDAK, Sitting Rajya Sabha",Normal/Others
+Karnataka,UDUPI,44,44,0,100.0,0.0,0.0,2,"KOTA SRINIVAS POOJARY, Shri B Y Raghavendra ","SHIMOGA, UDUPI CHIKMAGALUR",Normal/Others
+Kerala,KASARAGOD,44,44,0,100.0,0.0,0.0,5,"Shri Abdul Wahab (2021-27), Shri Jose K. Mani (2024-30), Shri Rajmohan Unnithan , Shri Sandosh Kumar P (2022-28), Smt. Jebi Mather Hisham (2022-28)","KASARAGOD, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,NARMADAPURAM,44,44,0,100.0,0.0,0.0,1,DARSHAN SINGH CHOUDHARY,HOSHANGABAD,Normal/Others
+Jammu And Kashmir,JAMMU,43,43,0,100.0,0.0,0.0,2,"Shri Gulam Ali (2022-28), Shri Jugal Kishore Sharma","JAMMU, Nominated Rajya Sabha",Normal/Others
+Tamil Nadu,RAMANATHAPURAM,43,43,0,100.0,0.0,0.0,2,"Kani K Navas, Shri R. Dharmar (2022-28)","RAMANATHAPURAM, Sitting Rajya Sabha",Normal/Others
+Karnataka,BIDAR,43,43,0,100.0,0.0,0.0,3,"Dr. Dharmasthala Veerendra Heggade (2022-28), SAGAR ESHWAR KHANDRE, Smt. Nirmala Sitharaman (2022-28)","BIDAR, Nominated Rajya Sabha, Sitting Rajya Sabha",Normal/Others
+Puducherry,PUDUCHERRY,43,43,0,100.0,0.0,0.0,2,"Shri S. Selvaganabathy (2021-27), Vaithilingam Ve","Puducherry, Sitting Rajya Sabha",Normal/Others
+Gujarat,KACHCHH,43,43,0,100.0,0.0,0.0,2,"Shri Mayankkumar Nayak (2024-30), Vinod Chavda","KACHCHH, Sitting Rajya Sabha",Normal/Others
+Telangana,NIZAMABAD,42,42,0,100.0,0.0,0.0,3,"Arvind Dharmapuri, SURESH KUMAR SHETKAR, Shri Anil Kumar Yadav Mandadi (2024-30)","NIZAMABAD, Sitting Rajya Sabha, ZAHIRABAD",Normal/Others
+Gujarat,BHAVNAGAR,42,42,0,100.0,0.0,0.0,4,"BHARATBHAI MANUBHAI SUTARIYA, NIMUBEN JAYANTIBHAI BAMBHANIYA, Shri Govindbhai Laljibhai Dholakia (2024-30), Shri Kesridevsinh Jhala (2023-29)","AMRELI, BHAVNAGAR, Sitting Rajya Sabha",Normal/Others
+Odisha,BARAGADA,42,42,0,100.0,0.0,0.0,1,PRADEEP PUROHIT,BARGARH,Normal/Others
+Karnataka,TUMAKURU,41,41,0,100.0,0.0,0.0,5,"DR C N MANJUNATH, GOVIND MAKTHAPPA KARJOL, Shri G.C. Chandrashekhar (2024-30), Shri Jaggesh (2022-28), V. SOMANNA","BANGALORE RURAL, CHITRADURGA, Sitting Rajya Sabha, TUMKUR",Normal/Others
+Haryana,HISAR,41,41,0,100.0,0.0,0.0,2,"JAI PARKASH, Rao Inderjit Singh","GURGAON, HISAR",Normal/Others
+Gujarat,BHARUCH,41,41,0,100.0,0.0,0.0,1,Mansukhbhai Dhanjibhai Vasava,BHARUCH,Normal/Others
+Maharashtra,AKOLA,41,41,0,100.0,0.0,0.0,1,ANUP SANJAY DHOTRE,AKOLA,Normal/Others
+Uttar Pradesh,FARRUKHABAD,40,40,0,100.0,0.0,0.0,2,"Dr. K. Laxman (2022-28), Mukesh Rajput","FARRUKHABAD, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BAHRAICH,40,40,0,100.0,0.0,0.0,2,"ANAND KUMAR, KARAN BHUSHAN SINGH","BAHRAICH, KAISERGANJ",Normal/Others
+Rajasthan,AJMER,40,40,0,100.0,0.0,0.0,1,Bhagirath Chaudhary,AJMER,Normal/Others
+Kerala,THRISSUR,40,40,0,100.0,0.0,0.0,6,"Dr. John Brittas (2021-27), K RADHAKRISHNAN, SURESH GOPI, Shri Benny Behanan, Shri Sandosh Kumar P (2022-28), Smt. P. T. Usha (2022-28)","ALATHUR, CHALAKUDY, Nominated Rajya Sabha, Sitting Rajya Sabha, THRISSUR",Normal/Others
+Jharkhand,KODERMA,40,40,0,100.0,0.0,0.0,1,Annpurna Devi ,KODARMA,Normal/Others
+Assam,KARBI ANGLONG,42,39,3,92.86,0.0,5650279.0,1,AMARSING TISSO,Diphu,Normal/Others
+Uttar Pradesh,MAHRAJGANJ,39,39,0,100.0,0.0,0.0,3,"Dr. K. Laxman (2022-28), Pankaj Chowdhary, Smt. Sangeeta Yadav (2022-28)","MAHARAJGANJ, Sitting Rajya Sabha",Normal/Others
+Bihar,ARARIA,39,39,0,100.0,0.0,0.0,1,Pradeep Kumar Singh,ARARIA,Normal/Others
+Punjab,FARIDKOT,39,39,0,100.0,0.0,0.0,2,"SARABJEET SINGH KHALSA, Shri Sant Balbir Singh (2022-28)","FARIDKOT, Sitting Rajya Sabha",Normal/Others
+Telangana,NALGONDA,39,39,0,100.0,0.0,0.0,4,"CHAMALA KIRAN KUMAR REDDY, KUNDURU RAGHUVEER, Shri Anil Kumar Yadav Mandadi (2024-30), Shri Ravi Chandra Vaddiraju (2024-30)","BHONGIR, NALGONDA, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,KANNIYAKUMARI,39,39,0,100.0,0.0,0.0,1,Shri vijayakumar Vasanth,KANNIYAKUMARI,Normal/Others
+Madhya Pradesh,SATNA,39,39,0,100.0,0.0,0.0,1,Ganesh Singh,SATNA,Normal/Others
+Jharkhand,GIRIDIH,38,38,0,100.0,0.0,0.0,5,"Annpurna Devi , Dr. Sarfraz Ahmad (2024-30), Shri Aditya Prasad (2022-28), Shri Chandra Prakash Choudhary, Smt. Mahua Maji (2022-28)","GIRIDIH, KODARMA, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,SHAHDOL,38,38,0,100.0,0.0,0.0,2,"DR. RAJESH MISHRA, Smt Himadri Singh","SHAHDOL, SIDHI",Normal/Others
+Karnataka,BENGALURU SOUTH,38,38,0,100.0,0.0,0.0,3,"DR C N MANJUNATH, Shri Jaggesh (2022-28), Shri Lahar Singh Siroya (2022-28)","BANGALORE RURAL, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,KARUR,38,38,0,100.0,0.0,0.0,3,"ARUN NEHRU, Shri K.R.N. Rajeshkumar (2022-28), Smt S Jothimani","KARUR, PERAMBALUR, Sitting Rajya Sabha",Normal/Others
+Maharashtra,PARBHANI,38,38,0,100.0,0.0,0.0,4,"Sanjay Haribhau Jadhav, Shri Chandrakant Damodar Handore (2024-30), Shri Imran Pratapgarhi (2022-28), Shri Sanjay Raut (2022-28)","PARBHANI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,AMROHA,38,38,0,100.0,0.0,0.0,1,KANWAR SINGH TANWAR,AMROHA,Normal/Others
+Telangana,MAHABUBABAD,38,38,0,100.0,0.0,0.0,3,"BALRAM NAIK PORIKA, KADIYAM KAVYA, Shri Ravi Chandra Vaddiraju (2024-30)","MAHABUBABAD, Sitting Rajya Sabha, WARANGEL",Normal/Others
+West Bengal,DARJEELING,38,38,0,100.0,0.0,0.0,1,Raju Bista,DARJEELING,Normal/Others
+Madhya Pradesh,BHIND,38,38,0,100.0,0.0,0.0,1,Smt Sandhya Ray,BHIND,Normal/Others
+Andhra Pradesh,ANAKAPALLI,89,37,52,41.57,0.0,8710602.0,7,"Appalanaidu Kalisetti, C.M.RAMESH, Gumma Thanuja Rani, Shri Masthan Rao Yadav Beedha (2024-28), Shri Meda Raghunadha Reddy (2024-30), Shri V. Vijayendra Prasad (2022-28), Shri Yerram Venkata Subba Reddy (2024-30)","ANAKAPALLE, ARAKU, Nominated Rajya Sabha, Sitting Rajya Sabha, VIZIANAGARAM",Normal/Others
+Uttar Pradesh,BASTI,37,37,0,100.0,0.0,0.0,1,RAM PRASAD CHAUDHARY,BASTI,Normal/Others
+Tamil Nadu,COIMBATORE,37,37,0,100.0,0.0,0.0,3,"Andimuthu Raja, ESWARASAMY K, GANAPATHY RAJKUMAR P","COIMBATORE, NILGIRIS, POLLACHI",Normal/Others
+Punjab,GURDASPUR,36,36,0,100.0,0.0,0.0,5,"DR. RAJ KUMAR CHABBEWAL, Dr. Vikramjit Singh Sahney (2022-28), SUKHJINDER SINGH RANDHAWA, Shri Harbhajan Singh (2022-28), Shri Sant Balbir Singh (2022-28)","GURDASPUR, HOSHIARPUR, Sitting Rajya Sabha",Normal/Others
+Bihar,KISHANGANJ,36,36,0,100.0,0.0,0.0,1,Dr Mohammad Jawed,KISHANGANJ,Normal/Others
+Punjab,S.A.S NAGAR,36,36,0,100.0,0.0,0.0,4,"DR DHARAMVIRA GANDHI, Dr. Vikramjit Singh Sahney (2022-28), MALVINDER SINGH KANG, Shri Raghav Chadha (2022-28)","ANANDPUR SAHIB, PATIALA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,MEERUT,36,36,0,100.0,0.0,0.0,4,"ARUN GOVIL, CHANDAN CHAUHAN, Dr. Laxmikant Bajpayee (2022-28), HARENDRA SINGH MALIK","BIJNOR, MEERUT, MUZAFFARNAGAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,HAPUR,36,36,0,100.0,0.0,0.0,3,"ARUN GOVIL, ATUL GARG, KANWAR SINGH TANWAR","AMROHA, GHAZIABAD, MEERUT",Normal/Others
+Gujarat,MORBI,36,36,0,100.0,0.0,0.0,4,"CHANDUBHAI CHHAGANBHAI SHIHORA, PARSHOTTAMBHAI RUPALA, Shri Kesridevsinh Jhala (2023-29), Vinod Chavda","KACHCHH, RAJKOT, SURENDRANAGAR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,KRISHNAGIRI,36,36,0,100.0,0.0,0.0,1,GOPINATH K,KRISHNAGIRI,Normal/Others
+Kerala,PATHANAMTHITTA,36,36,0,100.0,0.0,0.0,4,"Anto Antony, Dr. John Brittas (2021-27), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","Nominated Rajya Sabha, PATHANAMTHITTA, Sitting Rajya Sabha",Normal/Others
+Gujarat,MAHISAGAR,36,36,0,100.0,0.0,0.0,3,"Dr. Parmar Jashvantsinh Salamsinh (2024-30), Jaswantsinh Sumanbhai Bhabhor, RAJPALSINH MAHENDRASINH JADAV","DAHOD, PANCHMAHAL, Sitting Rajya Sabha",Normal/Others
+Himachal Pradesh,SHIMLA,35,35,0,100.0,0.0,0.0,4,"Dr. Sikander Kumar (2022-28), Kangana Ranaut, Shri Harsh Mahajan (2024-30), Suresh Kumar Kashyap","MANDI, SHIMLA, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DHOLPUR,35,35,0,100.0,0.0,0.0,2,"Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28)",Sitting Rajya Sabha,Normal/Others
+Telangana,WARANGAL,35,35,0,100.0,0.0,0.0,4,"BALRAM NAIK PORIKA, KADIYAM KAVYA, Shri Damodar Rao Divakonda (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","MAHABUBABAD, Sitting Rajya Sabha, WARANGEL",Normal/Others
+Maharashtra,AHILYANAGAR,35,35,0,100.0,0.0,0.0,7,"BHAUSAHEB RAJARAM WAKCHAURE, Dr. Ajeet Madhavrao Gopchade (2024-30), Dr. Anil Sukhdeorao Bonde (2022-28), Dr. Medha Vishram Kulkarni (2024-30), NILESH DNYANDEV LANKE, Shri Ashokrao Shankarrao Chavan (2024-30), Shri Dhananjay Bhimrao Mahadik (2022-28)","AHMEDNAGAR, SHIRDI, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,SEONI,34,34,0,100.0,0.0,0.0,4,"ASHISH DUBEY, BHARTI PARDHI, Faggan Singh Kulaste, Smt. Sumitra Balmik (2022-28)","BALAGHAT, JABALPUR, MANDLA, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,RAJNANDGAON,34,34,0,100.0,0.0,0.0,2,"Santosh Pandey, Smt. Ranjeet Ranjan (2022-28)","RAJNANDGAON, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,PERAMBALUR,34,34,0,100.0,0.0,0.0,3,"ARUN NEHRU, Shri K.R.N. Rajeshkumar (2022-28), Thirumaa Valavan Thol","CHIDAMBARAM, PERAMBALUR, Sitting Rajya Sabha",Normal/Others
+Bihar,KHAGARIA,34,34,0,100.0,0.0,0.0,1,RAJESH VERMA,KHAGARIA,Normal/Others
+Haryana,MAHENDRAGARH,34,34,0,100.0,0.0,0.0,1,Shri  Dharambir Singh,BHIWANI MAHENDRAGARH,Normal/Others
+Maharashtra,KOLHAPUR,34,34,0,100.0,0.0,0.0,3,"CHHATRAPATI SHAHU SHAHAJI, Dhairyasheel Sambhajirao Mane, Shri Dhananjay Bhimrao Mahadik (2022-28)","HATKANANGLE, KOLHAPUR, Sitting Rajya Sabha",Normal/Others
+West Bengal,MALDA,34,34,0,100.0,0.0,0.0,3,"ISHA KHAN CHOUDHURY, Khagen Murmu, Shri Samik Bhattacharya (2024-30)","MALDAHA DAKSHIN, MALDAHA UTTAR, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,BALAGHAT,33,33,0,100.0,0.0,0.0,2,"BHARTI PARDHI, Smt. Sumitra Balmik (2022-28)","BALAGHAT, Sitting Rajya Sabha",Normal/Others
+Jammu And Kashmir,KATHUA,33,33,0,100.0,0.0,0.0,2,"Jitendra Singh, Shri Gulam Ali (2022-28)","Nominated Rajya Sabha, UDHAMPUR",Normal/Others
+Jammu And Kashmir,SHAHJAHANPUR,33,33,0,100.0,0.0,0.0,1,Shri Gulam Ali (2022-28),Nominated Rajya Sabha,Normal/Others
+Chhattisgarh,MAHASAMUND,33,33,0,100.0,0.0,0.0,1,ROOP KUMARI CHOUDHARY,MAHASAMUND,Normal/Others
+Haryana,ROHTAK,33,33,0,100.0,0.0,0.0,1,DEEPENDER SINGH HOODA,ROHTAK,Normal/Others
+Karnataka,CHIKKAMAGALURU,33,33,0,100.0,0.0,0.0,4,"KOTA SRINIVAS POOJARY, SHREYAS. M. PATEL, Shri Jairam Ramesh (2022-28), Shri LS Tejasvi Surya ","BANGALORE SOUTH, HASSAN, Sitting Rajya Sabha, UDUPI CHIKMAGALUR",Normal/Others
+Madhya Pradesh,JHABUA,33,33,0,100.0,0.0,0.0,1,ANITA NAGARSINGH CHOUHAN,RATLAM,Normal/Others
+Uttar Pradesh,KANNAUJ,33,33,0,100.0,0.0,0.0,1,AKHILESH YADAV,KANNAUJ,Normal/Others
+West Bengal,DAKSHIN DINAJPUR,33,33,0,100.0,0.0,0.0,1,Dr Sukanta Majumdar ,BALURGHAT,Normal/Others
+West Bengal,PURBA BARDHAMAN,32,32,0,100.0,0.0,0.0,3,"AZAD KIRTI JHA, Asit Kumar Mal , DR. SHARMILA SARKAR","BARDHAMAN PURBA, BARDHAMAN-DURGAPUR, BOLPUR",Normal/Others
+Rajasthan,BARMER,32,32,0,100.0,0.0,0.0,3,"Shri Pramod Tiwari (2022-28), Smt. Sonia Gandhi (2024-30), UMMEDA RAM BENIWAL","BARMER, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,THE NILGIRIS,32,32,0,100.0,0.0,0.0,1,Andimuthu Raja,NILGIRIS,Normal/Others
+West Bengal,JHARGRAM,32,32,0,100.0,0.0,0.0,2,"KALIPADA SAREN, Shri Samik Bhattacharya (2024-30)","JHARGRAM, Sitting Rajya Sabha",Normal/Others
+Maharashtra,WARDHA,32,32,0,100.0,0.0,0.0,2,"AMAR SHARADRAO KALE, Dr. Anil Sukhdeorao Bonde (2022-28)","Sitting Rajya Sabha, WARDHA",Normal/Others
+Madhya Pradesh,ANUPPUR,32,32,0,100.0,0.0,0.0,1,Smt Himadri Singh,SHAHDOL,Normal/Others
+Madhya Pradesh,MANDSAUR,32,32,0,100.0,0.0,0.0,2,"Shri Banshilal Gurjar (2024-30), Shri Sudheer Gupta ","MANDSOUR, Sitting Rajya Sabha",Normal/Others
+Telangana,KUMURAM BHEEM ASIFABAD,32,32,0,100.0,0.0,0.0,1,GODAM NAGESH,ADILABAD,Normal/Others
+Chandigarh,CHANDIGARH,32,32,0,100.0,0.0,0.0,2,"MANISH TEWARI, Shri Satnam Singh Sandhu (2024-30)","CHANDIGARH, Nominated Rajya Sabha",Normal/Others
+Andhra Pradesh,VIZIANAGARAM,66,31,35,46.97,0.0,5766036.0,3,"Appalanaidu Kalisetti, Shri Golla Baburao (2024-30), Sribharat MathuKumli","Sitting Rajya Sabha, VISAKHAPATNAM, VIZIANAGARAM",Normal/Others
+Madhya Pradesh,BHOPAL,31,31,0,100.0,0.0,0.0,7,"ALOK SHARMA, Dr. Kavita Patidar (2022-28), Dr. L. Murugan (2024-30), Shri Banshilal Gurjar (2024-30), Shri Vivek K. Tankha (2022-28), Smt. Maya Naroliya (2024-30), Smt. Sumitra Balmik (2022-28)","BHOPAL, Sitting Rajya Sabha",Normal/Others
+Bihar,JAMUI,31,31,0,100.0,0.0,0.0,2,"ARUN BHARTI, Dr. Bhim Singh (2024-30)","JAMUI, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DIDWANA-KUCHAMAN,31,31,0,100.0,0.0,0.0,5,"Shri Ghanshyam Tiwari (2022-28), Shri Hanuman Beniwal, Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Smt. Sonia Gandhi (2024-30)","NAGAUR, Sitting Rajya Sabha",Normal/Others
+West Bengal,PURULIA,31,31,0,100.0,0.0,0.0,3,"ARUP CHAKRABORTY, KALIPADA SAREN, Shri Jyotirmay Singh Mahato ","BANKURA, JHARGRAM, PURULIA",Normal/Others
+Rajasthan,SIROHI,31,31,0,100.0,0.0,0.0,1,LUMBARAM,JALORE,Normal/Others
+Gujarat,GIR SOMNATH,31,31,0,100.0,0.0,0.0,1,Rajeshbhai Naranbhai Chudasama,JUNAGADH,Normal/Others
+Gujarat,JAMNAGAR,31,31,0,100.0,0.0,0.0,2,"Shri Kesridevsinh Jhala (2023-29), Smt Poonamben Hematbhai Maadam","JAMNAGAR, Sitting Rajya Sabha",Normal/Others
+Nagaland,MON,30,30,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Jharkhand,LOHARDAGA,30,30,0,100.0,0.0,0.0,1,SUKHDEO BHAGAT,LOHARDAGA,Normal/Others
+Chhattisgarh,BALODABAZAR-BHATAPARA,30,30,0,100.0,0.0,0.0,3,"BRIJMOHAN AGRAWAL, KAMLESH JANGDE, Smt. Ranjeet Ranjan (2022-28)","JANJGIR CHAMPA, RAIPUR, Sitting Rajya Sabha",Normal/Others
+Maharashtra,BEED,30,30,0,100.0,0.0,0.0,5,"BAJRANG MANOHAR SONWANE, Shri Chandrakant Damodar Handore (2024-30), Shri Dhananjay Bhimrao Mahadik (2022-28), Shri Imran Pratapgarhi (2022-28), Shri Sanjay Raut (2022-28)","BEED, Sitting Rajya Sabha",Normal/Others
+Telangana,RAJANNA SIRCILLA,30,30,0,100.0,0.0,0.0,4,"Arvind Dharmapuri, Sanjay Kumar Bandi, Shri Damodar Rao Divakonda (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","KARIMNAGAR, NIZAMABAD, Sitting Rajya Sabha",Normal/Others
+Assam,KOKRAJHAR,30,30,0,100.0,0.0,0.0,2,"JOYANTA BASUMATARY, Shri Rwngwra Narzary (2022-28)","KOKRAJHAR, Sitting Rajya Sabha",Normal/Others
+Assam,DHEMAJI,30,30,0,100.0,0.0,0.0,2,"Pradan Baruah, Shri Rwngwra Narzary (2022-28)","LAKHIMPUR, Sitting Rajya Sabha",Normal/Others
+Telangana,JANGOAN,30,30,0,100.0,0.0,0.0,4,"CHAMALA KIRAN KUMAR REDDY, KADIYAM KAVYA, Shri Damodar Rao Divakonda (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","BHONGIR, Sitting Rajya Sabha, WARANGEL",Normal/Others
+Madhya Pradesh,BARWANI,30,30,0,100.0,0.0,0.0,1,Gajendra Singh Patel,KHARGONE,Normal/Others
+Uttarakhand,UDHAM SINGH NAGAR,30,30,0,100.0,0.0,0.0,3,"Ajay Bhatt, Dr. Kalpana Saini (2022-28), Shri Mahendra Bhatt (2024-30)","NAINITAL UDHAM SINGH NAG., Sitting Rajya Sabha",Normal/Others
+Karnataka,UTTARA KANNADA,30,30,0,100.0,0.0,0.0,1,VISHWESHWAR HEGDE KAGERI,UTTARA KANNADA,Normal/Others
+Telangana,KAMAREDDY,30,30,0,100.0,0.0,0.0,1,SURESH KUMAR SHETKAR,ZAHIRABAD,Normal/Others
+Haryana,SIRSA,30,30,0,100.0,0.0,0.0,1,SELJA,SIRSA,Normal/Others
+Bihar,BANKA,29,29,0,100.0,0.0,0.0,1,Giridhari Yadav,BANKA,Normal/Others
+Madhya Pradesh,DEWAS,29,29,0,100.0,0.0,0.0,5,"Dr. Kavita Patidar (2022-28), Dr. L. Murugan (2024-30), Gyaneshwar Patil, Mahendra Singh Solanky, Smt. Maya Naroliya (2024-30)","DEWAS, KHANDWA, Sitting Rajya Sabha",Normal/Others
+Odisha,KENDRAPADA,29,29,0,100.0,0.0,0.0,3,"BAIJAYANT PANDA, Dr. Sasmit Patra (2022-28), Smt. Sulata Deo (2022-28)","KENDRAPARA, Sitting Rajya Sabha",Normal/Others
+Gujarat,SURENDRANAGAR,29,29,0,100.0,0.0,0.0,3,"CHANDUBHAI CHHAGANBHAI SHIHORA, Shri Kesridevsinh Jhala (2023-29), Shri Mayankkumar Nayak (2024-30)","SURENDRANAGAR, Sitting Rajya Sabha",Normal/Others
+Kerala,IDUKKI,29,29,0,100.0,0.0,0.0,6,"Adv Dean Kuriakose, Shri Abdul Wahab (2021-27), Shri Haris Beeran (2024-30), Shri Jose K. Mani (2024-30), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","IDUKKI, Nominated Rajya Sabha, Sitting Rajya Sabha",Normal/Others
+Punjab,BARNALA,29,29,0,100.0,0.0,0.0,1,GURMEET SINGH MEET HAYER,SANGRUR,Normal/Others
+Telangana,NAGARKURNOOL,29,29,0,100.0,0.0,0.0,2,"DR.MALLU RAVI, Shri Damodar Rao Divakonda (2022-28)","NAGARKURNOOL, Sitting Rajya Sabha",Normal/Others
+Odisha,KANDHAMALA,29,29,0,100.0,0.0,0.0,1,SUKANTA KUMAR PANIGRAHI,KANDHAMAL,Normal/Others
+Uttar Pradesh,AMBEDKAR NAGAR,28,28,0,100.0,0.0,0.0,2,"LALJI VERMA, Smt. Seema Dwivedi (2020-26)","AMBEDKAR NAGAR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DAUSA,28,28,0,100.0,0.0,0.0,5,"MURARI LAL MEENA, Shri Ghanshyam Tiwari (2022-28), Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Smt. Sonia Gandhi (2024-30)","DAUSA, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,KORBA,28,28,0,100.0,0.0,0.0,1,Jyotsna Charandas Mahant ,KORBA,Normal/Others
+Rajasthan,SHAHPURA,28,28,0,100.0,0.0,0.0,1,DAMODAR AGARWAL,BHILWARA,Normal/Others
+Uttar Pradesh,GHAZIABAD,28,28,0,100.0,0.0,0.0,3,"ATUL GARG, DR RAJKUMAR SANGWAN, Shri Jayant Chaudhary (2022-28)","BAGHPAT, GHAZIABAD, Sitting Rajya Sabha",Normal/Others
+Delhi,CENTRAL,28,28,0,100.0,0.0,0.0,5,"Bansuri Swaraj, Manoj Tiwari, Praveen Khandelwal, Shri Narain Dass Gupta (2024-30), Shri Sanjay Singh (2024-30)","CHANDINI CHOWK, NEW DELHI, NORTH EAST DELHI, Sitting Rajya Sabha",Normal/Others
+Odisha,GANJAM,28,28,0,100.0,0.0,0.0,3,"ANITA SUBHADARSHINI, Dr. Sasmit Patra (2022-28), Shri Manas Ranjan Mangaraj (2022-28)","ASKA, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,SHEOPUR,28,28,0,100.0,0.0,0.0,1,SHIVMANGAL SINGH TOMAR,MORENA,Normal/Others
+Telangana,MEDCHAL MALKAJGIRI,28,28,0,100.0,0.0,0.0,1,EATALA RAJENDER,MALKAJGIRI,Normal/Others
+Arunachal Pradesh,EAST SIANG,45,27,18,60.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Uttar Pradesh,GAUTAM BUDDHA NAGAR,27,27,0,100.0,0.0,0.0,2,"Mahesh Sharma, Shri Javed Ali Khan (2022-28)","GAUTAM BUDDHA NAGAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,ETAWAH,27,27,0,100.0,0.0,0.0,3,"JITENDRA KUMAR DOHARE, Shri Javed Ali Khan (2022-28), Smt Dimple Yadav","ETAWAH, MAINPURI, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,JASHPUR,27,27,0,100.0,0.0,0.0,2,"RADHE SHYAM RATHIYA, Smt. Ranjeet Ranjan (2022-28)","RAIGARH, Sitting Rajya Sabha",Normal/Others
+Rajasthan,CHURU,27,27,0,100.0,0.0,0.0,3,"Rahul Kaswan, Shri Madan Rathore (2024-30), Shri Mukul Wasnik (2022-28)","CHURU, Sitting Rajya Sabha",Normal/Others
+Rajasthan,JAISALMER,27,27,0,100.0,0.0,0.0,7,"Shri Arjun Ram Meghwal, Shri Chunnilal Garasiya (2024-30), Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30), UMMEDA RAM BENIWAL","BARMER, BIKANER, Sitting Rajya Sabha",Normal/Others
+Jharkhand,JAMTARA,27,27,0,100.0,0.0,0.0,1,NALIN SOREN,DUMKA,Normal/Others
+Madhya Pradesh,KHANDWA,27,27,0,100.0,0.0,0.0,1,Gyaneshwar Patil,KHANDWA,Normal/Others
+Haryana,KURUKSHETRA,27,27,0,100.0,0.0,0.0,1,NAVEEN JINDAL,KURUKSHETRA,Normal/Others
+Tamil Nadu,DHARMAPURI,27,27,0,100.0,0.0,0.0,1,MANI. A.,DHARAMAPURI,Normal/Others
+Gujarat,JUNAGADH,27,27,0,100.0,0.0,0.0,3,"DR. MANSUKH MANDAVIYA, Rajeshbhai Naranbhai Chudasama, Shri Govindbhai Laljibhai Dholakia (2024-30)","JUNAGADH, PORBANDAR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,JAIPUR,27,27,0,100.0,0.0,0.0,3,"MANJU SHARMA, Rao Rajendra Singh, Shri Ghanshyam Tiwari (2022-28)","JAIPUR, JAIPUR RURAL, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,SHIVPURI,26,26,0,100.0,0.0,0.0,3,"BHARAT SINGH KUSHWAH, JYOTIRADITYA M. SCINDIA, Smt. Sumitra Balmik (2022-28)","GUNA, GWALIOR, Sitting Rajya Sabha",Normal/Others
+Bihar,MUNGER,26,26,0,100.0,0.0,0.0,2,"ARUN BHARTI, Shri Khiru Mahto (2022-28)","JAMUI, Sitting Rajya Sabha",Normal/Others
+Punjab,SANGRUR,26,26,0,100.0,0.0,0.0,3,"Dr. Vikramjit Singh Sahney (2022-28), GURMEET SINGH MEET HAYER, Shri Sant Balbir Singh (2022-28)","SANGRUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,HATHRAS,26,26,0,100.0,0.0,0.0,1,ANOOP PRADHAN BALMIKI,HATHRAS,Normal/Others
+Madhya Pradesh,KHARGONE,26,26,0,100.0,0.0,0.0,3,"Dr. Kavita Patidar (2022-28), Gajendra Singh Patel, Shri Ashok Singh (2024-30)","KHARGONE, Sitting Rajya Sabha",Normal/Others
+Himachal Pradesh,SIRMAUR,26,26,0,100.0,0.0,0.0,3,"Dr. Sikander Kumar (2022-28), Shri Harsh Mahajan (2024-30), Suresh Kumar Kashyap","SHIMLA, Sitting Rajya Sabha",Normal/Others
+Gujarat,PATAN,26,26,0,100.0,0.0,0.0,3,"Bharatsinhji Shankarji Dabhi, Shri Babubhai Jesangbhai Desai (2023-29), Shri Mayankkumar Nayak (2024-30)","PATAN, Sitting Rajya Sabha",Normal/Others
+Telangana,KHAMMAM,26,26,0,100.0,0.0,0.0,3,"RAMASAHAYAM RAGHURAM REDDY, Shri B. Parthasaradhi Reddy (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","KHAMMAM, Sitting Rajya Sabha",Normal/Others
+Odisha,PURI,26,26,0,100.0,0.0,0.0,6,"BIBHU PRASAD TARAI, Dr. Sasmit Patra (2022-28), SAMBIT PATRA, Shri Manas Ranjan Mangaraj (2022-28), Shri Subhasish Khuntia (2024-30), Smt. Sulata Deo (2022-28)","JAGATSINGHPUR, PURI, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,BASTAR,26,26,0,100.0,0.0,0.0,1,MAHESH KASHYAP,BASTAR,Normal/Others
+Karnataka,HASSAN,26,26,0,100.0,0.0,0.0,2,"Dr. Dharmasthala Veerendra Heggade (2022-28), SHREYAS. M. PATEL","HASSAN, Nominated Rajya Sabha",Normal/Others
+Punjab,PATHANKOT,26,26,0,100.0,0.0,0.0,1,SUKHJINDER SINGH RANDHAWA,GURDASPUR,Normal/Others
+Maharashtra,LATUR,26,26,0,100.0,0.0,0.0,5,"DR KALGE SHIVAJI BANDAPPA, Dr. Ajeet Madhavrao Gopchade (2024-30), Dr. Medha Vishram Kulkarni (2024-30), Omprakash Bhupalsinh Alias Pawan Rajenimbalkar, Shri Praful Patel (2024-30)","LATUR, OSMANABAD, Sitting Rajya Sabha",Normal/Others
+Gujarat,ARVALLI,26,26,0,100.0,0.0,0.0,2,"SHOBHANABEN MAHENDRASINH BARAIYA, Shri Mayankkumar Nayak (2024-30)","SABARKANTHA, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,THENI,26,26,0,100.0,0.0,0.0,2,"Shri Ilaiyaraaja (2022-28), THANGA TAMILSELVAN","Nominated Rajya Sabha, THENI",Normal/Others
+Meghalaya,RI BHOI,25,25,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Rajasthan,BIKANER,25,25,0,100.0,0.0,0.0,6,"Shri Arjun Ram Meghwal, Shri Madan Rathore (2024-30), Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","BIKANER, Sitting Rajya Sabha",Normal/Others
+Himachal Pradesh,CHAMBA,25,25,0,100.0,0.0,0.0,2,"RAJEEV BHARDWAJ, Shri Harsh Mahajan (2024-30)","KANGRA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BAGHPAT,25,25,0,100.0,0.0,0.0,3,"DR RAJKUMAR SANGWAN, Shri Jayant Chaudhary (2022-28), Shri Surendra Singh Nagar (2022-28)","BAGHPAT, Sitting Rajya Sabha",Normal/Others
+Gujarat,SABAR KANTHA,25,25,0,100.0,0.0,0.0,1,SHOBHANABEN MAHENDRASINH BARAIYA,SABARKANTHA,Normal/Others
+Uttarakhand,NAINITAL,25,25,0,100.0,0.0,0.0,2,"Ajay Bhatt, Shri Mahendra Bhatt (2024-30)","NAINITAL UDHAM SINGH NAG., Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,NEEMUCH,25,25,0,100.0,0.0,0.0,1,Shri Sudheer Gupta ,MANDSOUR,Normal/Others
+Andhra Pradesh,ALLURI SITHARAMA RAJU,65,24,41,36.92,0.0,31304949.0,1,Gumma Thanuja Rani,ARAKU,Normal/Others
+Tamil Nadu,KALLAKURICHI,24,24,0,100.0,0.0,0.0,2,"MALAIYARASAN D, Shri S. Kalyanasundaram (2022-28)","KALLAKURICHI, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DEEG,24,24,0,100.0,0.0,0.0,4,"SANJNA JATAV, Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","BHARATPUR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,BALOTRA,24,24,0,100.0,0.0,0.0,3,"Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30), UMMEDA RAM BENIWAL","BARMER, Sitting Rajya Sabha",Normal/Others
+Karnataka,DHARWAD,24,24,0,100.0,0.0,0.0,2,"Pralhad Venkatesh Joshi, Smt. Nirmala Sitharaman (2022-28)","DHARWAD, Sitting Rajya Sabha",Normal/Others
+Telangana,JOGULAMBA GADWAL,24,24,0,100.0,0.0,0.0,2,"ARUNA. D. K, DR.MALLU RAVI","MAHABUBNAGAR, NAGARKURNOOL",Normal/Others
+Maharashtra,SATARA,24,24,0,100.0,0.0,0.0,4,"Dr. Medha Vishram Kulkarni (2024-30), SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE, Shri Dhananjay Bhimrao Mahadik (2022-28), Shri Nitin Laxmanrao Jadhav Patil (2024-28)","SATARA, Sitting Rajya Sabha",Normal/Others
+Delhi,NORTH WEST,24,24,0,100.0,0.0,0.0,2,"Praveen Khandelwal, Yogendra Chandoliya","CHANDINI CHOWK, NORTH WEST DELHI",Normal/Others
+Maharashtra,DHARASHIV,24,24,0,100.0,0.0,0.0,1,Omprakash Bhupalsinh Alias Pawan Rajenimbalkar,OSMANABAD,Normal/Others
+Uttar Pradesh,SITAPUR,23,23,0,100.0,0.0,0.0,2,"Ashok Kumar Rawat, RAKESH RATHOR","MISRIKH, SITAPUR",Normal/Others
+Telangana,SANGAREDDY,23,23,0,100.0,0.0,0.0,3,"MADHAVANENI RAGHUNANDAN RAO, SURESH KUMAR SHETKAR, Shri Ravi Chandra Vaddiraju (2024-30)","MEDAK, Sitting Rajya Sabha, ZAHIRABAD",Normal/Others
+Haryana,JIND,23,23,0,100.0,0.0,0.0,4,"JAI PARKASH, SATPAL BRAHAMCHARI, SELJA, Shri Subhash Barala (2024-30)","HISAR, SIRSA, SONEPAT, Sitting Rajya Sabha",Normal/Others
+Tripura,WEST TRIPURA,23,23,0,100.0,0.0,0.0,2,"BIPLAB KUMAR DEB, Shri Rajib Bhattacharjee (2024-28)","Sitting Rajya Sabha, TRIPURA WEST",Normal/Others
+Uttar Pradesh,SHAMLI,23,23,0,100.0,0.0,0.0,3,"Dr. Laxmikant Bajpayee (2022-28), IQRA CHOUDHARY, Shri Jayant Chaudhary (2022-28)","KAIRANA, Sitting Rajya Sabha",Normal/Others
+Nagaland,MOKOKCHUNG,22,22,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,KANPUR DEHAT,22,22,0,100.0,0.0,0.0,3,"AKHILESH YADAV, NARAYAN DAS AHIRWAR, Shri Javed Ali Khan (2022-28)","JALAUN, KANNAUJ, Sitting Rajya Sabha",Normal/Others
+Punjab,KAPURTHALA,22,22,0,100.0,0.0,0.0,4,"DR. RAJ KUMAR CHABBEWAL, Dr. Ashok Kumar Mittal (2022-28), Shri Harbhajan Singh (2022-28), Shri Sant Balbir Singh (2022-28)","HOSHIARPUR, Sitting Rajya Sabha",Normal/Others
+Sikkim,GANGTOK,22,22,0,100.0,0.0,0.0,2,"Indra Hang Subba, Shri Dorjee Tshering Lepcha (2024-30)","SIKKIM, Sitting Rajya Sabha",Normal/Others
+Punjab,SRI MUKTSAR SAHIB,22,22,0,100.0,0.0,0.0,3,"AMRINDER SINGH RAJA WARRING, SHER SINGH GHUBAYA, Smt Harsimrat Kaur Badal","BHATINDA, FIROZPUR, LUDHIANA",Normal/Others
+Jharkhand,DEOGHAR,22,22,0,100.0,0.0,0.0,1,NALIN SOREN,DUMKA,Normal/Others
+Uttarakhand,UTTARKASHI,22,22,0,100.0,0.0,0.0,4,"Dr. Kalpana Saini (2022-28), Mala Rajya Laxmi Shah , Shri Mahendra Bhatt (2024-30), Shri Naresh Bansal (2020-26)","Sitting Rajya Sabha, TEHRI GARHWAL",Normal/Others
+Chhattisgarh,RAIPUR,22,22,0,100.0,0.0,0.0,2,"BRIJMOHAN AGRAWAL, Shri Devendra Pratap Singh (2024-30)","RAIPUR, Sitting Rajya Sabha",Normal/Others
+Haryana,KAITHAL,22,22,0,100.0,0.0,0.0,1,NAVEEN JINDAL,KURUKSHETRA,Normal/Others
+Maharashtra,RAIGAD,22,22,0,100.0,0.0,0.0,3,"Shri Sanjay Raut (2022-28), Shrirang Appa Barne, Sunil Dattatray Tatkare","MAVAL, RAIGAD, Sitting Rajya Sabha",Normal/Others
+Telangana,KARIMNAGAR,22,22,0,100.0,0.0,0.0,1,Sanjay Kumar Bandi,KARIMNAGAR,Normal/Others
+Tamil Nadu,RANIPET,22,22,0,100.0,0.0,0.0,1,S. Jagathrakshakan,ARAKKONAM,Normal/Others
+Telangana,HANUMAKONDA,22,22,0,100.0,0.0,0.0,1,KADIYAM KAVYA,WARANGEL,Normal/Others
+Jammu And Kashmir,PULWAMA,22,22,0,100.0,0.0,0.0,1,AGA SYED RUHULLAH MEHDI,SRINAGAR,Normal/Others
+Delhi,SOUTH WEST,22,22,0,100.0,0.0,0.0,1,Kamaljeet Sehrawat,WEST DELHI,Normal/Others
+Punjab,RUPNAGAR,21,21,0,100.0,0.0,0.0,3,"Dr. Vikramjit Singh Sahney (2022-28), MALVINDER SINGH KANG, Shri Sant Balbir Singh (2022-28)","ANANDPUR SAHIB, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,CHHATARPUR,21,21,0,100.0,0.0,0.0,4,"Dr. Kavita Patidar (2022-28), RAHUL SINGH LODHI, Shri Ashok Singh (2024-30), Virendra Kumar","DAMOH, Sitting Rajya Sabha, TIKAMGARH",Normal/Others
+Punjab,MANSA,21,21,0,100.0,0.0,0.0,3,"CHARANJIT SINGH CHANNI, Dr. Vikramjit Singh Sahney (2022-28), Smt Harsimrat Kaur Badal","BHATINDA, JALANDHAR, Sitting Rajya Sabha",Normal/Others
+Odisha,BALESHWAR,21,21,0,100.0,0.0,0.0,3,"AVIMANYU SETHI, Pratap Chandra Sarangi, Smt. Sulata Deo (2022-28)","BALASORE, BHADRAK, Sitting Rajya Sabha",Normal/Others
+Delhi,NORTH,21,21,0,100.0,0.0,0.0,1,Praveen Khandelwal,CHANDINI CHOWK,Normal/Others
+Assam,DHUBRI,22,20,2,90.91,0.0,750000.0,1,RAKIBUL HUSSAIN,DHUBRI,Normal/Others
+Chhattisgarh,MUNGELI,20,20,0,100.0,0.0,0.0,2,"Smt. Ranjeet Ranjan (2022-28), TOKHAN SAHU","BILASPUR, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,SIDHI,20,20,0,100.0,0.0,0.0,1,DR. RAJESH MISHRA,SIDHI,Normal/Others
+Rajasthan,HANUMANGARH,20,20,0,100.0,0.0,0.0,4,"KULDEEP INDORA, Rahul Kaswan, Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28)","CHURU, GANGANAGAR, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,KABEERDHAM,20,20,0,100.0,0.0,0.0,1,Santosh Pandey,RAJNANDGAON,Normal/Others
+Chhattisgarh,BILASPUR,20,20,0,100.0,0.0,0.0,1,TOKHAN SAHU,BILASPUR,Normal/Others
+Telangana,VIKARABAD,20,20,0,100.0,0.0,0.0,2,"KONDA VISHWESHWAR REDDY, Shri Anil Kumar Yadav Mandadi (2024-30)","CHELVELLA, Sitting Rajya Sabha",Normal/Others
+Maharashtra,NAGPUR,20,20,0,100.0,0.0,0.0,2,"Nitin Jairam Gadkari, Shyamkumar","NAGPUR, RAMTEK",Normal/Others
+Haryana,FATEHABAD,20,20,0,100.0,0.0,0.0,2,"SELJA, Shri Subhash Barala (2024-30)","SIRSA, Sitting Rajya Sabha",Normal/Others
+Maharashtra,GONDIA,20,20,0,100.0,0.0,0.0,2,"DR. KIRSAN NAMDEO, Shri Praful Patel (2024-30)","GADCHIROLI-CHIMUR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,ARIYALUR,19,19,0,100.0,0.0,0.0,1,Thirumaa Valavan Thol,CHIDAMBARAM,Normal/Others
+Chhattisgarh,GAURELA-PENDRA-MARWAHI,19,19,0,100.0,0.0,0.0,2,"Jyotsna Charandas Mahant , TOKHAN SAHU","BILASPUR, KORBA",Normal/Others
+Madhya Pradesh,MANDLA,19,19,0,100.0,0.0,0.0,1,Faggan Singh Kulaste,MANDLA,Normal/Others
+Gujarat,PORBANDAR,19,19,0,100.0,0.0,0.0,1,DR. MANSUKH MANDAVIYA,PORBANDAR,Normal/Others
+Jammu And Kashmir,KUPWARA,19,19,0,100.0,0.0,0.0,1,ABDUL RASHID SHEIKH,BARAMULLAH,Normal/Others
+Odisha,BHADRAK,19,19,0,100.0,0.0,0.0,1,AVIMANYU SETHI,BHADRAK,Normal/Others
+Jammu And Kashmir,SRINAGAR,19,19,0,100.0,0.0,0.0,1,AGA SYED RUHULLAH MEHDI,SRINAGAR,Normal/Others
+Jharkhand,SIMDEGA,18,18,0,100.0,0.0,0.0,1,KALI CHARAN MUNDA,KHUNTI,Normal/Others
+Uttar Pradesh,AMETHI,18,18,0,100.0,0.0,0.0,2,"KISHORI LAL, Shri Sanjay Seth (2024-30)","AMETHI, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,DAMOH,18,18,0,100.0,0.0,0.0,1,RAHUL SINGH LODHI,DAMOH,Normal/Others
+Gujarat,AHMEDABAD,18,18,0,100.0,0.0,0.0,3,"CHANDUBHAI CHHAGANBHAI SHIHORA, DINESHBHAI MAKWANA, Hasmukh Bhai Soma Bhai Patel","AHMEDABAD EAST, AHMEDABAD WEST, SURENDRANAGAR",Normal/Others
+Maharashtra,SINDHUDURG,18,18,0,100.0,0.0,0.0,2,"NARAYAN TATU RANE, Shri Sanjay Raut (2022-28)","RATNAGIRI-SINDHUDURG, Sitting Rajya Sabha",Normal/Others
+Rajasthan,PALI,18,18,0,100.0,0.0,0.0,2,"Shri Madan Rathore (2024-30), Shri PP Chaudhary","PALI, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,HAMIRPUR,17,17,0,100.0,0.0,0.0,2,"AJENDRA SINGH LODHI, Shri Baburam Nishad (2022-28)","HAMIRPUR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,LALITPUR,17,17,0,100.0,0.0,0.0,1,Anurag Sharma ,JHANSI,Normal/Others
+Karnataka,CHAMARAJANAGAR,17,17,0,100.0,0.0,0.0,1,SUNIL BOSE,CHAMARAJANAGAR,Normal/Others
+Bihar,BEGUSARAI,17,17,0,100.0,0.0,0.0,1,Giriraj Singh,BEGUSARAI,Normal/Others
+Maharashtra,SANGLI,17,17,0,100.0,0.0,0.0,3,"Dhairyasheel Sambhajirao Mane, Shri Dhananjay Bhimrao Mahadik (2022-28), VISHAL","HATKANANGLE, SANGLI, Sitting Rajya Sabha",Normal/Others
+Karnataka,BELAGAVI,17,17,0,100.0,0.0,0.0,2,"JAGADISH SHETTAR, PRIYANKA SATISH JARKIHOLI","BELGAUM, CHIKKODI",Normal/Others
+Uttar Pradesh,BARA BANKI,16,16,0,100.0,0.0,0.0,4,"Shri Brij Lal (2020-26), Shri Sanjay Seth (2024-30), Smt. Darshana Singh (2022-28), TANUJ PUNIA","BARABANKI, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,RAIGARH,16,16,0,100.0,0.0,0.0,2,"RADHE SHYAM RATHIYA, Shri Devendra Pratap Singh (2024-30)","RAIGARH, Sitting Rajya Sabha",Normal/Others
+Haryana,BHIWANI,16,16,0,100.0,0.0,0.0,3,"JAI PARKASH, Shri  Dharambir Singh, Shri Subhash Barala (2024-30)","BHIWANI MAHENDRAGARH, HISAR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,BHARATPUR,16,16,0,100.0,0.0,0.0,3,"SANJNA JATAV, Shri Ghanshyam Tiwari (2022-28), Shri Madan Rathore (2024-30)","BHARATPUR, Sitting Rajya Sabha",Normal/Others
+Haryana,JHAJJAR,16,16,0,100.0,0.0,0.0,1,DEEPENDER SINGH HOODA,ROHTAK,Normal/Others
+Assam,JORHAT,16,16,0,100.0,0.0,0.0,2,"GAURAV GOGOI, Shri Pabitra Margherita (2022-28)","JORHAT, Sitting Rajya Sabha",Normal/Others
+Rajasthan,RAJSAMAND,16,16,0,100.0,0.0,0.0,2,"MAHIMA KUMARI MEWAR, Shri Ghanshyam Tiwari (2022-28)","RAJSAMAND, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,UTTAR BASTAR KANKER,16,16,0,100.0,0.0,0.0,2,"BHOJRAJ NAG, Shri Rajeev Shukla (2022-28)","KANKER, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,GORAKHPUR,15,15,0,100.0,0.0,0.0,3,"Dr. Radha Mohan Das Agrawal (2022-28), Shri Brij Lal (2020-26), Smt. Darshana Singh (2022-28)",Sitting Rajya Sabha,Normal/Others
+Jharkhand,GUMLA,15,15,0,100.0,0.0,0.0,1,SUKHDEO BHAGAT,LOHARDAGA,Normal/Others
+Chhattisgarh,SARANGARH-BILAIGARH,15,15,0,100.0,0.0,0.0,3,"KAMLESH JANGDE, RADHE SHYAM RATHIYA, Smt. Ranjeet Ranjan (2022-28)","JANJGIR CHAMPA, RAIGARH, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,UNNAO,15,15,0,100.0,0.0,0.0,3,"Shri Baburam Nishad (2022-28), Shri Sanjay Seth (2024-30), Swami Sachchidanandhari Sakshi ji Maharaj ","Sitting Rajya Sabha, UNNAO",Normal/Others
+Bihar,BUXAR,15,15,0,100.0,0.0,0.0,2,"SUDHAKAR SINGH, Shri Akhilesh Prasad Singh (2024-30)","BUXAR, Sitting Rajya Sabha",Normal/Others
+Manipur,IMPHAL WEST,15,15,0,100.0,0.0,0.0,1,ANGOMCHA BIMOL AKOIJAM,INNER MANIPUR,Normal/Others
+Chhattisgarh,DHAMTARI,15,15,0,100.0,0.0,0.0,3,"BHOJRAJ NAG, ROOP KUMARI CHOUDHARY, Shri Devendra Pratap Singh (2024-30)","KANKER, MAHASAMUND, Sitting Rajya Sabha",Normal/Others
+Telangana,HYDERABAD,15,15,0,100.0,0.0,0.0,2,"Asaduddin Owaisi, Shri Anil Kumar Yadav Mandadi (2024-30)","HYDERABAD, Sitting Rajya Sabha",Normal/Others
+Odisha,KENDUJHAR,15,15,0,100.0,0.0,0.0,1,ANANTA NAYAK,KEONJHAR,Normal/Others
+Gujarat,DEVBHUMI DWARKA,15,15,0,100.0,0.0,0.0,1,Smt Poonamben Hematbhai Maadam,JAMNAGAR,Normal/Others
+Madhya Pradesh,SEHORE,14,14,0,100.0,0.0,0.0,5,"ALOK SHARMA, Dr. Kavita Patidar (2022-28), SHIVRAJ SINGH CHOUHAN, Shri Balyogi Umeshnath (2024-30), Smt. Sumitra Balmik (2022-28)","BHOPAL, Sitting Rajya Sabha, VIDISHA",Normal/Others
+Bihar,SARAN,14,14,0,100.0,0.0,0.0,2,"Dr. Bhim Singh (2024-30), Shri Janardan Singh Sigriwal ","MAHARAJGANJ, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,VIDISHA,14,14,0,100.0,0.0,0.0,2,"DR. LATA WANKHEDE, SHIVRAJ SINGH CHOUHAN","SAGAR, VIDISHA",Normal/Others
+Himachal Pradesh,SOLAN,14,14,0,100.0,0.0,0.0,1,Suresh Kumar Kashyap,SHIMLA,Normal/Others
+Rajasthan,BHILWARA,14,14,0,100.0,0.0,0.0,2,"DAMODAR AGARWAL, Smt. Sonia Gandhi (2024-30)","BHILWARA, Sitting Rajya Sabha",Normal/Others
+Haryana,REWARI,14,14,0,100.0,0.0,0.0,4,"DEEPENDER SINGH HOODA, NAVEEN JINDAL, Rao Inderjit Singh, Shri  Dharambir Singh","BHIWANI MAHENDRAGARH, GURGAON, KURUKSHETRA, ROHTAK",Normal/Others
+Telangana,SURYAPET,14,14,0,100.0,0.0,0.0,3,"CHAMALA KIRAN KUMAR REDDY, KUNDURU RAGHUVEER, Shri Anil Kumar Yadav Mandadi (2024-30)","BHONGIR, NALGONDA, Sitting Rajya Sabha",Normal/Others
+Karnataka,GADAG,14,14,0,100.0,0.0,0.0,2,"BASAVARAJ BOMMAI, Parvatagouda Chandanagouda Gaddigoudar","BAGALKOT, HAVERI",Normal/Others
+Madhya Pradesh,ASHOKNAGAR,14,14,0,100.0,0.0,0.0,1,JYOTIRADITYA M. SCINDIA,GUNA,Normal/Others
+Punjab,FATEHGARH SAHIB,14,14,0,100.0,0.0,0.0,1,Shri Amar Singh,FATEHGARH SAHIB,Normal/Others
+Karnataka,BENGALURU RURAL,14,14,0,100.0,0.0,0.0,1,DR.K.SUDHAKAR,CHIKBALLAPUR,Normal/Others
+Maharashtra,MUMBAI,14,14,0,100.0,0.0,0.0,1,Arvind Ganpat Sawant,MUMBAI SOUTH,Normal/Others
+Jammu And Kashmir,BANDIPORA,14,14,0,100.0,0.0,0.0,1,ABDUL RASHID SHEIKH,BARAMULLAH,Normal/Others
+Maharashtra,BHANDARA,14,14,0,100.0,0.0,0.0,2,"DR. PRASHANT YADAORAO PADOLE, Shri Praful Patel (2024-30)","BHANDARA-GONDIYA, Sitting Rajya Sabha",Normal/Others
+Assam,BISWANATH,14,13,1,92.86,0.0,0.0,3,"GAURAV GOGOI, RANJIT DUTTA, Shri Pabitra Margherita (2022-28)","JORHAT, Sitting Rajya Sabha, Sonitpur",Normal/Others
+Punjab,BATHINDA,13,13,0,100.0,0.0,0.0,2,"SARABJEET SINGH KHALSA, Smt Harsimrat Kaur Badal","BHATINDA, FARIDKOT",Normal/Others
+Manipur,CHURACHANDPUR,13,13,0,100.0,0.0,0.0,1,ALFRED KANNGAM S ARTHUR,OUTER MANIPUR,Normal/Others
+Rajasthan,KOTA,13,13,0,100.0,0.0,0.0,3,"Om Birla, Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28)","KOTA, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,BALRAMPUR,13,13,0,100.0,0.0,0.0,1,Kirti Vardhan Singh,GONDA,Normal/Others
+Andhra Pradesh,NARAYANPET,13,13,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Rajasthan,JALORE,13,13,0,100.0,0.0,0.0,1,LUMBARAM,JALORE,Normal/Others
+Rajasthan,BUNDI,13,13,0,100.0,0.0,0.0,2,"DAMODAR AGARWAL, Om Birla","BHILWARA, KOTA",Normal/Others
+Karnataka,HAVERI,13,13,0,100.0,0.0,0.0,2,"BASAVARAJ BOMMAI, Pralhad Venkatesh Joshi","DHARWAD, HAVERI",Normal/Others
+Maharashtra,ETAH,13,13,0,100.0,0.0,0.0,1,AASHTIKAR PATIL NAGESH BAPURAO,HINGOLI,Normal/Others
+Tripura,KHOWAI,13,13,0,100.0,0.0,0.0,1,KRITI DEVI DEBBARMAN,TRIPURA EAST,Normal/Others
+Odisha,MALKANGIRI,13,13,0,100.0,0.0,0.0,1,BALABHADRA MAJHI,NABARANGPUR,Normal/Others
+Andhra Pradesh,BAPATLA,87,12,75,13.79,0.0,11141464.0,3,"Krishna Prasad Tenneti, Shri Paka Venkata Satyanarayana (2025-28), Shri Yerram Venkata Subba Reddy (2024-30)","BAPATLA, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,KRISHNA,57,12,45,21.05,0.0,15189614.0,3,"Balashowry Vallabbhaneni, Shri Masthan Rao Yadav Beedha (2024-28), Shri V. Vijayendra Prasad (2022-28)","MACHILIPATNAM, Nominated Rajya Sabha, Sitting Rajya Sabha",Normal/Others
+Bihar,JEHANABAD,14,12,2,85.71,0.0,84970.0,2,"Dr. Bhim Singh (2024-30), SURENDRA PRASAD YADAV","JAHANABAD, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,BALOD,12,12,0,100.0,0.0,0.0,2,"BHOJRAJ NAG, Smt. Ranjeet Ranjan (2022-28)","KANKER, Sitting Rajya Sabha",Normal/Others
+Punjab,SHAHID BHAGAT SINGH NAGAR,12,12,0,100.0,0.0,0.0,2,"MALVINDER SINGH KANG, Shri Sant Balbir Singh (2022-28)","ANANDPUR SAHIB, Sitting Rajya Sabha",Normal/Others
+Mizoram,SIAHA,12,12,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Tamil Nadu,TIRUPATHUR,12,12,0,100.0,0.0,0.0,2,"CN Annadurai, D M Kathir Anand","TIRUVANNAMALAI, VELLORE",Normal/Others
+Telangana,BHADRADRI KOTHAGUDEM,12,12,0,100.0,0.0,0.0,2,"RAMASAHAYAM RAGHURAM REDDY, Shri Ravi Chandra Vaddiraju (2024-30)","KHAMMAM, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,THOOTHUKKUDI,12,12,0,100.0,0.0,0.0,1,Kanimozhi Karunanidhi,THOOTHUKKUDI,Normal/Others
+Uttarakhand,AGRA,12,12,0,100.0,0.0,0.0,1,Mala Rajya Laxmi Shah ,TEHRI GARHWAL,Normal/Others
+Maharashtra,HINGOLI,12,12,0,100.0,0.0,0.0,1,AASHTIKAR PATIL NAGESH BAPURAO,HINGOLI,Normal/Others
+West Bengal,KALIMPONG,12,12,0,100.0,0.0,0.0,1,Raju Bista,DARJEELING,Normal/Others
+Bihar,SHEOHAR,12,12,0,100.0,0.0,0.0,1,LOVELY ANAND,SHEOHAR,Normal/Others
+Uttar Pradesh,FATEHPUR,12,12,0,100.0,0.0,0.0,1,NARESH CHANDRA UTTAM PATEL,FATEHPUR,Normal/Others
+Madhya Pradesh,DATIA,12,12,0,100.0,0.0,0.0,1,Smt Sandhya Ray,BHIND,Normal/Others
+Maharashtra,JALGAON,12,12,0,100.0,0.0,0.0,2,"SMITA UDAY WAGH, Smt Raksha Nikhil Khadse","JALGAON, RAVER",Normal/Others
+Punjab,MOGA,11,11,0,100.0,0.0,0.0,1,SARABJEET SINGH KHALSA,FARIDKOT,Normal/Others
+Arunachal Pradesh,KAMLE,11,11,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Rajasthan,NEEM KA THANA,11,11,0,100.0,0.0,0.0,5,"AMRARAM, BRIJENDRA SINGH OLA, Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","JHUNJHUNU, SIKAR, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,KASGANJ,11,11,0,100.0,0.0,0.0,1,DEVESH SHAKYA,ETAH,Normal/Others
+Madhya Pradesh,NARSIMHAPUR,11,11,0,100.0,0.0,0.0,4,"DARSHAN SINGH CHOUDHARY, Faggan Singh Kulaste, Shri Vivek K. Tankha (2022-28), Smt. Maya Naroliya (2024-30)","HOSHANGABAD, MANDLA, Sitting Rajya Sabha",Normal/Others
+Maharashtra,THANE,11,11,0,100.0,0.0,0.0,1,BALYA MAMA SURESH GOPINATH MHATRE,BHIWANDI,Normal/Others
+Madhya Pradesh,ALIRAJPUR,11,11,0,100.0,0.0,0.0,1,ANITA NAGARSINGH CHOUHAN,RATLAM,Normal/Others
+Madhya Pradesh,MAIHAR,11,11,0,100.0,0.0,0.0,1,Ganesh Singh,SATNA,Normal/Others
+Rajasthan,KARAULI,11,11,0,100.0,0.0,0.0,2,"BHAJAN LAL JATAV, Shri Madan Rathore (2024-30)","KARAULI-DHOLPUR, Sitting Rajya Sabha",Normal/Others
+Tamil Nadu,VELLORE,11,11,0,100.0,0.0,0.0,1,D M Kathir Anand,VELLORE,Normal/Others
+Andhra Pradesh,GUNTUR,88,10,78,11.36,0.0,29429080.0,4,"Balashowry Vallabbhaneni, Dr Chandra Sekhar Pemmasani, Lavu Sri Krishna Devarayalu, Shri V. Vijayendra Prasad (2022-28)","GUNTUR, MACHILIPATNAM, NARASARAOPET, Nominated Rajya Sabha",Normal/Others
+Arunachal Pradesh,PAPUM PARE,12,10,2,83.33,0.0,1992517.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Chhattisgarh,JANJGIR-CHAMPA,10,10,0,100.0,0.0,0.0,1,Smt. Ranjeet Ranjan (2022-28),Sitting Rajya Sabha,Normal/Others
+Sikkim,SORENG,10,10,0,100.0,0.0,0.0,2,"Indra Hang Subba, Shri Dorjee Tshering Lepcha (2024-30)","SIKKIM, Sitting Rajya Sabha",Normal/Others
+Rajasthan,UDAIPUR,10,10,0,100.0,0.0,0.0,3,"Chandra Prakash Joshi, MANNA LAL RAWAT, Shri Chunnilal Garasiya (2024-30)","CHITTORGARH, Sitting Rajya Sabha, UDAIPUR",Normal/Others
+Andhra Pradesh,NIZAMABAD,10,10,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Assam,CHARAIDEO,10,10,0,100.0,0.0,0.0,1,GAURAV GOGOI,JORHAT,Normal/Others
+Telangana,NIRMAL,10,10,0,100.0,0.0,0.0,1,GODAM NAGESH,ADILABAD,Normal/Others
+Tamil Nadu,MAYILADUTHURAI,10,10,0,100.0,0.0,0.0,1,SUDHA R,MAYILADUTHURAI,Normal/Others
+Maharashtra,GADCHIROLI,10,10,0,100.0,0.0,0.0,1,DR. KIRSAN NAMDEO,GADCHIROLI-CHIMUR,Normal/Others
+Delhi,WEST,10,10,0,100.0,0.0,0.0,2,"Kamaljeet Sehrawat, Shri Sanjay Singh (2024-30)","Sitting Rajya Sabha, WEST DELHI",Normal/Others
+Andhra Pradesh,KAKINADA,40,9,31,22.5,0.0,7480683.0,4,"GM Harish Balayogi, Putta Mahesh Kumar, Shri Yerram Venkata Subba Reddy (2024-30), TANGELLA UDAY SRINIVAS","AMALAPURAM, ELURU, KAKINADA, Sitting Rajya Sabha",Normal/Others
+Meghalaya,EAST KHASI HILLS,9,9,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Mizoram,LUNGLEI,9,9,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Himachal Pradesh,UNA,9,9,0,100.0,0.0,0.0,2,"Anurag Singh Thakur, Dr. Sikander Kumar (2022-28)","HAMIRPUR, Sitting Rajya Sabha",Normal/Others
+Karnataka,KAITHAL,9,9,0,100.0,0.0,0.0,3,"Dr. Syed Naseer Hussain (2024-30), Shri Ajay Makan (2024-30), Shri G.C. Chandrashekhar (2024-30)",Sitting Rajya Sabha,Normal/Others
+Assam,SONITPUR,9,9,0,100.0,0.0,0.0,2,"RANJIT DUTTA, Shri Birendra Prasad Baishya (2025-31)","Sitting Rajya Sabha, Sonitpur",Normal/Others
+Telangana,YADADRI BHUVANAGIRI,9,9,0,100.0,0.0,0.0,1,CHAMALA KIRAN KUMAR REDDY,BHONGIR,Normal/Others
+Jammu And Kashmir,RAMBAN,9,9,0,100.0,0.0,0.0,1,Jitendra Singh,UDHAMPUR,Normal/Others
+Karnataka,CHITRADURGA,9,9,0,100.0,0.0,0.0,1,GOVIND MAKTHAPPA KARJOL,CHITRADURGA,Normal/Others
+Kerala,WAYANAD,9,9,0,100.0,0.0,0.0,4,"Priyanka Gandhi Vadra, Shri P. P. Suneer (2024-30), Smt. Jebi Mather Hisham (2022-28), Smt. P. T. Usha (2022-28)","Nominated Rajya Sabha, Sitting Rajya Sabha, WAYANAD",Normal/Others
+Jammu And Kashmir,BARAMULLA,9,9,0,100.0,0.0,0.0,1,ABDUL RASHID SHEIKH,BARAMULLAH,Normal/Others
+Nagaland,KOHIMA,8,8,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Jammu And Kashmir,SAMBA,8,8,0,100.0,0.0,0.0,2,"Shri Gulam Ali (2022-28), Shri Jugal Kishore Sharma","JAMMU, Nominated Rajya Sabha",Normal/Others
+Arunachal Pradesh,SIANG,8,8,0,100.0,0.0,0.0,2,"Kiren Rijiju, Shri Tapir Gao","ARUNACHAL EAST, ARUNACHAL WEST",Normal/Others
+Mizoram,AIZAWL,8,8,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Rajasthan,KAITHAL,8,8,0,100.0,0.0,0.0,2,"Shri Mukul Wasnik (2022-28), Shri Randeep Singh Surjewala (2022-28)",Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,BURHANPUR,8,8,0,100.0,0.0,0.0,1,Gyaneshwar Patil,KHANDWA,Normal/Others
+Rajasthan,JODHPUR GRAMIN,8,8,0,100.0,0.0,0.0,3,"Shri Madan Rathore (2024-30), Shri Pramod Tiwari (2022-28), Smt. Sonia Gandhi (2024-30)",Sitting Rajya Sabha,Normal/Others
+Rajasthan,KOTPUTLI-BEHROR,8,8,0,100.0,0.0,0.0,5,"BHUPENDER YADAV, Rao Rajendra Singh, Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28), Smt. Sonia Gandhi (2024-30)","ALWAR, JAIPUR RURAL, Sitting Rajya Sabha",Normal/Others
+Rajasthan,JODHPUR,8,8,0,100.0,0.0,0.0,3,"Shri Madan Rathore (2024-30), Shri PP Chaudhary, Smt. Sonia Gandhi (2024-30)","PALI, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,GARIYABAND,8,8,0,100.0,0.0,0.0,1,ROOP KUMARI CHOUDHARY,MAHASAMUND,Normal/Others
+Telangana,WANAPARTHY,8,8,0,100.0,0.0,0.0,3,"DR.MALLU RAVI, Shri Damodar Rao Divakonda (2022-28), Shri Ravi Chandra Vaddiraju (2024-30)","NAGARKURNOOL, Sitting Rajya Sabha",Normal/Others
+Karnataka,RAICHUR,8,8,0,100.0,0.0,0.0,2,"G. KUMAR NAIK, Smt. Nirmala Sitharaman (2022-28)","RAICHUR, Sitting Rajya Sabha",Normal/Others
+Karnataka,DAVANAGERE,8,8,0,100.0,0.0,0.0,2,"DR. PRABHA MALLIKARJUN, Dr. Dharmasthala Veerendra Heggade (2022-28)","DAVANAGERE, Nominated Rajya Sabha",Normal/Others
+Jammu And Kashmir,UDHAMPUR,8,8,0,100.0,0.0,0.0,1,Jitendra Singh,UDHAMPUR,Normal/Others
+Assam,MAJULI,8,8,0,100.0,0.0,0.0,2,"GAURAV GOGOI, Shri Pabitra Margherita (2022-28)","JORHAT, Sitting Rajya Sabha",Normal/Others
+Rajasthan,CHITTORGARH,8,8,0,100.0,0.0,0.0,2,"Chandra Prakash Joshi, Shri Arjun Ram Meghwal","BIKANER, CHITTORGARH",Normal/Others
+Telangana,ADILABAD,8,8,0,100.0,0.0,0.0,1,GODAM NAGESH,ADILABAD,Normal/Others
+Telangana,JAYASHANKAR BHUPALAPALLY,8,8,0,100.0,0.0,0.0,1,KADIYAM KAVYA,WARANGEL,Normal/Others
+Maharashtra,RATNAGIRI,8,8,0,100.0,0.0,0.0,1,NARAYAN TATU RANE,RATNAGIRI-SINDHUDURG,Normal/Others
+Andhra Pradesh,PALNADU,78,7,71,8.97,0.0,186429.0,5,"Lavu Sri Krishna Devarayalu, Shri Masthan Rao Yadav Beedha (2024-28), Shri Ryaga Krishnaiah (2024-28), Shri S Niranjan Reddy (2022-28), Shri Yerram Venkata Subba Reddy (2024-30)","NARASARAOPET, Sitting Rajya Sabha",Normal/Others
+Andhra Pradesh,EAST GODAVARI,72,7,65,9.72,0.0,5468348.0,6,"Balashowry Vallabbhaneni, DR BYREDDY SHABARI, Daggubati Purandeshwari, Gumma Thanuja Rani, Midhun Reddy, Shri V. Vijayendra Prasad (2022-28)","ARAKU, MACHILIPATNAM, NANDYAL, Nominated Rajya Sabha, RAJAHMUNDRY, RAJAMPET",Normal/Others
+Andhra Pradesh,PRAKASAM,33,7,26,21.21,0.0,5783901.0,3,"Krishna Prasad Tenneti, Magunta Sreenivasulu Reddy, Shri Yerram Venkata Subba Reddy (2024-30)","BAPATLA, ONGOLE, Sitting Rajya Sabha",Normal/Others
+Assam,NAGAON,12,7,5,58.33,0.0,282531.0,1,Pradyut Bordoloi,NOWGONG,Normal/Others
+Arunachal Pradesh,WEST KAMENG,12,7,5,58.33,0.0,3200000.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Assam,GOALPARA,11,7,4,63.64,0.0,1500000.0,2,"BIJULI KALITA MEDHI, RAKIBUL HUSSAIN","DHUBRI, GUWAHATI",Normal/Others
+Nagaland,CHUMOUKEDIMA,7,7,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,SANT KABIR NAGAR,7,7,0,100.0,0.0,0.0,6,"Dr. Radha Mohan Das Agrawal (2022-28), LAXMIKANT PAPPU NISHAD, Shri Amar Pal Maurya (2024-30), Shri B.L. Verma (2020-26), Shri Javed Ali Khan (2022-28), Shri Sanjay Seth (2024-30)","SANT KABIR NAGAR, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,BALRAMPUR-RAMANUJGANJ,7,7,0,100.0,0.0,0.0,2,"CHINTAMANI MAHARAJ, Smt. Ranjeet Ranjan (2022-28)","SARGUJA, Sitting Rajya Sabha",Normal/Others
+Mizoram,KOLASIB,7,7,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Mizoram,CHAMPHAI,7,7,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Sikkim,MANGAN,7,7,0,100.0,0.0,0.0,2,"Indra Hang Subba, Shri Dorjee Tshering Lepcha (2024-30)","SIKKIM, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,SULTANPUR,7,7,0,100.0,0.0,0.0,2,"KISHORI LAL, RAMBHUAL NISHAD","AMETHI, SULTANPUR",Normal/Others
+Rajasthan,GANGAPURCITY,7,7,0,100.0,0.0,0.0,4,"BHAJAN LAL JATAV, Shri Mukul Wasnik (2022-28), Shri Pramod Tiwari (2022-28), Shri Randeep Singh Surjewala (2022-28)","KARAULI-DHOLPUR, Sitting Rajya Sabha",Normal/Others
+Madhya Pradesh,RATLAM,7,7,0,100.0,0.0,0.0,2,"ANITA NAGARSINGH CHOUHAN, Shri Anil Firojiya","RATLAM, UJJAIN",Normal/Others
+Jharkhand,KHUNTI,7,7,0,100.0,0.0,0.0,1,KALI CHARAN MUNDA,KHUNTI,Normal/Others
+Rajasthan,BANSWARA,7,7,0,100.0,0.0,0.0,2,"RAJ KUMAR ROAT, Shri Chunnilal Garasiya (2024-30)","BANSWARA, Sitting Rajya Sabha",Normal/Others
+Telangana,MULUGU,7,7,0,100.0,0.0,0.0,1,BALRAM NAIK PORIKA,MAHABUBABAD,Normal/Others
+West Bengal,PASCHIM BARDHAMAN,7,7,0,100.0,0.0,0.0,2,"AZAD KIRTI JHA, Shatrughan Sinha","ASANSOL, BARDHAMAN-DURGAPUR",Normal/Others
+Madhya Pradesh,GUNA,7,7,0,100.0,0.0,0.0,1,JYOTIRADITYA M. SCINDIA,GUNA,Normal/Others
+Telangana,PEDDAPALLI,7,7,0,100.0,0.0,0.0,2,"Shri Damodar Rao Divakonda (2022-28), VAMSI KRISHNA GADDAM","PEDDAPALLE, Sitting Rajya Sabha",Normal/Others
+Jammu And Kashmir,SHOPIAN,7,7,0,100.0,0.0,0.0,2,"AGA SYED RUHULLAH MEHDI, MIAN ALTAF AHMAD","ANANTNAG, SRINAGAR",Normal/Others
+Maharashtra,CHANDRAPUR,7,7,0,100.0,0.0,0.0,2,"DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU, DR. KIRSAN NAMDEO","CHANDRAPUR, GADCHIROLI-CHIMUR",Normal/Others
+Andhra Pradesh,NTR,18,6,12,33.33,0.0,1396663.0,3,"Shri V. Vijayendra Prasad (2022-28), Shri Yerram Venkata Subba Reddy (2024-30), Sivanath Kesineni","Nominated Rajya Sabha, Sitting Rajya Sabha, VIJAYAWADA",Normal/Others
+Assam,LAKHIMPUR,9,6,3,66.67,0.0,1197908.0,2,"Pradan Baruah, RANJIT DUTTA","LAKHIMPUR, Sonitpur",Normal/Others
+Madhya Pradesh,KATNI,6,6,0,100.0,0.0,0.0,2,"Smt Himadri Singh, Smt. Sumitra Balmik (2022-28)","SHAHDOL, Sitting Rajya Sabha",Normal/Others
+Meghalaya,EAST JAINTIA HILLS,6,6,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Assam,MARIGAON,6,6,0,100.0,0.0,0.0,1,Pradyut Bordoloi,NOWGONG,Normal/Others
+Uttar Pradesh,SAMBHAL,6,6,0,100.0,0.0,0.0,1,ADITYA YADAV,BADAUN,Normal/Others
+Assam,UDALGURI,6,6,0,100.0,0.0,0.0,2,"Dilip Saikia, Shri Rwngwra Narzary (2022-28)","Darrang-Udalguri, Sitting Rajya Sabha",Normal/Others
+Himachal Pradesh,BILASPUR,6,6,0,100.0,0.0,0.0,2,"Anurag Singh Thakur, Shri Harsh Mahajan (2024-30)","HAMIRPUR, Sitting Rajya Sabha",Normal/Others
+Haryana,CHARKHI DADRI,6,6,0,100.0,0.0,0.0,1,Shri  Dharambir Singh,BHIWANI MAHENDRAGARH,Normal/Others
+Rajasthan,SANCHOR,6,6,0,100.0,0.0,0.0,1,LUMBARAM,JALORE,Normal/Others
+Rajasthan,KEKRI,6,6,0,100.0,0.0,0.0,1,Bhagirath Chaudhary,AJMER,Normal/Others
+Jammu And Kashmir,ANANTNAG,6,6,0,100.0,0.0,0.0,1,MIAN ALTAF AHMAD,ANANTNAG,Normal/Others
+Delhi,NEW DELHI,6,6,0,100.0,0.0,0.0,2,"Shri Narain Dass Gupta (2024-30), Shri Sanjay Singh (2024-30)",Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,KAITHAL,6,6,0,100.0,0.0,0.0,1,Shri Ashok Singh (2024-30),Sitting Rajya Sabha,Normal/Others
+Odisha,NABARANGPUR,6,6,0,100.0,0.0,0.0,1,BALABHADRA MAJHI,NABARANGPUR,Normal/Others
+Assam,TINSUKIA,6,5,1,83.33,0.0,0.0,3,"GAURAV GOGOI, Shri Pabitra Margherita (2022-28), Shri Sarbananda Sonowal (18LS)","DIBRUGARH, JORHAT, Sitting Rajya Sabha",Normal/Others
+Nagaland,DIMAPUR,5,5,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Arunachal Pradesh,LOWER DIBANG VALLEY,5,5,0,100.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Sikkim,GYALSHING,5,5,0,100.0,0.0,0.0,2,"Indra Hang Subba, Shri Dorjee Tshering Lepcha (2024-30)","SIKKIM, Sitting Rajya Sabha",Normal/Others
+Arunachal Pradesh,EAST KAMENG,5,5,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Rajasthan,JAIPUR GRAMIN,5,5,0,100.0,0.0,0.0,4,"AMRARAM, Shri Ghanshyam Tiwari (2022-28), Shri Madan Rathore (2024-30), Shri Mukul Wasnik (2022-28)","SIKAR, Sitting Rajya Sabha",Normal/Others
+Rajasthan,SALUMBAR,5,5,0,100.0,0.0,0.0,3,"MANNA LAL RAWAT, Shri Chunnilal Garasiya (2024-30), Shri Mukul Wasnik (2022-28)","Sitting Rajya Sabha, UDAIPUR",Normal/Others
+Uttarakhand,ALMORA,5,5,0,100.0,0.0,0.0,3,"Ajay Tamta, Dr. Kalpana Saini (2022-28), Shri Naresh Bansal (2020-26)","ALMORA, Sitting Rajya Sabha",Normal/Others
+Rajasthan,PRATAPGARH,5,5,0,100.0,0.0,0.0,3,"Chandra Prakash Joshi, Shri Chunnilal Garasiya (2024-30), Shri Pramod Tiwari (2022-28)","CHITTORGARH, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,MANENDRAGARH-CHIRMIRI-BHARATPUR,5,5,0,100.0,0.0,0.0,1,Jyotsna Charandas Mahant ,KORBA,Normal/Others
+Jharkhand,AGRA,5,5,0,100.0,0.0,0.0,1,Dr. Sarfraz Ahmad (2024-30),Sitting Rajya Sabha,Normal/Others
+Odisha,JAGATSINGHAPUR,5,5,0,100.0,0.0,0.0,2,"BIBHU PRASAD TARAI, Smt. Sulata Deo (2022-28)","JAGATSINGHPUR, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,KONDAGAON,5,5,0,100.0,0.0,0.0,2,"BHOJRAJ NAG, MAHESH KASHYAP","BASTAR, KANKER",Normal/Others
+Rajasthan,KHAIRTHAL-TIJARA,5,5,0,100.0,0.0,0.0,1,BHUPENDER YADAV,ALWAR,Normal/Others
+Tamil Nadu,NAGAPATTINAM,5,5,0,100.0,0.0,0.0,1,SELVARAJ V,NAGAPATTINAM,Normal/Others
+Gujarat,CHHOTAUDEPUR,5,5,0,100.0,0.0,0.0,2,"JASHUBHAI BHILUBHAI RATHVA, Shri Govindbhai Laljibhai Dholakia (2024-30)","CHHOTA UDAIPUR, Sitting Rajya Sabha",Normal/Others
+Gujarat,DANGS,5,5,0,100.0,0.0,0.0,2,"DHAVAL LAXMANBHAI PATEL, Shri Govindbhai Laljibhai Dholakia (2024-30)","Sitting Rajya Sabha, VALSAD",Normal/Others
+Jammu And Kashmir,RAJOURI,5,5,0,100.0,0.0,0.0,2,"MIAN ALTAF AHMAD, Shri Jugal Kishore Sharma","ANANTNAG, JAMMU",Normal/Others
+Madhya Pradesh,GWALIOR,5,5,0,100.0,0.0,0.0,2,"BHARAT SINGH KUSHWAH, Shri Ashok Singh (2024-30)","GWALIOR, Sitting Rajya Sabha",Normal/Others
+Arunachal Pradesh,LONGDING,7,4,3,57.14,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Nagaland,PEREN,4,4,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Jammu And Kashmir,POONCH,4,4,0,100.0,0.0,0.0,2,"MIAN ALTAF AHMAD, Shri Gulam Ali (2022-28)","ANANTNAG, Nominated Rajya Sabha",Normal/Others
+Meghalaya,WEST KHASI HILLS,4,4,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Meghalaya,SOUTH GARO HILLS,4,4,0,100.0,0.0,0.0,1,SALENG A SANGMA,TURA,Normal/Others
+Arunachal Pradesh,LEPARADA,4,4,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Arunachal Pradesh,LOWER SUBANSIRI,4,4,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Karnataka,PAKYONG,4,4,0,100.0,0.0,0.0,1,Shri Narayanasa K. Bhandage (2024-30),Sitting Rajya Sabha,Normal/Others
+Rajasthan,PHALODI,4,4,0,100.0,0.0,0.0,1,Smt. Sonia Gandhi (2024-30),Sitting Rajya Sabha,Normal/Others
+Andhra Pradesh,MAHABUBNAGAR,4,4,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Gujarat,BOTAD,4,4,0,100.0,0.0,0.0,2,"CHANDUBHAI CHHAGANBHAI SHIHORA, NIMUBEN JAYANTIBHAI BAMBHANIYA","BHAVNAGAR, SURENDRANAGAR",Normal/Others
+Telangana,MAHABUBNAGAR,4,4,0,100.0,0.0,0.0,1,Shri Anil Kumar Yadav Mandadi (2024-30),Sitting Rajya Sabha,Normal/Others
+Assam,BONGAIGAON,4,4,0,100.0,0.0,0.0,2,"PHANI BHUSAN CHOUDHURY, RAKIBUL HUSSAIN","BARPETA, DHUBRI",Normal/Others
+Punjab,MALERKOTLA,4,4,0,100.0,0.0,0.0,1,Shri Amar Singh,FATEHGARH SAHIB,Normal/Others
+Maharashtra,GOPALGANJ,4,4,0,100.0,0.0,0.0,1,Shri Dhananjay Bhimrao Mahadik (2022-28),Sitting Rajya Sabha,Normal/Others
+Maharashtra,PURBI CHAMPARAN,4,4,0,100.0,0.0,0.0,1,Shri Dhananjay Bhimrao Mahadik (2022-28),Sitting Rajya Sabha,Normal/Others
+Haryana,FARIDABAD,4,4,0,100.0,0.0,0.0,1,Krishan Pal Gurjar,FARIDABAD,Normal/Others
+Jammu And Kashmir,GANDERBAL,4,4,0,100.0,0.0,0.0,1,AGA SYED RUHULLAH MEHDI,SRINAGAR,Normal/Others
+Andhra Pradesh,VISAKHAPATNAM,29,3,26,10.34,0.0,14142930.0,4,"C.M.RAMESH, Shri Golla Baburao (2024-30), Shri S Niranjan Reddy (2022-28), Sribharat MathuKumli","ANAKAPALLE, Sitting Rajya Sabha, VISAKHAPATNAM",Normal/Others
+Arunachal Pradesh,LOWER SIANG,5,3,2,60.0,0.0,0.0,2,"Kiren Rijiju, Shri Tapir Gao","ARUNACHAL EAST, ARUNACHAL WEST",Normal/Others
+Arunachal Pradesh,LOHIT,4,3,1,75.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Nagaland,TUENSANG,3,3,0,100.0,0.0,0.0,1,Smt. S. Phangnon Konyak (2022-28),Sitting Rajya Sabha,Normal/Others
+Nagaland,WOKHA,3,3,0,100.0,0.0,0.0,1,Smt. S. Phangnon Konyak (2022-28),Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,SHAJAPUR,3,3,0,100.0,0.0,0.0,3,"Mahendra Singh Solanky, Shri Banshilal Gurjar (2024-30), Smt. Sumitra Balmik (2022-28)","DEWAS, Sitting Rajya Sabha",Normal/Others
+Jammu And Kashmir,PILIBHIT,3,3,0,100.0,0.0,0.0,1,Shri Gulam Ali (2022-28),Nominated Rajya Sabha,Normal/Others
+Meghalaya,WEST JAINTIA HILLS,3,3,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Mizoram,SERCHHIP,3,3,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Mizoram,SAITUAL,3,3,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Arunachal Pradesh,WEST SIANG,3,3,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Manipur,THOUBAL,3,3,0,100.0,0.0,0.0,2,"ALFRED KANNGAM S ARTHUR, ANGOMCHA BIMOL AKOIJAM","INNER MANIPUR, OUTER MANIPUR",Normal/Others
+Manipur,IMPHAL EAST,3,3,0,100.0,0.0,0.0,1,ANGOMCHA BIMOL AKOIJAM,INNER MANIPUR,Normal/Others
+Uttar Pradesh,HARDOI,3,3,0,100.0,0.0,0.0,1,Jai Prakash,HARDOI,Normal/Others
+Assam,NALBARI,3,3,0,100.0,0.0,0.0,2,"PHANI BHUSAN CHOUDHURY, Shri Rwngwra Narzary (2022-28)","BARPETA, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,NARAYANPUR,3,3,0,100.0,0.0,0.0,1,MAHESH KASHYAP,BASTAR,Normal/Others
+Chhattisgarh,SUKMA,3,3,0,100.0,0.0,0.0,1,MAHESH KASHYAP,BASTAR,Normal/Others
+Karnataka,BALLARI,3,3,0,100.0,0.0,0.0,2,"E. TUKARAM, Smt. Nirmala Sitharaman (2022-28)","BELLARY, Sitting Rajya Sabha",Normal/Others
+Karnataka,YADGIR,3,3,0,100.0,0.0,0.0,2,"G. KUMAR NAIK, Smt. Nirmala Sitharaman (2022-28)","RAICHUR, Sitting Rajya Sabha",Normal/Others
+Chhattisgarh,SURAJPUR,3,3,0,100.0,0.0,0.0,1,CHINTAMANI MAHARAJ,SARGUJA,Normal/Others
+Chhattisgarh,BEMETARA,3,3,0,100.0,0.0,0.0,1,Vijay Baghel,DURG,Normal/Others
+Madhya Pradesh,PANDHURNA,3,3,0,100.0,0.0,0.0,1,BUNTY VIVEK SAHU,CHHINDWARA,Normal/Others
+Uttarakhand,PAURI GARHWAL,3,3,0,100.0,0.0,0.0,2,"ANIL BALUNI, Dr. Kalpana Saini (2022-28)","GARHWAL, Sitting Rajya Sabha",Normal/Others
+Rajasthan,DUDU,3,3,0,100.0,0.0,0.0,1,Bhagirath Chaudhary,AJMER,Normal/Others
+Madhya Pradesh,AGAR-MALWA,3,3,0,100.0,0.0,0.0,1,Mahendra Singh Solanky,DEWAS,Normal/Others
+Assam,SIVASAGAR,3,3,0,100.0,0.0,0.0,1,GAURAV GOGOI,JORHAT,Normal/Others
+Odisha,RAYAGADA,3,3,0,100.0,0.0,0.0,1,Saptagiri Sankar Ulaka,KORAPUT,Normal/Others
+Gujarat,TAPI,3,3,0,100.0,0.0,0.0,1,Prabhubhai Nagarbhai Vasava,BARDOLI,Normal/Others
+Jammu And Kashmir,BUDGAM,3,3,0,100.0,0.0,0.0,2,"ABDUL RASHID SHEIKH, AGA SYED RUHULLAH MEHDI","BARAMULLAH, SRINAGAR",Normal/Others
+Uttar Pradesh,BHADOHI,3,3,0,100.0,0.0,0.0,1,Smt. Jaya Amitabh Bachchan (2024-30),Sitting Rajya Sabha,Normal/Others
+Telangana,MANCHERIAL,3,3,0,100.0,0.0,0.0,1,VAMSI KRISHNA GADDAM,PEDDAPALLE,Normal/Others
+Madhya Pradesh,PANNA,3,3,0,100.0,0.0,0.0,1,Vishnu Dutt Sharma,KHAJURAHO,Normal/Others
+Odisha,JAJPUR,3,3,0,100.0,0.0,0.0,1,RABINDRA NARAYAN BEHERA,JAJPUR,Normal/Others
+Odisha,BALANGIR,3,3,0,100.0,0.0,0.0,1,Smt Sangeeta Kumari Singh Deo,BOLANGIR,Normal/Others
+Andhra Pradesh,PARVATHIPURAM MANYAM,50,2,48,4.0,0.0,8435464.0,2,"Gumma Thanuja Rani, Kinjarapu Ram Mohan Naidu","ARAKU, SRIKAKULAM",Normal/Others
+Nagaland,TSEMINYU,2,2,0,100.0,0.0,0.0,1,Smt. S. Phangnon Konyak (2022-28),Sitting Rajya Sabha,Normal/Others
+Nagaland,PHEK,2,2,0,100.0,0.0,0.0,2,"S SUPONGMEREN JAMIR, Smt. S. Phangnon Konyak (2022-28)","NAGALAND, Sitting Rajya Sabha",Normal/Others
+Bihar,SHEIKHPURA,2,2,0,100.0,0.0,0.0,2,"Shri Shambhu Sharan Patel (2022-28), VIVEK THAKUR","NAWADA, Sitting Rajya Sabha",Normal/Others
+Meghalaya,EASTERN WEST KHASI HILLS,2,2,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Bihar,MADHEPURA,2,2,0,100.0,0.0,0.0,2,"Dileshwar Kamait , Dinesh Chandra Yadav","MADHEPURA, SUPAUL",Normal/Others
+Arunachal Pradesh,TAWANG,2,2,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Manipur,KAKCHING,2,2,0,100.0,0.0,0.0,2,"ALFRED KANNGAM S ARTHUR, ANGOMCHA BIMOL AKOIJAM","INNER MANIPUR, OUTER MANIPUR",Normal/Others
+Uttarakhand,PITHORAGARH,2,2,0,100.0,0.0,0.0,2,"Ajay Tamta, Shri Naresh Bansal (2020-26)","ALMORA, Sitting Rajya Sabha",Trust and Society
+Uttarakhand,CHAMOLI,2,2,0,100.0,0.0,0.0,2,"Shri Mahendra Bhatt (2024-30), Shri Naresh Bansal (2020-26)",Sitting Rajya Sabha,Trust and Society
+West Bengal,COOCH BEHAR,2,2,0,100.0,0.0,0.0,1,Shri Nagendra Ray (2023-29),Sitting Rajya Sabha,Normal/Others
+Jharkhand,EAST SINGHBUM,2,2,0,100.0,0.0,0.0,1,Bidyut Baran Mahato,JAMSHEDPUR,Normal/Others
+Himachal Pradesh,KULLU,2,2,0,100.0,0.0,0.0,1,Shri Harsh Mahajan (2024-30),Sitting Rajya Sabha,Normal/Others
+Assam,WEST KARBI ANGLONG,2,2,0,100.0,0.0,0.0,1,AMARSING TISSO,Diphu,Normal/Others
+Karnataka,MANDYA,2,2,0,100.0,0.0,0.0,2,"DR C N MANJUNATH, Shri G.C. Chandrashekhar (2024-30)","BANGALORE RURAL, Sitting Rajya Sabha",Normal/Others
+Uttar Pradesh,PATHANAMTHITTA,2,2,0,100.0,0.0,0.0,1,Shri Kapil Sibal (2022-28),Sitting Rajya Sabha,Normal/Others
+Chhattisgarh,KOREA,2,2,0,100.0,0.0,0.0,1,Jyotsna Charandas Mahant ,KORBA,Normal/Others
+Andhra Pradesh,SIDDIPET,2,2,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Maharashtra,BULDHANA,2,2,0,100.0,0.0,0.0,1,Dr. Anil Sukhdeorao Bonde (2022-28),Sitting Rajya Sabha,Normal/Others
+Chhattisgarh,BIJAPUR,2,2,0,100.0,0.0,0.0,1,MAHESH KASHYAP,BASTAR,Normal/Others
+Tripura,SEPAHIJALA,2,2,0,100.0,0.0,0.0,1,BIPLAB KUMAR DEB,TRIPURA WEST,Normal/Others
+Odisha,NUAPADA,2,2,0,100.0,0.0,0.0,1,MALVIKA DEVI,KALAHANDI,Normal/Others
+Madhya Pradesh,TIKAMGARH,2,2,0,100.0,0.0,0.0,1,Virendra Kumar,TIKAMGARH,Normal/Others
+Rajasthan,BEAWAR,2,2,0,100.0,0.0,0.0,2,"Bhagirath Chaudhary, Shri Madan Rathore (2024-30)","AJMER, Sitting Rajya Sabha",Normal/Others
+Karnataka,KOLAR,2,2,0,100.0,0.0,0.0,1,M. MALLESH BABU,KOLAR,Normal/Others
+Karnataka,CHIKKABALLAPURA,2,2,0,100.0,0.0,0.0,2,"DR.K.SUDHAKAR, M. MALLESH BABU","CHIKBALLAPUR, KOLAR",Normal/Others
+Lakshadweep,LAKSHADWEEP DISTRICT,2,2,0,100.0,0.0,0.0,1,MUHAMMED HAMDULLAH SAYEED,LAKSHADWEEP,Normal/Others
+Jharkhand,HAZARIBAGH,2,2,0,100.0,0.0,0.0,1,Annpurna Devi ,KODARMA,Normal/Others
+Haryana,SONIPAT,2,2,0,100.0,0.0,0.0,1,SATPAL BRAHAMCHARI,SONEPAT,Normal/Others
+Goa,NORTH GOA,2,2,0,100.0,0.0,0.0,2,"Shri Sadanand Mhalu Shet Tanavade (2023-29), Shripad Yesso Naik","NORTH GOA, Sitting Rajya Sabha",Normal/Others
+Telangana,MEDAK,2,2,0,100.0,0.0,0.0,1,SURESH KUMAR SHETKAR,ZAHIRABAD,Normal/Others
+Haryana,PALWAL,2,2,0,100.0,0.0,0.0,1,Krishan Pal Gurjar,FARIDABAD,Normal/Others
+Haryana,PANCHKULA,2,2,0,100.0,0.0,0.0,2,"Smt. Rekha Sharma (2024-28), VARUN CHAUDHRY","AMBALA, Sitting Rajya Sabha",Normal/Others
+Maharashtra,WASHIM,2,2,0,100.0,0.0,0.0,1,Sanjay Uttamrao Deshmukh,YAVATMAL-WASHIM,Normal/Others
+Haryana,AMBALA,2,2,0,100.0,0.0,0.0,1,VARUN CHAUDHRY,AMBALA,Normal/Others
+West Bengal,JALPAIGURI,2,2,0,100.0,0.0,0.0,1,Dr Jayanta Kumar Roy,JALPAIGURI,Normal/Others
+Odisha,SAMBALPUR,2,2,0,100.0,0.0,0.0,1,DHARMENDRA PRADHAN,SAMBALPUR,Normal/Others
+Andhra Pradesh,WEST GODAVARI,6,1,5,16.67,0.0,0.0,3,"Appalanaidu Kalisetti, Bhupathiraju Srinivasa varma, Shri V. Vijayendra Prasad (2022-28)","NARASAPURAM, Nominated Rajya Sabha, VIZIANAGARAM",Normal/Others
+Assam,CHIRANG,3,1,2,33.33,0.0,0.0,2,"PHANI BHUSAN CHOUDHURY, Shri Rwngwra Narzary (2022-28)","BARPETA, Sitting Rajya Sabha",Normal/Others
+Assam,SOUTH SALMARA MANCACHAR,2,1,1,50.0,0.0,0.0,1,RAKIBUL HUSSAIN,DHUBRI,Normal/Others
+Nagaland,NOKLAK,1,1,0,100.0,0.0,0.0,1,Smt. S. Phangnon Konyak (2022-28),Sitting Rajya Sabha,Normal/Others
+Nagaland,KIPHIRE,1,1,0,100.0,0.0,0.0,1,Smt. S. Phangnon Konyak (2022-28),Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,PILIBHIT,1,1,0,100.0,0.0,0.0,1,Smt. Sumitra Balmik (2022-28),Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,AGRA,1,1,0,100.0,0.0,0.0,1,Smt. Sumitra Balmik (2022-28),Sitting Rajya Sabha,nan
+Chhattisgarh,PAPUM PARE,1,1,0,100.0,0.0,0.0,1,Smt. Ranjeet Ranjan (2022-28),Sitting Rajya Sabha,Normal/Others
+Chhattisgarh,MUZAFFARPUR,1,1,0,100.0,0.0,0.0,1,Smt. Ranjeet Ranjan (2022-28),Sitting Rajya Sabha,Normal/Others
+Jharkhand,BOKARO,1,1,0,100.0,0.0,0.0,1,Shri Aditya Prasad (2022-28),Sitting Rajya Sabha,Normal/Others
+Jammu And Kashmir,BUDAUN,1,1,0,100.0,0.0,0.0,1,Shri Gulam Ali (2022-28),Nominated Rajya Sabha,Normal/Others
+Jammu And Kashmir,CHANDAULI,1,1,0,100.0,0.0,0.0,1,Shri Gulam Ali (2022-28),Nominated Rajya Sabha,Normal/Others
+Meghalaya,SOUTH WEST KHASI HILLS,1,1,0,100.0,0.0,0.0,1,ANDREW J. SYNGKON,SHILLONG,Normal/Others
+Madhya Pradesh,SINGRAULI,1,1,0,100.0,0.0,0.0,1,DR. RAJESH MISHRA,SIDHI,Normal/Others
+Arunachal Pradesh,NAMSAI,1,1,0,100.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Arunachal Pradesh,ANJAW,1,1,0,100.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Arunachal Pradesh,CHANGLANG,1,1,0,100.0,0.0,0.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Punjab,TARN TARAN,1,1,0,100.0,0.0,0.0,1,Shri Sant Balbir Singh (2022-28),Sitting Rajya Sabha,Normal/Others
+Mizoram,KHAWZAWL,1,1,0,100.0,0.0,0.0,1,RICHARD VANLALHMANGAIHA,MIZORAM,Normal/Others
+Himachal Pradesh,MOHLA-MANPUR-AMBAGARH CHOUKI,1,1,0,100.0,0.0,0.0,1,Dr. Sikander Kumar (2022-28),Sitting Rajya Sabha,Normal/Others
+Arunachal Pradesh,UPPER SUBANSIRI,1,1,0,100.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Madhya Pradesh,MAUGANJ,1,1,0,100.0,0.0,0.0,1,Janardan Mishra,REWA,Normal/Others
+Jharkhand,DUMKA,1,1,0,100.0,0.0,0.0,1,NALIN SOREN,DUMKA,Normal/Others
+Punjab,CHANDIGARH,1,1,0,100.0,0.0,0.0,1,Dr. Vikramjit Singh Sahney (2022-28),Sitting Rajya Sabha,Normal/Others
+Uttarakhand,KARNAL,1,1,0,100.0,0.0,0.0,1,Shri Naresh Bansal (2020-26),Sitting Rajya Sabha,Trust and Society
+Assam,DARRANG,1,1,0,100.0,0.0,0.0,1,Shri Rwngwra Narzary (2022-28),Sitting Rajya Sabha,Normal/Others
+Rajasthan,PILIBHIT,1,1,0,100.0,0.0,0.0,1,Shri Chunnilal Garasiya (2024-30),Sitting Rajya Sabha,Normal/Others
+Rajasthan,SHAHJAHANPUR,1,1,0,100.0,0.0,0.0,1,Shri Chunnilal Garasiya (2024-30),Sitting Rajya Sabha,Normal/Others
+Madhya Pradesh,MORENA,1,1,0,100.0,0.0,0.0,1,Shri Vivek K. Tankha (2022-28),Sitting Rajya Sabha,Normal/Others
+Uttar Pradesh,PHEK,1,1,0,100.0,0.0,0.0,1,Kirti Vardhan Singh,GONDA,Normal/Others
+Andhra Pradesh,EAST KHASI HILLS,1,1,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Andhra Pradesh,GORAKHPUR,1,1,0,100.0,0.0,0.0,1,Shri V. Vijayendra Prasad (2022-28),Nominated Rajya Sabha,Normal/Others
+Jharkhand,PILIBHIT,1,1,0,100.0,0.0,0.0,1,Dr. Sarfraz Ahmad (2024-30),Sitting Rajya Sabha,Normal/Others
+Haryana,VARANASI,1,1,0,100.0,0.0,0.0,1,Shri  Dharambir Singh,BHIWANI MAHENDRAGARH,Normal/Others
+Karnataka,KALABURAGI,1,1,0,100.0,0.0,0.0,1,Smt. Nirmala Sitharaman (2022-28),Sitting Rajya Sabha,Normal/Others
+Chhattisgarh,KHAIRAGARH-CHHUIKHADAN-GANDAI,1,1,0,100.0,0.0,0.0,1,Santosh Pandey,RAJNANDGAON,Normal/Others
+Telangana,KAITHAL,1,1,0,100.0,0.0,0.0,1,Shri Anil Kumar Yadav Mandadi (2024-30),Sitting Rajya Sabha,Normal/Others
+Maharashtra,TUMAKURU,1,1,0,100.0,0.0,0.0,1,Dr. Ajeet Madhavrao Gopchade (2024-30),Sitting Rajya Sabha,Trust and Society
+Puducherry,TIRUVANNAMALAI,1,1,0,100.0,0.0,0.0,1,Shri S. Selvaganabathy (2021-27),Sitting Rajya Sabha,Normal/Others
+Uttarakhand,TEHRI GARHWAL,1,1,0,100.0,0.0,0.0,1,Dr. Kalpana Saini (2022-28),Sitting Rajya Sabha,Normal/Others
+Uttarakhand,RUDRAPRAYAG,1,1,0,100.0,0.0,0.0,1,Dr. Kalpana Saini (2022-28),Sitting Rajya Sabha,Normal/Others
+Jammu And Kashmir,DODA,1,1,0,100.0,0.0,0.0,1,Jitendra Singh,UDHAMPUR,Normal/Others
+Telangana,NARAYANPET,1,1,0,100.0,0.0,0.0,1,ARUNA. D. K,MAHABUBNAGAR,Normal/Others
+Maharashtra,PAKYONG,1,1,0,100.0,0.0,0.0,1,Dr. Medha Vishram Kulkarni (2024-30),Sitting Rajya Sabha,Normal/Others
+Maharashtra,KUPWARA,1,1,0,100.0,0.0,0.0,1,Dr. Medha Vishram Kulkarni (2024-30),Sitting Rajya Sabha,Normal/Others
+Goa,SHAHJAHANPUR,1,1,0,100.0,0.0,0.0,1,Shri Sadanand Mhalu Shet Tanavade (2023-29),Sitting Rajya Sabha,Normal/Others
+Jammu And Kashmir,REASI,1,1,0,100.0,0.0,0.0,1,Shri Jugal Kishore Sharma,JAMMU,Normal/Others
+Delhi,SOUTH EAST,1,1,0,100.0,0.0,0.0,1,Harsh Malhotra,EAST DELHI,Normal/Others
+Haryana,GURUGRAM,1,1,0,100.0,0.0,0.0,1,Rao Inderjit Singh,GURGAON,Normal/Others
+Haryana,NUH,1,1,0,100.0,0.0,0.0,1,Rao Inderjit Singh,GURGAON,Trust and Society
+Uttarakhand,BAGESHWAR,1,1,0,100.0,0.0,0.0,1,Shri Mahendra Bhatt (2024-30),Sitting Rajya Sabha,Normal/Others
+Odisha,SUBARNAPUR,1,1,0,100.0,0.0,0.0,1,Dr. Sasmit Patra (2022-28),Sitting Rajya Sabha,Normal/Others
+Maharashtra,SAHARSA,1,1,0,100.0,0.0,0.0,1,BHAUSAHEB RAJARAM WAKCHAURE,SHIRDI,Normal/Others
+Haryana,PANIPAT,1,1,0,100.0,0.0,0.0,1,MANOHAR LAL,KARNAL,Normal/Others
+Rajasthan,GANGANAGAR,1,1,0,100.0,0.0,0.0,1,KULDEEP INDORA,GANGANAGAR,Normal/Others
+Chandigarh,RUPNAGAR,1,1,0,100.0,0.0,0.0,1,Shri Satnam Singh Sandhu (2024-30),Nominated Rajya Sabha,Trust and Society
+Chandigarh,MOGA,1,1,0,100.0,0.0,0.0,1,Shri Satnam Singh Sandhu (2024-30),Nominated Rajya Sabha,Normal/Others
+Chandigarh,LEH LADAKH,1,1,0,100.0,0.0,0.0,1,Shri Satnam Singh Sandhu (2024-30),Nominated Rajya Sabha,Trust and Society
+Odisha,GAJAPATI,1,1,0,100.0,0.0,0.0,1,Shri Manas Ranjan Mangaraj (2022-28),Sitting Rajya Sabha,Normal/Others
+Maharashtra,PALGHAR,1,1,0,100.0,0.0,0.0,1,DR. HEMANT VISHNU SAVARA,PALGHAR,Normal/Others
+Andaman And Nicobar Islands,SOUTH ANDAMANS,138,0,138,0.0,0.0,160587334.0,1,BISHNU PADA RAY,ANDAMAN AND NICOBAR ISLANDS,Normal/Others
+Andaman And Nicobar Islands,NORTH AND MIDDLE ANDAMAN,18,0,18,0.0,0.0,13764844.0,1,BISHNU PADA RAY,ANDAMAN AND NICOBAR ISLANDS,Normal/Others
+Andaman And Nicobar Islands,NICOBARS,11,0,11,0.0,0.0,0.0,1,BISHNU PADA RAY,ANDAMAN AND NICOBAR ISLANDS,Normal/Others
+Assam,KAMRUP,4,0,4,0.0,0.0,1354742.0,1,BIJULI KALITA MEDHI,GUWAHATI,Normal/Others
+Assam,KAMRUP METRO,3,0,3,0.0,0.0,2200000.0,1,BIJULI KALITA MEDHI,GUWAHATI,Normal/Others
+Arunachal Pradesh,UPPER SIANG,2,0,2,0.0,0.0,900000.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Arunachal Pradesh,KURUNG KUMEY,2,0,2,0.0,0.0,0.0,1,Kiren Rijiju,ARUNACHAL WEST,Normal/Others
+Assam,BARPETA,2,0,2,0.0,0.0,600000.0,1,RAKIBUL HUSSAIN,DHUBRI,Normal/Others
+Arunachal Pradesh,TIRAP,1,0,1,0.0,0.0,500000.0,1,Shri Tapir Gao,ARUNACHAL EAST,Normal/Others
+Bihar,NAWADA,1,0,1,0.0,0.0,214300.0,1,VIVEK THAKUR,NAWADA,Normal/Others
+Assam,SRIBHUMI,1,0,1,0.0,0.0,0.0,1,Kripanath Mallah,KARIMGANJ,Normal/Others

@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c6",
+    "name": "Smt. Rajathi (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 89248285.42,
+    "totalExpenditure": 21237106,
+    "utilizationPercentage": 23.79553388623519,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 39,
+    "completedWorksValue": 10000000,
+    "inProgressPayments": 11237106,
+    "paymentGapPercentage": 52.912604947208905,
+    "completionRate": 29.09090909090909,
+    "pendingWorks": 23,
+    "unspentAmount": 68011179.42,
+    "totalRecommendedAmount": 49000000,
+    "name_hi": "Smt. Rajathi (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21237106,
+      "totalEntries": 23,
+      "avgExpenditure": 923352.4347826086,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 21237106,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21237106,
+        "transactionCount": 23,
+        "avgAmount": 923352.4347826086
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 39,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3212a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of CCTV Survillance to Government Hr Sec School in Kammalampoondi 603406 Uthiramerur Taluk Kancheepuram District",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32129",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of CCTV Survillance to Government Girls Hr Sec School Kovur panchayat Kovur 600128 Kancheepuram District",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32058",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of lab Equipments to Government Boys Hr Sec School in Kundrathur at Ward no 9 Kollachery panchayat Kundathur Block Kancheepuram District",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32057",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of LAB Equipments to Government Girls Hr Sec School in Padappai at Ward no 1 Padappai Panchayat Kundrathur Block Kancheepuram District",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32041",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of lab Equipments to Government Hr Sec School in Ayyapathangal at Ward no 5 or 6 Ayyapathangal panchayat Kundathur Block Kancheepuram District",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 625000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.213Z"
+}

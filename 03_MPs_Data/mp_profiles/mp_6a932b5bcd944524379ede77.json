@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede77",
+    "name": "Jagdambika Pal",
+    "constituency": "DOMARIYAGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 160643957.11,
+    "totalExpenditure": 38873088,
+    "utilizationPercentage": 24.198288375940518,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 0,
+    "inProgressPayments": 38873088,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 75,
+    "unspentAmount": 121770869.11000001,
+    "totalRecommendedAmount": 97048500,
+    "name_hi": "Jagdambika Pal",
+    "constituency_hi": "DOMARIYAGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38873088,
+      "totalEntries": 50,
+      "avgExpenditure": 777461.76,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 38873088,
+        "transactionCount": 50
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38873088,
+        "transactionCount": 50,
+        "avgAmount": 777461.76
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 75,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:56.215Z"
+}

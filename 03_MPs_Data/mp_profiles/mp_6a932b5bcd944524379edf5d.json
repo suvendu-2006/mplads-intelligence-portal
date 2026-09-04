@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5d",
+    "name": "SHOBHANABEN MAHENDRASINH BARAIYA",
+    "constituency": "SABARKANTHA",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50880570,
+    "utilizationPercentage": 34.612632653061226,
+    "completedWorksCount": 122,
+    "recommendedWorksCount": 152,
+    "completedWorksValue": 43430570,
+    "inProgressPayments": 7450000,
+    "paymentGapPercentage": 14.642131564170763,
+    "completionRate": 44.52554744525548,
+    "pendingWorks": 30,
+    "unspentAmount": 96119430,
+    "totalRecommendedAmount": 55094489,
+    "name_hi": "SHOBHANABEN MAHENDRASINH BARAIYA",
+    "constituency_hi": "SABARKANTHA",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50880570,
+      "totalEntries": 143,
+      "avgExpenditure": 355808.1818181818,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1296000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 26155570,
+        "transactionCount": 78
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23429000,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50880570,
+        "transactionCount": 143,
+        "avgAmount": 355808.1818181818
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 122,
+    "recommendedCount": 152,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6d4",
+        "workCategory": "Normal/Others",
+        "workDescription": "kamalpur game bagicha pase ni jaher jagyama pawer block nu kam",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dec0",
+        "workCategory": "Normal/Others",
+        "workDescription": "oda game odasi mataji mandirna chokma pursarakshan dival nu kam",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3d4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Math Bhojayat game popat ji bhikhaji  thakor na ghar pase thi chok taraf pawer block nu kam",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e540",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIMATPUR GAME HANUMAN JI MANDIR  SUDHI CC ROAD NU KAM",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e30c",
+        "workCategory": "Normal/Others",
+        "workDescription": "narsoli game khodiyar matajina mandir pase shed nu kam",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.216Z"
+}

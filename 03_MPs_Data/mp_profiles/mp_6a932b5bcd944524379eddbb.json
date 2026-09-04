@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddbb",
+    "name": "Ajay Bhatt",
+    "constituency": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50626503,
+    "utilizationPercentage": 34.43979795918367,
+    "completedWorksCount": 85,
+    "recommendedWorksCount": 376,
+    "completedWorksValue": 22286737,
+    "inProgressPayments": 28339766,
+    "paymentGapPercentage": 55.9781227630911,
+    "completionRate": 18.43817787418655,
+    "pendingWorks": 291,
+    "unspentAmount": 96373497,
+    "totalRecommendedAmount": 93794738,
+    "name_hi": "Ajay Bhatt",
+    "constituency_hi": "NAINITAL UDHAM SINGH NAG.",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50626503,
+      "totalEntries": 901,
+      "avgExpenditure": 56189.23751387347,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18636849,
+        "transactionCount": 293
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31989654,
+        "transactionCount": 608
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50626503,
+        "transactionCount": 901,
+        "avgAmount": 56189.23751387347
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 85,
+    "recommendedCount": 376,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dce0",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad Nainital ke antargat ward number 36 Dr B R Ambedkar Adarsh Vidyalaya Jawahar Jyoti Shivpuri damuwadunga mein science lab kaksh Nirman Karya Hetu",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 249905
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dce2",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad Nainital ke antargat ward number 36 Dr B R Ambedkar Adarsh Vidyalaya Jawahar Jyoti Shivpuri damuwadunga mein science lab kaksh Nirman Karya Hetu",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 249712
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Janpad Nainital ke antargat Indira Nagar 2 Bindu Katha Mein Shri hayatt Goswami Ke Ghar Se Rekha Joshi k ghar tak c c nirman kary hetu",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Janpad Nainital ke antargat gram Haripur jamansingh Mein mukhya Marg se Shri Pankaj Joshi ke ghar Tak CC Nirman Karya",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Janpad Nainital ke antargat Mahalaxmi Vihar Phase 3 Chharayal naya baad mein Sarvajanik Sthan Mein pulia Nirman Karya",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 52019
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.255Z"
+}

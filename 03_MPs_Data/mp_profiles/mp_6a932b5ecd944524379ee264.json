@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee264",
+    "name": "Shri Meda Raghunadha Reddy (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Andhra Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 81094462,
+    "utilizationPercentage": 55.16630068027211,
+    "completedWorksCount": 110,
+    "recommendedWorksCount": 139,
+    "completedWorksValue": 64019913,
+    "inProgressPayments": 17074549,
+    "paymentGapPercentage": 21.055135676219173,
+    "completionRate": 44.17670682730924,
+    "pendingWorks": 29,
+    "unspentAmount": 65905538,
+    "totalRecommendedAmount": 78703000,
+    "name_hi": "Shri Meda Raghunadha Reddy (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 81094462,
+      "totalEntries": 137,
+      "avgExpenditure": 591930.3795620438,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3296153,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 41135954,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36662355,
+        "transactionCount": 62
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 81094462,
+        "transactionCount": 137,
+        "avgAmount": 591930.3795620438
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 110,
+    "recommendedCount": 139,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing New Bore well and S.P set Yallagada Village, P. Karampalli GP, Rajampet Mandal",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 293144
+      },
+      {
+        "_id": "6a932bb5cd94452437a32350",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road from Nagamma House to Babu House of Aravapalli Village, Nagireddipalle, G.P, Nandalur Mandal",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 197672
+      },
+      {
+        "_id": "6a932bb5cd94452437a3234f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road fromn Kalesha Rooms To Palle Venkata Ramana House in Aravapalli Village, Nagireddipalle G.P, Nandalur Mandal.",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 397002
+      },
+      {
+        "_id": "6a932bb5cd94452437a322ee",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road from CRA road to Sivalayam in Gundluru G.P., Rajampet Mandal",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 493187
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing internal CC Road from Nukala Venkata Subbaiah House to Anji Student Mess Boyanapalli Village and GP of Rajampet Mandal",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 499998
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.236Z"
+}

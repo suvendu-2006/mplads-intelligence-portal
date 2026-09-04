@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede24",
+    "name": "DAMODAR AGARWAL",
+    "constituency": "BHILWARA",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 59365927,
+    "utilizationPercentage": 40.3849843537415,
+    "completedWorksCount": 102,
+    "recommendedWorksCount": 150,
+    "completedWorksValue": 38013328,
+    "inProgressPayments": 21352599,
+    "paymentGapPercentage": 35.967768177864045,
+    "completionRate": 40.476190476190474,
+    "pendingWorks": 48,
+    "unspentAmount": 87634073,
+    "totalRecommendedAmount": 66361445,
+    "name_hi": "DAMODAR AGARWAL",
+    "constituency_hi": "BHILWARA",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 59365927,
+      "totalEntries": 854,
+      "avgExpenditure": 69515.13700234191,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25911169,
+        "transactionCount": 338
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33454758,
+        "transactionCount": 516
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 59365927,
+        "transactionCount": 854,
+        "avgAmount": 69515.13700234191
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 102,
+    "recommendedCount": 150,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e7e3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Visrantigrah nirman kary kamlesh khatik ke makan ke pas Vill-Manpura GP-MAnpura PS Mandalgarh",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 480764
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e942",
+        "workCategory": "Normal/Others",
+        "workDescription": "NALA NIRMAN HETU PIPE DALANE KA KARY VILL ASHOKNAGAR GP BADA NAYA GAAV PS HINDOLI",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 491698
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Samudayik Bhawan Vistar kary Pani ki Tanki ke pas Vill-Ren GP-Gendliya PS-Kotari",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498632
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e957",
+        "workCategory": "Normal/Others",
+        "workDescription": "GADARIYO Ki kui ke pas samudayik Bhawan ki Char Diwari Vistar kary Vill-Sawaipur GP-Sawaipur PS-Kotri",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 499732
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d601",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shree Nagar me Khula Baramda Nirman Kary GP-Arniya Ghoda",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498869
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.759Z"
+}

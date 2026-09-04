@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf19",
+    "name": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "constituency": "PURNEA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 72622818,
+    "utilizationPercentage": 49.40327755102041,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 125,
+    "completedWorksValue": 47774818,
+    "inProgressPayments": 24848000,
+    "paymentGapPercentage": 34.215141582635916,
+    "completionRate": 26.900584795321635,
+    "pendingWorks": 79,
+    "unspentAmount": 74377182,
+    "totalRecommendedAmount": 97472200,
+    "name_hi": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "constituency_hi": "PURNEA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 72622818,
+      "totalEntries": 76,
+      "avgExpenditure": 955563.3947368421,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 47774818,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24848000,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 72622818,
+        "transactionCount": 76,
+        "avgAmount": 955563.3947368421
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 125,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a459",
+        "workCategory": "Normal/Others",
+        "workDescription": "16 mitre unchain wale L.E.D. 150x10 high mask light rang bhumi maidan, ward no. 14, purnea me 4 adad adhisthapit karne ki anusansha ki jati hai",
+        "completedDate": "2025-09-22T00:00:00.000Z",
+        "finalAmount": 3600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a3c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "16 mitre unchain wale L.E.D. 150x10 high mask light DSA ground nawratan hata ward no. 22, purnia me 4 adad adhisthapit karne ki anusansha ki jati hai",
+        "completedDate": "2025-09-20T00:00:00.000Z",
+        "finalAmount": 3600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18fc6",
+        "workCategory": "Normal/Others",
+        "workDescription": "WARD NO.- 14, SHANTI BHAWAN SE SHAMBHU KE GHAR HOTE HUE NALA TAK P.C.C. SADAK NIRMAN KARY",
+        "completedDate": "2025-07-17T00:00:00.000Z",
+        "finalAmount": 801197
+      },
+      {
+        "_id": "6a932bb5cd94452437a18fba",
+        "workCategory": "Normal/Others",
+        "workDescription": "WARD NO. 18, COURT STATION ROAD KE PRADIP CHAUDHARY KE GHAR SE AJAY SINGH KE GHAR TAK P.C.C. SADAK NIRMAN KARY",
+        "completedDate": "2025-07-17T00:00:00.000Z",
+        "finalAmount": 249694
+      },
+      {
+        "_id": "6a932bb5cd94452437a18fb1",
+        "workCategory": "Normal/Others",
+        "workDescription": "NAGAR NIGAM WARD NO.- 10, MEN NAYA TOLA MILKI RAJ KUMAR CHAUDHARY KE GHAR SE KUMAR RANJAN KE GHAR KI OR JANE WALI SADAK ME 500 FEET P.C.C. SADAK NIRMAN KARY",
+        "completedDate": "2025-07-17T00:00:00.000Z",
+        "finalAmount": 1486904
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.685Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd7",
+    "name": "ANUP SANJAY DHOTRE",
+    "constituency": "AKOLA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 51045667,
+    "utilizationPercentage": 34.724943537414966,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 59,
+    "completedWorksValue": 38300343,
+    "inProgressPayments": 12745324,
+    "paymentGapPercentage": 24.968473817767922,
+    "completionRate": 41,
+    "pendingWorks": 18,
+    "unspentAmount": 95954333,
+    "totalRecommendedAmount": 59626000,
+    "name_hi": "ANUP SANJAY DHOTRE",
+    "constituency_hi": "AKOLA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 51045667,
+      "totalEntries": 69,
+      "avgExpenditure": 739792.2753623188,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28943390,
+        "transactionCount": 39
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22102277,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 51045667,
+        "transactionCount": 69,
+        "avgAmount": 739792.2753623188
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 59,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e234",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road at Kurankhed from Mahadeo Mandir to house of Umesh Ingale and House of Subhash Malani to Main Road",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 990840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b181",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road at Edlapur from house of Gajanan Kolhe to Sunil Paliwal house",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 976441
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7d0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road at Amboda from house of Anil Sawarkar to house of Anil Deshmukh",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 987534
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road at Bori from house of Ganeshrao Shanware to house of Narayanrao Bawaskar",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 986782
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf72",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road from the house of Arun Metkar to house of Ganesh Khanderao",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 985293
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.207Z"
+}

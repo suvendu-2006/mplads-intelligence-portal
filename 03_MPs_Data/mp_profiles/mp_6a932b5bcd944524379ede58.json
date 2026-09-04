@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede58",
+    "name": "G. KUMAR NAIK",
+    "constituency": "RAICHUR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23521564,
+    "utilizationPercentage": 16.00106394557823,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 119,
+    "completedWorksValue": 6475548,
+    "inProgressPayments": 17046016,
+    "paymentGapPercentage": 72.46973883199263,
+    "completionRate": 7.03125,
+    "pendingWorks": 110,
+    "unspentAmount": 123478436,
+    "totalRecommendedAmount": 89000000,
+    "name_hi": "G. KUMAR NAIK",
+    "constituency_hi": "RAICHUR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23521564,
+      "totalEntries": 46,
+      "avgExpenditure": 511338.347826087,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8702915,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14818649,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23521564,
+        "transactionCount": 46,
+        "avgAmount": 511338.347826087
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 119,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a297",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of one additional collage room to Jyothibha pule PU collage in Devadurga town",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a197da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fencing to pubalic  Drinking water lake near veeresh house at  kallur village",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 499729
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road improvement from Singnodi tanda  to Bapuru village in Raichur taluk",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 497768
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road improvrment from Gunderveli village to Meedadinni village",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 499361
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road improvement from Kanyadoddi tanda  to Bapuru village in Raichur taluk",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 498962
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.247Z"
+}

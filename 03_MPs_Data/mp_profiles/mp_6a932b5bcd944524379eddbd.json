@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddbd",
+    "name": "Ajay Tamta",
+    "constituency": "ALMORA",
+    "state": "Uttarakhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 4091663,
+    "utilizationPercentage": 2.783444217687075,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 139,
+    "completedWorksValue": 1654574,
+    "inProgressPayments": 2437089,
+    "paymentGapPercentage": 59.56230999473809,
+    "completionRate": 2.112676056338028,
+    "pendingWorks": 136,
+    "unspentAmount": 142908337,
+    "totalRecommendedAmount": 26716406,
+    "name_hi": "Ajay Tamta",
+    "constituency_hi": "ALMORA",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 4091663,
+      "totalEntries": 92,
+      "avgExpenditure": 44474.59782608696,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1919376,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2172287,
+        "transactionCount": 86
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 4091663,
+        "transactionCount": 92,
+        "avgAmount": 44474.59782608696
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 139,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17a2e",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Vipin Chandra Tripathi Kumaun engineering college Dwarahat main esthit Kendriya Vidhyalay ke asthai bhawan main maintenance kary hetu (Karydai Sastha Vikaskhand Dwarahat)",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 454574
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cddb",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Panchmukhi Balajee Hanuman Mandir ke sameep esthal vikas kary hetu(karydai sastha vikaskhand Gangolihat)",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19774",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Almora mai Munshi Hari Prasad tamta dharmshala aur craft myujiyam main fasaat wa any atirikt kary hetu(karydai sastha nagar nigam almora)",
+        "completedDate": "2025-11-15T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.897Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf0a",
+    "name": "R.K. CHAUDHARY",
+    "constituency": "MOHANLALGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 34622708,
+    "utilizationPercentage": 23.552862585034013,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 3010942,
+    "inProgressPayments": 31611766,
+    "paymentGapPercentage": 91.30356296798044,
+    "completionRate": 15.053763440860216,
+    "pendingWorks": 65,
+    "unspentAmount": 112377292,
+    "totalRecommendedAmount": 72543098,
+    "name_hi": "R.K. CHAUDHARY",
+    "constituency_hi": "MOHANLALGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34622708,
+      "totalEntries": 83,
+      "avgExpenditure": 417141.0602409639,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15361317,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19261391,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34622708,
+        "transactionCount": 83,
+        "avgAmount": 417141.0602409639
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e191",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New drainage line along both sides of the road according to the list attached",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 726182
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e192",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New drain lines along the roadside, according to the list, attach",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 992180
+      },
+      {
+        "_id": "6a932bb5cd94452437a183b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rajesh rawat  Surendra rawat ke ghar ke pass solarlight 4-way",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 107715
+      },
+      {
+        "_id": "6a932bb5cd94452437a183ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rambhadur rawat ke ghar ke pass solarlight 4-way",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 107715
+      },
+      {
+        "_id": "6a932bb5cd94452437a183b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rehan ke ghar ke pass solar light 4-way",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 107715
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.217Z"
+}

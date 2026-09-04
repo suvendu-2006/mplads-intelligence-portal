@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede89",
+    "name": "K. C VENUGOPAL",
+    "constituency": "ALAPPUZHA",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44331588,
+    "utilizationPercentage": 30.157542857142854,
+    "completedWorksCount": 37,
+    "recommendedWorksCount": 52,
+    "completedWorksValue": 26840190,
+    "inProgressPayments": 17491398,
+    "paymentGapPercentage": 39.45583451691376,
+    "completionRate": 41.57303370786517,
+    "pendingWorks": 15,
+    "unspentAmount": 102668412,
+    "totalRecommendedAmount": 60480650,
+    "name_hi": "K. C VENUGOPAL",
+    "constituency_hi": "ALAPPUZHA",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44331588,
+      "totalEntries": 67,
+      "avgExpenditure": 661665.4925373135,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10381631,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33949957,
+        "transactionCount": 53
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44331588,
+        "transactionCount": 67,
+        "avgAmount": 661665.4925373135
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 37,
+    "recommendedCount": 52,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e87c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of a Bus for MDUPS, Nadubhagam, Thycattussery, 2km west to Makkekkadavu junction in the Cherthala Arookkutty road",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 1680666
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Implementation of an RO Plant  in Govt. Girls HSS, Kayamkulam",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 358334
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of a bus for St.Michaels HS, Kavil",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 1687236
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a Mini High Mast Light in the eastern part of Odampally Valavu - Veeramangalam Kadavu Road",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 324461
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1db",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting of Chemmanthara - Pulluvanthara road in the 28th ward Menatheril of Kayamkulam Muni.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 415837
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.681Z"
+}

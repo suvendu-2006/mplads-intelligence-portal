@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edefd",
+    "name": "Prasun Banerjee",
+    "constituency": "HOWRAH",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70699743,
+    "utilizationPercentage": 48.09506326530612,
+    "completedWorksCount": 136,
+    "recommendedWorksCount": 78,
+    "completedWorksValue": 55720622,
+    "inProgressPayments": 14979121,
+    "paymentGapPercentage": 21.186952546630895,
+    "completionRate": 63.55140186915887,
+    "pendingWorks": -58,
+    "unspentAmount": 76300257,
+    "totalRecommendedAmount": 41800409,
+    "name_hi": "Prasun Banerjee",
+    "constituency_hi": "HOWRAH",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70699743,
+      "totalEntries": 158,
+      "avgExpenditure": 447466.7278481013,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27790854,
+        "transactionCount": 44
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42908889,
+        "transactionCount": 114
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70699743,
+        "transactionCount": 158,
+        "avgAmount": 447466.7278481013
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 136,
+    "recommendedCount": 78,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e91a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  Installation High Mast near Jalalsi Seva Sangha Club at Islampur GP under AC 175 in MPLAD",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e912",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply Installation High Mast near Phatik Gachi Sub Health Centre at Laskarpur GP under AC 175 in MPLAD",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e92e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  Installation High Mast near Dipa Jana Para Math at Polgustia GP under AC 175 in MPLAD",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e92c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply Installation High Mast near Gobindopur Khatir Math Swasan at Gobindopur GP under AC 175 in MPLAD",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e91f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply Installation High Mast near Phatik Gachi Sitala Mandir at Laskarpur GP under AC 175 in MPLAD",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 150000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.701Z"
+}

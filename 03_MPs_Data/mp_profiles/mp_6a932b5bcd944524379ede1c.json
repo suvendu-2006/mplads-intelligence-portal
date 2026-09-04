@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1c",
+    "name": "CHHOTELAL",
+    "constituency": "ROBERTSGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 90952339,
+    "utilizationPercentage": 61.87233945578231,
+    "completedWorksCount": 261,
+    "recommendedWorksCount": 174,
+    "completedWorksValue": 49140148,
+    "inProgressPayments": 41812191,
+    "paymentGapPercentage": 45.97154010519729,
+    "completionRate": 60,
+    "pendingWorks": -87,
+    "unspentAmount": 56047661,
+    "totalRecommendedAmount": 82129996,
+    "name_hi": "CHHOTELAL",
+    "constituency_hi": "ROBERTSGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 90952339,
+      "totalEntries": 728,
+      "avgExpenditure": 124934.53159340659,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 66344027,
+        "transactionCount": 475
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24608312,
+        "transactionCount": 253
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 90952339,
+        "transactionCount": 728,
+        "avgAmount": 124934.53159340659
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 261,
+    "recommendedCount": 174,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b4a9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block  Ghorawal, Village Khardeur construction for Chhath Ghat inn Belan River",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 699144
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b4a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block - Ghorawal, Village tendui work for Interlocking in sabari mata mandir",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498157
+      },
+      {
+        "_id": "6a932bb5cd94452437a176f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a room in Rana Pratap Small Secondary School Lohara Sukrit Sonbhadra, Block Karma",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1adc9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar street light construction work near Sanjay son of Rambachans house in village-Pathraur.",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 18976
+      },
+      {
+        "_id": "6a932bb5cd94452437a1add0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar street light construction work near Virendra son of Nareshs house in village-Pathraur.",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 18976
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.262Z"
+}

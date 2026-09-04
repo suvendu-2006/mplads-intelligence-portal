@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf00",
+    "name": "Pratima Mondal ",
+    "constituency": "JOYNAGAR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 74379705,
+    "utilizationPercentage": 50.5984387755102,
+    "completedWorksCount": 169,
+    "recommendedWorksCount": 54,
+    "completedWorksValue": 67497029,
+    "inProgressPayments": 6882676,
+    "paymentGapPercentage": 9.253432774437597,
+    "completionRate": 75.7847533632287,
+    "pendingWorks": -115,
+    "unspentAmount": 72620295,
+    "totalRecommendedAmount": 30216920,
+    "name_hi": "Pratima Mondal ",
+    "constituency_hi": "JOYNAGAR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74379705,
+      "totalEntries": 185,
+      "avgExpenditure": 402052.45945945947,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2673683,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 62243109,
+        "transactionCount": 158
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9462913,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74379705,
+        "transactionCount": 185,
+        "avgAmount": 402052.45945945947
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 169,
+    "recommendedCount": 54,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b836",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of highmast ligh ( Hight - 6 m, No of light at the top hight is four ) at the near of Maydah Kalibari , G.P. -Maydah,  under Block Jaynagar-II",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 89953
+      },
+      {
+        "_id": "6a932bb5cd94452437a18492",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Water Supply System With Submersible Pump and Overhead Tank Near Gofur Sekh House, Plot No - 3270, Khatiyan No - 1, JL No - 06, Mouza - Merigunj",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 310393
+      },
+      {
+        "_id": "6a932bb5cd94452437a181aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Water Supply System With Submersible Pump and Overhead Tank Near Rafikul Laskar House, Plot No - 77, Khatiyan No - 5467, JL No - 07, Mouza -Benimadhabpur",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 312408
+      },
+      {
+        "_id": "6a932bb5cd94452437a17748",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light Near Nagenabad Muslim Para Jetty Ghat, Plot No - 342, Khatiyan No - 3051, JL No - 47, Mouza - Baikunthapur",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 227446
+      },
+      {
+        "_id": "6a932bb5cd94452437a17747",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light Near  Kishori Mohanpur State Plan F.P School More, Plot No - 1979, Khatiyan No - 1870, JL.NO - 51, Mouza - Kishori Mohanpur",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 227446
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.899Z"
+}

@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeca",
+    "name": "MANOJ TIGGA",
+    "constituency": "ALIPURDUARS",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11379773,
+    "utilizationPercentage": 7.741342176870749,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 0,
+    "inProgressPayments": 11379773,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 90,
+    "unspentAmount": 135620227,
+    "totalRecommendedAmount": 97792187.95,
+    "name_hi": "MANOJ TIGGA",
+    "constituency_hi": "ALIPURDUARS",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11379773,
+      "totalEntries": 17,
+      "avgExpenditure": 669398.4117647059,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 11379773,
+        "transactionCount": 17
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11379773,
+        "transactionCount": 17,
+        "avgAmount": 669398.4117647059
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 90,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.736Z"
+}

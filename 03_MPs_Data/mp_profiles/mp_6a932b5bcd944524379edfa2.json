@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa2",
+    "name": "Sunil Kumar ",
+    "constituency": "VALMIKI NAGAR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 63664429,
+    "utilizationPercentage": 43.30913537414966,
+    "completedWorksCount": 79,
+    "recommendedWorksCount": 183,
+    "completedWorksValue": 61591650,
+    "inProgressPayments": 2072779,
+    "paymentGapPercentage": 3.2557882518666745,
+    "completionRate": 30.15267175572519,
+    "pendingWorks": 104,
+    "unspentAmount": 83335571,
+    "totalRecommendedAmount": 85639200,
+    "name_hi": "Sunil Kumar ",
+    "constituency_hi": "VALMIKI NAGAR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 63664429,
+      "totalEntries": 87,
+      "avgExpenditure": 731775.0459770114,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34561571,
+        "transactionCount": 48
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29102858,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 63664429,
+        "transactionCount": 87,
+        "avgAmount": 731775.0459770114
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 79,
+    "recommendedCount": 183,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c7ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "block piprasi grampanchyt baluwa thori ward 04 me mhavir mandir ke pass chbutra ka nirman kary",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 394621
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5db",
+        "workCategory": "Normal/Others",
+        "workDescription": "prakhand piprasi panchayat semra lebdaha gram sirpat nagar ward number 05 men brahm sthan ke pass tailes wala chbutra ka nirman",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 388378
+      },
+      {
+        "_id": "6a932bb5cd94452437a1881b",
+        "workCategory": "Normal/Others",
+        "workDescription": "block   piprasi  mudadih panchayt ke vill  ghodhawa me 2 kmra vala samudayik broom with tolet",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1371677
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e485",
+        "workCategory": "Normal/Others",
+        "workDescription": "madhubani panchayt ke raj daunaha me  badki bajar  me chbutra ka nirman kary",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 397602
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e71a",
+        "workCategory": "Normal/Others",
+        "workDescription": "prkhand ramnagar ke ngarprishad ward number 14 sabooni mata mandir ke ba gal men dilux sochalay ka nirman ka nirman kary",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 1193743
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.685Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1fa",
+    "name": "Dr. Kalpana Saini (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttarakhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 200830405.8,
+    "totalExpenditure": 65308088,
+    "utilizationPercentage": 32.51902406901375,
+    "completedWorksCount": 58,
+    "recommendedWorksCount": 131,
+    "completedWorksValue": 40533838,
+    "inProgressPayments": 24774250,
+    "paymentGapPercentage": 37.93442858103578,
+    "completionRate": 30.687830687830687,
+    "pendingWorks": 73,
+    "unspentAmount": 135522317.8,
+    "totalRecommendedAmount": 123312572,
+    "name_hi": "Dr. Kalpana Saini (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65308088,
+      "totalEntries": 159,
+      "avgExpenditure": 410742.6918238994,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6468962,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 26204259,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32634867,
+        "transactionCount": 67
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65308088,
+        "transactionCount": 159,
+        "avgAmount": 410742.6918238994
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 58,
+    "recommendedCount": 131,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of railing and PCC on the road leading to primary school in village Raturisera",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 199848
+      },
+      {
+        "_id": "6a932bb5cd94452437a311d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of R.C.C. Connecting Road in the Semal Harijan Basti of Gram Panchayat Kyari under Block Pratap Nagar",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 198905
+      },
+      {
+        "_id": "6a932bb5cd94452437a322ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of building in Savitri Saxena Premnarayan Saraswati Shishu Mandir, Railway Road Roorkee.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1496250
+      },
+      {
+        "_id": "6a932bb5cd94452437a322df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of roof in the crematorium of Scheduled Caste majority Gram Panchayat Gopalpur-Sikkhar, Block Narsan",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 995065
+      },
+      {
+        "_id": "6a932bb5cd94452437a322b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of roof in the cremation ground of Scheduled Caste dominated Gram Panchayat Udalhadi-Kumrada, Block Narsan, District Haridwar",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 996516
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.685Z"
+}

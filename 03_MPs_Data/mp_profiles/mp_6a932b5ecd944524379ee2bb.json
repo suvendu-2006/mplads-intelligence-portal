@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2bb",
+    "name": "Smt. Geeta alias Chandraprabha (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 169877016.35,
+    "utilizationPercentage": 86.64367426527659,
+    "completedWorksCount": 210,
+    "recommendedWorksCount": 37,
+    "completedWorksValue": 161572422.35,
+    "inProgressPayments": 8304594,
+    "paymentGapPercentage": 4.888591863945814,
+    "completionRate": 85.02024291497976,
+    "pendingWorks": -173,
+    "unspentAmount": 26186940.76000002,
+    "totalRecommendedAmount": 34491534,
+    "name_hi": "Smt. Geeta alias Chandraprabha (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 169877016.35,
+      "totalEntries": 313,
+      "avgExpenditure": 542738.0714057508,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 99495132.35,
+        "transactionCount": 229
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 68123316,
+        "transactionCount": 83
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2258568,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 169877016.35,
+        "transactionCount": 313,
+        "avgAmount": 542738.0714057508
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 210,
+    "recommendedCount": 37,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30315",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar light 30 watt \nAt 10 places\nTotal 10*50000= 500000",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 499951
+      },
+      {
+        "_id": "6a932bb5cd94452437a3030d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar lights 30 watt at 18 places",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 899911.05
+      },
+      {
+        "_id": "6a932bb5cd94452437a30312",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar lights 30 watt at 18 places",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 899911.05
+      },
+      {
+        "_id": "6a932bb5cd94452437a30308",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar lights 30 watt at 13 places",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 649935
+      },
+      {
+        "_id": "6a932bb5cd94452437a302fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar lights 30 watt at 3 places",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 143631
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.929Z"
+}

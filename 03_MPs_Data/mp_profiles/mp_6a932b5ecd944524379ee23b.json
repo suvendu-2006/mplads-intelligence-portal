@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee23b",
+    "name": "Shri Gulam Ali (2022-28)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Jammu And Kashmir",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 134033715,
+    "utilizationPercentage": 68.36224106443058,
+    "completedWorksCount": 156,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 133429060,
+    "inProgressPayments": 604655,
+    "paymentGapPercentage": 0.4511215704198007,
+    "completionRate": 84.32432432432432,
+    "pendingWorks": -127,
+    "unspentAmount": 62030242.110000014,
+    "totalRecommendedAmount": 13559003.89,
+    "name_hi": "Shri Gulam Ali (2022-28)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Jammu And Kashmir"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 134033715,
+      "totalEntries": 192,
+      "avgExpenditure": 698092.265625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 33048000,
+        "transactionCount": 136
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 50649894,
+        "transactionCount": 19
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42208166,
+        "transactionCount": 29
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8127655,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 134033715,
+        "transactionCount": 192,
+        "avgAmount": 698092.265625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 156,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Brick Path near  the home of Farooq ,w .no 4 panchayat-Bandichechian ,Block NSSB , Punch.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 98000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3217d",
+        "workCategory": "Normal/Others",
+        "workDescription": "supply and installation of led semi high mast at different 25 places in district pilibhit",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 7075000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32291",
+        "workCategory": "Normal/Others",
+        "workDescription": "contrcution of graveyard shed at dungiyan panchayat lower sunjwan block satwari",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a318a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "S I OF LED SEMI HIGH MAST LIGHT  AT FOURTY ONE DIFFERENT PLACES",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 12505000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31cb4",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation testing commisioning of submersible pump set along with allied accessories at shahi swami nagar lower thathar bantalab ward no 63 district jammu",
+        "completedDate": "2025-11-29T00:00:00.000Z",
+        "finalAmount": 328472
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.346Z"
+}

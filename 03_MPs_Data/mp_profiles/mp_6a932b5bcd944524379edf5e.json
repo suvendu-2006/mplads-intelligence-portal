@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5e",
+    "name": "SHREYAS. M. PATEL",
+    "constituency": "HASSAN",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58328008,
+    "utilizationPercentage": 39.67891700680272,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 181,
+    "completedWorksValue": 12365199,
+    "inProgressPayments": 45962809,
+    "paymentGapPercentage": 78.80058067472491,
+    "completionRate": 13.80952380952381,
+    "pendingWorks": 152,
+    "unspentAmount": 88671992,
+    "totalRecommendedAmount": 94172630,
+    "name_hi": "SHREYAS. M. PATEL",
+    "constituency_hi": "HASSAN",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58328008,
+      "totalEntries": 179,
+      "avgExpenditure": 325854.7932960894,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2407819,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 55920189,
+        "transactionCount": 170
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58328008,
+        "transactionCount": 179,
+        "avgAmount": 325854.7932960894
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 181,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e47e",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of bus stand work in laxmipura village kasaba hobli holenarasipura taluk holenarasipura constituency 2025-26",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 496445
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d950",
+        "workCategory": "Normal/Others",
+        "workDescription": "development of road work in holenarsipura taluk Holenarsipura town ward no 1 Suranahalli village narayana house to Nanjamma house and p kumaranna house road development work 2025 26",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 246462
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d951",
+        "workCategory": "Normal/Others",
+        "workDescription": "development of road work in holenarsipura taluk Holenarsipura town ward no 1 Suranahalli village s n Ravi house to late keshavegowda house road development work 2025 26",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 245824
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d948",
+        "workCategory": "Normal/Others",
+        "workDescription": "development of road work in holenarsipura taluk Holenarsipura town ward no 1 Suranahalli village mahendranna house to mahesh house 2025 26",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 246585
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d16a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of road work in Hosakoppalu village kantharaju home road dudda hobli Hassan taluk Holenarsipura constituency 2024-25",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 198080
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.222Z"
+}

@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1fd",
+    "name": "Dr. Laxmikant Bajpayee (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196000000,
+    "totalExpenditure": 37937707,
+    "utilizationPercentage": 19.355972959183674,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 6012295,
+    "inProgressPayments": 31925412,
+    "paymentGapPercentage": 84.15219190764482,
+    "completionRate": 6.0606060606060606,
+    "pendingWorks": 58,
+    "unspentAmount": 158062293,
+    "totalRecommendedAmount": 84607827,
+    "name_hi": "Dr. Laxmikant Bajpayee (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37937707,
+      "totalEntries": 35,
+      "avgExpenditure": 1083934.4857142856,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13889459,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24048248,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37937707,
+        "transactionCount": 35,
+        "avgAmount": 1083934.4857142856
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32181",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC interlocking tiles road and drainage from the house of Mahipal Singh Majra to Vinod house and from Rafal Singh house towards the primary school, Ismailpur Majra, Nakur, Saharanpur.",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 2395852
+      },
+      {
+        "_id": "6a932bb5cd94452437a316af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from the field of Shri Babbal to the field of Shri Mohan Lal",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 996061
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ada",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "WS/MP181/2025-2026/133478-Crematoriums/energy efficient crematoriums or structures on burial/cremation ground",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 1430468
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e1b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking Tiles",
+        "completedDate": "2025-03-17T00:00:00.000Z",
+        "finalAmount": 1189914
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.446Z"
+}

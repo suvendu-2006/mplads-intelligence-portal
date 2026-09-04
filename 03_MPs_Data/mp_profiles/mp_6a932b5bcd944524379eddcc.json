@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddcc",
+    "name": "ANANTA NAYAK",
+    "constituency": "KEONJHAR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 29211360,
+    "utilizationPercentage": 19.871673469387755,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 323,
+    "completedWorksValue": 5050000,
+    "inProgressPayments": 24161360,
+    "paymentGapPercentage": 82.7122051147225,
+    "completionRate": 5,
+    "pendingWorks": 306,
+    "unspentAmount": 117788640,
+    "totalRecommendedAmount": 131155000,
+    "name_hi": "ANANTA NAYAK",
+    "constituency_hi": "KEONJHAR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 29211360,
+      "totalEntries": 448,
+      "avgExpenditure": 65203.92857142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9171295,
+        "transactionCount": 173
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20040065,
+        "transactionCount": 275
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 29211360,
+        "transactionCount": 448,
+        "avgAmount": 65203.92857142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 323,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1be04",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of concrete road from Panchupalli High school chhaka to river protection wall in Panchupalli GP, Anandapur, Keonjhar district",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc8e",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road from Baidhar house to Basudev Naik, Digdhar Village, gp-Digdhar",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8a0",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road from banu behera house to RD road, vill-Gahandia, GP-Talapada",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb8c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road at Taneipal Village,Kodapada G.P, Anandapur Block, Keonjhar District",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b882",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road at-Banasahi, Narada, Gadabandhogoda GP, Ghasipura",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.652Z"
+}

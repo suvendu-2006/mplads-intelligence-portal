@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb8",
+    "name": "Vaithilingam Ve",
+    "constituency": "Puducherry",
+    "state": "Puducherry",
+    "house": "Lok Sabha",
+    "allocatedAmount": 209368972.11,
+    "totalExpenditure": 33557935,
+    "utilizationPercentage": 16.028131896434516,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 21280551,
+    "inProgressPayments": 12277384,
+    "paymentGapPercentage": 36.58563615431045,
+    "completionRate": 17.333333333333336,
+    "pendingWorks": 49,
+    "unspentAmount": 175811037.11,
+    "totalRecommendedAmount": 119674000,
+    "name_hi": "Vaithilingam Ve",
+    "constituency_hi": "Puducherry",
+    "state_hi": "Puducherry"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33557935,
+      "totalEntries": 27,
+      "avgExpenditure": 1242886.4814814816,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4620293,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 12236465,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16701177,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33557935,
+        "transactionCount": 27,
+        "avgAmount": 1242886.4814814816
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing WBM road facilities from Nagooranthottam to Sri Pichavaram swamy temple at Veerampattinam village in Ariankuppam Commune Panchayat, Puducherry",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1229867
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd67",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing cement concrete road and drainage facilities to Jeevanandham Street and Swamy Vivekananda Street at Ashok Nagar in Lawspet Constituency.",
+        "completedDate": "2026-02-05T00:00:00.000Z",
+        "finalAmount": 3193926
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c2ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Formation of road to the John Kumar Nagar, Extention, Srinivasa nagar and AKD Nagar including approach roads to Mothilal nagar, Moolakulam in Oulgaret Municipality, Puducherry.",
+        "completedDate": "2025-12-30T00:00:00.000Z",
+        "finalAmount": 3345017
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be65",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing street lights in various colonies of Pudhuthurai, Dharmapuram, Keezhputhamangalam in Karaikal South Constituency, Karaikal",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 1968724
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b632",
+        "workCategory": "Normal/Others",
+        "workDescription": "Balance work of Providing road facilities to Sri Sakthi Nagar and east layout in Thirubhuvanai periapet at Mannadipet Commune",
+        "completedDate": "2025-12-04T00:00:00.000Z",
+        "finalAmount": 139304
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.212Z"
+}

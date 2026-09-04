@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede04",
+    "name": "BHUMARE SANDIPANRAO ASARAM",
+    "constituency": "AURANGABAD",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50596352,
+    "utilizationPercentage": 34.41928707482993,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 65,
+    "completedWorksValue": 40279781,
+    "inProgressPayments": 10316571,
+    "paymentGapPercentage": 20.38995024779652,
+    "completionRate": 29.347826086956523,
+    "pendingWorks": 38,
+    "unspentAmount": 96403648,
+    "totalRecommendedAmount": 76615000,
+    "name_hi": "BHUMARE SANDIPANRAO ASARAM",
+    "constituency_hi": "AURANGABAD",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50596352,
+      "totalEntries": 37,
+      "avgExpenditure": 1367468.972972973,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20417235,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30179117,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50596352,
+        "transactionCount": 37,
+        "avgAmount": 1367468.972972973
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 65,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dc50",
+        "workCategory": "Normal/Others",
+        "workDescription": "Wakad Tq Kannad Construction of Community Halls",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 1486882
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db1d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Domegaon Tq Gangapur Construction of Community Halls",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 998112
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chhatrapati Sambhajingar Mahanagar Pailika Soujanyangar Balaji Nagar Shaikh Yusuf to Jamdhade Construction of CC Road",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d989",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar Parishad Ward No 11 Vittal Nagar Community Halls",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 1972562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d977",
+        "workCategory": "Normal/Others",
+        "workDescription": "VAIJAPUR DATTANAGAR WARD NO 8 COMMUNITY HALLS",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 1968229
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.243Z"
+}

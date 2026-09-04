@@ -1,0 +1,10 @@
+category,total_works,completed_works,recommended_works,completion_rate_pct,total_expenditure_inr,average_work_cost_inr,csv_file,json_file
+Community Centers & Halls,1207,930,277,77.05,1096236245,908232,06_Works/categorized_datasets/by_category/community_centers_halls.csv,06_Works/categorized_datasets/by_category/community_centers_halls.json
+Drinking Water Supply,2099,1833,266,87.33,536458078,255577,06_Works/categorized_datasets/by_category/drinking_water_supply.csv,06_Works/categorized_datasets/by_category/drinking_water_supply.json
+Education & School Infrastructure,1693,1551,142,91.61,1227643889,725129,06_Works/categorized_datasets/by_category/education_school_infrastructure.csv,06_Works/categorized_datasets/by_category/education_school_infrastructure.json
+"Electricity, Lighting & Solar Energy",1940,1822,118,93.92,1110878939,572618,06_Works/categorized_datasets/by_category/electricity_lighting_solar_energy.csv,06_Works/categorized_datasets/by_category/electricity_lighting_solar_energy.json
+"Health, Sanitation & Public Hygiene",368,320,48,86.96,341123105,926964,06_Works/categorized_datasets/by_category/health_sanitation_public_hygiene.csv,06_Works/categorized_datasets/by_category/health_sanitation_public_hygiene.json
+Irrigation & Flood Protection,230,197,33,85.65,128934297,560583,06_Works/categorized_datasets/by_category/irrigation_flood_protection.csv,06_Works/categorized_datasets/by_category/irrigation_flood_protection.json
+Other Civil & Development Works,4806,4171,635,86.79,2666790655,554887,06_Works/categorized_datasets/by_category/other_civil_development_works.csv,06_Works/categorized_datasets/by_category/other_civil_development_works.json
+"Repair, Renovation & Maintenance",64,56,8,87.5,41594576,649915,06_Works/categorized_datasets/by_category/repair_renovation_maintenance.csv,06_Works/categorized_datasets/by_category/repair_renovation_maintenance.json
+Roads & Pathways,5783,4920,863,85.08,3365324417,581934,06_Works/categorized_datasets/by_category/roads_pathways.csv,06_Works/categorized_datasets/by_category/roads_pathways.json

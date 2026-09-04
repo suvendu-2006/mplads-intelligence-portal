@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edebf",
+    "name": "MALAIYARASAN D",
+    "constituency": "KALLAKURICHI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 201599593,
+    "totalExpenditure": 121901141,
+    "utilizationPercentage": 60.46695788716201,
+    "completedWorksCount": 198,
+    "recommendedWorksCount": 191,
+    "completedWorksValue": 119983247,
+    "inProgressPayments": 1917894,
+    "paymentGapPercentage": 1.5733191537559112,
+    "completionRate": 50.899742930591266,
+    "pendingWorks": -7,
+    "unspentAmount": 79698452,
+    "totalRecommendedAmount": 58100000,
+    "name_hi": "MALAIYARASAN D",
+    "constituency_hi": "KALLAKURICHI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 121901141,
+      "totalEntries": 204,
+      "avgExpenditure": 597554.6127450981,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 107841624,
+        "transactionCount": 175
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14059517,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 121901141,
+        "transactionCount": 204,
+        "avgAmount": 597554.6127450981
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 198,
+    "recommendedCount": 191,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e641",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and Installation of Mini High Mast Light  (12.5 m) near Kesavan theater, Railadi street, Attur Municipality",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 465582
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e63c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and Installation of Mini High Mast Light  (12.5 m) at 3 road, Ward 25, Housing board Attur Municipality",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 466754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e851",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and Installation of  High Mast Light  (16m) at opposite to bus stand, Cuddalore Main road, Attur Municipality",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 973286
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e50e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement and Installation of Mini solar Light at Malaiyan Nagar , Ayyothiyapattanam panchayat Union.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 372559
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e515",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Mini Solar light at ward 13 in Gangavalli",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 375000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.223Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edddd",
+    "name": "ARUN NEHRU",
+    "constituency": "PERAMBALUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 67653424,
+    "utilizationPercentage": 46.02273741496599,
+    "completedWorksCount": 54,
+    "recommendedWorksCount": 28,
+    "completedWorksValue": 58995308,
+    "inProgressPayments": 8658116,
+    "paymentGapPercentage": 12.797749896590599,
+    "completionRate": 65.85365853658537,
+    "pendingWorks": -26,
+    "unspentAmount": 79346576,
+    "totalRecommendedAmount": 48790000,
+    "name_hi": "ARUN NEHRU",
+    "constituency_hi": "PERAMBALUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67653424,
+      "totalEntries": 81,
+      "avgExpenditure": 835227.4567901235,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 33036433,
+        "transactionCount": 30
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34616991,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67653424,
+        "transactionCount": 81,
+        "avgAmount": 835227.4567901235
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 54,
+    "recommendedCount": 28,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e95c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter at Garudamangalam in Pullambadi Block",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 999011
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Two Classroom Building at Thiruppanjeeli Govt. Hsc School in Mannachanallur Block",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 4881560
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound Wall at V.Kalathur GHSS in Veppanthattai Union",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 498957
+      },
+      {
+        "_id": "6a932bb5cd94452437a180e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 2 Classroom Building @ Nehru Higher Secondary School in Eraiyur Pt.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 4349802
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e20a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 30000 litre capacity OHT at Kuppantiyoor in Kosur Pt in Krishnarayapuram Block",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 1799485
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.446Z"
+}

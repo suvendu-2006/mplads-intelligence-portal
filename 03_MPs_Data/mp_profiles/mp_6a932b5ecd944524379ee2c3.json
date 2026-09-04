@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c3",
+    "name": "Smt. Nirmala Sitharaman (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 215972051.45,
+    "totalExpenditure": 91394660,
+    "utilizationPercentage": 42.31781815581768,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 16,
+    "completedWorksValue": 61394660,
+    "inProgressPayments": 30000000,
+    "paymentGapPercentage": 32.82467487706612,
+    "completionRate": 30.434782608695656,
+    "pendingWorks": 9,
+    "unspentAmount": 124577391.44999999,
+    "totalRecommendedAmount": 111000000,
+    "name_hi": "Smt. Nirmala Sitharaman (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91394660,
+      "totalEntries": 10,
+      "avgExpenditure": 9139466,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31900000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 59494660,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91394660,
+        "transactionCount": 10,
+        "avgAmount": 9139466
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 16,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a320c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Farmers Training Center and Common Facility Center for agro processing through NABARD",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 4886000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31faf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Farmers Training Center and Common Facility Center for Agro Processing",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 5000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d70",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Farmers training center and common facility center for Agro processing through NABARD",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 4786000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ed8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Farmers Training Center and Common Facility Center for agro processing",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 4823000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3195e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Farmers Training Center and Common Facility Center for agro processing",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 4999660
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.449Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede28",
+    "name": "Devendra Alias Bhole Singh",
+    "constituency": "AKBARPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 62000186,
+    "utilizationPercentage": 42.176997278911564,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 86,
+    "completedWorksValue": 42373895,
+    "inProgressPayments": 19626291,
+    "paymentGapPercentage": 31.655213098876832,
+    "completionRate": 41.891891891891895,
+    "pendingWorks": 24,
+    "unspentAmount": 84999814,
+    "totalRecommendedAmount": 67639250,
+    "name_hi": "Devendra Alias Bhole Singh",
+    "constituency_hi": "AKBARPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62000186,
+      "totalEntries": 98,
+      "avgExpenditure": 632654.9591836735,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 43934249,
+        "transactionCount": 63
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18065937,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62000186,
+        "transactionCount": 98,
+        "avgAmount": 632654.9591836735
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 86,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18ce9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vidhansabha maharajpur ke antargat ward-63 raghunath puram me Highmast light ka Adhisthapan karya.",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 529270
+      },
+      {
+        "_id": "6a932bb5cd94452437a18cf0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vidhansabha maharajpur ke antargat ward-82 jarauli me Fattepur mandir ke pas highmast light ka Adhisthapan karya.",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 528232
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b425",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram seetalpur me raibahadur singh ke makan se rakesh fauji ke makan hote hue jahan singh ke makan tak interlocking road v nali ka nirman karya. Length 290m",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 2024481
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vidhan sabha bithoor ke antargat gram orchi me bharat singh  ke darwaje se deen dayal  ke darwaje tak interlocking road v nali ka nirman karya. Length 110 m",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 734793
+      },
+      {
+        "_id": "6a932bb5cd94452437a18a95",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vidhansabha maharajpur ke antargat vikas khand- sarsaul ke gram panchayat karbigawansadh me Highmast light ka Adhisthapan karya.",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 525956
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.237Z"
+}

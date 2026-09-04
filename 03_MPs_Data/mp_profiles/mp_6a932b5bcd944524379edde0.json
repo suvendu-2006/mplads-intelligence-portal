@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde0",
+    "name": "Arvind Dharmapuri",
+    "constituency": "NIZAMABAD",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 281396355.11,
+    "totalExpenditure": 158096817,
+    "utilizationPercentage": 56.182965461012714,
+    "completedWorksCount": 476,
+    "recommendedWorksCount": 440,
+    "completedWorksValue": 147505027,
+    "inProgressPayments": 10591790,
+    "paymentGapPercentage": 6.699559295997718,
+    "completionRate": 51.96506550218341,
+    "pendingWorks": -36,
+    "unspentAmount": 123299538.11000001,
+    "totalRecommendedAmount": 117788000,
+    "name_hi": "Arvind Dharmapuri",
+    "constituency_hi": "NIZAMABAD",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 158096817,
+      "totalEntries": 526,
+      "avgExpenditure": 300564.29087452474,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 42278669,
+        "transactionCount": 119
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 82904586,
+        "transactionCount": 300
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32913562,
+        "transactionCount": 107
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 158096817,
+        "transactionCount": 526,
+        "avgAmount": 300564.29087452474
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 476,
+    "recommendedCount": 440,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Artisan Shed near Munnurukapu Sangam, Binola (V)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Village community Hall, Naleshwar (V)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall in Gayatri Vishwa Brahmana wada, Naleshwar (V)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e223",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC drains from Mochi Smashanavatika to Prabhakar plot near Vailpur to Armoor road",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of public toilets beside water tank in Pamchayathraj colony, Kanteshwar, ward no.43",
+        "completedDate": "2026-04-25T00:00:00.000Z",
+        "finalAmount": 150000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.461Z"
+}

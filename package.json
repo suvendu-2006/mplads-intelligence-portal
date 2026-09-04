@@ -1,0 +1,18 @@
+{
+  "name": "mplads-web-app",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\" --names \"API,WEB\" --prefix-colors \"blue,magenta\"",
+    "dev:api": ".venv/bin/uvicorn webapi.main:app --port 8000 --reload",
+    "dev:web": "cd web && npm run dev",
+    "build": "cd web && npm install && npm run build",
+    "demo": "npm run build && .venv/bin/uvicorn webapi.main:app --port 8000 --host 0.0.0.0",
+    "demo-implement": "npm run demo",
+    "test:api": ".venv/bin/pytest tests/test_api.py -v",
+    "test:all": ".venv/bin/pytest tests/",
+    "test:web": "cd web && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

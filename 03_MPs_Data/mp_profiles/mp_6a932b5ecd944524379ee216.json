@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee216",
+    "name": "Shri Aditya Prasad (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Jharkhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 227628508.2,
+    "totalExpenditure": 159474868,
+    "utilizationPercentage": 70.05926861317452,
+    "completedWorksCount": 141,
+    "recommendedWorksCount": 85,
+    "completedWorksValue": 115687342,
+    "inProgressPayments": 43787526,
+    "paymentGapPercentage": 27.45732073595446,
+    "completionRate": 62.38938053097345,
+    "pendingWorks": -56,
+    "unspentAmount": 68153640.19999999,
+    "totalRecommendedAmount": 68485750,
+    "name_hi": "Shri Aditya Prasad (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 159474868,
+      "totalEntries": 383,
+      "avgExpenditure": 416383.4673629243,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 24908250,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 44385000,
+        "transactionCount": 104
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 81136447,
+        "transactionCount": 201
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9045171,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 159474868,
+        "transactionCount": 383,
+        "avgAmount": 416383.4673629243
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 141,
+    "recommendedCount": 85,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f9b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Sukhadi Saw house towards Hanuman Mandir in village Naudiha under block Nilambar-Pitambarpur(Lesliganj)",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 499572
+      },
+      {
+        "_id": "6a932bb5cd94452437a308ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Beautification of statue of Binod Bihari Mahto in ramdih village, kandra panchayat of chas block under bokaro district",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a307ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall in Anandi village under Ormanjhi block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a307cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall on the banks of Dhordhoro river of Katamkulli under Kanke block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a307dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary wall and gate of the old pond garden in Kuchu village under Ormanjhi block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1450000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.505Z"
+}

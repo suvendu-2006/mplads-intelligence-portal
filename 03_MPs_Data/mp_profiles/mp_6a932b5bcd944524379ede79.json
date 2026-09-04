@@ -1,0 +1,86 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede79",
+    "name": "Jai Prakash",
+    "constituency": "HARDOI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 85755277,
+    "utilizationPercentage": 58.33692312925171,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 21,
+    "completedWorksValue": 18939014,
+    "inProgressPayments": 66816263,
+    "paymentGapPercentage": 77.91504539131743,
+    "completionRate": 12.5,
+    "pendingWorks": 18,
+    "unspentAmount": 61244723,
+    "totalRecommendedAmount": 78036870,
+    "name_hi": "Jai Prakash",
+    "constituency_hi": "HARDOI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 85755277,
+      "totalEntries": 47,
+      "avgExpenditure": 1824580.3617021276,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 14254148,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 51158078,
+        "transactionCount": 30
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20343051,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 85755277,
+        "transactionCount": 47,
+        "avgAmount": 1824580.3617021276
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 21,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a8cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Lighting of public spaces",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 9227740
+      },
+      {
+        "_id": "6a932bb5cd94452437a17075",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking and Naali work",
+        "completedDate": "2025-02-07T00:00:00.000Z",
+        "finalAmount": 1187420
+      },
+      {
+        "_id": "6a932bb5cd94452437a1697f",
+        "workCategory": "Normal/Others",
+        "workDescription": "39 ?? 170-200  06 ??   ??",
+        "completedDate": "2024-12-03T00:00:00.000Z",
+        "finalAmount": 8523854
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.680Z"
+}

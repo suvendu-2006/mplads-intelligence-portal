@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede51",
+    "name": "Durga Das Uikey ",
+    "constituency": "BETUL",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151569502.91,
+    "totalExpenditure": 85636977,
+    "utilizationPercentage": 56.500137135667806,
+    "completedWorksCount": 288,
+    "recommendedWorksCount": 214,
+    "completedWorksValue": 67364911,
+    "inProgressPayments": 18272066,
+    "paymentGapPercentage": 21.336654608908017,
+    "completionRate": 57.37051792828686,
+    "pendingWorks": -74,
+    "unspentAmount": 65932525.91,
+    "totalRecommendedAmount": 77124735,
+    "name_hi": "Durga Das Uikey ",
+    "constituency_hi": "BETUL",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 85636977,
+      "totalEntries": 437,
+      "avgExpenditure": 195965.6224256293,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 62589481,
+        "transactionCount": 313
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23047496,
+        "transactionCount": 124
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 85636977,
+        "transactionCount": 437,
+        "avgAmount": 195965.6224256293
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 288,
+    "recommendedCount": 214,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1da4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Water Tenkar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 190546
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da0b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Water Tenkar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 190546
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "tenkar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 190546
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9ee",
+        "workCategory": "Normal/Others",
+        "workDescription": "Water Tenkar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 190546
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da01",
+        "workCategory": "Normal/Others",
+        "workDescription": "tenkar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 190546
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.428Z"
+}

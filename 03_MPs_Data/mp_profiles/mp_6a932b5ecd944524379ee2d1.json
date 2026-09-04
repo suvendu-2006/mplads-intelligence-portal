@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2d1",
+    "name": "Smt. Sulata Deo (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Odisha",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196084721.4,
+    "totalExpenditure": 88913709,
+    "utilizationPercentage": 45.344536976250104,
+    "completedWorksCount": 115,
+    "recommendedWorksCount": 196,
+    "completedWorksValue": 56002641,
+    "inProgressPayments": 32911068,
+    "paymentGapPercentage": 37.014616047565845,
+    "completionRate": 36.97749196141479,
+    "pendingWorks": 81,
+    "unspentAmount": 107171012.4,
+    "totalRecommendedAmount": 107863000,
+    "name_hi": "Smt. Sulata Deo (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 88913709,
+      "totalEntries": 303,
+      "avgExpenditure": 293444.58415841585,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 6877092,
+        "transactionCount": 26
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 11722253,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42769361,
+        "transactionCount": 124
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27545003,
+        "transactionCount": 85
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 88913709,
+        "transactionCount": 303,
+        "avgAmount": 293444.58415841585
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 115,
+    "recommendedCount": 196,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32376",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of graud wall from Shiba Mandir Ghata to Asta Ghata Village Ramachandrapur GP Block Begunia Nilgiri Executing Agency ITDA Nilgiri",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32301",
+        "workCategory": "Normal/Others",
+        "workDescription": "Depression filling of CC road from Asanbani Kalo main Canal to Asanbani Village road, Ward No.7, at Asanbani under Pingu GP, Kaptipada Blick",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of High Mast Light at Sarabanta Jagannath Bazar, Village-Sarabanta, G.P. Gadaharispur, Block- Erasama, Distt- Jagatsinghpur, Ward No.22",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 750000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction & Expasion of Library building for extending training facilities to Rural Personnels of Jagannath Seva Pratisthan Library, AT- Lunavihar, PO- Nandigoda, GP- Bijipur GP, Ward No. 3, Kanas Block, Puri Dist.",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 322015
+      },
+      {
+        "_id": "6a932bb5cd94452437a3228b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathing Ghat near Kalakad UGME tank village Kalakad GP Block Garadihi Nilgiri Executing Agency ITDA Nilgiri",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 155000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.686Z"
+}

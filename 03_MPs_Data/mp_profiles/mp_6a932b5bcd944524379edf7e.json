@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7e",
+    "name": "Shri Suresh Kodikunnil",
+    "constituency": "MAVELIKKARA",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 172429519.11,
+    "totalExpenditure": 41963456,
+    "utilizationPercentage": 24.336584719713656,
+    "completedWorksCount": 58,
+    "recommendedWorksCount": 133,
+    "completedWorksValue": 26813391,
+    "inProgressPayments": 15150065,
+    "paymentGapPercentage": 36.10299637856329,
+    "completionRate": 30.36649214659686,
+    "pendingWorks": 75,
+    "unspentAmount": 130466063.11000001,
+    "totalRecommendedAmount": 99735690,
+    "name_hi": "Shri Suresh Kodikunnil",
+    "constituency_hi": "MAVELIKKARA",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41963456,
+      "totalEntries": 85,
+      "avgExpenditure": 493687.71764705883,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4723880,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 15093793,
+        "transactionCount": 33
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22145783,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41963456,
+        "transactionCount": 85,
+        "avgAmount": 493687.71764705883
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 58,
+    "recommendedCount": 133,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from Manasarovar-Valayathu in ward 5, Chennithala GP",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 656077
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e78c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreating of road from Paramkimamvila-Mukuzhy Palliyambil Mukuzhy Link Road  in ward 16, Thamarakulam",
+        "completedDate": "2026-07-15T00:00:00.000Z",
+        "finalAmount": 856398
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e111",
+        "workCategory": "Normal/Others",
+        "workDescription": "School Bus for DVNSSUPS,Annoor,Neduvathoor Grama Panchyath",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 1523420
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e275",
+        "workCategory": "Normal/Others",
+        "workDescription": "Metalling and Tarring of Kuttezham to Naganattu Temple Road in ward1 Thakazhy GP",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 993461
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provide Minimast Light in front of Thiruvattoor Devi Temple, Chepara in Ummannoor GP",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 225139
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.690Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede70",
+    "name": "IMRAN MASOOD",
+    "constituency": "SAHARANPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61171580,
+    "utilizationPercentage": 41.61331972789116,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 51,
+    "completedWorksValue": 42078624,
+    "inProgressPayments": 19092956,
+    "paymentGapPercentage": 31.21213478546737,
+    "completionRate": 50,
+    "pendingWorks": 0,
+    "unspentAmount": 85828420,
+    "totalRecommendedAmount": 45170334,
+    "name_hi": "IMRAN MASOOD",
+    "constituency_hi": "SAHARANPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61171580,
+      "totalEntries": 73,
+      "avgExpenditure": 837966.8493150685,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30585121,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30586459,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61171580,
+        "transactionCount": 73,
+        "avgAmount": 837966.8493150685
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 51,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e0de",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Dhangheda me sachin ke khet se jaipal ke khet  tubewell tak mitti evm khadanja nirman karya.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 410349
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram khidka Junardar me Jogender ki dunkan makan se vikram ke makan tak cc road vai nali nirman karya.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 366268
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd69",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Ghana khandi me irfan ke makan se mustkeem ke makan tak cc road evm nali nirman karye. 75 meter",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 292149
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd68",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Gandevada me hazi ahsan mannan ke makan se abdul huq ke makan tak v saleem ke makan se suleman ke makan tak cc road evm nali nirman karye. 145 meter",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 925060
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d67d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Salempur mein Kashyap samaj ke shamshan ghat mein shavdah grih nirmaan karya 1 no.",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 501182
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.318Z"
+}

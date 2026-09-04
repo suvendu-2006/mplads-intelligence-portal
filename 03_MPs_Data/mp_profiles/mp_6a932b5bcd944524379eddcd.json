@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddcd",
+    "name": "Andimuthu Raja",
+    "constituency": "NILGIRIS",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71485310,
+    "utilizationPercentage": 48.62946258503401,
+    "completedWorksCount": 73,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 57023342,
+    "inProgressPayments": 14461968,
+    "paymentGapPercentage": 20.23068515755195,
+    "completionRate": 64.03508771929825,
+    "pendingWorks": -32,
+    "unspentAmount": 75514690,
+    "totalRecommendedAmount": 37680000,
+    "name_hi": "Andimuthu Raja",
+    "constituency_hi": "NILGIRIS",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71485310,
+      "totalEntries": 87,
+      "avgExpenditure": 821670.2298850574,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34183456,
+        "transactionCount": 48
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37301854,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71485310,
+        "transactionCount": 87,
+        "avgAmount": 821670.2298850574
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 73,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e7af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 30000 Litres capacity OHT 12M Stage at Alagepalayam AD Colony at Kuppanur Panchayat",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1399943
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Water Doctor 75 Ltr hot and cold at Government Hospital at Gudalur Town",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 45000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e878",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road at Rangaiya Gowder Street main Rangaiya Gowder street 1st cut Mallajja gowder main and Street 1st cut Sanjay Gandhi nagar 14th cut Ward No 19 at Karamadai Municipality",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1482790
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 20KV UPS for dialysis unit 2hrs backup at Government Hospital at Gudalur Town",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 335000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5db",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Shelter Near Community Hall at Ithalar Panchayat at Udhagai Block",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 699519
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.449Z"
+}

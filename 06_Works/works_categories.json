@@ -1,0 +1,96 @@
+{
+  "success": true,
+  "data": {
+    "completed": {
+      "categories": [
+        {
+          "_id": "Normal/Others",
+          "workCount": 113173,
+          "category": "Normal/Others",
+          "category_hi": "Normal/Others",
+          "totalCost": 55135627666.04,
+          "avgCost": 487180.05
+        },
+        {
+          "_id": "Repair and Renovation",
+          "workCount": 879,
+          "category": "Repair and Renovation",
+          "category_hi": "Repair and Renovation",
+          "totalCost": 512935270,
+          "avgCost": 583544.11
+        },
+        {
+          "_id": "Trust and Society",
+          "workCount": 388,
+          "category": "Trust and Society",
+          "category_hi": "Trust and Society",
+          "totalCost": 335070513.26,
+          "avgCost": 863583.8
+        },
+        {
+          "_id": "N/A",
+          "workCount": 48,
+          "category": "N/A",
+          "category_hi": "N/A",
+          "totalCost": 36145913,
+          "avgCost": 753039.85
+        },
+        {
+          "_id": "Bar and Associations",
+          "workCount": 3,
+          "category": "Bar and Associations",
+          "category_hi": "Bar and Associations",
+          "totalCost": 199980,
+          "avgCost": 66660
+        }
+      ],
+      "totalCategories": 5
+    },
+    "recommended": {
+      "categories": [
+        {
+          "_id": "Normal/Others",
+          "workCount": 105392,
+          "category": "Normal/Others",
+          "category_hi": "Normal/Others",
+          "totalEstimatedCost": 63985303956.21,
+          "avgEstimatedCost": 607117.28
+        },
+        {
+          "_id": "Trust and Society",
+          "workCount": 1039,
+          "category": "Trust and Society",
+          "category_hi": "Trust and Society",
+          "totalEstimatedCost": 1144161633,
+          "avgEstimatedCost": 1101214.28
+        },
+        {
+          "_id": "Repair and Renovation",
+          "workCount": 1560,
+          "category": "Repair and Renovation",
+          "category_hi": "Repair and Renovation",
+          "totalEstimatedCost": 1028643567,
+          "avgEstimatedCost": 659386.9
+        },
+        {
+          "_id": "N/A",
+          "workCount": 41,
+          "category": "N/A",
+          "category_hi": "N/A",
+          "totalEstimatedCost": 28203379,
+          "avgEstimatedCost": 687887.29
+        },
+        {
+          "_id": "Bar and Associations",
+          "workCount": 18,
+          "category": "Bar and Associations",
+          "category_hi": "Bar and Associations",
+          "totalEstimatedCost": 925000,
+          "avgEstimatedCost": 51388.89
+        }
+      ],
+      "totalCategories": 5
+    },
+    "lastUpdated": "2026-08-31T17:26:12.884Z"
+  }
+}

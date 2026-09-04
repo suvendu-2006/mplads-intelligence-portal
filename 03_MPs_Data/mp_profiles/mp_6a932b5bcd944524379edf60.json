@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf60",
+    "name": "Shri Abhishek Banerjee",
+    "constituency": "DIAMOND HARBOUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71510891,
+    "utilizationPercentage": 48.64686462585034,
+    "completedWorksCount": 200,
+    "recommendedWorksCount": 120,
+    "completedWorksValue": 51994006,
+    "inProgressPayments": 19516885,
+    "paymentGapPercentage": 27.292185465847435,
+    "completionRate": 62.5,
+    "pendingWorks": -80,
+    "unspentAmount": 75489109,
+    "totalRecommendedAmount": 43590307,
+    "name_hi": "Shri Abhishek Banerjee",
+    "constituency_hi": "DIAMOND HARBOUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71510891,
+      "totalEntries": 262,
+      "avgExpenditure": 272942.3320610687,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6749812,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 54586475,
+        "transactionCount": 200
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10174604,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71510891,
+        "transactionCount": 262,
+        "avgAmount": 272942.3320610687
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 200,
+    "recommendedCount": 120,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a180ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC New Road at 4No Pole From H/O Uma Sankar Shaw To H/O Ashok Mondal Tample.(22 mtr)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 79609
+      },
+      {
+        "_id": "6a932bb5cd94452437a17916",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road From H/O Sk Ramjan to H/O Rafikul Halder. (85 mtr)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 299840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1844a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Drain from Ganipur Nayaner Chara Soshan Kali Bari To  Green Field City Gate. (70 mtr)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 299646
+      },
+      {
+        "_id": "6a932bb5cd94452437a1809b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road & Drain With Cover Slab From H/O Narayan Manna to Maa Sitala Mandir At Akra Ferry Ghat Road. (50 mtr)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 199909
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ce9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from H/O Laxmi Kanta Sukla to Loknath Mandir. (100 mtr)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 299908
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.203Z"
+}

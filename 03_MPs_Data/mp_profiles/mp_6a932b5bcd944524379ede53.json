@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede53",
+    "name": "E. TUKARAM",
+    "constituency": "BELLARY",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 14871722,
+    "utilizationPercentage": 10.11681768707483,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 89,
+    "completedWorksValue": 988344,
+    "inProgressPayments": 13883378,
+    "paymentGapPercentage": 93.35420605629933,
+    "completionRate": 2.197802197802198,
+    "pendingWorks": 87,
+    "unspentAmount": 132128278,
+    "totalRecommendedAmount": 97000000,
+    "name_hi": "E. TUKARAM",
+    "constituency_hi": "BELLARY",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14871722,
+      "totalEntries": 26,
+      "avgExpenditure": 571989.3076923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8112351,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6759371,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14871722,
+        "transactionCount": 26,
+        "avgAmount": 571989.3076923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 89,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1af50",
+        "workCategory": "Normal/Others",
+        "workDescription": "C C road work from Valmiki Vandranna house road to Panduranga temple in Kakkbevinahalli village, Ballari rural",
+        "completedDate": "2025-11-29T00:00:00.000Z",
+        "finalAmount": 494172
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af4f",
+        "workCategory": "Normal/Others",
+        "workDescription": "C C road work from Anganwadi to Gadhilingeshwara temple in Kakkbevinahalli village, Ballari rural",
+        "completedDate": "2025-11-29T00:00:00.000Z",
+        "finalAmount": 494172
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.903Z"
+}

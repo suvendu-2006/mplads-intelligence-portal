@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee7",
+    "name": "Nitin Jairam Gadkari",
+    "constituency": "NAGPUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 168195086.11,
+    "totalExpenditure": 46558565,
+    "utilizationPercentage": 27.68128729370285,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 48,
+    "completedWorksValue": 28671958,
+    "inProgressPayments": 17886607,
+    "paymentGapPercentage": 38.41743619031214,
+    "completionRate": 28.35820895522388,
+    "pendingWorks": 29,
+    "unspentAmount": 121636521.11000001,
+    "totalRecommendedAmount": 110555564,
+    "name_hi": "Nitin Jairam Gadkari",
+    "constituency_hi": "NAGPUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 46558565,
+      "totalEntries": 35,
+      "avgExpenditure": 1330244.7142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2799407,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 9447270,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34311888,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 46558565,
+        "transactionCount": 35,
+        "avgAmount": 1330244.7142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 48,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e441",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road at Malik Mouza Society Arya Nagar Prabhag No.1",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1203802
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e440",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Jagdish Nagar, Nagpur.",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1965693
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of 6 Computers, 4 Printers (With Scanner) and Drinking Water Machine (With RO and Cooling Machine) at Saraswati Mandir, Tulshibag Road, Reshimbag, Nagpur.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 729476
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ded4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of E-Library at Dr.Babasaheb Ambedkar Law College, Nagpur.",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 9998850
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd4d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of open space beside NMC Vyayam Shala locates at Tuslhibag, Mahal (Prabhag - 18) with construction of toilets, Covered Shed and laying of I-Blocks on ground.",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1583723
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.682Z"
+}

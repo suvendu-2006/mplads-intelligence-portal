@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee24a",
+    "name": "Shri Jayant Chaudhary (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 214074707.67000002,
+    "totalExpenditure": 43141697,
+    "utilizationPercentage": 20.15263618460883,
+    "completedWorksCount": 8,
+    "recommendedWorksCount": 16,
+    "completedWorksValue": 16794438,
+    "inProgressPayments": 26347259,
+    "paymentGapPercentage": 61.071447884861826,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 8,
+    "unspentAmount": 170933010.67000002,
+    "totalRecommendedAmount": 135985000,
+    "name_hi": "Shri Jayant Chaudhary (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43141697,
+      "totalEntries": 25,
+      "avgExpenditure": 1725667.88,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 980090,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 21299917,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20861690,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43141697,
+        "transactionCount": 25,
+        "avgAmount": 1725667.88
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 8,
+    "recommendedCount": 16,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31a46",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of an open gym with a cemented synthetic base opposite Panchayat Ghar.",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 798722
+      },
+      {
+        "_id": "6a932bb5cd94452437a30ae4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a basketball and multi-sports outdoor court at Gandhi Vidhyala Inter College, Khekra \nThe amount being released is part of the revised estimate that we received from the district authorities and should reach the college directly",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 5281400
+      },
+      {
+        "_id": "6a932bb5cd94452437a31de0",
+        "workCategory": "Normal/Others",
+        "workDescription": "This fund is being released towards the construction of a Wrestling Hall under the Shaheed Bachan Singh and Late Arun Pahalwan Akhada Seva Samiti.",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 899160
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c2a",
+        "workCategory": "Normal/Others",
+        "workDescription": "I am sanctioning Rs 40 lakhs towards the construction of a wrestling hall (dimensions 40 ft x 60 ft) at Rashtriya Inter College, Shahpur. I request you to directly disperse the funds to the college authorities to begin the construction",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 3957535
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d95",
+        "workCategory": "Normal/Others",
+        "workDescription": "The total amount for the proposed works in connection to the stadium is Rs 1,11,65,000 as per the latest revised estimate received from the Muzzafarnagar district administration. However, Rs 87,35,000 (as per the first estimate) has already been released at an earlier stage. Thus, the remaining Rs 24,30,000 is being sanctioned now from my end towards the completion of the necessary works of the stadium. The stadium will be located in the land of Junior High School, Sautu (block - Shahpur)",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 2383838
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.887Z"
+}

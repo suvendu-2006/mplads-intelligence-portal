@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a3",
+    "name": "Shri Sant Balbir Singh (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196359074.44000003,
+    "totalExpenditure": 131641205.41,
+    "utilizationPercentage": 67.0410602542459,
+    "completedWorksCount": 206,
+    "recommendedWorksCount": 165,
+    "completedWorksValue": 98971956,
+    "inProgressPayments": 32669249.409999996,
+    "paymentGapPercentage": 24.81688716557309,
+    "completionRate": 55.525606469002696,
+    "pendingWorks": -41,
+    "unspentAmount": 64717869.03000003,
+    "totalRecommendedAmount": 76622334,
+    "name_hi": "Shri Sant Balbir Singh (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 131641205.41,
+      "totalEntries": 763,
+      "avgExpenditure": 172531.068689384,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 5771150,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 25664557.41,
+        "transactionCount": 171
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 77730809,
+        "transactionCount": 365
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22474689,
+        "transactionCount": 222
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 131641205.41,
+        "transactionCount": 763,
+        "avgAmount": 172531.068689384
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 206,
+    "recommendedCount": 165,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32145",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the Renovation and repair of Dharamshala in village",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32446",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Ear machine",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 44000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3086c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Regarding Sewarage Pipeline in Village Cheema near Kartarpur.",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f7e",
+        "workCategory": "Normal/Others",
+        "workDescription": "For development works of the street in Paswalia Mohalla",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 199955
+      },
+      {
+        "_id": "6a932bb5cd94452437a30eab",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Renovation Village Sarih Stadium. (Work Agency: Gram Panchayat)",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.643Z"
+}

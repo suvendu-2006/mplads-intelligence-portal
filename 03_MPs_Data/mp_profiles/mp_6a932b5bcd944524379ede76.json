@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede76",
+    "name": "Jagannath Sarkar",
+    "constituency": "RANAGHAT",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41712525,
+    "utilizationPercentage": 28.375867346938776,
+    "completedWorksCount": 70,
+    "recommendedWorksCount": 152,
+    "completedWorksValue": 34507754,
+    "inProgressPayments": 7204771,
+    "paymentGapPercentage": 17.272440352148426,
+    "completionRate": 31.53153153153153,
+    "pendingWorks": 82,
+    "unspentAmount": 105287475,
+    "totalRecommendedAmount": 79754129,
+    "name_hi": "Jagannath Sarkar",
+    "constituency_hi": "RANAGHAT",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41712525,
+      "totalEntries": 86,
+      "avgExpenditure": 485029.3604651163,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 23155789,
+        "transactionCount": 56
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18556736,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41712525,
+        "transactionCount": 86,
+        "avgAmount": 485029.3604651163
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 70,
+    "recommendedCount": 152,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e627",
+        "workCategory": "Normal/Others",
+        "workDescription": "09 Nos solar street Light 6m with 01 nos LED nearby 1. Jora transfer more near chanduria Booth-26 2. Near Kalitala Booth-18 3. Padmapukur more Booth-23 4. Nathpara more Booth-18 5. Balidapara More Booth-23 6.H-O Sadhukha Booth-18 7. H-O Paritosh Pal Booth-18 8. H-O Durga Booth-26 9. Near shibtala More Booth -15 under Chanduria 1 no gp Chakdah Block Developmnt",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 310514
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d55a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and supply of an Ambulance with Maruti Suzuki Eeco 5 seater AC and specification 1197cc 1.2 LK12N DULAL alongside High quality interior paneling and LED Lighting FRP Wall panel for insulation and oxygen system B type cylinder with regulator and flowmeter 10 liter capacity and first aid kit and trauma Bag Bandage in favor of Bishnupur Bazar Byabasayi Kalyan Samity , Booth-144-158 under Dubra Gram Panchayat , Chakdaha Block Development.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1499101
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e626",
+        "workCategory": "Normal/Others",
+        "workDescription": "07 NOs Solar street Light 6m with 01 Nos LED Nearby 1. H-O Sankar Sarkar Booth-225 2. H-O Kakan Mitra  Booth-225 3. H-O Sitaram Soren Sarkar Booth-225 4. H-O Balai Ghosh Booth-227 5. H-O Ananda Biswas Booth-224 6. Beside Kalimandir Booth-211 7. Beside Radhakrishna Mandir Booth-218 under Rautari GP Chakdha  Block Development",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 241511
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e628",
+        "workCategory": "Normal/Others",
+        "workDescription": "12Nos Solar street Light 6m with 1 no LED nearby 1. H-O Dilip Ghosh Booth-201 2. H-O Kalita Sarkar Booth-201 3. Shop of Nukul Dutta Booth-202 4. H-O Asish Mitra Booth-202 5. near  Ujjwani Bank Booth-187 6. H-O Amit Banerjee Booth-187 7. H-O Manabendra Majumder Booth-201 8. H-O Piyali Mandal Booth-197 9. H-O Dimpar Das Booth-204 10. near Daspara Harimandir Booth-204 11. Malipara Sikderpukur Booth-200 12. Beside Shibkali Mandir Booth-192 under Tatla -2 GP Chakdah Block Development",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 414019
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d55b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and supply of an Ambulance with Maruti Suzuki Eeco 5 Seater AC and  Specification 1197cc 1.2 LK12N Dual alongside High Quality interior paneling and LED Lighting FRP WALL panel for insulation and  Oxygen cylinder B type with regulator and flowmeter 10 liter capacity with emergency first aid kid in favor of Bagula Bikash Swanirbhar Gosthi under Bagula -II GP Hanskhali Block Development",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1499101
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.246Z"
+}

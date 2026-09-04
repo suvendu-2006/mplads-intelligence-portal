@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf46",
+    "name": "Sanjay Seth ",
+    "constituency": "RANCHI",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147064357.11,
+    "totalExpenditure": 88234955,
+    "utilizationPercentage": 59.997511792747126,
+    "completedWorksCount": 49,
+    "recommendedWorksCount": 101,
+    "completedWorksValue": 29564600,
+    "inProgressPayments": 58670355,
+    "paymentGapPercentage": 66.49332455601072,
+    "completionRate": 32.666666666666664,
+    "pendingWorks": 52,
+    "unspentAmount": 58829402.110000014,
+    "totalRecommendedAmount": 68228048,
+    "name_hi": "Sanjay Seth ",
+    "constituency_hi": "RANCHI",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 88234955,
+      "totalEntries": 245,
+      "avgExpenditure": 360142.67346938775,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 9999000,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 65909280,
+        "transactionCount": 170
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12326675,
+        "transactionCount": 54
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 88234955,
+        "transactionCount": 245,
+        "avgAmount": 360142.67346938775
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 49,
+    "recommendedCount": 101,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16c16",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Stair at Chat Ghat at Village-Malmandu under Puriyo Panchayat, Ratu block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1050200
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b99",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Platform and Shed at Village-Umedanda, under Umedanda Panchayat, Burmu Block, Ranchi.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1126600
+      },
+      {
+        "_id": "6a932bb5cd94452437a16c29",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road (600 ft.) at JP Market, Dhurwa from near both side Guriya's house while mixing main road.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 686000
+      },
+      {
+        "_id": "6a932bb5cd94452437a16c1a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Stage at Bhagwan Birsa Munda Adivasi Akhada (Palestra) under Sukurhuttu Panchayat Niche Toli, kanke Block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 984400
+      },
+      {
+        "_id": "6a932bb5cd94452437a16c25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Platform and Shed at Chakla Sarna Toli under Ormanjhi Block.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 984400
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.220Z"
+}

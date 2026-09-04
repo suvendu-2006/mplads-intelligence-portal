@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3b",
+    "name": "Dr Mohammad Jawed",
+    "constituency": "KISHANGANJ",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148669229.11,
+    "totalExpenditure": 89065400,
+    "utilizationPercentage": 59.90842929178083,
+    "completedWorksCount": 130,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 83945400,
+    "inProgressPayments": 5120000,
+    "paymentGapPercentage": 5.748584747836983,
+    "completionRate": 63.725490196078425,
+    "pendingWorks": -56,
+    "unspentAmount": 59603829.110000014,
+    "totalRecommendedAmount": 50150300,
+    "name_hi": "Dr Mohammad Jawed",
+    "constituency_hi": "KISHANGANJ",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 89065400,
+      "totalEntries": 138,
+      "avgExpenditure": 645401.4492753623,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 46425000,
+        "transactionCount": 72
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42640400,
+        "transactionCount": 66
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 89065400,
+        "transactionCount": 138,
+        "avgAmount": 645401.4492753623
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 130,
+    "recommendedCount": 74,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dda4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Baisa Prakhand Antergart Majhok Panchayat ke Mangalpur Chowk me. (12M) High Mast Light.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 640000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd91",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dagarua Prakhand Antergart Thathauli Panchayat ke Katare Haat me. (12M) High Mast Light.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 640000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd93",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dagarua Prakhand Antergart Dariapur Panchayat ke Kachna Madarsa ke Samne. (12M) High Mast Light.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 640000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dda5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Baisa Prakhand Antergart Chandel Panchayat ke Khatatoli Chowk me. (12M) High Mast Light.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 640000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd8e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dagarua Prakhand Antergart Belgachhi Panchayat ke Belgachhi Pachim Chowk me. (12M) High Mast Light.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 640000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.238Z"
+}

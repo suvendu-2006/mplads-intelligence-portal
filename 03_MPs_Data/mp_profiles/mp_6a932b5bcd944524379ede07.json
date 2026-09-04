@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede07",
+    "name": "BIBHU PRASAD TARAI",
+    "constituency": "JAGATSINGHPUR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 16233683,
+    "utilizationPercentage": 11.043321768707482,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 324,
+    "completedWorksValue": 4139608,
+    "inProgressPayments": 12094075,
+    "paymentGapPercentage": 74.49988397580512,
+    "completionRate": 4.424778761061947,
+    "pendingWorks": 309,
+    "unspentAmount": 130766317,
+    "totalRecommendedAmount": 132050000,
+    "name_hi": "BIBHU PRASAD TARAI",
+    "constituency_hi": "JAGATSINGHPUR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16233683,
+      "totalEntries": 79,
+      "avgExpenditure": 205489.6582278481,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 600000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15633683,
+        "transactionCount": 76
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16233683,
+        "transactionCount": 79,
+        "avgAmount": 205489.6582278481
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 324,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e12f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Cultural Center Near Dopati Melan Ground at Kasarada GP of Niali Block.",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 950000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Phulubanika Community Center at Golapur",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dee8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of clasroom in Deshabandhu Nodal high school in Koruala Village of Balulang GP",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 163394
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d829",
+        "workCategory": "Normal/Others",
+        "workDescription": "Renovation of Mallik Sahi community Center",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 249879
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d808",
+        "workCategory": "Normal/Others",
+        "workDescription": "Renovation of Talandhia Mahaveer Community Center",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 150000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.240Z"
+}

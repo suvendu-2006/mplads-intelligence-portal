@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf98",
+    "name": "Sribharat MathuKumli",
+    "constituency": "VISAKHAPATNAM",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 164841922,
+    "totalExpenditure": 10903207,
+    "utilizationPercentage": 6.614341101895184,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 0,
+    "inProgressPayments": 10903207,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 40,
+    "unspentAmount": 153938715,
+    "totalRecommendedAmount": 84715000,
+    "name_hi": "Sribharat MathuKumli",
+    "constituency_hi": "VISAKHAPATNAM",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 10903207,
+      "totalEntries": 15,
+      "avgExpenditure": 726880.4666666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 10903207,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 10903207,
+        "transactionCount": 15,
+        "avgAmount": 726880.4666666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 40,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.886Z"
+}

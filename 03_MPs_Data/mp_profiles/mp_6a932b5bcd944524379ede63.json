@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede63",
+    "name": "GM Harish Balayogi",
+    "constituency": "AMALAPURAM",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 53533502,
+    "utilizationPercentage": 36.41734829931973,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 42444512,
+    "inProgressPayments": 11088990,
+    "paymentGapPercentage": 20.714112818548656,
+    "completionRate": 37.61467889908257,
+    "pendingWorks": 27,
+    "unspentAmount": 93466498,
+    "totalRecommendedAmount": 52108000,
+    "name_hi": "GM Harish Balayogi",
+    "constituency_hi": "AMALAPURAM",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53533502,
+      "totalEntries": 66,
+      "avgExpenditure": 811113.6666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16005896,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37527606,
+        "transactionCount": 54
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53533502,
+        "transactionCount": 66,
+        "avgAmount": 811113.6666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e368",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CC ROAD FROM BOKKA RAMBABU SHOP TO EXISTING CC ROAD AT AGRAHARAM IN 8TH WARD",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 2384027
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b8b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING ELECTRICAL POLES AND POWER CONNECTION TO REGI BHADAVA HABITATION IN KUYYERU VILLAGE OF KAJULURU MANDAL",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 123000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CC ROAD FROM GUDIMETLA LAKSHMI NARAYANA (F) TOWARDS MOLLETI PENTAYYA (H) IN APPANAPALLI (V)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 475418
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CC ROAD FROM MAIN ROAD TOWARDS VANKAYALA NAGESWARARAO (H) IN APPANAPALLI (V)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 497590
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF BURIAL GROUND NEAR SIVALAYAM IN POTHUKURRU (V) K JAGANNADHAPURAM (REVENUE)",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 489029
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.258Z"
+}

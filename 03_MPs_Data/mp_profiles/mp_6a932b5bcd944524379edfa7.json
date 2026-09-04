@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa7",
+    "name": "Swami Sachchidanandhari Sakshi ji Maharaj ",
+    "constituency": "UNNAO",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 68421377,
+    "utilizationPercentage": 46.54515442176871,
+    "completedWorksCount": 12,
+    "recommendedWorksCount": 77,
+    "completedWorksValue": 15871450,
+    "inProgressPayments": 52549927,
+    "paymentGapPercentage": 76.80337535445976,
+    "completionRate": 13.48314606741573,
+    "pendingWorks": 65,
+    "unspentAmount": 78578623,
+    "totalRecommendedAmount": 90945128,
+    "name_hi": "Swami Sachchidanandhari Sakshi ji Maharaj ",
+    "constituency_hi": "UNNAO",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68421377,
+      "totalEntries": 69,
+      "avgExpenditure": 991614.1594202898,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4163636,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 46352271,
+        "transactionCount": 45
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17905470,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68421377,
+        "transactionCount": 69,
+        "avgAmount": 991614.1594202898
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 12,
+    "recommendedCount": 77,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19578",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shri Krishnayan gaurakshashala sabal garh (Bhaguwala) Bijnor me Teen Shed nirman hetu.",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 4997529
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c856",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat matukari ke majra Aat me Mataji ke mandir se Parshuram ke ghar tak interlocking karya",
+        "completedDate": "2026-01-17T00:00:00.000Z",
+        "finalAmount": 1495013
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b44",
+        "workCategory": "Normal/Others",
+        "workDescription": "??      ??    ?",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 848185
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b6f",
+        "workCategory": "Normal/Others",
+        "workDescription": "??   ??",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 2145797
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b1b",
+        "workCategory": "Normal/Others",
+        "workDescription": "??       ?? ?? ??  ?? ?? ??   ?? ?? ??",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 1066257
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.244Z"
+}

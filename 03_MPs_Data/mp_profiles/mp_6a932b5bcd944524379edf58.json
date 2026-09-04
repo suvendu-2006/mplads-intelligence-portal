@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf58",
+    "name": "Shatrughan Sinha",
+    "constituency": "ASANSOL",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66966504,
+    "utilizationPercentage": 45.555444897959184,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 22,
+    "completedWorksValue": 21666204,
+    "inProgressPayments": 45300300,
+    "paymentGapPercentage": 67.64620712468431,
+    "completionRate": 18.51851851851852,
+    "pendingWorks": 17,
+    "unspentAmount": 80033496,
+    "totalRecommendedAmount": 72318000,
+    "name_hi": "Shatrughan Sinha",
+    "constituency_hi": "ASANSOL",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66966504,
+      "totalEntries": 20,
+      "avgExpenditure": 3348325.2,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22348913,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44617591,
+        "transactionCount": 16
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66966504,
+        "transactionCount": 20,
+        "avgAmount": 3348325.2
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 22,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cb64",
+        "workCategory": "Normal/Others",
+        "workDescription": "Upgradation Works for ADPC Sports cum Recreation Facility",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 1399957
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de74",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 50 numbers of LED lights along with Poles at various places of ward no - 98",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1161486
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf15",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New CC Road starting from Ushagram Kumarpara to Old Church to New Church",
+        "completedDate": "2026-02-09T00:00:00.000Z",
+        "finalAmount": 1572875
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ba0f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Installation of Solar High Mast Light",
+        "completedDate": "2025-11-30T00:00:00.000Z",
+        "finalAmount": 8775290
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Suppy and Installation of Solar Street Lights at different places under Raniganj, Jamuria, Barabani, Salanpur Blocks.",
+        "completedDate": "2025-10-13T00:00:00.000Z",
+        "finalAmount": 8756596
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.242Z"
+}

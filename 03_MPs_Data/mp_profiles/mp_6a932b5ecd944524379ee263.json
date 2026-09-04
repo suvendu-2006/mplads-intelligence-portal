@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee263",
+    "name": "Shri Mayankkumar Nayak (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 19560868,
+    "utilizationPercentage": 13.306712925170066,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 151,
+    "completedWorksValue": 9196089,
+    "inProgressPayments": 10364779,
+    "paymentGapPercentage": 52.98731630927625,
+    "completionRate": 11.695906432748536,
+    "pendingWorks": 131,
+    "unspentAmount": 127439132,
+    "totalRecommendedAmount": 83158160,
+    "name_hi": "Shri Mayankkumar Nayak (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 19560868,
+      "totalEntries": 66,
+      "avgExpenditure": 296376.7878787879,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3473249,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16087619,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 19560868,
+        "transactionCount": 66,
+        "avgAmount": 296376.7878787879
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 151,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protection wall on the lake in Nandotri village",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32164",
+        "workCategory": "Normal/Others",
+        "workDescription": "For paver block work in the Gram Panchayat  compound",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32299",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall in gidasan village near Nayak samaj trust hall",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32280",
+        "workCategory": "Trust and Society",
+        "workDescription": "Community center shed at samast  bhojak samaj vadgam",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32179",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the facilitation work of the Turi-Barot Samaj Crematorium",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.728Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddfe",
+    "name": "Bharatsinhji Shankarji Dabhi",
+    "constituency": "PATAN",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70906510,
+    "utilizationPercentage": 48.235721088435376,
+    "completedWorksCount": 160,
+    "recommendedWorksCount": 157,
+    "completedWorksValue": 54564711,
+    "inProgressPayments": 16341799,
+    "paymentGapPercentage": 23.0469656453265,
+    "completionRate": 50.473186119873816,
+    "pendingWorks": -3,
+    "unspentAmount": 76093490,
+    "totalRecommendedAmount": 62986774,
+    "name_hi": "Bharatsinhji Shankarji Dabhi",
+    "constituency_hi": "PATAN",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70906510,
+      "totalEntries": 201,
+      "avgExpenditure": 352768.7064676617,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 48607974,
+        "transactionCount": 142
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22298536,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70906510,
+        "transactionCount": 201,
+        "avgAmount": 352768.7064676617
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 160,
+    "recommendedCount": 157,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e098",
+        "workCategory": "Normal/Others",
+        "workDescription": "shahupura game water tank thi highway road taraf flood protection wall work",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "GADSAI GAME THAKOR VASMA PAVAR BLOCK WORK",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd45",
+        "workCategory": "Normal/Others",
+        "workDescription": "VASANA GAME NAI SAMAJNI VADI NI BAJUMA FLOOD PROTECTION WALL WORK",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbd4",
+        "workCategory": "Normal/Others",
+        "workDescription": "chandansar pramary school ma sports equipment work (hichaka ,lapasani,other sports activity tos)",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 499295
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc9b",
+        "workCategory": "Normal/Others",
+        "workDescription": "mudavada game prathamik shala ane sampni bajuma karigaro mate work shed nu kam",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.247Z"
+}

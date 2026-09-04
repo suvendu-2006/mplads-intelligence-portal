@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee276",
+    "name": "Shri Paka Venkata Satyanarayana (2025-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Andhra Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 1599035,
+    "utilizationPercentage": 1.6316683673469385,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 12,
+    "completedWorksValue": 1599035,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 7.6923076923076925,
+    "pendingWorks": 11,
+    "unspentAmount": 96400965,
+    "totalRecommendedAmount": 33680000,
+    "name_hi": "Shri Paka Venkata Satyanarayana (2025-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 1599035,
+      "totalEntries": 1,
+      "avgExpenditure": 1599035,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 1599035,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 1599035,
+        "transactionCount": 1,
+        "avgAmount": 1599035
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 12,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of new distribution transformers and allied electrical infrastructure to ensure uninterrupted power supply to existing community drinking water plants, for continuous provision of safe and clean drinking water to the residents.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1599035
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.686Z"
+}

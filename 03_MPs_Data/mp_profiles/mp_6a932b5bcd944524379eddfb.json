@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddfb",
+    "name": "BHAJAN LAL JATAV",
+    "constituency": "KARAULI-DHOLPUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 7253086,
+    "utilizationPercentage": 4.934072108843537,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 6694517,
+    "inProgressPayments": 558569,
+    "paymentGapPercentage": 7.701121977596846,
+    "completionRate": 21.153846153846153,
+    "pendingWorks": 30,
+    "unspentAmount": 139746914,
+    "totalRecommendedAmount": 32049394,
+    "name_hi": "BHAJAN LAL JATAV",
+    "constituency_hi": "KARAULI-DHOLPUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 7253086,
+      "totalEntries": 139,
+      "avgExpenditure": 52180.474820143885,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 979859,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6273227,
+        "transactionCount": 126
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 7253086,
+        "transactionCount": 139,
+        "avgAmount": 52180.474820143885
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cf5a",
+        "workCategory": "Normal/Others",
+        "workDescription": "chhatri nirman and interlocking tile at ambedkar park bhesina gp bhanakpura",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "cc interlocking road construction in shyorajpura bageeda",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 499884
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "cc interlocking tile construction from main road to bairwa basti beraj",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 698830
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d408",
+        "workCategory": "Normal/Others",
+        "workDescription": "tile road with naali construction from ghansyams home toward GLR todupura",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 499968
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d42f",
+        "workCategory": "Normal/Others",
+        "workDescription": "interlockin road construction in gawdi",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 499455
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.690Z"
+}

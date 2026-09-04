@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee5",
+    "name": "NIMUBEN JAYANTIBHAI BAMBHANIYA",
+    "constituency": "BHAVNAGAR",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 25662379,
+    "utilizationPercentage": 17.45740068027211,
+    "completedWorksCount": 28,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 19168805,
+    "inProgressPayments": 6493574,
+    "paymentGapPercentage": 25.303866021151038,
+    "completionRate": 45.16129032258064,
+    "pendingWorks": 6,
+    "unspentAmount": 121337621,
+    "totalRecommendedAmount": 47989338,
+    "name_hi": "NIMUBEN JAYANTIBHAI BAMBHANIYA",
+    "constituency_hi": "BHAVNAGAR",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25662379,
+      "totalEntries": 34,
+      "avgExpenditure": 754775.8529411765,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18078339,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7584040,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25662379,
+        "transactionCount": 34,
+        "avgAmount": 754775.8529411765
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 28,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e76e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of model CC Road",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of benches (100 qty) for the said letter as per serial no. 6 of the enclosed letter",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 475658
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc75",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community hall in Jamvali-2 village (Earmarked place at the village)",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall (Ambedkar Bhawan) at Pipaliya Village (Sihor)",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 499808
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b269",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Vehicle for Vaccine Van (Mobile Dispensaries), District Medical Store, Botad",
+        "completedDate": "2025-12-30T00:00:00.000Z",
+        "finalAmount": 1300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.720Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edddf",
+    "name": "ARUP CHAKRABORTY",
+    "constituency": "BANKURA",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55795450,
+    "utilizationPercentage": 37.956088435374156,
+    "completedWorksCount": 40,
+    "recommendedWorksCount": 30,
+    "completedWorksValue": 55349635,
+    "inProgressPayments": 445815,
+    "paymentGapPercentage": 0.7990167657040135,
+    "completionRate": 57.14285714285714,
+    "pendingWorks": -10,
+    "unspentAmount": 91204550,
+    "totalRecommendedAmount": 39276262,
+    "name_hi": "ARUP CHAKRABORTY",
+    "constituency_hi": "BANKURA",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55795450,
+      "totalEntries": 42,
+      "avgExpenditure": 1328463.0952380951,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22741298,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33054152,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55795450,
+        "transactionCount": 42,
+        "avgAmount": 1328463.0952380951
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 40,
+    "recommendedCount": 30,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b950",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of one Life support Ambulance for Bankura Police Line under District Bankura",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 4450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a29a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 14 nos. of solar high mast lights at different places of Khalagram, Harmasra, Taldangra and Panchmura Gram Panchayat area under Taldangra Block, District - Bankura",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 4020731
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ba8b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 5 no of Solar High Mast Lights at different places of Bibarda Gram Panchayat area under Taldangra Block, District - Bankura",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1433240
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ba86",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 9 nos. of solar high mast lights at different places of Brajarajpur and Gourbazar Gram Panchayat area under Indpur Block, District - Bankura",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 2579844
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b94f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of one hearse van for Barikul Police Station under Raipur and Ranibandh Block, Bankura District",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1227000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.731Z"
+}

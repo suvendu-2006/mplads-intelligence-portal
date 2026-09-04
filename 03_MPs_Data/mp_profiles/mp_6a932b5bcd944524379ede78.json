@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede78",
+    "name": "JAI PARKASH",
+    "constituency": "HISAR",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71088815,
+    "utilizationPercentage": 48.3597380952381,
+    "completedWorksCount": 68,
+    "recommendedWorksCount": 375,
+    "completedWorksValue": 17152376,
+    "inProgressPayments": 53936439,
+    "paymentGapPercentage": 75.87190615007438,
+    "completionRate": 15.349887133182843,
+    "pendingWorks": 307,
+    "unspentAmount": 75911185,
+    "totalRecommendedAmount": 128182968,
+    "name_hi": "JAI PARKASH",
+    "constituency_hi": "HISAR",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71088815,
+      "totalEntries": 349,
+      "avgExpenditure": 203692.87965616045,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31690680,
+        "transactionCount": 152
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39398135,
+        "transactionCount": 197
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71088815,
+        "transactionCount": 349,
+        "avgAmount": 203692.87965616045
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 68,
+    "recommendedCount": 375,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b157",
+        "workCategory": "Normal/Others",
+        "workDescription": "supply of new electric connection in dhani of sh Kamaljeet son Ramesh kumar dhani bandaheri app no H25-1223-43 9914421800",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 278189
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d49d",
+        "workCategory": "Normal/Others",
+        "workDescription": "new electric connection in dhani of Pardeep son Jaswant near Bagla Road village Ghursal",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 128024
+      },
+      {
+        "_id": "6a932bb5cd94452437a18eb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "supply of new electric connection in dhani of sh suresh son sube singh and mani ram dal singh village bagla 9876001725",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 319500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1d1",
+        "workCategory": "Normal/Others",
+        "workDescription": "const. of rooms in sagar samrat shiksha samiti odd samaj haryana bypass hisar near Lalbahadur shastri chowk hisar",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 1092422
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Suppling and fixing of RCC sitting benches for public place in GP Dhanana -III",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 79611
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.233Z"
+}

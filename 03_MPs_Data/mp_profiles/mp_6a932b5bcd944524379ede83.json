@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede83",
+    "name": "JUNE MALIAH",
+    "constituency": "MEDINIPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 36949288,
+    "utilizationPercentage": 25.135570068027214,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 24,
+    "completedWorksValue": 18832040,
+    "inProgressPayments": 18117248,
+    "paymentGapPercentage": 49.03273914236183,
+    "completionRate": 22.58064516129032,
+    "pendingWorks": 17,
+    "unspentAmount": 110050712,
+    "totalRecommendedAmount": 77665490,
+    "name_hi": "JUNE MALIAH",
+    "constituency_hi": "MEDINIPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36949288,
+      "totalEntries": 27,
+      "avgExpenditure": 1368492.148148148,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13922914,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23026374,
+        "transactionCount": 14
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36949288,
+        "transactionCount": 27,
+        "avgAmount": 1368492.148148148
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 24,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d285",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from Bruni Shibmandir to Pitch road at Purusottampur",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 1463005
+      },
+      {
+        "_id": "6a932bb5cd94452437a1982c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Class Rooms of Kotpada Pry. School",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 991565
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c7a9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Small Bridge near Thangamara Samsan under Narayangarh GP",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 5333472
+      },
+      {
+        "_id": "6a932bb5cd94452437a18256",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Upgradation and renovation of Kankabati Community Hall",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 2111478
+      },
+      {
+        "_id": "6a932bb5cd94452437a19cd5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Class Rooms of Dantan High School",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 1683640
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.887Z"
+}

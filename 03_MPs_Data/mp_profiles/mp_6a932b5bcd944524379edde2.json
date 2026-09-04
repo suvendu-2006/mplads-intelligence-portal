@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde2",
+    "name": "Asaduddin Owaisi",
+    "constituency": "HYDERABAD",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11172317,
+    "utilizationPercentage": 7.600215646258503,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 17,
+    "completedWorksValue": 5656600,
+    "inProgressPayments": 5515717,
+    "paymentGapPercentage": 49.36949963020204,
+    "completionRate": 5.555555555555555,
+    "pendingWorks": 16,
+    "unspentAmount": 135827683,
+    "totalRecommendedAmount": 44340536,
+    "name_hi": "Asaduddin Owaisi",
+    "constituency_hi": "HYDERABAD",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11172317,
+      "totalEntries": 7,
+      "avgExpenditure": 1596045.2857142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5766185,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5406132,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11172317,
+        "transactionCount": 7,
+        "avgAmount": 1596045.2857142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 17,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b9fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of 900mm dia and 600mm dia Np-3 pipe line and CC road restoration from H.No. 17-4-387, Ashoorkhana Hazrat-e-Ameer Muqtar to H.No. 17-4-313 A and bylanes in Matha Kidiki Nala, Yakutpura Assembly Constituency",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 5656600
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.243Z"
+}

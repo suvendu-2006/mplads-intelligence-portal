@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf10",
+    "name": "RAHUL GANDHI",
+    "constituency": "RAE BARELI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 27068171,
+    "utilizationPercentage": 18.413721768707482,
+    "completedWorksCount": 74,
+    "recommendedWorksCount": 118,
+    "completedWorksValue": 3829989,
+    "inProgressPayments": 23238182,
+    "paymentGapPercentage": 85.8505807429693,
+    "completionRate": 38.54166666666667,
+    "pendingWorks": 44,
+    "unspentAmount": 119931829,
+    "totalRecommendedAmount": 73979048,
+    "name_hi": "RAHUL GANDHI",
+    "constituency_hi": "RAE BARELI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27068171,
+      "totalEntries": 151,
+      "avgExpenditure": 179259.4105960265,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4521449,
+        "transactionCount": 99
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22546722,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27068171,
+        "transactionCount": 151,
+        "avgAmount": 179259.4105960265
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 74,
+    "recommendedCount": 118,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e13a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of interlocking road from near the residence of Dhirendra Singh upto Pure Jaddu Nandaura Mafi Sampark Marg (100 meters) at Gram Prayagpur Nandaura, Mirzapur Aehari Pakki Sadak, Rohania, Raebareli",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 505260
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b06a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a solar light near Hanuman Temple, Surjipur Ghuman Kheda, PO, Devgaon, Khiro, Khandepur, Rae Bareli at the request of Shri Ram Avtar S/o Mahaveer , Mob: 9450032127",
+        "completedDate": "2025-12-22T00:00:00.000Z",
+        "finalAmount": 19199
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b069",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Light at Masjid Premises, Village Sawaiya Hasan, Unchahar, Rae Bareli at the request of Mohd. Azam Khan, Mob: 9140950005",
+        "completedDate": "2025-12-22T00:00:00.000Z",
+        "finalAmount": 19199
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b075",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Light at near resident of Mewalal Pasi, Public Place, Village Sarai Umar Dalit Basti, Harchandpur, Rae Bareli at the request of Mewalal Pasi, Mob: 9793241064",
+        "completedDate": "2025-12-22T00:00:00.000Z",
+        "finalAmount": 19199
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b072",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Light at premises of Hanuman Mandir, Village Khijirpur Karaundi, Harchandpur, Rae Bareli at the request of Pramod Bajpai,Block President, Bhargav Singh S/o Late Shri. Raje Singh, Mob: 9129233060",
+        "completedDate": "2025-12-22T00:00:00.000Z",
+        "finalAmount": 19199
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.243Z"
+}

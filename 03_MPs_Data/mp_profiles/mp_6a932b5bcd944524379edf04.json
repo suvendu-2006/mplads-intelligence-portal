@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf04",
+    "name": "Priyanka Gandhi Vadra",
+    "constituency": "WAYANAD",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 122500000,
+    "totalExpenditure": 34714501,
+    "utilizationPercentage": 28.338368163265304,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 15019751,
+    "inProgressPayments": 19694750,
+    "paymentGapPercentage": 56.73349589556249,
+    "completionRate": 10.989010989010989,
+    "pendingWorks": 71,
+    "unspentAmount": 87785499,
+    "totalRecommendedAmount": 98450000,
+    "name_hi": "Priyanka Gandhi Vadra",
+    "constituency_hi": "WAYANAD",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34714501,
+      "totalEntries": 39,
+      "avgExpenditure": 890115.4102564103,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9826125,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24888376,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34714501,
+        "transactionCount": 39,
+        "avgAmount": 890115.4102564103
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d1f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of School Bus for G.L.P School Tharish Karuvarakund Grama Panchayath",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca42",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of School Bus for G.L.P School Perumbathur, Chaliyar Grama Panchayath",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1924000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7e2",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Renovation of Nambiarkunnu SC Colony Road (SC -Renovation)",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 367373
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of four wheeler Vehicle for Mobile dispensary CHC Chungathara",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 1057725
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad6f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase Four-Wheeler Vehicle for Mobile Dispensary Kavanoor",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 1051507
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.888Z"
+}

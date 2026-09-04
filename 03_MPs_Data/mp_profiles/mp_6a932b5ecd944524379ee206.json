@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee206",
+    "name": "Dr. Sangeeta Balwant (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 68851419.5,
+    "utilizationPercentage": 46.83770034013606,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 383,
+    "completedWorksValue": 1049186,
+    "inProgressPayments": 67802233.5,
+    "paymentGapPercentage": 98.47615923154642,
+    "completionRate": 0.5194805194805194,
+    "pendingWorks": 381,
+    "unspentAmount": 78148580.5,
+    "totalRecommendedAmount": 138329480,
+    "name_hi": "Dr. Sangeeta Balwant (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68851419.5,
+      "totalEntries": 254,
+      "avgExpenditure": 271068.5807086614,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 33759335.5,
+        "transactionCount": 145
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35092084,
+        "transactionCount": 109
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68851419.5,
+        "transactionCount": 254,
+        "avgAmount": 271068.5807086614
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 383,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a318a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKASKHAND DEVKALI GRAM JAMEEN MUDARBHA ME MURAHU BIND KE MASHIN SE HIRA BIND KE MAKAN TAK MINTERLOCKING NIRMAN KARY LENTH - 100 M",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 488906
+      },
+      {
+        "_id": "6a932bb5cd94452437a31adc",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKASKHAND SADAR GRAM MAHARAJGANJ KE BIND PURAVA ME MUNNA BIND KE SAMANE CC ROAD SE MAA KALI MANDIR TAK CC NIRMAN KARY LENTH 110 M",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 560280
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.692Z"
+}

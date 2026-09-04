@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf0b",
+    "name": "RABINDRA NARAYAN BEHERA",
+    "constituency": "JAJPUR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147064617.11,
+    "totalExpenditure": 9146086,
+    "utilizationPercentage": 6.219093470429394,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 190,
+    "completedWorksValue": 600000,
+    "inProgressPayments": 8546086,
+    "paymentGapPercentage": 93.43981676970893,
+    "completionRate": 1.5544041450777202,
+    "pendingWorks": 187,
+    "unspentAmount": 137918531.11,
+    "totalRecommendedAmount": 86239853,
+    "name_hi": "RABINDRA NARAYAN BEHERA",
+    "constituency_hi": "JAJPUR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 9146086,
+      "totalEntries": 41,
+      "avgExpenditure": 223075.26829268291,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1100000,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8046086,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 9146086,
+        "transactionCount": 41,
+        "avgAmount": 223075.26829268291
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 190,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dea1",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repairing of Rameswara Community center, near Rameswara Mandir, Chudakala Chhaka.",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d52f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Infrastructure development of Young Star Community Centre near Kulasahi",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19980",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of new rooms at Nababharati Govt HS, Sankaridiha.",
+        "completedDate": "2025-08-20T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.686Z"
+}

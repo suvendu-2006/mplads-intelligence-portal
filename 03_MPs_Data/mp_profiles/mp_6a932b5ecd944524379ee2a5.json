@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a5",
+    "name": "Shri Satish Chandra Dubey (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 235263957.11,
+    "totalExpenditure": 159342825,
+    "utilizationPercentage": 67.7293823318196,
+    "completedWorksCount": 162,
+    "recommendedWorksCount": 92,
+    "completedWorksValue": 128859487,
+    "inProgressPayments": 30483338,
+    "paymentGapPercentage": 19.13066245687561,
+    "completionRate": 63.77952755905512,
+    "pendingWorks": -70,
+    "unspentAmount": 75921132.11000001,
+    "totalRecommendedAmount": 97836407,
+    "name_hi": "Shri Satish Chandra Dubey (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 159342825,
+      "totalEntries": 206,
+      "avgExpenditure": 773508.8592233009,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 11653990,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 30731363,
+        "transactionCount": 47
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 52161958,
+        "transactionCount": 62
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 64795514,
+        "transactionCount": 88
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 159342825,
+        "transactionCount": 206,
+        "avgAmount": 773508.8592233009
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 162,
+    "recommendedCount": 92,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3243c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C. Road work in Mahipur Bhatauda, vill-Khairpokhra, ward no. - 15",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 648363
+      },
+      {
+        "_id": "6a932bb5cd94452437a32440",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C. Road work in Mahipur Bhatauda, vill-Khairpokhra, ward no. - 15",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 998852
+      },
+      {
+        "_id": "6a932bb5cd94452437a32405",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C. Road work",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 597995
+      },
+      {
+        "_id": "6a932bb5cd94452437a324a5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C. Road",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 496167
+      },
+      {
+        "_id": "6a932bb5cd94452437a32406",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P.C.C. Road Work in Village mangalpur Awsani, Baba Bhutnath College",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 899887
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.356Z"
+}

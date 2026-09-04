@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee255",
+    "name": "Shri Khiru Mahto (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 235770091.81,
+    "totalExpenditure": 183791258,
+    "utilizationPercentage": 77.95359309106594,
+    "completedWorksCount": 171,
+    "recommendedWorksCount": 6,
+    "completedWorksValue": 179942987,
+    "inProgressPayments": 3848271,
+    "paymentGapPercentage": 2.093827008899411,
+    "completionRate": 96.61016949152543,
+    "pendingWorks": -165,
+    "unspentAmount": 51978833.81,
+    "totalRecommendedAmount": 5956000,
+    "name_hi": "Shri Khiru Mahto (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 183791258,
+      "totalEntries": 176,
+      "avgExpenditure": 1044268.5113636364,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 44172709,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 105507264,
+        "transactionCount": 81
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34111285,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 183791258,
+        "transactionCount": 176,
+        "avgAmount": 1044268.5113636364
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 171,
+    "recommendedCount": 6,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3237c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Pcc road from the house of Dhirendra Kumar to the Buddhadev Chak in ward no. 05",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 999266
+      },
+      {
+        "_id": "6a932bb5cd94452437a3237d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Buddhadev Chak main road to the house of Ranjeet Kumar",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 1495348
+      },
+      {
+        "_id": "6a932bb5cd94452437a32367",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from police post Patna university gate towards SESQUICENTENNIAL gate",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1494426
+      },
+      {
+        "_id": "6a932bb5cd94452437a32366",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road from the patna university Boys hostel towards patna College Gate",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1494083
+      },
+      {
+        "_id": "6a932bb5cd94452437a3235d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road from Patna University Gate to the backside of Faraday Hostel",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 1495467
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.454Z"
+}

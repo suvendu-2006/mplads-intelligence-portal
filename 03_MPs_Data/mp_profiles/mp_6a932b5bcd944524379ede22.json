@@ -1,0 +1,76 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede22",
+    "name": "Daggubati Purandeshwari",
+    "constituency": "RAJAHMUNDRY",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 14394558,
+    "utilizationPercentage": 9.792216326530612,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 26,
+    "completedWorksValue": 4989014,
+    "inProgressPayments": 9405544,
+    "paymentGapPercentage": 65.34097121981793,
+    "completionRate": 10.344827586206897,
+    "pendingWorks": 23,
+    "unspentAmount": 132605442,
+    "totalRecommendedAmount": 85500000,
+    "name_hi": "Daggubati Purandeshwari",
+    "constituency_hi": "RAJAHMUNDRY",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14394558,
+      "totalEntries": 13,
+      "avgExpenditure": 1107273.6923076923,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 14394558,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14394558,
+        "transactionCount": 13,
+        "avgAmount": 1107273.6923076923
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 26,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cf73",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Multipurpose Activity Centre at Dowlaiswaram village",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 1775309
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ccb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C.Drain from Pilaka venkata Lakshmi House (D.No.104-12-1) to Putta Gangalamma Temple at D-Block, Satellite City",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 1568450
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb4c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of an additional floor to the existing at C-Block, Satellite City",
+        "completedDate": "2026-01-30T00:00:00.000Z",
+        "finalAmount": 1645255
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.910Z"
+}

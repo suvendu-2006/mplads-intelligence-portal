@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede88",
+    "name": "K Subbarayan",
+    "constituency": "TIRUPPUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 81901423,
+    "utilizationPercentage": 55.715253741496596,
+    "completedWorksCount": 65,
+    "recommendedWorksCount": 53,
+    "completedWorksValue": 67913861,
+    "inProgressPayments": 13987562,
+    "paymentGapPercentage": 17.078533543916567,
+    "completionRate": 55.08474576271186,
+    "pendingWorks": -12,
+    "unspentAmount": 65098577,
+    "totalRecommendedAmount": 71338000,
+    "name_hi": "K Subbarayan",
+    "constituency_hi": "TIRUPPUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 81901423,
+      "totalEntries": 75,
+      "avgExpenditure": 1092018.9733333334,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 48040178,
+        "transactionCount": 45
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33861245,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 81901423,
+        "transactionCount": 75,
+        "avgAmount": 1092018.9733333334
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 65,
+    "recommendedCount": 53,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e44f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying BT road from Komarayanur to Boomiyanthanda  through Burial ground in Komarayanur panchayat, Ammapettai Block",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1499459
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 60000 Ltr OHT tank in ward No.4 at Karapaadi in Bhavanisagar in Erode District",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 2134898
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e356",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erode district,bhavani sagar union varppalaiyam viilage, bus stop",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e084",
+        "workCategory": "Normal/Others",
+        "workDescription": "erode district, ammapettai union, kittampatti to drainage",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 709850
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of steps on pasuveshwarar road in Ward No-20, Bhavani Municipality at Erode District",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.235Z"
+}

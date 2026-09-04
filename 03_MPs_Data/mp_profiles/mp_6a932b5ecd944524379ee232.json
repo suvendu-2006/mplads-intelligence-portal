@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee232",
+    "name": "Shri Derek O' Brien (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 70787264,
+    "utilizationPercentage": 41.275372594752184,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 35,
+    "completedWorksValue": 0,
+    "inProgressPayments": 70787264,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 35,
+    "unspentAmount": 100712736,
+    "totalRecommendedAmount": 122271928,
+    "name_hi": "Shri Derek O' Brien (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70787264,
+      "totalEntries": 16,
+      "avgExpenditure": 4424204,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 59678561,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11108703,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70787264,
+        "transactionCount": 16,
+        "avgAmount": 4424204
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 35,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:49.664Z"
+}

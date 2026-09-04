@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "data": {
+    "trends": [
+      {
+        "year": 2024,
+        "expenditure": {
+          "total": 1716877594.77,
+          "transactions": 3749,
+          "average": 457956.1469111763,
+          "activeMPs": 182
+        },
+        "works": {
+          "completed": 2297,
+          "totalCost": 1536132899.52,
+          "avgCost": 668756.16
+        }
+      },
+      {
+        "year": 2025,
+        "expenditure": {
+          "total": 16530760360,
+          "transactions": 46729,
+          "average": 353758.0594491643,
+          "activeMPs": 639
+        },
+        "works": {
+          "completed": 20417,
+          "totalCost": 11745825867.4,
+          "avgCost": 575296.3641769114
+        }
+      },
+      {
+        "year": 2026,
+        "expenditure": {
+          "total": 17112987685,
+          "transactions": 49522,
+          "average": 345563.3392229716,
+          "activeMPs": 694
+        },
+        "works": {
+          "completed": 20986,
+          "totalCost": 10526727099.69,
+          "avgCost": 501607.1237820452
+        }
+      }
+    ],
+    "summary": {
+      "totalYears": 3,
+      "filters": {
+        "house": "all",
+        "state": "all"
+      }
+    }
+  }
+}

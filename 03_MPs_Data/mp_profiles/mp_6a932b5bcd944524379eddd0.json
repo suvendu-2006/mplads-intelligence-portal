@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd0",
+    "name": "ANIL BALUNI",
+    "constituency": "GARHWAL",
+    "state": "Uttarakhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 2739441,
+    "utilizationPercentage": 1.8635653061224489,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 11,
+    "completedWorksValue": 300000,
+    "inProgressPayments": 2439441,
+    "paymentGapPercentage": 89.04886069822274,
+    "completionRate": 8.333333333333332,
+    "pendingWorks": 10,
+    "unspentAmount": 144260559,
+    "totalRecommendedAmount": 12895000,
+    "name_hi": "ANIL BALUNI",
+    "constituency_hi": "GARHWAL",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 2739441,
+      "totalEntries": 8,
+      "avgExpenditure": 342430.125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1015451,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 1723990,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 2739441,
+        "transactionCount": 8,
+        "avgAmount": 342430.125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 11,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bd48",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from Kamdai Motor Road to Suyalon Ki Basti (Khwal) Block Bironkhal in Pauri Garhwal",
+        "completedDate": "2025-12-11T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.681Z"
+}

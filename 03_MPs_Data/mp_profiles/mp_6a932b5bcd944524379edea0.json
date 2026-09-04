@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea0",
+    "name": "Khalilur Rahaman ",
+    "constituency": "JANGIPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23028217,
+    "utilizationPercentage": 15.665453741496599,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 76,
+    "completedWorksValue": 19089367,
+    "inProgressPayments": 3938850,
+    "paymentGapPercentage": 17.104450596413955,
+    "completionRate": 28.971962616822427,
+    "pendingWorks": 45,
+    "unspentAmount": 123971783,
+    "totalRecommendedAmount": 59281000,
+    "name_hi": "Khalilur Rahaman ",
+    "constituency_hi": "JANGIPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23028217,
+      "totalEntries": 44,
+      "avgExpenditure": 523368.5681818182,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4314241,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18713976,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23028217,
+        "transactionCount": 44,
+        "avgAmount": 523368.5681818182
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 76,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d689",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of water treatment plant",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d68a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Drinking water plant",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d1f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of college gate at Nabagram Amar chand kundu College",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 593362
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d239",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase Of AC Ambulance to Giria Gram panchayat",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 1294632
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d233",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing AC Ambulance to sekendra gram panchayat",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 1294632
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.907Z"
+}

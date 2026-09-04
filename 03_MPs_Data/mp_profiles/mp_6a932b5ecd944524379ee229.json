@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee229",
+    "name": "Shri Brij Lal (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 91370638,
+    "utilizationPercentage": 46.60246551523862,
+    "completedWorksCount": 113,
+    "recommendedWorksCount": 37,
+    "completedWorksValue": 10641068,
+    "inProgressPayments": 80729570,
+    "paymentGapPercentage": 88.35395239332793,
+    "completionRate": 75.33333333333333,
+    "pendingWorks": -76,
+    "unspentAmount": 104693319.11000001,
+    "totalRecommendedAmount": 183087155,
+    "name_hi": "Shri Brij Lal (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91370638,
+      "totalEntries": 160,
+      "avgExpenditure": 571066.4875,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 14432840,
+        "transactionCount": 116
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 40858719,
+        "transactionCount": 26
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36079079,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91370638,
+        "transactionCount": 160,
+        "avgAmount": 571066.4875
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 113,
+    "recommendedCount": 37,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31ddd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Letter as per attached.",
+        "completedDate": "2026-01-18T00:00:00.000Z",
+        "finalAmount": 244561
+      },
+      {
+        "_id": "6a932bb5cd94452437a30190",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of room/halls in Ram Baran Singh, Inter Collage, Choraha, Machchali Shahar, Jaunpur.",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d2e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Street lights",
+        "completedDate": "2025-09-16T00:00:00.000Z",
+        "finalAmount": 124944
+      },
+      {
+        "_id": "6a932bb5cd94452437a3087f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing drains and gutters for public drainage",
+        "completedDate": "2025-04-05T00:00:00.000Z",
+        "finalAmount": 3444811
+      },
+      {
+        "_id": "6a932bb5cd94452437a306a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of library in Dr. Amebedkar Siksha Samiti, Sarnath, Varanasi",
+        "completedDate": "2024-06-10T00:00:00.000Z",
+        "finalAmount": 2626752
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.686Z"
+}

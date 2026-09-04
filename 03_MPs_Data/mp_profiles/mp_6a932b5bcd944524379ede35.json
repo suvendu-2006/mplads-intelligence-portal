@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede35",
+    "name": "DR BYREDDY SHABARI",
+    "constituency": "NANDYAL",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150675889.11,
+    "totalExpenditure": 50709419,
+    "utilizationPercentage": 33.65463399587435,
+    "completedWorksCount": 70,
+    "recommendedWorksCount": 129,
+    "completedWorksValue": 31784498,
+    "inProgressPayments": 18924921,
+    "paymentGapPercentage": 37.32032701853674,
+    "completionRate": 35.175879396984925,
+    "pendingWorks": 59,
+    "unspentAmount": 99966470.11000001,
+    "totalRecommendedAmount": 67406000,
+    "name_hi": "DR BYREDDY SHABARI",
+    "constituency_hi": "NANDYAL",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50709419,
+      "totalEntries": 116,
+      "avgExpenditure": 437150.1637931034,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22989459,
+        "transactionCount": 51
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27719960,
+        "transactionCount": 65
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50709419,
+        "transactionCount": 116,
+        "avgAmount": 437150.1637931034
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 70,
+    "recommendedCount": 129,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e53a",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repairs to the sluice of Appala Reddy Cheruvu in Palakolanu Village, Orvakal Mandal. The proposed work includes restoration and strengthening of the sluice structure to ensure proper water flow management, prevent leakage, and enhance the irrigation potential of the tank, benefiting the local agricultural community.",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 499988
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e11d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of a new 165 mm diameter bore well  the village entrance at Laxmapuram Village, Pagidyala Mandal, to meet drinking water requirements",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 199154
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e115",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of a new borewell, installation of a pumpset, and laying of a pumping main to the existing RO Plant at Kondajuturu Village, Panyam Mandal, to ensure reliable water supply for safe drinking purposes.",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 269976
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e11b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Establishment of a Mineral Water Plant near Balaji Hotel (Budaga Jangala Colony) at Laxmapuram Village of Pagidyala Mandal, including construction of the plant shed and all associated infrastructure required for safe drinking water supply to the local community.",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 497852
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7db",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repairs to 1600 KVA transformer and related electrical components at Malyala Lift Irrigation Scheme II on the foreshore of Srisailam Reservoir in Nandikotkur M, Nandyal District to ensure uninterrupted functioning of the lift irrigation system.",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 795909
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.975Z"
+}

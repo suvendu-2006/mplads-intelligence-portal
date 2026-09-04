@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede4c",
+    "name": "DR. SHARMILA SARKAR",
+    "constituency": "BARDHAMAN PURBA",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 21224009,
+    "utilizationPercentage": 14.438101360544216,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 94,
+    "completedWorksValue": 13306505,
+    "inProgressPayments": 7917504,
+    "paymentGapPercentage": 37.30446966923167,
+    "completionRate": 15.315315315315313,
+    "pendingWorks": 77,
+    "unspentAmount": 125775991,
+    "totalRecommendedAmount": 73395832,
+    "name_hi": "DR. SHARMILA SARKAR",
+    "constituency_hi": "BARDHAMAN PURBA",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21224009,
+      "totalEntries": 33,
+      "avgExpenditure": 643151.7878787878,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9802351,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11421658,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21224009,
+        "transactionCount": 33,
+        "avgAmount": 643151.7878787878
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 94,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d083",
+        "workCategory": "Normal/Others",
+        "workDescription": "Upgradation of Putsuri Girls High School",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 499743
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b28a",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Upgradation works of Dogachhia PHC (SUSASTHYA KENDRA)",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 499737
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8ee",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 32 channel CCTV camera system with monitor at Noapara BPHC",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 550000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b28c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary of Doctor and staff quarter of Purbasthali BPHC",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 998439
+      },
+      {
+        "_id": "6a932bb5cd94452437a19c71",
+        "workCategory": "Normal/Others",
+        "workDescription": "Upgradation of community hall along with installation of stand AC , lighting arrangement and sound system",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 998104
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.462Z"
+}

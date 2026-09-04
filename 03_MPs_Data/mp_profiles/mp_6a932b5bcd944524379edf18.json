@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf18",
+    "name": "RAJEEV RAI",
+    "constituency": "GHOSI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66462043,
+    "utilizationPercentage": 45.21227414965986,
+    "completedWorksCount": 108,
+    "recommendedWorksCount": 119,
+    "completedWorksValue": 37961477,
+    "inProgressPayments": 28500566,
+    "paymentGapPercentage": 42.88247052531924,
+    "completionRate": 47.57709251101321,
+    "pendingWorks": 11,
+    "unspentAmount": 80537957,
+    "totalRecommendedAmount": 47433589,
+    "name_hi": "RAJEEV RAI",
+    "constituency_hi": "GHOSI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66462043,
+      "totalEntries": 311,
+      "avgExpenditure": 213704.31832797427,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27384713,
+        "transactionCount": 111
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39077330,
+        "transactionCount": 200
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66462043,
+        "transactionCount": 311,
+        "avgAmount": 213704.31832797427
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 108,
+    "recommendedCount": 119,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ca37",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram sabha narla me deeh baba ke sthan se ravindra yadav hata hote hue vyayam shala tak cc 200 meter",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 1187303
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9eb",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram sabha chak chirkitaha me rajesh yadav ke ghar se mau border tak inter locking 200 meter",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 1175306
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d2dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat gopalpur dev nath prajapati ke ghar se mohan chaubey ke ghar hote hue ashok gupta ke ghar tak cc 200 meter",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 993080
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d2d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchyat kureji nahar se harikishun yadav ke ghar hote hue yogendra mali ke ghar tak cc 200 meter",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 1077150
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat jogapur vijay yadav ke dera se manjeet yadav ke ghar hote hue shiv ji yadav ke ghar tak inter locking 170 meter",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 997356
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.872Z"
+}

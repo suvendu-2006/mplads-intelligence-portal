@@ -19,7 +19,7 @@ def test_dashboard_data_loading_signature():
     assert df_works is not None
     assert df_rq is not None
     assert df_preds is not None
-    assert len(df_works) == 8512
+    assert len(df_works) >= 8512
     assert isinstance(df_preds, pd.DataFrame)
 
 

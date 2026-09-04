@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede2d",
+    "name": "DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU",
+    "constituency": "CHANDRAPUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 14990871,
+    "utilizationPercentage": 10.197871428571428,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 7831889,
+    "inProgressPayments": 7158982,
+    "paymentGapPercentage": 47.75561073135777,
+    "completionRate": 9.210526315789473,
+    "pendingWorks": 62,
+    "unspentAmount": 132009129,
+    "totalRecommendedAmount": 88300000,
+    "name_hi": "DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU",
+    "constituency_hi": "CHANDRAPUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14990871,
+      "totalEntries": 14,
+      "avgExpenditure": 1070776.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2415362,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12575509,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14990871,
+        "transactionCount": 14,
+        "avgAmount": 1070776.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dcb2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of slab drain for protection of underground pipeline of Ordnance Factory Chanda Colony on Majri Deurwada Dhorvasa Pipri Mursa (M.D.R. 10) road between Dhorvasa and Pipri Pochmarg in Taluka Bhadravati District Chandrapur.",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 1806232
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d849",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a drain from the house of Shri Gangadhar Mekalwar in Korpana, Parsoda Taluka to the house of Dilip Pachbhai.",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 984502
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d78f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a closed drain from the house of Mr. Yashwant Bodhe to the house of Mr. Rahul Tayde in Mouja Kosara, Taluka Chandrapur.",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 999828
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d78c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of the remaining road from the house of Mr. Yashwant Bodhe in Mouja Kosara, Taluka Chandrapur to D.P. Road.",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 476962
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c7fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement concrete road from Nanaji Belekar house to Zilla Parishad School in Patharpur Township, Yavatmal District.",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 1149003
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.746Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf38",
+    "name": "RUCHI VIRA",
+    "constituency": "MORADABAD",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 52167110,
+    "utilizationPercentage": 35.48782993197278,
+    "completedWorksCount": 165,
+    "recommendedWorksCount": 108,
+    "completedWorksValue": 33266575,
+    "inProgressPayments": 18900535,
+    "paymentGapPercentage": 36.23074960449218,
+    "completionRate": 60.43956043956044,
+    "pendingWorks": -57,
+    "unspentAmount": 94832890,
+    "totalRecommendedAmount": 31715200,
+    "name_hi": "RUCHI VIRA",
+    "constituency_hi": "MORADABAD",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 52167110,
+      "totalEntries": 559,
+      "avgExpenditure": 93322.20035778175,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 38814178,
+        "transactionCount": 406
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13352932,
+        "transactionCount": 153
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 52167110,
+        "transactionCount": 559,
+        "avgAmount": 93322.20035778175
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 165,
+    "recommendedCount": 108,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1abb0",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND THAKURDWARA KE GRAM BAIJNATHPUR ME  CHAURAHE KE PASS SARVJANIK STHAL PAR SEMI HIGH MAST LIGHT 6 LIGHT WALI",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 173499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abae",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND THAKURDWARA KE GRAM PASIAPURA ME TIRAHE KE PASS SARVJANIK STHAL PAR SEMI HIGH MAST LIGHT 6 LIGHT WALI",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 173499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND DILARI KE GRAM GAJROLA SAID ME CHAURAHE KE PASS SARVJANIK STHAL PAR SEMI HIGH MAST LIGHT 6 LIGHT WALI",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 173499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abb5",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND MORADABAD KE GRAM BAKENIYA ME TIRAHE KE PASS SARVJANIK STHAL PAR SEMI HIGH MAST LIGHT 6 LIGHT WALI",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 173499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abad",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND DILARI KE GRAM NARAYANPUR TEJO ME CHAURAHE KE PASS SARVJANIK STHAL PAR SEMI HIGH MAST LIGHT 6 LIGHT WALI",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 173499
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.666Z"
+}

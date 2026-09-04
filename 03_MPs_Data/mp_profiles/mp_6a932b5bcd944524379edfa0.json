@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa0",
+    "name": "SUNIL BOSE",
+    "constituency": "CHAMARAJANAGAR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50427615,
+    "utilizationPercentage": 34.3045,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 91,
+    "completedWorksValue": 18700000,
+    "inProgressPayments": 31727615,
+    "paymentGapPercentage": 62.91714371183329,
+    "completionRate": 18.75,
+    "pendingWorks": 70,
+    "unspentAmount": 96572385,
+    "totalRecommendedAmount": 74850000,
+    "name_hi": "SUNIL BOSE",
+    "constituency_hi": "CHAMARAJANAGAR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50427615,
+      "totalEntries": 96,
+      "avgExpenditure": 525287.65625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 29275000,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21152615,
+        "transactionCount": 50
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50427615,
+        "transactionCount": 96,
+        "avgAmount": 525287.65625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 91,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a0d4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constuction of shri siddapaji temple and chavadi on going work at sathegala village kollegala taluk",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary wall for shadi mahal at cowdalli village Kollegal Taluk",
+        "completedDate": "2026-08-23T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of footpaths and laying interlocks on both sides from Dr Rajkumar road to muddu veerappa hospital ward 16 kollegala Town",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0d0",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Medhara community hall at Madhuvanahalli village kollegal taluk",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0ee",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of CC road from 3rd cross rajeshwari home to parimala home and CC drinage from manjunath ngar devanga beedi 1st cross vani house to haseeb house .",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.740Z"
+}

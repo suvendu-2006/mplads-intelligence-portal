@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee25a",
+    "name": "Shri Madan Rathore (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32342754,
+    "utilizationPercentage": 22.001873469387757,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 111,
+    "completedWorksValue": 16038953,
+    "inProgressPayments": 16303801,
+    "paymentGapPercentage": 50.40943946826544,
+    "completionRate": 15.909090909090908,
+    "pendingWorks": 90,
+    "unspentAmount": 114657246,
+    "totalRecommendedAmount": 92598945,
+    "name_hi": "Shri Madan Rathore (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32342754,
+      "totalEntries": 228,
+      "avgExpenditure": 141854.18421052632,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9691365,
+        "transactionCount": 105
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22651389,
+        "transactionCount": 123
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32342754,
+        "transactionCount": 228,
+        "avgAmount": 141854.18421052632
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 111,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32492",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "CC Block work near the ancestral house of Shri Ramanarayan Dudi former MP",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 690791
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c0f",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction work of Resting place  at public crematorium in village Santoda Khurd",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 599845
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c10",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction work of Resting place  at public crematorium in village Sri Dev Nagar, Gram Panchayat Santora Khurd",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 599927
+      },
+      {
+        "_id": "6a932bb5cd94452437a3205f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed with flooring for food arrangement at Akhil Bhartiya Shri Guru Jambheshwar Sevak Dal, Muktidham Muqaam, Nokha",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3202c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of Boundary Wall at Shree Bahadur Singh Bhan Kanwar Aadarsh Vidya Mandir Sardarshahar",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1846205
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.455Z"
+}

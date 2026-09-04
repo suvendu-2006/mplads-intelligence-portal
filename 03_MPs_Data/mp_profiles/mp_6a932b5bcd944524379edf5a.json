@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5a",
+    "name": "SHIVMANGAL SINGH TOMAR",
+    "constituency": "MORENA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 20290158,
+    "utilizationPercentage": 13.802828571428572,
+    "completedWorksCount": 28,
+    "recommendedWorksCount": 38,
+    "completedWorksValue": 7818529,
+    "inProgressPayments": 12471629,
+    "paymentGapPercentage": 61.46639666384066,
+    "completionRate": 42.42424242424242,
+    "pendingWorks": 10,
+    "unspentAmount": 126709842,
+    "totalRecommendedAmount": 30953696,
+    "name_hi": "SHIVMANGAL SINGH TOMAR",
+    "constituency_hi": "MORENA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 20290158,
+      "totalEntries": 90,
+      "avgExpenditure": 225446.2,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1200000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 15641377,
+        "transactionCount": 79
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 3448781,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 20290158,
+        "transactionCount": 90,
+        "avgAmount": 225446.2
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 28,
+    "recommendedCount": 38,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a175e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat kishanpura, tahsil vijaypur, mai 1 g.i. water tanker",
+        "completedDate": "2025-10-10T00:00:00.000Z",
+        "finalAmount": 166026
+      },
+      {
+        "_id": "6a932bb5cd94452437a175df",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat laxmanpura, tahsil vijaypur, mai 1 g.i. water tanker",
+        "completedDate": "2025-10-10T00:00:00.000Z",
+        "finalAmount": 166026
+      },
+      {
+        "_id": "6a932bb5cd94452437a17768",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat agara, tahsil  vijaypur, mai 1 gi water tanker",
+        "completedDate": "2025-10-10T00:00:00.000Z",
+        "finalAmount": 166026
+      },
+      {
+        "_id": "6a932bb5cd94452437a17761",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat kinjari, tahsil vijaypur, mai 1 gi water tanker",
+        "completedDate": "2025-10-10T00:00:00.000Z",
+        "finalAmount": 166026
+      },
+      {
+        "_id": "6a932bb5cd94452437a175e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayat chentikheda, tahsil vijaypur, mai 1 gi water tanker",
+        "completedDate": "2025-10-10T00:00:00.000Z",
+        "finalAmount": 166026
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.721Z"
+}

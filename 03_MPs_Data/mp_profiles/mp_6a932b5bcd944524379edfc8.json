@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc8",
+    "name": "VIVEK THAKUR",
+    "constituency": "NAWADA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 3164487,
+    "utilizationPercentage": 2.1527122448979594,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 85,
+    "completedWorksValue": 607045,
+    "inProgressPayments": 2557442,
+    "paymentGapPercentage": 80.81695390121685,
+    "completionRate": 1.1627906976744187,
+    "pendingWorks": 84,
+    "unspentAmount": 143835513,
+    "totalRecommendedAmount": 85201595,
+    "name_hi": "VIVEK THAKUR",
+    "constituency_hi": "NAWADA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 3164487,
+      "totalEntries": 5,
+      "avgExpenditure": 632897.4,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 3164487,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 3164487,
+        "transactionCount": 5,
+        "avgAmount": 632897.4
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 85,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sheikhpura Prakhand ke gaway gram panchayat ke gram gaway mai Manish Kumar ke dalan se bablu singh ke ghar tak PCC Road Nirman",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 607045
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.667Z"
+}

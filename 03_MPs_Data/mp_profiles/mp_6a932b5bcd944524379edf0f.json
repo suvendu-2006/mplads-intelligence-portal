@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf0f",
+    "name": "RADHE SHYAM RATHIYA",
+    "constituency": "RAIGARH",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159706972.09,
+    "totalExpenditure": 80152296,
+    "utilizationPercentage": 50.18709887933485,
+    "completedWorksCount": 72,
+    "recommendedWorksCount": 66,
+    "completedWorksValue": 56870399,
+    "inProgressPayments": 23281897,
+    "paymentGapPercentage": 29.04707433458924,
+    "completionRate": 52.17391304347826,
+    "pendingWorks": -6,
+    "unspentAmount": 79554676.09,
+    "totalRecommendedAmount": 40870650,
+    "name_hi": "RADHE SHYAM RATHIYA",
+    "constituency_hi": "RAIGARH",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 80152296,
+      "totalEntries": 211,
+      "avgExpenditure": 379868.70142180094,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6634565,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55942788,
+        "transactionCount": 139
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17574943,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 80152296,
+        "transactionCount": 211,
+        "avgAmount": 379868.70142180094
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 72,
+    "recommendedCount": 66,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16c0c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community building",
+        "completedDate": "2026-07-11T00:00:00.000Z",
+        "finalAmount": 998398
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c896",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC Culvert",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 999520
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Establishment Work of hybrid AC DC light 1 No.",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 303640
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Establishment Work of hybrid AC DC light 1 No.",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 303640
+      },
+      {
+        "_id": "6a932bb5cd94452437a19759",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C. Road",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 494242
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.212Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf61",
+    "name": "Shri Amar Singh",
+    "constituency": "FATEHGARH SAHIB",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 43529649,
+    "utilizationPercentage": 29.61200612244898,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 289,
+    "completedWorksValue": 17363933,
+    "inProgressPayments": 26165716,
+    "paymentGapPercentage": 60.11010104859793,
+    "completionRate": 17.191977077363894,
+    "pendingWorks": 229,
+    "unspentAmount": 103470351,
+    "totalRecommendedAmount": 93710907,
+    "name_hi": "Shri Amar Singh",
+    "constituency_hi": "FATEHGARH SAHIB",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43529649,
+      "totalEntries": 526,
+      "avgExpenditure": 82755.98669201521,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18678301,
+        "transactionCount": 181
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24851348,
+        "transactionCount": 345
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43529649,
+        "transactionCount": 526,
+        "avgAmount": 82755.98669201521
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 289,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d2e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR STREET LIGHTS",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d27f",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR PROVIDING WATER COOLER OF DHARAMSHALA AT WARD NO 15 SIRHIND CITY",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 51160
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d27e",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR PROVIDING WATER COOLER OF DHARAMSHALA AT WARD NO 17 SIRHIND CITY",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 51160
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d27b",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR PROVIDING WATER COOLER AT WARD NO 16 MATA GUJRI SARAY NAVI ABADI",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 51160
+      },
+      {
+        "_id": "6a932bb5cd94452437a18c62",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR SEWERAGE",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.435Z"
+}

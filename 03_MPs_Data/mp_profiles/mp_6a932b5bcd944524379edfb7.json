@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb7",
+    "name": "V. SOMANNA",
+    "constituency": "TUMKUR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32293790,
+    "utilizationPercentage": 21.96856462585034,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 57,
+    "completedWorksValue": 7214529,
+    "inProgressPayments": 25079261,
+    "paymentGapPercentage": 77.65970175690124,
+    "completionRate": 6.557377049180328,
+    "pendingWorks": 53,
+    "unspentAmount": 114706210,
+    "totalRecommendedAmount": 67250000,
+    "name_hi": "V. SOMANNA",
+    "constituency_hi": "TUMKUR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32293790,
+      "totalEntries": 26,
+      "avgExpenditure": 1242068.8461538462,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7749935,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24543855,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32293790,
+        "transactionCount": 26,
+        "avgAmount": 1242068.8461538462
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 57,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d6d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Continued Construction work of Community hall of Tigalara Community at Honnudike Village, Tumakuru (reference Shri Suresh Gowda, MLA)",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 2220313
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c3e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road Asphalte (dambar) works of connecting between Shree Adichunchanagiri Mahasamsthana Mutt Mayasandra Branch and old age home. Tururvekere Taluk Tumakuru",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 1994281
+      },
+      {
+        "_id": "6a932bb5cd94452437a17bd8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Shri Jodi Basaveshwara Temple to Government Primary School at N.Mathighatta, Nittur Hobli, Gubbi Taluk, Tumakuru",
+        "completedDate": "2026-01-01T00:00:00.000Z",
+        "finalAmount": 2500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad06",
+        "workCategory": "Trust and Society",
+        "workDescription": "Continued construction work  of Lions Seva Bhawan which belongs to Kalpataru Lions Charitable Trust at Turuvekere Taluk, Tumakuru",
+        "completedDate": "2025-10-13T00:00:00.000Z",
+        "finalAmount": 499935
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.442Z"
+}

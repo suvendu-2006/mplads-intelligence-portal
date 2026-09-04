@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf49",
+    "name": "Santosh Pandey",
+    "constituency": "RAJNANDGAON",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61535649,
+    "utilizationPercentage": 41.86098571428572,
+    "completedWorksCount": 71,
+    "recommendedWorksCount": 107,
+    "completedWorksValue": 35769989,
+    "inProgressPayments": 25765660,
+    "paymentGapPercentage": 41.871111166796986,
+    "completionRate": 39.8876404494382,
+    "pendingWorks": 36,
+    "unspentAmount": 85464351,
+    "totalRecommendedAmount": 50943300,
+    "name_hi": "Santosh Pandey",
+    "constituency_hi": "RAJNANDGAON",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61535649,
+      "totalEntries": 249,
+      "avgExpenditure": 247131.1204819277,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3850000,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 17364363,
+        "transactionCount": 67
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40321286,
+        "transactionCount": 169
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61535649,
+        "transactionCount": 249,
+        "avgAmount": 247131.1204819277
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 71,
+    "recommendedCount": 107,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ac6b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Maidan Samtali karan",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 697959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b42a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Manch Nirman (shitla mandir ke pas)",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb55",
+        "workCategory": "Normal/Others",
+        "workDescription": "E Riksha Purches",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 149999
+      },
+      {
+        "_id": "6a932bb5cd94452437a1baee",
+        "workCategory": "Normal/Others",
+        "workDescription": "E Riksha Purches",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b42c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chabutara Nirman (puarana shitla mandir ke pas)",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.316Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c0",
+    "name": "Smt. Mamata Thakur (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44446422,
+    "utilizationPercentage": 30.235661224489796,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 9,
+    "completedWorksValue": 28679769,
+    "inProgressPayments": 15766653,
+    "paymentGapPercentage": 35.47339086147362,
+    "completionRate": 85,
+    "pendingWorks": -42,
+    "unspentAmount": 102553578,
+    "totalRecommendedAmount": 26052895,
+    "name_hi": "Smt. Mamata Thakur (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44446422,
+      "totalEntries": 55,
+      "avgExpenditure": 808116.7636363637,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12429973,
+        "transactionCount": 26
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32016449,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44446422,
+        "transactionCount": 55,
+        "avgAmount": 808116.7636363637
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 9,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32483",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of integrated solar street lights 20 nos",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 680245
+      },
+      {
+        "_id": "6a932bb5cd94452437a32481",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of integrated solar street lights 20 nos",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 680245
+      },
+      {
+        "_id": "6a932bb5cd94452437a32482",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of integrated solar street lights 20 nos",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 680245
+      },
+      {
+        "_id": "6a932bb5cd94452437a32494",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of integrated solar street lights 20 nos",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 680007
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c83",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Integrated solar street lights @ 16 nos. from Bibisanpur Bazar to Sankarpur More, JL No. 108, Mouza Bibisanpur under Bibisanpur GP, Block Bhagwanpur I.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 499734
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.662Z"
+}

@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede97",
+    "name": "Kamlesh Paswan",
+    "constituency": "BANSGAON",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35635253,
+    "utilizationPercentage": 24.241668707482994,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 124,
+    "completedWorksValue": 0,
+    "inProgressPayments": 35635253,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 124,
+    "unspentAmount": 111364747,
+    "totalRecommendedAmount": 99901614,
+    "name_hi": "Kamlesh Paswan",
+    "constituency_hi": "BANSGAON",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35635253,
+      "totalEntries": 76,
+      "avgExpenditure": 468884.90789473685,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2412850,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33222403,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35635253,
+        "transactionCount": 76,
+        "avgAmount": 468884.90789473685
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 124,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:55.454Z"
+}

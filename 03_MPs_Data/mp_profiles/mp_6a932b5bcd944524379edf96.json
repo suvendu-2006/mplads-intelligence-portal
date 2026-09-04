@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf96",
+    "name": "Smt Supriya Sadanand Sule",
+    "constituency": "BARAMATI",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 25041557,
+    "utilizationPercentage": 17.035072789115645,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 116,
+    "completedWorksValue": 7738002,
+    "inProgressPayments": 17303555,
+    "paymentGapPercentage": 69.09935751998168,
+    "completionRate": 7.936507936507936,
+    "pendingWorks": 106,
+    "unspentAmount": 121958443,
+    "totalRecommendedAmount": 82700000,
+    "name_hi": "Smt Supriya Sadanand Sule",
+    "constituency_hi": "BARAMATI",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25041557,
+      "totalEntries": 34,
+      "avgExpenditure": 736516.3823529412,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4949989,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20091568,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25041557,
+        "transactionCount": 34,
+        "avgAmount": 736516.3823529412
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 116,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d442",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road at Khupte Vasti Aba Chormale House to Hiraman Kolpe House, at Yawat",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 994056
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d20a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fitting of Paving Blocks at Datta Mandir Chauk, Rade Vasti, at Betwadi",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 993957
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ce1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road at Backward class settlement, at Shind",
+        "completedDate": "2026-02-06T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c462",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Common Covered Sitting Area at Kurtavadi",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ba92",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fitting of Paving Block at Jilha Parishad School Ground, Dhadawali (Wireless Fata), at Girim",
+        "completedDate": "2025-12-02T00:00:00.000Z",
+        "finalAmount": 995586
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.230Z"
+}

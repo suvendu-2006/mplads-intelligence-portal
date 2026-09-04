@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1f",
+    "name": "CN Annadurai",
+    "constituency": "TIRUVANNAMALAI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148579509.11,
+    "totalExpenditure": 87500808,
+    "utilizationPercentage": 58.89157160643145,
+    "completedWorksCount": 171,
+    "recommendedWorksCount": 23,
+    "completedWorksValue": 79786644,
+    "inProgressPayments": 7714164,
+    "paymentGapPercentage": 8.81610601812957,
+    "completionRate": 88.14432989690721,
+    "pendingWorks": -148,
+    "unspentAmount": 61078701.110000014,
+    "totalRecommendedAmount": 18920000,
+    "name_hi": "CN Annadurai",
+    "constituency_hi": "TIRUVANNAMALAI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87500808,
+      "totalEntries": 180,
+      "avgExpenditure": 486115.6,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1305000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 52078355,
+        "transactionCount": 118
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34117453,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87500808,
+        "transactionCount": 180,
+        "avgAmount": 486115.6
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 171,
+    "recommendedCount": 23,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a5b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC pavement in PDS shop street at Nellanthangal panchayat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 199030
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd3d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of threshing floor at Ganapapauram panchayat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 199695
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e463",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC pavement in Pilliyar koil street at Maruthuvambadi panchayat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 563389
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d50a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC pavement in Anthoniyar street at Nagengapattu panchayat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 199447
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC pavement in Pilliyar koil street at Iyangunnam panchayat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 199329
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.919Z"
+}

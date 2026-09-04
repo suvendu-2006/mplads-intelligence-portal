@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf64",
+    "name": "Shri Arjun Ram Meghwal",
+    "constituency": "BIKANER",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 34700414,
+    "utilizationPercentage": 23.60572380952381,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 19586063,
+    "inProgressPayments": 15114351,
+    "paymentGapPercentage": 43.556687825107794,
+    "completionRate": 21.518987341772153,
+    "pendingWorks": 45,
+    "unspentAmount": 112299586,
+    "totalRecommendedAmount": 77969376,
+    "name_hi": "Shri Arjun Ram Meghwal",
+    "constituency_hi": "BIKANER",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34700414,
+      "totalEntries": 46,
+      "avgExpenditure": 754356.8260869565,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12624139,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22076275,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34700414,
+        "transactionCount": 46,
+        "avgAmount": 754356.8260869565
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bf66",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Public Library, Meghwal Samaaj Chaatrawas, Nimbahera, District Chittorgarh\n\nWorking Agency : NagarPalika Nimbahera \n\nContact person : Dr. Tarachand Meghwal, Jila Parishad Sadsay, Chittorgarh +91-9636336699",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 954701
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b62a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sarwjanik Meghwal Samaj Hostal mein Hall Nirman Karya ; Working Agency : Gram Panchayat Barat, Panchayat Samiti Saakda",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1495786
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d881",
+        "workCategory": "Normal/Others",
+        "workDescription": "Beautification of Dr Bhim Rao Ambedkar Circle, Bikaner Working Agency Bikaner Development Authority, Bikaner",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 998064
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bee6",
+        "workCategory": "Trust and Society",
+        "workDescription": "Mahila Langar Tin Shed construction work, Mukam Nokha Bikaner Working agency  Akhil Bhartiya Bishnoi Mahasabha Mukam",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 2499935
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2db",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Hall, Near Amreshwar Mhadev Mandir, Harsholaav Talab Parisar, Bikaner ; Working Agency - PWD, Bikaner",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 716024
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.216Z"
+}

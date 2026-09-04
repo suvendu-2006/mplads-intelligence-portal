@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1fe",
+    "name": "Dr. M. Dhanapal (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 89248285.42,
+    "totalExpenditure": 23989964,
+    "utilizationPercentage": 26.88002787628231,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 24,
+    "completedWorksValue": 20303393,
+    "inProgressPayments": 3686571,
+    "paymentGapPercentage": 15.367138525093244,
+    "completionRate": 52.94117647058824,
+    "pendingWorks": -3,
+    "unspentAmount": 65258321.42,
+    "totalRecommendedAmount": 26927000,
+    "name_hi": "Dr. M. Dhanapal (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23989964,
+      "totalEntries": 34,
+      "avgExpenditure": 705587.1764705882,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 23989964,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23989964,
+        "transactionCount": 34,
+        "avgAmount": 705587.1764705882
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 24,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3242a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erction of Solar High mast LED light 9 meters pole, at bypass junction, near VAO office, pudupattinam panchayat, ThirukalukPanchayat Panchayat union",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 598904
+      },
+      {
+        "_id": "6a932bb5cd94452437a3242b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and erction of Solar LED light (9 meters) Pole 150W LED-4 Nos. in one Solar light at Perumalchery, Near Anjaneyar temple, at Pudupattinam village, Thirukalukundram Panchayat Union",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 598904
+      },
+      {
+        "_id": "6a932bb5cd94452437a32427",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erection of High mast LED Solar Light at old ECR, Hajiar Nagar, Pudupattinam Panchayat, Thirukalukundram Panchayat Union",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 598904
+      },
+      {
+        "_id": "6a932bb5cd94452437a3241a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erction of Solar High mast  LED light 9 meters pole,  at old ECR, Ilayanar kuppam Junction, pudupattinam panchayat, ThirukalukPanchayat Panchayat union",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 598904
+      },
+      {
+        "_id": "6a932bb5cd94452437a32428",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erction of Solar High mast LED light 9 meters pole, at old ECR, Mahatma Gandhi nagar, pudupattinam panchayat, ThirukalukPanchayat Panchayat union",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 598904
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.427Z"
+}

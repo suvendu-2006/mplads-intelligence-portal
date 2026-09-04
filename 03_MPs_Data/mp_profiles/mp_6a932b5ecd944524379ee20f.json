@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee20f",
+    "name": "Dr. Vikramjit Singh Sahney (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 198656208.57000002,
+    "totalExpenditure": 111224375.74,
+    "utilizationPercentage": 55.988371337917755,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 33,
+    "completedWorksValue": 60373951.74,
+    "inProgressPayments": 50850423.99999999,
+    "paymentGapPercentage": 45.718776717496546,
+    "completionRate": 45,
+    "pendingWorks": 6,
+    "unspentAmount": 87431832.83000003,
+    "totalRecommendedAmount": 113289504,
+    "name_hi": "Dr. Vikramjit Singh Sahney (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 111224375.74,
+      "totalEntries": 348,
+      "avgExpenditure": 319610.2751149425,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 19438175.74,
+        "transactionCount": 205
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 52069901,
+        "transactionCount": 66
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39716299,
+        "transactionCount": 77
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 111224375.74,
+        "transactionCount": 348,
+        "avgAmount": 319610.2751149425
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 33,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3202d",
+        "workCategory": "Normal/Others",
+        "workDescription": "MPLAD Grant of rupees 1170400 for Establishment of Skill Development Labs and other Facilities in Government Drug De addiction and Rehabilitation Centre Sangrur Please utilize the funds as per the request letter sent by civil surgeon Additionally the concerned authorities are kindly requested to ensure that the funds are utilized and the Utilization Certificate is submitted to the DC SAS Nagar upon work completion within 60 days of the grant failing which the grant will be reversed to the MPLAD",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 1164573
+      },
+      {
+        "_id": "6a932bb5cd94452437a31aff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Public Toilte under bridge Amloh Road Chownk, Ward no. 10",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 742754
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ab5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Public Toilets under bridge Malerkotla  Road Chownk Ward NO. 22, Khanna",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 577008
+      },
+      {
+        "_id": "6a932bb5cd94452437a31b11",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Public Toilet under bridge Samrala Road Chownk WNO 33",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 742768
+      },
+      {
+        "_id": "6a932bb5cd94452437a31b00",
+        "workCategory": "Normal/Others",
+        "workDescription": "Public Toilets under bridge Lalheri Road Chownk, Ward no. 33",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 742768
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.208Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb1",
+    "name": "TOKHAN SAHU",
+    "constituency": "BILASPUR",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55824852,
+    "utilizationPercentage": 37.97608979591837,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 24488056,
+    "inProgressPayments": 31336796,
+    "paymentGapPercentage": 56.134131802087,
+    "completionRate": 31.297709923664126,
+    "pendingWorks": 49,
+    "unspentAmount": 91175148,
+    "totalRecommendedAmount": 77364738,
+    "name_hi": "TOKHAN SAHU",
+    "constituency_hi": "BILASPUR",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55824852,
+      "totalEntries": 158,
+      "avgExpenditure": 353321.84810126584,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3080000,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24887934,
+        "transactionCount": 76
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27856918,
+        "transactionCount": 70
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55824852,
+        "transactionCount": 158,
+        "avgAmount": 353321.84810126584
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e910",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chhattisgarh H.S.School Bilaspur me Shed Nirman",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 1600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e714",
+        "workCategory": "Normal/Others",
+        "workDescription": "Baharmuda Sanskritik Bhawan Talab Ke Paas Kitchen Shed Nirman Tifra.",
+        "completedDate": "2026-07-14T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e736",
+        "workCategory": "Normal/Others",
+        "workDescription": "PGBT College Bilaspur Me Ladies Toilets Nirman Kary",
+        "completedDate": "2026-07-13T00:00:00.000Z",
+        "finalAmount": 410242
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e039",
+        "workCategory": "Normal/Others",
+        "workDescription": "P.G.B.T. College Bilaspur me Badmintan Court me Shed Nirman",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 799797
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e03a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward No.16 I Tulja Bhawani Samudayik Bhawan me Atirikt Kaksh Nirman Kary",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 999061
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.738Z"
+}

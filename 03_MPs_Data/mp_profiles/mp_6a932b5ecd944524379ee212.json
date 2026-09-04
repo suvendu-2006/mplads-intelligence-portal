@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee212",
+    "name": "Prof. Manoj Kumar Jha (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 191620112.11,
+    "totalExpenditure": 87200986,
+    "utilizationPercentage": 45.50722000931825,
+    "completedWorksCount": 110,
+    "recommendedWorksCount": 66,
+    "completedWorksValue": 86001095,
+    "inProgressPayments": 1199891,
+    "paymentGapPercentage": 1.376006230021298,
+    "completionRate": 62.5,
+    "pendingWorks": -44,
+    "unspentAmount": 104419126.11000001,
+    "totalRecommendedAmount": 74810899,
+    "name_hi": "Prof. Manoj Kumar Jha (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87200986,
+      "totalEntries": 111,
+      "avgExpenditure": 785594.4684684685,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 64739000,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22461986,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87200986,
+        "transactionCount": 111,
+        "avgAmount": 785594.4684684685
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 110,
+    "recommendedCount": 66,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323e2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road Near Inter college west Sanjeev ji House Located in Ward No 21 Nagar Nigam Saharsa",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 1497150
+      },
+      {
+        "_id": "6a932bb5cd94452437a322aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road Near S.N. Public School to Satsang bhawan Located in Ward No 04 Nagar Nigam Saharsa",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 1483174
+      },
+      {
+        "_id": "6a932bb5cd94452437a323e3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Meeting Hall At PG Center, Saharsa Ward No 31 under Saharsa District",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 1065877
+      },
+      {
+        "_id": "6a932bb5cd94452437a32234",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road Ramdas khet to Naga Kamat house Located in Kasimpur Panchayat Ward No 16 under Nowhatta block",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 1493860
+      },
+      {
+        "_id": "6a932bb5cd94452437a32238",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation work of high mast light near old Durga place, ward no. 06, Pathra south panchayat, Pipra block, Supaul district.",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 820000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.241Z"
+}

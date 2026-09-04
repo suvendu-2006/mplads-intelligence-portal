@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "buildCommand": "cd web && npm install && npm run build",
+  "outputDirectory": "web/dist",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "api/mplads_dev.db"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api|assets|favicon).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

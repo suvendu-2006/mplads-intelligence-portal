@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf88",
+    "name": "SMITA UDAY WAGH",
+    "constituency": "JALGAON",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148107373.11,
+    "totalExpenditure": 14030677,
+    "utilizationPercentage": 9.473314329583951,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 1,
+    "completedWorksValue": 14030677,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 90,
+    "pendingWorks": -8,
+    "unspentAmount": 134076696.11000001,
+    "totalRecommendedAmount": 2000000,
+    "name_hi": "SMITA UDAY WAGH",
+    "constituency_hi": "JALGAON",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14030677,
+      "totalEntries": 9,
+      "avgExpenditure": 1558964.111111111,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12530777,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 1499900,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14030677,
+        "transactionCount": 9,
+        "avgAmount": 1558964.111111111
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 1,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d7a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protective walls and necessary structures at Jalgaon Officers Club Gymkhana",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 1499900
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb00",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete road in Ward No.5,at Patonda,Ta. Chalisgaon",
+        "completedDate": "2025-12-04T00:00:00.000Z",
+        "finalAmount": 699511
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b647",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Juvenile Home (Balsudhar gruh) office building at Jalgaon",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 2490157
+      },
+      {
+        "_id": "6a932bb5cd94452437a1851a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary  wall for the community building in front of the onion market on Nagad Road, Chalisgaon",
+        "completedDate": "2025-06-06T00:00:00.000Z",
+        "finalAmount": 1999472
+      },
+      {
+        "_id": "6a932bb5cd94452437a18109",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting work at Dhorwada in Ward No. 5 of Chalisgaon city",
+        "completedDate": "2025-05-19T00:00:00.000Z",
+        "finalAmount": 998933
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.664Z"
+}

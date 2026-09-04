@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa4",
+    "name": "SURESH GOPI",
+    "constituency": "THRISSUR",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 16001891,
+    "utilizationPercentage": 10.885640136054421,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 13209096,
+    "inProgressPayments": 2792795,
+    "paymentGapPercentage": 17.45290603466803,
+    "completionRate": 16.666666666666664,
+    "pendingWorks": 60,
+    "unspentAmount": 130998109,
+    "totalRecommendedAmount": 103417016,
+    "name_hi": "SURESH GOPI",
+    "constituency_hi": "THRISSUR",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16001891,
+      "totalEntries": 21,
+      "avgExpenditure": 761994.8095238095,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5851023,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10150868,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16001891,
+        "transactionCount": 21,
+        "avgAmount": 761994.8095238095
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e4dd",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and renovation of  Peringad Chukku Bazaar Road",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 788923
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e32c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking of Saraswathy Vilasam Road in Ward 13 of Engandiyur GP",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1663901
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e311",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Two 12 m High Mast with 200 W x 6 number of Flood Lights in (1) the Manjanam Moola Road near Avittathur Mahadeva Temple, Vellookkara, and (2)  Chengattumuri - Thommana Road, West Side of  Avittathur Mahadeva Temple, Vellookkara.",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 890456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d450",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a mini mast light in Ward 3 of Varandarappilly Grama Panchayath",
+        "completedDate": "2026-03-03T00:00:00.000Z",
+        "finalAmount": 154435
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d20d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting of Noordeen Master Memorial Road, in Ward 2, Pavaratty GP",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 1071308
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.488Z"
+}

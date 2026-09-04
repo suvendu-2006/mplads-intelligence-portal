@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded0",
+    "name": "Mitesh Rameshbhai Bakabhai Patel",
+    "constituency": "ANAND",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58303147,
+    "utilizationPercentage": 39.66200476190476,
+    "completedWorksCount": 247,
+    "recommendedWorksCount": 280,
+    "completedWorksValue": 46772418,
+    "inProgressPayments": 11530729,
+    "paymentGapPercentage": 19.777198304578654,
+    "completionRate": 46.86907020872865,
+    "pendingWorks": 33,
+    "unspentAmount": 88696853,
+    "totalRecommendedAmount": 70095109,
+    "name_hi": "Mitesh Rameshbhai Bakabhai Patel",
+    "constituency_hi": "ANAND",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58303147,
+      "totalEntries": 293,
+      "avgExpenditure": 198986.84982935153,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 123429,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 19119233,
+        "transactionCount": 100
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39060485,
+        "transactionCount": 192
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58303147,
+        "transactionCount": 293,
+        "avgAmount": 198986.84982935153
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 247,
+    "recommendedCount": 280,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e54f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vaghari Vas Vistarma Shed nu Kam",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e54d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ranipura PRathmik Shala ma Shed Nu Kam.",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e55b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bhathiji Mandir thi Nadi Taraf jata main road thi takhatsinh ravjibhai padhiyar na vistarma jato rasto c.c roadnu kam",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dceb",
+        "workCategory": "Normal/Others",
+        "workDescription": "gam ni bhagole block paving nu kam,",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd17",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dilipbhai Chimanbhai Thakorna Ghar pase Patnagar Vistarma Block Paving nu Kam",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 159148
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.234Z"
+}

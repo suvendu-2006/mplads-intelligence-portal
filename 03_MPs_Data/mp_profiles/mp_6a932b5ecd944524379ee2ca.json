@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2ca",
+    "name": "Smt. S. Phangnon Konyak (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Nagaland",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 206563957.11,
+    "totalExpenditure": 196418200,
+    "utilizationPercentage": 95.08832167433879,
+    "completedWorksCount": 57,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 144763000,
+    "inProgressPayments": 51655200,
+    "paymentGapPercentage": 26.298581292364965,
+    "completionRate": 74.02597402597402,
+    "pendingWorks": -37,
+    "unspentAmount": 10145757.110000014,
+    "totalRecommendedAmount": 59408000,
+    "name_hi": "Smt. S. Phangnon Konyak (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Nagaland"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 196418200,
+      "totalEntries": 124,
+      "avgExpenditure": 1584017.7419354839,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 11750000,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 55000000,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 77925400,
+        "transactionCount": 44
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 51742800,
+        "transactionCount": 41
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 196418200,
+        "transactionCount": 124,
+        "avgAmount": 1584017.7419354839
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 57,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32027",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tree and crops plantation on a degraded mining land.",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31da1",
+        "workCategory": "Normal/Others",
+        "workDescription": "The construction of toilet facility at Ruzhukhrie government school would provide clean and accessible toilet facilities ensuring comfort and hygiene for the students.",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31da0",
+        "workCategory": "Normal/Others",
+        "workDescription": "The construction of this CRSM drain will greatly benefit the locality as it serves as the primary outlet for stormwater and wastewater from the main bazaar, improving drainage and reducing flooding risks.",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 1040000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3190c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Wangkhao College, the only government college in the district catering to approximately six hundred students has acute shortage of water supply in the campus. Hence, the construction of bore well and installation of a filtration system will help facilitate the supply of proper drinking water to the faculty and students",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ba8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of proper footpath,  at Tanlao ward, Mon Town will benefit over 300 house hold living in the area and its adjacent Douglas colony for better accessibility and connection to the rest of the town.",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.533Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf16",
+    "name": "RAJABHAU",
+    "constituency": "NASHIK",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 152878682.11,
+    "totalExpenditure": 46498714,
+    "utilizationPercentage": 30.41543357009254,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 89,
+    "completedWorksValue": 21311605,
+    "inProgressPayments": 25187109,
+    "paymentGapPercentage": 54.167323853300545,
+    "completionRate": 19.090909090909093,
+    "pendingWorks": 68,
+    "unspentAmount": 106379968.11000001,
+    "totalRecommendedAmount": 86379500,
+    "name_hi": "RAJABHAU",
+    "constituency_hi": "NASHIK",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 46498714,
+      "totalEntries": 49,
+      "avgExpenditure": 948953.3469387755,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10671422,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35827292,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 46498714,
+        "transactionCount": 49,
+        "avgAmount": 948953.3469387755
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 89,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protective wall along Shiv Nadis in Nageshwari area. Tal. Sinnar, Dist. Nashik",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1426075
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e171",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a meeting hall in Nehru Chowk area within Sinnar Municipal Council limits",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 2788673
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e020",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a social hall in Plot No. 29 Group No. 494 2  Ashok Nagar Satpur T D Nashik",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 979000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df90",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting of road at Ekta Nagar, Panchak, Jail Road, Taluka. Dist. Nashik",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 989500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bebd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting the road in the Bhikanbaba Temple area of Dapur  Sinnar",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 745000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.655Z"
+}

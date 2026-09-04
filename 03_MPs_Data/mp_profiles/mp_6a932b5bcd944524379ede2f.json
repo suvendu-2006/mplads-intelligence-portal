@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede2f",
+    "name": "DHARMENDRA YADAV",
+    "constituency": "AZAMGARH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61248647,
+    "utilizationPercentage": 41.6657462585034,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 52,
+    "completedWorksValue": 24967281,
+    "inProgressPayments": 36281366,
+    "paymentGapPercentage": 59.23619178069354,
+    "completionRate": 23.52941176470588,
+    "pendingWorks": 36,
+    "unspentAmount": 85751353,
+    "totalRecommendedAmount": 70711455,
+    "name_hi": "DHARMENDRA YADAV",
+    "constituency_hi": "AZAMGARH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61248647,
+      "totalEntries": 53,
+      "avgExpenditure": 1155634.8490566039,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27669889,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33578758,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61248647,
+        "transactionCount": 53,
+        "avgAmount": 1155634.8490566039
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 52,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e37e",
+        "workCategory": "Normal/Others",
+        "workDescription": "village chak sethval block rani kisarai, shri ganga yadav ke ghar se government school tak CC Road work.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1388466
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e366",
+        "workCategory": "Normal/Others",
+        "workDescription": "village ishwarpur me kawaldhari inter college ke pass shri indrapal yadav ke ghar tak CC road work",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1689880
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb54",
+        "workCategory": "Normal/Others",
+        "workDescription": "8KVA Solar Panel Installation Work in Vishvakarma Bhawan.",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 1060000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c266",
+        "workCategory": "Normal/Others",
+        "workDescription": "village Tarava Block Bilriyaganj Goplapur me 25KVA Transformer work",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 148252
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a85e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 25 KVA DP with 2 poles with wire in land of shri Musafir Yadav.",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 199546
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.719Z"
+}

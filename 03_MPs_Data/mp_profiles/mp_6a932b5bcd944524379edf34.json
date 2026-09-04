@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf34",
+    "name": "RICHARD VANLALHMANGAIHA",
+    "constituency": "MIZORAM",
+    "state": "Mizoram",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 96361729,
+    "utilizationPercentage": 65.55219659863945,
+    "completedWorksCount": 134,
+    "recommendedWorksCount": 132,
+    "completedWorksValue": 70434229,
+    "inProgressPayments": 25927500,
+    "paymentGapPercentage": 26.90642879602129,
+    "completionRate": 50.37593984962406,
+    "pendingWorks": -2,
+    "unspentAmount": 50638271,
+    "totalRecommendedAmount": 52960000,
+    "name_hi": "RICHARD VANLALHMANGAIHA",
+    "constituency_hi": "MIZORAM",
+    "state_hi": "Mizoram"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 96361729,
+      "totalEntries": 319,
+      "avgExpenditure": 302074.3855799373,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 63325115,
+        "transactionCount": 238
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33036614,
+        "transactionCount": 81
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 96361729,
+        "transactionCount": 319,
+        "avgAmount": 302074.3855799373
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 134,
+    "recommendedCount": 132,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a663",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC flooring of approach road from Faith Home road to National Highway",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a66a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bazar shed at Keitum",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a660",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Makeshift building at Serchhip District Hospital",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 1990000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c826",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Gallery at Centenary Sports Complex, Keifang",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c476",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of MHIP building, Luangmual",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.728Z"
+}

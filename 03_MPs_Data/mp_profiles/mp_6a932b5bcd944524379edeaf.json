@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeaf",
+    "name": "LALJI VERMA",
+    "constituency": "AMBEDKAR NAGAR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 86165424,
+    "utilizationPercentage": 58.61593469387755,
+    "completedWorksCount": 61,
+    "recommendedWorksCount": 202,
+    "completedWorksValue": 45423544,
+    "inProgressPayments": 40741880,
+    "paymentGapPercentage": 47.283327939058246,
+    "completionRate": 23.193916349809886,
+    "pendingWorks": 141,
+    "unspentAmount": 60834576,
+    "totalRecommendedAmount": 89862800,
+    "name_hi": "LALJI VERMA",
+    "constituency_hi": "AMBEDKAR NAGAR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86165424,
+      "totalEntries": 287,
+      "avgExpenditure": 300227.95818815334,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 40602396,
+        "transactionCount": 167
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 45563028,
+        "transactionCount": 120
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86165424,
+        "transactionCount": 287,
+        "avgAmount": 300227.95818815334
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 61,
+    "recommendedCount": 202,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b62e",
+        "workCategory": "Trust and Society",
+        "workDescription": "G D INTERNATIONAL SCHOOL BHATAULI POST ASGAWAN DISTT AMBEDKAR NAGAR KO 1 KACHCH NIRMAN KARYA",
+        "completedDate": "2026-07-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d01b",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM MAU PAKKI SADAK SE MANIRAM KE KHET TAK KHADANJA KARYA DURI 525M",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 986380
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d022",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM NETWARI CHATURPUR ME SHRI DEEPAK VERMA KE GHAR SE SHRI VRUN VERMA KE GHAR TAK CC ROAD KARYA DURI 184M",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 975569
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d021",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM SABHA PARMANANDPUR ME SHRI KARAMDEV PRAJAPATI KE GHAR SE SHRI GUDUR KANNAUJIYA KE GHAR TAK INTERLOCKING KARYA DURI 114M",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 521466
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d020",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM SABHA SIHIPUR NABHA KA PURA SHRI SANTOSH KANNAUJIYA KE GHAR TAK KHADANJA KARYA DURI 245M",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 514853
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.679Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc5",
+    "name": "Vishnu Dayal Ram",
+    "constituency": "PALAMU",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 158176083.11,
+    "totalExpenditure": 83852477,
+    "utilizationPercentage": 53.01210862686913,
+    "completedWorksCount": 117,
+    "recommendedWorksCount": 154,
+    "completedWorksValue": 60158321,
+    "inProgressPayments": 23694156,
+    "paymentGapPercentage": 28.256954174412762,
+    "completionRate": 43.17343173431734,
+    "pendingWorks": 37,
+    "unspentAmount": 74323606.11000001,
+    "totalRecommendedAmount": 55162300,
+    "name_hi": "Vishnu Dayal Ram",
+    "constituency_hi": "PALAMU",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 83852477,
+      "totalEntries": 333,
+      "avgExpenditure": 251809.24024024024,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 47667896,
+        "transactionCount": 174
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36184581,
+        "transactionCount": 159
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 83852477,
+        "transactionCount": 333,
+        "avgAmount": 251809.24024024024
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 117,
+    "recommendedCount": 154,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "15. Construction of 300 feet PCC road from Thakur Bari Siwan to cremation ground in village Koriadih",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 449600
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 300 feet PCC road from Parhiya Tola to Devi Dham in village Khodhi",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 449600
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 300 feet PCC road from Naresh Paswan house to Ramnath Prajapati house in village Goradih",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 449600
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "9. Construction of 300 feet PCC road from Rakesh Pandey  house to Jwala Pandey house in village Kokarsa",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 449540
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e46e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of deep bore near Gunjari Devi farm in village Navadih Tola Barwahi",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 299404
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.243Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb9",
+    "name": "AFZAL ANSARI",
+    "constituency": "GHAZIPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 220500000,
+    "totalExpenditure": 106722563,
+    "utilizationPercentage": 48.40025532879819,
+    "completedWorksCount": 35,
+    "recommendedWorksCount": 396,
+    "completedWorksValue": 34821719,
+    "inProgressPayments": 71900844,
+    "paymentGapPercentage": 67.37173656520974,
+    "completionRate": 8.120649651972158,
+    "pendingWorks": 361,
+    "unspentAmount": 113777437,
+    "totalRecommendedAmount": 165360480,
+    "name_hi": "AFZAL ANSARI",
+    "constituency_hi": "GHAZIPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 106722563,
+      "totalEntries": 285,
+      "avgExpenditure": 374465.13333333336,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 68266223,
+        "transactionCount": 119
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38456340,
+        "transactionCount": 166
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 106722563,
+        "transactionCount": 285,
+        "avgAmount": 374465.13333333336
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 35,
+    "recommendedCount": 396,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1874b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary Wall at: Kshetr Panchayat Karanda, Gram Panchayat Sikanderpur, Qabristan\n50 Mtr x 18 Mtr, Development Agency - Vikas Khand Karanda",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 695660
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C. Road by R.E.S. Ghazipur in Block Sadar, Village Babedi, from Ashok Ram house to Uma Shankar Peshkar house, estimated length 100m x 2.40m x 10cm, proposed cost 4 lakh rupees.",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 267157
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb85",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of India Marka II Hand pumps at 1 Jagdishpur 2 Pachukhar 3 Sendura 4 Darauli 5 Arballampur 6 Ashechanpur 7 Usiya Satainarwa 8 Nirhu 9 Bara 10 Dewkali 11 Chuthan 12 Dildar Nagar 13 Nagsar Nevaju 14 Magarkhayi 15 Dhuska 16 Usiya",
+        "completedDate": "2026-02-05T00:00:00.000Z",
+        "finalAmount": 470218
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb89",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of India Marka II Hand pump at 1 Bhatuali 2 Vishnupura 3 Sultanpur Bairisaal 4 Baghi 5 Rasoolpur 6 Imiliya 7 Bariya Sabua 8 Vishnupura 9 Dharammapur 10 Andhuwa 11 Khanpur 12 Shikandra 13 Jamaao Asmshaan 14 Nagwa Chatti",
+        "completedDate": "2026-02-05T00:00:00.000Z",
+        "finalAmount": 512724
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb86",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of India Marka II Handpump 1 Damodarpur 2 Alipur 3 Gajadharpur Paschimpura 4 Chilar Post Rampur 5 Avdar Khetabpur 6 Budhanpur Dhava Faridpur 7 Manjhanpur Hansrajpur Alipur 8 Chakfarid Bahiryabad 9 Paniksa Post 10 Bijhari Audasan 11 manjhanpur 12 Madra 13 Chaudi 14 Naseerpur Kiyariya 15 Katya 16 kasba Koiyri 17 Andhokhar 18  Bijwasi banwasi 19 Madhuvan 20 Mayhar Chadawod 21 Mustafabad rasolpur 22 Lalpur Hari 23 Naserpur 24 Bairanpur 25 Sarauli 26 Kaula 27 Jhotna 28 malethi 29 Rajapur",
+        "completedDate": "2026-02-05T00:00:00.000Z",
+        "finalAmount": 1153629
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.226Z"
+}

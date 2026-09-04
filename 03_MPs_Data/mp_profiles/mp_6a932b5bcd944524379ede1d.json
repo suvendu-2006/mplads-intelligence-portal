@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede1d",
+    "name": "CHINTAMANI MAHARAJ",
+    "constituency": "SARGUJA",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61420121,
+    "utilizationPercentage": 41.78239523809524,
+    "completedWorksCount": 69,
+    "recommendedWorksCount": 260,
+    "completedWorksValue": 25091889,
+    "inProgressPayments": 36328232,
+    "paymentGapPercentage": 59.14711890587125,
+    "completionRate": 20.972644376899694,
+    "pendingWorks": 191,
+    "unspentAmount": 85579879,
+    "totalRecommendedAmount": 73833137,
+    "name_hi": "CHINTAMANI MAHARAJ",
+    "constituency_hi": "SARGUJA",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61420121,
+      "totalEntries": 372,
+      "avgExpenditure": 165107.85215053763,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 38086841,
+        "transactionCount": 238
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23333280,
+        "transactionCount": 134
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61420121,
+        "transactionCount": 372,
+        "avgAmount": 165107.85215053763
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 69,
+    "recommendedCount": 260,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17577",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHYAT KANDRAI YOGI MADA KE PAAS SAMUDAYIK BHAWAN",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 499550
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b455",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHYAT DEODHI ME GOANDPARA RAM SAKAL KE GHAR KE ROAD ME PIPE PULIYA NIRMAN",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 299256
+      },
+      {
+        "_id": "6a932bb5cd94452437a180d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHYAT SEMARA ME PULIYA NIRMAN MAIN ROAD SE SEMRATALA PAHUNCH MARG ME",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 499963
+      },
+      {
+        "_id": "6a932bb5cd94452437a180d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHYAT GHUTRADIH KE NAWATOLI BASTI ME C.C. ROAD NIRMAN",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 495369
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b5bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHYAT JAMDI ME ANIL KE KHET KE PAAS TATBANDH NIRMAN",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 998977
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.330Z"
+}

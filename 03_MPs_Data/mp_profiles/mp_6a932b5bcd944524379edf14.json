@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf14",
+    "name": "RAJ KUMAR ROAT",
+    "constituency": "BANSWARA",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 63286521,
+    "utilizationPercentage": 43.05205510204082,
+    "completedWorksCount": 23,
+    "recommendedWorksCount": 82,
+    "completedWorksValue": 21117279,
+    "inProgressPayments": 42169242,
+    "paymentGapPercentage": 66.63226439639493,
+    "completionRate": 21.904761904761905,
+    "pendingWorks": 59,
+    "unspentAmount": 83713479,
+    "totalRecommendedAmount": 100170000,
+    "name_hi": "RAJ KUMAR ROAT",
+    "constituency_hi": "BANSWARA",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 63286521,
+      "totalEntries": 121,
+      "avgExpenditure": 523029.0991735537,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4100692,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 38419829,
+        "transactionCount": 66
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20766000,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 63286521,
+        "transactionCount": 121,
+        "avgAmount": 523029.0991735537
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 23,
+    "recommendedCount": 82,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16d15",
+        "workCategory": "Normal/Others",
+        "workDescription": "GSSS Ootiya mein dom nirman kary",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 978862
+      },
+      {
+        "_id": "6a932bb5cd94452437a17d52",
+        "workCategory": "Normal/Others",
+        "workDescription": "GSSS Palisoda mein Kaksha-Kaksha Nirman Kary",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1790042
+      },
+      {
+        "_id": "6a932bb5cd94452437a16cd9",
+        "workCategory": "Normal/Others",
+        "workDescription": "GSSS Gariyata mein tin shed nirman kary",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 991053
+      },
+      {
+        "_id": "6a932bb5cd94452437a16ccb",
+        "workCategory": "Normal/Others",
+        "workDescription": "GSSS Kasariya mein Tin Shed nirman kary",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 999998
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb97",
+        "workCategory": "Normal/Others",
+        "workDescription": "GUPS Dhah Kadhai mein Dom Nirman and Samtalikaran Kary",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 999594
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.415Z"
+}

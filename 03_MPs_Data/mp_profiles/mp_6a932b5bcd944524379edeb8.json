@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb8",
+    "name": "Magunta Sreenivasulu Reddy",
+    "constituency": "ONGOLE",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11878734,
+    "utilizationPercentage": 8.08077142857143,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 18,
+    "completedWorksValue": 2500000,
+    "inProgressPayments": 9378734,
+    "paymentGapPercentage": 78.95398617394748,
+    "completionRate": 5.263157894736842,
+    "pendingWorks": 17,
+    "unspentAmount": 135121266,
+    "totalRecommendedAmount": 20085400,
+    "name_hi": "Magunta Sreenivasulu Reddy",
+    "constituency_hi": "ONGOLE",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11878734,
+      "totalEntries": 10,
+      "avgExpenditure": 1187873.4,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2999443,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8879291,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11878734,
+        "transactionCount": 10,
+        "avgAmount": 1187873.4
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 18,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d99e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional amenities at District Police Training Centre, Kothamamidipalem of Ongole Town",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 2500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.494Z"
+}

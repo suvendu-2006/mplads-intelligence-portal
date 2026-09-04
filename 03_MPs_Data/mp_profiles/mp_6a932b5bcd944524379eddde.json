@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddde",
+    "name": "ARUNA. D. K",
+    "constituency": "MAHABUBNAGAR",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44232038,
+    "utilizationPercentage": 30.08982176870748,
+    "completedWorksCount": 127,
+    "recommendedWorksCount": 195,
+    "completedWorksValue": 34958077,
+    "inProgressPayments": 9273961,
+    "paymentGapPercentage": 20.96661474201121,
+    "completionRate": 39.44099378881988,
+    "pendingWorks": 68,
+    "unspentAmount": 102767962,
+    "totalRecommendedAmount": 77200000,
+    "name_hi": "ARUNA. D. K",
+    "constituency_hi": "MAHABUBNAGAR",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44232038,
+      "totalEntries": 153,
+      "avgExpenditure": 289098.2875816993,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 19501916,
+        "transactionCount": 71
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24730122,
+        "transactionCount": 82
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44232038,
+        "transactionCount": 153,
+        "avgAmount": 289098.2875816993
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 127,
+    "recommendedCount": 195,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e56d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erection of High Mast with LED Flood Lights near Bus Stand in Edira (V)",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249286
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e56e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erection of High Mast with LED Flood Lights  near Bus stand in Jakaram (V)",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249260
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e567",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erection of High Mast with LED Flood Lights near Balvanth Reddy House in Parvathapur (V)",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249286
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e568",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erection of High Mast with LED Flood Lights near Maisamma Temple in Jilled (V)",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249260
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e573",
+        "workCategory": "Normal/Others",
+        "workDescription": "Erection of High Mast with LED Flood Lights at Baljarla Thanda (V), Vemulanarva GP",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 249836
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.688Z"
+}

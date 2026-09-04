@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf9b",
+    "name": "SUDHAKAR SINGH",
+    "constituency": "BUXAR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 185211956.54,
+    "totalExpenditure": 123581875,
+    "utilizationPercentage": 66.72456644196735,
+    "completedWorksCount": 98,
+    "recommendedWorksCount": 106,
+    "completedWorksValue": 97184694,
+    "inProgressPayments": 26397181,
+    "paymentGapPercentage": 21.360074849163762,
+    "completionRate": 48.03921568627451,
+    "pendingWorks": 8,
+    "unspentAmount": 61630081.53999999,
+    "totalRecommendedAmount": 87004800,
+    "name_hi": "SUDHAKAR SINGH",
+    "constituency_hi": "BUXAR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 123581875,
+      "totalEntries": 176,
+      "avgExpenditure": 702169.7443181818,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 7836739,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 65925813,
+        "transactionCount": 102
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 49819323,
+        "transactionCount": 66
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 123581875,
+        "transactionCount": 176,
+        "avgAmount": 702169.7443181818
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 98,
+    "recommendedCount": 106,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b8ab",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of community hall with toilet at Pachauli village",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 1489247
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b532",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall for chauhan society at Bhaluni dham",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 1491665
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b8ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of community hall with toilet for vishwakarma society at Bhaluni Dham",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 1491693
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc5f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of gym according to letter",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1983225
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc5e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of gym according to letter",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1989030
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.539Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede7b",
+    "name": "JASHUBHAI BHILUBHAI RATHVA",
+    "constituency": "CHHOTA UDAIPUR",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 38424412,
+    "utilizationPercentage": 26.139055782312926,
+    "completedWorksCount": 96,
+    "recommendedWorksCount": 248,
+    "completedWorksValue": 32109147,
+    "inProgressPayments": 6315265,
+    "paymentGapPercentage": 16.435554043091148,
+    "completionRate": 27.906976744186046,
+    "pendingWorks": 152,
+    "unspentAmount": 108575588,
+    "totalRecommendedAmount": 72685088,
+    "name_hi": "JASHUBHAI BHILUBHAI RATHVA",
+    "constituency_hi": "CHHOTA UDAIPUR",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38424412,
+      "totalEntries": 121,
+      "avgExpenditure": 317557.12396694213,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12219829,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26204583,
+        "transactionCount": 83
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38424412,
+        "transactionCount": 121,
+        "avgAmount": 317557.12396694213
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 96,
+    "recommendedCount": 248,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9c3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Paver block work in Kanteshwar village, Navinagari",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 198384
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e99d",
+        "workCategory": "Normal/Others",
+        "workDescription": "SAMASPURA GAME HANUMANJI MANDIR THI RANCHHODJI MANDIR SUDHI RCC ROAD NU KAM",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 350000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e84c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of C.C.Road",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e802",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of CC Road",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 224138
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of Paver block",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.464Z"
+}

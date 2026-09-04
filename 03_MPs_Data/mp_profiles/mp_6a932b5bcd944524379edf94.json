@@ -1,0 +1,76 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf94",
+    "name": "Smt Sangeeta Kumari Singh Deo",
+    "constituency": "BOLANGIR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 4193424,
+    "utilizationPercentage": 2.852669387755102,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 225,
+    "completedWorksValue": 1000000,
+    "inProgressPayments": 3193424,
+    "paymentGapPercentage": 76.15313881925604,
+    "completionRate": 1.3157894736842104,
+    "pendingWorks": 222,
+    "unspentAmount": 142806576,
+    "totalRecommendedAmount": 78450000,
+    "name_hi": "Smt Sangeeta Kumari Singh Deo",
+    "constituency_hi": "BOLANGIR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 4193424,
+      "totalEntries": 14,
+      "avgExpenditure": 299530.28571428574,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 4193424,
+        "transactionCount": 14
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 4193424,
+        "transactionCount": 14,
+        "avgAmount": 299530.28571428574
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 225,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e318",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of Mandap at Kanijuri in Bhalegaon GP",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df76",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete road at Lehsunpada",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d652",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC near Shirdi Sai Mandir near Neelachakra Nagar, Ward No. 8",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.896Z"
+}

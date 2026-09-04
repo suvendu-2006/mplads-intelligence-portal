@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede67",
+    "name": "Gumma Thanuja Rani",
+    "constituency": "ARAKU",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 149458905.11,
+    "totalExpenditure": 73149314,
+    "utilizationPercentage": 48.94276051745659,
+    "completedWorksCount": 28,
+    "recommendedWorksCount": 104,
+    "completedWorksValue": 39390323,
+    "inProgressPayments": 33758991,
+    "paymentGapPercentage": 46.150796438091,
+    "completionRate": 21.21212121212121,
+    "pendingWorks": 76,
+    "unspentAmount": 76309591.11000001,
+    "totalRecommendedAmount": 63406400,
+    "name_hi": "Gumma Thanuja Rani",
+    "constituency_hi": "ARAKU",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 73149314,
+      "totalEntries": 90,
+      "avgExpenditure": 812770.1555555556,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 33937494,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39211820,
+        "transactionCount": 69
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 73149314,
+        "transactionCount": 90,
+        "avgAmount": 812770.1555555556
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 28,
+    "recommendedCount": 104,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c4e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community centers and community halls",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 3988680
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Six electrical Pools from ZP Road to Bangaramma Temple and Twelve Electrical Pools from WPS Shed to Burial Ground",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 254158
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc71",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road from Korra Chittamma House to Lonja Giribabu house at Lingeti Village in Lingeti GP of Pedayalu Mandal, ASR dt",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 498459
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc72",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road from PR road to Korra Chittamma House at Lingeti Village of Lingeti GP, Pedayalu Mandal, ASR dt",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 498973
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d603",
+        "workCategory": "Normal/Others",
+        "workDescription": "Formation of Internal cC road with drain in Dedaripuram GP in GL Puram Mandal",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 486815
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.689Z"
+}

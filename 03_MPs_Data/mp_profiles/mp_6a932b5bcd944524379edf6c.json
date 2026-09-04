@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf6c",
+    "name": "Shri Hanuman Beniwal",
+    "constituency": "NAGAUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 67502015,
+    "utilizationPercentage": 45.919738095238095,
+    "completedWorksCount": 177,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 51926601,
+    "inProgressPayments": 15575414,
+    "paymentGapPercentage": 23.073998605819394,
+    "completionRate": 70.23809523809523,
+    "pendingWorks": -102,
+    "unspentAmount": 79497985,
+    "totalRecommendedAmount": 47426000,
+    "name_hi": "Shri Hanuman Beniwal",
+    "constituency_hi": "NAGAUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67502015,
+      "totalEntries": 316,
+      "avgExpenditure": 213613.97151898735,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 11273966,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24143169,
+        "transactionCount": 136
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32084880,
+        "transactionCount": 112
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67502015,
+        "transactionCount": 316,
+        "avgAmount": 213613.97151898735
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 177,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16a5c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of One Class Room In Govt Primary School ,Son Nagar (Bhojas)",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf34",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Digital Library in Village Jusriya",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1499851
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e96d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundy wall in Graveyard IN VILLAGE Khatiya Basni",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 696539
+      },
+      {
+        "_id": "6a932bb5cd94452437a16ab7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Community Hall Near Bhomiyaji ka than,Aahuti Nadi, Village- Dholiyader (G.P.-Pabusar)",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 999500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ceb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Prayer place WITH Teen shade",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 998749
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.213Z"
+}

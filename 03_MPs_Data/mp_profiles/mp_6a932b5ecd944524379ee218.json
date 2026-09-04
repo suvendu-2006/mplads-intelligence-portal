@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee218",
+    "name": "Shri Akhilesh Prasad Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 186200000,
+    "totalExpenditure": 62309563,
+    "utilizationPercentage": 33.463782491944144,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 49706511,
+    "inProgressPayments": 12603052,
+    "paymentGapPercentage": 20.226513223981364,
+    "completionRate": 65.51724137931035,
+    "pendingWorks": -18,
+    "unspentAmount": 123890437,
+    "totalRecommendedAmount": 27011700,
+    "name_hi": "Shri Akhilesh Prasad Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62309563,
+      "totalEntries": 50,
+      "avgExpenditure": 1246191.26,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 26551186,
+        "transactionCount": 18
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35758377,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62309563,
+        "transactionCount": 50,
+        "avgAmount": 1246191.26
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31ee2",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Community building near Jhunathi Mahadev temple in Nagwan Panchayat of Karpi Balok Arwal district",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 996971
+      },
+      {
+        "_id": "6a932bb5cd94452437a3245b",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Motihari district under Banjaria Block in Semra Panchayat construction of a PCC road from the Primary School Pandey Tola upto kabristan in Ward No 6",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1486313
+      },
+      {
+        "_id": "6a932bb5cd94452437a3248e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC construction work on the path leading from Jailal Yadavs house to Prabhu Yadavs house in Ward No 7 Semra Khas of Semra Panchayat of Banjaria Block under Motihari District",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1480950
+      },
+      {
+        "_id": "6a932bb5cd94452437a3218c",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Stairs in Kushare river in naraga Panchayat of Karpi Block of Arwal District",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 988599
+      },
+      {
+        "_id": "6a932bb5cd94452437a32083",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road and underground drain from Arun Kumar house to Nityanand Bhangs house in Road No 06 under Vijay Nagar Ward No 02 under Danapur Assembly Constituency NEAL PATEL CHOS",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 1265000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.984Z"
+}

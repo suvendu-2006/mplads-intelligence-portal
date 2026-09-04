@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfbe",
+    "name": "Vijay Kumar Hansdak",
+    "constituency": "RAJMAHAL",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147223957.11,
+    "totalExpenditure": 28886697,
+    "utilizationPercentage": 19.62092146349319,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 468,
+    "completedWorksValue": 0,
+    "inProgressPayments": 28886697,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 468,
+    "unspentAmount": 118337260.11000001,
+    "totalRecommendedAmount": 91979000,
+    "name_hi": "Vijay Kumar Hansdak",
+    "constituency_hi": "RAJMAHAL",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28886697,
+      "totalEntries": 302,
+      "avgExpenditure": 95651.31456953642,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17160000,
+        "transactionCount": 159
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11726697,
+        "transactionCount": 143
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28886697,
+        "transactionCount": 302,
+        "avgAmount": 95651.31456953642
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 468,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:58.235Z"
+}

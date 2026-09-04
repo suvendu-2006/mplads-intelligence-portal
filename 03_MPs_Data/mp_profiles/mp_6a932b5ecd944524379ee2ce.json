@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2ce",
+    "name": "Smt. Seema Dwivedi (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 173830159.11,
+    "totalExpenditure": 135282718.4,
+    "utilizationPercentage": 77.82465315146658,
+    "completedWorksCount": 210,
+    "recommendedWorksCount": 198,
+    "completedWorksValue": 104021540.4,
+    "inProgressPayments": 31261178,
+    "paymentGapPercentage": 23.108035061483506,
+    "completionRate": 51.470588235294116,
+    "pendingWorks": -12,
+    "unspentAmount": 38547440.71000001,
+    "totalRecommendedAmount": 69381598,
+    "name_hi": "Smt. Seema Dwivedi (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 135282718.4,
+      "totalEntries": 313,
+      "avgExpenditure": 432213.15782747604,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 1288201,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 38246108.4,
+        "transactionCount": 96
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 82627730,
+        "transactionCount": 186
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13120679,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 135282718.4,
+        "transactionCount": 313,
+        "avgAmount": 432213.15782747604
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 210,
+    "recommendedCount": 198,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a316b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ram Lakhan Shukla Sarsawati sisu Mandir Hanumat nagar Rafiganj Bhiyav Ambedkar nagar Me Pustkalay Kaksh Ke Nirman Hetu sampark Sutra 9453691926",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31105",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikash Khand Sujanganj Gram amrit Sarowar sakapur me 10x200 watt 12.5 Meter Pole wali Vidhut High Mast Light ka Karya",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 625923
+      },
+      {
+        "_id": "6a932bb5cd94452437a31103",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikash Khand Sujanganj Gram Dompur Devi Mandir  me 10x200 watt 12.5 Meter Pole wali Vidhut High Mast Light ka Karya",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 625923
+      },
+      {
+        "_id": "6a932bb5cd94452437a31104",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikash Khand Sikrara Gram Lakhesar  Mandir par 10x200 watt 12.5 Meter Pole wali Vidhut High Mast Light ka Karya",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 625923
+      },
+      {
+        "_id": "6a932bb5cd94452437a31717",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKASH KHAND SUJANGANJ KUSHMAUI BIND BASTI MODE PAR  JAUNPUR ME 06VE 200 WATT 9 METER POLL SAHIT VIDHUT HIGH MAST LIGHT KA KARYA",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 197803
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.245Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddbf",
+    "name": "AKHILESH YADAV",
+    "constituency": "KANNAUJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32453607,
+    "utilizationPercentage": 22.07728367346939,
+    "completedWorksCount": 39,
+    "recommendedWorksCount": 200,
+    "completedWorksValue": 6951398,
+    "inProgressPayments": 25502209,
+    "paymentGapPercentage": 78.58050724531175,
+    "completionRate": 16.317991631799163,
+    "pendingWorks": 161,
+    "unspentAmount": 114546393,
+    "totalRecommendedAmount": 125654488,
+    "name_hi": "AKHILESH YADAV",
+    "constituency_hi": "KANNAUJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32453607,
+      "totalEntries": 92,
+      "avgExpenditure": 352756.597826087,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7913808,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24539799,
+        "transactionCount": 76
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32453607,
+        "transactionCount": 92,
+        "avgAmount": 352756.597826087
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 39,
+    "recommendedCount": 200,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c8a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "A solar light near the house of Mr Jitendra Pal in village Khanpur Kurmi Post Lodhapur Chhibramau District Kannauj Uttar Pradesh",
+        "completedDate": "2026-07-18T00:00:00.000Z",
+        "finalAmount": 19111
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "A solar light near Baba Baramdev Temple in Village Panchayat Bhorajpur Development Block Chhibramau District Kannauj Uttar Pradesh Shri Amit Kumar Yadav Mobile9415559665",
+        "completedDate": "2026-07-18T00:00:00.000Z",
+        "finalAmount": 19111
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8a5",
+        "workCategory": "Normal/Others",
+        "workDescription": "A solar light near the house of Shri Rajendra Singh Yadav son of Shri Sarnam Singh Yadav resident of Chhachhonapur Post Migholi Chhibramau District Kannauj Mobile 6386272974 Shri Shailendra Singh Yadav",
+        "completedDate": "2026-07-18T00:00:00.000Z",
+        "finalAmount": 19966
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Please get a solar light installed near the house of Shri Bhola Yadav son of Shri Tej Singh village Alampur post Bhainsiapur development block Talgram tehsil Chhibramau district Kannauj Uttar Pradesh",
+        "completedDate": "2026-07-18T00:00:00.000Z",
+        "finalAmount": 19111
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "A solar light near the house of Shri Narendra Singh Yadav son of Shri Dhanpal Singh Yadav resident of Chhachhonapur Chhibramau District Kannauj Mobile 7052216061 Shri Shailendra Singh Yadav",
+        "completedDate": "2026-07-18T00:00:00.000Z",
+        "finalAmount": 19966
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.689Z"
+}

@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee210",
+    "name": "Ms. Dola Sen (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 69414332,
+    "utilizationPercentage": 40.47482915451895,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 27,
+    "completedWorksValue": 0,
+    "inProgressPayments": 69414332,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 27,
+    "unspentAmount": 102085668,
+    "totalRecommendedAmount": 122314022,
+    "name_hi": "Ms. Dola Sen (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 69414332,
+      "totalEntries": 20,
+      "avgExpenditure": 3470716.6,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 50161981,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19252351,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 69414332,
+        "transactionCount": 20,
+        "avgAmount": 3470716.6
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 27,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:49.749Z"
+}

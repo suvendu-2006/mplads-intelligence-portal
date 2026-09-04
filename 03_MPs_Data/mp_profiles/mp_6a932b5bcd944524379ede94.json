@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede94",
+    "name": "KAMAKHYA PRASAD TASA",
+    "constituency": "Kaziranga",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 13130033,
+    "utilizationPercentage": 8.931995238095238,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 88,
+    "completedWorksValue": 0,
+    "inProgressPayments": 13130033,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 88,
+    "unspentAmount": 133869967,
+    "totalRecommendedAmount": 88319000,
+    "name_hi": "KAMAKHYA PRASAD TASA",
+    "constituency_hi": "Kaziranga",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13130033,
+      "totalEntries": 38,
+      "avgExpenditure": 345527.1842105263,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 13130033,
+        "transactionCount": 38
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13130033,
+        "transactionCount": 38,
+        "avgAmount": 345527.1842105263
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 88,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.491Z"
+}

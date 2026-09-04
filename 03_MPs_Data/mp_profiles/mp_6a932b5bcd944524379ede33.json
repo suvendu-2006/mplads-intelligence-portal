@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede33",
+    "name": "Dinesh Chandra Yadav",
+    "constituency": "MADHEPURA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150070866.11,
+    "totalExpenditure": 92486814,
+    "utilizationPercentage": 61.628760063401224,
+    "completedWorksCount": 105,
+    "recommendedWorksCount": 51,
+    "completedWorksValue": 87211021,
+    "inProgressPayments": 5275793,
+    "paymentGapPercentage": 5.70437316610344,
+    "completionRate": 67.3076923076923,
+    "pendingWorks": -54,
+    "unspentAmount": 57584052.110000014,
+    "totalRecommendedAmount": 42777210,
+    "name_hi": "Dinesh Chandra Yadav",
+    "constituency_hi": "MADHEPURA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 92486814,
+      "totalEntries": 113,
+      "avgExpenditure": 818467.3805309734,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 62601820,
+        "transactionCount": 70
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29884994,
+        "transactionCount": 43
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 92486814,
+        "transactionCount": 113,
+        "avgAmount": 818467.3805309734
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 105,
+    "recommendedCount": 51,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e2ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kahra prakhand antargat Diwari Panchayat ke ward no-11 Dhakjari mey Jaynarayan Yadav, Master Sahab ke ghar ke pass High Mast Light ka adhishthapan.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 697000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nauhatta prakhand antargat Naula Panchayat ke Gadhiya mey Baba Bakhtar sthaan ke bagal mey High Mast Light ka adhishthapan.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 697000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfa2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sattar Kataiya prakhand antargat bijalpur panchayat ke Gheena Mushhahari mey Dinabhadri mandir ke bagal mey High Mast Light ka adhishthapan.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 697000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfa5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sattar Kataiya prakhand antargat Patauri Panchayat ke Supaul janewali main road me Azad Chowk Patauri par High Mast Light ka adhishthapan.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 697000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df95",
+        "workCategory": "Normal/Others",
+        "workDescription": "Patarghat prakhand antargat Bishanpur panchayat ke Kapsiya Shivmandir ke pass Nahar ke kinare High Mast Light ka adhishthapan.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 697000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.655Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc8",
+    "name": "AMRARAM",
+    "constituency": "SIKAR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 165691544.11,
+    "totalExpenditure": 38165228,
+    "utilizationPercentage": 23.03390206482879,
+    "completedWorksCount": 49,
+    "recommendedWorksCount": 122,
+    "completedWorksValue": 24765138,
+    "inProgressPayments": 13400090,
+    "paymentGapPercentage": 35.11072958872406,
+    "completionRate": 28.654970760233915,
+    "pendingWorks": 73,
+    "unspentAmount": 127526316.11000001,
+    "totalRecommendedAmount": 65056579,
+    "name_hi": "AMRARAM",
+    "constituency_hi": "SIKAR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38165228,
+      "totalEntries": 313,
+      "avgExpenditure": 121933.6357827476,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 24177421,
+        "transactionCount": 119
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13987807,
+        "transactionCount": 194
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38165228,
+        "transactionCount": 313,
+        "avgAmount": 121933.6357827476
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 49,
+    "recommendedCount": 122,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a2dc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tin Shed construction work in sports ground, Village Jheer Chhoti",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 497231
+      },
+      {
+        "_id": "6a932bb5cd94452437a17463",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of tube well for drinking water in village Dhigpur Panchayat Samiti Palsana",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 499951
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf8a",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC interlink road construction work from the house of Shri Ramkaran son of Shri Puransingh to the house of Shri Ramnivas son of Shri Kushlaram towards village Dantujala",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 595000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tinshed construction work in Government Higher Secondary School, Nangal",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 499979
+      },
+      {
+        "_id": "6a932bb5cd94452437a1894a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tinshed construcation work at prayer place in Govt Sr Sec School Dalpatpura",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 598483
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.884Z"
+}

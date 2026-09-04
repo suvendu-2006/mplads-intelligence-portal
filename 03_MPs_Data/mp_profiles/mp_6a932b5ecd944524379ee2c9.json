@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c9",
+    "name": "Smt. Renuka Chowdhury (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Telangana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 3061296,
+    "utilizationPercentage": 2.0825142857142858,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 105,
+    "completedWorksValue": 0,
+    "inProgressPayments": 3061296,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 105,
+    "unspentAmount": 143938704,
+    "totalRecommendedAmount": 46720000,
+    "name_hi": "Smt. Renuka Chowdhury (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 3061296,
+      "totalEntries": 7,
+      "avgExpenditure": 437328,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 3061296,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 3061296,
+        "transactionCount": 7,
+        "avgAmount": 437328
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 105,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.686Z"
+}

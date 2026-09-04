@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3d",
+    "name": "DR RANI SRI KUMAR",
+    "constituency": "TENKASI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 153060922.82,
+    "totalExpenditure": 99919930,
+    "utilizationPercentage": 65.28114959656037,
+    "completedWorksCount": 102,
+    "recommendedWorksCount": 58,
+    "completedWorksValue": 86705685,
+    "inProgressPayments": 13214245,
+    "paymentGapPercentage": 13.224834124683635,
+    "completionRate": 63.74999999999999,
+    "pendingWorks": -44,
+    "unspentAmount": 53140992.81999999,
+    "totalRecommendedAmount": 34843098,
+    "name_hi": "DR RANI SRI KUMAR",
+    "constituency_hi": "TENKASI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 99919930,
+      "totalEntries": 123,
+      "avgExpenditure": 812357.1544715447,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 9942527,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 64991690,
+        "transactionCount": 70
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24985713,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 99919930,
+        "transactionCount": 123,
+        "avgAmount": 812357.1544715447
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 102,
+    "recommendedCount": 58,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d9a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Supply of 12m LED Highmast Light at ward No. 3, Keela Aavaranmpatti Bharathiyar Street  Kaliyamman Kovil near in Rajapalayam Municipality",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 418590
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8c3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and supply of 12 mtr Highmast Light (LED) near Vaniyar Oorani at Thiruvengadam Road in Sankarankovil Municipality",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 423479
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and supply of 12 mtr Highmast Light (LED) near social welfare hostel, Kaveri Nagar opposite at Sankarankovil Municipality",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 423715
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d60c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Supply of 12m LED Highmast Light at ward No. 7, Naidu South street Anandha Cool Drinks Shop opposite (Puthur Junction) at Chettiyarpatti Town Panchayat in Virudhunagar District",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 388212
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d60d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Supply of 12m LED Highmast Light at ward No. 7, Naidu South street Selvaraj Teacher house near at Chettiyarpatti Town Panchayat in Virudhunagar District",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 388212
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.647Z"
+}

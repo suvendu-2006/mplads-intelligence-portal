@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf05",
+    "name": "PRIYANKA SATISH JARKIHOLI",
+    "constituency": "CHIKKODI",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 17958285,
+    "utilizationPercentage": 12.216520408163266,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 143,
+    "completedWorksValue": 11270925,
+    "inProgressPayments": 6687360,
+    "paymentGapPercentage": 37.23829975969309,
+    "completionRate": 10.062893081761008,
+    "pendingWorks": 127,
+    "unspentAmount": 129041715,
+    "totalRecommendedAmount": 81000000,
+    "name_hi": "PRIYANKA SATISH JARKIHOLI",
+    "constituency_hi": "CHIKKODI",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 17958285,
+      "totalEntries": 35,
+      "avgExpenditure": 513093.85714285716,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7235772,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10722513,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 17958285,
+        "transactionCount": 35,
+        "avgAmount": 513093.85714285716
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 143,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e250",
+        "workCategory": "Normal/Others",
+        "workDescription": "Improvement of Road near Yadimayavva Temple in Raibag Rural in Raibag Taluka",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 499731
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CC Cameras at Chikkodi Town.",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 1500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e18e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of smart board to Government Primary School Palbhavi in Raibag Taluka",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e190",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of smart board for government primary school Nidasoshi in Hukkeri Taluka",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e170",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of smart Board to Government Higher Primary School Pachapur in Hukkeri Taluka",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.672Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede99",
+    "name": "Kani K Navas",
+    "constituency": "RAMANATHAPURAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 54855096,
+    "utilizationPercentage": 37.31639183673469,
+    "completedWorksCount": 68,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 42128528,
+    "inProgressPayments": 12726568,
+    "paymentGapPercentage": 23.200338579299906,
+    "completionRate": 62.38532110091744,
+    "pendingWorks": -27,
+    "unspentAmount": 92144904,
+    "totalRecommendedAmount": 32066000,
+    "name_hi": "Kani K Navas",
+    "constituency_hi": "RAMANATHAPURAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54855096,
+      "totalEntries": 86,
+      "avgExpenditure": 637849.9534883721,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 21172122,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33682974,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54855096,
+        "transactionCount": 86,
+        "avgAmount": 637849.9534883721
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 68,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e5b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in Valukkalotti Colony at Valukkalotti Pt (2025-2026)",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 2998071
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of buildings for community cultural activities (Kalaiyarangam) in 15 Ward Kovilpatti at Mallankinaru Town Pt.",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 1120000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e592",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter in Kanjampatti Village at Suthmadam Pt (2025-2026)",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 699235
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e41e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Highmast Light in Indira Nagar Colony Bus Stop at Valanadu Pt (2024-2025)",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 430000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e421",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Light in Mayanam at Maruthagam Village  (2024 - 2025)",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 499998
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.478Z"
+}

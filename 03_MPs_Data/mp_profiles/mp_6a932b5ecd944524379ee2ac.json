@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2ac",
+    "name": "Shri Surendra Singh Nagar (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 109500434.16,
+    "utilizationPercentage": 49.64566087531235,
+    "completedWorksCount": 98,
+    "recommendedWorksCount": 200,
+    "completedWorksValue": 55618024,
+    "inProgressPayments": 53882410.16,
+    "paymentGapPercentage": 49.20748540710626,
+    "completionRate": 32.88590604026846,
+    "pendingWorks": 102,
+    "unspentAmount": 111063522.95000002,
+    "totalRecommendedAmount": 161254706,
+    "name_hi": "Shri Surendra Singh Nagar (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 109500434.16,
+      "totalEntries": 281,
+      "avgExpenditure": 389681.26035587187,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 1962150,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 44220607.16,
+        "transactionCount": 122
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24711941,
+        "transactionCount": 83
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38605736,
+        "transactionCount": 72
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 109500434.16,
+        "transactionCount": 281,
+        "avgAmount": 389681.26035587187
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 98,
+    "recommendedCount": 200,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3091d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Cc Road. 132mrt\nVillage. Khera Chaogawan majara nithari  me harfool ke makan se Ramvir ke makan tak..\nDistrict Urban Development Agency. Muzaffarnagar.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 898719
+      },
+      {
+        "_id": "6a932bb5cd94452437a3135b",
+        "workCategory": "Normal/Others",
+        "workDescription": "2-\tGRAM JARARA BLOCK ARNIYA ME ME AADARSH HAIGH SCHOOL KE PICHHE SARVJANIK ISTHAL PAR OPEN GYM KA ADHITHAPAN KARY KARYDAYI SANSTHA PROVINCIAL CO. OPERATIVE CONSTRUCTION AND DEVELOPMENT LTD. (P.C.C.D) BULANDSHAHAR",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 841491
+      },
+      {
+        "_id": "6a932bb5cd94452437a3135f",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM BADHRU BLOCK ARNIYA ME SCHOOL PRIMERY PATHSHALA KE PASS SARVJANIK ISTHAL PAR OPEN GYM KA ADHITHAPAN KARY KARYDAYI SANSTHA PROVINCIAL CO. OPERATIVE CONSTRUCTION AND DEVELOPMENT LTD. (P.C.C.D) BULANDSHAHAR",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 841491
+      },
+      {
+        "_id": "6a932bb5cd94452437a3135c",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM SUJAWLI BLOCK SHIKARPUR ME HURTHLA MARG PAR SARVJANIK ISTHAL PAR OPEN GYM KA ADHITHAPAN KARY KARYDAYI SANSTHA PROVINCIAL CO. OPERATIVE CONSTRUCTION AND DEVELOPMENT LTD. (P.C.C.D) BULANDSHAHAR",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 841491
+      },
+      {
+        "_id": "6a932bb5cd94452437a3135d",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM DASHAHRA BLOCK ARNIYA ME PRATHMIK VDHYALAY  PLAY GROUND ME SARVJANIK ISTHAL PAR OPEN GYM KA ADHITHAPAN KARY KARYDAYI SANSTHA PROVINCIAL CO. OPERATIVE CONSTRUCTION AND DEVELOPMENT LTD. (P.C.C.D) BULANDSHAHAR",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 841491
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.664Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb5",
+    "name": "Adv Adoor Prakash ",
+    "constituency": "ATTINGAL",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28617364,
+    "utilizationPercentage": 19.46759455782313,
+    "completedWorksCount": 108,
+    "recommendedWorksCount": 337,
+    "completedWorksValue": 26454623,
+    "inProgressPayments": 2162741,
+    "paymentGapPercentage": 7.557443096436136,
+    "completionRate": 24.269662921348313,
+    "pendingWorks": 229,
+    "unspentAmount": 118382636,
+    "totalRecommendedAmount": 92678490,
+    "name_hi": "Adv Adoor Prakash ",
+    "constituency_hi": "ATTINGAL",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28617364,
+      "totalEntries": 115,
+      "avgExpenditure": 248846.64347826087,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12255911,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16361453,
+        "transactionCount": 65
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28617364,
+        "transactionCount": 115,
+        "avgAmount": 248846.64347826087
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 108,
+    "recommendedCount": 337,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e860",
+        "workCategory": "Normal/Others",
+        "workDescription": "MML AT NEAR VELLOORKONAM KAVIL BHAGAVATHI TEMPLE IN KIZHUVILAM GRAMA PANCHAYATH",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 242517
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e874",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF MML AT NEAR MARYANADU IDAVAKA DEVALAYAM SWARGAROGITHA MATHA CHURCH IN KADINAMKULAM GP",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 242517
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e866",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF MML AT SANTHIPURAM JUNCTION IN KADINAMKULAM GP",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 242517
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e861",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF MML NEAR KADAMPATTUKONAM MAHAVISHNU TEMPLE IN KIZHUVILAM GP",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 250064
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e90d",
+        "workCategory": "Normal/Others",
+        "workDescription": "MML NEAR ST.AUGUSTINE CHURCH KURISADI IN MANGALAPURAM GRAMA PANCHAYATH",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 242517
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.225Z"
+}

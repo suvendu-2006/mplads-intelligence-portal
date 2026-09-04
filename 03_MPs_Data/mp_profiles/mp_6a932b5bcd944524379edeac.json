@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeac",
+    "name": "KRITI DEVI DEBBARMAN",
+    "constituency": "TRIPURA EAST",
+    "state": "Tripura",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32934783,
+    "utilizationPercentage": 22.404614285714285,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 12500000,
+    "inProgressPayments": 20434783,
+    "paymentGapPercentage": 62.04620507139822,
+    "completionRate": 30.952380952380953,
+    "pendingWorks": 16,
+    "unspentAmount": 114065217,
+    "totalRecommendedAmount": 82786310,
+    "name_hi": "KRITI DEVI DEBBARMAN",
+    "constituency_hi": "TRIPURA EAST",
+    "state_hi": "Tripura"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32934783,
+      "totalEntries": 24,
+      "avgExpenditure": 1372282.625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7769303,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25165480,
+        "transactionCount": 20
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32934783,
+        "transactionCount": 24,
+        "avgAmount": 1372282.625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d0af",
+        "workCategory": "Normal/Others",
+        "workDescription": "table of kitchen, private school,",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0be",
+        "workCategory": "Normal/Others",
+        "workDescription": "table of kitchen, private school,",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "table of kitchen, private school,",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "table of kitchen, private school,",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "table of kitchen, private school,",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.684Z"
+}

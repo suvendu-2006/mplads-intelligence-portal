@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb6",
+    "name": "Maddila Gurumoorthy",
+    "constituency": "TIRUPATI",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 180399007,
+    "totalExpenditure": 64414143,
+    "utilizationPercentage": 35.706484238020224,
+    "completedWorksCount": 110,
+    "recommendedWorksCount": 181,
+    "completedWorksValue": 49728357,
+    "inProgressPayments": 14685786,
+    "paymentGapPercentage": 22.799008596605873,
+    "completionRate": 37.80068728522337,
+    "pendingWorks": 71,
+    "unspentAmount": 115984864,
+    "totalRecommendedAmount": 78043344,
+    "name_hi": "Maddila Gurumoorthy",
+    "constituency_hi": "TIRUPATI",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 64414143,
+      "totalEntries": 167,
+      "avgExpenditure": 385713.43113772455,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 137000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 31724298,
+        "transactionCount": 76
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32552845,
+        "transactionCount": 90
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 64414143,
+        "transactionCount": 167,
+        "avgAmount": 385713.43113772455
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 110,
+    "recommendedCount": 181,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e11f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Street Lights and fixtures in Modugulapalem in Yerpedu Mandal.",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 328357
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Drains in Machavaram GP in Ozili Mandal.",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 499158
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e21b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from P Venkata Reddy house to P Damodar House at Kodanda Ramapuram Village and GP in Srikalahasthi Mandal.",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 152279
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfbe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal CC Road from T.Yellaiah House to Seenaiah House at Santhavellore ST Colony in Santhavellore GP of Varadaiahpalem Mandal.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 498136
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfbd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal CC Road from Sudha House to Puttaiah House at Santhavellore ST Colony in Santhavellore GP of Varadaiahpalem Mandal.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 497975
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.667Z"
+}

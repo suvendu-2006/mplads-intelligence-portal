@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf07",
+    "name": "Prof SP Singh Baghel",
+    "constituency": "AGRA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 93200157,
+    "utilizationPercentage": 63.40146734693878,
+    "completedWorksCount": 55,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 75214638,
+    "inProgressPayments": 17985519,
+    "paymentGapPercentage": 19.297734659395477,
+    "completionRate": 50,
+    "pendingWorks": 0,
+    "unspentAmount": 53799843,
+    "totalRecommendedAmount": 71708800,
+    "name_hi": "Prof SP Singh Baghel",
+    "constituency_hi": "AGRA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93200157,
+      "totalEntries": 140,
+      "avgExpenditure": 665715.4071428571,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 32247982,
+        "transactionCount": 36
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55546063,
+        "transactionCount": 90
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5406112,
+        "transactionCount": 14
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93200157,
+        "transactionCount": 140,
+        "avgAmount": 665715.4071428571
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 55,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1666e",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC WORK IN VILLAGE BADA GUDHA FROM GHANSHYAM TO PRADEEP BAGHEL HOUSE",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 1668177
+      },
+      {
+        "_id": "6a932bb5cd94452437a1664d",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC WORK IN BANS DALEL FROM DIWAN SINGH HOUSE TO NIHAL SINGH HOUSE",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 1504362
+      },
+      {
+        "_id": "6a932bb5cd94452437a16672",
+        "workCategory": "Normal/Others",
+        "workDescription": "NSTALLATION OF SUMBARSEBIL IN VILLAGEGADHI PRATHAVI ETMADPUR",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 263948
+      },
+      {
+        "_id": "6a932bb5cd94452437a16671",
+        "workCategory": "Normal/Others",
+        "workDescription": "NSTALLATION OF SUMBARSEBIL IN VILLAGE BAS DALEL NEAR INTER COLLEGE",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 263851
+      },
+      {
+        "_id": "6a932bb5cd94452437a16650",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road From Dr Goyal House to Bhupendra House in Nagla Mohan Lal Ayush Bihar Narayach",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 629490
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.984Z"
+}

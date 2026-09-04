@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0b",
+    "name": "BISHNU PADA RAY",
+    "constituency": "ANDAMAN AND NICOBAR ISLANDS",
+    "state": "Andaman And Nicobar Islands",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 15498347,
+    "utilizationPercentage": 10.543093197278912,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 27,
+    "completedWorksValue": 0,
+    "inProgressPayments": 15498347,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 27,
+    "unspentAmount": 131501653,
+    "totalRecommendedAmount": 75115803,
+    "name_hi": "BISHNU PADA RAY",
+    "constituency_hi": "ANDAMAN AND NICOBAR ISLANDS",
+    "state_hi": "Andaman And Nicobar Islands"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15498347,
+      "totalEntries": 9,
+      "avgExpenditure": 1722038.5555555555,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3655060,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11843287,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15498347,
+        "transactionCount": 9,
+        "avgAmount": 1722038.5555555555
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 27,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.222Z"
+}

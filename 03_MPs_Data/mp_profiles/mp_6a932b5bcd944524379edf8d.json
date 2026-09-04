@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8d",
+    "name": "Smt Hema Malini",
+    "constituency": "MATHURA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 40721168,
+    "utilizationPercentage": 27.70147482993197,
+    "completedWorksCount": 33,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 26155658,
+    "inProgressPayments": 14565510,
+    "paymentGapPercentage": 35.768890519053876,
+    "completionRate": 37.5,
+    "pendingWorks": 22,
+    "unspentAmount": 106278832,
+    "totalRecommendedAmount": 44588332,
+    "name_hi": "Smt Hema Malini",
+    "constituency_hi": "MATHURA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40721168,
+      "totalEntries": 82,
+      "avgExpenditure": 496599.60975609755,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28927158,
+        "transactionCount": 60
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11794010,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40721168,
+        "transactionCount": 82,
+        "avgAmount": 496599.60975609755
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 33,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18d47",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road in village-Pilkhuni from Har Prasad House to Hari Singh House",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 782948
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d48",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road in Village-Dham Singha from Hari Jatav House to Towards Narayan Singh House",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 1378356
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a4a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road village nagla mahru, murja block mant from hoo kailasi to ho anil and vikas kumar",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 679269
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a365",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road village gonga block mant from ho dalveer to so munna",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 869458
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a364",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road in Village Rethaura block nandgaon ho KD Pandit toward temple of Chandrawali Mata Mandir",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 1674937
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.687Z"
+}

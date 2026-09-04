@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded5",
+    "name": "Ms Mahua Moitra",
+    "constituency": "KRISHNANAGAR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159865046,
+    "totalExpenditure": 57382120,
+    "utilizationPercentage": 35.89410032759757,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 13986304,
+    "inProgressPayments": 43395816,
+    "paymentGapPercentage": 75.62602427376332,
+    "completionRate": 38.18181818181819,
+    "pendingWorks": 13,
+    "unspentAmount": 102482926,
+    "totalRecommendedAmount": 104529522,
+    "name_hi": "Ms Mahua Moitra",
+    "constituency_hi": "KRISHNANAGAR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57382120,
+      "totalEntries": 49,
+      "avgExpenditure": 1171063.6734693877,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25530988,
+        "transactionCount": 28
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31851132,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57382120,
+        "transactionCount": 49,
+        "avgAmount": 1171063.6734693877
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bc6c",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of RH Machine No B3910 at Karimpur Rural Hospital Under Karimpur-1 Block.",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 561629
+      },
+      {
+        "_id": "6a932bb5cd94452437a18558",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed and Beautification with colour paver block at Karimpur Anandapally Crematorium under Karimpur -I Block, Nadia.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 2933290
+      },
+      {
+        "_id": "6a932bb5cd94452437a1baea",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mosquito net installation male and female ward at Karimpur Rural Hospital.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 99713
+      },
+      {
+        "_id": "6a932bb5cd94452437a19c6d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Beautification with Colour paver  block, Seating arrangement and pathway around the pond of Karimpur Police Station in Karimpur-I G.P Under Karimpur-I Block.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 518968
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d64b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase laboratory Materials at Nagadi Obaidia High School Under Nakashipara Block.",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.668Z"
+}

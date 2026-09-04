@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf81",
+    "name": "Shrikant Eknath Shinde",
+    "constituency": "KALYAN",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 325000,
+    "utilizationPercentage": 0.22108843537414968,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 2,
+    "completedWorksValue": 0,
+    "inProgressPayments": 325000,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 2,
+    "unspentAmount": 146675000,
+    "totalRecommendedAmount": 2825000,
+    "name_hi": "Shrikant Eknath Shinde",
+    "constituency_hi": "KALYAN",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 325000,
+      "totalEntries": 1,
+      "avgExpenditure": 325000,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 325000,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 325000,
+        "transactionCount": 1,
+        "avgAmount": 325000
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 2,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:04.213Z"
+}

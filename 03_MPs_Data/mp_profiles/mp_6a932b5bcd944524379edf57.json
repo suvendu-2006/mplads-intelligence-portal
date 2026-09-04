@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf57",
+    "name": "SHASHANK MANI",
+    "constituency": "DEORIA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 80936917,
+    "utilizationPercentage": 55.05912721088435,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 50341922,
+    "inProgressPayments": 30594995,
+    "paymentGapPercentage": 37.801038307401804,
+    "completionRate": 35.714285714285715,
+    "pendingWorks": 36,
+    "unspentAmount": 66063083,
+    "totalRecommendedAmount": 77484621,
+    "name_hi": "SHASHANK MANI",
+    "constituency_hi": "DEORIA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 80936917,
+      "totalEntries": 142,
+      "avgExpenditure": 569978.2887323943,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2068776,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 37738327,
+        "transactionCount": 71
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41129814,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 80936917,
+        "transactionCount": 142,
+        "avgAmount": 569978.2887323943
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16eb1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward no.3 Mehda purva me Ajeet Verma ke makaan se Dinesh Ji, evam Ramjanak ke ghar tak 137 mtr. CC road ka nirmaan",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 897306
+      },
+      {
+        "_id": "6a932bb5cd94452437a18530",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand - Gauri Bazar, Gram Sabha - Dhanauti me pitch sadak se Shri Jhinguri Kha ke Khet tak CC road ka nirmaan lagbhag 150 Mtr.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 1468470
+      },
+      {
+        "_id": "6a932bb5cd94452437a16eb0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram-Dubauli me Kamla ke ghar se Chedi Yadav ke ghar tak 85 mtr. CC Road ka nirmaan",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 620027
+      },
+      {
+        "_id": "6a932bb5cd94452437a16eae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram-Pokharbhinda me Vinod Gond ke ghar se Padum ke ghar tak 135 mtr. CC Road ka nirmaan",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 934677
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d449",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas khand-Rampur Karkhana, Gram sabha baikunthpur ke rajaswa gram purshottampur me Gautam Singh ke ghar se Gulab Gupta ke ghar tak CC road ka nirmaan karya lambai lagbhag 160 meters",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1242232
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.234Z"
+}

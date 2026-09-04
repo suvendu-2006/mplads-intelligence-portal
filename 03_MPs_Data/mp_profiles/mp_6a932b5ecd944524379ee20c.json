@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee20c",
+    "name": "Dr. Sudhanshu Trivedi (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 33646948,
+    "utilizationPercentage": 22.889080272108846,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 39,
+    "completedWorksValue": 16886943,
+    "inProgressPayments": 16760005,
+    "paymentGapPercentage": 49.81136773534408,
+    "completionRate": 26.41509433962264,
+    "pendingWorks": 25,
+    "unspentAmount": 113353052,
+    "totalRecommendedAmount": 57117221,
+    "name_hi": "Dr. Sudhanshu Trivedi (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33646948,
+      "totalEntries": 28,
+      "avgExpenditure": 1201676.7142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20304846,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13342102,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33646948,
+        "transactionCount": 28,
+        "avgAmount": 1201676.7142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 39,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f68",
+        "workCategory": "Normal/Others",
+        "workDescription": "Two classrooms construction at MAMATA MAI U.M.V DHAKAVA KAITHI, Varanasi.",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 999277
+      },
+      {
+        "_id": "6a932bb5cd94452437a31aef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking Road and Naali Work",
+        "completedDate": "2025-10-11T00:00:00.000Z",
+        "finalAmount": 1213882
+      },
+      {
+        "_id": "6a932bb5cd94452437a31aee",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road and Naali Work",
+        "completedDate": "2025-10-11T00:00:00.000Z",
+        "finalAmount": 1429611
+      },
+      {
+        "_id": "6a932bb5cd94452437a317a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road and Naali Work",
+        "completedDate": "2025-08-01T00:00:00.000Z",
+        "finalAmount": 516309
+      },
+      {
+        "_id": "6a932bb5cd94452437a317a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road and Naali Work",
+        "completedDate": "2025-08-01T00:00:00.000Z",
+        "finalAmount": 323830
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.680Z"
+}

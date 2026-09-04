@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede64",
+    "name": "GODAM NAGESH",
+    "constituency": "ADILABAD",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35717086,
+    "utilizationPercentage": 24.297337414965988,
+    "completedWorksCount": 80,
+    "recommendedWorksCount": 277,
+    "completedWorksValue": 17451632,
+    "inProgressPayments": 18265454,
+    "paymentGapPercentage": 51.139261472786444,
+    "completionRate": 22.408963585434176,
+    "pendingWorks": 197,
+    "unspentAmount": 111282914,
+    "totalRecommendedAmount": 89785000,
+    "name_hi": "GODAM NAGESH",
+    "constituency_hi": "ADILABAD",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35717086,
+      "totalEntries": 142,
+      "avgExpenditure": 251528.77464788733,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14847522,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20869564,
+        "transactionCount": 89
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35717086,
+        "transactionCount": 142,
+        "avgAmount": 251528.77464788733
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 80,
+    "recommendedCount": 277,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e77e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Mudhiraj Colony Dilawarpur village",
+        "completedDate": "2026-07-16T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall at Munnurukapu Colony Soan village",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 499575
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Drinking water source near Bolameni Thirupati Home at Gollaguda",
+        "completedDate": "2026-05-03T00:00:00.000Z",
+        "finalAmount": 99230
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Drinking water source at ST Colony, Burepally",
+        "completedDate": "2026-05-03T00:00:00.000Z",
+        "finalAmount": 99165
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e28f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Drinking water source near Kaman Chowrasta at Kunthalamanepally",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 99165
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.435Z"
+}

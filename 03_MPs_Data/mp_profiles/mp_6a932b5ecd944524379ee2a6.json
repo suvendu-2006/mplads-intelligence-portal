@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a6",
+    "name": "Shri Satnam Singh Sandhu (2024-30)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Chandigarh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 9104144,
+    "utilizationPercentage": 6.193295238095238,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 3379051,
+    "inProgressPayments": 5725093,
+    "paymentGapPercentage": 62.88447326843688,
+    "completionRate": 16.666666666666664,
+    "pendingWorks": 16,
+    "unspentAmount": 137895856,
+    "totalRecommendedAmount": 17799970,
+    "name_hi": "Shri Satnam Singh Sandhu (2024-30)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Chandigarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 9104144,
+      "totalEntries": 59,
+      "avgExpenditure": 154307.5254237288,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2549178,
+        "transactionCount": 28
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6554966,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 9104144,
+        "transactionCount": 59,
+        "avgAmount": 154307.5254237288
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321d6",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of Auditorium Part 2 at Maharaj Brahmanand Bhuriwale Grib Dassi College Tibba Nangal, Tehsil Anandpur Sahib, Distt. Rupnagar PB, District Rupnagar",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 979133
+      },
+      {
+        "_id": "6a932bb5cd94452437a31432",
+        "workCategory": "Normal/Others",
+        "workDescription": "Boundary Wall and Interlocking Tile Work in Govt. High School Badduwala",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 1200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c78",
+        "workCategory": "Trust and Society",
+        "workDescription": "Renovation of Rotary Sarai, PGI Sector 12 Chandigarh on 30 years lease",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 499918
+      },
+      {
+        "_id": "6a932bb5cd94452437a31956",
+        "workCategory": "Trust and Society",
+        "workDescription": "Residential School: Building of additional classrooms, labs, sports facilities, upkeeping of auditorium & recruitment of staff for a Higher Senior Secondary School within MIMC’s campus. Health: Improvement in infrastructure & recruitment of medical & para-medical staff for a hospital operated by MIMC. Old Age Home: Addition to infrastructure, building of toilets & heating arrangements at MIMC’s old age home. Other Activities: Funding for cultural, spiritual and environmental projects carried out",
+        "completedDate": "2025-09-15T00:00:00.000Z",
+        "finalAmount": 700000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.666Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0d",
+    "name": "BRIJMOHAN AGRAWAL",
+    "constituency": "RAIPUR",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 153766451.11,
+    "totalExpenditure": 68756217,
+    "utilizationPercentage": 44.714706298849165,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 115,
+    "completedWorksValue": 28344221,
+    "inProgressPayments": 40411996,
+    "paymentGapPercentage": 58.77577005145586,
+    "completionRate": 24.836601307189543,
+    "pendingWorks": 77,
+    "unspentAmount": 85010234.11000001,
+    "totalRecommendedAmount": 87500000,
+    "name_hi": "BRIJMOHAN AGRAWAL",
+    "constituency_hi": "RAIPUR",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68756217,
+      "totalEntries": 168,
+      "avgExpenditure": 409263.1964285714,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 5375000,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24909134,
+        "transactionCount": 61
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38472083,
+        "transactionCount": 93
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68756217,
+        "transactionCount": 168,
+        "avgAmount": 409263.1964285714
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 115,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a374",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN - KARYSHALA BHAWAN SE BELTA TALAB TAK, GRAM PANCHAYAT BITKULI, SUB BLOCK SUHELA, DIST BALODABAZAR",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a3be",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN - SHAMSHAAN GHAT ROAD AWAM MIDDLE SCHOOL KE PASS, GRAM PANCHAYAT JANGDA, BLOCK SIMGA DIST BALODABAZAR",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 997712
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a372",
+        "workCategory": "Normal/Others",
+        "workDescription": "KHEL MAIDAN SAMTALIKARAN, GRAM PANCHAYAT NAWAPARA, SUB DIST SUHELA, DIST BALODABAZAR",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a370",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN - BHUNESHWAR SAHU KE GHAR PASS SE PUNAU NISHAD GHAR TAK, GRAM PANCHAYAT SAKARI, DIST BALODABAZAR",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 998005
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf0b",
+        "workCategory": "Normal/Others",
+        "workDescription": "PAWER BLOCK KARYA- WARD NO. 03, RAMAYAN GALI ME, GRAM PANCHAYAT GUDELIYA BLOCK BHATAPARA DIST BALODABAZAR",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.898Z"
+}

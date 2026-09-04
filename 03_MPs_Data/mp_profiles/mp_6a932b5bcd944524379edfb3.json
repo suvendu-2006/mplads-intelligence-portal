@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb3",
+    "name": "UJJWAL RAMAN SINGH",
+    "constituency": "ALLAHABAD",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 64478327,
+    "utilizationPercentage": 43.8628074829932,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 28,
+    "completedWorksValue": 21127219,
+    "inProgressPayments": 43351108,
+    "paymentGapPercentage": 67.23361169094849,
+    "completionRate": 9.67741935483871,
+    "pendingWorks": 25,
+    "unspentAmount": 82521673,
+    "totalRecommendedAmount": 76055118,
+    "name_hi": "UJJWAL RAMAN SINGH",
+    "constituency_hi": "ALLAHABAD",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 64478327,
+      "totalEntries": 67,
+      "avgExpenditure": 962363.0895522388,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17737365,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 46740962,
+        "transactionCount": 57
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 64478327,
+        "transactionCount": 67,
+        "avgAmount": 962363.0895522388
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 28,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b472",
+        "workCategory": "Normal/Others",
+        "workDescription": "Allahabad loksabha Kshetra me High mast installation",
+        "completedDate": "2026-01-10T00:00:00.000Z",
+        "finalAmount": 3578361
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a425",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar light in allahabad loksabha chhetra",
+        "completedDate": "2026-01-09T00:00:00.000Z",
+        "finalAmount": 8084520
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b787",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Roads work",
+        "completedDate": "2025-12-26T00:00:00.000Z",
+        "finalAmount": 9464338
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.682Z"
+}

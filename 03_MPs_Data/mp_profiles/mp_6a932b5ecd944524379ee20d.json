@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee20d",
+    "name": "Dr. Syed Naseer Hussain (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 52745755,
+    "utilizationPercentage": 35.88146598639456,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 59,
+    "completedWorksValue": 432259,
+    "inProgressPayments": 52313496,
+    "paymentGapPercentage": 99.18048570922912,
+    "completionRate": 4.838709677419355,
+    "pendingWorks": 56,
+    "unspentAmount": 94254245,
+    "totalRecommendedAmount": 100371000,
+    "name_hi": "Dr. Syed Naseer Hussain (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 52745755,
+      "totalEntries": 44,
+      "avgExpenditure": 1198767.1590909092,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 29921033,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22824722,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 52745755,
+        "transactionCount": 44,
+        "avgAmount": 1198767.1590909092
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 59,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31ffc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathroom and Toilet at Ravidasia Chaupal.",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 142176
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e58",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathroom and Toilet at Rajput Patti Chaupal of Padla Village.",
+        "completedDate": "2025-12-29T00:00:00.000Z",
+        "finalAmount": 112075
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e57",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathroom and Toilet at Mahila Madal Centre of Padla Village.",
+        "completedDate": "2025-12-29T00:00:00.000Z",
+        "finalAmount": 178008
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.669Z"
+}

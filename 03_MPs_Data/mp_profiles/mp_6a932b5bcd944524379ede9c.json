@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9c",
+    "name": "KARAN BHUSHAN SINGH",
+    "constituency": "KAISERGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 95454825,
+    "utilizationPercentage": 64.93525510204081,
+    "completedWorksCount": 33,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 46122700,
+    "inProgressPayments": 49332125,
+    "paymentGapPercentage": 51.68112245766518,
+    "completionRate": 30.555555555555557,
+    "pendingWorks": 42,
+    "unspentAmount": 51545175,
+    "totalRecommendedAmount": 95762209,
+    "name_hi": "KARAN BHUSHAN SINGH",
+    "constituency_hi": "KAISERGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95454825,
+      "totalEntries": 145,
+      "avgExpenditure": 658309.1379310344,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 63556855,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31897970,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95454825,
+        "transactionCount": 145,
+        "avgAmount": 658309.1379310344
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 33,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17199",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sr.No. 11 Interlocking work of 200 meters length from Lavkush Mishra's shop to Chandhri Maurya's house.",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 1039280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1719b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sr.No. 10 Interlocking work of 400 m length from Pradhan Mantri Paraspatti Bahadurpur road to Shankar Bhagwan's place.",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 2076709
+      },
+      {
+        "_id": "6a932bb5cd94452437a1719d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sr.No. 09 Interlocking work of 135 meters length from PWD main road to Khedu Kori's house in Gram Sabha Sidhauti.",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 703853
+      },
+      {
+        "_id": "6a932bb5cd94452437a16e16",
+        "workCategory": "Trust and Society",
+        "workDescription": "S.No.1 Construction work of teaching room along with main verandah for the study of students in Shri Avadh Sharan Smarak Public School, Parsada, Belsar, Gonda.",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a175be",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work of 300 m length from Shyamlals farm in Sisai Jogapur, Katra to Shyamlals house in Lambardarpurwa.",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 1433781
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.841Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded4",
+    "name": "Mr Gopal Jee Thakur",
+    "constituency": "DARBHANGA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75767756,
+    "utilizationPercentage": 51.54269115646258,
+    "completedWorksCount": 59,
+    "recommendedWorksCount": 120,
+    "completedWorksValue": 28699256,
+    "inProgressPayments": 47068500,
+    "paymentGapPercentage": 62.12207208565079,
+    "completionRate": 32.960893854748605,
+    "pendingWorks": 61,
+    "unspentAmount": 71232244,
+    "totalRecommendedAmount": 58487100,
+    "name_hi": "Mr Gopal Jee Thakur",
+    "constituency_hi": "DARBHANGA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75767756,
+      "totalEntries": 156,
+      "avgExpenditure": 485690.74358974356,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25989201,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 49778555,
+        "transactionCount": 103
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75767756,
+        "transactionCount": 156,
+        "avgAmount": 485690.74358974356
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 59,
+    "recommendedCount": 120,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c7ed",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "samaharnalya darbhanga ke nikat samudayik bhawan sah karmchari vishram grih bhawan ka marammati evam navinikaran karya",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 200798
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f72",
+        "workCategory": "Normal/Others",
+        "workDescription": "hanumannagar prakhand antargat rampurdih panchayat (ward no 10) ram janki mandir dih pokhar me pakki ghat ka nirman karya (75 feet)",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 790404
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f74",
+        "workCategory": "Normal/Others",
+        "workDescription": "hanumannagar prakhand antargat panchhobh panchayat (ward no 10) mahnauli pokhar me pakki ghat ka nirman karya  (75 feet)",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 791486
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d4ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "manigachhi prakhand antargat balaur panchayat ke balaur chowk ke nikat sarvajanik sthal par mini high mast electric light ka adhisthapan karya",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 495000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d4eb",
+        "workCategory": "Normal/Others",
+        "workDescription": "manigachhi prakhand antargat ramnagar dhushi panchayat ke mahadev mandir ke nikat sarvajanik sthal par mini high mast electric light ka adhisthapan karya",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 495000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.206Z"
+}

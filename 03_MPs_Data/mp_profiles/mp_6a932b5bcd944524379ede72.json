@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede72",
+    "name": "IQRA CHOUDHARY",
+    "constituency": "KAIRANA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50723960,
+    "utilizationPercentage": 34.506095238095234,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 42,
+    "completedWorksValue": 41286422,
+    "inProgressPayments": 9437538,
+    "paymentGapPercentage": 18.605680629036062,
+    "completionRate": 51.724137931034484,
+    "pendingWorks": -3,
+    "unspentAmount": 96276040,
+    "totalRecommendedAmount": 32289998,
+    "name_hi": "IQRA CHOUDHARY",
+    "constituency_hi": "KAIRANA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50723960,
+      "totalEntries": 62,
+      "avgExpenditure": 818128.3870967742,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18789318,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31934642,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50723960,
+        "transactionCount": 62,
+        "avgAmount": 818128.3870967742
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 42,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e818",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Shanpla Begampur mein Upadhyay Samaj ke Shamshanghat mein ek shavdahgrih nirman karya. No 1 6.00 x 6.00 meter",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 502189
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e819",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Nain kheri mein Anusuchit Jati samaj ke shamshan mein ek shavdah grih nirman karya. No 1 6.00 x 6.00 meter",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 502240
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e633",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Bhanhera Khemchand mein shamshan ghat mein ek shavdah grih nirman karya. no 1 6.00 x 6.00",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 502340
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram kadargad me sunil putr rajbir master ke makan se shokat ke makan tak cc road nirman",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 795616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d3f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram hathchoya me chopal barat ghar me marammat karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 847209
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.241Z"
+}

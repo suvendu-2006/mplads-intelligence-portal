@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf91",
+    "name": "Smt S Jothimani",
+    "constituency": "KARUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47711966,
+    "utilizationPercentage": 32.457119727891154,
+    "completedWorksCount": 86,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 34108992,
+    "inProgressPayments": 13602974,
+    "paymentGapPercentage": 28.510613039923776,
+    "completionRate": 48.86363636363637,
+    "pendingWorks": 4,
+    "unspentAmount": 99288034,
+    "totalRecommendedAmount": 107223400,
+    "name_hi": "Smt S Jothimani",
+    "constituency_hi": "KARUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47711966,
+      "totalEntries": 101,
+      "avgExpenditure": 472395.702970297,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 21779044,
+        "transactionCount": 55
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25932922,
+        "transactionCount": 46
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47711966,
+        "transactionCount": 101,
+        "avgAmount": 472395.702970297
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 86,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e268",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter Sithanavasal Panchayat, Annavasal  - Pudhukottai Main Road, Sithanavasal cave temple Junction.",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 599176
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a929",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Library and Reading rooms in Nallooran Patti Village,Sembianatham Panchayat,Kadavur Union,Karur",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1497456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da3c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter in Kumarandan Valasu, Ward no 15, Aravakurichchi Town Panchayat.",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d956",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Smart Class Board for the Government Girls High  School, Aravakurichi",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 199966
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d962",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Smart Class Board for the M.P.L Kumaran High School, Karur",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 199986
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.440Z"
+}

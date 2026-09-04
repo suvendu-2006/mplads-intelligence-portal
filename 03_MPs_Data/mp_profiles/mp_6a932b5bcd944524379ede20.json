@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede20",
+    "name": "D M Kathir Anand",
+    "constituency": "VELLORE",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 160196941.11,
+    "totalExpenditure": 34828146,
+    "utilizationPercentage": 21.740830853995572,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 16990701,
+    "inProgressPayments": 17837445,
+    "paymentGapPercentage": 51.21560303554487,
+    "completionRate": 18.29268292682927,
+    "pendingWorks": 52,
+    "unspentAmount": 125368795.11000001,
+    "totalRecommendedAmount": 78964000,
+    "name_hi": "D M Kathir Anand",
+    "constituency_hi": "VELLORE",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34828146,
+      "totalEntries": 39,
+      "avgExpenditure": 893029.3846153846,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8195222,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26632924,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34828146,
+        "transactionCount": 39,
+        "avgAmount": 893029.3846153846
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e47a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter at Near Theertham Sivan Temple  Ward 8 Alangayam Town.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e39d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter at Chinna Palli Kuppam (Primary Health Centre) in Anaicut Union",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1099818
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dff5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter at Kailasakiri Road Naidu Street, Ward 9 Uthayendram Town.",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dff4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter at Kailasakiri Road Near Suburayan Kovil Ward 4 Uthayendram Town.",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db2b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter at Pallalakuppam Panchyat Pernambut Union.",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 1098671
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.449Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2cd",
+    "name": "Smt. Sangeeta Yadav (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 169940841,
+    "utilizationPercentage": 86.6762272397961,
+    "completedWorksCount": 43,
+    "recommendedWorksCount": 78,
+    "completedWorksValue": 117219561,
+    "inProgressPayments": 52721280,
+    "paymentGapPercentage": 31.023313577693777,
+    "completionRate": 35.53719008264463,
+    "pendingWorks": 35,
+    "unspentAmount": 26123116.110000014,
+    "totalRecommendedAmount": 76512677.47,
+    "name_hi": "Smt. Sangeeta Yadav (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 169940841,
+      "totalEntries": 261,
+      "avgExpenditure": 651114.3333333334,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 42296448,
+        "transactionCount": 37
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 74811050,
+        "transactionCount": 132
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 52833343,
+        "transactionCount": 92
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 169940841,
+        "transactionCount": 261,
+        "avgAmount": 651114.3333333334
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 43,
+    "recommendedCount": 78,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30a18",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of 3 rooms in shri ranjit pandit intermediate college, shahjadpur,kaushambi",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f71",
+        "workCategory": "Normal/Others",
+        "workDescription": "bhainsa kharag mein nai bajar mein sahara churahe par raj kumar ke ghar ke pas semi high mast light",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 212074
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f77",
+        "workCategory": "Normal/Others",
+        "workDescription": "bhainsa kharag mein nai bajar mein abadi sarhara mein chuk par lalita ke ghar ke pas semi high mast light",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 212074
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f74",
+        "workCategory": "Normal/Others",
+        "workDescription": "nawali mein main road dallu sahani ke ghar ke pas semi high msat light",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 212074
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f72",
+        "workCategory": "Normal/Others",
+        "workDescription": "lokauli mein shiv prakash ke ghar ke samne semi hihg msat light",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 212074
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.926Z"
+}

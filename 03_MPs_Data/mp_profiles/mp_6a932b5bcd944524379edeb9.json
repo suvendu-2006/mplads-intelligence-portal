@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb9",
+    "name": "Mahendra Singh Solanky",
+    "constituency": "DEWAS",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41462417,
+    "utilizationPercentage": 28.205725850340137,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 131,
+    "completedWorksValue": 6249000,
+    "inProgressPayments": 35213417,
+    "paymentGapPercentage": 84.92851972426017,
+    "completionRate": 7.092198581560284,
+    "pendingWorks": 121,
+    "unspentAmount": 105537583,
+    "totalRecommendedAmount": 100888718,
+    "name_hi": "Mahendra Singh Solanky",
+    "constituency_hi": "DEWAS",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41462417,
+      "totalEntries": 107,
+      "avgExpenditure": 387499.2242990654,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 500000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 13420929,
+        "transactionCount": 35
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27541488,
+        "transactionCount": 71
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41462417,
+        "transactionCount": 107,
+        "avgAmount": 387499.2242990654
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 131,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b2bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram Panchayt thikriya me panchayt bhavn evm shaskiy vidhalay ki bountriwall nirman hetu",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19258",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram panchayt dontajageer muktidham me pewar block nirman hetu",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdab",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT BAIRAGADH  ME VIKRAM RANCHOD JI KE KHET KE PASS 100KV TRANSFAERMER POL AUR TAAR VYVSTHA HETU",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 460791
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bda9",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT KHAJURIYA KE GANV  KARNAKHEDI ME MEHRBAAN BADREELAL JE KE GHAR KE PASS SHASKIY BHUMI PAR 25KV TRANSFAERMER POL AUR TAAR VYVSTHA HETU",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 604315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdaa",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT SINGAVDA ME CHOUHAN DHARMSHALA KE PASSSHASKIY BHUMI PARN 25 KV TRANSFAERMER POL AUR TAAR VYVSTHA HETU",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 483894
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.889Z"
+}

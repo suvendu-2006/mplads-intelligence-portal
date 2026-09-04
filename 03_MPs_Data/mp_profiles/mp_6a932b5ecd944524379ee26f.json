@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee26f",
+    "name": "Shri Neeraj Shekhar (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 236483662.11,
+    "totalExpenditure": 90266672,
+    "utilizationPercentage": 38.17036288875322,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 286,
+    "completedWorksValue": 47814319,
+    "inProgressPayments": 42452353,
+    "paymentGapPercentage": 47.029930382278856,
+    "completionRate": 12.538226299694188,
+    "pendingWorks": 245,
+    "unspentAmount": 146216990.11,
+    "totalRecommendedAmount": 119209000,
+    "name_hi": "Shri Neeraj Shekhar (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 90266672,
+      "totalEntries": 176,
+      "avgExpenditure": 512878.8181818182,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 26840796,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55515836,
+        "transactionCount": 118
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7910040,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 90266672,
+        "transactionCount": 176,
+        "avgAmount": 512878.8181818182
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 286,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a309aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Room construction work in Shri Ram Intermediate College, Punjab Nagar Rampur",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 899900
+      },
+      {
+        "_id": "6a932bb5cd94452437a30f45",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC/Interlocking work from paved road to Purshotam Yadav's camp in Shahpur Usari.",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 895426
+      },
+      {
+        "_id": "6a932bb5cd94452437a312f7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC/Interlocking work from Vinod Singh's house to Lal Bahadur Yadav's house in Meeranpur.",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 893618
+      },
+      {
+        "_id": "6a932bb5cd94452437a3143c",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC/interlocking work from Ramadhar Patel's door to Kamlesh Paswan's house in village Baghauna Kala.",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 946039
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c12",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC/interlocking work from Moti Lal Pal's house to Dudhnath Verma's farm in Ward No. 14.",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 777462
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.225Z"
+}

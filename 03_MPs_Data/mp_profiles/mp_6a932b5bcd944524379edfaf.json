@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfaf",
+    "name": "Thiru Dayanidhi Maran",
+    "constituency": "CHENNAI CENTRAL",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30478390,
+    "utilizationPercentage": 20.73359863945578,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 8,
+    "completedWorksValue": 25568733,
+    "inProgressPayments": 4909657,
+    "paymentGapPercentage": 16.10864943981621,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 4,
+    "unspentAmount": 116521610,
+    "totalRecommendedAmount": 75000000,
+    "name_hi": "Thiru Dayanidhi Maran",
+    "constituency_hi": "CHENNAI CENTRAL",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30478390,
+      "totalEntries": 8,
+      "avgExpenditure": 3809798.75,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20658249,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9820141,
+        "transactionCount": 2
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30478390,
+        "transactionCount": 8,
+        "avgAmount": 3809798.75
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 8,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c9e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF BADMINTON COURT",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 4910484
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb5c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Forming of Boxing Accadamy inside a part of the Gopalapuram playground in  Dn-111, Unit 25, Zone -9, Chepauk Triplcane",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 9931275
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bb5d",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF BOXING ACADEMY BUILDING IN GOPALAPURAM WARD 111, PART 25, ZONE 9 OF CHENNAI CENTRAL CONSITUENCY",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 9749010
+      },
+      {
+        "_id": "6a932bb5cd94452437a19206",
+        "workCategory": "Normal/Others",
+        "workDescription": "SETTING UP HIGH MAST LAMPS IN THIDEER NAGAR",
+        "completedDate": "2025-07-21T00:00:00.000Z",
+        "finalAmount": 977964
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.238Z"
+}

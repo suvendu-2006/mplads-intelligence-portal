@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddcf",
+    "name": "ANGOMCHA BIMOL AKOIJAM",
+    "constituency": "INNER MANIPUR",
+    "state": "Manipur",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 93860392,
+    "utilizationPercentage": 63.85060680272109,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 45798053,
+    "inProgressPayments": 48062339,
+    "paymentGapPercentage": 51.2061988831242,
+    "completionRate": 42,
+    "pendingWorks": 8,
+    "unspentAmount": 53139608,
+    "totalRecommendedAmount": 69691752,
+    "name_hi": "ANGOMCHA BIMOL AKOIJAM",
+    "constituency_hi": "INNER MANIPUR",
+    "state_hi": "Manipur"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93860392,
+      "totalEntries": 67,
+      "avgExpenditure": 1400901.3731343283,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 61432822,
+        "transactionCount": 41
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32427570,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93860392,
+        "transactionCount": 67,
+        "avgAmount": 1400901.3731343283
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19d13",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Lilong Arapti.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 2850000
+      },
+      {
+        "_id": "6a932bb5cd94452437a17dc2",
+        "workCategory": "Normal/Others",
+        "workDescription": "1st phase of Athoupung Leikol, a Public park at Arapti Maning Leikai (Paona Mongpham), Lilong.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 4900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c15a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of ambulances",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 800989
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ae86",
+        "workCategory": "Normal/Others",
+        "workDescription": "Medical Equipment to be Fitted in Ambulance, Multiparameter Cardiac Monitor, Autoloader Collapsible Stretcher, Oxygen Cylinder, and Artificial Manual Breathing Unit.",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 749970
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ae84",
+        "workCategory": "Normal/Others",
+        "workDescription": "2nd Phase of Construction of Public Lavatory for Kwakeithel bazaar, Akham Leikai",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 1100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.969Z"
+}

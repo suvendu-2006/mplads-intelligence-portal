@@ -1,0 +1,93 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee283",
+    "name": "Shri Rajeev Shukla (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Chhattisgarh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 271174394.23,
+    "totalExpenditure": 40599928,
+    "utilizationPercentage": 14.971888520405304,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 26,
+    "completedWorksValue": 31540000,
+    "inProgressPayments": 9059928,
+    "paymentGapPercentage": 22.315133169694292,
+    "completionRate": 13.333333333333334,
+    "pendingWorks": 22,
+    "unspentAmount": 230574466.23000002,
+    "totalRecommendedAmount": 20440000,
+    "name_hi": "Shri Rajeev Shukla (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40599928,
+      "totalEntries": 35,
+      "avgExpenditure": 1159997.9428571428,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 7500000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 25540000,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7559928,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40599928,
+        "transactionCount": 35,
+        "avgAmount": 1159997.9428571428
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 26,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31e23",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C. Road at Ward No. 06 (from the residence of Kuleshwar Thakur  to the residence of Parmanand Thakur)",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 520000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e24",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C. Road at Village Rakhi, Gram Panchayat-Rakhi (from the residence of Nilesh Banchore till Bada Taalab)",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 520000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary wall and Shed for Community Kitchen at Community Centre at Kurmipara",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30a39",
+        "workCategory": "Normal/Others",
+        "workDescription": "I propose the construction of a state-ofthe-art public (digital) library in Kanker,\nwith a planned seating capacity of 250-300\nindividuals at ward no. 09, Aklavya Hostal\nBhanupratappur Kanker",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 30000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.220Z"
+}

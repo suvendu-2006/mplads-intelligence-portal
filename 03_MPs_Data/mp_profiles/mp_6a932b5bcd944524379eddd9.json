@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd9",
+    "name": "Anurag Singh Thakur",
+    "constituency": "HAMIRPUR",
+    "state": "Himachal Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 149570117.11,
+    "totalExpenditure": 18576823,
+    "utilizationPercentage": 12.42014338087189,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 162,
+    "completedWorksValue": 6497496,
+    "inProgressPayments": 12079327,
+    "paymentGapPercentage": 65.02364263254272,
+    "completionRate": 21.73913043478261,
+    "pendingWorks": 117,
+    "unspentAmount": 130993294.11000001,
+    "totalRecommendedAmount": 26632702,
+    "name_hi": "Anurag Singh Thakur",
+    "constituency_hi": "HAMIRPUR",
+    "state_hi": "Himachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 18576823,
+      "totalEntries": 233,
+      "avgExpenditure": 79728.85407725321,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10869874,
+        "transactionCount": 111
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7706949,
+        "transactionCount": 122
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 18576823,
+        "transactionCount": 233,
+        "avgAmount": 79728.85407725321
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 162,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a17c",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and Renovation of Sarai Bhawan in Village Chouki (Kaloga), GP Chowki, Block Dharampur",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a175",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and renovation of Mahila Mandal Bhawan, harijan basti, Chowki, Village Chowki, GP Chowki, Block Dharampur",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b0a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sampark Marg and Pully  on Matwar Rakker Nallaha in Village Matwar, GP Jalari, Block Nadaun",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a92c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Path with retaining wall  near the house of Shri Bhonka Ram Sharma etc. in Village Neri, GP Jore Amb, Block Bijhari",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 75000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1955a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Jeepable path from main road to the house of Shri Rakesh Kumar etc. in Ward No. 1, Village Malot,  GP Bhaner, Block Pragpur",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 150000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.675Z"
+}

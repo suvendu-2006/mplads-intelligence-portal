@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee25b",
+    "name": "Shri Mahendra Bhatt (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttarakhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23254909,
+    "utilizationPercentage": 15.819665986394558,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 108,
+    "completedWorksValue": 11203014,
+    "inProgressPayments": 12051895,
+    "paymentGapPercentage": 51.82516517265236,
+    "completionRate": 9.243697478991598,
+    "pendingWorks": 97,
+    "unspentAmount": 123745091,
+    "totalRecommendedAmount": 79239594,
+    "name_hi": "Shri Mahendra Bhatt (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttarakhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23254909,
+      "totalEntries": 159,
+      "avgExpenditure": 146257.2893081761,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7100646,
+        "transactionCount": 40
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16154263,
+        "transactionCount": 119
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23254909,
+        "transactionCount": 159,
+        "avgAmount": 146257.2893081761
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 108,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "janpad chamoli ke nagar panchayat nandanagar me ward04 ke kunturi me tiling - CC marg nirman. kar. san.- PWD Karanprayag",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 483083
+      },
+      {
+        "_id": "6a932bb5cd94452437a321d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar palika parishad herbertpur ward no-6 Vivek Bihar me Punjab and Sindh Bank wali gali me dehradun mukhyamarg se shri Neeraj ke ghar se vijay genral Store  tak CC marg nirman- kar Santh- Nagar palika parishad herbertpur",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1495470
+      },
+      {
+        "_id": "6a932bb5cd94452437a321da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar palika parishad herbertpur ward no-6 Vivek Bihar me Punjab and Sindh Bank  wali gali me dehradun mukhyamarg se shri umed  ke ghar ke kone tak CC marg nirman- kar Santh- Nagar palika parishad herbertpur",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1495580
+      },
+      {
+        "_id": "6a932bb5cd94452437a32169",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dist udhamsingh nagar me viaksh khand sitarganj ke gram siseya bhatte me machhan singh ke ghar se talab tak sadak evam nali nirman, K.S.- Viaksh kahnd adhikari Sitarganj",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 499265
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d4a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar palika parishad herbertpur ward no-6  Vivek Bihar me meena jain wali gali me dehradun mukhyamarg se subhash vernma ke ghar ke samne pol tak CC marg nirman- kar Santh- Nagar palika parishad herbertpur",
+        "completedDate": "2025-11-29T00:00:00.000Z",
+        "finalAmount": 1478397
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.761Z"
+}

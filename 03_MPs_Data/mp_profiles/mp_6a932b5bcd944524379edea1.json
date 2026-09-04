@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea1",
+    "name": "Kinjarapu Ram Mohan Naidu",
+    "constituency": "SRIKAKULAM",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171200630.11,
+    "totalExpenditure": 53576961,
+    "utilizationPercentage": 31.294838672950952,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 155,
+    "completedWorksValue": 32203971,
+    "inProgressPayments": 21372990,
+    "paymentGapPercentage": 39.89212826013032,
+    "completionRate": 27.906976744186046,
+    "pendingWorks": 95,
+    "unspentAmount": 117623669.11000001,
+    "totalRecommendedAmount": 106873000,
+    "name_hi": "Kinjarapu Ram Mohan Naidu",
+    "constituency_hi": "SRIKAKULAM",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53576961,
+      "totalEntries": 102,
+      "avgExpenditure": 525264.3235294118,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16481399,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37095562,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53576961,
+        "transactionCount": 102,
+        "avgAmount": 525264.3235294118
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 155,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e797",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal CC Road at Bhavaninagar,  Meghavaram GP of Santhabommali mandal",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 485043
+      },
+      {
+        "_id": "6a932bb5cd94452437a19d45",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Lollaputtuga Village of B.G.Puttuga GP of Kacviti mandal",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 499598
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a3ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Water facility at Pedda Limbugam village, Ambugam GP, Mandasa mandal",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 282651
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d690",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1.Addl. Electrical Poles and Line in Katyacharyulapeta GP Limits and 2. Shifting of DTR in T.Jonnavalsa GP limits, Amadalavalasa mandal",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 457316
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d692",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1. Addl. Electrical Poles and Line in Chinnikrishna Nagar, Mettakkivalasa in Ward No.11,  2. Addl. Electrical Poles and Line in Doctors Colony, Chintada in Ward No.7 and 3.Addl. Electrical Poles and Line in Seetharama Quarters in Ward No.9 of Amadalavalasa Municipality Limits",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 315308
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.247Z"
+}

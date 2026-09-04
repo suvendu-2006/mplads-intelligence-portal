@@ -1,0 +1,211 @@
+[
+  {
+    "work_id":264906,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":5203000.0,
+    "calculated_unit_price_inr":1300750.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (Pre fabricated model - Tata steel model) for VKV ZP at Kishorinagar Diglipur Tehsil"
+  },
+  {
+    "work_id":1847,
+    "state":"Andhra Pradesh",
+    "district":"NANDYAL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":500.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":300000.0,
+    "calculated_unit_price_inr":600.0,
+    "work_description":"Providing and installation of 500 LPH capacity Water Purification Plant with necessary accessories at S C P B Zilla Parishad High School, Melluru Village, Biccavolu Mandal."
+  },
+  {
+    "work_id":224539,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Medical \/ Welfare Vehicle",
+    "detected_quantity":1.0,
+    "unit":"per vehicle",
+    "total_project_cost_inr":2000000.0,
+    "calculated_unit_price_inr":2000000.0,
+    "work_description":"Purchase and supply of 01 No. Hearse Van for transportation of deceased bodies in Car Nicobar"
+  },
+  {
+    "work_id":264905,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":4856000.0,
+    "calculated_unit_price_inr":1214000.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (pre fabricated TATA steel model) for VKV ZP School at South Creek Sunderghar GP Rangat"
+  },
+  {
+    "work_id":224539,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Medical \/ Welfare Vehicle",
+    "detected_quantity":1.0,
+    "unit":"per vehicle",
+    "total_project_cost_inr":2000000.0,
+    "calculated_unit_price_inr":2000000.0,
+    "work_description":"Purchase and supply of 01 No. Hearse Van for transportation of deceased bodies in Car Nicobar"
+  },
+  {
+    "work_id":264905,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":4856000.0,
+    "calculated_unit_price_inr":1214000.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (pre fabricated TATA steel model) for VKV ZP School at South Creek Sunderghar GP Rangat"
+  },
+  {
+    "work_id":224539,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Medical \/ Welfare Vehicle",
+    "detected_quantity":1.0,
+    "unit":"per vehicle",
+    "total_project_cost_inr":2000000.0,
+    "calculated_unit_price_inr":2000000.0,
+    "work_description":"Purchase and supply of 01 No. Hearse Van for transportation of deceased bodies in Car Nicobar"
+  },
+  {
+    "work_id":264905,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":4856000.0,
+    "calculated_unit_price_inr":1214000.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (pre fabricated TATA steel model) for VKV ZP School at South Creek Sunderghar GP Rangat"
+  },
+  {
+    "work_id":223958,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Kurnool Bustand in Kurnool Town."
+  },
+  {
+    "work_id":223960,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant 2 at Kurnool Bustand in Kurnool Town."
+  },
+  {
+    "work_id":223962,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Yemmiganur Bustand"
+  },
+  {
+    "work_id":223966,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Pattikonda Bustand."
+  },
+  {
+    "work_id":264905,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":4856000.0,
+    "calculated_unit_price_inr":1214000.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (pre fabricated TATA steel model) for VKV ZP School at South Creek Sunderghar GP Rangat"
+  },
+  {
+    "work_id":223958,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Kurnool Bustand in Kurnool Town."
+  },
+  {
+    "work_id":223960,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant 2 at Kurnool Bustand in Kurnool Town."
+  },
+  {
+    "work_id":223962,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Yemmiganur Bustand"
+  },
+  {
+    "work_id":223966,
+    "state":"Andhra Pradesh",
+    "district":"KURNOOL",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":500000.0,
+    "calculated_unit_price_inr":500.0,
+    "work_description":"Providing 1000 LPH RO Plant at Pattikonda Bustand."
+  },
+  {
+    "work_id":264905,
+    "state":"Andaman And Nicobar Islands",
+    "district":"ANDAMAN AND NICOBAR ISLANDS",
+    "item_type":"Classroom",
+    "detected_quantity":4.0,
+    "unit":"per room",
+    "total_project_cost_inr":4856000.0,
+    "calculated_unit_price_inr":1214000.0,
+    "work_description":"Construction of 04 class rooms and 02 toilet blocks (pre fabricated TATA steel model) for VKV ZP School at South Creek Sunderghar GP Rangat"
+  },
+  {
+    "work_id":295051,
+    "state":"Andhra Pradesh",
+    "district":"ANAKAPALLE",
+    "item_type":"RO Water Plant",
+    "detected_quantity":1000.0,
+    "unit":"per LPH capacity",
+    "total_project_cost_inr":600000.0,
+    "calculated_unit_price_inr":600.0,
+    "work_description":"Providing 1000 LPH RO Water plant with shed at Chukkapalle Village of Cheedikada Mandal"
+  }
+]

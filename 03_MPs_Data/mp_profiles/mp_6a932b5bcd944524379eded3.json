@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded3",
+    "name": "MOHITE PATIL DHAIRYASHEEL RAJSINH",
+    "constituency": "MADHA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 195613601.7,
+    "totalExpenditure": 8828612,
+    "utilizationPercentage": 4.513291470160585,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 218,
+    "completedWorksValue": 8828612,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 15.83011583011583,
+    "pendingWorks": 177,
+    "unspentAmount": 186784989.7,
+    "totalRecommendedAmount": 86240000,
+    "name_hi": "MOHITE PATIL DHAIRYASHEEL RAJSINH",
+    "constituency_hi": "MADHA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 8828612,
+      "totalEntries": 41,
+      "avgExpenditure": 215332,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 8828612,
+        "transactionCount": 41
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 8828612,
+        "transactionCount": 41,
+        "avgAmount": 215332
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 218,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d7f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar high mast lamp in Near Bhori Majjid at post Akluj",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 215332
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Implementation of Solar High Mast at Shri TuljaBhawani Temple, In front of Shri Mari Aaie Temple, at Pophalaj, Tal. Karmala, Dist. Solapur",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 215332
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7ee",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast at Shri Ram Mandir, Ap. Girvi, Tal. Malshiras, Dist. Solapur",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 215332
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d619",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast at Suste Road, in front MSEB office,Ap. Tungat, Tal. Pandharpur, Dist. Solapur",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 215332
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d617",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast near Shri Tambda Maruti Temple, Ap. Babhulgaon,  Tal. Pandharpur, Dist. Solapur",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 215332
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.444Z"
+}

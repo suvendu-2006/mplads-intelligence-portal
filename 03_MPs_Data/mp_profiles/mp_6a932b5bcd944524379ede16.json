@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede16",
+    "name": "CHANDRA SHEKHAR",
+    "constituency": "NAGINA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 87033825,
+    "utilizationPercentage": 59.206683673469385,
+    "completedWorksCount": 286,
+    "recommendedWorksCount": 227,
+    "completedWorksValue": 61564493,
+    "inProgressPayments": 25469332,
+    "paymentGapPercentage": 29.263716721630928,
+    "completionRate": 55.7504873294347,
+    "pendingWorks": -59,
+    "unspentAmount": 59966175,
+    "totalRecommendedAmount": 35535477,
+    "name_hi": "CHANDRA SHEKHAR",
+    "constituency_hi": "NAGINA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87033825,
+      "totalEntries": 893,
+      "avgExpenditure": 97462.29003359462,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 25377680,
+        "transactionCount": 180
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 37985190,
+        "transactionCount": 386
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23670955,
+        "transactionCount": 327
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87033825,
+        "transactionCount": 893,
+        "avgAmount": 97462.29003359462
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 286,
+    "recommendedCount": 227,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16717",
+        "workCategory": "Normal/Others",
+        "workDescription": "39.\tHIGH MAST LIGHT WITH SIX LED RECOMMENDED IN MY CONSTITUENCY NAGINA BY IMPLEMNETING AGENCY PCCD BIJNORE (VILLAGE KAGPUR ME DHARMSHALA KE PASS HIGH MAST LIGHT)",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 189869
+      },
+      {
+        "_id": "6a932bb5cd94452437a1671f",
+        "workCategory": "Normal/Others",
+        "workDescription": "48.\tHIGH MAST LIGHT WITH SIX LED RECOMMENDED IN MY CONSTITUENCY NAGINA BY IMPLEMNETING AGENCY PCCD BIJNORE (VILLAGE BHAGUWALA ABDULLAH JI KE GHAR KE PASS HIGH MAST LIGHT)",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 189869
+      },
+      {
+        "_id": "6a932bb5cd94452437a16718",
+        "workCategory": "Normal/Others",
+        "workDescription": "38.\tHIGH MAST LIGHT WITH SIX LED RECOMMENDED IN MY CONSTITUENCY NAGINA BY IMPLEMNETING AGENCY PCCD BIJNORE (SHERKOT ME SALAM KE MAKAN  KE PASS HIGH MAST LIGHT)",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 189869
+      },
+      {
+        "_id": "6a932bb5cd94452437a1673d",
+        "workCategory": "Normal/Others",
+        "workDescription": "84.\tHIGH MAST LIGHT WITH SIX LED RECOMMENDED IN MY CONSTITUENCY NAGINA BY IMPLEMNETING AGENCY PCCD BIJNORE (SEOHARA ME KURI HOUSE KE PASS HIGH MAST LIGHT)",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 189869
+      },
+      {
+        "_id": "6a932bb5cd94452437a1673b",
+        "workCategory": "Normal/Others",
+        "workDescription": "83.\tHIGH MAST LIGHT WITH SIX LED RECOMMENDED IN MY CONSTITUENCY NAGINA BY IMPLEMNETING AGENCY PCCD BIJNORE (SEOHARA ME MAIN CHORAHE PAR HIGH MAST LIGHT)",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 189869
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.646Z"
+}

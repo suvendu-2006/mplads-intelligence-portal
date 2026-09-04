@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede6a",
+    "name": "H.D. KUMARASWAMY",
+    "constituency": "MANDYA",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44450000,
+    "utilizationPercentage": 30.238095238095237,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 140,
+    "completedWorksValue": 3500000,
+    "inProgressPayments": 40950000,
+    "paymentGapPercentage": 92.1259842519685,
+    "completionRate": 4.761904761904762,
+    "pendingWorks": 133,
+    "unspentAmount": 102550000,
+    "totalRecommendedAmount": 92000000,
+    "name_hi": "H.D. KUMARASWAMY",
+    "constituency_hi": "MANDYA",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44450000,
+      "totalEntries": 127,
+      "avgExpenditure": 350000,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22750000,
+        "transactionCount": 54
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21700000,
+        "transactionCount": 73
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44450000,
+        "transactionCount": 127,
+        "avgAmount": 350000
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 140,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1beb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "COSTRUCTION OF SRI MANCHAMMA SAMUDAYA BHAVANA AT MAREGOWDANAHALLI  VILLAGE",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a197ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Samudhaya Bhavana AT Maluganahalli Grama",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19835",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Sri Lakkamma Lakshmidevi Samudhaya Bhavana On Going Work",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19833",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Sri Rajiv Ghandhi Seva Kendra On Going Work",
+        "completedDate": "2025-11-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1982e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of DR BR Ambedkar Samudhaya Bhavana On Going Work",
+        "completedDate": "2025-11-26T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.658Z"
+}

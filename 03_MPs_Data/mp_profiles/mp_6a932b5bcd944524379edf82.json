@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf82",
+    "name": "SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE",
+    "constituency": "SATARA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 16135149,
+    "utilizationPercentage": 10.976291836734694,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 118,
+    "completedWorksValue": 11976649,
+    "inProgressPayments": 4158500,
+    "paymentGapPercentage": 25.772925927117253,
+    "completionRate": 11.940298507462686,
+    "pendingWorks": 102,
+    "unspentAmount": 130864851,
+    "totalRecommendedAmount": 84900000,
+    "name_hi": "SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE",
+    "constituency_hi": "SATARA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16135149,
+      "totalEntries": 21,
+      "avgExpenditure": 768340.4285714285,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1999677,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14135472,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16135149,
+        "transactionCount": 21,
+        "avgAmount": 768340.4285714285
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 118,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e95b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of concrete road at Andharwadi.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 693280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e970",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of RCC Drain at Sabalwadi",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 493290
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e95a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Closed drain at Hirai Garden at Shiwade",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 694830
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road and Closed drainage Behind Vitthal Ward Mandir",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal Road at Village Renavale",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.492Z"
+}

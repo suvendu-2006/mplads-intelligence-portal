@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee215",
+    "name": "Shri Abdul Wahab (2021-27)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 310898953.29,
+    "totalExpenditure": 93760670,
+    "utilizationPercentage": 30.157923983919627,
+    "completedWorksCount": 120,
+    "recommendedWorksCount": 248,
+    "completedWorksValue": 80050168,
+    "inProgressPayments": 13710502,
+    "paymentGapPercentage": 14.622871188953749,
+    "completionRate": 32.608695652173914,
+    "pendingWorks": 128,
+    "unspentAmount": 217138283.29000002,
+    "totalRecommendedAmount": 193852704,
+    "name_hi": "Shri Abdul Wahab (2021-27)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93760670,
+      "totalEntries": 164,
+      "avgExpenditure": 571711.4024390244,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 11901000,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 35314534,
+        "transactionCount": 55
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 46545136,
+        "transactionCount": 82
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93760670,
+        "transactionCount": 164,
+        "avgAmount": 571711.4024390244
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 120,
+    "recommendedCount": 248,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Kuttpulikkal road or pathway, Ward No.03, Anakkayam Panchayath",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 288130
+      },
+      {
+        "_id": "6a932bb5cd94452437a324a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Neendarathil Colony Mattai road or pathway, Ward No.03, Pookottur Panchayath",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 474937
+      },
+      {
+        "_id": "6a932bb5cd94452437a324a8",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction of Kaliyeparamb  Cholakkal road  or pathway, Ward no.12, Pookkottur panchayat",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 473538
+      },
+      {
+        "_id": "6a932bb5cd94452437a32499",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Kotayil Akaipotta road or pathway, Wad No. 01 Vazhayoor Panchayat",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 391909
+      },
+      {
+        "_id": "6a932bb5cd94452437a323ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ariyoor Paduvilkulamb road or pathway, Ward No.09 Kottopadam Panchayat",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 647657
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.243Z"
+}

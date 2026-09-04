@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee25f",
+    "name": "Shri Manas Ranjan Mangaraj (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Odisha",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 13305000,
+    "utilizationPercentage": 6.7860509377230125,
+    "completedWorksCount": 23,
+    "recommendedWorksCount": 105,
+    "completedWorksValue": 9405000,
+    "inProgressPayments": 3900000,
+    "paymentGapPercentage": 29.312288613303267,
+    "completionRate": 17.96875,
+    "pendingWorks": 82,
+    "unspentAmount": 182758957.11,
+    "totalRecommendedAmount": 54580000,
+    "name_hi": "Shri Manas Ranjan Mangaraj (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13305000,
+      "totalEntries": 31,
+      "avgExpenditure": 429193.5483870968,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 600000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 2990000,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9715000,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13305000,
+        "transactionCount": 31,
+        "avgAmount": 429193.5483870968
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 23,
+    "recommendedCount": 105,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32375",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light in Trutiapada Village.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 165000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32377",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light in Sananugan Village.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 165000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32378",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light in Beruan Village.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 165000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32363",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light in Jhinkharada Village.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 165000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3234d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Light in Brahmakundal Village.",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 165000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.742Z"
+}

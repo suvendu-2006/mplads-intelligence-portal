@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "categories": [
+      {
+        "_id": null,
+        "transactionCount": 245994,
+        "category": null,
+        "category_hi": null,
+        "totalAmount": 78421226674.87,
+        "avgAmount": 318793.25
+      }
+    ],
+    "totalCategories": 1,
+    "lastUpdated": "2026-08-31T17:25:31.587Z"
+  }
+}

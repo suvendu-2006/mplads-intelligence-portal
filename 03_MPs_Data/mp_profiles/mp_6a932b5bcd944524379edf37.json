@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf37",
+    "name": "ROOP KUMARI CHOUDHARY",
+    "constituency": "MAHASAMUND",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 153035414,
+    "totalExpenditure": 75772172,
+    "utilizationPercentage": 49.512834983411096,
+    "completedWorksCount": 72,
+    "recommendedWorksCount": 107,
+    "completedWorksValue": 42184962,
+    "inProgressPayments": 33587210,
+    "paymentGapPercentage": 44.32657678072103,
+    "completionRate": 40.22346368715084,
+    "pendingWorks": 35,
+    "unspentAmount": 77263242,
+    "totalRecommendedAmount": 74200000,
+    "name_hi": "ROOP KUMARI CHOUDHARY",
+    "constituency_hi": "MAHASAMUND",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75772172,
+      "totalEntries": 249,
+      "avgExpenditure": 304305.9116465863,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13746338,
+        "transactionCount": 51
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 40112134,
+        "transactionCount": 131
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21913700,
+        "transactionCount": 67
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75772172,
+        "transactionCount": 249,
+        "avgAmount": 304305.9116465863
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 72,
+    "recommendedCount": 107,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bcd7",
+        "workCategory": "Normal/Others",
+        "workDescription": "C.C. ROAD NIRMAN KARYA",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 849900
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a473",
+        "workCategory": "Normal/Others",
+        "workDescription": "MEIN ROAD SE DEWARCHAN GHAR KI OR CC ROAD NIRMAN KARYA",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 998800
+      },
+      {
+        "_id": "6a932bb5cd94452437a18a9c",
+        "workCategory": "Normal/Others",
+        "workDescription": "C.C.ROAD NIRMAN KARYA",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 999100
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN KARYA",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 999300
+      },
+      {
+        "_id": "6a932bb5cd94452437a16a35",
+        "workCategory": "Normal/Others",
+        "workDescription": "cc road bichhiya po.",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 799400
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.696Z"
+}

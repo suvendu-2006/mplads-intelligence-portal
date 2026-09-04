@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede69",
+    "name": "Gyaneshwar Patil",
+    "constituency": "KHANDWA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 155690684.77,
+    "totalExpenditure": 86011926,
+    "utilizationPercentage": 55.24539000330327,
+    "completedWorksCount": 164,
+    "recommendedWorksCount": 222,
+    "completedWorksValue": 53503477,
+    "inProgressPayments": 32508449,
+    "paymentGapPercentage": 37.79528085442477,
+    "completionRate": 42.487046632124354,
+    "pendingWorks": 58,
+    "unspentAmount": 69678758.77000001,
+    "totalRecommendedAmount": 71772019,
+    "name_hi": "Gyaneshwar Patil",
+    "constituency_hi": "KHANDWA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86011926,
+      "totalEntries": 459,
+      "avgExpenditure": 187389.81699346405,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 9954285,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 45111607,
+        "transactionCount": 254
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30946034,
+        "transactionCount": 162
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86011926,
+        "transactionCount": 459,
+        "avgAmount": 187389.81699346405
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 164,
+    "recommendedCount": 222,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d718",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram khutlakalan mai dharmi baba ashram ke pas high mast light",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 364247
+      },
+      {
+        "_id": "6a932bb5cd94452437a17d3a",
+        "workCategory": "Normal/Others",
+        "workDescription": "tin shed nirman near rajput dharmshala",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e07e",
+        "workCategory": "Normal/Others",
+        "workDescription": "icchapur mandir k pas 35 kw ongrid solar system development",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 2450000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18522",
+        "workCategory": "Normal/Others",
+        "workDescription": "sarvajanik shed nirman ekhand",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b1d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "solar high mast",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 364247
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.267Z"
+}

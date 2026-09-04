@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb5",
+    "name": "M.K. VISHNUPRASAD",
+    "constituency": "CUDDALORE",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71295556,
+    "utilizationPercentage": 48.500378231292515,
+    "completedWorksCount": 74,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 58612994,
+    "inProgressPayments": 12682562,
+    "paymentGapPercentage": 17.788713226389593,
+    "completionRate": 64.91228070175438,
+    "pendingWorks": -34,
+    "unspentAmount": 75704444,
+    "totalRecommendedAmount": 40040000,
+    "name_hi": "M.K. VISHNUPRASAD",
+    "constituency_hi": "CUDDALORE",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71295556,
+      "totalEntries": 90,
+      "avgExpenditure": 792172.8444444444,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 42929457,
+        "transactionCount": 57
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28366099,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71295556,
+        "transactionCount": 90,
+        "avgAmount": 792172.8444444444
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 74,
+    "recommendedCount": 40,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cbeb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 100 mtrs Drainage at Lakshminarayanapurm - Pudu Nagar",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 498844
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d575",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Anganwadi building at Niramani village - Aadhi dravidar area",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 1648838
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc74",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Multi purposes Building",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 1349643
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of 100 mtrs of cement Road in Alapakkam Near Sivan Kovil",
+        "completedDate": "2026-03-02T00:00:00.000Z",
+        "finalAmount": 499115
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc43",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of 250 mtrs of BT road in Azhgappa nagar - Gunduuppalavadi -",
+        "completedDate": "2026-03-02T00:00:00.000Z",
+        "finalAmount": 1199378
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.222Z"
+}

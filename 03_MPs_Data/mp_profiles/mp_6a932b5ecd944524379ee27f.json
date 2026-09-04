@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee27f",
+    "name": "Shri R. Dharmar (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 260812242.52,
+    "totalExpenditure": 207877791,
+    "utilizationPercentage": 79.70400046848229,
+    "completedWorksCount": 189,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 204379819,
+    "inProgressPayments": 3497972,
+    "paymentGapPercentage": 1.6827059702592277,
+    "completionRate": 77.45901639344262,
+    "pendingWorks": -134,
+    "unspentAmount": 52934451.52000001,
+    "totalRecommendedAmount": 54800000,
+    "name_hi": "Shri R. Dharmar (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 207877791,
+      "totalEntries": 198,
+      "avgExpenditure": 1049887.8333333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 28295670,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 82438391,
+        "transactionCount": 79
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 75563089,
+        "transactionCount": 82
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21580641,
+        "transactionCount": 20
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 207877791,
+        "transactionCount": 198,
+        "avgAmount": 1049887.8333333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 189,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing paver block,culvert at sangaranppan patti.",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1996231
+      },
+      {
+        "_id": "6a932bb5cd94452437a3224a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter at Melakannicheri village in Melakannicheri Panchyat.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 549290
+      },
+      {
+        "_id": "6a932bb5cd94452437a320f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of flood production wall in weir No.1 in Echantha periyakulam tank Echantha village in Melaneelidanallur union, Tenkasi  District",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 2482652
+      },
+      {
+        "_id": "6a932bb5cd94452437a320f0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of flood production wall in surplus weir of Sayamalai tank at sayamalai village in kuruvikulam union  Tenkasi  District",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 2496602
+      },
+      {
+        "_id": "6a932bb5cd94452437a320f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constructio of cut off wall and apron in weir no.2 in echantha periyakulam tank.in echantha village",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 2472600
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.907Z"
+}

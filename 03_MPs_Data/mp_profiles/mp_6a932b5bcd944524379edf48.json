@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf48",
+    "name": "SANJNA JATAV",
+    "constituency": "BHARATPUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 65761488.1,
+    "utilizationPercentage": 44.73570619047619,
+    "completedWorksCount": 75,
+    "recommendedWorksCount": 168,
+    "completedWorksValue": 39324491.1,
+    "inProgressPayments": 26436997,
+    "paymentGapPercentage": 40.2013363198209,
+    "completionRate": 30.864197530864196,
+    "pendingWorks": 93,
+    "unspentAmount": 81238511.9,
+    "totalRecommendedAmount": 89905367,
+    "name_hi": "SANJNA JATAV",
+    "constituency_hi": "BHARATPUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65761488.1,
+      "totalEntries": 716,
+      "avgExpenditure": 91845.65377094972,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2405684,
+        "transactionCount": 39
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 36091528.1,
+        "transactionCount": 455
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27264276,
+        "transactionCount": 222
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65761488.1,
+        "transactionCount": 716,
+        "avgAmount": 91845.65377094972
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 75,
+    "recommendedCount": 168,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e632",
+        "workCategory": "Normal/Others",
+        "workDescription": "interlocking brick paving construction work in various streets of village dahara",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 499322
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e830",
+        "workCategory": "Normal/Others",
+        "workDescription": "Room construction work with veranda in Mahatma Gandhi Government Higher Secondary School, Village Pawta, Gram Panchayat Ganjpur- Noorpur",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 797482
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b51",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ambedkar bhavan ki chardiwari Nirman karya kareeli work agency GP kareeli",
+        "completedDate": "2026-08-16T00:00:00.000Z",
+        "finalAmount": 399748
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e885",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC interlocking drain with trench from Bijendra Jatav house towards Mannu Jatav house in village Nangal Rupa",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 999737
+      },
+      {
+        "_id": "6a932bb5cd94452437a16d34",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking sadak Nirman karya DharmSingh jatav ke Ghar se Ashok ke Makan ki or may gali jatav mohalla Luhasa work agency GP Luhasa",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 599744
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.903Z"
+}

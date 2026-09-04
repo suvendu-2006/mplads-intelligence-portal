@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb4",
+    "name": "ADITYA YADAV",
+    "constituency": "BADAUN",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 86893966,
+    "utilizationPercentage": 59.11154149659864,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 64,
+    "completedWorksValue": 31363039,
+    "inProgressPayments": 55530927,
+    "paymentGapPercentage": 63.90653983960175,
+    "completionRate": 39.04761904761905,
+    "pendingWorks": 23,
+    "unspentAmount": 60106034,
+    "totalRecommendedAmount": 73702733,
+    "name_hi": "ADITYA YADAV",
+    "constituency_hi": "BADAUN",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86893966,
+      "totalEntries": 189,
+      "avgExpenditure": 459756.4338624339,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 51523286,
+        "transactionCount": 108
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35370680,
+        "transactionCount": 81
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86893966,
+        "transactionCount": 189,
+        "avgAmount": 459756.4338624339
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 64,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd01",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram molanpur block rajpura me devendra singh ke ghar se mukhtiyar pradhan ji ke ghar ki or lagbhag 73 meter cc road and nali nirman karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 843851
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcff",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram karkora block rajpura me surajpal ke ghar se tillu ke ghar ki or lagbhag 70 meter cc road and nali nirman karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 673604
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd02",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram sainjana ahran block gunnaur me ompal singh ke ghar se bahadur singh ke ghar ki or lagbhag 115 meter cc road and nali nirman karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1068726
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd04",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram nandpur block junawai me pappu ke ghar se gangasaran ke ghar tak lagbhag 120 meter cc road and nali nirman karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1340704
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd03",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram jianagla block rajpura me sardar singh ke ghar se harpal singh ke ghar ki or lagbhag 149 meter cc road and nali nirman karya",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1161606
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.665Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf53",
+    "name": "SELVARAJ V",
+    "constituency": "NAGAPATTINAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50673389,
+    "utilizationPercentage": 34.47169319727891,
+    "completedWorksCount": 44,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 34340328,
+    "inProgressPayments": 16333061,
+    "paymentGapPercentage": 32.23202813610907,
+    "completionRate": 51.76470588235295,
+    "pendingWorks": -3,
+    "unspentAmount": 96326611,
+    "totalRecommendedAmount": 56497000,
+    "name_hi": "SELVARAJ V",
+    "constituency_hi": "NAGAPATTINAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50673389,
+      "totalEntries": 61,
+      "avgExpenditure": 830711.2950819673,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22201388,
+        "transactionCount": 29
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28472001,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50673389,
+        "transactionCount": 61,
+        "avgAmount": 830711.2950819673
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 44,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e59e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathing Ghat at Vennar River opposite side of Telungu Street",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 497516
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e731",
+        "workCategory": "Normal/Others",
+        "workDescription": "BT to Esanakudi Mariyammankoil Street Road in Puzhuthikkudi Panchayat",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 577937
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d687",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter near by Kalappal Govt. Hr. Sec. School",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 3992983
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c686",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter entrance of Tiruvarur Medical College",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c68a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter entrance of Tiruvarur District Court",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 799536
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.243Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede73",
+    "name": "ISHA KHAN CHOUDHURY",
+    "constituency": "MALDAHA DAKSHIN",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 8567025,
+    "utilizationPercentage": 5.827908163265306,
+    "completedWorksCount": 25,
+    "recommendedWorksCount": 99,
+    "completedWorksValue": 8567025,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 20.161290322580644,
+    "pendingWorks": 74,
+    "unspentAmount": 138432975,
+    "totalRecommendedAmount": 46783185,
+    "name_hi": "ISHA KHAN CHOUDHURY",
+    "constituency_hi": "MALDAHA DAKSHIN",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 8567025,
+      "totalEntries": 25,
+      "avgExpenditure": 342681,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5062275,
+        "transactionCount": 18
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 3504750,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 8567025,
+        "transactionCount": 25,
+        "avgAmount": 342681
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 25,
+    "recommendedCount": 99,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e89b",
+        "workCategory": "Normal/Others",
+        "workDescription": "installtion og solarlight 3 nos in front of sukhnagar jame masjidin front of  fatehpur jumma masjid in front  ghontola jumma masjid at akanda baria sahabajpur g.p kalichak-iii block ,malda",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 298922
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e893",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar light 4 Nos  in front of RustumSkHousein front hotatparaMasjid,infrontofSidam house House Parlalpur more, Par Baldyanathpur Murshed Ali biswas Kabarstan at Pardeonapur Sovapur GP, Kaliachak-III Block, Malda.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 397967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e898",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar light 4 Nos at Johortola kabarsthan, jhunjhuni kabarsthan jaladitola old nh chowmatha  infront of arsad sk house at lakshmi purgp, kalichak-iii block , malda",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 397967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e89a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar light 3 Nos at Mollatola Kabarstan, New 17 Mile Kabarstan, Guljartola Kabarstan at Birnagar-1 GP, Kaliachak-III Block, Malda.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 298922
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ca4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation  of High must Solar  Light infront of\nMukles  Mudikhana  shop  under  Rajnagar GP plot-\n5016,JL- 30,  Mouza - Nayagram  under  Kaliachak",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 148410
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.217Z"
+}

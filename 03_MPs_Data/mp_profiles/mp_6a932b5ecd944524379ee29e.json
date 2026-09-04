@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee29e",
+    "name": "Shri Sanjay Kumar Jha (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 186200000,
+    "totalExpenditure": 5078584,
+    "utilizationPercentage": 2.7274887218045114,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 2,
+    "completedWorksValue": 4273055,
+    "inProgressPayments": 805529,
+    "paymentGapPercentage": 15.861291257563131,
+    "completionRate": 66.66666666666666,
+    "pendingWorks": -2,
+    "unspentAmount": 181121416,
+    "totalRecommendedAmount": 1890000,
+    "name_hi": "Shri Sanjay Kumar Jha (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5078584,
+      "totalEntries": 6,
+      "avgExpenditure": 846430.6666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2365495,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2713089,
+        "transactionCount": 4
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5078584,
+        "transactionCount": 6,
+        "avgAmount": 846430.6666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 2,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31e98",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constrution work of new library building in ward no. 13 of Deep Paschim Panchayat.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 926261
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f2a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of about 400 feet drain on government land beside to the cemetry of ward no.-03 in vill-Sangram of panchayat Sangram under Jhanjharpur block.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 981299
+      },
+      {
+        "_id": "6a932bb5cd94452437a31de2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of ghat in Vishhari pond of Vill-Ratauli, Panchayat- Sudai Ratauli, ward no-01, block-Ghoghardiha, under Madhubani District.",
+        "completedDate": "2025-12-16T00:00:00.000Z",
+        "finalAmount": 895917
+      },
+      {
+        "_id": "6a932bb5cd94452437a31a20",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of ghat in the Agrawal Pokhar of east tola Khojpur block-Babubarhi under Madhubani District.",
+        "completedDate": "2025-09-24T00:00:00.000Z",
+        "finalAmount": 1469578
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.933Z"
+}

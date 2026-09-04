@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf2",
+    "name": "Balashowry Vallabbhaneni",
+    "constituency": "MACHILIPATNAM",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 14363941,
+    "utilizationPercentage": 9.77138843537415,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 52,
+    "completedWorksValue": 3302774,
+    "inProgressPayments": 11061167,
+    "paymentGapPercentage": 77.00649146358927,
+    "completionRate": 14.754098360655737,
+    "pendingWorks": 43,
+    "unspentAmount": 132636059,
+    "totalRecommendedAmount": 38066000,
+    "name_hi": "Balashowry Vallabbhaneni",
+    "constituency_hi": "MACHILIPATNAM",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14363941,
+      "totalEntries": 26,
+      "avgExpenditure": 552459.2692307692,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2802788,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11561153,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14363941,
+        "transactionCount": 26,
+        "avgAmount": 552459.2692307692
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 52,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1aad3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing community drinking water plant at Fransalian Vidyajyothi hostel, Nidadavolue, West Godavari District",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 243215
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d39b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of waiting shelter for patients at Primary Health Centre of China Pandraka of Kruthivennu Mandal",
+        "completedDate": "2026-02-21T00:00:00.000Z",
+        "finalAmount": 499986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd84",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC road from Murari Raghavulu field to Iyanampudi drain (reach-1) in Pedamuttevi village, Movva Mandal in Krishna District",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 482850
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd8f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC road from Murari Raghavulu field to Iyanampudi drain (reach-3) in Pedamuttevi village, Movva Mandal in Krishna District",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 287229
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd94",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC road from  Chikulavari cheruvu to Kuthada Siva house in Pedamuttevi village, Movva Mandal in Krishna District",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 349394
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.657Z"
+}
