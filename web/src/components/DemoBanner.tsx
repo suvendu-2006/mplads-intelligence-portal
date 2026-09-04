@@ -9,6 +9,8 @@ export const DemoBanner: React.FC = () => {
 
   const getRoleDisplayName = () => {
     switch (user.role) {
+      case 'mospi':
+        return 'MoSPI Central Authority (Omnipotent Cross-System Action Unlocked)'
       case 'state_nodal_officer':
         return `State Nodal Officer (${user.state || 'Assigned State'})`
       case 'auditor':

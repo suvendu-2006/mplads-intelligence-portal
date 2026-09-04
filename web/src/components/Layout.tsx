@@ -74,7 +74,14 @@ export const Layout: React.FC = () => {
               {isActive('/mps') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
             </Link>
 
-            <Link to="/map" className={navLinkClasses('/map')}>
+            <Link
+              to="/map"
+              onMouseEnter={() => {
+                import('../pages/GISMap').catch(() => {})
+                fetch('/api/map/pcs').catch(() => {})
+              }}
+              className={navLinkClasses('/map')}
+            >
               <Globe2 size={14} className={isActive('/map') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
               <span>GIS Map</span>
               {isActive('/map') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
@@ -90,6 +97,32 @@ export const Layout: React.FC = () => {
             )}
 
             {/* Contextual Role Console tabs - Only visible when relevant role is active */}
+            {user.role === 'mospi' && (
+              <>
+                <Link to="/my-state" className={navLinkClasses('/my-state')}>
+                  <Building2 size={14} className="text-emerald-500" />
+                  <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
+                    State Console
+                  </span>
+                  {isActive('/my-state') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />}
+                </Link>
+                <Link to="/district-dashboard" className={navLinkClasses('/district-dashboard')}>
+                  <Building2 size={14} className="text-[var(--brand-primary)]" />
+                  <span className="font-extrabold text-[var(--brand-primary)]">
+                    District Console
+                  </span>
+                  {isActive('/district-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
+                </Link>
+                <Link to="/mp-dashboard" className={navLinkClasses('/mp-dashboard')}>
+                  <Users size={14} className="text-[var(--brand-accent)]" />
+                  <span className="font-extrabold text-[var(--gold-text)]">
+                    MP Console
+                  </span>
+                  {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
+                </Link>
+              </>
+            )}
+
             {user.role === 'state_nodal_officer' && (
               <Link
                 to={user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `/states/${encodeURIComponent(user.state)}` : '/states'}
@@ -132,12 +165,14 @@ export const Layout: React.FC = () => {
           {/* Right Status / Persona Indicator */}
           <div className="hidden md:flex items-center gap-2 py-1 text-xs shrink-0">
             <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)] flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className={`w-2 h-2 rounded-full ${user.role === 'mospi' ? 'bg-amber-500 shadow-sm' : 'bg-emerald-500'} animate-pulse`} />
               <span>
                 Active Role:{' '}
-                <strong className="text-[var(--text-primary)]">
+                <strong className={user.role === 'mospi' ? 'text-amber-600 dark:text-amber-400' : 'text-[var(--text-primary)]'}>
                   {user.role === 'viewer'
                     ? 'User (Public)'
+                    : user.role === 'mospi'
+                    ? 'MoSPI (Apex Authority)'
                     : user.role === 'state_nodal_officer'
                     ? 'State Nodal'
                     : user.role === 'district_authority'

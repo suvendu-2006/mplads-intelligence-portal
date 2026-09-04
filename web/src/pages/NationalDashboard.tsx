@@ -182,6 +182,8 @@ export const NationalDashboard: React.FC = () => {
           icon={Users}
           label={t('kpi.total_mps')}
           value={totalMps}
+          description="Both Houses: Lok Sabha (2024-29) & Rajya Sabha"
+          tooltip="774 MPs across both houses of Parliament: 18th Lok Sabha (2024-2029) and Rajya Sabha"
           theme="navy"
         />
         <StatCard

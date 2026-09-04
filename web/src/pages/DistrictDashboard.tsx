@@ -31,16 +31,25 @@ import { t } from '../lib/i18n'
 export const DistrictDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
   const { district } = useParams<{ district?: string }>()
-  const [data, setData] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const districtName = district || (user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? user.district : 'SHIMLA')
+  const isAuthorized = ['district_authority', 'state_nodal_officer', 'admin', 'mospi'].includes(user.role)
+
+  const [data, setData] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_district_${districtName}`)
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_district_${districtName}`)
+    } catch { return true }
+  })
   const [activeTab, setActiveTab] = useState<'works' | 'mps' | 'idas' | 'compliance'>('works')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [complianceToast, setComplianceToast] = useState<string | null>(null)
   const [selectedMBWork, setSelectedMBWork] = useState<any | null>(null)
   const [verifiedMBWorks, setVerifiedMBWorks] = useState<number[]>([])
-
-  const districtName = district || (user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? user.district : 'SHIMLA')
-  const isAuthorized = ['district_authority', 'state_nodal_officer', 'admin'].includes(user.role)
 
   const certifyMB = (workId: number) => {
     setVerifiedMBWorks((prev) => [...prev, workId])
@@ -54,12 +63,15 @@ export const DistrictDashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadDistrict() {
-      setLoading(true)
+      if (!sessionStorage.getItem(`cached_district_${districtName}`)) {
+        setLoading(true)
+      }
       try {
         const res = await fetch(`/api/districts/${encodeURIComponent(districtName)}`)
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
+          try { sessionStorage.setItem(`cached_district_${districtName}`, JSON.stringify(json.data)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load district report:', err)

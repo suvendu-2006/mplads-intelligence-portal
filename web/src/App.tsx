@@ -18,6 +18,15 @@ const Login = React.lazy(() => import('./pages/Login').then(m => ({ default: m.L
 const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
 
 export const App: React.FC = () => {
+  React.useEffect(() => {
+    // Background prefetch for GIS map bundle & GeoJSON so opening GIS Map is instant
+    const timer = setTimeout(() => {
+      import('./pages/GISMap').catch(() => {})
+      fetch('/api/map/pcs').catch(() => {})
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <BrowserRouter>
       <ScrollToTop />

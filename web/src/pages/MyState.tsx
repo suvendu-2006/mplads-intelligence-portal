@@ -39,7 +39,7 @@ export const MyState: React.FC = () => {
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [actionNotice, setActionNotice] = useState<string | null>(null)
 
-  const isAuthorized = ['state_nodal_officer', 'admin'].includes(user.role)
+  const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
 
   useEffect(() => {
     fetch('/api/national')

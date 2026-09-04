@@ -31,10 +31,36 @@ function ResetViewControl() {
 
 const GEO_CACHE: Record<string, any> = {}
 
+export async function prefetchGeoData(layer: 'pcs' | 'districts' = 'pcs') {
+  if (GEO_CACHE[layer]) return GEO_CACHE[layer]
+  try {
+    const url = layer === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
+    const res = await fetch(url)
+    if (res.ok) {
+      const json = await res.json()
+      const featData = (json.data && json.data.type === 'FeatureCollection') ? json.data : json
+      GEO_CACHE[layer] = featData
+      try { sessionStorage.setItem(`cached_map_${layer}`, JSON.stringify(featData)) } catch {}
+      return featData
+    }
+  } catch {}
+}
+
 export const GISMap: React.FC = () => {
   const [layerType, setLayerType] = useState<'pcs' | 'districts'>('pcs')
-  const [geoData, setGeoData] = useState<any>(() => GEO_CACHE['pcs'] || null)
-  const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'])
+  const [geoData, setGeoData] = useState<any>(() => {
+    if (GEO_CACHE['pcs']) return GEO_CACHE['pcs']
+    try {
+      const saved = sessionStorage.getItem('cached_map_pcs')
+      if (saved) {
+        const parsed = JSON.parse(saved)
+        GEO_CACHE['pcs'] = parsed
+        return parsed
+      }
+    } catch {}
+    return null
+  })
+  const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'] && typeof window !== 'undefined' && !sessionStorage.getItem('cached_map_pcs'))
   const [metric, setMetric] = useState<'utilization' | 'works'>('utilization')
   const [selectedFeature, setSelectedFeature] = useState<any>(null)
 
@@ -45,38 +71,30 @@ export const GISMap: React.FC = () => {
         setLoading(false)
         return
       }
+
+      try {
+        const saved = sessionStorage.getItem(`cached_map_${layerType}`)
+        if (saved) {
+          const parsed = JSON.parse(saved)
+          GEO_CACHE[layerType] = parsed
+          setGeoData(parsed)
+          setLoading(false)
+          return
+        }
+      } catch {}
+
       setLoading(true)
       try {
         const primaryUrl = layerType === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
-        const fallbackUrl = layerType === 'pcs' ? '/data/pcs_enriched.geojson' : '/data/districts_enriched.geojson'
-        
-        let parsed: any = null
-        try {
-          const res = await fetch(primaryUrl)
-          if (res.ok) {
-            const text = await res.text()
-            if (text.trim().startsWith('{')) {
-              parsed = JSON.parse(text)
-            }
-          }
-        } catch {
-          // Fallback to static asset
-        }
-
-        if (!parsed) {
-          const resFallback = await fetch(fallbackUrl)
-          if (resFallback.ok) {
-            const textFallback = await resFallback.text()
-            if (textFallback.trim().startsWith('{')) {
-              parsed = JSON.parse(textFallback)
-            }
-          }
-        }
-
-        if (parsed) {
-          const featData = (parsed.data && parsed.data.type === 'FeatureCollection') ? parsed.data : parsed
+        const res = await fetch(primaryUrl)
+        if (res.ok) {
+          const json = await res.json()
+          const featData = (json.data && json.data.type === 'FeatureCollection') ? json.data : json
           GEO_CACHE[layerType] = featData
           setGeoData(featData)
+          try {
+            sessionStorage.setItem(`cached_map_${layerType}`, JSON.stringify(featData))
+          } catch {}
         }
       } catch (err) {
         console.error('Failed to load GeoJSON:', err)
@@ -236,29 +254,32 @@ export const GISMap: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Map Container */}
         <div className="lg:col-span-3 lux-card p-2 overflow-hidden h-[640px] relative">
-          {loading ? (
-            <LoadingSkeleton rows={10} height="h-full" />
-          ) : (
-            <MapContainer
-              center={INDIA_CENTER}
-              zoom={5}
-              minZoom={4.5}
-              maxZoom={8.5}
-              maxBounds={INDIA_BOUNDS}
-              maxBoundsViscosity={1.0}
-              style={{ height: '100%', width: '100%', borderRadius: '12px' }}
-              className="z-0"
-            >
-              <ResetViewControl />
-              {geoData && (
-                <GeoJSON
-                  key={`${layerType}-${metric}`}
-                  data={geoData}
-                  style={styleFeature}
-                  onEachFeature={onEachFeature}
-                />
-              )}
-            </MapContainer>
+          <MapContainer
+            center={INDIA_CENTER}
+            zoom={5}
+            minZoom={4.5}
+            maxZoom={8.5}
+            maxBounds={INDIA_BOUNDS}
+            maxBoundsViscosity={1.0}
+            style={{ height: '100%', width: '100%', borderRadius: '12px' }}
+            className="z-0"
+          >
+            <ResetViewControl />
+            {geoData && (
+              <GeoJSON
+                key={`${layerType}-${metric}`}
+                data={geoData}
+                style={styleFeature}
+                onEachFeature={onEachFeature}
+              />
+            )}
+          </MapContainer>
+
+          {loading && (
+            <div className="absolute top-4 right-4 z-20 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)]/90 border border-[var(--border-primary)] shadow-lg backdrop-blur text-xs font-bold text-[var(--brand-primary)] flex items-center gap-2 pointer-events-none">
+              <span className="w-2 h-2 rounded-full bg-[var(--brand-primary)] animate-ping" />
+              <span>Rendering Geospatial Map...</span>
+            </div>
           )}
 
           {/* Legend (Bottom-Right) */}

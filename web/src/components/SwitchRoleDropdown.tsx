@@ -13,6 +13,7 @@ import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
 // 4. District Authority (District Collector / Authority)
 const ROLES = [
   { id: 'viewer', label: 'User', sublabel: 'Public Citizen & National Transparency', icon: User },
+  { id: 'mospi', label: 'MoSPI', sublabel: 'Ministry of Statistics & Programme Implementation (Apex Central Authority - Full System Action)', icon: Shield },
   { id: 'mp', label: 'MP', sublabel: 'Member of Parliament (Works Ledger & Allocations)', icon: Landmark },
   { id: 'state_nodal_officer', label: 'State Nodal', sublabel: 'State Nodal Command & Jurisdiction Supervision', icon: Building2 },
   { id: 'district_authority', label: 'District Authority', sublabel: 'District Collector / DM Sanctions & MB Inspection', icon: MapPin },
@@ -130,12 +131,23 @@ export const SwitchRoleDropdown: React.FC = () => {
       return
     }
 
+    if (roleId === 'mospi') {
+      // MoSPI has apex central oversight over all 36 States, all Districts, and all MPs
+      await switchRole('mospi', 'ALL', 'ALL', 'ALL', 'All Members of Parliament')
+      setIsOpen(false)
+      navigate('/audit')
+      return
+    }
+
     // For State Nodal, District Authority, or MP:
     // Expand the questionnaire asking for their jurisdiction / seat!
     setExpandedRole(roleId)
   }
 
   const getRoleDisplayTitle = () => {
+    if (user.role === 'mospi') {
+      return 'MoSPI (Apex Authority)'
+    }
     if (user.role === 'state_nodal_officer') {
       const st = user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
         ? user.state.split(' ')[0]

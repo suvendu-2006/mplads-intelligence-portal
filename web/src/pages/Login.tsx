@@ -65,14 +65,17 @@ const PERSONAS = [
     }
   },
   {
-    role: 'auditor',
-    title: 'Forensic Auditor / MoSPI',
-    hindiTitle: 'केंद्रीय सतर्कता लेखा-परीक्षक',
-    icon: FileSpreadsheet,
-    badge: 'Vigilance Matrix',
-    description: 'Screen national works against 15 fraud and cartel models, inspect CPWD benchmarks, and export audit CSVs.',
+    role: 'mospi',
+    title: 'MoSPI Central Authority',
+    hindiTitle: 'सांख्यिकी और कार्यक्रम कार्यान्वयन मंत्रालय (MoSPI)',
+    icon: Shield,
+    badge: 'Apex Executive Oversight',
+    description: 'Omnipotent system authority: screen national works, freeze treasury holds, certify civil projects, and take action on everything.',
     route: '/audit',
-    defaultContext: {}
+    defaultContext: {
+      state: 'ALL',
+      district: 'ALL'
+    }
   }
 ]
 

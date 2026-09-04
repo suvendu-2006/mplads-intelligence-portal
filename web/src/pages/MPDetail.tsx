@@ -53,11 +53,20 @@ import { t } from '../lib/i18n'
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const { user } = useStore()
-  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin'].includes(user?.role)
+  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role)
   const chartTheme = useChartTheme()
 
-  const [data, setData] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_mp_${id}`)
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_mp_${id}`)
+    } catch { return true }
+  })
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags' | 'risk'>('overview')
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'pending'>('all')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
@@ -98,12 +107,15 @@ export const MPDetail: React.FC = () => {
   useEffect(() => {
     async function loadMP() {
       if (!id) return
-      setLoading(true)
+      if (!sessionStorage.getItem(`cached_mp_${id}`)) {
+        setLoading(true)
+      }
       try {
         const res = await fetch(`/api/mps/${id}`)
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
+          try { sessionStorage.setItem(`cached_mp_${id}`, JSON.stringify(json.data)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load MP detail:', err)

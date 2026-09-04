@@ -51,7 +51,7 @@ def get_my_state(
     db: Session = Depends(get_db)
 ):
     role = user.get("role")
-    if role not in ["state_nodal_officer", "admin"]:
+    if role not in ["state_nodal_officer", "admin", "mospi"]:
         raise HTTPException(
             status_code=403,
             detail=f"Access denied. State Nodal Officer role required (current: '{role}')"

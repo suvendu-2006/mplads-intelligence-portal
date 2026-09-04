@@ -31,7 +31,7 @@ const UNION_TERRITORIES = [
 
 export const BrowseStates: React.FC = () => {
   const { user } = useStore()
-  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin'].includes(user?.role)
+  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin', 'mospi'].includes(user?.role)
 
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('allocated')

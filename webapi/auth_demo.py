@@ -9,7 +9,8 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
     "analyst": ["read:*", "filter:advanced"],
     "auditor": ["read:*", "filter:*", "export:flags"],
     "state_nodal_officer": ["read:my_state", "read:entity_risks", "read:national", "read:states", "read:mps", "read:map"],
-    "admin": ["*"]
+    "admin": ["*"],
+    "mospi": ["*"]
 }
 
 ROLE_DESCRIPTIONS: Dict[str, str] = {
@@ -19,7 +20,8 @@ ROLE_DESCRIPTIONS: Dict[str, str] = {
     "analyst": "Viewer permissions plus advanced multi-detector filtering and risk inspection",
     "auditor": "Full forensic workbench with deep diagnostic drawer and CSV audit dossier export",
     "state_nodal_officer": "State-scoped administrative command with localized IDA entity risk and project monitoring",
-    "admin": "Superuser access with complete cross-state scrutiny, audit controls, and system parameters"
+    "admin": "Superuser access with complete cross-state scrutiny, audit controls, and system parameters",
+    "mospi": "Ministry of Statistics and Programme Implementation - Apex Central Authority with full oversight and omnipotent executive control across all States, Districts, MPs, and Audit Desks"
 }
 
 # In-memory session cache for demo mode
@@ -91,7 +93,7 @@ def get_current_user(x_session_token: Optional[str] = Header(None)) -> Dict[str,
 def require_roles(*allowed_roles: str):
     def role_checker(user: Dict[str, Any] = Depends(get_current_user)):
         user_role = user.get("role", "viewer")
-        if "admin" == user_role:
+        if user_role in ["admin", "mospi"]:
             return user
         if user_role not in allowed_roles:
             raise HTTPException(

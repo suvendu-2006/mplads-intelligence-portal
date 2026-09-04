@@ -43,7 +43,7 @@ const UNION_TERRITORIES = [
 export const StateDetail: React.FC = () => {
   const { state } = useParams<{ state: string }>()
   const { user } = useStore()
-  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin'].includes(user?.role)
+  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin', 'mospi'].includes(user?.role)
 
   const [data, setData] = useState<any>(() => {
     try {

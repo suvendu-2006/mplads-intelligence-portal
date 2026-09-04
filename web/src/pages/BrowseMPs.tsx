@@ -37,6 +37,18 @@ export const BrowseMPs: React.FC = () => {
 
   useEffect(() => {
     async function loadMPs() {
+      const cacheKey = `cached_mps_${page}_${sort}_${order}_${house}_${search}`
+      try {
+        const saved = sessionStorage.getItem(cacheKey)
+        if (saved) {
+          const parsed = JSON.parse(saved)
+          if (parsed && parsed.length > 0) {
+            setMps(parsed)
+            setLoading(false)
+          }
+        }
+      } catch {}
+
       try {
         const queryParams = new URLSearchParams({
           page: String(page),
@@ -53,7 +65,7 @@ export const BrowseMPs: React.FC = () => {
           const items = json.data || []
           setMps(items)
           setMeta(json.meta)
-          try { sessionStorage.setItem(`cached_mps_${page}_${sort}_${order}_${house}_${search}`, JSON.stringify(items)) } catch {}
+          try { sessionStorage.setItem(cacheKey, JSON.stringify(items)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load MPs:', err)

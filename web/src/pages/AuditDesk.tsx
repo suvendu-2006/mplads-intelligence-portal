@@ -31,9 +31,18 @@ const ALL_STATES_LIST = [
 export const AuditDesk: React.FC = () => {
   const { user } = useStore()
   const initialRoleState = (user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES') ? user.state : ''
-  const [flags, setFlags] = useState<any[]>([])
+  const [flags, setFlags] = useState<any[]>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_audit_flags_1')
+      return saved ? JSON.parse(saved) : []
+    } catch { return [] }
+  })
   const [meta, setMeta] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem('cached_audit_flags_1')
+    } catch { return true }
+  })
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
 
   // Filters
@@ -97,14 +106,18 @@ export const AuditDesk: React.FC = () => {
 
   useEffect(() => {
     async function fetchFlags() {
-      setLoading(true)
+      if (!sessionStorage.getItem('cached_audit_flags_1') || search || tierFilter || detectorFilter || stateFilter) {
+        setLoading(true)
+      }
       try {
         const params = new URLSearchParams({
           page: String(page),
           page_size: '50',
         })
         if (search) params.set('q', search)
-        if (stateFilter) params.set('state', stateFilter)
+        if (stateFilter && stateFilter !== 'ALL' && stateFilter !== 'ALL STATES & UNION TERRITORIES') {
+          params.set('state', stateFilter)
+        }
         if (tierFilter) params.set('tier', tierFilter)
         if (detectorFilter) params.set('detector', detectorFilter)
 
@@ -113,6 +126,9 @@ export const AuditDesk: React.FC = () => {
           const json = await res.json()
           setFlags(json.data || [])
           setMeta(json.meta)
+          if (page === 1 && !search && !tierFilter && !detectorFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
+            try { sessionStorage.setItem('cached_audit_flags_1', JSON.stringify(json.data || [])) } catch {}
+          }
         }
       } catch (err) {
         console.error('Failed to load audit flags:', err)

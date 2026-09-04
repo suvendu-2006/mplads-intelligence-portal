@@ -37,7 +37,7 @@ export const MPDashboard: React.FC = () => {
   const [doLetterNotice, setDoLetterNotice] = useState<string | null>(null)
 
   const mpId = user.mpId || '6a932b5bcd944524379eddd9'
-  const isAuthorized = ['mp', 'admin'].includes(user.role)
+  const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
 
   useEffect(() => {
     async function loadMPDossier() {
