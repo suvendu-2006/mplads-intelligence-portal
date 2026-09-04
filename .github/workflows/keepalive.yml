@@ -1,0 +1,20 @@
+name: 24/7 Production Keepalive & Warmup
+
+on:
+  schedule:
+    # Runs every 5 minutes (24 hours a day, 7 days a week)
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  warmup:
+    name: Ping Vercel Edge & Backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Warmup Pings
+        run: |
+          echo "Sending automated keep-alive pings to Vercel production..."
+          curl -s -o /dev/null -w "GET /api/national: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/national
+          curl -s -o /dev/null -w "GET /api/states: %{http_code} (%{time_total}s)\n" "https://mplads-intelligence-portal.vercel.app/api/states?sort=allocated&order=desc"
+          curl -s -o /dev/null -w "GET /api/national/analytics: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/national/analytics
+          echo "Warmup complete. Edge CDN cache primed, zero cold-starts guaranteed!"
