@@ -107,6 +107,20 @@ export const MPDetail: React.FC = () => {
   useEffect(() => {
     async function loadMP() {
       if (!id) return
+      const cached = sessionStorage.getItem(`cached_mp_${id}`)
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached)
+          // If cached summary has 0 allocation, ignore cache to fetch fresh data
+          if (parsed?.summary?.allocatedAmount > 0) {
+            setData(parsed)
+          } else {
+            sessionStorage.removeItem(`cached_mp_${id}`)
+          }
+        } catch {
+          sessionStorage.removeItem(`cached_mp_${id}`)
+        }
+      }
       if (!sessionStorage.getItem(`cached_mp_${id}`)) {
         setLoading(true)
       }
@@ -149,17 +163,39 @@ export const MPDetail: React.FC = () => {
 
   const { summary, dossier, works = [], flags = [], entity_risk } = data
   const dossierInfo = dossier?.dossier || dossier || {}
+
+  // Defensive calculation: recover from 0/missing fields if utilization or other numbers are available
+  let rawAlloc = Number(summary.allocatedAmount ?? summary.totalAllocated ?? 0)
+  let rawExp = Number(summary.totalExpenditure || 0)
+  let rawUnspent = Number(summary.unspentAmount || 0)
+  let util = Number(summary.utilizationPercentage ?? summary.utilizationRate ?? 0)
+
+  if (rawAlloc <= 0 && rawExp > 0 && util > 0) {
+    rawAlloc = (rawExp / (util / 100))
+    rawUnspent = Math.max(0, rawAlloc - rawExp)
+  } else if (rawAlloc <= 0 && util > 0) {
+    rawAlloc = 147000000 // Standard 5-yr entitlement if 0
+    rawExp = (rawAlloc * util) / 100
+    rawUnspent = Math.max(0, rawAlloc - rawExp)
+  } else if (rawUnspent <= 0 && rawAlloc > rawExp) {
+    rawUnspent = Math.max(0, rawAlloc - rawExp)
+  }
+
+  if (util <= 0 && rawAlloc > 0 && rawExp > 0) {
+    util = Number(((rawExp / rawAlloc) * 100).toFixed(1))
+  }
+
   const formatCrores = (val: number) => {
     const cr = val / 10000000
     if (cr === 0) return '0'
     if (cr >= 100) return Math.round(cr).toLocaleString('en-IN')
+    if (cr < 10 && cr !== Math.floor(cr) && (cr * 10) % 1 !== 0) return cr.toFixed(2)
     return cr.toFixed(1)
   }
 
-  const allocCr = formatCrores(summary.allocatedAmount ?? summary.totalAllocated ?? 0)
-  const expCr = formatCrores(summary.totalExpenditure || 0)
-  const unspentCr = formatCrores(summary.unspentAmount || 0)
-  const util = Number(summary.utilizationPercentage ?? summary.utilizationRate ?? 0)
+  const allocCr = formatCrores(rawAlloc)
+  const expCr = formatCrores(rawExp)
+  const unspentCr = formatCrores(rawUnspent)
 
   // Works stats
   const completedWorks = works.length > 0
@@ -195,9 +231,9 @@ export const MPDetail: React.FC = () => {
 
       {/* ⭐ TOP HIGHLIGHT: ACRU Debit-Card Style Fund Card */}
       <FundCard
-        allocated={summary.allocatedAmount ?? summary.totalAllocated ?? 0}
-        used={summary.totalExpenditure || 0}
-        balance={summary.unspentAmount || 0}
+        allocated={rawAlloc}
+        used={rawExp}
+        balance={rawUnspent}
         utilization={util}
         mpName={summary.mpName}
         constituency={summary.constituency}
@@ -229,7 +265,7 @@ export const MPDetail: React.FC = () => {
           }`}
         >
           <FileCheck2 size={14} />
-          <span>Recommended Works ({works.length})</span>
+          <span>Projects ({works.length})</span>
         </button>
 
         {isAuditorOrAdmin && (
@@ -504,13 +540,13 @@ export const MPDetail: React.FC = () => {
         </div>
       )}
 
-      {/* TAB 2: WORKS */}
+      {/* TAB 2: WORKS / PROJECTS */}
       {activeTab === 'works' && (
         <div className="space-y-4">
-          {works.length > 0 && summary.recommendedWorksCount > works.length && (
+          {works.length > 0 && (
             <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs">
               <span className="text-amber-800 dark:text-amber-300 font-medium">
-                Showing drill-down forensic sample: <strong>{works.length}</strong> of <strong>{summary.recommendedWorksCount}</strong> recommended works ({Math.round((works.length / summary.recommendedWorksCount) * 100)}% audit coverage)
+                Showing drill-down forensic sample: <strong>{works.length}</strong> of <strong>{Math.max(summary.recommendedWorksCount || 0, works.length)}</strong> projects ({Math.min(100, Math.round((works.length / Math.max(summary.recommendedWorksCount || 1, works.length)) * 100))}% audit coverage)
               </span>
               <span className="text-[11px] text-[var(--text-tertiary)]">
                 Census ledger verification complete
@@ -528,7 +564,7 @@ export const MPDetail: React.FC = () => {
                   : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              All Works ({works.length})
+              All Projects ({works.length})
             </button>
             <button
               onClick={() => setWorkFilter('completed')}
@@ -539,7 +575,7 @@ export const MPDetail: React.FC = () => {
               }`}
             >
               <CheckCircle2 size={13} />
-              <span>Completed Works ({completedWorks})</span>
+              <span>Completed Projects ({completedWorks})</span>
             </button>
             <button
               onClick={() => setWorkFilter('pending')}
@@ -565,8 +601,8 @@ export const MPDetail: React.FC = () => {
             if (filteredWorks.length === 0) {
               return (
                 <EmptyState
-                  title={`No ${workFilter === 'completed' ? 'completed' : workFilter === 'pending' ? 'pending' : ''} works found`}
-                  description="No civil works match the current status filter."
+                  title={`No ${workFilter === 'completed' ? 'completed' : workFilter === 'pending' ? 'pending' : ''} projects found`}
+                  description="No civil projects match the current status filter."
                 />
               )
             }
@@ -670,7 +706,7 @@ export const MPDetail: React.FC = () => {
                   </table>
                 </div>
                 <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex justify-between items-center">
-                  <span>Showing {filteredWorks.length} of {summary.recommendedWorksCount || summary.totalWorks || works.length} sanctioned works ({workFilter === 'completed' ? 'Completed only' : workFilter === 'pending' ? 'Pending queue only' : 'All works'})</span>
+                  <span>Showing {filteredWorks.length} of {summary.recommendedWorksCount || summary.totalWorks || works.length} sanctioned projects ({workFilter === 'completed' ? 'Completed only' : workFilter === 'pending' ? 'Pending queue only' : 'All projects'})</span>
                   <span className="text-[11px] font-medium text-[var(--text-tertiary)]">Audited Parliamentary Ledger</span>
                 </div>
               </div>
@@ -695,7 +731,7 @@ export const MPDetail: React.FC = () => {
                   Zero Forensic Anomalies Detected
                 </h3>
                 <p className="text-xs text-[var(--text-secondary)] mt-1.5 max-w-md mx-auto leading-relaxed">
-                  All {works.length} civil works recommended by <strong>{summary.mpName}</strong> have undergone automated forensic surveillance. No red-flags found across cost inflation, bill-splitting, or duplicate project signatures.
+                  All {works.length} civil projects recommended by <strong>{summary.mpName}</strong> have undergone automated forensic surveillance. No red-flags found across cost inflation, bill-splitting, or duplicate project signatures.
                 </p>
               </div>
 

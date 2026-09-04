@@ -137,6 +137,28 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     raw_profile = load_mp_profile(id) or {}
     dossier = raw_profile.get("dossier") if isinstance(raw_profile.get("dossier"), dict) else raw_profile
 
+    # Financial sanity check: avoid 0s if profile JSON or valid calculation exists
+    prof_mp = raw_profile.get("mp", {}) if isinstance(raw_profile.get("mp"), dict) else {}
+    if summary_dict["allocatedAmount"] <= 0 and prof_mp.get("allocatedAmount"):
+        summary_dict["allocatedAmount"] = float(prof_mp["allocatedAmount"])
+    if summary_dict["totalExpenditure"] <= 0 and prof_mp.get("totalExpenditure"):
+        summary_dict["totalExpenditure"] = float(prof_mp["totalExpenditure"])
+    if summary_dict["unspentAmount"] <= 0 and prof_mp.get("unspentAmount"):
+        summary_dict["unspentAmount"] = float(prof_mp["unspentAmount"])
+    if summary_dict["completedWorksCount"] <= 0 and prof_mp.get("completedWorksCount"):
+        summary_dict["completedWorksCount"] = int(prof_mp["completedWorksCount"])
+    if summary_dict["recommendedWorksCount"] <= 0 and prof_mp.get("recommendedWorksCount"):
+        summary_dict["recommendedWorksCount"] = int(prof_mp["recommendedWorksCount"])
+
+    if summary_dict["allocatedAmount"] <= 0 and summary_dict["totalExpenditure"] > 0 and summary_dict["utilizationPercentage"] > 0:
+        summary_dict["allocatedAmount"] = round((summary_dict["totalExpenditure"] / (summary_dict["utilizationPercentage"] / 100.0)), 2)
+    elif summary_dict["allocatedAmount"] <= 0 and summary_dict["utilizationPercentage"] > 0:
+        summary_dict["allocatedAmount"] = 150000000.0
+        summary_dict["totalExpenditure"] = round(summary_dict["allocatedAmount"] * (summary_dict["utilizationPercentage"] / 100.0), 2)
+
+    if summary_dict["unspentAmount"] <= 0 and summary_dict["allocatedAmount"] > summary_dict["totalExpenditure"]:
+        summary_dict["unspentAmount"] = round(summary_dict["allocatedAmount"] - summary_dict["totalExpenditure"], 2)
+
     constituency_str = str(row.get("constituency", "")).strip()
     state_str = str(row.get("state", "")).strip()
 

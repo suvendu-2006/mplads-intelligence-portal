@@ -1,4 +1,4 @@
-id,mpName,house,state,constituency,allocatedAmount,totalExpenditure,utilizationPercentage,completedWorksCount,recommendedWorksCount,completionRate,pendingWorks,unspentAmount,completedWorksValue,totalCompletedAmount,inProgressPayments,paymentGapPercentage
+﻿id,mpName,house,state,constituency,allocatedAmount,totalExpenditure,utilizationPercentage,completedWorksCount,recommendedWorksCount,completionRate,pendingWorks,unspentAmount,completedWorksValue,totalCompletedAmount,inProgressPayments,paymentGapPercentage
 6a932b5ecd944524379ee2ca,Smt. S. Phangnon Konyak (2022-28),Rajya Sabha,Nagaland,Sitting Rajya Sabha,206563957.11,196418200.0,95.0883216743388,57,20,74.02597402597402,0,10145757.110000014,144763000.0,144763000.0,51655200.0,26.298581292364965
 6a932b5bcd944524379edf65,Shri Arun Kumar Sagar ,Lok Sabha,Uttar Pradesh,SHAHJAHANPUR,147000000.0,138723000.0,94.36938775510204,4,3,57.14285714285714,0,8277000.0,97143000.0,97143000.0,41580000.0,29.9734002292338
 6a932b5bcd944524379edf3a,S SUPONGMEREN JAMIR,Lok Sabha,Nagaland,NAGALAND,147000000.0,138150000.0,93.9795918367347,38,18,67.85714285714286,0,8850000.0,88600000.0,88600000.0,49550000.0,35.86681143684401
@@ -699,7 +699,7 @@ id,mpName,house,state,constituency,allocatedAmount,totalExpenditure,utilizationP
 6a932b5bcd944524379ede5b,Gajendra Singh Shekhawat,Lok Sabha,Rajasthan,JODHPUR,147000000.0,491827.0,0.3345761904761904,0,33,0.0,33,146508173.0,0.0,0.0,491827.0,100.0
 6a932b5bcd944524379edf81,Shrikant Eknath Shinde,Lok Sabha,Maharashtra,KALYAN,147000000.0,325000.0,0.2210884353741496,0,2,0.0,2,146675000.0,0.0,0.0,325000.0,100.0
 6a932b5bcd944524379ede05,Bhupathiraju Srinivasa varma,Lok Sabha,Andhra Pradesh,NARASAPURAM,147000000.0,0.0,0.0,0,1,0.0,1,147000000.0,0.0,0.0,0.0,0.0
-6a932b5bcd944524379ede19,CHAVAN VASANTRAO BALWANTRAO,Lok Sabha,Maharashtra,NANDED,0.0,0.0,27.100879591836737,0,0,18.439716312056735,0,0.0,0.0,0.0,0.0,49.8333600789572
+6a932b5bcd944524379ede19,CHAVAN VASANTRAO BALWANTRAO,Lok Sabha,Maharashtra,NANDED,147000000.0,39838293.0,27.100879591836737,26,115,18.439716312056735,89,107161707.0,19985533.0,19985533.0,19852760.0,49.8333600789572
 6a932b5bcd944524379ede47,DR. PRADEEP KUMAR PANIGRAHY,Lok Sabha,Odisha,BERHAMPUR,147000000.0,0.0,0.0,0,111,0.0,111,147000000.0,0.0,0.0,0.0,0.0
 6a932b5bcd944524379edecf,MISHA BHARTI,Lok Sabha,Bihar,PATALIPUTRA,147000000.0,0.0,0.0,0,0,0.0,0,147000000.0,0.0,0.0,0.0,0.0
 6a932b5bcd944524379edee1,NARESH GANPAT MHASKE,Lok Sabha,Maharashtra,THANE,147000000.0,0.0,0.0,0,0,0.0,0,147000000.0,0.0,0.0,0.0,0.0
