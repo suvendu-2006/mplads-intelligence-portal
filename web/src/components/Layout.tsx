@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { ErrorBoundary } from './ErrorBoundary'
+import { LoadingSkeleton } from './LoadingSkeleton'
 import { useStore, ThemeMode } from '../store/useStore'
 import {
   LayoutDashboard,
@@ -152,7 +153,9 @@ export const Layout: React.FC = () => {
       {/* Full-width Main Application Content */}
       <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-20 lg:pb-8">
         <ErrorBoundary>
-          <Outlet />
+          <React.Suspense fallback={<LoadingSkeleton rows={6} height="h-28" />}>
+            <Outlet />
+          </React.Suspense>
         </ErrorBoundary>
       </main>
 

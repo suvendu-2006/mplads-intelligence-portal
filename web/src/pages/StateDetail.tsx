@@ -45,9 +45,18 @@ export const StateDetail: React.FC = () => {
   const { user } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin'].includes(user?.role)
 
-  const [data, setData] = useState<any>(null)
+  const [data, setData] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_state_${state}`)
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
   const [flags, setFlags] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_state_${state}`)
+    } catch { return true }
+  })
   const [activeTab, setActiveTab] = useState<'districts' | 'works' | 'flags'>('districts')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
 
@@ -108,7 +117,9 @@ export const StateDetail: React.FC = () => {
   useEffect(() => {
     async function loadStateData() {
       if (!state) return
-      setLoading(true)
+      if (!sessionStorage.getItem(`cached_state_${state}`)) {
+        setLoading(true)
+      }
       try {
         const [resState, resIdas] = await Promise.all([
           fetch(`/api/states/${encodeURIComponent(state)}`),
@@ -118,6 +129,7 @@ export const StateDetail: React.FC = () => {
         if (resState.ok) {
           const jsonState = await resState.json()
           setData(jsonState.data)
+          try { sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data)) } catch {}
         }
         if (resIdas.ok) {
           const jsonIdas = await resIdas.json()

@@ -10,6 +10,7 @@ import { ChartTooltip } from '../components/charts'
 import { fmtCrore } from '../lib/currency'
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
+import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS, DEFAULT_TOP_STATES } from '../lib/defaultData'
 import {
   Landmark,
   Coins,
@@ -56,26 +57,23 @@ export const NationalDashboard: React.FC = () => {
   const [national, setNational] = useState<any>(() => {
     try {
       const saved = sessionStorage.getItem('cached_nat_data')
-      return saved ? JSON.parse(saved) : null
-    } catch { return null }
+      return saved ? JSON.parse(saved) : DEFAULT_NATIONAL
+    } catch { return DEFAULT_NATIONAL }
   })
   const [analytics, setAnalytics] = useState<any>(() => {
     try {
       const saved = sessionStorage.getItem('cached_nat_analytics')
-      return saved ? JSON.parse(saved) : null
-    } catch { return null }
+      return saved ? JSON.parse(saved) : DEFAULT_ANALYTICS
+    } catch { return DEFAULT_ANALYTICS }
   })
   const [states, setStates] = useState<any[]>(() => {
     try {
       const saved = sessionStorage.getItem('cached_nat_states')
-      return saved ? JSON.parse(saved) : []
-    } catch { return [] }
+      const parsed = saved ? JSON.parse(saved) : null
+      return (parsed && parsed.length > 0) ? parsed : DEFAULT_TOP_STATES
+    } catch { return DEFAULT_TOP_STATES }
   })
-  const [loading, setLoading] = useState(() => {
-    try {
-      return !sessionStorage.getItem('cached_nat_data')
-    } catch { return true }
-  })
+  const [loading, setLoading] = useState(false)
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [leagueFilter, setLeagueFilter] = useState<'all' | 'states' | 'uts'>('all')
 

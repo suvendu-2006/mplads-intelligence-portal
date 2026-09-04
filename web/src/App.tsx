@@ -2,19 +2,20 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { NationalDashboard } from './pages/NationalDashboard'
-import { BrowseStates } from './pages/BrowseStates'
-import { StateDetail } from './pages/StateDetail'
-import { BrowseMPs } from './pages/BrowseMPs'
-import { MPDetail } from './pages/MPDetail'
-import { MyState } from './pages/MyState'
-import { DistrictDashboard } from './pages/DistrictDashboard'
-import { MPDashboard } from './pages/MPDashboard'
-import { AuditDesk } from './pages/AuditDesk'
-import { GISMap } from './pages/GISMap'
-import { Login } from './pages/Login'
-import { NotFound } from './pages/NotFound'
-
+import { LoadingSkeleton } from './components/LoadingSkeleton'
 import { ScrollToTop } from './components/ScrollToTop'
+
+const BrowseStates = React.lazy(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))
+const StateDetail = React.lazy(() => import('./pages/StateDetail').then(m => ({ default: m.StateDetail })))
+const BrowseMPs = React.lazy(() => import('./pages/BrowseMPs').then(m => ({ default: m.BrowseMPs })))
+const MPDetail = React.lazy(() => import('./pages/MPDetail').then(m => ({ default: m.MPDetail })))
+const MyState = React.lazy(() => import('./pages/MyState').then(m => ({ default: m.MyState })))
+const DistrictDashboard = React.lazy(() => import('./pages/DistrictDashboard').then(m => ({ default: m.DistrictDashboard })))
+const MPDashboard = React.lazy(() => import('./pages/MPDashboard').then(m => ({ default: m.MPDashboard })))
+const AuditDesk = React.lazy(() => import('./pages/AuditDesk').then(m => ({ default: m.AuditDesk })))
+const GISMap = React.lazy(() => import('./pages/GISMap').then(m => ({ default: m.GISMap })))
+const Login = React.lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
+const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
 
 export const App: React.FC = () => {
   return (

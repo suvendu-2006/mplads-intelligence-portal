@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { EmptyState } from '../components/shared'
+import { DEFAULT_TOP_STATES } from '../lib/defaultData'
 import {
   MapPin,
   Search,
@@ -32,21 +33,24 @@ export const BrowseStates: React.FC = () => {
   const { user } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin'].includes(user?.role)
 
-  const [states, setStates] = useState<any[]>(() => {
-    try {
-      const saved = sessionStorage.getItem(`cached_states_${sort}_${order}`)
-      return saved ? JSON.parse(saved) : []
-    } catch { return [] }
-  })
-  const [loading, setLoading] = useState(() => {
-    try {
-      return !sessionStorage.getItem(`cached_states_${sort}_${order}`)
-    } catch { return true }
-  })
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('allocated')
   const [order, setOrder] = useState('desc')
   const [jurisdictionFilter, setJurisdictionFilter] = useState<'all' | 'states' | 'uts'>('all')
+
+  const [states, setStates] = useState<any[]>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_states_allocated_desc')
+      const parsed = saved ? JSON.parse(saved) : null
+      return (parsed && parsed.length > 0) ? parsed : DEFAULT_TOP_STATES
+    } catch { return DEFAULT_TOP_STATES }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_states_allocated_desc')
+      return !saved && (!DEFAULT_TOP_STATES || DEFAULT_TOP_STATES.length === 0)
+    } catch { return false }
+  })
 
   useEffect(() => {
     if (!isAuditorOrAdmin && sort === 'red_pct') {
