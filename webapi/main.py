@@ -59,6 +59,19 @@ app = FastAPI(
 
 # Compression and CORS configuration
 app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+from starlette.requests import Request
+
+@app.middleware("http")
+async def add_performance_cache_headers(request: Request, call_next):
+    response = await call_next(request)
+    if request.method == "GET" and response.status_code == 200:
+        path = request.url.path
+        if path.startswith("/api/"):
+            if not response.headers.get("Cache-Control"):
+                response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+    return response
+
 import os
 
 allowed_origins = os.getenv(

@@ -29,15 +29,22 @@ function ResetViewControl() {
   )
 }
 
+const GEO_CACHE: Record<string, any> = {}
+
 export const GISMap: React.FC = () => {
-  const [geoData, setGeoData] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
   const [layerType, setLayerType] = useState<'pcs' | 'districts'>('pcs')
+  const [geoData, setGeoData] = useState<any>(() => GEO_CACHE['pcs'] || null)
+  const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'])
   const [metric, setMetric] = useState<'utilization' | 'works'>('utilization')
   const [selectedFeature, setSelectedFeature] = useState<any>(null)
 
   useEffect(() => {
     async function loadGeoJson() {
+      if (GEO_CACHE[layerType]) {
+        setGeoData(GEO_CACHE[layerType])
+        setLoading(false)
+        return
+      }
       setLoading(true)
       try {
         const primaryUrl = layerType === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
@@ -67,11 +74,9 @@ export const GISMap: React.FC = () => {
         }
 
         if (parsed) {
-          if (parsed.data && parsed.data.type === 'FeatureCollection') {
-            setGeoData(parsed.data)
-          } else {
-            setGeoData(parsed)
-          }
+          const featData = (parsed.data && parsed.data.type === 'FeatureCollection') ? parsed.data : parsed
+          GEO_CACHE[layerType] = featData
+          setGeoData(featData)
         }
       } catch (err) {
         console.error('Failed to load GeoJSON:', err)

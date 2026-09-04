@@ -15,10 +15,6 @@ import {
 import { t } from '../lib/i18n'
 
 export const BrowseMPs: React.FC = () => {
-  const [mps, setMps] = useState<any[]>([])
-  const [meta, setMeta] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
-
   // Filters & State
   const [search, setSearch] = useState('')
   const [house, setHouse] = useState('all')
@@ -26,9 +22,21 @@ export const BrowseMPs: React.FC = () => {
   const [order, setOrder] = useState('desc')
   const [page, setPage] = useState(1)
 
+  const [mps, setMps] = useState<any[]>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_mps_1_allocated_desc_all_')
+      return saved ? JSON.parse(saved) : []
+    } catch { return [] }
+  })
+  const [meta, setMeta] = useState<any>(null)
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem('cached_mps_1_allocated_desc_all_')
+    } catch { return true }
+  })
+
   useEffect(() => {
     async function loadMPs() {
-      setLoading(true)
       try {
         const queryParams = new URLSearchParams({
           page: String(page),
@@ -42,8 +50,10 @@ export const BrowseMPs: React.FC = () => {
         const res = await fetch(`/api/mps?${queryParams.toString()}`)
         if (res.ok) {
           const json = await res.json()
-          setMps(json.data || [])
+          const items = json.data || []
+          setMps(items)
           setMeta(json.meta)
+          try { sessionStorage.setItem(`cached_mps_${page}_${sort}_${order}_${house}_${search}`, JSON.stringify(items)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load MPs:', err)

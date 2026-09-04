@@ -26,6 +26,14 @@ def compute_all_states_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
     if cached:
         return cached
 
+    try:
+        from webapi.precomputed_data import PRECOMPUTED_STATES_RF
+        if PRECOMPUTED_STATES_RF:
+            set_in_cache(cache_key, PRECOMPUTED_STATES_RF)
+            return PRECOMPUTED_STATES_RF
+    except ImportError:
+        pass
+
     from sqlalchemy import text
     query = text("""
         SELECT 
@@ -129,6 +137,14 @@ def compute_all_mps_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
     cached = get_from_cache(cache_key)
     if cached:
         return cached
+
+    try:
+        from webapi.precomputed_data import PRECOMPUTED_MPS_RF
+        if PRECOMPUTED_MPS_RF:
+            set_in_cache(cache_key, PRECOMPUTED_MPS_RF)
+            return PRECOMPUTED_MPS_RF
+    except ImportError:
+        pass
 
     from sqlalchemy import text
     query = text("""

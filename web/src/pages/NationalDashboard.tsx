@@ -53,10 +53,29 @@ const UNION_TERRITORIES = [
 ]
 
 export const NationalDashboard: React.FC = () => {
-  const [national, setNational] = useState<any>(null)
-  const [analytics, setAnalytics] = useState<any>(null)
-  const [states, setStates] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [national, setNational] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_nat_data')
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
+  const [analytics, setAnalytics] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_nat_analytics')
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
+  const [states, setStates] = useState<any[]>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_nat_states')
+      return saved ? JSON.parse(saved) : []
+    } catch { return [] }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem('cached_nat_data')
+    } catch { return true }
+  })
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [leagueFilter, setLeagueFilter] = useState<'all' | 'states' | 'uts'>('all')
 
@@ -74,14 +93,17 @@ export const NationalDashboard: React.FC = () => {
         if (resNat.ok) {
           const jsonNat = await resNat.json()
           setNational(jsonNat.data)
+          try { sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data)) } catch {}
         }
         if (resStates.ok) {
           const jsonStates = await resStates.json()
           setStates(jsonStates.data || [])
+          try { sessionStorage.setItem('cached_nat_states', JSON.stringify(jsonStates.data || [])) } catch {}
         }
         if (resAnalytics.ok) {
           const jsonAnalytics = await resAnalytics.json()
           setAnalytics(jsonAnalytics.data)
+          try { sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data)) } catch {}
         }
       } catch (e) {
         console.error('Error fetching national dashboard data:', e)

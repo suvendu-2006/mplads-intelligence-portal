@@ -32,8 +32,17 @@ export const BrowseStates: React.FC = () => {
   const { user } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin'].includes(user?.role)
 
-  const [states, setStates] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [states, setStates] = useState<any[]>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_states_${sort}_${order}`)
+      return saved ? JSON.parse(saved) : []
+    } catch { return [] }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_states_${sort}_${order}`)
+    } catch { return true }
+  })
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('allocated')
   const [order, setOrder] = useState('desc')
@@ -51,12 +60,13 @@ export const BrowseStates: React.FC = () => {
 
   useEffect(() => {
     async function fetchStates() {
-      setLoading(true)
       try {
         const res = await fetch(`/api/states?sort=${sort}&order=${order}`)
         if (res.ok) {
           const json = await res.json()
-          setStates(json.data || [])
+          const items = json.data || []
+          setStates(items)
+          try { sessionStorage.setItem(`cached_states_${sort}_${order}`, JSON.stringify(items)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load states:', err)
