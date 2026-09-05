@@ -288,26 +288,33 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🔍 Forensic Filters")
 
 # 1. Filter State
-states_list = sorted([s for s in df_works["state"].dropna().unique().tolist() if s and s != "Unknown"])
+if df_works is not None and hasattr(df_works, "columns") and "state" in df_works.columns:
+    states_list = sorted([s for s in df_works["state"].dropna().unique().tolist() if s and s != "Unknown"])
+else:
+    states_list = []
 all_states = ["All States"] + states_list
 selected_state = st.sidebar.selectbox("Filter State / UT", all_states)
 
 # Filter districts dynamically based on selected state
-if selected_state != "All States":
+if selected_state != "All States" and df_works is not None:
     districts_pool = df_works[df_works["state"] == selected_state]["district"].dropna().unique().tolist()
-else:
+elif df_works is not None and hasattr(df_works, "columns") and "district" in df_works.columns:
     districts_pool = df_works["district"].dropna().unique().tolist()
+else:
+    districts_pool = []
 
 all_districts = ["All Districts"] + sorted(districts_pool)
 selected_district = st.sidebar.selectbox("Filter District (IDA)", all_districts)
 
 # Filter MPs dynamically based on selected state and district
-if selected_district != "All Districts":
+if selected_district != "All Districts" and df_works is not None:
     mps_pool = df_works[df_works["district"] == selected_district]["mp_name"].dropna().unique().tolist()
-elif selected_state != "All States":
+elif selected_state != "All States" and df_works is not None:
     mps_pool = df_works[df_works["state"] == selected_state]["mp_name"].dropna().unique().tolist()
-else:
+elif df_works is not None and hasattr(df_works, "columns") and "mp_name" in df_works.columns:
     mps_pool = df_works["mp_name"].dropna().unique().tolist()
+else:
+    mps_pool = []
 
 all_mps = ["All MPs"] + sorted(mps_pool)
 selected_mp = st.sidebar.selectbox("Filter Member of Parliament", all_mps)
