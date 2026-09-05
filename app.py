@@ -323,15 +323,16 @@ all_detectors = sorted(list(DETECTOR_GROUPS.keys()))
 selected_detectors = st.sidebar.multiselect("Filter Detector Types", all_detectors, default=all_detectors)
 
 # Filter Data
-filtered_anom = df_anom.copy()
-if selected_state != "All States":
-    filtered_anom = filtered_anom[filtered_anom["state"] == selected_state]
-if selected_district != "All Districts":
-    filtered_anom = filtered_anom[filtered_anom["district"] == selected_district]
-if selected_mp != "All MPs":
-    filtered_anom = filtered_anom[filtered_anom["mp_name"] == selected_mp]
-if selected_detectors:
-    filtered_anom = filtered_anom[filtered_anom["detector_type"].isin(selected_detectors)]
+filtered_anom = df_anom.copy() if df_anom is not None else pd.DataFrame()
+if not filtered_anom.empty:
+    if selected_state != "All States" and "state" in filtered_anom.columns:
+        filtered_anom = filtered_anom[filtered_anom["state"] == selected_state]
+    if selected_district != "All Districts" and "district" in filtered_anom.columns:
+        filtered_anom = filtered_anom[filtered_anom["district"] == selected_district]
+    if selected_mp != "All MPs" and "mp_name" in filtered_anom.columns:
+        filtered_anom = filtered_anom[filtered_anom["mp_name"] == selected_mp]
+    if selected_detectors and "detector_type" in filtered_anom.columns:
+        filtered_anom = filtered_anom[filtered_anom["detector_type"].isin(selected_detectors)]
 
 # Header: Path A Honest Audit Triage Platform
 st.markdown("<div class='main-header'>🛡️ MPLADS Anomaly Screening & Audit Triage Platform</div>", unsafe_allow_html=True)
