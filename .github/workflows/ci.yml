@@ -33,6 +33,12 @@ jobs:
         ln -s "$(which pytest)" .venv/bin/pytest
         ln -s "$(which alembic)" .venv/bin/alembic
 
+    - name: Prepare database for testing
+      run: |
+        if [ -f "api/mplads_dev.db" ] && [ ! -f "mplads_dev.db" ]; then
+          cp api/mplads_dev.db mplads_dev.db
+        fi
+
     - name: Run Pytest Suite
       run: |
         pytest -v tests/ --ignore=tests/test_idempotency.py --ignore=tests/test_metrics_integrity.py

@@ -249,8 +249,18 @@ has_pipeline_run = (metrics is not None and df_anom is not None)
 if not has_pipeline_run:
     metrics = {
         'total_works': 0,
+        'unique_flagged_works': 0,
         'questioned_expenditure_cr': 0.0,
-        'risk_tier_distribution': {'Audit Now': 0, 'Review': 0, 'Clean': 0}
+        'risk_tier_distribution': {'Audit Now': 0, 'Review': 0, 'Clean': 0},
+        'priority_tier_distribution': {
+            '🔴 CRITICAL (Top 500)': 0,
+            '🟠 HIGH (Next 500)': 0,
+            '🟡 MEDIUM (Next 1,000)': 0,
+            '⚪ WATCHLIST': 0,
+            '🟢 CLEAN': 0
+        },
+        'per_detector_counts': {},
+        'overlap_matrix': {}
     }
     st.warning("⚠️ No pipeline run detected. System requires initial setup.")
 

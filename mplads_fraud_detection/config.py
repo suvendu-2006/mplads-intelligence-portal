@@ -59,7 +59,10 @@ load_dotenv()
 
 # Application Environment: development | staging | production
 APP_ENV = os.environ.get("APP_ENV", "development")
-DATABASE_URL = get_absolute_db_path(os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/mplads_dev.db"))
+_default_db_file = BASE_DIR / "mplads_dev.db"
+if not _default_db_file.exists() and (BASE_DIR / "api" / "mplads_dev.db").exists():
+    _default_db_file = BASE_DIR / "api" / "mplads_dev.db"
+DATABASE_URL = get_absolute_db_path(os.environ.get("DATABASE_URL", f"sqlite:///{_default_db_file}"))
 
 # Production validation check
 if APP_ENV == "production":

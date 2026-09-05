@@ -12,6 +12,9 @@ from pathlib import Path
 # Set up isolated test database BEFORE any application modules are imported
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEV_DB_PATH = PROJECT_ROOT / "mplads_dev.db"
+if not DEV_DB_PATH.exists() and (PROJECT_ROOT / "api" / "mplads_dev.db").exists():
+    DEV_DB_PATH = PROJECT_ROOT / "api" / "mplads_dev.db"
+
 TEST_DB_PATH = Path(tempfile.gettempdir()) / "test_mplads_isolated.db"
 
 # Ensure fresh, clean, atomic copy for the test session
