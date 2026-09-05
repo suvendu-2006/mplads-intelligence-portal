@@ -9,6 +9,9 @@ on:
 jobs:
   validate-and-test:
     runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: "ci_pipeline_automated_test_secret_key_32bytes_random_hex_abc123"
+      APP_ENV: "development"
 
     steps:
     - uses: actions/checkout@v4

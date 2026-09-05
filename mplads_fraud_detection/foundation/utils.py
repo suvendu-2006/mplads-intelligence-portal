@@ -4,6 +4,7 @@ Enforces strict monotonicity, safe vectorized arithmetic, and verifiable runtime
 """
 
 from typing import Dict, List, Tuple, Any, Optional
+from pathlib import Path
 import numpy as np
 import pandas as pd
 from sqlalchemy.orm import Session
