@@ -316,7 +316,7 @@ export const MPDetail: React.FC = () => {
               value={allocCr}
               prefix="₹"
               unit="Cr"
-              theme="navy"
+              theme="espresso"
               description="5-year tenure corpus"
             />
             <StatCard
@@ -325,7 +325,7 @@ export const MPDetail: React.FC = () => {
               value={expCr}
               prefix="₹"
               unit="Cr"
-              theme="navy"
+              theme="espresso"
               description="Released by treasury"
             />
             <StatCard

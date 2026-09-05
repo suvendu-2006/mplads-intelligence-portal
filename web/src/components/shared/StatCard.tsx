@@ -12,7 +12,7 @@ interface StatCardProps {
   sparkline?: number[]
   description?: string
   tooltip?: string
-  theme?: 'gold' | 'navy' | 'emerald' | 'amber' | 'red' | 'slate'
+  theme?: 'gold' | 'navy' | 'emerald' | 'amber' | 'red' | 'slate' | 'espresso'
   gaugeValue?: number
 }
 
@@ -26,7 +26,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   sparkline,
   description,
   tooltip,
-  theme = 'navy'
+  theme = 'espresso'
 }) => {
   const [displayValue, setDisplayValue] = useState<string | number>(
     typeof value === 'number' ? 0 : value
@@ -75,7 +75,8 @@ export const StatCard: React.FC<StatCardProps> = ({
 
   const iconBgClasses = {
     gold: 'bg-[var(--brand-gold)]/15 text-[var(--brand-gold)] border-[var(--brand-gold)]/30',
-    navy: 'bg-[var(--chart-navy)]/10 text-[var(--chart-navy)] border-[var(--chart-navy)]/25',
+    espresso: 'bg-[#24140E]/8 dark:bg-white/10 text-[#24140E] dark:text-[#F8FAFC] border-[#24140E]/20 dark:border-white/20',
+    navy: 'bg-[#24140E]/8 dark:bg-white/10 text-[#24140E] dark:text-[#F8FAFC] border-[#24140E]/20 dark:border-white/20',
     emerald: 'bg-[var(--chart-emerald)]/10 text-[var(--chart-emerald)] border-[var(--chart-emerald)]/25',
     amber: 'bg-[var(--chart-amber)]/10 text-[var(--chart-amber)] border-[var(--chart-amber)]/25',
     red: 'bg-[var(--chart-rose)]/10 text-[var(--chart-rose)] border-[var(--chart-rose)]/25',
@@ -84,11 +85,12 @@ export const StatCard: React.FC<StatCardProps> = ({
 
   const numeralClasses = {
     gold: 'text-[var(--brand-gold)]',
-    navy: 'text-[var(--text-primary)]',
+    espresso: 'text-[#24140E] dark:text-[#F8FAFC]',
+    navy: 'text-[#24140E] dark:text-[#F8FAFC]',
     emerald: 'text-[var(--chart-emerald)]',
     amber: 'text-[var(--chart-amber)]',
     red: 'text-[var(--chart-rose)]',
-    slate: 'text-[var(--text-primary)]'
+    slate: 'text-[#24140E] dark:text-[#F8FAFC]'
   }[theme]
 
   const tooltipText = tooltip || description
@@ -134,11 +136,11 @@ export const StatCard: React.FC<StatCardProps> = ({
       {/* Main Stat */}
       <div className="flex items-baseline justify-between gap-2 mt-1">
         <div className="flex items-baseline gap-1">
-          {prefix && <span className="text-xl font-black text-[var(--text-primary)]">{prefix}</span>}
+          {prefix && <span className="text-xl font-black text-[#24140E] dark:text-[var(--text-primary)]">{prefix}</span>}
           <span className={`text-3xl sm:text-4xl font-black tracking-tight tabular-nums ${numeralClasses}`}>
             {displayValue}
           </span>
-          {unit && <span className="text-sm font-extrabold text-[var(--text-primary)]">{unit}</span>}
+          {unit && <span className="text-sm font-extrabold text-[#24140E] dark:text-[var(--text-primary)]">{unit}</span>}
         </div>
         {delta !== undefined && <DeltaChip value={delta} />}
       </div>

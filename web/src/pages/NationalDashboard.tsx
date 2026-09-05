@@ -190,7 +190,7 @@ export const NationalDashboard: React.FC = () => {
           value={totalMps}
           description="Both Houses: Lok Sabha (2024-29) & Rajya Sabha"
           tooltip="774 Members of Parliament monitored across both Lok Sabha (543 seats) and Rajya Sabha (231 seats) in the 18th Parliamentary term."
-          theme="navy"
+          theme="espresso"
         />
         <StatCard
           icon={CheckCircle2}
@@ -214,7 +214,7 @@ export const NationalDashboard: React.FC = () => {
           value={activePayments}
           prefix="₹"
           unit="Cr"
-          theme="navy"
+          theme="espresso"
           description="Active treasury liabilities"
           tooltip="Total funds committed and earmarked in treasury accounts for active ongoing developmental works."
         />
@@ -228,7 +228,7 @@ export const NationalDashboard: React.FC = () => {
             value={totalAllocCr}
             prefix="₹"
             unit="Cr"
-            theme="navy"
+            theme="espresso"
             tooltip={t('tooltip.corpus')}
           />
           <StatCard
@@ -237,7 +237,7 @@ export const NationalDashboard: React.FC = () => {
             value={totalUsedCr}
             prefix="₹"
             unit="Cr"
-            theme="navy"
+            theme="espresso"
             tooltip={t('tooltip.utilization')}
           />
           <StatCard
@@ -390,7 +390,7 @@ export const NationalDashboard: React.FC = () => {
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                    <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
+                    <span className="text-xl font-black text-[#24140E] dark:text-[#F8FAFC] tabular-nums">
                       ₹{totalSectorCr.toLocaleString('en-IN')} Cr
                     </span>
                     <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
@@ -410,7 +410,7 @@ export const NationalDashboard: React.FC = () => {
                         </span>
                       </div>
                       <div className="text-right shrink-0">
-                        <span className="font-extrabold text-[var(--text-primary)] tabular-nums">{sec.crores}</span>
+                        <span className="font-extrabold text-[#24140E] dark:text-[#F8FAFC] tabular-nums">{sec.crores}</span>
                         <span className="text-[11px] text-[var(--text-secondary)] font-bold ml-1.5 tabular-nums">({sec.value}%)</span>
                       </div>
                     </div>

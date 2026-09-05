@@ -80,8 +80,8 @@ export const useChartTheme = () => {
 
     // Color pairs
     const allocatedPair: ColorPair = {
-      css: 'var(--brand-primary)',
-      hex: getComputedColor('--brand-primary', palette.fund.allocated[isDark ? 'dark' : 'light']),
+      css: isDark ? 'var(--brand-primary)' : 'var(--color-espresso, #24140E)',
+      hex: getComputedColor(isDark ? '--brand-primary' : '--color-espresso', palette.fund.allocated[isDark ? 'dark' : 'light']),
     }
 
     const utilizedPair: ColorPair = {
@@ -115,13 +115,13 @@ export const useChartTheme = () => {
     }
 
     const gridColor = getComputedColor('--border-primary', isDark ? '#232A3D' : '#E7E2D9')
-    const textColor = getComputedColor('--text-secondary', isDark ? '#A5B0C2' : '#344054')
-    const mutedTextColor = getComputedColor('--text-tertiary', isDark ? '#6B7A93' : '#667085')
+    const textColor = getComputedColor('--text-secondary', isDark ? '#A5B0C2' : '#423229')
+    const mutedTextColor = getComputedColor('--text-tertiary', isDark ? '#6B7A93' : '#705F55')
 
     const tooltip = {
       bg: getComputedColor('--surface-primary', isDark ? '#111520' : '#FFFFFF'),
       border: getComputedColor('--border-primary', isDark ? '#232A3D' : '#E7E2D9'),
-      text: getComputedColor('--text-primary', isDark ? '#F4F6FA' : '#101D2E'),
+      text: getComputedColor('--text-primary', isDark ? '#F4F6FA' : '#24140E'),
     }
 
     // Chart color pairs array for category

@@ -324,7 +324,7 @@ export const StateDetail: React.FC = () => {
           value={allocCr}
           prefix="₹"
           unit="Cr"
-          theme="navy"
+          theme="espresso"
           description="Total central sanction"
           tooltip={`Cumulative statutory MPLADS fund allocated across all constituencies in ${state}.`}
         />
@@ -334,7 +334,7 @@ export const StateDetail: React.FC = () => {
           value={expCr}
           prefix="₹"
           unit="Cr"
-          theme="navy"
+          theme="espresso"
           description="Verified liquid expenditure"
           tooltip={`Total funds disbursed and verified by District Authorities with valid Utilization Certificates in ${state}.`}
         />

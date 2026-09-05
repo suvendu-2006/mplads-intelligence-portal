@@ -28,11 +28,15 @@
   --surface-alt: #EDEAE3;             /* Warm Champagne zebra/wells */
   --surface-hover: #F0ECE1;           /* Interactive hover */
 
-  /* === TEXT === */
-  --text-primary: #101D2E;            /* Deep Navy Ink (16:1 contrast) */
-  --text-secondary: #344054;          /* 8.2:1 contrast */
-  --text-tertiary: #667085;           /* 4.6:1 contrast */
-  --text-muted: #475467;              /* 6.4:1 contrast */
+  /* === TEXT & DATA (Deep Espresso Palette) === */
+  --text-primary: #24140E;            /* Deep Espresso (17.5:1 contrast, rich roasted coffee bean) */
+  --text-secondary: #423229;          /* Espresso Secondary / Charcoal (10.2:1 contrast) */
+  --text-tertiary: #705F55;           /* Espresso Tertiary / Muted (5.6:1 contrast) */
+  --text-muted: #57463D;              /* Espresso Muted (7.8:1 contrast) */
+  --color-espresso: #24140E;          /* Deep Espresso core token */
+  --color-espresso-rich: #2A1810;     /* Rich roasted espresso */
+  --brand-espresso: #24140E;          /* Brand Espresso */
+  --text-espresso: #24140E;           /* Explicit espresso text token */
 
   /* === BORDERS === */
   --border-primary: #E7E2D9;          /* Warm Champagne hairline */
@@ -143,6 +147,12 @@
   --neutral-800: #EEF2F6;
   --neutral-900: var(--text-primary);
 
+  /* === DEEP ESPRESSO DARK MODE TOKENS === */
+  --color-espresso: #F8FAFC;
+  --color-espresso-rich: #F8FAFC;
+  --brand-espresso: #60A5FA;
+  --text-espresso: #F8FAFC;
+
   --chart-navy: #6DABF5;
   --chart-emerald: #2FD0A0;
   --chart-sky: #8DCBFF;
@@ -162,10 +172,14 @@
     --surface-primary: #FFFFFF;
     --surface-alt: #EDEAE3;
     --surface-hover: #F0ECE1;
-    --text-primary: #101D2E;
-    --text-secondary: #344054;
-    --text-tertiary: #667085;
-    --text-muted: #475467;
+    --text-primary: #24140E;
+    --text-secondary: #423229;
+    --text-tertiary: #705F55;
+    --text-muted: #57463D;
+    --color-espresso: #24140E;
+    --color-espresso-rich: #2A1810;
+    --brand-espresso: #24140E;
+    --text-espresso: #24140E;
     --border-primary: #E7E2D9;
     --border-subtle: #EFECE6;
     --brand-primary: #1E3A8A;
@@ -396,10 +410,10 @@ a:focus-visible {
 
 [data-theme="light"] .leaflet-popup-content-wrapper {
   background: #FFFFFF !important;
-  color: #101D2E !important;
+  color: #24140E !important;
   border: 1px solid #E7E2D9 !important;
   border-radius: 12px !important;
-  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12) !important;
+  box-shadow: 0 8px 24px rgba(36, 20, 14, 0.12) !important;
 }
 
 [data-theme="dark"] .leaflet-popup-content-wrapper {
