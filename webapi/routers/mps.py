@@ -108,14 +108,23 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     df_mps = load_mps_csv()
     match = df_mps[df_mps["id"].astype(str) == id]
     if match.empty:
+        match = df_mps[df_mps["id"].astype(str).str.lower() == id.lower()]
+    if match.empty:
+        match = df_mps[df_mps["mpName"].astype(str).str.lower() == id.lower()]
+    if match.empty:
+        clean_name = id.split("(")[0].strip()
+        if clean_name:
+            match = df_mps[df_mps["mpName"].astype(str).str.contains(clean_name, case=False, na=False)]
+    if match.empty:
         raise HTTPException(status_code=404, detail=f"MP with id '{id}' not found")
 
     row = match.iloc[0]
+    real_id = str(row["id"])
     mp_name = str(row["mpName"])
     rf = compute_mp_red_flags(mp_name, db)
 
     summary_dict = {
-        "id": id,
+        "id": real_id,
         "mpName": mp_name,
         "house": str(row.get("house", "")),
         "state": str(row.get("state", "")),
@@ -134,7 +143,7 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     }
 
     # Load profile JSON with ADR demographics
-    raw_profile = load_mp_profile(id) or {}
+    raw_profile = load_mp_profile(real_id) or {}
     dossier = raw_profile.get("dossier") if isinstance(raw_profile.get("dossier"), dict) else raw_profile
 
     # Financial sanity check: avoid 0s if profile JSON or valid calculation exists

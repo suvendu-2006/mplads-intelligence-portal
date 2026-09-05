@@ -6,7 +6,7 @@ import json
 import math
 
 from webapi.models import EnvelopeResponse, MetaPagination
-from webapi.data_service import get_db, load_districts_csv
+from webapi.data_service import get_db, load_districts_csv, load_mps_csv
 from webapi.config import DETECTOR_NAMES, get_tier
 
 router = APIRouter()
@@ -345,12 +345,61 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         "scope": scope_note
     }
 
+    # Resolve linked MPs with their real database IDs and profiles
+    district_mps = []
+    try:
+        df_all_mps = load_mps_csv()
+        raw_mps_str = str(row.get("mps_active", "") or "")
+        active_mps_raw = [s.strip() for s in raw_mps_str.split(",") if s.strip()]
+        
+        if not active_mps_raw:
+            for w in works_list:
+                name = w.get("mpName")
+                if name and name != "Constituency MP" and name not in active_mps_raw:
+                    active_mps_raw.append(name)
+                    
+        for mp_name in active_mps_raw:
+            m_mp = df_all_mps[df_all_mps["mpName"].astype(str).str.lower() == mp_name.lower()]
+            if m_mp.empty:
+                clean_name = mp_name.split("(")[0].strip()
+                if clean_name:
+                    m_mp = df_all_mps[df_all_mps["mpName"].astype(str).str.contains(clean_name, case=False, na=False)]
+            
+            if not m_mp.empty:
+                mp_r = m_mp.iloc[0]
+                district_mps.append({
+                    "id": str(mp_r["id"]),
+                    "name": str(mp_r["mpName"]),
+                    "house": str(mp_r.get("house", "Lok Sabha")),
+                    "constituency": str(mp_r.get("constituency", d_name)),
+                    "allocatedAmount": float(mp_r.get("allocatedAmount", 0.0) or 0.0),
+                    "totalExpenditure": float(mp_r.get("totalExpenditure", 0.0) or 0.0),
+                    "utilizationPercentage": float(mp_r.get("utilizationPercentage", 0.0) or 0.0),
+                    "completionRate": float(mp_r.get("completionRate", 0.0) or 0.0),
+                    "status": "Active"
+                })
+            else:
+                district_mps.append({
+                    "id": mp_name,
+                    "name": mp_name,
+                    "house": "Parliament",
+                    "constituency": d_name,
+                    "allocatedAmount": 0.0,
+                    "totalExpenditure": 0.0,
+                    "utilizationPercentage": 0.0,
+                    "completionRate": 100.0,
+                    "status": "Active"
+                })
+    except Exception as e:
+        print(f"Error resolving district MPs: {e}")
+
     return EnvelopeResponse(
         data={
             "summary": summary_data,
             "works": works_list,
             "anomalies": anomalies_list,
-            "idas": idas_list
+            "idas": idas_list,
+            "mps": district_mps
         },
         meta=None,
         warnings=[]

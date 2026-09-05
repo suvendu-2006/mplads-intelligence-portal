@@ -118,6 +118,7 @@ export const DistrictDashboard: React.FC = () => {
   const works = data?.works || []
   const anomalies = data?.anomalies || []
   const idas = data?.idas || []
+  const mpsList = data?.mps || []
 
   const portfolioCr = Math.round((summary.portfolioValue || 0) / 10000000)
   const completionRate = summary.completionRate || 0
@@ -158,12 +159,14 @@ export const DistrictDashboard: React.FC = () => {
           <span className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] font-bold text-[var(--text-secondary)]">
             {user.role === 'district_authority' ? 'Role: District Authority (DM)' : 'Scope: Public Transparency View'}
           </span>
-          <Link
-            to={`/states/${encodeURIComponent(summary.state || 'HIMACHAL PRADESH')}`}
-            className="text-xs px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition"
-          >
-            State Overview
-          </Link>
+          {user.role !== 'district_authority' && (
+            <Link
+              to={`/states/${encodeURIComponent(summary.state || 'HIMACHAL PRADESH')}`}
+              className="text-xs px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition"
+            >
+              State Overview
+            </Link>
+          )}
         </div>
       </div>
 
@@ -351,44 +354,89 @@ export const DistrictDashboard: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {activeMpsList.map((mpName: string, idx: number) => (
-              <div key={idx} className="lux-card p-5 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-center font-bold text-xs text-[var(--brand-primary)]">
-                      MP
-                    </div>
+            {mpsList.length > 0 ? (
+              mpsList.map((mp: any, idx: number) => {
+                const targetUrl = mp.id ? `/mps/${mp.id}` : `/mps/${encodeURIComponent(mp.name)}`
+                const constLabel = mp.constituency ? `${mp.constituency}${mp.house ? `, ${mp.house}` : ''}` : (summary.constituencies || districtName)
+                return (
+                  <div key={mp.id || idx} className="lux-card p-5 flex flex-col justify-between">
                     <div>
-                      <h4 className="text-sm font-bold text-[var(--text-primary)] line-clamp-1">
-                        {mpName}
-                      </h4>
-                      <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-semibold">
-                        {summary.constituencies || districtName}
-                      </span>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-full bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-center font-bold text-xs text-[var(--brand-primary)]">
+                          MP
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                            {mp.name}
+                          </h4>
+                          <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-semibold">
+                            {constLabel}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs space-y-1.5 mb-3">
+                        <div className="flex justify-between">
+                          <span className="text-[var(--text-tertiary)]">District Allocations:</span>
+                          <span className="font-bold text-[var(--text-primary)]">{mp.status || 'Active'}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-[var(--text-tertiary)]">Sanction Status:</span>
+                          <span className="font-bold text-emerald-600">Compliant</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <Link
+                      to={targetUrl}
+                      className="w-full py-1.5 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1 transition"
+                    >
+                      <span>View Parliamentary Record</span>
+                      <ArrowRight size={12} />
+                    </Link>
+                  </div>
+                )
+              })
+            ) : (
+              activeMpsList.map((mpName: string, idx: number) => (
+                <div key={idx} className="lux-card p-5 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-center font-bold text-xs text-[var(--brand-primary)]">
+                        MP
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                          {mpName}
+                        </h4>
+                        <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-semibold">
+                          {summary.constituencies || districtName}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs space-y-1.5 mb-3">
+                      <div className="flex justify-between">
+                        <span className="text-[var(--text-tertiary)]">District Allocations:</span>
+                        <span className="font-bold text-[var(--text-primary)]">Active</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-[var(--text-tertiary)]">Sanction Status:</span>
+                        <span className="font-bold text-emerald-600">Compliant</span>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs space-y-1.5 mb-3">
-                    <div className="flex justify-between">
-                      <span className="text-[var(--text-tertiary)]">District Allocations:</span>
-                      <span className="font-bold text-[var(--text-primary)]">Active</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[var(--text-tertiary)]">Sanction Status:</span>
-                      <span className="font-bold text-emerald-600">Compliant</span>
-                    </div>
-                  </div>
+                  <Link
+                    to={`/mps/${encodeURIComponent(mpName)}`}
+                    className="w-full py-1.5 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1 transition"
+                  >
+                    <span>View Parliamentary Record</span>
+                    <ArrowRight size={12} />
+                  </Link>
                 </div>
-
-                <Link
-                  to="/mps"
-                  className="w-full py-1.5 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1 transition"
-                >
-                  <span>View Parliamentary Record</span>
-                  <ArrowRight size={12} />
-                </Link>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       )}
