@@ -325,6 +325,8 @@ export const StateDetail: React.FC = () => {
           prefix="₹"
           unit="Cr"
           theme="navy"
+          description="Total central sanction"
+          tooltip={`Cumulative statutory MPLADS fund allocated across all constituencies in ${state}.`}
         />
         <StatCard
           icon={Coins}
@@ -333,6 +335,8 @@ export const StateDetail: React.FC = () => {
           prefix="₹"
           unit="Cr"
           theme="navy"
+          description="Verified liquid expenditure"
+          tooltip={`Total funds disbursed and verified by District Authorities with valid Utilization Certificates in ${state}.`}
         />
         <StatCard
           icon={Percent}
@@ -341,6 +345,8 @@ export const StateDetail: React.FC = () => {
           unit="%"
           theme="emerald"
           gaugeValue={util}
+          description="Expenditure to sanction ratio"
+          tooltip={`State-level fund realization percentage across all districts in ${state}.`}
         />
         <StatCard
           icon={Clock}
@@ -348,6 +354,8 @@ export const StateDetail: React.FC = () => {
           value={paymentGap}
           unit="%"
           theme="amber"
+          description="Pending liquid disbursement"
+          tooltip={`Percentage gap between sanctioned committed amounts and cleared treasury releases in ${state}.`}
         />
       </div>
 

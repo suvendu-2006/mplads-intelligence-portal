@@ -21,9 +21,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   noPadding = false
 }) => {
   return (
-    <div className={`lux-card overflow-hidden flex flex-col ${className}`}>
+    <div className={`lux-card overflow-visible relative flex flex-col ${className}`}>
       {/* Header */}
-      <div className="px-5 py-4 border-b border-[var(--border-primary)] flex flex-wrap items-center justify-between gap-3 bg-[var(--surface-primary)]">
+      <div className="px-5 py-4 border-b border-[var(--border-primary)] flex flex-wrap items-center justify-between gap-3 bg-[var(--surface-primary)] rounded-t-[14px]">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-base sm:text-lg font-bold text-[var(--text-primary)] tracking-tight">
@@ -31,9 +31,24 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             </h2>
             {tooltip && (
               <div className="group relative cursor-help">
-                <Info size={14} className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors" />
-                <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-50 w-64 p-2 text-xs rounded-lg bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-xl text-[var(--text-secondary)] font-normal">
-                  {tooltip}
+                <span
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`Information about ${title}`}
+                  className="p-1 -m-1 flex items-center justify-center rounded-full text-[var(--text-tertiary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)] transition-colors focus:outline-none"
+                >
+                  <Info size={14} />
+                </span>
+                <div
+                  role="tooltip"
+                  className="absolute left-0 top-full mt-2 hidden group-hover:block group-focus-within:block z-50 w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
+                >
+                  <div className="font-bold text-[11px] text-[var(--text-secondary)] uppercase tracking-wider mb-1">
+                    {title}
+                  </div>
+                  <div className="text-[12px] text-[var(--text-primary)] leading-normal font-medium">
+                    {tooltip}
+                  </div>
                 </div>
               </div>
             )}

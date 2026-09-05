@@ -165,7 +165,6 @@ export const Layout: React.FC = () => {
           {/* Right Status / Persona Indicator */}
           <div className="hidden md:flex items-center gap-2 py-1 text-xs shrink-0">
             <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)] flex items-center gap-1.5">
-              <span className={`w-2 h-2 rounded-full ${user.role === 'mospi' ? 'bg-amber-500 shadow-sm' : 'bg-emerald-500'} animate-pulse`} />
               <span>
                 Active Role:{' '}
                 <strong className={user.role === 'mospi' ? 'text-amber-600 dark:text-amber-400' : 'text-[var(--text-primary)]'}>

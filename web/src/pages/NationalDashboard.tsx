@@ -183,7 +183,7 @@ export const NationalDashboard: React.FC = () => {
           label={t('kpi.total_mps')}
           value={totalMps}
           description="Both Houses: Lok Sabha (2024-29) & Rajya Sabha"
-          tooltip="774 MPs across both houses of Parliament: 18th Lok Sabha (2024-2029) and Rajya Sabha"
+          tooltip="774 Members of Parliament monitored across both Lok Sabha (543 seats) and Rajya Sabha (231 seats) in the 18th Parliamentary term."
           theme="navy"
         />
         <StatCard
@@ -192,6 +192,7 @@ export const NationalDashboard: React.FC = () => {
           value={completedWorks}
           theme="emerald"
           description="Verified civil projects"
+          tooltip="Total developmental civil projects completed, certified in measurement books, and physically verified with asset geotagging."
         />
         <StatCard
           icon={Clock}
@@ -199,6 +200,7 @@ export const NationalDashboard: React.FC = () => {
           value={pendingWorks}
           theme="amber"
           description="Active in queue"
+          tooltip="Sanctioned projects currently undergoing contractor execution, physical inspection, or measurement book certification."
         />
         <StatCard
           icon={Receipt}
@@ -207,6 +209,8 @@ export const NationalDashboard: React.FC = () => {
           prefix="₹"
           unit="Cr"
           theme="navy"
+          description="Active treasury liabilities"
+          tooltip="Total funds committed and earmarked in treasury accounts for active ongoing developmental works."
         />
       </div>
 
@@ -237,7 +241,7 @@ export const NationalDashboard: React.FC = () => {
             unit="%"
             theme="emerald"
             gaugeValue={utilRate}
-            tooltip={t('tooltip.utilization')}
+            tooltip="National fund utilization percentage: ratio of liquid treasury releases disbursed against total statutory allocated budget."
           />
           <StatCard
             icon={AlertCircle}

@@ -91,8 +91,10 @@ export const StatCard: React.FC<StatCardProps> = ({
     slate: 'text-[var(--text-primary)]'
   }[theme]
 
+  const tooltipText = tooltip || description
+
   return (
-    <div className="lux-card p-5 relative overflow-hidden flex flex-col justify-between">
+    <div className="lux-card p-5 relative overflow-visible group/card hover:z-30 transition-all flex flex-col justify-between">
       {/* Top row: Icon + Label + Tooltip */}
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2.5">
@@ -103,11 +105,26 @@ export const StatCard: React.FC<StatCardProps> = ({
             {label}
           </span>
         </div>
-        {tooltip && (
+        {tooltipText && (
           <div className="group relative cursor-help">
-            <Info size={14} className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors" />
-            <div className="absolute right-0 bottom-full mb-2 hidden group-hover:block z-50 w-56 p-2.5 text-xs font-medium rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-xl text-[var(--text-primary)]">
-              {tooltip}
+            <span
+              tabIndex={0}
+              role="button"
+              aria-label={`Information about ${label}`}
+              className="p-1 -m-1 flex items-center justify-center rounded-full text-[var(--text-tertiary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)] transition-colors focus:outline-none"
+            >
+              <Info size={14} />
+            </span>
+            <div
+              role="tooltip"
+              className="absolute right-0 top-full mt-2 hidden group-hover:block group-focus-within:block z-50 w-64 sm:w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
+            >
+              <div className="font-bold text-[11px] text-[var(--text-secondary)] uppercase tracking-wider mb-1">
+                {label}
+              </div>
+              <div className="text-[12px] text-[var(--text-primary)] leading-normal font-medium">
+                {tooltipText}
+              </div>
             </div>
           </div>
         )}
