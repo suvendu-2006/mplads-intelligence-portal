@@ -132,15 +132,21 @@ export const NationalDashboard: React.FC = () => {
 
   // Real sector distribution from expenditures.csv via /api/national/analytics
   const sectorColors = chartTheme.category
-  const sectorData = analytics?.topSectors?.map((sec: any, idx: number) => ({
-    name: sec.name,
-    fullName: sec.fullName,
-    value: sec.sharePct,
-    amount: sec.amount,
-    count: sec.count,
-    crores: `₹${Math.round(sec.amount / 10000000).toLocaleString('en-IN')} Cr`,
-    color: sectorColors[idx % sectorColors.length]
-  })) || []
+  const sectorData = analytics?.topSectors?.map((sec: any, idx: number) => {
+    const crValue = Math.round(sec.amount / 10000000)
+    return {
+      name: sec.name,
+      fullName: sec.fullName,
+      value: sec.sharePct,
+      amount: sec.amount,
+      crValue,
+      count: sec.count,
+      crores: `₹${crValue.toLocaleString('en-IN')} Cr`,
+      color: sectorColors[idx % sectorColors.length]
+    }
+  }) || []
+
+  const totalSectorCr = sectorData.reduce((sum: number, s: any) => sum + (s.crValue || 0), 0)
 
   // Real yearly multi-year trend from mplads_trends.csv via /api/national/analytics
   const yearlyTrendData = analytics?.yearlyTrends?.map((t: any) => ({
@@ -385,7 +391,7 @@ export const NationalDashboard: React.FC = () => {
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
                     <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                      ₹3,964 Cr
+                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
                     </span>
                     <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
                       Money Spent
@@ -395,7 +401,7 @@ export const NationalDashboard: React.FC = () => {
 
                 {/* Clear Breakdown List with Field Names, Money Spent & Share */}
                 <div className="space-y-2 pt-3 border-t border-[var(--border-primary)] max-h-48 overflow-y-auto pr-1">
-                  {sectorData.slice(0, 5).map((sec: any, idx: number) => (
+                  {sectorData.map((sec: any, idx: number) => (
                     <div key={idx} className="flex items-center justify-between text-xs p-1 rounded-md hover:bg-[var(--surface-alt)] transition">
                       <div className="flex items-center gap-2 truncate mr-2">
                         <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: sec.color }} />
@@ -532,7 +538,7 @@ export const NationalDashboard: React.FC = () => {
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
                     <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                      ₹3,964 Cr
+                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
                     </span>
                     <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
                       Total Disbursed

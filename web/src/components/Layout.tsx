@@ -253,7 +253,6 @@ export const Layout: React.FC = () => {
               ● Audited Data as of Aug 2026
             </span>
           </div>
-          <div>Smart Infrastructure Hackathon 2026 &bull; Production Demonstration System</div>
         </div>
       </footer>
     </div>
