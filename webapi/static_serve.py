@@ -3,10 +3,13 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse
 
-DIST_DIR = Path(__file__).resolve().parent.parent / "web" / "dist"
+BASE_WEB_DIR = Path(__file__).resolve().parent.parent / "web"
+DIST_DIR = BASE_WEB_DIR / "dist"
 
 def mount_static_files(app: FastAPI):
-    if not DIST_DIR.exists():
+    effective_dist = DIST_DIR if DIST_DIR.exists() else (BASE_WEB_DIR if (BASE_WEB_DIR / "index.html").exists() else None)
+
+    if effective_dist is None:
         # In dev mode before frontend build
         @app.get("/")
         async def dev_root():
@@ -18,7 +21,7 @@ def mount_static_files(app: FastAPI):
             })
         return
 
-    assets_dir = DIST_DIR / "assets"
+    assets_dir = effective_dist / "assets"
     if assets_dir.exists():
         app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
 
@@ -29,7 +32,7 @@ def mount_static_files(app: FastAPI):
         if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi.json"):
             return JSONResponse(status_code=404, content={"detail": "Not found"})
         
-        index_file = DIST_DIR / "index.html"
+        index_file = effective_dist / "index.html"
         if index_file.exists():
             headers = {
                 "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",

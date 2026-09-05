@@ -33,10 +33,14 @@ jobs:
         ln -s "$(which pytest)" .venv/bin/pytest
         ln -s "$(which alembic)" .venv/bin/alembic
 
-    - name: Prepare database for testing
+    - name: Prepare database and web assets for testing
       run: |
         if [ -f "api/mplads_dev.db" ] && [ ! -f "mplads_dev.db" ]; then
           cp api/mplads_dev.db mplads_dev.db
+        fi
+        mkdir -p web/dist
+        if [ -f "web/index.html" ] && [ ! -f "web/dist/index.html" ]; then
+          cp web/index.html web/dist/index.html
         fi
 
     - name: Run Pytest Suite
