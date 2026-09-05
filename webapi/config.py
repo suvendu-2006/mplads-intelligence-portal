@@ -5,12 +5,16 @@ from typing import Dict
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 def find_database_path() -> Path:
+    env_path = os.getenv("DATABASE_PATH")
+    if env_path and Path(env_path).exists():
+        return Path(env_path)
+    
     candidates = [
-        Path("/tmp/mplads_dev.db"),
-        BASE_DIR / "mplads_dev.db",
         BASE_DIR / "api" / "mplads_dev.db",
-        Path("/var/task/mplads_dev.db"),
+        BASE_DIR / "mplads_dev.db",
         Path("/var/task/api/mplads_dev.db"),
+        Path("/var/task/mplads_dev.db"),
+        Path("/tmp/mplads_dev.db"),
     ]
     for p in candidates:
         if p.exists() and p.is_file():
@@ -23,18 +27,6 @@ def get_database_url() -> str:
         return env_url
     
     db_file = find_database_path()
-    
-    # In Vercel serverless environment, copy to RAM-backed /tmp for maximum read speed & zero locks
-    if os.getenv("VERCEL") and db_file.exists() and db_file != Path("/tmp/mplads_dev.db"):
-        tmp_db = Path("/tmp/mplads_dev.db")
-        if not tmp_db.exists():
-            try:
-                import shutil
-                shutil.copyfile(db_file, tmp_db)
-                db_file = tmp_db
-            except Exception:
-                pass
-                
     return f"sqlite:///file:{db_file.resolve()}?mode=ro&immutable=1&uri=true"
 
 DB_PATH = find_database_path()

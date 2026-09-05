@@ -11,27 +11,14 @@ from webapi.config import DETECTOR_NAMES, get_tier
 
 router = APIRouter()
 
-@router.get("/districts")
-def list_districts(
-    q: Optional[str] = Query(None, description="Search district name"),
-    state: Optional[str] = Query(None, description="Filter by state"),
-    sort: str = Query("total_works", description="Sort field: total_works, completion_rate, district"),
-    order: str = Query("desc", description="Sort order: asc or desc"),
-    page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=100),
-    db: Session = Depends(get_db)
-):
-    df = load_districts_csv().copy()
+_districts_cache = {}
+_district_detail_cache = {}
+_districts_maps_cache = None
 
-    # Apply state filter
-    if state and state.lower() != "all":
-        df = df[df["state"].str.lower() == state.lower()]
-
-    # Apply search filter
-    if q:
-        df = df[df["district_nodal"].str.contains(q, case=False, na=False) | df["state"].str.contains(q, case=False, na=False)]
-
-    # Batch query anomalies count by district from SQLite (joined via works)
+def get_cached_district_maps(db: Session):
+    global _districts_maps_cache
+    if _districts_maps_cache is not None:
+        return _districts_maps_cache
     try:
         anom_rows = db.execute(text("""
             SELECT UPPER(w.district), count(a.anomaly_id)
@@ -43,19 +30,46 @@ def list_districts(
     except Exception:
         anom_map = {}
 
-    # Batch query works cost by district from SQLite
     try:
         cost_rows = db.execute(text("SELECT UPPER(district), sum(cost) FROM works GROUP BY UPPER(district)")).fetchall()
         cost_map = {row[0]: float(row[1] or 0) for row in cost_rows if row[0]}
     except Exception:
         cost_map = {}
 
-    # Batch query true works count by district from SQLite
     try:
         works_cnt_rows = db.execute(text("SELECT UPPER(district), count(*) FROM works GROUP BY UPPER(district)")).fetchall()
         works_cnt_map = {row[0]: int(row[1] or 0) for row in works_cnt_rows if row[0]}
     except Exception:
         works_cnt_map = {}
+
+    _districts_maps_cache = (anom_map, cost_map, works_cnt_map)
+    return _districts_maps_cache
+
+@router.get("/districts")
+def list_districts(
+    q: Optional[str] = Query(None, description="Search district name"),
+    state: Optional[str] = Query(None, description="Filter by state"),
+    sort: str = Query("total_works", description="Sort field: total_works, completion_rate, district"),
+    order: str = Query("desc", description="Sort order: asc or desc"),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(50, ge=1, le=100),
+    db: Session = Depends(get_db)
+):
+    cache_key = f"{q}_{state}_{sort}_{order}_{page}_{page_size}".lower()
+    if cache_key in _districts_cache:
+        return _districts_cache[cache_key]
+
+    df = load_districts_csv().copy()
+
+    # Apply state filter
+    if state and state.lower() != "all":
+        df = df[df["state"].str.lower() == state.lower()]
+
+    # Apply search filter
+    if q:
+        df = df[df["district_nodal"].str.contains(q, case=False, na=False) | df["state"].str.contains(q, case=False, na=False)]
+
+    anom_map, cost_map, works_cnt_map = get_cached_district_maps(db)
 
     records = []
     for _, r in df.iterrows():
@@ -129,11 +143,17 @@ def list_districts(
         has_prev=page > 1
     )
 
-    return EnvelopeResponse(data=paged_records, meta=meta, warnings=[])
+    resp = EnvelopeResponse(data=paged_records, meta=meta, warnings=[])
+    _districts_cache[cache_key] = resp
+    return resp
 
 
 @router.get("/districts/{district_name}")
 def get_district_detail(district_name: str, db: Session = Depends(get_db)):
+    c_key = district_name.strip().lower()
+    if c_key in _district_detail_cache:
+        return EnvelopeResponse(data=_district_detail_cache[c_key], meta=None, warnings=[])
+
     df = load_districts_csv()
     match = df[df["district_nodal"].str.lower() == district_name.lower()]
 
@@ -393,14 +413,17 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
     except Exception as e:
         print(f"Error resolving district MPs: {e}")
 
+    res_data = {
+        "summary": summary_data,
+        "works": works_list,
+        "anomalies": anomalies_list,
+        "idas": idas_list,
+        "mps": district_mps
+    }
+    _district_detail_cache[c_key] = res_data
+
     return EnvelopeResponse(
-        data={
-            "summary": summary_data,
-            "works": works_list,
-            "anomalies": anomalies_list,
-            "idas": idas_list,
-            "mps": district_mps
-        },
+        data=res_data,
         meta=None,
         warnings=[]
     )

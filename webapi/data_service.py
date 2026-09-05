@@ -69,6 +69,7 @@ def load_demographics_merged_csv() -> pd.DataFrame:
         return pd.read_csv(file_path, encoding="utf-8-sig")
     return pd.DataFrame()
 
+@lru_cache(maxsize=1024)
 def load_mp_profile(mp_id: str) -> Optional[Dict[str, Any]]:
     # In 03_MPs_Data/mp_profiles/ files are named mp_{mp_id}.json
     file_path = MPS_DIR / "mp_profiles" / f"mp_{mp_id}.json"

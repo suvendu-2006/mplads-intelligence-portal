@@ -17,6 +17,9 @@ from mplads_fraud_detection.foundation.schema import Work, Anomaly, EntityRisk
 
 router = APIRouter()
 
+_mps_cache = {}
+_mp_detail_cache = {}
+
 @router.get("/mps", response_model=EnvelopeResponse[List[MPListItem]])
 def list_mps(
     state: Optional[str] = None,
@@ -28,6 +31,10 @@ def list_mps(
     page_size: int = Query(50, ge=1, le=100),
     db: Session = Depends(get_db)
 ):
+    cache_key = f"{state}_{house}_{q}_{sort}_{order}_{page}_{page_size}".lower()
+    if cache_key in _mps_cache:
+        return _mps_cache[cache_key]
+
     df_mps = load_mps_csv()
     filtered = df_mps.copy()
 
@@ -101,10 +108,16 @@ def list_mps(
         has_prev=page > 1
     )
 
-    return EnvelopeResponse(data=paginated_items, meta=meta, warnings=[])
+    resp = EnvelopeResponse(data=paginated_items, meta=meta, warnings=[])
+    _mps_cache[cache_key] = resp
+    return resp
 
 @router.get("/mps/{id}", response_model=EnvelopeResponse[MPDetailData])
 def get_mp_detail(id: str, db: Session = Depends(get_db)):
+    c_key = id.strip().lower()
+    if c_key in _mp_detail_cache:
+        return EnvelopeResponse(data=_mp_detail_cache[c_key], meta=None, warnings=[])
+
     df_mps = load_mps_csv()
     match = df_mps[df_mps["id"].astype(str) == id]
     if match.empty:
@@ -293,14 +306,19 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
             }
         )
 
+    detail_data = MPDetailData(
+        summary=summary_dict,
+        dossier=dossier,
+        works=work_items,
+        flags=flag_items,
+        entity_risk=entity_risk
+    )
+    _mp_detail_cache[c_key] = detail_data
+    _mp_detail_cache[real_id.lower()] = detail_data
+    _mp_detail_cache[mp_name.lower()] = detail_data
+
     return EnvelopeResponse(
-        data=MPDetailData(
-            summary=summary_dict,
-            dossier=dossier,
-            works=work_items,
-            flags=flag_items,
-            entity_risk=entity_risk
-        ),
+        data=detail_data,
         meta=None,
         warnings=[]
     )

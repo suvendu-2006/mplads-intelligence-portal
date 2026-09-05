@@ -3,11 +3,98 @@ import { useStore } from '../store/useStore'
 // Flag to ensure interceptor is only initialized once
 let isInterceptorInitialized = false
 
+interface CacheRecord {
+  body: string
+  status: number
+  statusText: string
+  headers: [string, string][]
+  timestamp: number
+}
+
+// In-memory instant RAM cache for sub-millisecond responses
+const memoryCache = new Map<string, CacheRecord>()
+const STALE_TTL_MS = 60000 // 60 seconds stale-while-revalidate window
+const SESSION_CACHE_PREFIX = 'satark_swr_'
+
+/**
+ * Clears the SWR API cache in RAM and sessionStorage.
+ */
+export function clearApiCache(pattern?: string) {
+  if (pattern) {
+    for (const key of memoryCache.keys()) {
+      if (key.includes(pattern)) {
+        memoryCache.delete(key)
+      }
+    }
+    if (typeof window !== 'undefined' && window.sessionStorage) {
+      try {
+        for (let i = sessionStorage.length - 1; i >= 0; i--) {
+          const k = sessionStorage.key(i)
+          if (k && k.startsWith(SESSION_CACHE_PREFIX) && k.includes(pattern)) {
+            sessionStorage.removeItem(k)
+          }
+        }
+      } catch {}
+    }
+  } else {
+    memoryCache.clear()
+    if (typeof window !== 'undefined' && window.sessionStorage) {
+      try {
+        for (let i = sessionStorage.length - 1; i >= 0; i--) {
+          const k = sessionStorage.key(i)
+          if (k && k.startsWith(SESSION_CACHE_PREFIX)) {
+            sessionStorage.removeItem(k)
+          }
+        }
+      } catch {}
+    }
+  }
+}
+
+/**
+ * Helper to execute a fresh network fetch and update the memory/session cache silently.
+ */
+async function fetchAndCache(
+  input: RequestInfo | URL,
+  init: RequestInit,
+  cacheKey: string,
+  originalFetch: typeof window.fetch
+): Promise<Response> {
+  const response = await originalFetch(input, init)
+  if (response.ok) {
+    try {
+      const cloned = response.clone()
+      const bodyText = await cloned.text()
+      const headerEntries: [string, string][] = []
+      cloned.headers.forEach((val, k) => headerEntries.push([k, val]))
+
+      const record: CacheRecord = {
+        body: bodyText,
+        status: cloned.status,
+        statusText: cloned.statusText,
+        headers: headerEntries,
+        timestamp: Date.now(),
+      }
+
+      memoryCache.set(cacheKey, record)
+
+      try {
+        sessionStorage.setItem(SESSION_CACHE_PREFIX + cacheKey, JSON.stringify(record))
+      } catch {
+        // Ignore quota limits
+      }
+    } catch (e) {
+      console.warn('[SATARK-CACHE] Failed to cache response:', e)
+    }
+  }
+  return response
+}
+
 /**
  * Universal Fetch Interceptor
- * Automatically injects authentication tokens and role context headers
- * into all requests targeting `/api/*`, and provides transparent auto-healing
- * if the backend session expires or is restarted.
+ * 1. Automatically injects authentication tokens and role context headers.
+ * 2. Instant Stale-While-Revalidate (SWR) cache for <1ms page renders and tab switches.
+ * 3. Transparent auto-healing if the backend session expires or restarts.
  */
 export function initApiSync() {
   if (typeof window === 'undefined' || isInterceptorInitialized) return
@@ -17,45 +104,92 @@ export function initApiSync() {
 
   window.fetch = async function (input: RequestInfo | URL, init?: RequestInit) {
     const urlStr = typeof input === 'string' ? input : input instanceof URL ? input.toString() : input.url
+    const method = (init?.method || 'GET').toUpperCase()
 
-    // Intercept local API routes
-    if (urlStr.startsWith('/api') || urlStr.includes(':8000/api') || urlStr.includes(':5173/api')) {
+    // Only intercept local /api routes
+    const isApiRoute = urlStr.startsWith('/api') || urlStr.includes(':8000/api') || urlStr.includes(':5173/api')
+
+    if (isApiRoute) {
       const { user, setUser } = useStore.getState()
       const headers = new Headers(init?.headers)
 
       // Set default JSON Content-Type for write requests
-      if (!headers.has('Content-Type') && !(init?.body instanceof FormData) && init?.method && init.method !== 'GET') {
+      if (!headers.has('Content-Type') && !(init?.body instanceof FormData) && method !== 'GET') {
         headers.set('Content-Type', 'application/json')
       }
 
       // Inject full authorization & persona context
-      if (user?.sessionToken) {
-        headers.set('X-Session-Token', user.sessionToken)
-      }
-      if (user?.role) {
-        headers.set('X-Role', user.role)
-      }
-      if (user?.state) {
-        headers.set('X-State', user.state)
-      }
-      if (user?.district) {
-        headers.set('X-District', user.district)
-      }
-      if (user?.mpId) {
-        headers.set('X-MP-ID', user.mpId)
-      }
-      if (user?.mpName) {
-        headers.set('X-MP-Name', user.mpName)
-      }
+      if (user?.sessionToken) headers.set('X-Session-Token', user.sessionToken)
+      if (user?.role) headers.set('X-Role', user.role)
+      if (user?.state) headers.set('X-State', user.state)
+      if (user?.district) headers.set('X-District', user.district)
+      if (user?.mpId) headers.set('X-MP-ID', user.mpId)
+      if (user?.mpName) headers.set('X-MP-Name', user.mpName)
 
       const modifiedInit: RequestInit = {
         ...init,
         headers,
       }
 
+      // Mutations (POST, PUT, DELETE, PATCH): Invalidate cache and execute directly
+      if (method !== 'GET') {
+        clearApiCache()
+        let response: Response
+        try {
+          response = await originalFetch(input, modifiedInit)
+        } catch (err) {
+          console.warn('[SATARK-SYNC] Network error contacting API:', err)
+          throw err
+        }
+        return response
+      }
+
+      // Skip caching for stream downloads or raw exports
+      const isExportOrStream = urlStr.includes('/export') || urlStr.includes('.csv')
+      if (isExportOrStream) {
+        return originalFetch(input, modifiedInit)
+      }
+
+      // Generate cache key scoped to current user role and normalized URL
+      const cacheKey = `${user?.role || 'public'}:${urlStr}`
+
+      // Check In-Memory RAM Cache first (0.01ms access)
+      let cachedRecord = memoryCache.get(cacheKey)
+
+      // Fallback to SessionStorage if not in RAM
+      if (!cachedRecord && typeof window !== 'undefined' && window.sessionStorage) {
+        try {
+          const raw = sessionStorage.getItem(SESSION_CACHE_PREFIX + cacheKey)
+          if (raw) {
+            cachedRecord = JSON.parse(raw) as CacheRecord
+            if (cachedRecord) {
+              memoryCache.set(cacheKey, cachedRecord)
+            }
+          }
+        } catch {}
+      }
+
+      // If cached entry exists:
+      if (cachedRecord) {
+        const isStale = Date.now() - cachedRecord.timestamp > STALE_TTL_MS
+
+        // If stale, silently revalidate in the background
+        if (isStale) {
+          fetchAndCache(input, modifiedInit, cacheKey, originalFetch).catch(() => {})
+        }
+
+        // Return synthetic response immediately for instantaneous rendering!
+        return new Response(cachedRecord.body, {
+          status: cachedRecord.status,
+          statusText: cachedRecord.statusText,
+          headers: new Headers(cachedRecord.headers),
+        })
+      }
+
+      // Not cached: execute network request and cache the result
       let response: Response
       try {
-        response = await originalFetch(input, modifiedInit)
+        response = await fetchAndCache(input, modifiedInit, cacheKey, originalFetch)
       } catch (networkErr) {
         console.warn('[SATARK-SYNC] Network error contacting API:', networkErr)
         throw networkErr
@@ -89,10 +223,7 @@ export function initApiSync() {
 
             // Retry original request with freshly minted token
             headers.set('X-Session-Token', newToken)
-            response = await originalFetch(input, {
-              ...init,
-              headers,
-            })
+            response = await fetchAndCache(input, { ...init, headers }, cacheKey, originalFetch)
             console.log('[SATARK-SYNC] Session seamlessly re-synchronized with backend.')
           }
         } catch (reconnectErr) {
@@ -106,7 +237,26 @@ export function initApiSync() {
     return originalFetch(input, init)
   }
 
-  console.log('[SATARK-SYNC] Universal API Interceptor Active: 100% synchronized with backend.')
+  console.log('[SATARK-SYNC] Universal API Interceptor Active: 100% synchronized with SWR High-Speed Caching.')
+}
+
+/**
+ * Pre-warms core portal data asynchronously so subsequent tab switches are instantaneous.
+ */
+export function warmupApiCache() {
+  if (typeof window === 'undefined') return
+  setTimeout(() => {
+    const endpoints = [
+      '/api/national',
+      '/api/national/analytics',
+      '/api/states?sort=allocated&order=desc',
+      '/api/mps?page=1&page_size=50&sort=allocated&order=desc',
+      '/api/districts?page=1&page_size=50&sort=total_works&order=desc',
+    ]
+    endpoints.forEach((url) => {
+      fetch(url).catch(() => {})
+    })
+  }, 100)
 }
 
 /**

@@ -18,12 +18,18 @@ from mplads_fraud_detection.foundation.schema import Work, Anomaly
 
 router = APIRouter()
 
+_states_cache = {}
+
 @router.get("/states", response_model=EnvelopeResponse[List[StateSummaryItem]])
 def list_states(
     sort: str = Query("allocated", pattern="^(allocated|utilization|red_pct)$"),
     order: str = Query("desc", pattern="^(asc|desc)$"),
     db: Session = Depends(get_db)
 ):
+    cache_key = f"{sort}_{order}"
+    if cache_key in _states_cache:
+        return EnvelopeResponse(data=_states_cache[cache_key], meta=None, warnings=[])
+
     df_states = load_states_csv()
     df_districts = load_districts_csv()
     
@@ -78,6 +84,7 @@ def list_states(
     elif sort == "red_pct":
         results.sort(key=lambda x: x.redFlagPct, reverse=reverse)
 
+    _states_cache[cache_key] = results
     return EnvelopeResponse(data=results, meta=None, warnings=[])
 
 STATE_CODE_MAP = {
@@ -100,9 +107,15 @@ def resolve_state_name(state: str) -> str:
         return STATE_CODE_MAP[cleaned.upper()]
     return cleaned
 
+_state_detail_cache: Dict[str, StateDetailData] = {}
+
 @router.get("/states/{state}", response_model=EnvelopeResponse[StateDetailData])
 def get_state_detail(state: str, db: Session = Depends(get_db)):
     resolved_state = resolve_state_name(state)
+    cache_key = resolved_state.lower()
+    if cache_key in _state_detail_cache:
+        return EnvelopeResponse(data=_state_detail_cache[cache_key], meta=None, warnings=[])
+
     df_states = load_states_csv()
     # Case-insensitive lookup with ALL fallback
     match = df_states[df_states["state"].str.lower() == resolved_state.lower()]
@@ -219,12 +232,15 @@ def get_state_detail(state: str, db: Session = Depends(get_db)):
     if any(d.portfolio_value > 0 for d in districts_list):
         warnings.append("District portfolio_value verified and calculated from canonical works table where CSV was 0.0")
 
+    detail_data = StateDetailData(
+        state=actual_state_name,
+        summary=summary,
+        districts=districts_list
+    )
+    _state_detail_cache[cache_key] = detail_data
+
     return EnvelopeResponse(
-        data=StateDetailData(
-            state=actual_state_name,
-            summary=summary,
-            districts=districts_list
-        ),
+        data=detail_data,
         meta=None,
         warnings=warnings
     )
