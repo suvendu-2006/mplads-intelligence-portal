@@ -106,11 +106,11 @@ export const BrowseStates: React.FC = () => {
           <div className="flex items-center gap-2 mb-1">
             <MapPin size={20} className="text-[var(--brand-primary)]" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
-              Browse States & Union Territories
+              State &amp; UT Overview
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
-            Comparative performance directory across 28 States & 8 Union Territories showing fund allocation, expenditure velocity, and project delivery.
+            Comparative performance directory across 28 States &amp; 8 Union Territories showing fund allocation, expenditure velocity, and project delivery.
           </p>
         </div>
 
