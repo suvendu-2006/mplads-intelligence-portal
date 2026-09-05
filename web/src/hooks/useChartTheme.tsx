@@ -80,8 +80,8 @@ export const useChartTheme = () => {
 
     // Color pairs
     const allocatedPair: ColorPair = {
-      css: isDark ? 'var(--brand-primary)' : 'var(--color-espresso, #24140E)',
-      hex: getComputedColor(isDark ? '--brand-primary' : '--color-espresso', palette.fund.allocated[isDark ? 'dark' : 'light']),
+      css: 'var(--brand-primary)',
+      hex: getComputedColor('--brand-primary', palette.fund.allocated[isDark ? 'dark' : 'light']),
     }
 
     const utilizedPair: ColorPair = {

@@ -50,7 +50,7 @@ export const palette = {
    * Blue/Gold pair: ΔE 89-101 (excellent separation in ALL CVD types)
    */
   fund: {
-    allocated: { light: '#24140E', dark: '#6DABF5' },  // Deep Espresso in light mode
+    allocated: { light: '#1E3A8A', dark: '#6DABF5' },  // Ink Navy Blue in light mode
     utilized: { light: '#B7791F', dark: '#E3B341' },   // Gold NOT green
     pending: { light: '#E4E7EC', dark: '#2A3247' },    // Quiet neutral
   },
