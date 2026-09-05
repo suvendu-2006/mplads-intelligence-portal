@@ -16,6 +16,7 @@ const AuditDesk = React.lazy(() => import('./pages/AuditDesk').then(m => ({ defa
 const GISMap = React.lazy(() => import('./pages/GISMap').then(m => ({ default: m.GISMap })))
 const Login = React.lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
 const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
+const Dossier = React.lazy(() => import('./pages/Dossier').then(m => ({ default: m.Dossier })))
 
 export const App: React.FC = () => {
   React.useEffect(() => {
@@ -54,6 +55,9 @@ export const App: React.FC = () => {
           <Route path="state-console" element={<MyState />} />
           <Route path="audit" element={<AuditDesk />} />
           <Route path="map" element={<GISMap />} />
+          <Route path="dossier" element={<Dossier />} />
+          <Route path="docs" element={<Dossier />} />
+          <Route path="documentation" element={<Dossier />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
