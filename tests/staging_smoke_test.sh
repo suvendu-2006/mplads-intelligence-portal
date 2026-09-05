@@ -11,6 +11,19 @@ STAGING_USER="mplads_staging_user"
 STAGING_PASS="StagingSecurePassword123!"
 CERT_DIR="$(pwd)/tests/staging_certs"
 
+PYTHON="${PYTHON:-python3}"
+if [ -f .venv/bin/python3 ]; then
+    PYTHON=".venv/bin/python3"
+fi
+PYTEST="${PYTEST:-pytest}"
+if [ -f .venv/bin/pytest ]; then
+    PYTEST=".venv/bin/pytest"
+fi
+ALEMBIC="${ALEMBIC:-alembic}"
+if [ -f .venv/bin/alembic ]; then
+    ALEMBIC=".venv/bin/alembic"
+fi
+
 # Check if docker is available and running
 DOCKER_ACTIVE=false
 if command -v docker > /dev/null 2>&1; then
@@ -60,10 +73,10 @@ if [ "$DOCKER_ACTIVE" = true ]; then
     STAGING_DATABASE_URL="postgresql+psycopg2://${STAGING_USER}:${STAGING_PASS}@localhost:${STAGING_PORT}/${STAGING_DB}?sslmode=require"
 
     echo "  • Running Alembic migrations against fresh TLS-enabled PostgreSQL..."
-    DATABASE_URL="$STAGING_DATABASE_URL" .venv/bin/alembic upgrade head
+    DATABASE_URL="$STAGING_DATABASE_URL" $ALEMBIC upgrade head
 
     echo "  • Verifying encrypted TLS connection and database schema..."
-    DATABASE_URL="$STAGING_DATABASE_URL" .venv/bin/python3 -c "
+    DATABASE_URL="$STAGING_DATABASE_URL" $PYTHON -c "
 import os
 from sqlalchemy import create_engine, text
 db_url = os.environ['DATABASE_URL']
@@ -85,7 +98,7 @@ with engine.connect() as conn:
 else
     echo "ℹ️  Docker daemon not active on local host (macOS development environment)."
     echo "   Executing automated PostgreSQL TLS enforcement & offline DDL compiler test..."
-    .venv/bin/pytest -v tests/test_postgres_tls_staging.py --tb=short
+    $PYTEST -v tests/test_postgres_tls_staging.py --tb=short
     echo "  ✓ PASS: PostgreSQL TLS parameter enforcement and complete DDL compilation verified!"
 fi
 

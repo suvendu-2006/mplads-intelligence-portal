@@ -153,52 +153,50 @@ def run_detector_02_duplicate_works(session: Session, run_id: str) -> int:
         dist_embeddings = embeddings[dist_indices]
         sim_matrix = cosine_similarity(dist_embeddings)
 
-        for i in range(n_dist):
-            for j in range(i + 1, n_dist):
-                sim = float(sim_matrix[i, j])
-                if sim < 0.85:
-                    continue
+        pair_i, pair_j = np.where(np.triu(sim_matrix >= 0.85, k=1))
+        for i, j in zip(pair_i, pair_j):
+            sim = float(sim_matrix[i, j])
 
-                idx_a, idx_b = dist_indices[i], dist_indices[j]
-                row_a, row_b = df_valid.iloc[idx_a], df_valid.iloc[idx_b]
+            idx_a, idx_b = dist_indices[i], dist_indices[j]
+            row_a, row_b = df_valid.iloc[idx_a], df_valid.iloc[idx_b]
 
-                # Skip mass boilerplate descriptions from duplicate project pairing
-                desc_a = row_a["work_description"]
-                desc_b = row_b["work_description"]
-                if desc_a in boilerplate_templates or desc_b in boilerplate_templates:
-                    continue
+            # Skip mass boilerplate descriptions from duplicate project pairing
+            desc_a = row_a["work_description"]
+            desc_b = row_b["work_description"]
+            if desc_a in boilerplate_templates or desc_b in boilerplate_templates:
+                continue
 
-                same_category = (row_a["category"] == row_b["category"])
-                same_mp = (row_a["mp_name"] == row_b["mp_name"])
-                cost_ratio = safe_divide(row_b["cost"], row_a["cost"], fill=1.0)
-                similar_cost = (0.70 <= cost_ratio <= 1.43)
+            same_category = (row_a["category"] == row_b["category"])
+            same_mp = (row_a["mp_name"] == row_b["mp_name"])
+            cost_ratio = safe_divide(row_b["cost"], row_a["cost"], fill=1.0)
+            similar_cost = (0.70 <= cost_ratio <= 1.43)
 
-                wid_a, wid_b = int(row_a["work_id"]), int(row_b["work_id"])
-                canonical_a, canonical_b = min(wid_a, wid_b), max(wid_a, wid_b)
+            wid_a, wid_b = int(row_a["work_id"]), int(row_b["work_id"])
+            canonical_a, canonical_b = min(wid_a, wid_b), max(wid_a, wid_b)
 
-                # Rule A: Highly Similar Project (+ same category + similar cost band) or Identical Text (>= 0.95)
-                if (sim >= 0.93 and same_category and similar_cost) or (sim >= 0.95):
-                    uf.union(idx_a, idx_b)
-                    high_confidence_pairs.append({
-                        "work_id_a": canonical_a,
-                        "work_id_b": canonical_b,
-                        "similarity": sim,
-                        "same_mp": same_mp,
-                        "same_district": True,
-                        "cost_a": float(row_a["cost"]),
-                        "cost_b": float(row_b["cost"])
-                    })
-                elif 0.88 <= sim < 0.93 and same_mp and same_category and similar_cost:
-                    # Rule C: Route borderline pairs to review_queue (high-precision: same MP, category, cost band)
-                    review_queue_items.append(ReviewQueueItem(
-                        work_id_a=canonical_a,
-                        work_id_b=canonical_b,
-                        detector_type="duplicate_work",
-                        similarity=round(sim, 3),
-                        reason=f"Borderline similarity ({sim*100:.1f}%) across '{row_a['category']}' works in {dist}",
-                        status="PENDING",
-                        run_id=run_id
-                    ))
+            # Rule A: Highly Similar Project (+ same category + similar cost band) or Identical Text (>= 0.95)
+            if (sim >= 0.93 and same_category and similar_cost) or (sim >= 0.95):
+                uf.union(idx_a, idx_b)
+                high_confidence_pairs.append({
+                    "work_id_a": canonical_a,
+                    "work_id_b": canonical_b,
+                    "similarity": sim,
+                    "same_mp": same_mp,
+                    "same_district": True,
+                    "cost_a": float(row_a["cost"]),
+                    "cost_b": float(row_b["cost"])
+                })
+            elif 0.88 <= sim < 0.93 and same_mp and same_category and similar_cost:
+                # Rule C: Route borderline pairs to review_queue (high-precision: same MP, category, cost band)
+                review_queue_items.append(ReviewQueueItem(
+                    work_id_a=canonical_a,
+                    work_id_b=canonical_b,
+                    detector_type="duplicate_work",
+                    similarity=round(sim, 3),
+                    reason=f"Borderline similarity ({sim*100:.1f}%) across '{row_a['category']}' works in {dist}",
+                    status="PENDING",
+                    run_id=run_id
+                ))
 
     # 4. Cluster Extraction & Validation (Genuine duplicate clusters: 2 to 10 works)
     clusters = {}
