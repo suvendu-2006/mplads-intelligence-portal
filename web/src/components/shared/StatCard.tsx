@@ -94,7 +94,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   const tooltipText = tooltip || description
 
   return (
-    <div className="lux-card p-5 relative overflow-visible group/card hover:z-30 transition-all flex flex-col justify-between">
+    <div className="lux-card p-5 relative overflow-visible group/card hover:z-40 transition-all flex flex-col justify-between">
       {/* Top row: Icon + Label + Tooltip */}
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2.5">
@@ -117,7 +117,7 @@ export const StatCard: React.FC<StatCardProps> = ({
             </span>
             <div
               role="tooltip"
-              className="absolute right-0 top-full mt-2 hidden group-hover:block group-focus-within:block z-50 w-64 sm:w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
+              className="absolute right-0 bottom-full mb-2.5 hidden group-hover:block group-focus-within:block z-50 w-64 sm:w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
             >
               <div className="font-bold text-[11px] text-[var(--text-secondary)] uppercase tracking-wider mb-1">
                 {label}
@@ -125,6 +125,7 @@ export const StatCard: React.FC<StatCardProps> = ({
               <div className="text-[12px] text-[var(--text-primary)] leading-normal font-medium">
                 {tooltipText}
               </div>
+              <div className="absolute right-2.5 -bottom-1 w-2 h-2 rotate-45 bg-[var(--surface-primary)] border-r border-b border-[var(--border-primary)]" />
             </div>
           </div>
         )}

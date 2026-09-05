@@ -41,7 +41,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
                 </span>
                 <div
                   role="tooltip"
-                  className="absolute left-0 top-full mt-2 hidden group-hover:block group-focus-within:block z-50 w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
+                  className="absolute left-0 bottom-full mb-2.5 hidden group-hover:block group-focus-within:block z-50 w-72 p-3 text-xs font-normal leading-relaxed rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl text-[var(--text-primary)] pointer-events-none backdrop-blur-md animate-in fade-in zoom-in-95 duration-150"
                 >
                   <div className="font-bold text-[11px] text-[var(--text-secondary)] uppercase tracking-wider mb-1">
                     {title}
@@ -49,6 +49,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
                   <div className="text-[12px] text-[var(--text-primary)] leading-normal font-medium">
                     {tooltip}
                   </div>
+                  <div className="absolute left-2.5 -bottom-1 w-2 h-2 rotate-45 bg-[var(--surface-primary)] border-r border-b border-[var(--border-primary)]" />
                 </div>
               </div>
             )}
