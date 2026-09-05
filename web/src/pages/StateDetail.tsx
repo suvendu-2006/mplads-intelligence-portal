@@ -679,8 +679,8 @@ export const StateDetail: React.FC = () => {
                           <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                             #{w.work_id}
                           </td>
-                          <td className="p-3 min-w-[280px] whitespace-normal">
-                            <span className="text-[var(--text-primary)] font-medium leading-relaxed block" title={w.work_description}>
+                          <td className="p-3 min-w-[280px] whitespace-normal break-words">
+                            <span className="text-[var(--text-primary)] font-medium leading-relaxed block break-words" title={w.work_description}>
                               {w.work_description}
                             </span>
                           </td>
