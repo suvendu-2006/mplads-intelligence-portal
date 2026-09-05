@@ -161,10 +161,10 @@ export const DistrictDashboard: React.FC = () => {
           </span>
           {user.role !== 'district_authority' && (
             <Link
-              to={`/states/${encodeURIComponent(summary.state || 'HIMACHAL PRADESH')}`}
+              to={summary.state && summary.state !== 'ALL' ? `/states/${encodeURIComponent(summary.state)}` : '/states'}
               className="text-xs px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition"
             >
-              State Overview
+              State &amp; UT Overview
             </Link>
           )}
         </div>

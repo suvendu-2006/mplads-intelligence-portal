@@ -3,7 +3,7 @@ import { useStore, LangMode } from '../store/useStore'
 export const dictionary: Record<string, Record<LangMode, string>> = {
   // Navigation (8)
   'nav.overview': { en: 'Overview', hi: 'अवलोकन' },
-  'nav.browse_states': { en: 'Browse States & UTs', hi: 'राज्य व केंद्रशासित प्रदेश' },
+  'nav.browse_states': { en: 'State & UT Overview', hi: 'राज्य व केंद्रशासित प्रदेश अवलोकन' },
   'nav.browse_mps': { en: 'MPs Performance', hi: 'सांसद प्रदर्शन' },
   'nav.gis_map': { en: 'GIS Map', hi: 'भू-नक्शा' },
   'nav.my_state': { en: 'My State', hi: 'मेरा राज्य' },

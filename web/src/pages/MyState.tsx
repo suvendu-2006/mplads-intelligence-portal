@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
@@ -31,6 +31,11 @@ import { fmtCrore } from '../lib/currency'
 
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
+
+  // MoSPI (Apex Central Authority) or unassigned/ALL users navigate directly to national States & UT overview page
+  if (user.role === 'mospi' || !user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') {
+    return <Navigate to="/states" replace />
+  }
   const [data, setData] = useState<any>(null)
   const [nationalMeta, setNationalMeta] = useState<any>(null)
   const [flags, setFlags] = useState<any[]>([])

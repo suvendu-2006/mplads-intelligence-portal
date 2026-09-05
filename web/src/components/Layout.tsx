@@ -85,7 +85,7 @@ export const Layout: React.FC = () => {
 
             <Link to="/states" className={navLinkClasses('/states')}>
               <MapPin size={14} className={isActive('/states') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
-              <span>Browse States &amp; UTs</span>
+              <span>State &amp; UT Overview</span>
               {isActive('/states') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
             </Link>
 
@@ -119,29 +119,13 @@ export const Layout: React.FC = () => {
 
             {/* Contextual Role Console tabs - Only visible when relevant role is active */}
             {user.role === 'mospi' && (
-              <>
-                <Link to="/my-state" className={navLinkClasses('/my-state')}>
-                  <Building2 size={14} className="text-emerald-500" />
-                  <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
-                    State Console
-                  </span>
-                  {isActive('/my-state') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />}
-                </Link>
-                <Link to="/district-dashboard" className={navLinkClasses('/district-dashboard')}>
-                  <Building2 size={14} className="text-[var(--brand-primary)]" />
-                  <span className="font-extrabold text-[var(--brand-primary)]">
-                    District Console
-                  </span>
-                  {isActive('/district-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
-                </Link>
-                <Link to="/mp-dashboard" className={navLinkClasses('/mp-dashboard')}>
-                  <Users size={14} className="text-[var(--brand-accent)]" />
-                  <span className="font-extrabold text-[var(--gold-text)]">
-                    MP Console
-                  </span>
-                  {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
-                </Link>
-              </>
+              <Link to="/mp-dashboard" className={navLinkClasses('/mp-dashboard')}>
+                <Users size={14} className="text-[var(--brand-accent)]" />
+                <span className="font-extrabold text-[var(--gold-text)]">
+                  MP Console
+                </span>
+                {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
+              </Link>
             )}
 
             {user.role === 'state_nodal_officer' && (
