@@ -244,8 +244,14 @@ if st.sidebar.button("🚪 Logout", use_container_width=True):
     st.rerun()
 
 metrics, df_anom, df_ent, df_works, df_rq, df_preds, last_run_time = load_dashboard_data()
+has_pipeline_run = (metrics is not None and df_anom is not None)
 
-if metrics is None or df_anom is None:
+if not has_pipeline_run:
+    metrics = {
+        'total_works': 0,
+        'questioned_expenditure_cr': 0.0,
+        'risk_tier_distribution': {'Audit Now': 0, 'Review': 0, 'Clean': 0}
+    }
     st.warning("⚠️ No pipeline run detected. System requires initial setup.")
 
     # Only Admin can run first pipeline
