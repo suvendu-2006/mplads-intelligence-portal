@@ -2,17 +2,17 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
-import { Search, Moon, Sun, Monitor, X, MapPin, Building2, Users, FileText, ArrowRight } from 'lucide-react'
+import { Search, Moon, Sun, Monitor, X, MapPin, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 import { t } from '../lib/i18n'
 
 import { pingBackend } from '../lib/api'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
+import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
 
 export const Navbar: React.FC = () => {
   const { theme, lang, searchQuery, setTheme, setLang, setSearchQuery } = useStore()
   const [syncStatus, setSyncStatus] = React.useState<{ online: boolean; latencyMs: number }>({ online: true, latencyMs: 12 })
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
-  const [matchingMps, setMatchingMps] = React.useState<any[]>([])
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
@@ -47,34 +47,40 @@ export const Navbar: React.FC = () => {
   ]
 
   // Query matching MPs when searchQuery changes
-  React.useEffect(() => {
-    const q = searchQuery.trim().toLowerCase()
-    if (q.length < 2 || /^\d+$/.test(q)) {
-      setMatchingMps([])
-      return
+  const qClean = searchQuery.trim().toLowerCase()
+  const isDigits = /^\d+$/.test(qClean)
+
+  // Instant matching of Parliamentary Constituencies & MPs across all 774 seats
+  const { matchingConstituencies, matchingMps } = React.useMemo(() => {
+    if (qClean.length < 1 || isDigits) {
+      return { matchingConstituencies: [], matchingMps: [] }
     }
 
-    let active = true
-    const timer = setTimeout(async () => {
-      try {
-        const res = await fetch(`/api/mps?q=${encodeURIComponent(q)}&page=1&page_size=4`)
-        if (res.ok && active) {
-          const json = await res.json()
-          setMatchingMps(json.data || [])
-        }
-      } catch (err) {
-        // ignore
+    const constMatches: MPSeatItem[] = []
+    const mpMatches: MPSeatItem[] = []
+
+    for (const seat of ALL_MP_SEATS) {
+      const isConst = seat.constituency.toLowerCase().includes(qClean)
+      const isMp = seat.name.toLowerCase().includes(qClean)
+
+      if (isConst) {
+        constMatches.push(seat)
+      } else if (isMp) {
+        mpMatches.push(seat)
       }
-    }, 150)
 
-    return () => {
-      active = false
-      clearTimeout(timer)
+      if (constMatches.length >= 6 && mpMatches.length >= 4) {
+        break
+      }
     }
-  }, [searchQuery])
+
+    return {
+      matchingConstituencies: constMatches.slice(0, 5),
+      matchingMps: mpMatches.slice(0, 4),
+    }
+  }, [qClean, isDigits])
 
   // Filter matching states
-  const qClean = searchQuery.trim().toLowerCase()
   const matchingStates = qClean.length >= 1
     ? INDIAN_STATES.filter(s => s.toLowerCase().includes(qClean)).slice(0, 4)
     : []
@@ -93,9 +99,12 @@ export const Navbar: React.FC = () => {
     }
   }
 
-  const isDigits = /^\d+$/.test(qClean)
   const hasSuggestions = isDropdownOpen && qClean.length >= 1 && (
-    matchingStates.length > 0 || matchingDistricts.length > 0 || matchingMps.length > 0 || isDigits
+    matchingConstituencies.length > 0 ||
+    matchingMps.length > 0 ||
+    matchingStates.length > 0 ||
+    matchingDistricts.length > 0 ||
+    isDigits
   )
 
   const handleSelectState = (stateName: string) => {
@@ -130,19 +139,42 @@ export const Navbar: React.FC = () => {
       return
     }
 
-    // 2. State name match -> State Detail page
+    const qLower = q.toLowerCase()
+
+    // 2. Exact or partial Constituency match -> Direct to Constituency / MP page!
+    const matchedConst = ALL_MP_SEATS.find(
+      m => m.constituency.toLowerCase() === qLower ||
+           m.constituency.toLowerCase().startsWith(qLower) ||
+           m.constituency.toLowerCase().includes(qLower)
+    )
+    if (matchedConst && q.length >= 2) {
+      navigate(`/mps/${encodeURIComponent(matchedConst.id)}`)
+      return
+    }
+
+    // 3. Exact or partial MP Name match -> Direct to MP page!
+    const matchedMp = ALL_MP_SEATS.find(
+      m => m.name.toLowerCase() === qLower ||
+           m.name.toLowerCase().includes(qLower)
+    )
+    if (matchedMp && q.length >= 3) {
+      navigate(`/mps/${encodeURIComponent(matchedMp.id)}`)
+      return
+    }
+
+    // 4. State name match -> State Detail page
     const matchedState = INDIAN_STATES.find(
-      s => s.toLowerCase() === q.toLowerCase() || s.toLowerCase().startsWith(q.toLowerCase())
+      s => s.toLowerCase() === qLower || s.toLowerCase().startsWith(qLower)
     )
     if (matchedState && q.length >= 3) {
       navigate(`/states/${encodeURIComponent(matchedState)}`)
       return
     }
 
-    // 3. District name match -> District Dashboard page
+    // 5. District name match -> District Dashboard page
     for (const [st, dists] of Object.entries(STATE_DISTRICTS_MAP)) {
       const matchedDist = dists.find(
-        d => d.toLowerCase() === q.toLowerCase() || d.toLowerCase().startsWith(q.toLowerCase())
+        d => d.toLowerCase() === qLower || d.toLowerCase().startsWith(qLower)
       )
       if (matchedDist && q.length >= 3) {
         navigate(`/districts/${encodeURIComponent(matchedDist)}`)
@@ -150,7 +182,7 @@ export const Navbar: React.FC = () => {
       }
     }
 
-    // 4. Default -> MPs Performance search
+    // 6. Default fallback -> MPs Directory with query
     navigate(`/mps?q=${encodeURIComponent(q)}`)
   }
 
@@ -241,7 +273,68 @@ export const Navbar: React.FC = () => {
                   </div>
                 )}
 
-                {/* 2. State Matches */}
+                {/* 2. Parliamentary Constituencies (Instant 0ms match) */}
+                {matchingConstituencies.length > 0 && (
+                  <div>
+                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
+                      <span>Parliamentary Constituencies</span>
+                      <span className="text-[9px] text-[var(--brand-primary)] font-bold">Lok Sabha &bull; {matchingConstituencies.length} matches</span>
+                    </div>
+                    {matchingConstituencies.map((c) => (
+                      <button
+                        key={`const-${c.id}`}
+                        onClick={() => handleSelectMp(c.id)}
+                        className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="p-1.5 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] shrink-0">
+                            <Landmark size={14} />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="font-bold text-[var(--text-primary)] truncate">
+                              {c.constituency}
+                            </div>
+                            <div className="text-[10px] text-[var(--text-secondary)] truncate">
+                              MP: <strong className="text-[var(--text-primary)]">{c.name}</strong> &bull; {c.state} ({c.house})
+                            </div>
+                          </div>
+                        </div>
+                        <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition shrink-0 ml-2" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* 3. Members of Parliament */}
+                {matchingMps.length > 0 && (
+                  <div>
+                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
+                      Members of Parliament
+                    </div>
+                    {matchingMps.map((m) => (
+                      <button
+                        key={`mp-${m.id}`}
+                        onClick={() => handleSelectMp(m.id)}
+                        className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="p-1.5 rounded-lg bg-[var(--brand-accent)]/15 text-[var(--gold-text)] shrink-0">
+                            <Users size={14} />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="font-bold text-[var(--text-primary)] truncate">{m.name}</div>
+                            <div className="text-[10px] text-[var(--text-secondary)] truncate">
+                              {m.constituency} &bull; {m.state} ({m.house})
+                            </div>
+                          </div>
+                        </div>
+                        <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition shrink-0 ml-2" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* 4. State Matches */}
                 {matchingStates.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
@@ -268,7 +361,7 @@ export const Navbar: React.FC = () => {
                   </div>
                 )}
 
-                {/* 3. District Matches */}
+                {/* 5. District Matches */}
                 {matchingDistricts.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
@@ -287,35 +380,6 @@ export const Navbar: React.FC = () => {
                           <div>
                             <div className="font-bold text-[var(--text-primary)]">{d.district}</div>
                             <div className="text-[10px] text-[var(--text-secondary)]">{d.state} District Dashboard</div>
-                          </div>
-                        </div>
-                        <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-
-                {/* 4. MP Matches */}
-                {matchingMps.length > 0 && (
-                  <div>
-                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
-                      Members of Parliament
-                    </div>
-                    {matchingMps.map((m: any) => (
-                      <button
-                        key={m.mpId || m.id || m.mp_id}
-                        onClick={() => handleSelectMp(m.mpId || m.id || m.mp_id)}
-                        className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
-                      >
-                        <div className="flex items-center gap-2">
-                          <div className="p-1.5 rounded-lg bg-[var(--brand-accent)]/15 text-[var(--gold-text)]">
-                            <Users size={14} />
-                          </div>
-                          <div>
-                            <div className="font-bold text-[var(--text-primary)]">{m.name || m.mpName}</div>
-                            <div className="text-[10px] text-[var(--text-secondary)]">
-                              {m.constituency || 'Const.'} &bull; {m.state}
-                            </div>
                           </div>
                         </div>
                         <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition" />

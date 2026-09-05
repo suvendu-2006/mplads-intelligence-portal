@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { EmptyState } from '../components/shared'
 import {
@@ -15,12 +15,23 @@ import {
 import { t } from '../lib/i18n'
 
 export const BrowseMPs: React.FC = () => {
+  const [searchParams] = useSearchParams()
+  const qParam = searchParams.get('q') || ''
+
   // Filters & State
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(qParam)
   const [house, setHouse] = useState('all')
   const [sort, setSort] = useState('allocated')
   const [order, setOrder] = useState('desc')
   const [page, setPage] = useState(1)
+
+  useEffect(() => {
+    const qFromUrl = searchParams.get('q') || ''
+    if (qFromUrl !== search) {
+      setSearch(qFromUrl)
+      setPage(1)
+    }
+  }, [searchParams])
 
   const [mps, setMps] = useState<any[]>(() => {
     try {
