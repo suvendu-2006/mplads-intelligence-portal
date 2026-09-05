@@ -427,16 +427,16 @@ export const Navbar: React.FC = () => {
               <Moon size={14} />
             </button>
             <button
-              onClick={() => setTheme('auto')}
-              aria-label="Switch theme to Auto mode"
+              onClick={() => setTheme('device')}
+              aria-label="Switch theme to Device mode"
               className={`px-2 py-1 rounded-lg font-bold text-[10px] tracking-wider transition ${
-                theme === 'auto'
+                theme === 'device' || theme === 'auto'
                   ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm'
                   : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
               }`}
-              title="Auto: Light for Public, Dark for Command"
+              title="Device Mode: Automatically shifts according to your device theme"
             >
-              AUTO
+              DEVICE
             </button>
           </div>
 

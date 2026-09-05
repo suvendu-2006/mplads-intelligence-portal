@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { ErrorBoundary } from './ErrorBoundary'
@@ -14,22 +14,43 @@ import {
 } from 'lucide-react'
 import { t } from '../lib/i18n'
 
-function resolveTheme(theme: ThemeMode, pathname: string): 'light' | 'dark' {
-  if (theme === 'light' || theme === 'dark') {
-    return theme
+function getDeviceTheme(): 'light' | 'dark' {
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
-  const rolePaths = ['/my-state', '/audit']
-  return rolePaths.includes(pathname) ? 'dark' : 'light'
+  return 'light'
 }
 
 export const Layout: React.FC = () => {
   const { theme, user } = useStore()
   const location = useLocation()
+  const [deviceTheme, setDeviceTheme] = useState<'light' | 'dark'>(getDeviceTheme)
 
   useEffect(() => {
-    const resolved = resolveTheme(theme, location.pathname)
+    if (typeof window === 'undefined' || !window.matchMedia) return
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e: MediaQueryListEvent) => {
+      setDeviceTheme(e.matches ? 'dark' : 'light')
+    }
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
+  useEffect(() => {
+    let resolved: 'light' | 'dark' = 'light'
+    if (theme === 'light' || theme === 'dark') {
+      resolved = theme
+    } else {
+      // 'device' (or legacy 'auto') automatically matches device theme
+      resolved = deviceTheme
+    }
     document.documentElement.setAttribute('data-theme', resolved)
-  }, [theme, location.pathname])
+    if (resolved === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme, deviceTheme])
 
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true

@@ -323,13 +323,13 @@ export const AuditDesk: React.FC = () => {
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  <th className="p-3 font-bold">Work ID</th>
-                  <th className="p-3 font-bold">Description</th>
-                  <th className="p-3 font-bold">Location</th>
-                  <th className="p-3 font-bold">Cost (₹)</th>
-                  <th className="p-3 font-bold">Audit Finding</th>
-                  <th className="p-3 font-bold text-center">Risk Level</th>
-                  <th className="p-3 font-bold text-right">Action</th>
+                  <th className="p-3 font-bold w-20 whitespace-nowrap">Work ID</th>
+                  <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                  <th className="p-3 font-bold whitespace-nowrap">Location</th>
+                  <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
+                  <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Audit Finding</th>
+                  <th className="p-3 font-bold text-center whitespace-nowrap">Risk Level</th>
+                  <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border-primary)]">
@@ -339,25 +339,25 @@ export const AuditDesk: React.FC = () => {
                     className="hover:bg-[var(--surface-alt)]/50 transition cursor-pointer"
                     onClick={() => setSelectedFlag(flag)}
                   >
-                    <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                    <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                       #{flag.workId || flag.work_id}
                     </td>
-                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
+                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                       {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                     </td>
-                    <td className="p-3 font-medium text-[var(--text-primary)]">
+                    <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                       {flag.district ? `${flag.district}, ` : ''}
                       <span className="text-[var(--text-tertiary)]">{flag.state}</span>
                     </td>
-                    <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)]">
+                    <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                       ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
                     </td>
-                    <td className="p-3">
-                      <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)]">
+                    <td className="p-3 whitespace-nowrap min-w-[180px]">
+                      <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                         {flag.detector_name || flag.detectorName || flag.detector || 'Forensic Flag'}
                       </span>
                     </td>
-                    <td className="p-3 text-center">
+                    <td className="p-3 text-center whitespace-nowrap">
                       <TierBadge
                         tier={flag.severity >= 0.7 ? 'critical' : flag.severity >= 0.4 ? 'high' : 'medium'}
                         count={Number(flag.severity?.toFixed(2) || 0)}
@@ -365,13 +365,13 @@ export const AuditDesk: React.FC = () => {
                         size="sm"
                       />
                     </td>
-                    <td className="p-3 text-right">
+                    <td className="p-3 text-right whitespace-nowrap">
                       <button
                         onClick={(e) => {
                           e.stopPropagation()
                           setSelectedFlag(flag)
                         }}
-                        className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition shadow-sm"
+                        className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition shadow-sm whitespace-nowrap"
                       >
                         Inspect Report
                       </button>

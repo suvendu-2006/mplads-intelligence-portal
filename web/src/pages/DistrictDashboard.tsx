@@ -281,51 +281,51 @@ export const DistrictDashboard: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Project Description</th>
-                      <th className="p-3 font-bold">Sanction Cost</th>
-                      <th className="p-3 font-bold">Recommending MP</th>
-                      <th className="p-3 font-bold">Category</th>
-                      <th className="p-3 font-bold">Status</th>
-                      {isAuthorized && <th className="p-3 font-bold text-right">Action</th>}
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Project Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Recommending MP</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Category</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-center">Status</th>
+                      {isAuthorized && <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
                     {works.map((w: any) => (
                       <tr key={w.workId} className="hover:bg-[var(--surface-alt)]/50 transition">
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                           #{w.workId}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={w.work_description || w.workDescription || w.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
                           {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums numeral-gold">
+                        <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
                           ₹{(w.cost / 100000).toFixed(2)} L
                         </td>
-                        <td className="p-3 font-medium text-[var(--text-primary)]">
+                        <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                           {w.mpName}
                         </td>
-                        <td className="p-3">
-                          <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-medium text-[11px] border border-[var(--border-primary)]">
+                        <td className="p-3 whitespace-nowrap">
+                          <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-medium text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                             {w.category}
                           </span>
                         </td>
-                        <td className="p-3">
-                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400">
+                        <td className="p-3 text-center whitespace-nowrap">
+                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 inline-block whitespace-nowrap">
                             {w.status}
                           </span>
                         </td>
                         {isAuthorized && (
-                          <td className="p-3 text-right">
+                          <td className="p-3 text-right whitespace-nowrap">
                             {verifiedMBWorks.includes(w.workId) ? (
-                              <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1">
+                              <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1 whitespace-nowrap">
                                 <CheckCircle2 size={13} />
                                 <span>MB Certified</span>
                               </span>
                             ) : (
                               <button
                                 onClick={() => setSelectedMBWork(w)}
-                                className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm"
+                                className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm whitespace-nowrap"
                               >
                                 Verify MB
                               </button>
@@ -499,38 +499,38 @@ export const DistrictDashboard: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Description</th>
-                      <th className="p-3 font-bold">Cost</th>
-                      <th className="p-3 font-bold">Triggered Model</th>
-                      <th className="p-3 font-bold text-center">Severity</th>
-                      <th className="p-3 font-bold text-right">Collectorate Action</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
+                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Triggered Model</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">Collectorate Action</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
                     {anomalies.map((a: any) => (
                       <tr key={a.workId} className="hover:bg-[var(--surface-alt)]/50 transition">
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                           #{a.workId}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={a.work_description || a.workDescription || a.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={a.work_description || a.workDescription || a.description}>
                           {a.work_description || a.workDescription || a.description || 'Civil Works Project'}
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums">
+                        <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right">
                           ₹{((a.cost || a.sanctionedCost || 0) / 100000).toFixed(2)} L
                         </td>
-                        <td className="p-3">
-                          <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)]">
+                        <td className="p-3 whitespace-nowrap min-w-[180px]">
+                          <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                             {a.detector_name || a.detectorName || a.detector || 'Forensic Flag'}
                           </span>
                         </td>
-                        <td className="p-3 text-center">
+                        <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge tier={a.tier} count={Number(a.severity.toFixed(2))} size="sm" />
                         </td>
-                        <td className="p-3 text-right">
+                        <td className="p-3 text-right whitespace-nowrap">
                           <button
                             onClick={() => setSelectedFlag(a)}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold text-xs hover:opacity-90 transition"
+                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold text-xs hover:opacity-90 transition whitespace-nowrap"
                           >
                             Investigate
                           </button>

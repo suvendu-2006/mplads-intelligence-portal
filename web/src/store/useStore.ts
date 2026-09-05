@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeMode = 'auto' | 'light' | 'dark'
+export type ThemeMode = 'device' | 'light' | 'dark' | 'auto'
 export type LangMode = 'en' | 'hi'
 
 export interface UserState {
@@ -42,7 +42,7 @@ export const useStore = create<AppStore>()(
         permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
         sessionToken: 'default_viewer'
       },
-      theme: 'auto',
+      theme: 'device',
       lang: 'en',
       searchQuery: '',
       bannerDismissed: false,

@@ -657,15 +657,15 @@ export const StateDetail: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Work Description</th>
-                      <th className="p-3 font-bold">Sponsoring MP</th>
-                      <th className="p-3 font-bold">District</th>
-                      <th className="p-3 font-bold">Category</th>
-                      <th className="p-3 font-bold text-right">Sanctioned Cost</th>
-                      <th className="p-3 font-bold text-center">Status</th>
-                      <th className="p-3 font-bold text-center">Progress</th>
-                      <th className="p-3 font-bold">Timeline / Delay</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Work Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Sponsoring MP</th>
+                      <th className="p-3 font-bold whitespace-nowrap">District</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Category</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">Sanctioned Cost</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Timeline / Delay</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -676,10 +676,10 @@ export const StateDetail: React.FC = () => {
 
                       return (
                         <tr key={w.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                          <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                          <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                             #{w.work_id}
                           </td>
-                          <td className="p-3 min-w-[280px] whitespace-normal break-words">
+                          <td className="p-3 min-w-[260px] max-w-sm whitespace-normal break-words">
                             <span className="text-[var(--text-primary)] font-medium leading-relaxed block break-words" title={w.work_description}>
                               {w.work_description}
                             </span>
@@ -691,7 +691,7 @@ export const StateDetail: React.FC = () => {
                             {w.district}
                           </td>
                           <td className="p-3 whitespace-nowrap">
-                            <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] text-[11px] font-semibold text-[var(--text-secondary)] border border-[var(--border-primary)]">
+                            <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] text-[11px] font-semibold text-[var(--text-secondary)] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                               {w.category}
                             </span>
                           </td>
@@ -827,13 +827,13 @@ export const StateDetail: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Description</th>
-                      <th className="p-3 font-bold">District</th>
-                      <th className="p-3 font-bold">Cost (₹)</th>
-                      <th className="p-3 font-bold">Primary Detector</th>
-                      <th className="p-3 font-bold text-center">Severity</th>
-                      <th className="p-3 font-bold text-right">Action</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap">District</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
+                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Primary Detector</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -843,31 +843,31 @@ export const StateDetail: React.FC = () => {
                         className="hover:bg-[var(--surface-alt)]/50 transition cursor-pointer"
                         onClick={() => setSelectedFlag(flag)}
                       >
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                           #{flag.work_id || flag.workId}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                           {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                         </td>
-                        <td className="p-3 font-medium text-[var(--text-primary)]">
+                        <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                           {flag.district || 'Statewide'}
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)]">
+                        <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                           ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
                         </td>
-                        <td className="p-3">
+                        <td className="p-3 whitespace-nowrap min-w-[180px]">
                           <div className="flex items-center gap-1.5 flex-wrap">
-                            <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)]">
+                            <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                               {flag.detector_name || flag.detectorName || flag.detector || 'Benchmark Cost Overrun'}
                             </span>
                             {flag.evidence?.duplicate_cluster_id && (
-                              <span className="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20">
+                              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 inline-block whitespace-nowrap">
                                 {flag.evidence.cluster_size}x cluster
                               </span>
                             )}
                           </div>
                         </td>
-                        <td className="p-3 text-center">
+                        <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge
                             tier={flag.tier || (flag.severity >= 0.7 ? 'critical' : 'high')}
                             count={Number(flag.severity?.toFixed(2) || 0)}
@@ -875,13 +875,13 @@ export const StateDetail: React.FC = () => {
                             size="sm"
                           />
                         </td>
-                        <td className="p-3 text-right">
+                        <td className="p-3 text-right whitespace-nowrap">
                           <button
                             onClick={(e) => {
                               e.stopPropagation()
                               setSelectedFlag(flag)
                             }}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition"
+                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition whitespace-nowrap"
                           >
                             Report
                           </button>

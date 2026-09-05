@@ -282,12 +282,12 @@ export const MPDashboard: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Description</th>
-                      <th className="p-3 font-bold">Sanction Cost</th>
-                      <th className="p-3 font-bold">Executing District</th>
-                      <th className="p-3 font-bold">Status</th>
-                      <th className="p-3 font-bold text-right">Audit</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Executing District</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">Audit</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -295,21 +295,21 @@ export const MPDashboard: React.FC = () => {
                       const isDone = (w.status || '').toLowerCase().includes('completed')
                       return (
                         <tr key={w.workId || w.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                          <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                          <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                             #{w.workId || w.work_id}
                           </td>
-                          <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={w.work_description || w.workDescription || w.description}>
+                          <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
                             {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                           </td>
-                          <td className="p-3 font-extrabold tabular-nums numeral-gold">
+                          <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
                             ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
                           </td>
-                          <td className="p-3 font-medium text-[var(--text-primary)]">
+                          <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                             {w.district || summary.constituency}
                           </td>
-                          <td className="p-3">
+                          <td className="p-3 text-center whitespace-nowrap">
                             <span
-                              className={`px-2 py-0.5 rounded text-[11px] font-bold ${
+                              className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
                                 isDone
                                   ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
                                   : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
@@ -318,7 +318,7 @@ export const MPDashboard: React.FC = () => {
                               {w.status || 'In Progress'}
                             </span>
                           </td>
-                          <td className="p-3 text-right">
+                          <td className="p-3 text-right whitespace-nowrap">
                             {flags.some((f: any) => f.workId === (w.workId || w.work_id)) ? (
                               <button
                                 onClick={() => {
@@ -403,38 +403,38 @@ export const MPDashboard: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold">Work ID</th>
-                      <th className="p-3 font-bold">Description</th>
-                      <th className="p-3 font-bold">Cost</th>
-                      <th className="p-3 font-bold">Triggered Detector</th>
-                      <th className="p-3 font-bold text-center">Severity</th>
-                      <th className="p-3 font-bold text-right">Action</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
+                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Triggered Detector</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
                     {flags.map((f: any) => (
                       <tr key={f.workId || f.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                           #{f.workId || f.work_id}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={f.work_description || f.workDescription || f.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={f.work_description || f.workDescription || f.description}>
                           {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums">
+                        <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right">
                           ₹{((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2)} L
                         </td>
-                        <td className="p-3">
-                          <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)]">
+                        <td className="p-3 whitespace-nowrap min-w-[180px]">
+                          <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                             {f.detector_name || f.detectorName || f.detector || 'Forensic Flag'}
                           </span>
                         </td>
-                        <td className="p-3 text-center">
+                        <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge tier={f.severity >= 0.7 ? 'critical' : 'high'} count={Number(f.severity?.toFixed(2) || 0)} size="sm" />
                         </td>
-                        <td className="p-3 text-right">
+                        <td className="p-3 text-right whitespace-nowrap">
                           <button
                             onClick={() => setSelectedFlag(f)}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition"
+                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap"
                           >
                             Inspect Report
                           </button>
