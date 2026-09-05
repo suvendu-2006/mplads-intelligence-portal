@@ -149,7 +149,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   {severity >= 0.70 ? 'Immediate Action Required' : severity >= 0.40 ? 'Priority Review' : 'Standard Check'}
                 </span>
               </div>
-              <h2 className="text-lg font-extrabold text-[var(--text-primary)] tracking-tight line-clamp-1 mt-0.5">
+              <h2 className="text-lg font-extrabold text-[var(--text-primary)] tracking-tight leading-snug whitespace-normal mt-0.5">
                 {description}
               </h2>
             </div>
@@ -189,13 +189,13 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
             </div>
             <div>
               <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold block">Recommending MP</span>
-              <span className="font-bold text-[var(--text-primary)] truncate block">
+              <span className="font-bold text-[var(--text-primary)] block break-words">
                 {mpName}
               </span>
             </div>
             <div>
               <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold block">Constituency</span>
-              <span className="font-bold text-[var(--text-primary)] truncate block">
+              <span className="font-bold text-[var(--text-primary)] block break-words">
                 {constituency}
               </span>
             </div>

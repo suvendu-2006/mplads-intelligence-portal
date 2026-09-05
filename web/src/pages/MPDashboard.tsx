@@ -298,7 +298,7 @@ export const MPDashboard: React.FC = () => {
                           <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                             #{w.workId || w.work_id}
                           </td>
-                          <td className="p-3 max-w-sm truncate text-[var(--text-secondary)]" title={w.work_description || w.workDescription || w.description}>
+                          <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={w.work_description || w.workDescription || w.description}>
                             {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                           </td>
                           <td className="p-3 font-extrabold tabular-nums numeral-gold">
@@ -417,7 +417,7 @@ export const MPDashboard: React.FC = () => {
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                           #{f.workId || f.work_id}
                         </td>
-                        <td className="p-3 max-w-xs truncate text-[var(--text-secondary)]" title={f.work_description || f.workDescription || f.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={f.work_description || f.workDescription || f.description}>
                           {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
                         </td>
                         <td className="p-3 font-extrabold tabular-nums">

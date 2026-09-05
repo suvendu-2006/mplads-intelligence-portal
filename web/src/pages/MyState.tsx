@@ -377,7 +377,7 @@ export const MyState: React.FC = () => {
                     <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                       #{f.workId || f.work_id}
                     </td>
-                    <td className="p-3 max-w-xs truncate text-[var(--text-secondary)]" title={f.work_description || f.workDescription || f.description}>
+                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={f.work_description || f.workDescription || f.description}>
                       {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
                     </td>
                     <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)]">

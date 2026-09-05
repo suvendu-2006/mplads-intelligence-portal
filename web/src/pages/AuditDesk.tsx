@@ -342,7 +342,7 @@ export const AuditDesk: React.FC = () => {
                     <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                       #{flag.workId || flag.work_id}
                     </td>
-                    <td className="p-3 max-w-xs truncate text-[var(--text-secondary)]" title={flag.work_description || flag.workDescription || flag.description}>
+                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                       {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                     </td>
                     <td className="p-3 font-medium text-[var(--text-primary)]">

@@ -293,7 +293,7 @@ export const DistrictDashboard: React.FC = () => {
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                           #{w.workId}
                         </td>
-                        <td className="p-3 max-w-sm truncate text-[var(--text-secondary)]" title={w.work_description || w.workDescription || w.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[280px] whitespace-normal" title={w.work_description || w.workDescription || w.description}>
                           {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                         </td>
                         <td className="p-3 font-extrabold tabular-nums numeral-gold">
@@ -465,7 +465,7 @@ export const DistrictDashboard: React.FC = () => {
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                           #{a.workId}
                         </td>
-                        <td className="p-3 max-w-xs truncate text-[var(--text-secondary)]" title={a.work_description || a.workDescription || a.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={a.work_description || a.workDescription || a.description}>
                           {a.work_description || a.workDescription || a.description || 'Civil Works Project'}
                         </td>
                         <td className="p-3 font-extrabold tabular-nums">

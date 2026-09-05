@@ -679,8 +679,8 @@ export const StateDetail: React.FC = () => {
                           <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                             #{w.work_id}
                           </td>
-                          <td className="p-3 max-w-sm">
-                            <span className="line-clamp-2 text-[var(--text-primary)] font-medium" title={w.work_description}>
+                          <td className="p-3 min-w-[280px] whitespace-normal">
+                            <span className="text-[var(--text-primary)] font-medium leading-relaxed block" title={w.work_description}>
                               {w.work_description}
                             </span>
                           </td>
@@ -846,7 +846,7 @@ export const StateDetail: React.FC = () => {
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                           #{flag.work_id || flag.workId}
                         </td>
-                        <td className="p-3 max-w-xs truncate text-[var(--text-secondary)]" title={flag.work_description || flag.workDescription || flag.description}>
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                           {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                         </td>
                         <td className="p-3 font-medium text-[var(--text-primary)]">
