@@ -240,7 +240,7 @@ export const BrowseMPs: React.FC = () => {
                   </div>
 
                   {/* Dual Financial Outlay: Fund Allocated vs Utilization */}
-                  <div className="grid grid-cols-2 gap-2.5 my-2.5 p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                  <div className="grid grid-cols-2 gap-2.5 my-2.5 p-3 rounded-xl bg-[var(--surface-alt)]">
                     <div>
                       <span className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] block tracking-wider">
                         Fund Allocated

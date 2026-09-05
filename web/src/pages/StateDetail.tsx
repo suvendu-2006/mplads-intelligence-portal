@@ -509,7 +509,7 @@ export const StateDetail: React.FC = () => {
                       </div>
 
                       {/* Dual Financial Outlay: Amount Allocated vs Amount Spent */}
-                      <div className="grid grid-cols-2 gap-2.5 my-3 p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                      <div className="grid grid-cols-2 gap-2.5 my-3 p-3 rounded-xl bg-[var(--surface-alt)]">
                         <div>
                           <span className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] block tracking-wider">
                             Amount Allocated
@@ -526,7 +526,7 @@ export const StateDetail: React.FC = () => {
                             )}
                           </div>
                         </div>
-                        <div className="border-l border-[var(--border-primary)] pl-2.5">
+                        <div className="pl-2.5">
                           <span className="text-[10px] uppercase font-extrabold text-[var(--gold-text)] block tracking-wider">
                             Amount Spent
                           </span>

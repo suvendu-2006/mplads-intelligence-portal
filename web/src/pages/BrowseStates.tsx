@@ -246,7 +246,7 @@ export const BrowseStates: React.FC = () => {
                   </div>
 
                   {/* Allocated Fund in Authoritative Navy & Spent in Gold */}
-                  <div className="my-3 p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-baseline justify-between">
+                  <div className="my-3 p-3 rounded-xl bg-[var(--surface-alt)] flex items-baseline justify-between">
                     <div>
                       <div className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] tracking-wider">
                         Fund Allocated
@@ -255,7 +255,7 @@ export const BrowseStates: React.FC = () => {
                         {formatCrores(st.totalAllocated || 0)}
                       </div>
                     </div>
-                    <div className="text-right border-l border-[var(--border-primary)] pl-3">
+                    <div className="text-right pl-3">
                       <div className="text-[10px] uppercase font-extrabold text-[var(--gold-text)] tracking-wider">
                         Disbursed Outlay
                       </div>

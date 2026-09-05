@@ -394,7 +394,7 @@ export const GISMap: React.FC = () => {
 
                       {/* Financial Outlay & Spend */}
                       {(allocated || utilRate) && (
-                        <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] space-y-2 text-xs">
+                        <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] space-y-2 text-xs">
                           <div className="font-bold text-[var(--text-secondary)] text-[11px] uppercase tracking-wider">
                             Financial Outlay & Spend
                           </div>
