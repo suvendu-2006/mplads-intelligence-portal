@@ -24,9 +24,9 @@ if [ -f .venv/bin/alembic ]; then
     ALEMBIC=".venv/bin/alembic"
 fi
 
-# Check if docker is available and running
+# Check if docker is available and running (skip container spawn in CI / virtualized pipelines)
 DOCKER_ACTIVE=false
-if command -v docker > /dev/null 2>&1; then
+if [ "$CI" != "true" ] && [ "$SKIP_DOCKER_SMOKE_TEST" != "true" ] && command -v docker > /dev/null 2>&1; then
     if docker info > /dev/null 2>&1; then
         DOCKER_ACTIVE=true
     fi
