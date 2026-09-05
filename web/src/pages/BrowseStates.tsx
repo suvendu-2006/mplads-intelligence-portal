@@ -245,13 +245,13 @@ export const BrowseStates: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Allocated Fund in Authoritative Navy & Spent in Gold */}
-                  <div className="my-3 p-3 rounded-xl bg-[var(--surface-alt)] flex items-baseline justify-between">
+                  {/* Allocated Fund in Authoritative Espresso & Spent in Gold */}
+                  <div className="my-3 flex items-baseline justify-between">
                     <div>
-                      <div className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] tracking-wider">
+                      <div className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] tracking-wider">
                         Fund Allocated
                       </div>
-                      <div className="text-xl sm:text-2xl font-black tabular-nums text-[var(--brand-primary)] dark:text-blue-400 mt-0.5">
+                      <div className="text-xl sm:text-2xl font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400 mt-0.5">
                         {formatCrores(st.totalAllocated || 0)}
                       </div>
                     </div>

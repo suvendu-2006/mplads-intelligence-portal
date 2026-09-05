@@ -240,12 +240,12 @@ export const BrowseMPs: React.FC = () => {
                   </div>
 
                   {/* Dual Financial Outlay: Fund Allocated vs Utilization */}
-                  <div className="grid grid-cols-2 gap-2.5 my-2.5 p-3 rounded-xl bg-[var(--surface-alt)]">
+                  <div className="grid grid-cols-2 gap-2.5 my-2.5">
                     <div>
-                      <span className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] block tracking-wider">
+                      <span className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] block tracking-wider">
                         Fund Allocated
                       </span>
-                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--brand-primary)] dark:text-blue-400 mt-0.5">
+                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400 mt-0.5">
                         {formatCrores(mp.allocatedAmount ?? mp.totalAllocated ?? 0)}
                       </div>
                       <span className="text-[11px] font-bold text-[var(--text-secondary)] block mt-0.5">

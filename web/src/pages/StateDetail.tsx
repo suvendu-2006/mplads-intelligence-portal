@@ -509,16 +509,16 @@ export const StateDetail: React.FC = () => {
                       </div>
 
                       {/* Dual Financial Outlay: Amount Allocated vs Amount Spent */}
-                      <div className="grid grid-cols-2 gap-2.5 my-3 p-3 rounded-xl bg-[var(--surface-alt)]">
+                      <div className="grid grid-cols-2 gap-2.5 my-3">
                         <div>
-                          <span className="text-[10px] uppercase font-extrabold text-[var(--brand-primary)] block tracking-wider">
+                          <span className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] block tracking-wider">
                             Amount Allocated
                           </span>
                           <div className="flex items-baseline gap-1 mt-0.5">
-                            <span className="text-base sm:text-lg font-black tabular-nums text-[var(--brand-primary)] dark:text-blue-400">
+                            <span className="text-base sm:text-lg font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400">
                               ₹{allocatedCr}
                             </span>
-                            <span className="text-xs font-extrabold text-[var(--brand-primary)] dark:text-blue-400">Cr</span>
+                            <span className="text-xs font-extrabold text-[var(--color-espresso)] dark:text-blue-400">Cr</span>
                             {(d.is_estimated || d.isEstimated) && (
                               <span className="text-[9px] font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 px-1 py-0.2 rounded">
                                 Est.
