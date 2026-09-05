@@ -433,64 +433,63 @@ export function simplifyAuditFinding(flag: FlagDossierData): SimplifiedAuditFind
     summary = `Multiple works were sanctioned in the same area just below the mandatory ₹5.00 Lakh e-tendering limit. In public civil procurement, splitting large works into sub-packages to avoid open competitive bidding violates GFR Rule 157.`
   }
 
-  // Construct structured Key Evidence Items (clean, formatted, no raw booleans)
+  // Construct structured Key Evidence Items (clean, balanced 4-card layout)
   const keyEvidence: KeyEvidenceItem[] = []
 
-  // 1. Completion / Sanction Date
-  const completionDate = evidence.completion_date || (flag as any).completionDate || (flag as any).sanctionDate
-  if (completionDate) {
-    keyEvidence.push({
-      label: 'Completion Date',
-      value: `${formatAdminDate(completionDate)} (FY ${evidence.fiscal_year || '2024–25'})`,
-      hint: evidence.is_march ? 'Billed during March year-end closing' : undefined,
-      alert: Boolean(evidence.is_march)
-    })
-  }
-
-  // 2. Billed Amount
   const cost = flag.cost || flag.sanctionedCost || 0
-  keyEvidence.push({
-    label: 'Billed Amount',
-    value: formatIndianCurrency(cost),
-    hint: 'Total claim submitted by contractor'
-  })
-
-  // 3. Government Benchmark Cost (CPWD)
   const cpwd = flag.cpwd_comparison
   const fairCost = cpwd?.fair_cost_estimate_inr || Math.max(50000, cost * 0.72)
   const ceilingCost = cpwd?.tolerance_ceiling_inr || fairCost * 1.25
   const excess = cpwd?.excess_billed_inr || Math.max(0, cost - ceilingCost)
+  const excessPct = ceilingCost > 0 ? ((cost - ceilingCost) / ceilingCost) * 100 : 0
 
+  // Card 1: Billed Claim
   keyEvidence.push({
-    label: 'Govt Ceiling (CPWD)',
-    value: formatIndianCurrency(ceilingCost),
-    hint: 'Max permissible cost including +25% tolerance'
+    label: 'Billed Claim',
+    value: formatIndianCurrency(cost),
+    hint: 'Contractor Invoice Amount'
   })
 
-  // 4. Excess Amount
+  // Card 2: Government Benchmark Ceiling
+  keyEvidence.push({
+    label: 'Govt Ceiling',
+    value: formatIndianCurrency(ceilingCost),
+    hint: 'CPWD Schedule + 25% Buffer'
+  })
+
+  // Card 3: Audit Discrepancy / Overrun
   if (excess > 0) {
-    const excessPct = ceilingCost > 0 ? ((cost - ceilingCost) / ceilingCost) * 100 : 0
     keyEvidence.push({
-      label: 'Flagged Excess',
+      label: 'Audit Discrepancy',
       value: `+${formatIndianCurrency(excess)} (+${excessPct.toFixed(1)}%)`,
-      hint: 'Exceeds statutory ceiling threshold',
+      hint: 'Exceeds Statutory Ceiling',
       alert: true
     })
   } else {
     keyEvidence.push({
-      label: 'Statutory Rate Check',
-      value: 'Within Permissible Tolerance',
-      hint: 'Under +25% variation threshold'
+      label: 'Statutory Tolerance',
+      value: 'Within Benchmark',
+      hint: 'Compliant with CPWD Limit'
     })
   }
 
-  // 5. Agency Verification Status
-  const contractor = evidence.contractor || evidence.executing_agency || 'District Implementing Agency'
-  keyEvidence.push({
-    label: 'Executing Agency',
-    value: String(contractor),
-    hint: 'Verify registration & physical measurement log'
-  })
+  // Card 4: Date or Implementing Agency
+  const completionDate = evidence.completion_date || (flag as any).completionDate || (flag as any).sanctionDate
+  if (detectorType === 'timing_anomaly' && completionDate) {
+    keyEvidence.push({
+      label: 'Sanction Period',
+      value: `${formatAdminDate(completionDate)}`,
+      hint: evidence.is_march ? 'March Year-End Surge' : `FY ${evidence.fiscal_year || '2024–25'}`,
+      alert: Boolean(evidence.is_march)
+    })
+  } else {
+    const contractor = evidence.contractor || evidence.executing_agency || 'District Implementing Agency'
+    keyEvidence.push({
+      label: 'Implementing Agency',
+      value: String(contractor),
+      hint: 'Assigned Executing Authority'
+    })
+  }
 
   return {
     plainTitle: meta.title,

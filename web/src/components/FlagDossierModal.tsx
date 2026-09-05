@@ -128,15 +128,15 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
         {/* Header with Gold accent line */}
         <div className="flex items-start justify-between border-b border-[var(--border-primary)] pb-4 mb-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-500 border border-rose-500/30 flex items-center justify-center font-bold shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/30 flex items-center justify-center font-bold shrink-0">
               <ShieldAlert size={22} />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--brand-primary)]">
-                  District Vigilance &bull; Audit Verification Report
+                  Official Audit Dossier
                 </span>
-                <span className="text-xs font-mono font-bold text-[var(--brand-primary)]">
+                <span className="text-xs font-mono font-bold text-[var(--text-secondary)]">
                   WORK #{workId}
                 </span>
                 <span className={`px-2 py-0.5 rounded-full text-[10px] font-extrabold border ${
@@ -149,7 +149,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   {severity >= 0.70 ? 'Immediate Action Required' : severity >= 0.40 ? 'Priority Review' : 'Standard Check'}
                 </span>
               </div>
-              <h2 className="text-lg font-extrabold text-[var(--text-primary)] tracking-tight leading-snug whitespace-normal mt-0.5">
+              <h2 className="text-base sm:text-lg font-bold text-[var(--text-primary)] tracking-tight leading-snug whitespace-normal mt-1">
                 {description}
               </h2>
             </div>
@@ -158,7 +158,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="p-1.5 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] transition"
+            className="p-1.5 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] transition shrink-0"
           >
             <X size={18} />
           </button>
@@ -177,7 +177,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs">
             <div>
               <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold block">Sanctioned Outlay</span>
-              <span className="text-base font-extrabold tabular-nums numeral-gold">
+              <span className="text-sm sm:text-base font-extrabold tabular-nums numeral-gold">
                 ₹{(cost / 100000).toFixed(2)} Lakhs
               </span>
             </div>
@@ -202,7 +202,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           </div>
 
           {/* Plain Administrative Finding & Summary */}
-          <div className="rounded-xl border border-rose-500/25 p-4 bg-gradient-to-br from-rose-500/5 via-[var(--surface-primary)] to-[var(--surface-primary)] space-y-3 shadow-sm">
+          <div className="rounded-xl border border-[var(--border-primary)] p-4 bg-[var(--surface-primary)] space-y-3 shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--border-primary)] pb-3">
               <div>
                 <div className="text-[10px] font-bold text-rose-500 uppercase tracking-wider flex items-center gap-1.5">
@@ -214,41 +214,43 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                 </h3>
               </div>
               <div className="flex items-center gap-2 shrink-0">
-                <span className="px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-bold border border-amber-500/25">
+                <span className="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-700 dark:text-amber-400 text-[10px] font-bold border border-amber-500/25">
                   {finding.ruleCitation}
                 </span>
               </div>
             </div>
 
             {/* Plain Executive Summary Memo */}
-            <div className="p-3 rounded-lg bg-[var(--surface-alt)] border-l-4 border-rose-500 text-xs text-[var(--text-secondary)] leading-relaxed">
+            <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border-l-4 border-rose-500 text-xs text-[var(--text-secondary)] leading-relaxed">
               <span className="font-bold text-[var(--text-primary)] block mb-1 text-[11px] uppercase tracking-wider">
-                Executive Briefing for District Collector / Admin:
+                Audit Finding & Administrative Summary:
               </span>
               {finding.executiveSummary}
             </div>
 
-            {/* Structured Key Audit Facts */}
+            {/* Structured Key Audit Facts (Balanced 4-column layout) */}
             <div>
               <span className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider block mb-2">
-                Key Audit Evidence:
+                Key Verification Evidence:
               </span>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                 {finding.keyEvidence.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`p-2.5 rounded-lg border text-xs ${
+                    className={`p-3 rounded-xl border text-xs flex flex-col justify-between ${
                       item.alert
-                        ? 'bg-rose-500/10 border-rose-500/30 text-rose-700 dark:text-rose-300'
+                        ? 'bg-rose-500/10 border-rose-500/30 text-rose-700 dark:text-rose-400'
                         : 'bg-[var(--surface-alt)] border-[var(--border-primary)] text-[var(--text-primary)]'
                     }`}
                   >
-                    <span className="text-[10px] block opacity-75 font-semibold">{item.label}</span>
-                    <span className="font-extrabold text-sm block mt-0.5 tabular-nums">
-                      {item.value}
-                    </span>
+                    <div>
+                      <span className="text-[10px] block opacity-75 font-semibold">{item.label}</span>
+                      <span className="font-extrabold text-sm block mt-0.5 tabular-nums">
+                        {item.value}
+                      </span>
+                    </div>
                     {item.hint && (
-                      <span className="text-[9px] block opacity-70 mt-0.5 leading-tight">
+                      <span className="text-[9px] block opacity-75 mt-1.5 leading-tight">
                         {item.hint}
                       </span>
                     )}
@@ -262,7 +264,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[11px] font-bold text-[var(--text-primary)] uppercase tracking-wider flex items-center gap-1.5">
                   <ClipboardList size={14} className="text-[var(--brand-primary)]" />
-                  <span>Field Inspection Action Checklist (District Collector / DM)</span>
+                  <span>Field Verification & Compliance Checklist</span>
                 </span>
                 {allChecksComplete && (
                   <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
@@ -323,7 +325,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           {/* Statutory Administrative Actions (3 Interactive Buttons) */}
           <div className="space-y-2">
             <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-secondary)] flex items-center gap-1.5">
-              <span>STATUTORY ACTIONS & ENFORCEMENT (PUBLIC MP / COLLECTORATE)</span>
+              <span>Statutory Enforcement Actions</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

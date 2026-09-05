@@ -21,119 +21,171 @@ export const CPWDGauge: React.FC<CPWDGaugeProps> = ({
   const excess = Math.max(0, billedCost - ceilingCost)
   const isOverTolerance = billedCost > ceilingCost
 
-  const deviationPct = fairCost > 0 ? ((billedCost - fairCost) / fairCost) * 100 : 0
-  const maxDisplay = Math.max(ceilingCost * 1.2, billedCost * 1.1)
+  // Calculate deviation accurately against the permissible ceiling
+  const excessPct = ceilingCost > 0 ? ((billedCost - ceilingCost) / ceilingCost) * 100 : 0
 
-  const fairPct = (fairCost / maxDisplay) * 100
-  const tolPct = (toleranceBuffer / maxDisplay) * 100
-  const billedMarkerPct = Math.min(100, (billedCost / maxDisplay) * 100)
+  // Calculate bar percentages on a shared scale
+  const maxScale = Math.max(billedCost, ceilingCost) * 1.08 || 1
+  const ceilingBarPct = Math.min(100, (ceilingCost / maxScale) * 100)
+  const billedBarPct = Math.min(100, (billedCost / maxScale) * 100)
+  const allowedPortionPct = Math.min(billedBarPct, ceilingBarPct)
+  const excessPortionPct = Math.max(0, billedBarPct - ceilingBarPct)
 
   const formatLakhs = (val: number) => {
     if (val >= 1e7) {
       return `₹${(val / 1e7).toFixed(2)} Cr`
     }
     if (val >= 1e5) {
-      return `₹${(val / 1e5).toFixed(2)} L`
+      return `₹${(val / 1e5).toFixed(2)} Lakhs`
     }
     return `₹${val.toLocaleString('en-IN')}`
   }
 
   return (
-    <div className="rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] p-4 shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+    <div className="rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] p-4 sm:p-5 shadow-sm space-y-4">
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--border-primary)] pb-3">
         <div>
-          <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-secondary)]">
+          <div className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
             CPWD Government Rate Benchmark (DSR 2023)
           </div>
-          <div className="text-xs text-[var(--text-tertiary)]">
+          <div className="text-xs text-[var(--text-tertiary)] mt-0.5">
             Category: <span className="font-semibold text-[var(--text-primary)]">{category}</span>
-            {unitRate && <span> &bull; Schedule Baseline: {unitRate}</span>}
+            {unitRate && <span> &bull; Baseline Rate: {unitRate}</span>}
           </div>
         </div>
 
         <div>
           {isOverTolerance ? (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-rose-500/15 text-rose-700 dark:text-rose-400 border border-rose-500/30">
-              <AlertTriangle size={13} />
-              +{deviationPct.toFixed(1)}% (Exceeds Statutory Ceiling)
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-500/15 text-rose-700 dark:text-rose-400 border border-rose-500/30">
+              <AlertTriangle size={14} />
+              +{excessPct.toFixed(1)}% Over Statutory Ceiling
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
-              <CheckCircle2 size={13} />
-              +{deviationPct.toFixed(1)}% (Within Permissible Limit)
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
+              <CheckCircle2 size={14} />
+              Within Statutory Ceiling (Compliant)
             </span>
           )}
         </div>
       </div>
 
-      {/* Multi-segmented horizontal visual bar */}
-      <div className="relative pt-6 pb-4">
-        {/* Billed Marker Callout */}
-        <div
-          className="absolute top-0 transform -translate-x-1/2 flex flex-col items-center transition-all duration-500"
-          style={{ left: `${billedMarkerPct}%` }}
-        >
-          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-[var(--text-primary)] text-[var(--bg-primary)] shadow-md tabular-nums whitespace-nowrap">
-            Contractor Billed: {formatLakhs(billedCost)}
-          </span>
-          <div className="w-0.5 h-3 bg-[var(--text-primary)]" />
+      {/* Direct 2-Bar Comparison (Simple & Intuitive for Administrative Authorities) */}
+      <div className="space-y-4 pt-1">
+        {/* Bar 1: Government Permissible Limit */}
+        <div className="space-y-1.5">
+          <div className="flex justify-between items-baseline text-xs">
+            <span className="font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+              Government Permissible Limit (CPWD + 25% Buffer)
+            </span>
+            <span className="font-extrabold text-[var(--text-primary)] tabular-nums">
+              {formatLakhs(ceilingCost)}
+            </span>
+          </div>
+          <div className="h-4 w-full rounded-lg bg-[var(--surface-alt)] overflow-hidden border border-[var(--border-primary)]">
+            <div
+              className="h-full bg-emerald-500 transition-all duration-500 rounded-md"
+              style={{ width: `${ceilingBarPct}%` }}
+              title={`Permissible Limit: ${formatLakhs(ceilingCost)}`}
+            />
+          </div>
+          <div className="flex justify-between text-[11px] text-[var(--text-tertiary)]">
+            <span>Base Standard: {formatLakhs(fairCost)}</span>
+            <span>+25% Buffer: {formatLakhs(toleranceBuffer)}</span>
+          </div>
         </div>
 
-        {/* Stacked track */}
-        <div className="h-5 w-full rounded-full bg-[var(--surface-alt)] overflow-hidden flex shadow-inner border border-[var(--border-primary)]">
-          {/* Fair Cost segment */}
-          <div
-            className="h-full bg-emerald-600 transition-all duration-700 flex items-center justify-center text-[9px] font-bold text-white tracking-wider"
-            style={{ width: `${fairPct}%` }}
-            title={`Govt Standard Cost: ${formatLakhs(fairCost)}`}
-          >
-            STANDARD RATE
-          </div>
-          {/* 25% Tolerance Buffer segment */}
-          <div
-            className="h-full bg-amber-500 transition-all duration-700 flex items-center justify-center text-[9px] font-bold text-white tracking-wider"
-            style={{ width: `${tolPct}%` }}
-            title={`25% Permissible Buffer: ${formatLakhs(toleranceBuffer)}`}
-          >
-            +25% BUFFER
-          </div>
-          {/* Flagged Excess segment */}
-          {excess > 0 && (
-            <div
-              className="h-full bg-rose-600 animate-pulse transition-all duration-700 flex items-center justify-center text-[9px] font-bold text-white tracking-wider"
-              style={{ width: `${Math.min(100 - fairPct - tolPct, (excess / maxDisplay) * 100)}%` }}
-              title={`Flagged Excess: ${formatLakhs(excess)}`}
-            >
-              EXCESS BILLED
+        {/* Bar 2: Contractor Billed Amount */}
+        <div className="space-y-1.5">
+          <div className="flex justify-between items-baseline text-xs">
+            <span className="font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
+              <span className={`w-2 h-2 rounded-full ${isOverTolerance ? 'bg-rose-500' : 'bg-emerald-500'} inline-block`} />
+              Contractor Billed Amount (Submitted Invoice)
+            </span>
+            <div className="flex items-center gap-2">
+              {isOverTolerance && (
+                <span className="text-[11px] font-bold text-rose-600 dark:text-rose-400">
+                  +{formatLakhs(excess)} Overrun
+                </span>
+              )}
+              <span className="font-extrabold text-[var(--text-primary)] tabular-nums">
+                {formatLakhs(billedCost)}
+              </span>
             </div>
-          )}
+          </div>
+          <div className="h-4 w-full rounded-lg bg-[var(--surface-alt)] overflow-hidden border border-[var(--border-primary)] flex">
+            {/* Allowed portion */}
+            <div
+              className={`h-full ${isOverTolerance ? 'bg-slate-400 dark:bg-slate-600' : 'bg-emerald-500'} transition-all duration-500`}
+              style={{ width: `${allowedPortionPct}%` }}
+              title={`Approved Portions: ${formatLakhs(Math.min(billedCost, ceilingCost))}`}
+            />
+            {/* Excess portion */}
+            {isOverTolerance && (
+              <div
+                className="h-full bg-rose-500 transition-all duration-500 rounded-r-md"
+                style={{ width: `${excessPortionPct}%` }}
+                title={`Excess Billed Over Ceiling: +${formatLakhs(excess)}`}
+              />
+            )}
+          </div>
+          <div className="flex justify-between text-[11px]">
+            <span className="text-[var(--text-tertiary)]">
+              {isOverTolerance ? 'Gray: Covered by ceiling' : '100% compliant with ceiling'}
+            </span>
+            {isOverTolerance ? (
+              <span className="font-bold text-rose-600 dark:text-rose-400">
+                Red: Unjustified Excess (+{excessPct.toFixed(1)}%)
+              </span>
+            ) : (
+              <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                No Excess Overrun
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Legend & Key figures */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-xs border-t border-[var(--border-primary)]">
-        <div>
-          <span className="text-[10px] text-[var(--text-tertiary)] block">Govt Standard Cost (CPWD)</span>
-          <span className="font-bold tabular-nums text-emerald-600 dark:text-emerald-400">
-            {formatLakhs(fairCost)}
+      {/* 3 Clear Executive Summary Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 border-t border-[var(--border-primary)]">
+        <div className="p-2.5 rounded-lg bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+          <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">
+            1. Govt Allowed Limit
           </span>
-        </div>
-        <div>
-          <span className="text-[10px] text-[var(--text-tertiary)] block">Permissible Buffer (+25%)</span>
-          <span className="font-bold tabular-nums text-amber-600 dark:text-amber-400">
-            {formatLakhs(toleranceBuffer)}
-          </span>
-        </div>
-        <div>
-          <span className="text-[10px] text-[var(--text-tertiary)] block">Max Permissible Ceiling</span>
-          <span className="font-bold tabular-nums text-[var(--text-primary)]">
+          <span className="text-sm font-extrabold tabular-nums text-emerald-600 dark:text-emerald-400 block mt-0.5">
             {formatLakhs(ceilingCost)}
           </span>
+          <span className="text-[10px] text-[var(--text-tertiary)] block mt-0.5">
+            Max statutory threshold
+          </span>
         </div>
-        <div>
-          <span className="text-[10px] text-[var(--text-tertiary)] block">Excess Over Ceiling</span>
-          <span className={`font-bold tabular-nums ${isOverTolerance ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
-            {excess > 0 ? `+${formatLakhs(excess)} (Requires Justification)` : 'Compliant'}
+
+        <div className="p-2.5 rounded-lg bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+          <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">
+            2. Contractor Billed
+          </span>
+          <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)] block mt-0.5">
+            {formatLakhs(billedCost)}
+          </span>
+          <span className="text-[10px] text-[var(--text-tertiary)] block mt-0.5">
+            Total claimed invoice
+          </span>
+        </div>
+
+        <div className={`p-2.5 rounded-lg border ${
+          isOverTolerance
+            ? 'bg-rose-500/10 border-rose-500/30 text-rose-700 dark:text-rose-400'
+            : 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-400'
+        }`}>
+          <span className="text-[10px] uppercase font-bold block opacity-80">
+            3. Audit Discrepancy
+          </span>
+          <span className="text-sm font-extrabold tabular-nums block mt-0.5">
+            {isOverTolerance ? `+${formatLakhs(excess)} (+${excessPct.toFixed(1)}%)` : 'Compliant (₹0 Excess)'}
+          </span>
+          <span className="text-[10px] block mt-0.5 opacity-80">
+            {isOverTolerance ? 'Requires Rate Justification' : 'Passed statutory check'}
           </span>
         </div>
       </div>
