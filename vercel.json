@@ -56,7 +56,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api|assets|favicon|data).*)",
+      "source": "/((?!api|assets|favicon|data|dossier|documentation).*)",
       "destination": "/index.html"
     }
   ]
