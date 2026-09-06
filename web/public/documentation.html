@@ -395,14 +395,19 @@
     @media print {
       body {
         padding: 0;
-        font-size: 12.5px;
+        font-size: 13px;
+        line-height: 1.6;
       }
       .action-buttons {
         display: none;
       }
       a {
-        text-decoration: none;
-        color: #000000;
+        text-decoration: underline !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
+      }
+      .dialogue-box, .callout, .scenario-box, table {
+        page-break-inside: avoid;
       }
       .scenario-grid {
         grid-template-columns: 1fr;
@@ -430,6 +435,7 @@
       </div>
 
       <div class="action-buttons">
+        <a href="SATARK_MPLADS_DOCUMENTATION.pdf" download class="btn" style="background: #000000; color: #ffffff;">⬇ Download Clickable PDF</a>
         <button onclick="window.print()" class="btn">Print / Save as PDF</button>
         <a href="https://mplads-intelligence-portal.vercel.app" target="_blank" class="btn">Open Working Portal ↗</a>
         <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank" class="btn">View Source Code ↗</a>
