@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SATARK-MPLADS: Project & Technical Guide</title>
+  <title>SATARK-MPLADS: Project &amp; Technical Guide</title>
   <style>
     /* ==========================================================================
        PURE WHITE & CRISP BLACK - NOTEBOOK / EDITORIAL FORMAT
@@ -21,7 +21,7 @@
       color: #000000;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 16.5px;
-      line-height: 1.8;
+      line-height: 1.75;
       padding: 40px 20px;
     }
 
@@ -31,11 +31,17 @@
       background-color: #ffffff;
     }
 
+    /* Screen View: Clean Spacing between Page Sections */
+    .pdf-page {
+      margin-bottom: 50px;
+      background-color: #ffffff;
+    }
+
     /* Top Header Block */
     header {
       border-bottom: 3px solid #000000;
       padding-bottom: 24px;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
       background-color: #ffffff;
     }
 
@@ -58,10 +64,10 @@
     }
 
     .lead-text {
-      font-size: 18px;
+      font-size: 17.5px;
       color: #222222;
       line-height: 1.5;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .meta-box {
@@ -71,7 +77,7 @@
       color: #333333;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 24px;
+      gap: 10px 24px;
       background-color: #ffffff;
     }
 
@@ -116,18 +122,18 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 14px;
-      margin: 28px 0 38px;
+      margin: 22px 0 28px;
       background-color: #ffffff;
     }
 
     .highlight-card {
       border: 1.5px solid #000000;
-      padding: 16px;
+      padding: 14px;
       background-color: #ffffff;
     }
 
     .card-big {
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 900;
       font-family: monospace;
       color: #000000;
@@ -143,43 +149,43 @@
       margin-top: 6px;
     }
 
-    /* Sections */
-    section {
-      margin-bottom: 46px;
-      background-color: #ffffff;
-    }
-
+    /* Headings */
     h2 {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 900;
       color: #000000;
       border-bottom: 2px solid #000000;
       padding-bottom: 6px;
-      margin-bottom: 20px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
+    .pdf-page > h2:first-child {
+      margin-top: 0;
+    }
+
     h3 {
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 800;
       color: #000000;
-      margin-top: 24px;
+      margin-top: 20px;
       margin-bottom: 10px;
     }
 
     p {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: #222222;
     }
 
     ul, ol {
       margin-left: 24px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     li {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
       color: #222222;
     }
 
@@ -187,16 +193,16 @@
       color: #000000;
     }
 
-    /* Callout & Analogy Boxes */
+    /* Callout & Box Components */
     .callout {
       border: 1.5px solid #000000;
-      padding: 18px 22px;
-      margin: 20px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
       background-color: #ffffff;
     }
 
     .callout-title {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -205,7 +211,7 @@
     }
 
     .callout h4 {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 900;
       margin-bottom: 8px;
       color: #000000;
@@ -214,16 +220,16 @@
     .quote-box {
       border-left: 4px solid #000000;
       padding: 12px 18px;
-      margin: 18px 0;
+      margin: 16px 0;
       background-color: #ffffff;
       font-style: italic;
       color: #222222;
     }
 
-    /* Dialogue / Cartoon style exchange */
+    /* Dialogue & Trick Blocks */
     .dialogue-box {
-      border: 1px solid #000000;
-      padding: 16px 20px;
+      border: 1.5px solid #000000;
+      padding: 16px 18px;
       margin: 16px 0;
       background-color: #ffffff;
     }
@@ -231,8 +237,8 @@
     .dialogue-person {
       font-weight: 800;
       color: #000000;
-      margin-bottom: 6px;
-      font-size: 16px;
+      margin-bottom: 8px;
+      font-size: 16.5px;
     }
 
     .dialogue-speech {
@@ -246,61 +252,19 @@
       margin-bottom: 0;
     }
 
-    /* Deep Dive Scenario Box */
-    .scenario-box {
-      border: 2px solid #000000;
-      padding: 22px 24px;
-      margin: 24px 0;
-      background-color: #ffffff;
-    }
-
-    .scenario-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid #000000;
-      padding: 2px 8px;
-      margin-bottom: 10px;
-    }
-
-    .scenario-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 16px 0;
-    }
-
-    .scenario-col {
-      border: 1px solid #000000;
-      padding: 14px;
-      background-color: #ffffff;
-    }
-
-    .scenario-col-title {
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid #000000;
-      padding-bottom: 6px;
-      margin-bottom: 10px;
-    }
-
     /* Tables */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 24px 0;
-      font-size: 14px;
+      margin: 20px 0;
+      font-size: 13.5px;
       background-color: #ffffff;
     }
 
     th {
       background-color: #ffffff;
       color: #000000;
-      padding: 11px 14px;
+      padding: 10px 12px;
       border: 1.5px solid #000000;
       font-weight: 900;
       text-align: left;
@@ -310,12 +274,12 @@
     }
 
     td {
-      padding: 11px 14px;
+      padding: 10px 12px;
       border: 1px solid #000000;
       color: #222222;
       vertical-align: top;
       background-color: #ffffff;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     tr:nth-child(even) td {
@@ -325,7 +289,7 @@
     /* Q&A Items */
     .qa-block {
       border-bottom: 1px dashed #888888;
-      padding: 18px 0;
+      padding: 16px 0;
       background-color: #ffffff;
     }
 
@@ -334,16 +298,16 @@
     }
 
     .qa-q {
-      font-size: 16.5px;
+      font-size: 16px;
       font-weight: 800;
       color: #000000;
       margin-bottom: 8px;
     }
 
     .qa-a {
-      font-size: 15.5px;
+      font-size: 15px;
       color: #333333;
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
     /* Step Timeline */
@@ -356,19 +320,19 @@
     .step-item {
       display: flex;
       gap: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .step-num {
       flex-shrink: 0;
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
       border: 2px solid #000000;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .step-content {
@@ -376,41 +340,296 @@
     }
 
     .step-content h4 {
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 800;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     /* Footer */
     footer {
       border-top: 2px solid #000000;
-      padding-top: 22px;
-      margin-top: 50px;
+      padding-top: 20px;
+      margin-top: 40px;
       font-size: 13px;
       text-align: center;
       color: #555555;
       background-color: #ffffff;
     }
 
+    /* ==========================================================================
+       SYSTEMATIC PRINT ARCHITECTURE: STRICT 8-PAGE LAYOUT
+       Zero Orphaned Headings | Zero Truncated Boxes | 100% Clickable Active Links
+       ========================================================================== */
     @media print {
+      @page {
+        size: A4;
+        margin: 10mm 12mm 10mm 12mm;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
       body {
-        padding: 0;
-        font-size: 13px;
-        line-height: 1.6;
+        padding: 0 !important;
+        font-size: 9.3pt !important;
+        line-height: 1.38 !important;
+        color: #000000 !important;
+        background: #ffffff !important;
       }
+
+      .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      /* EACH PAGE IS A SELF-CONTAINED LOGICAL UNIT */
+      .pdf-page {
+        page-break-after: always !important;
+        break-after: page !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+      }
+
+      .pdf-page:last-child {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+      }
+
+      header {
+        margin-bottom: 6pt !important;
+        padding-bottom: 6pt !important;
+        border-bottom: 2pt solid #000000 !important;
+      }
+
       .action-buttons {
-        display: none;
+        display: none !important;
       }
+
       a {
         text-decoration: underline !important;
         color: #000000 !important;
         font-weight: 700 !important;
       }
-      .dialogue-box, .callout, .scenario-box, table {
-        page-break-inside: avoid;
+
+      /* STRICT HEADING RULES: NEVER ALLOW ORPHANED HEADINGS */
+      h1, h2, h3, h4, h5, h6 {
+        break-after: avoid-page !important;
+        page-break-after: avoid !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
-      .scenario-grid {
-        grid-template-columns: 1fr;
+
+      h2 + p, h3 + p, .lead-text {
+        break-after: avoid-page !important;
+        page-break-after: avoid !important;
+      }
+
+      h1 {
+        font-size: 16.5pt !important;
+        margin-bottom: 3pt !important;
+        line-height: 1.2 !important;
+      }
+
+      .tagline {
+        font-size: 7.5pt !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .lead-text {
+        font-size: 9.3pt !important;
+        line-height: 1.32 !important;
+        margin-bottom: 5pt !important;
+      }
+
+      .meta-box {
+        font-size: 7.8pt !important;
+        padding-top: 4pt !important;
+        gap: 2pt 14pt !important;
+      }
+
+      h2 {
+        font-size: 11.2pt !important;
+        margin-top: 7pt !important;
+        margin-bottom: 4pt !important;
+        border-bottom: 1.2pt solid #000000 !important;
+        padding-bottom: 2pt !important;
+      }
+
+      .pdf-page > h2:first-child {
+        margin-top: 0 !important;
+      }
+
+      h3 {
+        font-size: 9.8pt !important;
+        margin-top: 5pt !important;
+        margin-bottom: 2pt !important;
+      }
+
+      p, li, .dialogue-speech {
+        font-size: 8.6pt !important;
+        line-height: 1.35 !important;
+      }
+
+      p {
+        margin-bottom: 5pt !important;
+      }
+
+      ul, ol {
+        margin-left: 14pt !important;
+        margin-bottom: 5pt !important;
+      }
+
+      li {
+        margin-bottom: 2pt !important;
+      }
+
+      /* COMPACT HIGHLIGHTS FOR PAGE 1 */
+      .highlight-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 5pt !important;
+        margin: 5pt 0 7pt !important;
+      }
+
+      .highlight-card {
+        padding: 5pt 6pt !important;
+        border: 1pt solid #000000 !important;
+      }
+
+      .card-big {
+        font-size: 13.5pt !important;
+        line-height: 1.1 !important;
+      }
+
+      .card-label {
+        font-size: 7pt !important;
+        margin-top: 2pt !important;
+      }
+
+      .card-note {
+        font-size: 6.8pt !important;
+        margin-top: 3pt !important;
+        padding-top: 2pt !important;
+      }
+
+      /* CALLOUTS & BOXES */
+      .callout {
+        padding: 6pt 8pt !important;
+        margin: 5pt 0 !important;
+        border: 1.2pt solid #000000 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .callout-title {
+        font-size: 7.2pt !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .callout h4 {
+        font-size: 9.2pt !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .quote-box {
+        padding: 5pt 8pt !important;
+        margin: 5pt 0 !important;
+        font-size: 8.4pt !important;
+        border-left: 3pt solid #000000 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .dialogue-box {
+        padding: 5pt 8pt !important;
+        margin: 4pt 0 !important;
+        border: 1pt solid #000000 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .dialogue-person {
+        font-size: 9.5pt !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .dialogue-speech {
+        margin-bottom: 3pt !important;
+        padding-left: 6pt !important;
+        border-left: 1.5pt solid #888888 !important;
+      }
+
+      .step-item {
+        margin-bottom: 4pt !important;
+        gap: 8pt !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .step-num {
+        width: 17pt !important;
+        height: 17pt !important;
+        font-size: 8.2pt !important;
+        border: 1.2pt solid #000000 !important;
+      }
+
+      .step-content h4 {
+        font-size: 8.8pt !important;
+        margin-bottom: 1pt !important;
+      }
+
+      /* COMPLETE TABLE ON PAGE 6 */
+      table {
+        font-size: 7.3pt !important;
+        line-height: 1.2 !important;
+        margin: 3pt 0 !important;
+        border-collapse: collapse !important;
+        width: 100% !important;
+      }
+
+      thead {
+        display: table-header-group !important;
+      }
+
+      th {
+        padding: 2.5pt 4pt !important;
+        font-size: 7.2pt !important;
+        border: 1.2pt solid #000000 !important;
+      }
+
+      td {
+        padding: 2.2pt 4pt !important;
+        font-size: 7.3pt !important;
+        border: 0.8pt solid #000000 !important;
+      }
+
+      /* Q&A ON PAGE 8 */
+      .qa-block {
+        padding: 4pt 0 !important;
+        border-bottom: 0.8pt dashed #888888 !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      .qa-q {
+        font-size: 8.8pt !important;
+        margin-bottom: 1pt !important;
+      }
+
+      .qa-a {
+        font-size: 8.3pt !important;
+        line-height: 1.3 !important;
+      }
+
+      footer {
+        margin-top: 10pt !important;
+        padding-top: 6pt !important;
+        font-size: 7.5pt !important;
+        border-top: 1.2pt solid #000000 !important;
       }
     }
   </style>
@@ -419,150 +638,162 @@
 
   <div class="container">
 
-    <!-- Header Block -->
-    <header>
-      <div class="tagline">National Public Treasury Transparency &amp; Anti-Fraud Architecture</div>
-      <h1>SATARK-MPLADS: Complete Project &amp; Technical Guide</h1>
-      <p class="lead-text">
-        How an intelligent software watchdog protects ₹4,000+ Crores of citizens' tax money every year across India — explained with complete clarity, real-world examples, and concrete evidence.
-      </p>
+    <!-- ==========================================================================
+         PAGE 1: COVER, CORE METRICS & EXECUTIVE SUMMARY (1-MINUTE BRIEFING)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-1">
+      <header>
+        <div class="tagline">National Public Treasury Transparency &amp; Anti-Fraud Architecture</div>
+        <h1>SATARK-MPLADS: Complete Project &amp; Technical Guide</h1>
+        <p class="lead-text">
+          How an intelligent software watchdog protects ₹4,000+ Crores of citizens' tax money every year across India — explained with complete clarity, real-world examples, and concrete evidence.
+        </p>
 
-      <div class="meta-box">
-        <div><strong>Mission:</strong> Stopping Waste, Quality Compromise &amp; Corruption in Public Funds</div>
-        <div><strong>National Scale:</strong> 543 Parliamentary Constituencies Across India</div>
-        <div><strong>Live Working Portal:</strong> <a href="https://mplads-intelligence-portal.vercel.app" target="_blank">mplads-intelligence-portal.vercel.app</a></div>
-        <div><strong>Code Repository:</strong> <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank">suvendu-2006/mplads-intelligence-portal</a></div>
+        <div class="meta-box">
+          <div><strong>Mission:</strong> Stopping Waste, Quality Compromise &amp; Corruption in Public Funds</div>
+          <div><strong>National Scale:</strong> 543 Parliamentary Constituencies Across India</div>
+          <div><strong>Live Working Portal:</strong> <a href="https://mplads-intelligence-portal.vercel.app" target="_blank">mplads-intelligence-portal.vercel.app</a></div>
+          <div><strong>Code Repository:</strong> <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank">suvendu-2006/mplads-intelligence-portal</a></div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="SATARK_MPLADS_DOCUMENTATION.pdf" download class="btn" style="background: #000000; color: #ffffff;">⬇ Download Clickable PDF</a>
+          <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+          <a href="https://mplads-intelligence-portal.vercel.app" target="_blank" class="btn">Open Working Portal ↗</a>
+          <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank" class="btn">View Source Code ↗</a>
+        </div>
+      </header>
+
+      <!-- Key Statistics Backed by Official Sources & Methodology -->
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="card-big">₹5 Crore</div>
+          <div class="card-label">Given to Each MP Every Year</div>
+          <div class="card-note" style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+            Official statutory fund for each of India's 788 MPs
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="card-big">₹4,000+ Cr</div>
+          <div class="card-label">Total Public Money Per Year</div>
+          <div class="card-note" style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+            Annual budget: 788 MPs × ₹5 Crore statutory grant
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="card-big">53,197</div>
+          <div class="card-label">Public Works Verified</div>
+          <div class="card-note" style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+            Source: Official project records from MoSPI e-SAKSHI portal
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="card-big">₹350+ Cr</div>
+          <div class="card-label">Tax Money Saved Each Year</div>
+          <div class="card-note" style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+            Estimated by preventing tender splits, ghost works &amp; markups
+          </div>
+        </div>
       </div>
 
-      <div class="action-buttons">
-        <a href="SATARK_MPLADS_DOCUMENTATION.pdf" download class="btn" style="background: #000000; color: #ffffff;">⬇ Download Clickable PDF</a>
-        <button onclick="window.print()" class="btn">Print / Save as PDF</button>
-        <a href="https://mplads-intelligence-portal.vercel.app" target="_blank" class="btn">Open Working Portal ↗</a>
-        <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank" class="btn">View Source Code ↗</a>
-      </div>
-    </header>
+      <!-- Executive Overview -->
+      <section>
+        <h2>Executive Summary (The Entire Project in 1 Minute)</h2>
+        <div class="callout">
+          <div class="callout-title">The Big Picture in 3 Plain Bullets:</div>
+          <ol style="margin-left: 18px; margin-bottom: 8px;">
+            <li><strong>The Money:</strong> The Government of India gives each Member of Parliament (MP) ₹5 Crores of public money every year to build drinking water plants, school classrooms, clinics, and village roads. <em>The MP never gets cash in hand</em>—they only recommend the work. The District Collector hires a contractor, and the central treasury pays upon completion.</li>
+            <li><strong>The Problem:</strong> With over 120,000 active projects and only 2 or 3 engineers per district, human officers can only physically check 1 out of 100 files. Corrupt contractors take advantage: billing for fake buildings that were never built, splitting large contracts into small ₹4.9 Lakh chunks to dodge open public bidding, or spending only ₹12 Lakhs on damaged materials while pocketing ₹8 Lakhs as personal profit.</li>
+            <li><strong>The Solution (SATARK):</strong> An automated software watchdog that cross-checks the <em>"Work Diary"</em> (e-SAKSHI) against the <em>"Central Bank Account"</em> (PFMS) and runs 15 forensic checks. In under 1 second, it flags compromised materials, halts unauthorized payments, and equips officers with court-admissible cryptographic photo evidence.</li>
+          </ol>
 
-    <!-- Key Statistics Backed by Sources & Methodology -->
-    <div class="highlight-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
-      <div class="highlight-card">
-        <div class="card-big">₹5 Crore</div>
-        <div class="card-label">Given to Each MP Every Year</div>
-        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
-          Official statutory fund for each of India's 788 MPs
+          <div style="border-top: 1px dashed #888888; padding-top: 8px; font-size: 13.5px; color: #333333;">
+            <strong>Quick Example (The Ghost Building):</strong> Imagine paying a carpenter ₹50,000 for a bedroom wardrobe. Two weeks later, he hands you a stamped receipt marked <em>"100% Finished"</em> and takes your money. But when you walk into your bedroom, there is only an empty floor! In real life, corrupt contractors claim a village clinic is complete and collect ₹25 Lakhs when only wild grass exists. SATARK catches this instantly by checking the bank records: <em>"You claim the building is done, but you paid ₹0 for bricks or cement!"</em>
+          </div>
         </div>
-      </div>
-      <div class="highlight-card">
-        <div class="card-big">₹4,000+ Cr</div>
-        <div class="card-label">Total Public Money Per Year</div>
-        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
-          Annual budget: 788 MPs × ₹5 Crore statutory grant
-        </div>
-      </div>
-      <div class="highlight-card">
-        <div class="card-big">53,197</div>
-        <div class="card-label">Public Works Verified</div>
-        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
-          Source: Verified official project records from MoSPI e-SAKSHI portal
-        </div>
-      </div>
-      <div class="highlight-card">
-        <div class="card-big">₹350+ Cr</div>
-        <div class="card-label">Tax Money Saved Each Year</div>
-        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
-          Estimated by preventing flagged tender splits, ghost works &amp; price markups
-        </div>
-      </div>
+      </section>
     </div>
 
-    <!-- Chapter 0: Executive Overview (Read in 1 Minute) -->
-    <section>
-      <h2>Executive Summary (The Entire Project in 1 Minute)</h2>
-      <div class="callout">
-        <div class="callout-title">The Big Picture in 3 Plain Bullets:</div>
-        <ol style="margin-left: 20px; margin-bottom: 14px;">
-          <li><strong>The Money:</strong> The Government of India gives each Member of Parliament (MP) ₹5 Crores of public money every year to build drinking water plants, school classrooms, clinics, and village roads. <em>The MP never gets cash in hand</em>—they only recommend the work. The District Collector hires a contractor, and the central treasury pays upon completion.</li>
-          <li><strong>The Problem:</strong> With over 120,000 active projects and only 2 or 3 engineers per district, human officers can only physically check 1 out of 100 files. Corrupt contractors take advantage: billing for fake buildings that were never built, splitting large contracts into small ₹4.9 Lakh chunks to dodge open public bidding, or spending only ₹12 Lakhs on damaged materials while pocketing ₹8 Lakhs as personal profit.</li>
-          <li><strong>The Solution (SATARK):</strong> An automated software watchdog that cross-checks the <em>"Work Diary"</em> (e-SAKSHI) against the <em>"Central Bank Account"</em> (PFMS) and runs 15 forensic checks. In under 1 second, it flags compromised materials, halts unauthorized payments, and equips officers with court-admissible cryptographic photo evidence.</li>
-        </ol>
-
-        <div style="border-top: 1px dashed #888888; padding-top: 12px; font-size: 14px; color: #333333;">
-          <strong>Quick Example (The Ghost Building):</strong> Imagine paying a carpenter ₹50,000 for a bedroom wardrobe. Two weeks later, he hands you a stamped receipt marked <em>"100% Finished"</em> and takes your money. But when you walk into your bedroom, there is only an empty floor! In real life, corrupt contractors claim a village clinic is complete and collect ₹25 Lakhs when only wild grass exists. SATARK catches this instantly by checking the bank records: <em>"You claim the building is done, but you paid ₹0 for bricks or cement!"</em>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 1: The Fund Flow -->
-    <section>
-      <h2>Chapter 1: What is MPLADS and How Does It Work?</h2>
-      <p>
-        In India, citizens vote for a representative called a <strong>Member of Parliament (MP)</strong>. Because local community issues need quick local solutions, the Central Government created the <strong>MPLADS</strong> scheme (Members of Parliament Local Area Development Scheme).
-      </p>
-
-      <div class="callout">
-        <div class="callout-title">The Fundamental Rule</div>
-        <h4>The MP Never Receives the Money Personally</h4>
-        <p style="margin-bottom: 0;">
-          A common misconception is that the MP receives a cash payout. In reality, the MP only has the authority to recommend: <em>"Dear District Collector, please allocate ₹20 Lakhs to build a concrete road in Rampur Village."</em>
+    <!-- ==========================================================================
+         PAGE 2: FUND FLOW (CHAPTER 1) & TRICK 1 GHOST WORK (CHAPTER 2)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-2">
+      <section>
+        <h2>Chapter 1: What is MPLADS and How Does It Work?</h2>
+        <p>
+          In India, citizens vote for a representative called a <strong>Member of Parliament (MP)</strong>. Because local community issues need quick local solutions, the Central Government created the <strong>MPLADS</strong> scheme (Members of Parliament Local Area Development Scheme).
         </p>
-      </div>
 
-      <p>
-        The money flows through three distinct steps:
-      </p>
-
-      <ul class="step-list">
-        <li class="step-item">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h4>The MP Recommends</h4>
-            <p>The elected MP recommends a community development project based on citizen demands.</p>
-          </div>
-        </li>
-        <li class="step-item">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h4>The District Administration Approves &amp; Hires</h4>
-            <p>The local District Magistrate (Collector / DM) examines technical feasibility, sanctions the budget, and hires a construction contractor.</p>
-          </div>
-        </li>
-        <li class="step-item">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h4>The Central Treasury Disburses</h4>
-            <p>When milestones are certified, the central government treasury (via PFMS) transfers the money directly into the contractor's bank account.</p>
-          </div>
-        </li>
-      </ul>
-
-      <p>
-        Across India, there are <strong>788 Members of Parliament</strong> (543 Lok Sabha + 245 Rajya Sabha). Together, that represents over <strong>₹4,000 Crores of citizens' tax money every single year</strong>.
-      </p>
-    </section>
-
-    <!-- Chapter 2: The Real-World Scenarios & Tricks -->
-    <section>
-      <h2>Chapter 2: Real-World Scenarios (How Public Money is Siphoned)</h2>
-      <p>
-        If this money is meant for strong roads and safe school roofs, why do some villages end up with crumbling walls and cracked roads within six months? Here are the most common ways contractors cheat the public:
-      </p>
-
-      <!-- Trick 1 -->
-      <div class="dialogue-box">
-        <div class="dialogue-person">Trick 1: The "Ghost Building" (The Invisible Hospital)</div>
-        <div class="dialogue-speech">
-          <strong>The Everyday Example:</strong><br>
-          Imagine you pay a carpenter ₹50,000 to build a wooden wardrobe for your bedroom. Two weeks later, the carpenter hands you a receipt stamped <em>"100% Finished"</em> and takes your money. But when you walk into your bedroom, there is only an empty floor! There is no wood, no wardrobe, no nails—nothing. The wardrobe only exists on a piece of paper.
+        <div class="callout">
+          <div class="callout-title">The Fundamental Rule</div>
+          <h4>The MP Never Receives the Money Personally</h4>
+          <p style="margin-bottom: 0;">
+            A common misconception is that the MP receives a cash payout. In reality, the MP only has the authority to recommend: <em>"Dear District Collector, please allocate ₹20 Lakhs to build a concrete road in Rampur Village."</em>
+          </p>
         </div>
-        <div class="dialogue-speech">
-          <strong>What Happens in the Village:</strong><br>
-          A corrupt contractor and an inspector sign a government paper saying: <em>"Community Health Clinic 100% Completed."</em> The contractor collects ₹25 Lakhs of citizens' tax money. But if you walk to that village, there is only an open field of wild grass and grazing cows. No clinic was ever built!
-        </div>
-        <div class="dialogue-speech" style="border-left-color: #000000;">
-          <strong>How SATARK Catches It:</strong><br>
-          SATARK connects the government's work diary with the central bank account and asks: <em>"Hold on! You claim a whole hospital is 100% finished, but the bank shows you paid ₹0 for bricks, ₹0 for cement, and ₹0 for workers! Buildings don't build themselves out of thin air."</em> &rarr; <strong>BEEP! RED FLAG: Ghost Work Detected!</strong>
-        </div>
-      </div>
 
+        <p>
+          The money flows through three distinct steps:
+        </p>
+
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>The MP Recommends</h4>
+              <p>The elected MP recommends a community development project based on citizen demands.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>The District Administration Approves &amp; Hires</h4>
+              <p>The local District Magistrate (Collector / DM) examines technical feasibility, sanctions the budget, and hires a construction contractor.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>The Central Treasury Disburses</h4>
+              <p>When milestones are certified, the central government treasury (via PFMS) transfers the money directly into the contractor's bank account.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p>
+          Across India, there are <strong>788 Members of Parliament</strong> (543 Lok Sabha + 245 Rajya Sabha). Together, that represents over <strong>₹4,000 Crores of citizens' tax money every single year</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Chapter 2: Real-World Scenarios (How Public Money is Siphoned)</h2>
+        <p>
+          If this money is meant for strong roads and safe school roofs, why do some villages end up with crumbling walls and cracked roads within six months? Here are the most common ways contractors cheat the public:
+        </p>
+
+        <!-- Trick 1 -->
+        <div class="dialogue-box">
+          <div class="dialogue-person">Trick 1: The "Ghost Building" (The Invisible Hospital)</div>
+          <div class="dialogue-speech">
+            <strong>The Everyday Example:</strong><br>
+            Imagine you pay a carpenter ₹50,000 to build a wooden wardrobe for your bedroom. Two weeks later, the carpenter hands you a receipt stamped <em>"100% Finished"</em> and takes your money. But when you walk into your bedroom, there is only an empty floor! There is no wood, no wardrobe, no nails—nothing. The wardrobe only exists on a piece of paper.
+          </div>
+          <div class="dialogue-speech">
+            <strong>What Happens in the Village:</strong><br>
+            A corrupt contractor and an inspector sign a government paper saying: <em>"Community Health Clinic 100% Completed."</em> The contractor collects ₹25 Lakhs of citizens' tax money. But if you walk to that village, there is only an open field of wild grass and grazing cows. No clinic was ever built!
+          </div>
+          <div class="dialogue-speech" style="border-left-color: #000000;">
+            <strong>How SATARK Catches It:</strong><br>
+            SATARK connects the government's work diary with the central bank account and asks: <em>"Hold on! You claim a whole hospital is 100% finished, but the bank shows you paid ₹0 for bricks, ₹0 for cement, and ₹0 for workers! Buildings don't build themselves out of thin air."</em> &rarr; <strong>BEEP! RED FLAG: Ghost Work Detected!</strong>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================================================
+         PAGE 3: TRICK 2 (TENDER SPLIT), TRICK 3 (TWIN WALL), TRICK 4 (MARCH PANIC)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-3">
       <!-- Trick 2 -->
       <div class="dialogue-box">
         <div class="dialogue-person">Trick 2: The "₹4.9 Lakh Split" (The Chopped Candy Trick)</div>
@@ -572,7 +803,7 @@
         </div>
         <div class="dialogue-speech">
           <strong>What Happens in the Village:</strong><br>
-          The Indian Government has a strict law (called <strong>GFR Rule 157</strong>): <em>"Any construction job worth ₹5 Lakhs or more MUST be published online in an open public tender so ANY honest company in India can apply and offer the lowest, best price."</em><br><br>
+          The Indian Government has a strict law (called <strong>GFR Rule 157</strong>): <em>"Any construction job worth ₹5 Lakhs or more MUST be published online in an open public tender so ANY honest company in India can apply and offer the lowest, best price."</em><br>
           Corrupt contractors hate open competition. So if they have a ₹20 Lakh road to build, they secretly <strong>chop it into four fake smaller bills of ₹4.9 Lakhs each</strong> in the exact same week! Because each bill is just under ₹5 Lakhs, they don't have to advertise it to the public, and they hand all 4 jobs to their own friends or relatives without any competition.
         </div>
         <div class="dialogue-speech" style="border-left-color: #000000;">
@@ -614,19 +845,24 @@
           SATARK tracks the calendar: <em>"Why was this office completely quiet for 11 months, and suddenly approved 70% of its entire year's budget in the final 5 days of March? Every single one of these rushed projects is automatically paused for special forensic review before any money is paid out."</em> &rarr; <strong>BEEP! Fiscal Rush Paused!</strong>
         </div>
       </div>
+    </div>
 
+    <!-- ==========================================================================
+         PAGE 4: TRICK 5 (THE ₹20 LAKH BUDGET SKIM - COMPLETE DEEP DIVE)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-4">
       <!-- Trick 5 -->
       <div class="dialogue-box" style="border: 2px solid #000000;">
-        <div class="dialogue-person" style="font-size: 17px;">Trick 5: The "₹20 Lakh Budget Skim" (Buying Damaged Materials &amp; Pocketing ₹8 Lakhs)</div>
+        <div class="dialogue-person" style="font-size: 16.5px;">Trick 5: The "₹20 Lakh Budget Skim" (Buying Damaged Materials &amp; Pocketing ₹8 Lakhs)</div>
         <div class="dialogue-speech">
           <strong>The Everyday Example:</strong><br>
           Imagine your parents give you ₹2,000 to buy high-quality, durable leather school shoes that will last for 3 years. Instead, you go to a roadside stall, buy cheap, damaged, second-hand shoes for ₹800 that tear apart in the first rainstorm, and you secretly keep the remaining ₹1,200 in your pocket to spend on toys! You told your parents you bought the ₹2,000 shoes, but you bought cheap junk and pocketed the difference.
         </div>
         <div class="dialogue-speech">
           <strong>What Happens in the Village:</strong><br>
-          A contractor is given <strong>₹20 Lakhs</strong> of public tax money to build a strong community hall for a village. The government contract requires strong fresh cement (OPC-53), thick rust-free steel bars (Fe-500), and solid red bricks.<br><br>
+          A contractor is given <strong>₹20 Lakhs</strong> of public tax money to build a strong community hall for a village. The government contract requires strong fresh cement (OPC-53), thick rust-free steel bars (Fe-500), and solid red bricks.<br>
           Instead, the contractor secretly buys:
-          <ul style="margin-top: 6px; margin-left: 20px;">
+          <ul style="margin-top: 4px; margin-bottom: 4px; margin-left: 18px;">
             <li>Expired, lumpy cement at half price.</li>
             <li>Thin, rusted scrap steel bars.</li>
             <li>Substandard, crumbly bricks.</li>
@@ -634,8 +870,8 @@
           He only spends <strong>₹12 Lakhs</strong> on these damaged materials. He pockets the other <strong>₹8 Lakhs as personal profit</strong>! Six months later, when heavy rains come, the roof leaks, big cracks appear in the walls, and the building becomes dangerous for children.
         </div>
         <div class="dialogue-speech" style="border-left-color: #000000;">
-          <strong>How SATARK Detects It in Plain English:</strong><br>
-          <ul style="margin-top: 6px; margin-left: 20px;">
+          <strong>How SATARK Detects It in Plain English:</strong>
+          <ul style="margin-top: 4px; margin-bottom: 4px; margin-left: 18px;">
             <li><strong>1. The Math Check (Missing Cement):</strong> To build a 1,200 sq ft hall, civil engineering rules require 600 bags of cement. SATARK checks the contractor's verified store receipts and sees they only bought 340 bags! Where did the rest of the cement go?</li>
             <li><strong>2. The Camera AI Check:</strong> When the engineer snaps a photo of the building, SATARK’s artificial intelligence scans the picture like a doctor examining an X-ray. It immediately spots hollow honeycomb holes in the concrete (bad cement), rusted steel sticking out, and cracks in the wall.</li>
             <li><strong>3. The Neighbor Check:</strong> SATARK compares this hall to 50 other halls built in nearby villages. Honest halls cost ₹1,300 per square foot. Why did this contractor bill ₹2,220 per square foot for a cracked, crumbly building?</li>
@@ -643,11 +879,11 @@
           </ul>
         </div>
         <div class="dialogue-speech" style="border-left-color: #000000;">
-          <strong>What Concrete Evidence SATARK Gathers:</strong><br>
-          <ul style="margin-top: 6px; margin-left: 20px;">
+          <strong>What Concrete Evidence SATARK Gathers:</strong>
+          <ul style="margin-top: 4px; margin-bottom: 4px; margin-left: 18px;">
             <li><strong>1. Unhackable Satellite Photos:</strong> High-resolution photos of the cracked walls and rusted steel, locked with satellite GPS coordinates, date, and an unalterable digital seal (SHA-256) that cannot be denied in court.</li>
             <li><strong>2. The Missing ₹8 Lakh Sheet:</strong> A simple side-by-side table:
-              <ul style="margin-top: 4px; margin-left: 20px;">
+              <ul style="margin-top: 2px; margin-bottom: 2px; margin-left: 18px;">
                 <li>What the Government Paid For: ₹20 Lakhs</li>
                 <li>What was Actually Built on the Ground: ₹12 Lakhs</li>
                 <li>Siphoned Tax Money Flagged for Recovery: <strong>₹8 Lakhs</strong></li>
@@ -658,317 +894,336 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Chapter 3: The Administrative Bottleneck -->
-    <section>
-      <h2>Chapter 3: Why Couldn't District Officers Stop This?</h2>
-      <p>
-        The question is often asked: <em>"Why don't District Collectors simply inspect the files and visit the sites?"</em>
-      </p>
-      <p>
-        The reason is the <strong>Administrative Paper Mountain</strong>:
-      </p>
+    <!-- ==========================================================================
+         PAGE 5: CHAPTER 3 (PAPER MOUNTAIN) & CHAPTER 4 (SATARK CROSS-VERIFICATION)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-5">
+      <!-- Chapter 3: The Administrative Bottleneck -->
+      <section>
+        <h2>Chapter 3: Why Couldn't District Officers Stop This?</h2>
+        <p>
+          The question is often asked: <em>"Why don't District Collectors simply inspect the files and visit the sites?"</em>
+        </p>
+        <p>
+          The reason is the <strong>Administrative Paper Mountain</strong>:
+        </p>
 
-      <div class="quote-box">
-        "Across India, there are more than 127,000 active projects at any moment. A single district office receives 400 to 600 thick paper files every month, but only has 2 or 3 technical engineers on staff. For an engineer to physically visit every single site, they would have to travel to 40 villages every single day without rest."
-      </div>
+        <div class="quote-box">
+          "Across India, there are more than 127,000 active projects at any moment. A single district office receives 400 to 600 thick paper files every month, but only has 2 or 3 technical engineers on staff. For an engineer to physically visit every single site, they would have to travel to 40 villages every single day without rest."
+        </div>
 
-      <p>
-        Because manual physical inspection of all sites is humanly impossible, officers can only randomly spot-check about <strong>1 to 2 percent of files</strong>. Dishonest contractors gamble that their inflated or substandard bill will remain buried at the bottom of the stack.
-      </p>
-    </section>
+        <p>
+          Because manual physical inspection of all sites is humanly impossible, officers can only randomly spot-check about <strong>1 to 2 percent of files</strong>. Dishonest contractors gamble that their inflated or substandard bill will remain buried at the bottom of the stack.
+        </p>
+      </section>
 
-    <!-- Chapter 4: What SATARK Does -->
-    <section>
-      <h2>Chapter 4: What is SATARK? (The Automated Forensic Auditor)</h2>
-      <p>
-        <strong>SATARK</strong> (सतर्क — meaning <em>"Watchful"</em> or <em>"Alert"</em> in Hindi) is an automated software architecture that monitors public expenditure in real time.
-      </p>
-      <p>
-        It processes thousands of transactions simultaneously, compares them against engineering standards and banking records, and identifies irregularities in less than one second.
-      </p>
+      <!-- Chapter 4: What SATARK Does -->
+      <section>
+        <h2>Chapter 4: What is SATARK? (The Automated Forensic Auditor)</h2>
+        <p>
+          <strong>SATARK</strong> (सतर्क — meaning <em>"Watchful"</em> or <em>"Alert"</em> in Hindi) is an automated software architecture that monitors public expenditure in real time.
+        </p>
+        <p>
+          It processes thousands of transactions simultaneously, compares them against engineering standards and banking records, and identifies irregularities in less than one second.
+        </p>
 
-      <h3>The Core Innovation: "Cross-Referencing the Work Diary with the Bank Passbook"</h3>
-      <p>
-        In government administration, project data resides in two isolated computer systems:
-      </p>
+        <h3>The Core Innovation: "Cross-Referencing the Work Diary with the Bank Passbook"</h3>
+        <p>
+          In government administration, project data resides in two isolated computer systems:
+        </p>
 
-      <div class="highlight-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 20px;">
-        <div class="highlight-card">
-          <div class="card-big" style="font-size: 19px;">1. The Work Diary</div>
-          <div class="card-label">Official System: e-SAKSHI</div>
-          <p style="font-size: 13.5px; margin-top: 8px; margin-bottom: 0;">
-            Where administrative sanctions and physical progress are recorded: <em>"School hall approved; marked 100% completed."</em>
+        <div class="highlight-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 12px;">
+          <div class="highlight-card">
+            <div class="card-big" style="font-size: 17px;">1. The Work Diary</div>
+            <div class="card-label">Official System: e-SAKSHI</div>
+            <p style="font-size: 13px; margin-top: 6px; margin-bottom: 0;">
+              Where administrative sanctions and physical progress are recorded: <em>"School hall approved; marked 100% completed."</em>
+            </p>
+          </div>
+          <div class="highlight-card">
+            <div class="card-big" style="font-size: 17px;">2. The Bank Passbook</div>
+            <div class="card-label">Official System: PFMS</div>
+            <p style="font-size: 13px; margin-top: 6px; margin-bottom: 0;">
+              The central treasury banking computer that actually transfers real rupees into contractor bank accounts.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          SATARK bridges these two independent systems line by line and applies fundamental common-sense verification:
+        </p>
+
+        <div class="callout">
+          <div class="callout-title">The Fundamental Cross-Verification</div>
+          <h4>Look at this simple question:</h4>
+          <p style="margin-bottom: 4px;">
+            If the Work Diary says: <strong>"Community Hall is 100% Completed"</strong><br>
+            AND the Bank Passbook says: <strong>"₹0 Paid to Any Agency"</strong>
+          </p>
+          <p style="margin-bottom: 0; font-weight: 800; color: #000000;">
+            &rarr; AUTOMATIC RED FLAG! How can a brick-and-mortar structure be complete if zero rupees were paid for materials or labor? It is an unbuilt Ghost Work!
           </p>
         </div>
-        <div class="highlight-card">
-          <div class="card-big" style="font-size: 19px;">2. The Bank Passbook</div>
-          <div class="card-label">Official System: PFMS</div>
-          <p style="font-size: 13.5px; margin-top: 8px; margin-bottom: 0;">
-            The central treasury banking computer that actually transfers real rupees into contractor bank accounts.
+      </section>
+    </div>
+
+    <!-- ==========================================================================
+         PAGE 6: CHAPTER 5 (THE COMPLETE 15 FORENSIC CHECKS TABLE D1 TO D15)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-6">
+      <section>
+        <h2>Chapter 5: The 15 Automated Forensic Checks</h2>
+        <p style="margin-bottom: 4px;">
+          Whenever an administrative sanction, invoice, or payment milestone is registered, SATARK automatically executes 15 independent forensic checks:
+        </p>
+
+        <p style="font-size: 12.5px; font-style: italic; color: #444444; margin-bottom: 6px; border-left: 3px solid #000000; padding-left: 8px;">
+          You don't need to read every row — skim the plain-English questions in the middle column.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 7%;">ID</th>
+              <th style="width: 25%;">Forensic Check</th>
+              <th style="width: 44%;">The Plain-English Question It Asks</th>
+              <th style="width: 24%;">What It Prevents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>D1</strong></td>
+              <td><strong>Unit Cost Outlier</strong></td>
+              <td><em>"Why does this road cost ₹18,000 per meter when identical roads in this district cost ₹4,500?"</em></td>
+              <td>Unjustified cost inflation &amp; hidden skimming.</td>
+            </tr>
+            <tr>
+              <td><strong>D2</strong></td>
+              <td><strong>Duplicate Project</strong></td>
+              <td><em>"Did someone bill the exact same school wall twice under two slightly different titles?"</em></td>
+              <td>Double billing for a single physical work.</td>
+            </tr>
+            <tr>
+              <td><strong>D3</strong></td>
+              <td><strong>Rate Book &amp; Material Check</strong></td>
+              <td><em>"Is this contractor billing ₹900 for cement when the CPWD Rate Book specifies ₹350, or using damaged materials?"</em></td>
+              <td>Substandard materials &amp; budget siphoning.</td>
+            </tr>
+            <tr>
+              <td><strong>D4</strong></td>
+              <td><strong>Ghost Work Detection</strong></td>
+              <td><em>"Why is this community hall marked 100% complete when treasury records show zero expenditure?"</em></td>
+              <td>Payment for completely non-existent works.</td>
+            </tr>
+            <tr>
+              <td><strong>D5</strong></td>
+              <td><strong>₹4.9 Lakh Tender Split</strong></td>
+              <td><em>"Did this office approve four ₹4.9 Lakh contracts in the same week to evade the ₹5 Lakh e-tender rule?"</em></td>
+              <td>Favored vendor contracts without public bidding.</td>
+            </tr>
+            <tr>
+              <td><strong>D6</strong></td>
+              <td><strong>Abnormal Delay</strong></td>
+              <td><em>"Why has a simple 2-month water pipe installation been ongoing for 4 years without completion?"</em></td>
+              <td>Contractors holding public funds indefinitely.</td>
+            </tr>
+            <tr>
+              <td><strong>D7</strong></td>
+              <td><strong>March Fiscal Panic</strong></td>
+              <td><em>"Did this district approve 70% of its annual budget in the final 7 days of March?"</em></td>
+              <td>Careless year-end budget dumping without checks.</td>
+            </tr>
+            <tr>
+              <td><strong>D8</strong></td>
+              <td><strong>Improbable Same-Day Completion</strong></td>
+              <td><em>"Did 15 different buildings across 15 separate villages all claim completion on the exact same afternoon?"</em></td>
+              <td>Bulk completion certificates signed from an office desk.</td>
+            </tr>
+            <tr>
+              <td><strong>D9</strong></td>
+              <td><strong>Fake Invoice Numbers</strong></td>
+              <td><em>"Do the numbers on these bills look made up by a human rather than real accounting?"</em></td>
+              <td>Forged receipts and invented supplier invoices.</td>
+            </tr>
+            <tr>
+              <td><strong>D10</strong></td>
+              <td><strong>Vague Description Trap</strong></td>
+              <td><em>"Why does the bill only state 'Miscellaneous Civil Work' with zero dimensions, quantities, or materials?"</em></td>
+              <td>Concealing work specifics to evade inspection.</td>
+            </tr>
+            <tr>
+              <td><strong>D11</strong></td>
+              <td><strong>Milestone vs. Disbursement Disparity</strong></td>
+              <td><em>"Why has 90% of funds been disbursed when physical inspection confirms only 15% progress?"</em></td>
+              <td>Unauthorized advance payouts before completion.</td>
+            </tr>
+            <tr>
+              <td><strong>D12</strong></td>
+              <td><strong>Vendor Cartel Monopoly</strong></td>
+              <td><em>"Why is one single private company quietly winning 85% of all contracts in this district?"</em></td>
+              <td>Vendor-official collusion and bidding cartels.</td>
+            </tr>
+            <tr>
+              <td><strong>D13</strong></td>
+              <td><strong>Fairness for New MPs</strong></td>
+              <td><em>"Gives new MPs a fair starting score instead of judging them on too little data."</em></td>
+              <td>Protects honest, newly elected representatives.</td>
+            </tr>
+            <tr>
+              <td><strong>D14</strong></td>
+              <td><strong>Fairness for Mountains</strong></td>
+              <td><em>"Costs more to build on a mountain, so the system adjusts for that automatically."</em></td>
+              <td>Prevents false alarms in hill, border, and island regions.</td>
+            </tr>
+            <tr>
+              <td><strong>D15</strong></td>
+              <td><strong>Repeat Offender Flag</strong></td>
+              <td><em>"Has this specific contractor or agency been cited for fraudulent or substandard work previously?"</em></td>
+              <td>Blacklisting habitual offenders across districts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- ==========================================================================
+         PAGE 7: CHAPTER 6 (CRYPTOGRAPHIC EVIDENCE) & CHAPTER 7 (STAKEHOLDER VIEWS)
+         ========================================================================== -->
+    <div class="pdf-page" id="page-7">
+      <!-- Chapter 6: The Unhackable Camera -->
+      <section>
+        <h2>Chapter 6: Cryptographic Evidence &amp; Tamper-Proof Mobile Verification</h2>
+        <p>
+          In many real-world corruption inquiries, paper records mysteriously go missing or stock photos from the internet are submitted as verification. SATARK eliminates this vulnerability using <strong>Cryptographic Mobile Evidence</strong>:
+        </p>
+
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">A</div>
+            <div class="step-content">
+              <h4>Field Engineer Takes a Photo On Site</h4>
+              <p>The visiting inspecting engineer uses the dedicated SATARK mobile application at the physical project location.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">B</div>
+            <div class="step-content">
+              <h4>Satellite GPS &amp; Timestamp Stamping</h4>
+              <p>The device locks the <strong>exact satellite GPS latitude/longitude, altitude, compass bearing, date, and microsecond timestamp</strong> directly into the image metadata.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">C</div>
+            <div class="step-content">
+              <h4>Digital Cryptographic Seal (SHA-256 Hash)</h4>
+              <p>The file is hashed with an SHA-256 digital signature immediately upon capture. If any individual alters even a single pixel or attempts to backdate the report, the cryptographic seal invalidates, alerting auditors instantly.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p>
+          The resulting inspection record cannot be modified, deleted, or backdated by any politician, official, or contractor. It constitutes <strong>court-admissible electronic evidence</strong> under the Indian Evidence Act.
+        </p>
+      </section>
+
+      <!-- Chapter 7: Role-Based Portals -->
+      <section>
+        <h2>Chapter 7: What Each Stakeholder Sees on the Screen</h2>
+        <p>
+          SATARK provides tailored operational views for each level of public administration:
+        </p>
+
+        <div class="callout">
+          <div class="callout-title">1. Public Citizen Portal (Open to Any Citizen on Mobile)</div>
+          <p style="margin-bottom: 4px;">
+            Citizens can visit <a href="https://mplads-intelligence-portal.vercel.app" target="_blank">the public portal</a>, select their state, district, or constituency, and immediately view:
+          </p>
+          <ul style="margin-bottom: 0;">
+            <li>Total funds allocated, sanctioned, and disbursed for their area.</li>
+            <li>Every approved drinking water plant, school, road, and community center.</li>
+            <li>Verified geotagged photos and physical completion milestones.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">2. District Magistrate Command Desk (Action-Oriented Triage)</div>
+          <p style="margin-bottom: 4px;">
+            District Collectors have demanding schedules and cannot navigate thousands of alerts. SATARK provides a <strong>"Top Priority Action Inbox"</strong>:
+          </p>
+          <ul style="margin-bottom: 0;">
+            <li><strong>Clean Stream:</strong> The 74% of projects with zero anomalies are cleared for fast-track processing and vendor payment.</li>
+            <li><strong>Targeted Triage:</strong> The top 5 highest-risk anomalies are presented with full evidence, allowing the Collector to dispatch field inspection squads directly to specific coordinates.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">3. Member of Parliament Portal (Accountability &amp; Delivery)</div>
+          <p style="margin-bottom: 0;">
+            Elected representatives can monitor the progress of their recommended works in real time, identify bureaucratic delays in the district administration, and present voters with verified proof of completed community infrastructure.
           </p>
         </div>
-      </div>
+      </section>
+    </div>
 
-      <p>
-        SATARK bridges these two independent systems line by line and applies fundamental common-sense verification:
-      </p>
+    <!-- ==========================================================================
+         PAGE 8: CHAPTER 8 (FAQ), CHAPTER 9 (STATUTORY FRAMEWORK) & FOOTER
+         ========================================================================== -->
+    <div class="pdf-page" id="page-8">
+      <!-- Chapter 8: Frequently Asked Questions -->
+      <section>
+        <h2>Chapter 8: Frequently Asked Questions (FAQ)</h2>
 
-      <div class="callout">
-        <div class="callout-title">The Fundamental Cross-Verification</div>
-        <h4>Look at this simple question:</h4>
-        <p>
-          If the Work Diary says: <strong>"Community Hall is 100% Completed"</strong><br>
-          AND the Bank Passbook says: <strong>"₹0 Paid to Any Agency"</strong>
-        </p>
-        <p style="margin-bottom: 0; font-weight: 800; color: #000000;">
-          &rarr; AUTOMATIC RED FLAG! How can a brick-and-mortar structure be complete if zero rupees were paid for materials or labor? It is an unbuilt Ghost Work!
-        </p>
-      </div>
-    </section>
-
-    <!-- Chapter 5: The 15 Detective Checks -->
-    <section>
-      <h2>Chapter 5: The 15 Automated Forensic Checks</h2>
-      <p>
-        Whenever an administrative sanction, invoice, or payment milestone is registered, SATARK automatically executes 15 independent forensic checks:
-      </p>
-
-      <p style="font-size: 14px; font-style: italic; color: #444444; margin-bottom: 12px; border-left: 3px solid #000000; padding-left: 10px;">
-        You don't need to read every row — skim the plain-English questions in the middle column.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th style="width: 7%;">ID</th>
-            <th style="width: 25%;">Forensic Check</th>
-            <th style="width: 43%;">The Plain-English Question It Asks</th>
-            <th style="width: 25%;">What It Prevents</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>D1</strong></td>
-            <td><strong>Unit Cost Outlier</strong></td>
-            <td><em>"Why does this road cost ₹18,000 per meter when identical roads in this district cost ₹4,500?"</em></td>
-            <td>Unjustified cost inflation &amp; hidden skimming.</td>
-          </tr>
-          <tr>
-            <td><strong>D2</strong></td>
-            <td><strong>Duplicate Project</strong></td>
-            <td><em>"Did someone bill the exact same school wall twice under two slightly different titles?"</em></td>
-            <td>Double billing for a single physical work.</td>
-          </tr>
-          <tr>
-            <td><strong>D3</strong></td>
-            <td><strong>Rate Book &amp; Material Check</strong></td>
-            <td><em>"Is this contractor billing ₹900 for cement when the CPWD Rate Book specifies ₹350, or using damaged materials?"</em></td>
-            <td>Substandard materials &amp; budget siphoning.</td>
-          </tr>
-          <tr>
-            <td><strong>D4</strong></td>
-            <td><strong>Ghost Work Detection</strong></td>
-            <td><em>"Why is this community hall marked 100% complete when treasury records show zero expenditure?"</em></td>
-            <td>Payment for completely non-existent works.</td>
-          </tr>
-          <tr>
-            <td><strong>D5</strong></td>
-            <td><strong>₹4.9 Lakh Tender Split</strong></td>
-            <td><em>"Did this office approve four ₹4.9 Lakh contracts in the same week to evade the ₹5 Lakh e-tender rule?"</em></td>
-            <td>Favored vendor contracts without public bidding.</td>
-          </tr>
-          <tr>
-            <td><strong>D6</strong></td>
-            <td><strong>Abnormal Delay</strong></td>
-            <td><em>"Why has a simple 2-month water pipe installation been ongoing for 4 years without completion?"</em></td>
-            <td>Contractors holding public funds indefinitely.</td>
-          </tr>
-          <tr>
-            <td><strong>D7</strong></td>
-            <td><strong>March Fiscal Panic</strong></td>
-            <td><em>"Did this district approve 70% of its annual budget in the final 7 days of March?"</em></td>
-            <td>Careless year-end budget dumping without checks.</td>
-          </tr>
-          <tr>
-            <td><strong>D8</strong></td>
-            <td><strong>Improbable Same-Day Completion</strong></td>
-            <td><em>"Did 15 different buildings across 15 separate villages all claim completion on the exact same afternoon?"</em></td>
-            <td>Bulk completion certificates signed from an office desk.</td>
-          </tr>
-          <tr>
-            <td><strong>D9</strong></td>
-            <td><strong>Fake Invoice Numbers</strong></td>
-            <td><em>"Do the numbers on these bills look made up by a human rather than real accounting?"</em></td>
-            <td>Forged receipts and invented supplier invoices.</td>
-          </tr>
-          <tr>
-            <td><strong>D10</strong></td>
-            <td><strong>Vague Description Trap</strong></td>
-            <td><em>"Why does the bill only state 'Miscellaneous Civil Work' with zero dimensions, quantities, or materials?"</em></td>
-            <td>Concealing work specifics to evade inspection.</td>
-          </tr>
-          <tr>
-            <td><strong>D11</strong></td>
-            <td><strong>Milestone vs. Disbursement Disparity</strong></td>
-            <td><em>"Why has 90% of funds been disbursed when physical inspection confirms only 15% progress?"</em></td>
-            <td>Unauthorized advance payouts before completion.</td>
-          </tr>
-          <tr>
-            <td><strong>D12</strong></td>
-            <td><strong>Vendor Cartel Monopoly</strong></td>
-            <td><em>"Why is one single private company quietly winning 85% of all contracts in this district?"</em></td>
-            <td>Vendor-official collusion and bidding cartels.</td>
-          </tr>
-          <tr>
-            <td><strong>D13</strong></td>
-            <td><strong>Fairness for New MPs</strong></td>
-            <td><em>"Gives new MPs a fair starting score instead of judging them on too little data."</em></td>
-            <td>Protects honest, newly elected representatives.</td>
-          </tr>
-          <tr>
-            <td><strong>D14</strong></td>
-            <td><strong>Fairness for Mountains</strong></td>
-            <td><em>"Costs more to build on a mountain, so the system adjusts for that automatically."</em></td>
-            <td>Prevents false alarms in hill, border, and island regions.</td>
-          </tr>
-          <tr>
-            <td><strong>D15</strong></td>
-            <td><strong>Repeat Offender Flag</strong></td>
-            <td><em>"Has this specific contractor or agency been cited for fraudulent or substandard work previously?"</em></td>
-            <td>Blacklisting habitual offenders across districts.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Chapter 6: The Unhackable Camera -->
-    <section>
-      <h2>Chapter 6: Cryptographic Evidence &amp; Tamper-Proof Mobile Verification</h2>
-      <p>
-        In many real-world corruption inquiries, paper records mysteriously go missing or stock photos from the internet are submitted as verification. SATARK eliminates this vulnerability using <strong>Cryptographic Mobile Evidence</strong>:
-      </p>
-
-      <ul class="step-list">
-        <li class="step-item">
-          <div class="step-num">A</div>
-          <div class="step-content">
-            <h4>Field Engineer Takes a Photo On Site</h4>
-            <p>The visiting inspecting engineer uses the dedicated SATARK mobile application at the physical project location.</p>
+        <div class="qa-block">
+          <div class="qa-q">Q: Does the software make administrative decisions autonomously?</div>
+          <div class="qa-a">
+            <strong>No.</strong> SATARK functions as an intelligent diagnostic tool, analogous to a medical scanner. It uncovers and structures the evidence (e.g., tender splitting, material shortages, unit-cost inflation), but the legal authority to halt payments, issue show-cause notices, or initiate audits remains entirely with the District Magistrate and MoSPI authorities.
           </div>
-        </li>
-        <li class="step-item">
-          <div class="step-num">B</div>
-          <div class="step-content">
-            <h4>Satellite GPS &amp; Timestamp Stamping</h4>
-            <p>The device locks the <strong>exact satellite GPS latitude/longitude, altitude, compass bearing, date, and microsecond timestamp</strong> directly into the image metadata.</p>
+        </div>
+
+        <div class="qa-block">
+          <div class="qa-q">Q: Does the system require expensive infrastructure or proprietary software?</div>
+          <div class="qa-a">
+            <strong>No.</strong> The portal is accessible via standard web browsers on existing government PCs, tablets, and smartphones. Built on open-source standards, it incurs <strong>zero recurring software license fees</strong> for the exchequer.
           </div>
-        </li>
-        <li class="step-item">
-          <div class="step-num">C</div>
-          <div class="step-content">
-            <h4>Digital Cryptographic Seal (SHA-256 Hash)</h4>
-            <p>The file is hashed with an SHA-256 digital signature immediately upon capture. If any individual alters even a single pixel or attempts to backdate the report, the cryptographic seal invalidates, alerting auditors instantly.</p>
+        </div>
+
+        <div class="qa-block">
+          <div class="qa-q">Q: Has this been validated against real government data?</div>
+          <div class="qa-a">
+            <strong>Yes.</strong> The platform has been tested against <strong>53,197 real public works</strong> and <strong>29,000 official expenditure records</strong> from MoSPI. It accurately identified historical audit anomalies, tender splits, and delayed works within fractions of a second.
           </div>
-        </li>
-      </ul>
+        </div>
 
-      <p>
-        The resulting inspection record cannot be modified, deleted, or backdated by any politician, official, or contractor. It constitutes <strong>court-admissible electronic evidence</strong> under the Indian Evidence Act.
-      </p>
-    </section>
+        <div class="qa-block">
+          <div class="qa-q">Q: How can anyone independently audit or verify this platform?</div>
+          <div class="qa-a">
+            The working portal is live at <a href="https://mplads-intelligence-portal.vercel.app" target="_blank"><strong>mplads-intelligence-portal.vercel.app</strong></a>. The entire codebase, analytical models, and audit pipelines are publicly available for inspection on <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank"><strong>GitHub</strong></a>.
+          </div>
+        </div>
+      </section>
 
-    <!-- Chapter 7: Role-Based Portals -->
-    <section>
-      <h2>Chapter 7: What Each Stakeholder Sees on the Screen</h2>
-      <p>
-        SATARK provides tailored operational views for each level of public administration:
-      </p>
-
-      <div class="callout">
-        <div class="callout-title">1. Public Citizen Portal (Open to Any Citizen on Mobile)</div>
-        <p>
-          Citizens can visit <a href="https://mplads-intelligence-portal.vercel.app" target="_blank">the public portal</a>, select their state, district, or constituency, and immediately view:
+      <!-- Chapter 9: Statutory & Regulatory Framework -->
+      <section>
+        <h2>Chapter 9: Statutory &amp; Regulatory Framework</h2>
+        <p style="margin-bottom: 6px;">
+          All analytical models and anomaly rules in SATARK are grounded in official Indian statutory frameworks:
         </p>
         <ul style="margin-bottom: 0;">
-          <li>Total funds allocated, sanctioned, and disbursed for their area.</li>
-          <li>Every approved drinking water plant, school, road, and community center.</li>
-          <li>Verified geotagged photos and physical completion milestones.</li>
+          <li><strong>Ministry of Statistics and Programme Implementation (MoSPI):</strong> <a href="https://www.mplads.gov.in" target="_blank">https://www.mplads.gov.in</a></li>
+          <li><strong>Public Financial Management System (PFMS):</strong> <a href="https://pfms.nic.in" target="_blank">https://pfms.nic.in</a></li>
+          <li><strong>Comptroller and Auditor General of India (CAG Report 31/2010):</strong> <a href="https://cag.gov.in" target="_blank">https://cag.gov.in</a></li>
+          <li><strong>CPWD Delhi Schedule of Rates (DSR 2023):</strong> <a href="https://cpwd.gov.in" target="_blank">https://cpwd.gov.in</a></li>
+          <li><strong>General Financial Rules (GFR 2017 - Rule 157):</strong> <a href="https://doe.gov.in" target="_blank">https://doe.gov.in</a></li>
         </ul>
-      </div>
+      </section>
 
-      <div class="callout">
-        <div class="callout-title">2. District Magistrate Command Desk (Action-Oriented Triage)</div>
-        <p>
-          District Collectors have demanding schedules and cannot navigate thousands of alerts. SATARK provides a <strong>"Top Priority Action Inbox"</strong>:
-        </p>
-        <ul style="margin-bottom: 0;">
-          <li><strong>Clean Stream:</strong> The 74% of projects with zero anomalies are cleared for fast-track processing and vendor payment.</li>
-          <li><strong>Targeted Triage:</strong> The top 5 highest-risk anomalies are presented with full evidence, allowing the Collector to dispatch field inspection squads directly to specific coordinates.</li>
-        </ul>
-      </div>
-
-      <div class="callout">
-        <div class="callout-title">3. Member of Parliament Portal (Accountability &amp; Delivery)</div>
-        <p style="margin-bottom: 0;">
-          Elected representatives can monitor the progress of their recommended works in real time, identify bureaucratic delays in the district administration, and present voters with verified proof of completed community infrastructure.
-        </p>
-      </div>
-    </section>
-
-    <!-- Chapter 8: Frequently Asked Questions -->
-    <section>
-      <h2>Chapter 8: Frequently Asked Questions (FAQ)</h2>
-
-      <div class="qa-block">
-        <div class="qa-q">Q: Does the software make administrative decisions autonomously?</div>
-        <div class="qa-a">
-          <strong>No.</strong> SATARK functions as an intelligent diagnostic tool, analogous to a medical scanner. It uncovers and structures the evidence (e.g., tender splitting, material shortages, unit-cost inflation), but the legal authority to halt payments, issue show-cause notices, or initiate audits remains entirely with the District Magistrate and MoSPI authorities.
-        </div>
-      </div>
-
-      <div class="qa-block">
-        <div class="qa-q">Q: Does the system require expensive infrastructure or proprietary software?</div>
-        <div class="qa-a">
-          <strong>No.</strong> The portal is accessible via standard web browsers on existing government PCs, tablets, and smartphones. Built on open-source standards, it incurs <strong>zero recurring software license fees</strong> for the exchequer.
-        </div>
-      </div>
-
-      <div class="qa-block">
-        <div class="qa-q">Q: Has this been validated against real government data?</div>
-        <div class="qa-a">
-          <strong>Yes.</strong> The platform has been tested against <strong>53,197 real public works</strong> and <strong>29,000 official expenditure records</strong> from MoSPI. It accurately identified historical audit anomalies, tender splits, and delayed works within fractions of a second.
-        </div>
-      </div>
-
-      <div class="qa-block">
-        <div class="qa-q">Q: How can anyone independently audit or verify this platform?</div>
-        <div class="qa-a">
-          The working portal is live at <a href="https://mplads-intelligence-portal.vercel.app" target="_blank"><strong>mplads-intelligence-portal.vercel.app</strong></a>. The entire codebase, analytical models, and audit pipelines are publicly available for inspection on <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank"><strong>GitHub</strong></a>.
-        </div>
-      </div>
-    </section>
-
-    <!-- Chapter 9: Statutory & Regulatory Framework -->
-    <section>
-      <h2>Chapter 9: Statutory &amp; Regulatory Framework</h2>
-      <p>
-        All analytical models and anomaly rules in SATARK are grounded in official Indian statutory frameworks:
-      </p>
-      <ul>
-        <li><strong>Ministry of Statistics and Programme Implementation (MoSPI):</strong> <a href="https://www.mplads.gov.in" target="_blank">https://www.mplads.gov.in</a></li>
-        <li><strong>Public Financial Management System (PFMS):</strong> <a href="https://pfms.nic.in" target="_blank">https://pfms.nic.in</a></li>
-        <li><strong>Comptroller and Auditor General of India (CAG Report 31/2010):</strong> <a href="https://cag.gov.in" target="_blank">https://cag.gov.in</a></li>
-        <li><strong>CPWD Delhi Schedule of Rates (DSR 2023):</strong> <a href="https://cpwd.gov.in" target="_blank">https://cpwd.gov.in</a></li>
-        <li><strong>General Financial Rules (GFR 2017 - Rule 157):</strong> <a href="https://doe.gov.in" target="_blank">https://doe.gov.in</a></li>
-      </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      SATARK-MPLADS | Dedicated to 100% Public Treasury Transparency &amp; Fiscal Integrity
-    </footer>
+      <!-- Footer -->
+      <footer>
+        SATARK-MPLADS | Dedicated to 100% Public Treasury Transparency &amp; Fiscal Integrity
+      </footer>
+    </div>
 
   </div>
 
