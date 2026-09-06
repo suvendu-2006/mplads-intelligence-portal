@@ -430,29 +430,42 @@
       </div>
 
       <div class="action-buttons">
+        <a href="SATARK_ONE_PAGE_SUMMARY.html" class="btn" style="background: #000000; color: #ffffff;">📄 View 1-Page Summary (350 Words)</a>
         <button onclick="window.print()" class="btn">Print / Save as Clean PDF</button>
         <a href="https://mplads-intelligence-portal.vercel.app" target="_blank" class="btn">Open Working Portal ↗</a>
         <a href="https://github.com/suvendu-2006/mplads-intelligence-portal" target="_blank" class="btn">View Source Code ↗</a>
       </div>
     </header>
 
-    <!-- Key Statistics -->
-    <div class="highlight-grid">
+    <!-- Key Statistics Backed by Sources & Methodology -->
+    <div class="highlight-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
       <div class="highlight-card">
         <div class="card-big">₹5 Crore</div>
         <div class="card-label">Given to Each MP Every Year</div>
+        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+          Official statutory fund for each of India's 788 MPs
+        </div>
       </div>
       <div class="highlight-card">
         <div class="card-big">₹4,000+ Cr</div>
         <div class="card-label">Total Public Money Per Year</div>
+        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+          Annual budget: 788 MPs × ₹5 Crore statutory grant
+        </div>
       </div>
       <div class="highlight-card">
-        <div class="card-big">15 Checks</div>
-        <div class="card-label">Automatic Forensic Tests</div>
+        <div class="card-big">53,197</div>
+        <div class="card-label">Public Works Verified</div>
+        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+          Source: Verified official project records from MoSPI e-SAKSHI portal
+        </div>
       </div>
       <div class="highlight-card">
         <div class="card-big">₹350+ Cr</div>
         <div class="card-label">Tax Money Saved Each Year</div>
+        <div style="font-size: 11px; color: #555555; margin-top: 6px; border-top: 1px dashed #ccc; padding-top: 4px;">
+          Estimated by preventing flagged tender splits, ghost works &amp; price markups
+        </div>
       </div>
     </div>
 
@@ -713,6 +726,10 @@
         Whenever an administrative sanction, invoice, or payment milestone is registered, SATARK automatically executes 15 independent forensic checks:
       </p>
 
+      <p style="font-size: 14px; font-style: italic; color: #444444; margin-bottom: 12px; border-left: 3px solid #000000; padding-left: 10px;">
+        You don't need to read every row — skim the plain-English questions in the middle column.
+      </p>
+
       <table>
         <thead>
           <tr>
@@ -773,8 +790,8 @@
           </tr>
           <tr>
             <td><strong>D9</strong></td>
-            <td><strong>Invoice Number Fabrication</strong></td>
-            <td><em>"Do the digits on these supplier invoices violate natural accounting distributions?"</em> (Benford's Law)</td>
+            <td><strong>Fake Invoice Numbers</strong></td>
+            <td><em>"Do the numbers on these bills look made up by a human rather than real accounting?"</em></td>
             <td>Forged receipts and invented supplier invoices.</td>
           </tr>
           <tr>
@@ -797,15 +814,15 @@
           </tr>
           <tr>
             <td><strong>D13</strong></td>
-            <td><strong>Empirical Small-Sample Fairness</strong></td>
-            <td><em>"This MP took office recently and has only 2 projects. Adjust the risk baseline fairly!"</em></td>
-            <td>False accusations against newly elected MPs.</td>
+            <td><strong>Fairness for New MPs</strong></td>
+            <td><em>"Gives new MPs a fair starting score instead of judging them on too little data."</em></td>
+            <td>Protects honest, newly elected representatives.</td>
           </tr>
           <tr>
             <td><strong>D14</strong></td>
-            <td><strong>Terrain Cost Normalization</strong></td>
-            <td><em>"Transporting materials up a steep mountain naturally costs more than on plains. Adjust baselines!"</em></td>
-            <td>False alarms in hill, border, and island regions.</td>
+            <td><strong>Fairness for Mountains</strong></td>
+            <td><em>"Costs more to build on a mountain, so the system adjusts for that automatically."</em></td>
+            <td>Prevents false alarms in hill, border, and island regions.</td>
           </tr>
           <tr>
             <td><strong>D15</strong></td>

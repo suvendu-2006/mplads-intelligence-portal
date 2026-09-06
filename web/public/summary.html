@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SATARK-MPLADS: One-Page Plain Summary</title>
+  <style>
+    /* ==========================================================================
+       ONE-PAGE PLAIN SUMMARY (300-400 Words | Single Page Layout)
+       Pure White Background (#ffffff) & Crisp Black Typography (#000000)
+       Zero Logos | Zero Jargon | Read & Understood in Under 1 Minute
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      padding: 32px 20px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+
+    header {
+      border-bottom: 2.5px solid #000000;
+      padding-bottom: 16px;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #555555;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.2;
+      color: #000000;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #222222;
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .stat-card {
+      border: 1.5px solid #000000;
+      padding: 10px 12px;
+      background-color: #ffffff;
+    }
+
+    .stat-num {
+      font-size: 20px;
+      font-weight: 900;
+      font-family: monospace;
+      color: #000000;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #000000;
+      margin-top: 4px;
+    }
+
+    .stat-source {
+      font-size: 9.5px;
+      color: #555555;
+      line-height: 1.3;
+      margin-top: 4px;
+      border-top: 1px dashed #cccccc;
+      padding-top: 4px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1.5px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .bullets-box {
+      border: 1.5px solid #000000;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+    }
+
+    .bullets-box ol {
+      margin-left: 18px;
+    }
+
+    .bullets-box li {
+      margin-bottom: 8px;
+      color: #111111;
+      font-size: 14.5px;
+    }
+
+    .bullets-box li:last-child {
+      margin-bottom: 0;
+    }
+
+    .trick-box {
+      border: 1.5px solid #000000;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      background-color: #ffffff;
+    }
+
+    .trick-title {
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 6px;
+      color: #000000;
+    }
+
+    .trick-box p {
+      font-size: 14px;
+      color: #222222;
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+
+    .trick-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-top: 1.5px solid #000000;
+      padding-top: 14px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: #000000;
+      border: 1.5px solid #000000;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .btn:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .full-report-link {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #000000;
+      text-decoration: underline;
+      margin-left: auto;
+    }
+
+    @media (max-width: 650px) {
+      .stat-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .full-report-link {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    @media print {
+      body { padding: 0; font-size: 12px; }
+      .actions { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="tag">National Public Treasury Transparency | One-Page Executive Brief</div>
+      <h1>SATARK-MPLADS: Plain Summary</h1>
+      <p class="subtitle">
+        How an automated software watchdog protects ₹4,000+ Crores of citizens' tax money every year across India — explained in 350 words.
+      </p>
+    </header>
+
+    <!-- 4 Key Stat Boxes Backed by Methodology -->
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">₹5 Crore</div>
+        <div class="stat-label">Per MP / Year</div>
+        <div class="stat-source">Official statutory fund for each of India's 788 MPs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">₹4,000+ Cr</div>
+        <div class="stat-label">Total Fund / Year</div>
+        <div class="stat-source">Annual public tax budget: 788 MPs × ₹5 Crore statutory grant</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">53,197</div>
+        <div class="stat-label">Works Verified</div>
+        <div class="stat-source">Official project records from the MoSPI e-SAKSHI portal</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">₹350+ Cr</div>
+        <div class="stat-label">Saved Per Year</div>
+        <div class="stat-source">Estimated by preventing flagged tender splits, ghost works &amp; markups</div>
+      </div>
+    </div>
+
+    <!-- The 3 Executive Bullets -->
+    <div class="section-title">The Project in 3 Plain Bullets</div>
+    <div class="bullets-box">
+      <ol>
+        <li>
+          <strong>The Money:</strong> The Indian Government gives each Member of Parliament (MP) ₹5 Crores every year to build drinking water plants, village roads, and school classrooms. <em>The MP never receives cash</em>—they only write a letter recommending what to build. The local District Collector hires a contractor, and the central treasury transfers the funds upon completion.
+        </li>
+        <li>
+          <strong>The Problem:</strong> Over 120,000 projects happen across India at the same time, but district offices only have 2 or 3 engineers. Because human officers can only check about 1 out of 100 files, corrupt contractors take advantage by submitting fake bills, splitting large contracts into small ₹4.9 Lakh chunks to dodge open public bidding, or claiming buildings are finished when nothing was ever built.
+        </li>
+        <li>
+          <strong>The Solution (SATARK):</strong> An automated software watchdog that cross-checks the <em>"Work Diary"</em> (where officers type what is completed) against the <em>"Central Bank Passbook"</em> (where real money leaves the treasury). In under 1 second, it flags fake claims, freezes unauthorized payouts, and locks GPS satellite photo evidence with an unalterable digital seal.
+        </li>
+      </ol>
+    </div>
+
+    <!-- One Clear Example: The Ghost Building -->
+    <div class="section-title">How It Works in Real Life: The "Ghost Building"</div>
+    <div class="trick-box">
+      <div class="trick-title">The Invisible Hospital Example</div>
+      <p>
+        <strong>The Everyday Comparison:</strong> Imagine you pay a carpenter ₹50,000 for a bedroom wardrobe. Two weeks later, he hands you a stamped receipt saying <em>"100% Finished"</em> and takes your money. But when you open your bedroom door, there is only an empty floor—no wood, no wardrobe, nothing. The wardrobe exists only on paper.
+      </p>
+      <p>
+        <strong>What Happens in the Village:</strong> A contractor and a compromised local engineer sign a completion certificate for a ₹25 Lakh village health clinic. They collect public tax money from the treasury. But on the ground, there is only an empty field of grass and grazing cows. No foundation was ever dug.
+      </p>
+      <p>
+        <strong>How SATARK Catches It:</strong> SATARK compares the Work Diary with the Central Bank Account: <em>"Hold on! You claim a whole hospital is 100% completed, but the bank shows you paid ₹0 for bricks, ₹0 for cement, and ₹0 for workers!"</em> It instantly sounds an alarm, halts payment, and dispatches a verified inspection squad.
+      </p>
+    </div>
+
+    <!-- Actions & Links -->
+    <div class="actions">
+      <button onclick="window.print()" class="btn">Print / Save 1-Page PDF</button>
+      <a href="https://mplads-intelligence-portal.vercel.app" target="_blank" class="btn">Open Working Portal ↗</a>
+      <a href="/documentation.html" class="full-report-link">Read the Full Technical Report &rarr;</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

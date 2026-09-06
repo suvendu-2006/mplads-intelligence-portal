@@ -68,7 +68,11 @@
       "destination": "/documentation.html"
     },
     {
-      "source": "/((?!api|assets|favicon|data|documentation|dossier).*)",
+      "source": "/summary",
+      "destination": "/summary.html"
+    },
+    {
+      "source": "/((?!api|assets|favicon|data|documentation|dossier|summary).*)",
       "destination": "/index.html"
     }
   ]
