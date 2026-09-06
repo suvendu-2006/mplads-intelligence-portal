@@ -13,6 +13,8 @@ interface CacheRecord {
 
 // In-memory instant RAM cache for sub-millisecond responses
 const memoryCache = new Map<string, CacheRecord>()
+// In-flight promise map to deduplicate identical concurrent GET requests
+const inFlightRequests = new Map<string, Promise<Response>>()
 const STALE_TTL_MS = 60000 // 60 seconds stale-while-revalidate window
 const SESSION_CACHE_PREFIX = 'satark_swr_'
 
@@ -94,7 +96,8 @@ async function fetchAndCache(
  * Universal Fetch Interceptor
  * 1. Automatically injects authentication tokens and role context headers.
  * 2. Instant Stale-While-Revalidate (SWR) cache for <1ms page renders and tab switches.
- * 3. Transparent auto-healing if the backend session expires or restarts.
+ * 3. In-flight request deduplication to prevent redundant parallel network requests.
+ * 4. Transparent auto-healing if the backend session expires or restarts.
  */
 export function initApiSync() {
   if (typeof window === 'undefined' || isInterceptorInitialized) return
@@ -174,8 +177,11 @@ export function initApiSync() {
         const isStale = Date.now() - cachedRecord.timestamp > STALE_TTL_MS
 
         // If stale, silently revalidate in the background
-        if (isStale) {
-          fetchAndCache(input, modifiedInit, cacheKey, originalFetch).catch(() => {})
+        if (isStale && !inFlightRequests.has(cacheKey)) {
+          const revalPromise = fetchAndCache(input, modifiedInit, cacheKey, originalFetch).finally(() => {
+            inFlightRequests.delete(cacheKey)
+          })
+          inFlightRequests.set(cacheKey, revalPromise)
         }
 
         // Return synthetic response immediately for instantaneous rendering!
@@ -186,10 +192,30 @@ export function initApiSync() {
         })
       }
 
-      // Not cached: execute network request and cache the result
+      // Deduplicate concurrent in-flight requests for identical cacheKey
+      if (inFlightRequests.has(cacheKey)) {
+        try {
+          const inFlightRes = await inFlightRequests.get(cacheKey)!
+          return inFlightRes.clone()
+        } catch {
+          // If in-flight failed, continue with new attempt
+        }
+      }
+
+      // Not cached: execute network request with in-flight deduplication
       let response: Response
+      const fetchPromise = (async () => {
+        try {
+          return await fetchAndCache(input, modifiedInit, cacheKey, originalFetch)
+        } finally {
+          inFlightRequests.delete(cacheKey)
+        }
+      })()
+
+      inFlightRequests.set(cacheKey, fetchPromise)
+
       try {
-        response = await fetchAndCache(input, modifiedInit, cacheKey, originalFetch)
+        response = await fetchPromise
       } catch (networkErr) {
         console.warn('[SATARK-SYNC] Network error contacting API:', networkErr)
         throw networkErr
@@ -241,22 +267,31 @@ export function initApiSync() {
 }
 
 /**
- * Pre-warms core portal data asynchronously so subsequent tab switches are instantaneous.
+ * Pre-warms core portal data gently during browser idle time so subsequent tab switches are instantaneous.
  */
 export function warmupApiCache() {
   if (typeof window === 'undefined') return
-  setTimeout(() => {
+
+  const runWarmup = () => {
+    // Only prefetch secondary routes not already loaded by the initial active dashboard
     const endpoints = [
-      '/api/national',
-      '/api/national/analytics',
       '/api/states?sort=allocated&order=desc',
       '/api/mps?page=1&page_size=50&sort=allocated&order=desc',
       '/api/districts?page=1&page_size=50&sort=total_works&order=desc',
     ]
-    endpoints.forEach((url) => {
-      fetch(url).catch(() => {})
+    // Stagger warmup requests by 350ms to ensure 0 network contention
+    endpoints.forEach((url, idx) => {
+      setTimeout(() => {
+        fetch(url).catch(() => {})
+      }, idx * 350)
     })
-  }, 100)
+  }
+
+  if ('requestIdleCallback' in window) {
+    (window as any).requestIdleCallback(runWarmup, { timeout: 4000 })
+  } else {
+    setTimeout(runWarmup, 2500)
+  }
 }
 
 /**

@@ -79,9 +79,10 @@ def get_pcs_geojson(request: Request):
             _CACHED_PCS_GZIP = gzip.compress(_CACHED_PCS_RAW)
 
     accept = request.headers.get("accept-encoding", "").lower()
+    headers = {"Cache-Control": "public, max-age=86400, immutable"}
     if "gzip" in accept and _CACHED_PCS_GZIP:
-        return Response(content=_CACHED_PCS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip"})
-    return Response(content=_CACHED_PCS_RAW, media_type="application/json")
+        return Response(content=_CACHED_PCS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip", **headers})
+    return Response(content=_CACHED_PCS_RAW, media_type="application/json", headers=headers)
 
 @router.get("/map/districts")
 def get_districts_geojson(request: Request):
@@ -99,9 +100,10 @@ def get_districts_geojson(request: Request):
         
         if _CACHED_DISTRICTS_RAW is not None:
             accept = request.headers.get("accept-encoding", "").lower()
+            headers = {"Cache-Control": "public, max-age=86400, immutable"}
             if "gzip" in accept and _CACHED_DISTRICTS_GZIP:
-                return Response(content=_CACHED_DISTRICTS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip"})
-            return Response(content=_CACHED_DISTRICTS_RAW, media_type="application/json")
+                return Response(content=_CACHED_DISTRICTS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip", **headers})
+            return Response(content=_CACHED_DISTRICTS_RAW, media_type="application/json", headers=headers)
 
         geojson = copy.deepcopy(load_geojson("india_districts.geojson"))
         df_districts = load_districts_csv()
@@ -238,6 +240,7 @@ def get_districts_geojson(request: Request):
         _CACHED_DISTRICTS_GZIP = gzip.compress(_CACHED_DISTRICTS_RAW)
 
     accept = request.headers.get("accept-encoding", "").lower()
+    headers = {"Cache-Control": "public, max-age=86400, immutable"}
     if "gzip" in accept and _CACHED_DISTRICTS_GZIP:
-        return Response(content=_CACHED_DISTRICTS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip"})
-    return Response(content=_CACHED_DISTRICTS_RAW, media_type="application/json")
+        return Response(content=_CACHED_DISTRICTS_GZIP, media_type="application/json", headers={"Content-Encoding": "gzip", **headers})
+    return Response(content=_CACHED_DISTRICTS_RAW, media_type="application/json", headers=headers)

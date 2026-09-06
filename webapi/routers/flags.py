@@ -13,6 +13,8 @@ from mplads_fraud_detection.foundation.schema import Work, Anomaly
 
 router = APIRouter()
 
+_flags_cache: dict = {}
+
 @router.get("/flags", response_model=EnvelopeResponse[List[FlagItem]])
 def list_all_flags(
     state: Optional[str] = None,
@@ -24,6 +26,10 @@ def list_all_flags(
     page_size: int = Query(50, ge=1, le=200),
     db: Session = Depends(get_db)
 ):
+    cache_key = f"{state}_{district}_{tier}_{detector}_{q}_{page}_{page_size}".lower()
+    if cache_key in _flags_cache:
+        return _flags_cache[cache_key]
+
     query = db.query(Anomaly, Work).join(Work, Anomaly.work_id == Work.work_id)
 
     if state:
@@ -108,7 +114,9 @@ def list_all_flags(
         has_prev=page > 1
     )
 
-    return EnvelopeResponse(data=items, meta=meta, warnings=[])
+    resp = EnvelopeResponse(data=items, meta=meta, warnings=[])
+    _flags_cache[cache_key] = resp
+    return resp
 
 @router.get("/flags/export")
 def export_flags(

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { ErrorBoundary } from './ErrorBoundary'
-import { LoadingSkeleton } from './LoadingSkeleton'
 import { useStore } from '../store/useStore'
 import {
   LayoutDashboard,
@@ -83,13 +82,21 @@ export const Layout: React.FC = () => {
               {isActive('/') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
             </Link>
 
-            <Link to="/states" className={navLinkClasses('/states')}>
+            <Link
+              to="/states"
+              onMouseEnter={() => import('../pages/BrowseStates').catch(() => {})}
+              className={navLinkClasses('/states')}
+            >
               <MapPin size={14} className={isActive('/states') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
               <span>State &amp; UT Overview</span>
               {isActive('/states') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
             </Link>
 
-            <Link to="/mps" className={navLinkClasses('/mps')}>
+            <Link
+              to="/mps"
+              onMouseEnter={() => import('../pages/BrowseMPs').catch(() => {})}
+              className={navLinkClasses('/mps')}
+            >
               <Users size={14} className={isActive('/mps') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
               <span>MPs Performance</span>
               {isActive('/mps') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
@@ -110,7 +117,11 @@ export const Layout: React.FC = () => {
 
             {/* Audit Desk - Only visible for administrative/auditor roles (Hidden for Public Citizen) */}
             {user.role !== 'viewer' && (
-              <Link to="/audit" className={navLinkClasses('/audit')}>
+              <Link
+                to="/audit"
+                onMouseEnter={() => import('../pages/AuditDesk').catch(() => {})}
+                className={navLinkClasses('/audit')}
+              >
                 <ShieldAlert size={14} className={isActive('/audit') ? 'text-rose-500' : 'text-[var(--text-tertiary)]'} />
                 <span>Audit Desk</span>
                 {isActive('/audit') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-rose-500 rounded-full" />}
@@ -119,7 +130,11 @@ export const Layout: React.FC = () => {
 
             {/* Contextual Role Console tabs - Only visible when relevant role is active */}
             {user.role === 'mospi' && (
-              <Link to="/mp-dashboard" className={navLinkClasses('/mp-dashboard')}>
+              <Link
+                to="/mp-dashboard"
+                onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
+                className={navLinkClasses('/mp-dashboard')}
+              >
                 <Users size={14} className="text-[var(--brand-accent)]" />
                 <span className="font-extrabold text-[var(--gold-text)]">
                   MP Console
@@ -131,11 +146,12 @@ export const Layout: React.FC = () => {
             {user.role === 'state_nodal_officer' && (
               <Link
                 to={user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `/states/${encodeURIComponent(user.state)}` : '/states'}
+                onMouseEnter={() => import('../pages/StateDetail').catch(() => {})}
                 className={navLinkClasses(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `/states/${encodeURIComponent(user.state)}` : '/states')}
               >
-                <Building2 size={14} className="text-emerald-500" />
+                <MapPin size={14} className="text-emerald-500" />
                 <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
-                  State Console {user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `(${user.state.split(' ')[0]})` : '(All)'}
+                  State Console {user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `(${user.state})` : '(All)'}
                 </span>
                 {(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? (location.pathname.startsWith('/states') || location.pathname.startsWith('/my-state')) : isActive('/states')) && (
                   <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />
@@ -146,6 +162,7 @@ export const Layout: React.FC = () => {
             {user.role === 'district_authority' && (
               <Link
                 to={user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? `/districts/${encodeURIComponent(user.district)}` : '/district-dashboard'}
+                onMouseEnter={() => import('../pages/DistrictDashboard').catch(() => {})}
                 className={navLinkClasses(user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? `/districts/${user.district}` : '/district-dashboard')}
               >
                 <Building2 size={14} className="text-[var(--brand-primary)]" />
@@ -157,7 +174,11 @@ export const Layout: React.FC = () => {
             )}
 
             {user.role === 'mp' && (
-              <Link to="/mp-dashboard" className={navLinkClasses('/mp-dashboard')}>
+              <Link
+                to="/mp-dashboard"
+                onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
+                className={navLinkClasses('/mp-dashboard')}
+              >
                 <Users size={14} className="text-[var(--brand-accent)]" />
                 <span className="font-extrabold text-[var(--gold-text)]">
                   MP Console {user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
@@ -192,7 +213,16 @@ export const Layout: React.FC = () => {
       {/* Full-width Main Application Content */}
       <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-20 lg:pb-8">
         <ErrorBoundary>
-          <React.Suspense fallback={<LoadingSkeleton rows={6} height="h-28" />}>
+          <React.Suspense fallback={
+            <div className="w-full space-y-4 animate-pulse">
+              <div className="h-8 bg-[var(--surface-alt)] rounded-lg w-1/4 mb-4" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="h-28 bg-[var(--surface-alt)] rounded-xl" />
+                <div className="h-28 bg-[var(--surface-alt)] rounded-xl" />
+                <div className="h-28 bg-[var(--surface-alt)] rounded-xl" />
+              </div>
+            </div>
+          }>
             <Outlet />
           </React.Suspense>
         </ErrorBoundary>

@@ -18,12 +18,27 @@ const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ defaul
 
 export const App: React.FC = () => {
   React.useEffect(() => {
-    // Background prefetch for GIS map bundle & GeoJSON so opening GIS Map is instant
-    const timer = setTimeout(() => {
-      import('./pages/GISMap').catch(() => { })
-      fetch('/api/map/pcs').catch(() => { })
-    }, 1500)
-    return () => clearTimeout(timer)
+    // Quietly preload primary lightweight route JS chunks during idle time (without downloading heavy GeoJSON)
+    const scheduleIdle = typeof window !== 'undefined' && 'requestIdleCallback' in window
+      ? (cb: () => void) => (window as any).requestIdleCallback(cb, { timeout: 3000 })
+      : (cb: () => void) => setTimeout(cb, 2500)
+
+    const idleId = scheduleIdle(() => {
+      import('./pages/BrowseStates').catch(() => {})
+      import('./pages/BrowseMPs').catch(() => {})
+      import('./pages/DistrictDashboard').catch(() => {})
+      import('./pages/AuditDesk').catch(() => {})
+      import('./pages/MyState').catch(() => {})
+      import('./pages/MPDashboard').catch(() => {})
+    })
+
+    return () => {
+      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof idleId === 'number') {
+        (window as any).cancelIdleCallback(idleId)
+      } else {
+        clearTimeout(idleId as any)
+      }
+    }
   }, [])
 
   return (
