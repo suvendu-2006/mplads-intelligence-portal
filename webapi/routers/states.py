@@ -13,7 +13,7 @@ from webapi.aggregators import (
     compute_state_red_flag_pct, compute_all_states_red_flag_pct,
     compute_district_tier_counts, compute_cpwd_comparison
 )
-from webapi.config import DETECTOR_NAMES, get_tier
+from webapi.config import DETECTOR_NAMES, get_tier, resolve_detector_type
 from mplads_fraud_detection.foundation.schema import Work, Anomaly
 
 router = APIRouter()
@@ -262,8 +262,9 @@ def list_state_flags(
 
     if district:
         query = query.filter(func.lower(Work.district) == district.lower())
-    if detector:
-        query = query.filter(Anomaly.detector_type == detector)
+    resolved_detector = resolve_detector_type(detector)
+    if resolved_detector:
+        query = query.filter(func.lower(Anomaly.detector_type) == resolved_detector.lower())
     if tier:
         tier_l = tier.lower()
         if tier_l == "red":

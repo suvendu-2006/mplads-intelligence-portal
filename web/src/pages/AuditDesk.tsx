@@ -139,7 +139,9 @@ export const AuditDesk: React.FC = () => {
     setExporting(true)
     try {
       const params = new URLSearchParams()
-      if (stateFilter) params.append('state', stateFilter)
+      if (stateFilter && stateFilter !== 'ALL' && stateFilter !== 'ALL STATES & UNION TERRITORIES') {
+        params.append('state', stateFilter)
+      }
       if (tierFilter) params.append('tier', tierFilter)
       if (detectorFilter) params.append('detector', detectorFilter)
       const url = params.toString() ? `/api/flags/export?${params.toString()}` : '/api/flags/export'
@@ -162,7 +164,7 @@ export const AuditDesk: React.FC = () => {
     }
   }
 
-  const totalPages = meta?.total_pages || Math.ceil((meta?.total_records || 100) / 50)
+  const totalPages = meta?.total_pages || Math.ceil((meta?.total || 100) / 50)
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
@@ -239,7 +241,11 @@ export const AuditDesk: React.FC = () => {
               setDetectorFilter(e.target.value)
               setPage(1)
             }}
-            className="px-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs font-semibold text-[var(--text-primary)] outline-none"
+            className={`px-3 py-2 rounded-xl border text-xs font-semibold outline-none transition cursor-pointer ${
+              detectorFilter
+                ? 'bg-amber-500/10 border-amber-500 text-amber-700 dark:text-amber-300 font-bold'
+                : 'bg-[var(--surface-alt)] border-[var(--border-primary)] text-[var(--text-primary)]'
+            }`}
           >
             <option value="">All Detectors (D01-D15)</option>
             {detectors.map((d: any) => (

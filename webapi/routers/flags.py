@@ -6,7 +6,7 @@ from sqlalchemy import func
 
 from webapi.models import EnvelopeResponse, FlagItem, MetaPagination
 from webapi.data_service import get_db
-from webapi.config import DETECTOR_NAMES, get_tier
+from webapi.config import DETECTOR_NAMES, get_tier, resolve_detector_type
 from webapi.aggregators import compute_cpwd_comparison
 from webapi.export import stream_flags_csv
 from mplads_fraud_detection.foundation.schema import Work, Anomaly
@@ -26,7 +26,8 @@ def list_all_flags(
     page_size: int = Query(50, ge=1, le=200),
     db: Session = Depends(get_db)
 ):
-    cache_key = f"{state}_{district}_{tier}_{detector}_{q}_{page}_{page_size}".lower()
+    resolved_detector = resolve_detector_type(detector)
+    cache_key = f"{state}_{district}_{tier}_{resolved_detector}_{q}_{page}_{page_size}".lower()
     if cache_key in _flags_cache:
         return _flags_cache[cache_key]
 
@@ -36,8 +37,8 @@ def list_all_flags(
         query = query.filter(func.lower(Work.state) == state.lower())
     if district:
         query = query.filter(func.lower(Work.district) == district.lower())
-    if detector:
-        query = query.filter(Anomaly.detector_type == detector)
+    if resolved_detector:
+        query = query.filter(func.lower(Anomaly.detector_type) == resolved_detector.lower())
     if tier:
         tier_l = tier.lower()
         if tier_l == "red":
@@ -126,10 +127,11 @@ def export_flags(
     detector: Optional[str] = None,
     db: Session = Depends(get_db)
 ):
+    resolved_detector = resolve_detector_type(detector)
     return stream_flags_csv(
         db=db,
         state=state,
         district=district,
         tier=tier,
-        detector=detector
+        detector=resolved_detector
     )

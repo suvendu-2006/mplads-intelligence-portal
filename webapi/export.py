@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 
 from mplads_fraud_detection.foundation.schema import Work, Anomaly
-from webapi.config import DETECTOR_NAMES, get_tier
+from webapi.config import DETECTOR_NAMES, get_tier, resolve_detector_type
 
 def stream_flags_csv(
     db: Session,
@@ -36,8 +36,9 @@ def stream_flags_csv(
             query = query.filter(func.lower(Work.state) == state.lower())
         if district:
             query = query.filter(func.lower(Work.district) == district.lower())
-        if detector:
-            query = query.filter(Anomaly.detector_type == detector)
+        resolved_detector = resolve_detector_type(detector)
+        if resolved_detector:
+            query = query.filter(func.lower(Anomaly.detector_type) == resolved_detector.lower())
         if tier:
             tier_lower = tier.lower()
             if tier_lower == "red":

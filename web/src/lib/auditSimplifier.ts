@@ -30,6 +30,29 @@ const DETECTOR_METADATA: Record<
     defaultChecklist: InspectorChecklistItem[]
   }
 > = {
+  unusual_pattern: {
+    title: 'Multivariate Statistical Outlier Screening',
+    rule: 'MoSPI Analytical Screening Norms & Statistical Quality Assurance',
+    summary:
+      'The project costs, durations, and payment patterns deviate significantly from normal statistical distributions across peer works in the state.',
+    defaultChecklist: [
+      {
+        id: 'outlier_review',
+        title: 'Review Peer Cost Distribution',
+        detail: 'Compare expenditure rate against standard deviation benchmarks for identical asset classifications.'
+      },
+      {
+        id: 'administrative_sanction',
+        title: 'Verify Detailed Administrative Sanction',
+        detail: 'Inspect the technical sanction file to ensure justifications exist for anomalous rate deviations.'
+      },
+      {
+        id: 'site_audit',
+        title: 'Field Verification Order',
+        detail: 'Depute a technical verification team to audit milestone completion certificates and site measurements.'
+      }
+    ]
+  },
   timing_anomaly: {
     title: 'Year-End Budget Rush (March Spending Surge)',
     rule: 'MoSPI MPLADS Guidelines Para 3.12 (Even Pacing of Expenditure)',

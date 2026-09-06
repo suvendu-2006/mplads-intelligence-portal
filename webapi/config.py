@@ -53,11 +53,112 @@ DETECTOR_NAMES: Dict[str, str] = {
     "benford_anomaly": "Artificial Round-Figure Billing Anomaly",
     "vague_description": "Incomplete Work Description",
     "plausibility_mismatch": "High Cost Relative to Asset Scope",
-    "verification_gap": "Missing Inspection Documentation",
-    "ida_risk": "Implementing Agency Vigilance Review",
-    "mp_risk": "MP Portfolio Spending Anomaly",
+    "verification_gap": "Documentary Verification & Disbursement Gap",
+    "ida_risk": "Implementing Agency (IDA) Risk Profiling",
+    "mp_risk": "MP Portfolio Concentration & Allocation Anomaly",
     "copy_paste_pricing": "Identical Estimate / Copy-Paste Pricing"
 }
+
+# Universal Normalization Mapping for all 15 Detectors (D1 - D15)
+DETECTOR_ID_TO_TYPE: Dict[str, str] = {
+    # D1: Unusual Spending Patterns
+    "d1": "unusual_pattern",
+    "d01": "unusual_pattern",
+    "unusual_pattern": "unusual_pattern",
+    "unusual_patterns": "unusual_pattern",
+    "detector_01_unusual_patterns": "unusual_pattern",
+
+    # D2: Duplicate Works
+    "d2": "duplicate_work",
+    "d02": "duplicate_work",
+    "duplicate_work": "duplicate_work",
+    "duplicate_works": "duplicate_work",
+    "detector_02_duplicate_works": "duplicate_work",
+
+    # D3: Cost Overruns
+    "d3": "cost_overrun",
+    "d03": "cost_overrun",
+    "cost_overrun": "cost_overrun",
+    "cost_overruns": "cost_overrun",
+    "detector_03_cost_overruns": "cost_overrun",
+
+    # D4: Ghost Works
+    "d4": "ghost_work",
+    "d04": "ghost_work",
+    "ghost_work": "ghost_work",
+    "ghost_works": "ghost_work",
+    "detector_04_ghost_works": "ghost_work",
+
+    # D5: Bill Splitting
+    "d5": "bill_splitting",
+    "d05": "bill_splitting",
+    "bill_splitting": "bill_splitting",
+    "detector_05_bill_splitting": "bill_splitting",
+
+    # D6: Delay Violation
+    "d6": "delay_violation",
+    "d06": "delay_violation",
+    "delay_violation": "delay_violation",
+    "detector_06_delay_violation": "delay_violation",
+
+    # D7: Timing Anomaly
+    "d7": "timing_anomaly",
+    "d07": "timing_anomaly",
+    "timing_anomaly": "timing_anomaly",
+    "detector_07_timing_anomaly": "timing_anomaly",
+
+    # D8: Bulk Completion
+    "d8": "bulk_completion",
+    "d08": "bulk_completion",
+    "bulk_completion": "bulk_completion",
+    "detector_08_bulk_completion": "bulk_completion",
+
+    # D9: Benford's Law
+    "d9": "benford_anomaly",
+    "d09": "benford_anomaly",
+    "benford_anomaly": "benford_anomaly",
+    "detector_09_benford_anomaly": "benford_anomaly",
+
+    # D10: Vague Description
+    "d10": "vague_description",
+    "vague_description": "vague_description",
+    "detector_10_vague_description": "vague_description",
+
+    # D11: Plausibility Mismatch
+    "d11": "plausibility_mismatch",
+    "plausibility_mismatch": "plausibility_mismatch",
+    "detector_11_plausibility_mismatch": "plausibility_mismatch",
+
+    # D12: Verification Gap
+    "d12": "verification_gap",
+    "verification_gap": "verification_gap",
+    "detector_12_verification_gap": "verification_gap",
+
+    # D13: IDA Risk
+    "d13": "ida_risk",
+    "ida_risk": "ida_risk",
+    "detector_13_ida_risk": "ida_risk",
+
+    # D14: MP Risk
+    "d14": "mp_risk",
+    "mp_risk": "mp_risk",
+    "detector_14_mp_risk": "mp_risk",
+
+    # D15: Copy-Paste Pricing
+    "d15": "copy_paste_pricing",
+    "copy_paste_pricing": "copy_paste_pricing",
+    "detector_15_copy_paste_pricing": "copy_paste_pricing",
+}
+
+def resolve_detector_type(detector: Optional[str]) -> Optional[str]:
+    """
+    Normalizes any client detector string (e.g. 'D1', 'd09', 'benford_anomaly')
+    to the canonical database detector_type string.
+    """
+    if not detector:
+        return None
+    cleaned = detector.strip().lower()
+    return DETECTOR_ID_TO_TYPE.get(cleaned, cleaned)
 
 def get_tier(severity: float) -> str:
     """
