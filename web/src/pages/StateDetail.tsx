@@ -9,13 +9,9 @@ import {
   EmptyState
 } from '../components/shared'
 import {
-  MapPin,
   ChevronRight,
-  AlertTriangle,
   Building2,
-  FileText,
   FileCheck2,
-  Shield,
   ShieldAlert,
   ShieldCheck,
   Search,
@@ -24,10 +20,8 @@ import {
   Landmark,
   Coins,
   Percent,
-  Clock,
-  ExternalLink
+  Clock
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -58,6 +52,7 @@ export const StateDetail: React.FC = () => {
     } catch { return true }
   })
   const [activeTab, setActiveTab] = useState<'districts' | 'works' | 'flags'>('districts')
+  const effectiveTab = (!isAuditorOrAdmin && activeTab === 'flags') ? 'districts' : activeTab
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
 
   // District search, sort & pagination
@@ -102,17 +97,10 @@ export const StateDetail: React.FC = () => {
   const [flagTierFilter, setFlagTierFilter] = useState('all')
   const [flagsLoading, setFlagsLoading] = useState(false)
   const [flagsTotal, setFlagsTotal] = useState(0)
-  const [idas, setIdas] = useState<any[]>([])
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  useEffect(() => {
-    if (!isAuditorOrAdmin && activeTab === 'flags') {
-      setActiveTab('districts')
-    }
-  }, [isAuditorOrAdmin, activeTab])
 
   useEffect(() => {
     async function loadStateData() {
@@ -121,19 +109,11 @@ export const StateDetail: React.FC = () => {
         setLoading(true)
       }
       try {
-        const [resState, resIdas] = await Promise.all([
-          fetch(`/api/states/${encodeURIComponent(state)}`),
-          fetch(`/api/entity-risks?entity_type=ida&state=${encodeURIComponent(state)}&page=1&page_size=50`)
-        ])
-
+        const resState = await fetch(`/api/states/${encodeURIComponent(state)}`)
         if (resState.ok) {
           const jsonState = await resState.json()
           setData(jsonState.data)
           try { sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data)) } catch {}
-        }
-        if (resIdas.ok) {
-          const jsonIdas = await resIdas.json()
-          setIdas(jsonIdas.data || [])
         }
       } catch (err) {
         console.error('Failed to load state detail:', err)
@@ -364,7 +344,7 @@ export const StateDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('districts')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'districts'
+            effectiveTab === 'districts'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -376,7 +356,7 @@ export const StateDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'works'
+            effectiveTab === 'works'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -389,7 +369,7 @@ export const StateDetail: React.FC = () => {
           <button
             onClick={() => setActiveTab('flags')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-              activeTab === 'flags'
+              effectiveTab === 'flags'
                 ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
                 : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
             }`}
@@ -405,7 +385,7 @@ export const StateDetail: React.FC = () => {
       </div>
 
       {/* TAB 1: DISTRICTS */}
-      {activeTab === 'districts' && (
+      {effectiveTab === 'districts' && (
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex flex-1 items-center gap-3">
@@ -600,7 +580,7 @@ export const StateDetail: React.FC = () => {
       )}
 
       {/* TAB 2: WORKS LEDGER */}
-      {activeTab === 'works' && (
+      {effectiveTab === 'works' && (
         <div className="space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="relative max-w-sm w-full">
@@ -777,7 +757,7 @@ export const StateDetail: React.FC = () => {
       )}
 
       {/* TAB 3: FLAGS */}
-      {activeTab === 'flags' && (
+      {effectiveTab === 'flags' && (
         <div className="space-y-4">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">

@@ -23,25 +23,23 @@ export const StatCard: React.FC<StatCardProps> = ({
   prefix = '',
   unit = '',
   delta,
-  sparkline,
   description,
   tooltip,
   theme = 'espresso'
 }) => {
-  const [displayValue, setDisplayValue] = useState<string | number>(
+  const isNumeric = typeof value === 'number'
+  const [animatedNumber, setAnimatedNumber] = useState<string | number>(() =>
     typeof value === 'number' ? 0 : value
   )
 
   useEffect(() => {
-    if (typeof value !== 'number') {
-      setDisplayValue(value)
-      return
-    }
+    if (typeof value !== 'number') return
 
     const startVal = 0
     const endVal = value
     const duration = 800
     const startTime = performance.now()
+    let frameId: number
 
     const step = (currentTime: number) => {
       const elapsed = currentTime - startTime
@@ -50,28 +48,31 @@ export const StatCard: React.FC<StatCardProps> = ({
       const current = startVal + (endVal - startVal) * easeOut
 
       if (endVal >= 1000) {
-        setDisplayValue(Math.round(current).toLocaleString('en-IN'))
+        setAnimatedNumber(Math.round(current).toLocaleString('en-IN'))
       } else if (Number.isInteger(endVal)) {
-        setDisplayValue(Math.round(current))
+        setAnimatedNumber(Math.round(current))
       } else {
-        setDisplayValue(current.toFixed(1))
+        setAnimatedNumber(current.toFixed(1))
       }
 
       if (progress < 1) {
-        requestAnimationFrame(step)
+        frameId = requestAnimationFrame(step)
       } else {
         if (endVal >= 1000) {
-          setDisplayValue(endVal.toLocaleString('en-IN'))
+          setAnimatedNumber(endVal.toLocaleString('en-IN'))
         } else if (Number.isInteger(endVal)) {
-          setDisplayValue(endVal)
+          setAnimatedNumber(endVal)
         } else {
-          setDisplayValue(endVal.toFixed(1))
+          setAnimatedNumber(endVal.toFixed(1))
         }
       }
     }
 
-    requestAnimationFrame(step)
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
   }, [value])
+
+  const displayValue = isNumeric ? animatedNumber : value
 
   const iconBgClasses = {
     gold: 'bg-[var(--brand-gold)]/15 text-[var(--brand-gold)] border-[var(--brand-gold)]/30',

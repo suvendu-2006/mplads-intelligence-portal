@@ -14,20 +14,13 @@ import {
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
 import {
-  Users,
   ChevronRight,
   Landmark,
   FileCheck2,
   AlertTriangle,
-  AlertCircle,
-  UserCheck,
-  Building,
   GraduationCap,
   Scale,
-  Briefcase,
   Layers,
-  ArrowRight,
-  TrendingUp,
   Clock,
   ShieldAlert,
   ShieldCheck,
@@ -48,7 +41,6 @@ import {
   Pie,
   Cell
 } from 'recharts'
-import { t } from '../lib/i18n'
 
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
@@ -68,6 +60,7 @@ export const MPDetail: React.FC = () => {
     } catch { return true }
   })
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags' | 'risk'>('overview')
+  const effectiveTab = (!isAuditorOrAdmin && (activeTab === 'flags' || activeTab === 'risk')) ? 'overview' : activeTab
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'pending'>('all')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
 
@@ -97,12 +90,6 @@ export const MPDetail: React.FC = () => {
       console.error(e)
     }
   }
-
-  useEffect(() => {
-    if (!isAuditorOrAdmin && (activeTab === 'flags' || activeTab === 'risk')) {
-      setActiveTab('overview')
-    }
-  }, [isAuditorOrAdmin, activeTab])
 
   useEffect(() => {
     async function loadMP() {
@@ -161,7 +148,7 @@ export const MPDetail: React.FC = () => {
     )
   }
 
-  const { summary, dossier, works = [], flags = [], entity_risk } = data
+  const { summary = {}, dossier, works = [], flags = [], entity_risk } = data || {}
   const dossierInfo = dossier?.dossier || dossier || {}
 
   // Defensive calculation: recover from 0/missing fields if utilization or other numbers are available
@@ -247,7 +234,7 @@ export const MPDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('overview')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'overview'
+            effectiveTab === 'overview'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -259,7 +246,7 @@ export const MPDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'works'
+            effectiveTab === 'works'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -273,7 +260,7 @@ export const MPDetail: React.FC = () => {
             <button
               onClick={() => setActiveTab('flags')}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-                activeTab === 'flags'
+                effectiveTab === 'flags'
                   ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
@@ -289,7 +276,7 @@ export const MPDetail: React.FC = () => {
             <button
               onClick={() => setActiveTab('risk')}
               className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-                activeTab === 'risk'
+                effectiveTab === 'risk'
                   ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
@@ -306,7 +293,7 @@ export const MPDetail: React.FC = () => {
       </div>
 
       {/* TAB 1: OVERVIEW */}
-      {activeTab === 'overview' && (
+      {effectiveTab === 'overview' && (
         <div className="space-y-6">
           {/* Quick Metrics (4 KPIs) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -541,7 +528,7 @@ export const MPDetail: React.FC = () => {
       )}
 
       {/* TAB 2: WORKS / PROJECTS */}
-      {activeTab === 'works' && (
+      {effectiveTab === 'works' && (
         <div className="space-y-4">
           {works.length > 0 && (
             <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs">
@@ -716,7 +703,7 @@ export const MPDetail: React.FC = () => {
       )}
 
       {/* TAB 3: FLAGS */}
-      {activeTab === 'flags' && (
+      {effectiveTab === 'flags' && (
         <div className="space-y-4">
           {flags.length === 0 ? (
             <div className="lux-card p-8 max-w-2xl mx-auto text-center space-y-5 my-4">
@@ -830,7 +817,7 @@ export const MPDetail: React.FC = () => {
       )}
 
       {/* TAB 4: ENTITY RISK */}
-      {activeTab === 'risk' && (
+      {effectiveTab === 'risk' && (
         <div className="space-y-4">
           <div className="lux-card p-6 mb-6">
             <div className="flex items-center justify-between mb-4">

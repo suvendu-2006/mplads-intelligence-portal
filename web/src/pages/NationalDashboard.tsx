@@ -7,7 +7,6 @@ import {
 } from '../components/shared'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
-import { fmtCrore } from '../lib/currency'
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
 import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS, DEFAULT_TOP_STATES } from '../lib/defaultData'
@@ -20,9 +19,7 @@ import {
   Clock,
   CheckCircle2,
   Receipt,
-  Activity,
   ArrowRight,
-  ShieldCheck,
   Video,
   X
 } from 'lucide-react'
@@ -128,7 +125,6 @@ export const NationalDashboard: React.FC = () => {
   const pendingWorks = national?.pendingWorks ?? 0
   const completedWorks = national?.totalWorksCompleted ?? 0
   const activePayments = national ? Math.round((national.inProgressPayments || 0) / 10000000) : 0
-  const expenditureRate = national?.completionRate ? Number(national.completionRate.toFixed(1)) : 0
 
   // Real sector distribution from expenditures.csv via /api/national/analytics
   const sectorColors = chartTheme.category

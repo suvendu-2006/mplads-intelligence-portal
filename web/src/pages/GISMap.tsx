@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoadingSkeleton } from '../components/LoadingSkeleton'
-import { MapContainer, GeoJSON, Tooltip, useMap } from 'react-leaflet'
-import { Globe2, Layers, MapPin, ExternalLink, Info, ArrowRight, RotateCcw } from 'lucide-react'
+import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
+import { Globe2, MapPin, Info, ArrowRight } from 'lucide-react'
 import { palette } from '../lib/palette'
-import { t } from '../lib/i18n'
 
 const INDIA_CENTER: [number, number] = [22.5937, 79.5]
 const INDIA_BOUNDS: [[number, number], [number, number]] = [
@@ -30,21 +28,6 @@ function ResetViewControl() {
 }
 
 const GEO_CACHE: Record<string, any> = {}
-
-export async function prefetchGeoData(layer: 'pcs' | 'districts' = 'pcs') {
-  if (GEO_CACHE[layer]) return GEO_CACHE[layer]
-  try {
-    const url = layer === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
-    const res = await fetch(url)
-    if (res.ok) {
-      const json = await res.json()
-      const featData = (json.data && json.data.type === 'FeatureCollection') ? json.data : json
-      GEO_CACHE[layer] = featData
-      try { sessionStorage.setItem(`cached_map_${layer}`, JSON.stringify(featData)) } catch {}
-      return featData
-    }
-  } catch {}
-}
 
 export const GISMap: React.FC = () => {
   const [layerType, setLayerType] = useState<'pcs' | 'districts'>('pcs')

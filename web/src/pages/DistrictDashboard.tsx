@@ -6,27 +6,21 @@ import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModa
 import {
   StatCard,
   TierBadge,
-  EmptyState,
-  SectionCard
+  EmptyState
 } from '../components/shared'
 import {
   Building2,
   Users,
   FileCheck2,
-  AlertTriangle,
   Lock,
   ArrowRight,
   CheckCircle2,
   Clock,
   Landmark,
-  Coins,
   Percent,
-  FileText,
-  Upload,
   ShieldAlert,
   X
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 export const DistrictDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
@@ -46,6 +40,8 @@ export const DistrictDashboard: React.FC = () => {
     } catch { return true }
   })
   const [activeTab, setActiveTab] = useState<'works' | 'mps' | 'idas' | 'compliance'>('works')
+  const effectiveTab = (!isAuthorized && activeTab === 'compliance') ? 'works' : activeTab
+
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [complianceToast, setComplianceToast] = useState<string | null>(null)
   const [selectedMBWork, setSelectedMBWork] = useState<any | null>(null)
@@ -81,12 +77,6 @@ export const DistrictDashboard: React.FC = () => {
     }
     loadDistrict()
   }, [district, districtName])
-
-  useEffect(() => {
-    if (!isAuthorized && activeTab === 'compliance') {
-      setActiveTab('works')
-    }
-  }, [isAuthorized, activeTab])
 
   if (!isAuthorized && !district) {
     return (
@@ -219,7 +209,7 @@ export const DistrictDashboard: React.FC = () => {
         <button
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'works'
+            effectiveTab === 'works'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -231,7 +221,7 @@ export const DistrictDashboard: React.FC = () => {
         <button
           onClick={() => setActiveTab('mps')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'mps'
+            effectiveTab === 'mps'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -243,7 +233,7 @@ export const DistrictDashboard: React.FC = () => {
         <button
           onClick={() => setActiveTab('idas')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'idas'
+            effectiveTab === 'idas'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
@@ -256,7 +246,7 @@ export const DistrictDashboard: React.FC = () => {
           <button
             onClick={() => setActiveTab('compliance')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-              activeTab === 'compliance'
+              effectiveTab === 'compliance'
                 ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
                 : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
             }`}
@@ -268,7 +258,7 @@ export const DistrictDashboard: React.FC = () => {
       </div>
 
       {/* TAB 1: WORKS LEDGER */}
-      {activeTab === 'works' && (
+      {effectiveTab === 'works' && (
         <div className="space-y-4">
           {works.length === 0 ? (
             <EmptyState
@@ -347,7 +337,7 @@ export const DistrictDashboard: React.FC = () => {
       )}
 
       {/* TAB 2: MPS IN DISTRICT */}
-      {activeTab === 'mps' && (
+      {effectiveTab === 'mps' && (
         <div className="space-y-4">
           <div className="text-xs text-[var(--text-secondary)]">
             Members of Parliament representing or allocating development tranches within {districtName}:
@@ -442,7 +432,7 @@ export const DistrictDashboard: React.FC = () => {
       )}
 
       {/* TAB 3: IDAs & CONTRACTORS */}
-      {activeTab === 'idas' && (
+      {effectiveTab === 'idas' && (
         <div className="space-y-4">
           <div className="text-xs text-[var(--text-secondary)]">
             Implementing Development Agencies (IDAs) executing civil infrastructure in {districtName}:
@@ -486,7 +476,7 @@ export const DistrictDashboard: React.FC = () => {
       )}
 
       {/* TAB 4: COMPLIANCE & ANOMALIES */}
-      {activeTab === 'compliance' && (
+      {effectiveTab === 'compliance' && (
         <div className="space-y-4">
           {anomalies.length === 0 ? (
             <EmptyState

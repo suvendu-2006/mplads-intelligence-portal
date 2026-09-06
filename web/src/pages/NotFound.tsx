@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
-import { AlertCircle, Home, MapPin, Users, Globe2 } from 'lucide-react'
+import { AlertCircle, Home, MapPin, Users } from 'lucide-react'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 
 const INDIAN_STATES = [
@@ -40,7 +40,7 @@ export const NotFound: React.FC = () => {
   }
 
   // 3. Check if user typed a district name in the URL (e.g. /patna or /Patna)
-  for (const [st, dists] of Object.entries(STATE_DISTRICTS_MAP)) {
+  for (const dists of Object.values(STATE_DISTRICTS_MAP)) {
     const matchedDist = dists.find(d => d.toLowerCase() === lastPart)
     if (matchedDist) {
       return <Navigate to={`/districts/${encodeURIComponent(matchedDist)}`} replace />

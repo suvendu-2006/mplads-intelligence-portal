@@ -4,7 +4,6 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
 from webapi.models import EnvelopeResponse, EntityRiskItem, MetaPagination
-from webapi.data_service import get_db
 from sqlalchemy import func, text
 from mplads_fraud_detection.foundation.schema import EntityRisk, Work
 from webapi.data_service import get_db, load_mps_csv

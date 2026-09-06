@@ -6,21 +6,13 @@ import {
   Lock,
   Mail,
   CheckCircle2,
-  Building2,
-  User,
-  MapPin,
-  Calendar,
-  Layers,
   Copy,
-  Download,
   CheckSquare,
   Square,
   ClipboardList,
   ShieldAlert
 } from 'lucide-react'
 import { CPWDGauge } from './shared/CPWDGauge'
-import { TierBadge } from './shared/TierBadge'
-import { t } from '../lib/i18n'
 import { simplifyAuditFinding } from '../lib/auditSimplifier'
 
 export interface FlagDossierData {
@@ -71,6 +63,15 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   const [copied, setCopied] = useState(false)
   const [checkedChecklist, setCheckedChecklist] = useState<Record<string, boolean>>({})
 
+  React.useEffect(() => {
+    if (!flag) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [flag, onClose])
+
   if (!flag) return null
 
   const workId = flag.work_id || flag.workId || 0
@@ -89,7 +90,6 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   // CPWD calculations
   const cpwd = flag.cpwd_comparison
   const fairCost = cpwd?.fair_cost_estimate_inr || Math.max(50000, cost * 0.72)
-  const toleranceBuffer = fairCost * 0.25
 
   const toggleChecklist = (id: string) => {
     setCheckedChecklist(prev => ({ ...prev, [id]: !prev[id] }))
@@ -110,14 +110,6 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
       setActiveActionModal(null)
     }, 3000)
   }
-
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [onClose])
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
@@ -280,6 +272,15 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   return (
                     <div
                       key={item.id}
+                      role="checkbox"
+                      aria-checked={isChecked}
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === ' ' || e.key === 'Enter') {
+                          e.preventDefault()
+                          toggleChecklist(item.id)
+                        }
+                      }}
                       onClick={() => toggleChecklist(item.id)}
                       className={`p-2.5 rounded-lg border flex items-start gap-2.5 cursor-pointer transition select-none ${
                         isChecked
@@ -287,17 +288,13 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                           : 'bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border-[var(--border-primary)]'
                       }`}
                     >
-                      <button
-                        type="button"
-                        className="mt-0.5 shrink-0 text-[var(--text-primary)]"
-                        aria-label={isChecked ? 'Mark incomplete' : 'Mark verified'}
-                      >
+                      <span className="mt-0.5 shrink-0 text-[var(--text-primary)]">
                         {isChecked ? (
                           <CheckSquare size={16} className="text-emerald-600 dark:text-emerald-400" />
                         ) : (
                           <Square size={16} className="text-[var(--text-tertiary)]" />
                         )}
-                      </button>
+                      </span>
                       <div className="flex-1 text-xs">
                         <span className={`font-bold block ${isChecked ? 'line-through opacity-75' : 'text-[var(--text-primary)]'}`}>
                           {item.title}

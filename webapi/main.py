@@ -1,5 +1,6 @@
-from contextlib import asynccontextmanager
+import os
 import logging
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.gzip import GZipMiddleware
@@ -71,8 +72,6 @@ async def add_performance_cache_headers(request: Request, call_next):
             if not response.headers.get("Cache-Control"):
                 response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
     return response
-
-import os
 
 allowed_origins = os.getenv(
     "MPLADS_ALLOWED_ORIGINS",

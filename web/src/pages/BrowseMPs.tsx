@@ -5,14 +5,10 @@ import { EmptyState } from '../components/shared'
 import {
   Users,
   Search,
-  ArrowUpDown,
   ArrowRight,
-  Filter,
-  CheckCircle2,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 export const BrowseMPs: React.FC = () => {
   const [searchParams] = useSearchParams()
@@ -20,18 +16,17 @@ export const BrowseMPs: React.FC = () => {
 
   // Filters & State
   const [search, setSearch] = useState(qParam)
+  const [prevQParam, setPrevQParam] = useState(qParam)
   const [house, setHouse] = useState('all')
   const [sort, setSort] = useState('allocated')
   const [order, setOrder] = useState('desc')
   const [page, setPage] = useState(1)
 
-  useEffect(() => {
-    const qFromUrl = searchParams.get('q') || ''
-    if (qFromUrl !== search) {
-      setSearch(qFromUrl)
-      setPage(1)
-    }
-  }, [searchParams])
+  if (qParam !== prevQParam) {
+    setPrevQParam(qParam)
+    setSearch(qParam)
+    setPage(1)
+  }
 
   const [mps, setMps] = useState<any[]>(() => {
     try {

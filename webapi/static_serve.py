@@ -25,12 +25,30 @@ def mount_static_files(app: FastAPI):
     if assets_dir.exists():
         app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
 
-    # Catch-all for SPA client-side routing
+    # Catch-all for SPA client-side routing and static files
     @app.api_route("/{full_path:path}", methods=["GET", "HEAD"], include_in_schema=False)
     async def serve_spa(full_path: str):
         # Allow API calls to pass through without interception
         if full_path.startswith("api/") or full_path.startswith("docs") or full_path.startswith("openapi.json"):
             return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+        # Check if direct static file exists in dist (with path traversal guard)
+        if full_path:
+            try:
+                candidate = (effective_dist / full_path).resolve()
+                if str(candidate).startswith(str(effective_dist.resolve())) and candidate.is_file():
+                    return FileResponse(str(candidate))
+            except Exception:
+                pass
+
+            public_dir = (BASE_WEB_DIR / "public").resolve()
+            if public_dir.exists():
+                try:
+                    candidate = (public_dir / full_path).resolve()
+                    if str(candidate).startswith(str(public_dir)) and candidate.is_file():
+                        return FileResponse(str(candidate))
+                except Exception:
+                    pass
         
         index_file = effective_dist / "index.html"
         if index_file.exists():

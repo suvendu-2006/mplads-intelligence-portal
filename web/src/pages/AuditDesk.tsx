@@ -7,14 +7,8 @@ import {
   ShieldAlert,
   Search,
   Download,
-  AlertTriangle,
   ChevronLeft,
   ChevronRight,
-  Filter,
-  CheckCircle2,
-  Users,
-  Building2,
-  FileSpreadsheet,
   MapPin
 } from 'lucide-react'
 import { t } from '../lib/i18n'
@@ -30,7 +24,8 @@ const ALL_STATES_LIST = [
 
 export const AuditDesk: React.FC = () => {
   const { user } = useStore()
-  const initialRoleState = (user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES') ? user.state : ''
+  const isStateNodal = user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
+  const initialRoleState = isStateNodal ? user.state : ''
   const [flags, setFlags] = useState<any[]>(() => {
     try {
       const saved = sessionStorage.getItem('cached_audit_flags_1')
@@ -48,17 +43,18 @@ export const AuditDesk: React.FC = () => {
   // Filters
   const [search, setSearch] = useState('')
   const [stateFilter, setStateFilter] = useState(initialRoleState)
+  const [prevUserStateKey, setPrevUserStateKey] = useState(() => `${user.role}:${user.state}`)
   const [tierFilter, setTierFilter] = useState('')
   const [detectorFilter, setDetectorFilter] = useState('')
   const [page, setPage] = useState(1)
   const [exporting, setExporting] = useState(false)
 
-  // Sync stateFilter if role or user.state changes
-  useEffect(() => {
-    if (user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES') {
-      setStateFilter(user.state)
-    }
-  }, [user.role, user.state])
+  // Sync stateFilter during render if user role/state changes
+  const currentUserStateKey = `${user.role}:${user.state}`
+  if (currentUserStateKey !== prevUserStateKey) {
+    setPrevUserStateKey(currentUserStateKey)
+    setStateFilter(initialRoleState)
+  }
 
   // Available detectors & risks
   const [detectors, setDetectors] = useState<any[]>([])

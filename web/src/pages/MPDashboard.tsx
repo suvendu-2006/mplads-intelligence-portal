@@ -7,26 +7,20 @@ import {
   FundCard,
   StatCard,
   TierBadge,
-  EmptyState,
-  SectionCard
+  EmptyState
 } from '../components/shared'
 import {
   Landmark,
   FileCheck2,
   AlertTriangle,
   Lock,
-  ArrowRight,
   CheckCircle2,
   Clock,
   Mail,
   Coins,
   Percent,
-  Layers,
-  ChevronRight,
-  Building,
-  FileText
+  Layers
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 export const MPDashboard: React.FC = () => {
   const { user, switchRole } = useStore()

@@ -5,25 +5,17 @@ import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
 import {
   StatCard,
-  TierBadge,
   EmptyState,
   SectionCard
 } from '../components/shared'
 import {
   Building2,
-  ShieldCheck,
-  AlertTriangle,
   Lock,
-  ArrowRight,
   CheckCircle2,
-  FileText,
-  MapPin,
-  Users,
   Coins,
   Percent,
   Clock,
-  Landmark,
-  FileCheck
+  Landmark
 } from 'lucide-react'
 import { apiFetch } from '../lib/api'
 import { t } from '../lib/i18n'
@@ -31,11 +23,9 @@ import { fmtCrore } from '../lib/currency'
 
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
+  const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
+  const isRedirect = user.role === 'mospi' || !user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES'
 
-  // MoSPI (Apex Central Authority) or unassigned/ALL users navigate directly to national States & UT overview page
-  if (user.role === 'mospi' || !user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') {
-    return <Navigate to="/states" replace />
-  }
   const [data, setData] = useState<any>(null)
   const [nationalMeta, setNationalMeta] = useState<any>(null)
   const [flags, setFlags] = useState<any[]>([])
@@ -44,18 +34,17 @@ export const MyState: React.FC = () => {
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [actionNotice, setActionNotice] = useState<string | null>(null)
 
-  const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
-
   useEffect(() => {
+    if (isRedirect) return
     fetch('/api/national')
       .then(r => r.json())
       .then(j => { if (j?.data) setNationalMeta(j.data) })
       .catch(() => {})
-  }, [])
+  }, [isRedirect])
 
   useEffect(() => {
     async function loadMyState() {
-      if (!isAuthorized) {
+      if (!isAuthorized || isRedirect) {
         setLoading(false)
         return
       }
@@ -101,7 +90,12 @@ export const MyState: React.FC = () => {
       }
     }
     loadMyState()
-  }, [user.role, user.state, user.sessionToken])
+  }, [isAuthorized, isRedirect, user.role, user.state, user.sessionToken])
+
+  // MoSPI (Apex Central Authority) or unassigned/ALL users navigate directly to national States & UT overview page
+  if (isRedirect) {
+    return <Navigate to="/states" replace />
+  }
 
   if (!isAuthorized) {
     return (

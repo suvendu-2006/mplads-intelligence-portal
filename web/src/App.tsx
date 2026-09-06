@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { NationalDashboard } from './pages/NationalDashboard'
-import { LoadingSkeleton } from './components/LoadingSkeleton'
 import { ScrollToTop } from './components/ScrollToTop'
 
 const BrowseStates = React.lazy(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))

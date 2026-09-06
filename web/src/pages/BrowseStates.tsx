@@ -9,14 +9,9 @@ import {
   Search,
   ArrowUpDown,
   ArrowRight,
-  AlertTriangle,
   CheckCircle2,
-  Clock,
-  Landmark,
-  Layers,
-  ShieldAlert
+  Clock
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -38,6 +33,8 @@ export const BrowseStates: React.FC = () => {
   const [order, setOrder] = useState('desc')
   const [jurisdictionFilter, setJurisdictionFilter] = useState<'all' | 'states' | 'uts'>('all')
 
+  const effectiveSort = (!isAuditorOrAdmin && sort === 'red_pct') ? 'allocated' : sort
+
   const [states, setStates] = useState<any[]>(() => {
     try {
       const saved = sessionStorage.getItem('cached_states_allocated_desc')
@@ -53,24 +50,18 @@ export const BrowseStates: React.FC = () => {
   })
 
   useEffect(() => {
-    if (!isAuditorOrAdmin && sort === 'red_pct') {
-      setSort('allocated')
-    }
-  }, [isAuditorOrAdmin, sort])
-
-  useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
     async function fetchStates() {
       try {
-        const res = await fetch(`/api/states?sort=${sort}&order=${order}`)
+        const res = await fetch(`/api/states?sort=${effectiveSort}&order=${order}`)
         if (res.ok) {
           const json = await res.json()
           const items = json.data || []
           setStates(items)
-          try { sessionStorage.setItem(`cached_states_${sort}_${order}`, JSON.stringify(items)) } catch {}
+          try { sessionStorage.setItem(`cached_states_${effectiveSort}_${order}`, JSON.stringify(items)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load states:', err)
@@ -79,7 +70,7 @@ export const BrowseStates: React.FC = () => {
       }
     }
     fetchStates()
-  }, [sort, order])
+  }, [effectiveSort, order])
 
   const filtered = states.filter((s) => {
     const matchesSearch = s.state.toLowerCase().includes(search.toLowerCase())
@@ -132,7 +123,7 @@ export const BrowseStates: React.FC = () => {
               <ArrowUpDown size={13} className="text-[var(--text-tertiary)]" />
               <span className="text-[var(--text-secondary)] text-[11px] font-medium">Sort:</span>
               <select
-                value={sort}
+                value={effectiveSort}
                 onChange={(e) => setSort(e.target.value)}
                 className="bg-transparent text-xs font-bold text-[var(--text-primary)] focus:outline-none cursor-pointer"
               >
@@ -207,7 +198,6 @@ export const BrowseStates: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((st) => {
             const util = Number(st.utilizationPercentage ?? st.utilizationRate ?? 0)
-            const redPct = st.redFlagPct || 0
             const distCount = st.districtCount || 0
             const mpCount = st.activeMpCount || st.totalMPs || st.mpCount || 0
             const completedWorks = st.completedWorksCount || st.totalWorksCompleted || 0

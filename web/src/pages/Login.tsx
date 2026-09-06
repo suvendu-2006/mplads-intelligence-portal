@@ -6,13 +6,8 @@ import {
   Building2,
   Users,
   Lock,
-  ArrowRight,
-  CheckCircle2,
-  MapPin,
-  Landmark,
-  FileSpreadsheet
+  Landmark
 } from 'lucide-react'
-import { t } from '../lib/i18n'
 
 const PERSONAS = [
   {
@@ -81,7 +76,7 @@ const PERSONAS = [
 
 export const Login: React.FC = () => {
   const navigate = useNavigate()
-  const { switchRole, user } = useStore()
+  const { switchRole } = useStore()
   const [selectedPersona, setSelectedPersona] = useState<string>('viewer')
   const [username, setUsername] = useState('officer.mospi@gov.in')
   const [password, setPassword] = useState('••••••••••••')

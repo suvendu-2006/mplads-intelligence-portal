@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { Shield, ChevronDown, Check, User, Building2, Landmark, MapPin, ChevronRight, Search, X } from 'lucide-react'
 import { t } from '../lib/i18n'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
-import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
+import { ALL_MP_SEATS } from '../lib/allMpsData'
 
 // Exactly 4 Switch Role Options:
 // 1. User (Public Citizen)
@@ -111,12 +111,13 @@ export const SwitchRoleDropdown: React.FC = () => {
     })
   }, [mpState, mpHouse, mpSearch])
 
-  // When opening modal, expand the active role
-  useEffect(() => {
-    if (isOpen) {
+  // Handle toggle open/close
+  const toggleOpen = () => {
+    if (!isOpen) {
       setExpandedRole(user.role)
     }
-  }, [isOpen, user.role])
+    setIsOpen(!isOpen)
+  }
 
   // Available districts for the chosen dmState
   const availableDistricts = STATE_DISTRICTS_MAP[dmState] || STATE_DISTRICTS_MAP[dmState.toUpperCase()] || []
@@ -177,7 +178,7 @@ export const SwitchRoleDropdown: React.FC = () => {
   return (
     <div className="relative">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleOpen}
         className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-primary)] text-xs font-medium transition shadow-sm"
       >
         <div className="text-left">

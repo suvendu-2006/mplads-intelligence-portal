@@ -1,9 +1,15 @@
-import re
+import copy
 import difflib
-from typing import Dict, Any
-from fastapi import APIRouter
+import gzip
+import json
+import re
+from typing import Any, Dict, Optional
+
+from fastapi import APIRouter, Request, Response
 from fastapi.responses import JSONResponse
-from webapi.data_service import load_geojson, load_districts_csv
+
+from webapi.config import BASE_DIR, BOUNDARIES_DIR, DATA_DIR
+from webapi.data_service import load_districts_csv, load_geojson
 
 router = APIRouter()
 
@@ -46,16 +52,6 @@ def normalize_district_name(name: str) -> str:
         "TUMKUR": "TUMAKURU",
     }
     return aliases.get(cleaned, cleaned)
-
-import json
-import copy
-from typing import Optional, Dict, Any
-import gzip
-from fastapi import APIRouter, Response, Request
-from webapi.data_service import load_geojson, load_districts_csv
-from webapi.config import DATA_DIR, BASE_DIR, BOUNDARIES_DIR
-
-router = APIRouter()
 
 _CACHED_DISTRICTS_RAW: Optional[bytes] = None
 _CACHED_DISTRICTS_GZIP: Optional[bytes] = None

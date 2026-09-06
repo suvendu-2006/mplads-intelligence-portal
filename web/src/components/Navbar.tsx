@@ -2,29 +2,16 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
-import { Search, Moon, Sun, Monitor, X, MapPin, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
-import { t } from '../lib/i18n'
+import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 
-import { pingBackend } from '../lib/api'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
 
 export const Navbar: React.FC = () => {
-  const { theme, lang, searchQuery, setTheme, setLang, setSearchQuery } = useStore()
-  const [syncStatus, setSyncStatus] = React.useState<{ online: boolean; latencyMs: number }>({ online: true, latencyMs: 12 })
+  const { theme, searchQuery, setTheme, setSearchQuery } = useStore()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
-
-  React.useEffect(() => {
-    async function check() {
-      const status = await pingBackend()
-      setSyncStatus(status)
-    }
-    check()
-    const interval = setInterval(check, 15000)
-    return () => clearInterval(interval)
-  }, [])
 
   // Close dropdown on click outside
   React.useEffect(() => {
@@ -52,7 +39,8 @@ export const Navbar: React.FC = () => {
 
   // Instant matching of Parliamentary Constituencies & MPs across all 774 seats
   const { matchingConstituencies, matchingMps } = React.useMemo(() => {
-    if (qClean.length < 1 || isDigits) {
+    const q = searchQuery.trim().toLowerCase()
+    if (q.length < 1 || /^\d+$/.test(q)) {
       return { matchingConstituencies: [], matchingMps: [] }
     }
 
@@ -60,8 +48,8 @@ export const Navbar: React.FC = () => {
     const mpMatches: MPSeatItem[] = []
 
     for (const seat of ALL_MP_SEATS) {
-      const isConst = seat.constituency.toLowerCase().includes(qClean)
-      const isMp = seat.name.toLowerCase().includes(qClean)
+      const isConst = seat.constituency.toLowerCase().includes(q)
+      const isMp = seat.name.toLowerCase().includes(q)
 
       if (isConst) {
         constMatches.push(seat)
@@ -78,7 +66,7 @@ export const Navbar: React.FC = () => {
       matchingConstituencies: constMatches.slice(0, 5),
       matchingMps: mpMatches.slice(0, 4),
     }
-  }, [qClean, isDigits])
+  }, [searchQuery])
 
   // Filter matching states
   const matchingStates = qClean.length >= 1
@@ -172,7 +160,7 @@ export const Navbar: React.FC = () => {
     }
 
     // 5. District name match -> District Dashboard page
-    for (const [st, dists] of Object.entries(STATE_DISTRICTS_MAP)) {
+    for (const dists of Object.values(STATE_DISTRICTS_MAP)) {
       const matchedDist = dists.find(
         d => d.toLowerCase() === qLower || d.toLowerCase().startsWith(qLower)
       )

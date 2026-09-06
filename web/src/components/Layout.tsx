@@ -3,7 +3,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { ErrorBoundary } from './ErrorBoundary'
 import { LoadingSkeleton } from './LoadingSkeleton'
-import { useStore, ThemeMode } from '../store/useStore'
+import { useStore } from '../store/useStore'
 import {
   LayoutDashboard,
   MapPin,
