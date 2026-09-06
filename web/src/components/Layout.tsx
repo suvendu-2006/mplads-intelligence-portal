@@ -258,6 +258,24 @@ export const Layout: React.FC = () => {
               ● Audited Data as of Aug 2026
             </span>
           </div>
+          <div className="flex items-center gap-4 text-xs">
+            <a
+              href="/documentation.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline font-medium flex items-center gap-1"
+            >
+              <span>📖 Plain-English Guide</span>
+            </a>
+            <a
+              href="https://github.com/suvendu-2006/mplads-intelligence-portal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline font-medium"
+            >
+              GitHub Code
+            </a>
+          </div>
         </div>
       </footer>
     </div>

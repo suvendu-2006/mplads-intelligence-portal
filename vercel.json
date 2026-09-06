@@ -56,7 +56,19 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!api|assets|favicon|data|dossier|documentation).*)",
+      "source": "/dossier",
+      "destination": "/dossier.html"
+    },
+    {
+      "source": "/docs",
+      "destination": "/documentation.html"
+    },
+    {
+      "source": "/documentation",
+      "destination": "/documentation.html"
+    },
+    {
+      "source": "/((?!api|assets|favicon|data|documentation|dossier).*)",
       "destination": "/index.html"
     }
   ]
