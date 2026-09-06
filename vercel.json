@@ -72,7 +72,7 @@
       "destination": "/summary.html"
     },
     {
-      "source": "/((?!api|assets|favicon|data|documentation|dossier|summary).*)",
+      "source": "/((?!api|assets|favicon|data|documentation|dossier|summary|.*\\.pdf|.*\\.html|.*\\.svg|.*\\.ico|.*\\.json).*)",
       "destination": "/index.html"
     }
   ]
