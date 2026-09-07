@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
+import { SatarkLogo } from './SatarkLogo'
 import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
@@ -178,10 +179,18 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-0 z-40 bg-[var(--surface-primary)] border-b border-[var(--border-primary)] shadow-sm">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-6">
         {/* Brand */}
-        <Link to="/" className="flex items-center shrink-0 group">
-          <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[var(--text-primary)] hover:text-[var(--brand-primary)] transition">
-            SATARK&bull;MPLADS
-          </span>
+        <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
+          <div className="w-8 h-8 rounded-xl bg-slate-900/5 dark:bg-slate-800/40 p-0.5 ring-1 ring-[var(--border-primary)] group-hover:ring-[var(--brand-primary)]/40 transition-all flex items-center justify-center shadow-2xs">
+            <SatarkLogo size={28} className="transition-transform duration-200 group-hover:scale-105" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-extrabold text-base sm:text-lg tracking-tight text-[var(--text-primary)] group-hover:text-[var(--brand-primary)] transition leading-tight flex items-center">
+              SATARK<span className="text-amber-500 font-black">&bull;</span>MPLADS
+            </span>
+            <span className="text-[8.5px] uppercase tracking-widest text-[var(--text-tertiary)] font-bold hidden sm:block">
+              National Intelligence Portal
+            </span>
+          </div>
         </Link>
 
         {/* Global Search Bar with Live Suggestions Dropdown */}

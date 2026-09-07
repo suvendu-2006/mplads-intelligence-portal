@@ -1,0 +1,138 @@
+import React from 'react'
+
+interface SatarkLogoProps {
+  size?: number
+  className?: string
+}
+
+export const SatarkLogo: React.FC<SatarkLogoProps> = ({ size = 32, className = '' }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      className={`shrink-0 ${className}`}
+      aria-label="SATARK-MPLADS Emblem"
+    >
+      <defs>
+        <radialGradient id="satarkBgGrad" cx="50%" cy="38%" r="65%">
+          <stop offset="0%" stopColor="#1E293B" />
+          <stop offset="60%" stopColor="#0B132B" />
+          <stop offset="100%" stopColor="#030712" />
+        </radialGradient>
+
+        <linearGradient id="satarkGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FFEAA7" />
+          <stop offset="25%" stopColor="#D4AF37" />
+          <stop offset="50%" stopColor="#FFF2B2" />
+          <stop offset="75%" stopColor="#AA771C" />
+          <stop offset="100%" stopColor="#5E3F0A" />
+        </linearGradient>
+
+        <linearGradient id="satarkShieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#1E3A8A" />
+          <stop offset="50%" stopColor="#0F2042" />
+          <stop offset="100%" stopColor="#070E1E" />
+        </linearGradient>
+
+        <linearGradient id="satarkSaffron" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#FF6B00" />
+          <stop offset="100%" stopColor="#FFA834" />
+        </linearGradient>
+
+        <linearGradient id="satarkGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#057A55" />
+          <stop offset="100%" stopColor="#31C48D" />
+        </linearGradient>
+
+        <filter id="satarkGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="8" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+
+      {/* Rounded Badge Base */}
+      <rect width="512" height="512" rx="128" fill="url(#satarkBgGrad)" />
+
+      {/* Outer Gold Ring */}
+      <rect
+        x="16"
+        y="16"
+        width="480"
+        height="480"
+        rx="112"
+        fill="none"
+        stroke="url(#satarkGoldGrad)"
+        strokeWidth="10"
+        opacity="0.9"
+      />
+      <rect
+        x="28"
+        y="28"
+        width="456"
+        height="456"
+        rx="100"
+        fill="none"
+        stroke="#D4AF37"
+        strokeWidth="2"
+        strokeDasharray="8 8"
+        opacity="0.4"
+      />
+
+      {/* Central Security Shield */}
+      <path
+        d="M 256 68 L 388 120 C 388 280 256 420 256 420 C 256 420 124 280 124 120 Z"
+        fill="url(#satarkShieldGrad)"
+        stroke="url(#satarkGoldGrad)"
+        strokeWidth="10"
+        strokeLinejoin="round"
+        filter="url(#satarkGlow)"
+      />
+
+      {/* Inner Shield Contour */}
+      <path
+        d="M 256 86 L 368 132 C 368 266 256 390 256 390 C 256 390 144 266 144 132 Z"
+        fill="none"
+        stroke="#60A5FA"
+        strokeWidth="2"
+        opacity="0.3"
+      />
+
+      {/* National Tricolor Accents */}
+      <path d="M 180 140 L 332 140 L 320 162 L 192 162 Z" fill="url(#satarkSaffron)" />
+      <path d="M 216 348 L 296 348 L 256 384 Z" fill="url(#satarkGreen)" />
+
+      {/* 24-Spoke Ashoka Chakra / Radar Surveillance Eye */}
+      <circle cx="256" cy="238" r="76" fill="#0A1628" stroke="url(#satarkGoldGrad)" strokeWidth="6" />
+      <circle cx="256" cy="238" r="66" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="4 4" opacity="0.7" />
+
+      {/* Radial Spokes */}
+      <g stroke="#60A5FA" strokeWidth="3" opacity="0.85">
+        <line x1="256" y1="168" x2="256" y2="308" />
+        <line x1="186" y1="238" x2="326" y2="238" />
+        <line x1="206.5" y1="188.5" x2="305.5" y2="287.5" />
+        <line x1="206.5" y1="287.5" x2="305.5" y2="188.5" />
+        <line x1="229.2" y1="173" x2="282.8" y2="303" />
+        <line x1="282.8" y1="173" x2="229.2" y2="303" />
+        <line x1="191" y1="211.2" x2="321" y2="264.8" />
+        <line x1="191" y1="264.8" x2="321" y2="211.2" />
+        <line x1="243" y1="170" x2="269" y2="306" />
+        <line x1="269" y1="170" x2="243" y2="306" />
+        <line x1="188" y1="225" x2="324" y2="251" />
+        <line x1="188" y1="251" x2="324" y2="225" />
+      </g>
+
+      {/* Central Vigilance Iris */}
+      <circle cx="256" cy="238" r="22" fill="#0F172A" stroke="url(#satarkGoldGrad)" strokeWidth="4" />
+      <circle cx="256" cy="238" r="10" fill="#38BDF8" />
+      <circle cx="256" cy="238" r="4" fill="#FFFFFF" />
+
+      {/* Top Star of Vigilance */}
+      <polygon
+        points="256,82 262,96 276,96 264,105 268,119 256,110 244,119 248,105 236,96 250,96"
+        fill="url(#satarkGoldGrad)"
+      />
+    </svg>
+  )
+}

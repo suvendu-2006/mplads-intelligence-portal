@@ -1,10 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SATARK-MPLADS | National Intelligence & Forensic Command Center</title>
+    <meta name="theme-color" content="#1E3A8A" />
+    <title>SATARK-MPLADS | National Intelligence &amp; Forensic Command Center</title>
+
+    <!-- Open Graph / Meta Preview for URL Links -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SATARK-MPLADS | National Intelligence &amp; Forensic Command Center" />
+    <meta property="og:description" content="AI-driven forensic surveillance, multi-tiered anomaly detection (D1–D15), and transparent analytics for MPLADS funds across 543 Constituencies and 732+ Districts." />
+    <meta property="og:image" content="/satark-og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SATARK-MPLADS | National Intelligence &amp; Forensic Command Center" />
+    <meta name="twitter:description" content="AI-driven forensic surveillance, multi-tiered anomaly detection (D1–D15), and transparent analytics for MPLADS funds across 543 Constituencies and 732+ Districts." />
+    <meta name="twitter:image" content="/satark-og.png" />
+
+    <!-- Instant theme sync preventing unwanted auto-dark switch and white flash -->
+    <script>
+      (function() {
+        try {
+          var raw = localStorage.getItem('mplads-user-session');
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            var savedTheme = parsed && parsed.state && parsed.state.theme;
+            if (savedTheme === 'dark') {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'light');
+              document.documentElement.classList.remove('dark');
+            }
+          } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

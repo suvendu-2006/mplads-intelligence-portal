@@ -42,7 +42,7 @@ export const useStore = create<AppStore>()(
         permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
         sessionToken: 'default_viewer'
       },
-      theme: 'device',
+      theme: 'light',
       lang: 'en',
       searchQuery: '',
       bannerDismissed: false,
@@ -91,6 +91,16 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
+      version: 2,
+      migrate: (persistedState: any, version: number) => {
+        if (version < 2) {
+          return {
+            ...persistedState,
+            theme: persistedState?.theme === 'dark' ? 'dark' : 'light'
+          }
+        }
+        return persistedState
+      }
     }
   )
 )
