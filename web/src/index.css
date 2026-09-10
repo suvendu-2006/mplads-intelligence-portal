@@ -22,11 +22,11 @@
 :root, [data-theme="light"] {
   color-scheme: light;
 
-  /* === BACKGROUNDS & SURFACES (Champagne Ivory Canvas) === */
-  --bg-primary: #F6F5F1;              /* Warm Champagne Ivory canvas */
+  /* === BACKGROUNDS & SURFACES (Pure White Canvas) === */
+  --bg-primary: #FFFFFF;              /* Pure White canvas throughout the web */
   --surface-primary: #FFFFFF;         /* Pure white elevated cards */
-  --surface-alt: #EDEAE3;             /* Warm Champagne zebra/wells */
-  --surface-hover: #F0ECE1;           /* Interactive hover */
+  --surface-alt: #F8FAFC;             /* Clean crisp wells / zebra */
+  --surface-hover: #F1F5F9;           /* Interactive hover */
 
   /* === TEXT & DATA (Deep Espresso Palette) === */
   --text-primary: #24140E;            /* Deep Espresso (17.5:1 contrast, rich roasted coffee bean) */
@@ -38,9 +38,11 @@
   --brand-espresso: #24140E;          /* Brand Espresso */
   --text-espresso: #24140E;           /* Explicit espresso text token */
 
-  /* === BORDERS === */
-  --border-primary: #E7E2D9;          /* Warm Champagne hairline */
-  --border-subtle: #EFECE6;           /* Subtle divider */
+  /* === BORDERS (Crisp Brand Blue Colored Borders) === */
+  --border-primary: #93C5FD;          /* Crisp Brand Blue border (Tailwind blue-300) */
+  --border-subtle: #DBEAFE;           /* Soft Sky divider (Tailwind blue-100) */
+  --border-block: #60A5FA;            /* Distinct Vibrant Brand Blue border for cards/blocks */
+  --border-block-hover: #3B82F6;      /* Interactive hover border */
 
   /* === BRAND IDENTITY === */
   --brand-primary: #1E3A8A;           /* Ink Navy (10.4:1 white text) */
@@ -55,9 +57,9 @@
   --info: #0072B2;                    /* Okabe blue (6.8:1) */
 
   /* === SHADOWS === */
-  --shadow-lux: 0 2px 8px rgba(101, 93, 82, 0.08);
-  --shadow-card: 0 4px 20px -2px rgba(16, 29, 46, 0.06);
-  --shadow-focus: 0 0 0 3px rgba(183, 121, 31, 0.25);
+  --shadow-lux: 0 2px 10px rgba(59, 130, 246, 0.08);
+  --shadow-card: 0 6px 24px -2px rgba(59, 130, 246, 0.14);
+  --shadow-focus: 0 0 0 3px rgba(96, 165, 250, 0.35);
 
   /* === TRANSITIONS === */
   --dur-fast: 150ms;
@@ -115,6 +117,8 @@
   /* === BORDERS === */
   --border-primary: #1B2335;          /* Crisp hairline border */
   --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-block: #1E293B;            /* Structured dark border */
+  --border-block-hover: #334155;
 
   /* === BRAND IDENTITY (Vibrant Orange / Amber Accents) === */
   --brand-primary: #60A5FA;           /* Refined sky blue */
@@ -167,11 +171,11 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
-    /* Re-declare light champagne colors to prevent system override */
-    --bg-primary: #F6F5F1;
+    /* Re-declare light mode pure white canvas and colored borders to prevent system override */
+    --bg-primary: #FFFFFF;
     --surface-primary: #FFFFFF;
-    --surface-alt: #EDEAE3;
-    --surface-hover: #F0ECE1;
+    --surface-alt: #F8FAFC;
+    --surface-hover: #F1F5F9;
     --text-primary: #24140E;
     --text-secondary: #423229;
     --text-tertiary: #705F55;
@@ -180,8 +184,10 @@
     --color-espresso-rich: #2A1810;
     --brand-espresso: #24140E;
     --text-espresso: #24140E;
-    --border-primary: #E7E2D9;
-    --border-subtle: #EFECE6;
+    --border-primary: #93C5FD;
+    --border-subtle: #DBEAFE;
+    --border-block: #60A5FA;
+    --border-block-hover: #3B82F6;
     --brand-primary: #1E3A8A;
     --brand-accent: #B7791F;
     --gold-text: #9C6B1A;
@@ -190,9 +196,9 @@
     --warning: #B54708;
     --danger: #B42318;
     --info: #0072B2;
-    --shadow-lux: 0 2px 8px rgba(101, 93, 82, 0.08);
-    --shadow-card: 0 4px 20px -2px rgba(16, 29, 46, 0.06);
-    --shadow-focus: 0 0 0 3px rgba(183, 121, 31, 0.25);
+    --shadow-lux: 0 2px 10px rgba(59, 130, 246, 0.08);
+    --shadow-card: 0 6px 24px -2px rgba(59, 130, 246, 0.14);
+    --shadow-focus: 0 0 0 3px rgba(96, 165, 250, 0.35);
     --brand-navy: #1E3A8A;
     --brand-gold: #B7791F;
     --chart-navy: #0072B2;
@@ -349,10 +355,10 @@ a:focus-visible {
   letter-spacing: -0.02em;
 }
 
-/* Enhanced lux-card */
+/* Enhanced lux-card with crisp colored border */
 .lux-card {
   background: var(--surface-primary);
-  border: 1px solid var(--border-primary);
+  border: 1.5px solid var(--border-block, var(--border-primary));
   border-radius: 14px;
   box-shadow: var(--shadow-lux);
   transition: all var(--dur-base) var(--ease-entrance);
@@ -360,17 +366,18 @@ a:focus-visible {
 
 .lux-card:hover {
   transform: translateY(-2px);
+  border-color: var(--border-block-hover, #3B82F6);
   box-shadow: var(--shadow-card);
 }
 
 .lux-card-interactive:hover {
-  border-color: var(--gold-soft);
-  box-shadow: var(--shadow-card), 0 0 0 3px var(--gold-soft);
+  border-color: var(--border-block-hover, #3B82F6);
+  box-shadow: var(--shadow-card), 0 0 0 3px rgba(96, 165, 250, 0.25);
 }
 
 .lux-panel {
   background-color: var(--surface-primary);
-  border: 1px solid var(--border-primary);
+  border: 1.5px solid var(--border-block, var(--border-primary));
   border-radius: 14px;
 }
 
@@ -411,9 +418,9 @@ a:focus-visible {
 [data-theme="light"] .leaflet-popup-content-wrapper {
   background: #FFFFFF !important;
   color: #24140E !important;
-  border: 1px solid #E7E2D9 !important;
+  border: 1.5px solid #60A5FA !important;
   border-radius: 12px !important;
-  box-shadow: 0 8px 24px rgba(36, 20, 14, 0.12) !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15) !important;
 }
 
 [data-theme="dark"] .leaflet-popup-content-wrapper {
