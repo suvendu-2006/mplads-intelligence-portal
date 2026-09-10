@@ -3,9 +3,7 @@
   "buildCommand": "cd web && npm install && npm run build",
   "outputDirectory": "web/dist",
   "functions": {
-    "api/index.py": {
-      "memory": 1024,
-      "maxDuration": 15,
+    "api/*.py": {
       "includeFiles": "api/mplads_dev.db"
     }
   },
@@ -57,10 +55,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.py"
-    },
     {
       "source": "/dossier",
       "destination": "/dossier.html"
