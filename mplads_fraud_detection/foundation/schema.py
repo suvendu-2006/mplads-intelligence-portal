@@ -128,7 +128,6 @@ class Work(Base):
         CheckConstraint("cost > 0", name="chk_positive_cost"),
         Index("idx_works_district_date", "district", "completion_date"),
         Index("idx_works_mp_date", "mp_name", "recommended_date"),
-        Index("ix_works_implementing_agency", "implementing_agency"),
     )
 
 
