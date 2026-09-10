@@ -294,6 +294,10 @@ export const BrowseStates: React.FC = () => {
                 <div className="pt-3 border-t border-[var(--border-primary)] mt-3">
                   <Link
                     to={`/states/${encodeURIComponent(st.state)}`}
+                    onMouseEnter={() => {
+                      import('./StateDetail').catch(() => {})
+                      fetch(`/api/states/${encodeURIComponent(st.state)}`).catch(() => {})
+                    }}
                     className="w-full py-2 px-3 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition"
                   >
                     <span>Show Details</span>

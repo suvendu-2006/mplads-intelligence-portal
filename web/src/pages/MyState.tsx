@@ -26,11 +26,22 @@ export const MyState: React.FC = () => {
   const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
   const isRedirect = user.role === 'mospi' || !user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES'
 
-  const [data, setData] = useState<any>(null)
+  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? 'BIHAR' : user.state
+
+  const [data, setData] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_my_state_${targetState}`)
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
   const [nationalMeta, setNationalMeta] = useState<any>(null)
   const [flags, setFlags] = useState<any[]>([])
   const [idas, setIdas] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_my_state_${targetState}`)
+    } catch { return true }
+  })
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [actionNotice, setActionNotice] = useState<string | null>(null)
 
@@ -48,8 +59,9 @@ export const MyState: React.FC = () => {
         setLoading(false)
         return
       }
-      setLoading(true)
-      const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? 'BIHAR' : user.state
+      if (!sessionStorage.getItem(`cached_my_state_${targetState}`)) {
+        setLoading(true)
+      }
       try {
         let stateData: any = null
         try {
@@ -68,6 +80,7 @@ export const MyState: React.FC = () => {
         }
 
         setData(stateData)
+        try { sessionStorage.setItem(`cached_my_state_${targetState}`, JSON.stringify(stateData)) } catch {}
 
         const resolvedState = stateData?.state || targetState
         const [fRes, idaRes] = await Promise.all([

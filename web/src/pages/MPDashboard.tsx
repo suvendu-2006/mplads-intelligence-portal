@@ -24,23 +24,35 @@ import {
 
 export const MPDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
-  const [data, setData] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const mpId = user.mpId || '6a932b5bcd944524379eddd9'
+  const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
+
+  const [data, setData] = useState<any>(() => {
+    try {
+      const saved = sessionStorage.getItem(`cached_mp_${mpId}`)
+      return saved ? JSON.parse(saved) : null
+    } catch { return null }
+  })
+  const [loading, setLoading] = useState(() => {
+    try {
+      return !sessionStorage.getItem(`cached_mp_${mpId}`)
+    } catch { return true }
+  })
   const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags' | 'action'>('works')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [doLetterNotice, setDoLetterNotice] = useState<string | null>(null)
 
-  const mpId = user.mpId || '6a932b5bcd944524379eddd9'
-  const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
-
   useEffect(() => {
     async function loadMPDossier() {
-      setLoading(true)
+      if (!sessionStorage.getItem(`cached_mp_${mpId}`)) {
+        setLoading(true)
+      }
       try {
         const res = await fetch(`/api/mps/${mpId}`)
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
+          try { sessionStorage.setItem(`cached_mp_${mpId}`, JSON.stringify(json.data)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load MP profile:', err)

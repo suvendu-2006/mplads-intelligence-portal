@@ -453,7 +453,11 @@ export const DistrictDashboard: React.FC = () => {
 
                     <Link
                       to={targetUrl}
-                      className="w-full py-1.5 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1 transition"
+                      onMouseEnter={() => {
+                        import('./MPDetail').catch(() => {})
+                        if (mp.id) fetch(`/api/mps/${encodeURIComponent(mp.id)}`).catch(() => {})
+                      }}
+                      className="w-full py-1.5 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition shadow-2xs"
                     >
                       <span>View Parliamentary Record</span>
                       <ArrowRight size={12} />

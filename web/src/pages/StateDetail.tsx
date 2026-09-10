@@ -553,6 +553,10 @@ export const StateDetail: React.FC = () => {
 
                     <Link
                       to={`/districts/${encodeURIComponent(distName)}`}
+                      onMouseEnter={() => {
+                        import('./DistrictDashboard').catch(() => {})
+                        fetch(`/api/districts/${encodeURIComponent(distName)}`).catch(() => {})
+                      }}
                       className="mt-3 w-full py-2 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition shadow-2xs"
                     >
                       <span>Explore District Dashboard</span>
