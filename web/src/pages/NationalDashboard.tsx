@@ -109,7 +109,7 @@ export const NationalDashboard: React.FC = () => {
     loadData()
   }, [])
 
-  const [pieMode, setPieMode] = useState<'sectors' | 'status'>('sectors')
+  const [pieMode, setPieMode] = useState<'sectors' | 'status'>('status')
 
   if (loading) {
     return <LoadingSkeleton rows={8} height="h-28" />
@@ -322,9 +322,79 @@ export const NationalDashboard: React.FC = () => {
             </div>
           </SectionCard>
 
-          {/* Chart 2: Where the Money is Spent (Sectoral Expenditure & Delivery Status) */}
+          {/* Chart 2: Where the Money is Spent • Sectoral Expenditure */}
           <SectionCard
-            title={pieMode === 'sectors' ? 'Where Money is Spent' : 'Works Delivery Status'}
+            title="Where the Money is Spent • Sectoral Expenditure"
+            subtitle="Audited liquid expenditure and works breakdown by developmental field"
+          >
+            {sectorData.length > 0 ? (
+              <div>
+                <div className="h-56 relative flex items-center justify-center chart-container">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={sectorData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={55}
+                        outerRadius={85}
+                        paddingAngle={2}
+                        dataKey="value"
+                        animationDuration={ANIMATION_CONFIG.duration.pie}
+                        animationEasing={ANIMATION_CONFIG.easing.easeInOut}
+                        animationBegin={ANIMATION_CONFIG.delay.medium}
+                        isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
+                      >
+                        {sectorData.map((entry: any, idx: number) => (
+                          <Cell key={`cell-top-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                        ))}
+                      </Pie>
+                      <Tooltip content={<ChartTooltip formatter="percent" />} />
+                    </PieChart>
+                  </ResponsiveContainer>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+                    <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
+                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
+                    </span>
+                    <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
+                      Total Disbursed
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-2 pt-3 border-t border-[var(--border-primary)] max-h-52 overflow-y-auto pr-1">
+                  {sectorData.map((sec: any, idx: number) => (
+                    <div key={idx} className="flex items-center justify-between p-1.5 rounded-lg bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition text-xs">
+                      <div className="flex items-center gap-2 truncate mr-2">
+                        <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-xs" style={{ backgroundColor: sec.color }} />
+                        <div className="truncate">
+                          <div className="font-bold text-[var(--text-primary)] truncate text-[11px]" title={sec.fullName || sec.name}>
+                            {sec.name}
+                          </div>
+                          <div className="text-[9px] text-[var(--text-secondary)] font-semibold">
+                            {sec.count?.toLocaleString('en-IN')} civil works
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <div className="font-extrabold text-[11px] text-[var(--text-primary)] tabular-nums">{sec.crores}</div>
+                        <div className="text-[10px] font-bold text-[var(--brand-primary)] tabular-nums">{sec.value}% spend</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
+            )}
+          </SectionCard>
+        </div>
+
+        {/* Row 2: Chart 3 (Works Delivery Status with By Field / Works Status toggle) + Chart 4 (Yearly Allocation vs Spend Trend) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Chart 3: Works Delivery Status (with By Field / Works Status toggle) */}
+          <SectionCard
+            title={pieMode === 'sectors' ? 'Where the Money is Spent' : 'Works Delivery Status'}
             subtitle={
               pieMode === 'sectors'
                 ? 'Audited spend breakdown by developmental field'
@@ -358,65 +428,71 @@ export const NationalDashboard: React.FC = () => {
             }
           >
             {pieMode === 'sectors' ? (
-              /* Sectoral Expenditure by Developmental Field */
-              <div>
-                <div className="h-60 relative flex items-center justify-center chart-container">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={sectorData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={60}
-                        outerRadius={92}
-                        paddingAngle={2}
-                        dataKey="value"
-                        animationDuration={ANIMATION_CONFIG.duration.pie}
-                        animationEasing={ANIMATION_CONFIG.easing.easeInOut}
-                        animationBegin={ANIMATION_CONFIG.delay.medium}
-                        isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
-                      >
-                        {sectorData.map((entry: any, idx: number) => (
-                          <Cell key={`sec-cell-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        ))}
-                      </Pie>
-                      <Tooltip
-                        content={<ChartTooltip formatter="percent" />}
-                      />
-                    </PieChart>
-                  </ResponsiveContainer>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                    <span className="text-xl font-black text-[#24140E] dark:text-[#F8FAFC] tabular-nums">
-                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
-                    </span>
-                    <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
-                      Money Spent
-                    </span>
+              /* Sectoral Expenditure by Developmental Field (2-col layout) */
+              sectorData.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                  <div className="h-64 relative flex items-center justify-center chart-container">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={sectorData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={55}
+                          outerRadius={88}
+                          paddingAngle={2}
+                          dataKey="value"
+                          animationDuration={ANIMATION_CONFIG.duration.pie}
+                          animationEasing={ANIMATION_CONFIG.easing.easeInOut}
+                          animationBegin={ANIMATION_CONFIG.delay.medium}
+                          isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
+                        >
+                          {sectorData.map((entry: any, idx: number) => (
+                            <Cell key={`cell-row2-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                          ))}
+                        </Pie>
+                        <Tooltip content={<ChartTooltip formatter="percent" />} />
+                      </PieChart>
+                    </ResponsiveContainer>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+                      <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
+                        ₹{totalSectorCr.toLocaleString('en-IN')} Cr
+                      </span>
+                      <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
+                        Total Disbursed
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2.5 max-h-64 overflow-y-auto pr-1">
+                    {sectorData.map((sec: any, idx: number) => (
+                      <div key={idx} className="flex items-center justify-between p-2 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
+                        <div className="flex items-center gap-2.5 truncate mr-2">
+                          <span className="w-3 h-3 rounded-sm shrink-0 shadow-xs" style={{ backgroundColor: sec.color }} />
+                          <div className="truncate">
+                            <div className="text-xs font-bold text-[var(--text-primary)] truncate" title={sec.fullName || sec.name}>
+                              {sec.name}
+                            </div>
+                            <div className="text-[10px] text-[var(--text-secondary)] font-semibold">
+                              {sec.count?.toLocaleString('en-IN')} civil works
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-right shrink-0">
+                          <div className="font-extrabold text-xs text-[var(--text-primary)] tabular-nums">{sec.crores}</div>
+                          <div className="text-[11px] font-bold text-[var(--brand-primary)] tabular-nums">{sec.value}% spend</div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-
-                {/* Clear Breakdown List with Field Names, Money Spent & Share */}
-                <div className="space-y-2 pt-3 border-t border-[var(--border-primary)] max-h-48 overflow-y-auto pr-1">
-                  {sectorData.map((sec: any, idx: number) => (
-                    <div key={idx} className="flex items-center justify-between text-xs p-1 rounded-md hover:bg-[var(--surface-alt)] transition">
-                      <div className="flex items-center gap-2 truncate mr-2">
-                        <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: sec.color }} />
-                        <span className="font-bold text-[var(--text-primary)] truncate text-[11px]" title={sec.fullName || sec.name}>
-                          {sec.name}
-                        </span>
-                      </div>
-                      <div className="text-right shrink-0">
-                        <span className="font-extrabold text-[#24140E] dark:text-[#F8FAFC] tabular-nums">{sec.crores}</span>
-                        <span className="text-[11px] text-[var(--text-secondary)] font-bold ml-1.5 tabular-nums">({sec.value}%)</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ) : (
+                <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
+              )
             ) : (
-              /* Works Delivery Status */
-              <div>
-                <div className="h-60 relative flex items-center justify-center chart-container">
+              /* Works Delivery Status (2-col layout) */
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                <div className="h-64 relative flex items-center justify-center chart-container">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
@@ -445,9 +521,7 @@ export const NationalDashboard: React.FC = () => {
                         <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
                         <Cell fill={chartTheme.utilized.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
                       </Pie>
-                      <Tooltip
-                        content={<ChartTooltip formatter="number" />}
-                      />
+                      <Tooltip content={<ChartTooltip formatter="number" />} />
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
@@ -465,107 +539,46 @@ export const NationalDashboard: React.FC = () => {
                   const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
                   const pendPct = totalWorksCalc > 0 ? ((pendingWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
                   return (
-                    <div className="space-y-2.5 pt-3 border-t border-[var(--border-primary)]">
-                      <div className="flex items-center justify-between text-xs">
-                        <div className="flex items-center gap-2">
-                          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: chartTheme.clean.hex }} />
-                          <span className="font-bold text-[var(--text-primary)]">Completed & Certified</span>
-                        </div>
-                        <div className="text-right">
-                          <span className="font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {completedWorks.toLocaleString('en-IN')} ({compPct}%)
+                    <div className="space-y-3.5">
+                      <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
+                        <div className="flex items-center justify-between text-xs mb-1">
+                          <div className="flex items-center gap-2">
+                            <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: chartTheme.clean.hex }} />
+                            <span className="font-bold text-[var(--text-primary)]">Completed & Certified</span>
+                          </div>
+                          <span className="text-xs font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
+                            {compPct}%
                           </span>
-                          <span className="text-[11px] text-[var(--text-secondary)] font-bold ml-2">₹2,387 Cr</span>
+                        </div>
+                        <div className="flex items-baseline justify-between pt-1">
+                          <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
+                            {completedWorks.toLocaleString('en-IN')} works
+                          </span>
+                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹2,387 Cr</span>
                         </div>
                       </div>
-                      <div className="flex items-center justify-between text-xs">
-                        <div className="flex items-center gap-2">
-                          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: chartTheme.utilized.hex }} />
-                          <span className="font-bold text-[var(--text-primary)]">Active in Progress Queue</span>
-                        </div>
-                        <div className="text-right">
-                          <span className="font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {pendingWorks.toLocaleString('en-IN')} ({pendPct}%)
+
+                      <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
+                        <div className="flex items-center justify-between text-xs mb-1">
+                          <div className="flex items-center gap-2">
+                            <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: chartTheme.utilized.hex }} />
+                            <span className="font-bold text-[var(--text-primary)]">Active in Progress Queue</span>
+                          </div>
+                          <span className="text-xs font-black text-amber-600 dark:text-amber-400 tabular-nums">
+                            {pendPct}%
                           </span>
-                          <span className="text-[11px] text-[var(--text-secondary)] font-bold ml-2">₹1,577 Cr</span>
+                        </div>
+                        <div className="flex items-baseline justify-between pt-1">
+                          <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
+                            {pendingWorks.toLocaleString('en-IN')} works
+                          </span>
+                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹1,577 Cr</span>
                         </div>
                       </div>
                     </div>
                   )
                 })()}
               </div>
-            )}
-          </SectionCard>
-        </div>
-
-        {/* Row 2: Chart 3 (Where the Money is Spent • Comprehensive Sector Portfolio) + Chart 4 (Yearly Allocation vs Spend Trend) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Chart 3: Where the Money is Spent • Sectoral Expenditure Donut */}
-          <SectionCard
-            title="Where the Money is Spent • Sectoral Expenditure"
-            subtitle="Audited liquid expenditure and works breakdown by developmental field"
-          >
-            {sectorData.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                <div className="h-64 relative flex items-center justify-center chart-container">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={sectorData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={55}
-                        outerRadius={88}
-                        paddingAngle={2}
-                        dataKey="value"
-                        animationDuration={ANIMATION_CONFIG.duration.pie}
-                        animationEasing={ANIMATION_CONFIG.easing.easeInOut}
-                        animationBegin={ANIMATION_CONFIG.delay.medium}
-                        isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
-                      >
-                        {sectorData.map((entry: any, idx: number) => (
-                          <Cell key={`cell-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        ))}
-                      </Pie>
-                      <Tooltip
-                        content={<ChartTooltip formatter="percent" />}
-                      />
-                    </PieChart>
-                  </ResponsiveContainer>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                    <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
-                    </span>
-                    <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
-                      Total Disbursed
-                    </span>
-                  </div>
-                </div>
-
-                <div className="space-y-2.5 max-h-64 overflow-y-auto pr-1">
-                  {sectorData.map((sec: any, idx: number) => (
-                    <div key={idx} className="flex items-center justify-between p-2 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
-                      <div className="flex items-center gap-2.5 truncate mr-2">
-                        <span className="w-3 h-3 rounded-sm shrink-0 shadow-xs" style={{ backgroundColor: sec.color }} />
-                        <div className="truncate">
-                          <div className="text-xs font-bold text-[var(--text-primary)] truncate" title={sec.fullName || sec.name}>
-                            {sec.name}
-                          </div>
-                          <div className="text-[10px] text-[var(--text-secondary)] font-semibold">
-                            {sec.count?.toLocaleString('en-IN')} civil works
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-right shrink-0">
-                        <div className="font-extrabold text-xs text-[var(--text-primary)] tabular-nums">{sec.crores}</div>
-                        <div className="text-[11px] font-bold text-[var(--brand-primary)] tabular-nums">{sec.value}% spend</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
             )}
           </SectionCard>
 
