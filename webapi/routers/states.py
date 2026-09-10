@@ -11,7 +11,8 @@ from webapi.models import (
 from webapi.data_service import load_states_csv, load_districts_csv, load_mps_csv, get_db, compute_district_completion_metrics
 from webapi.aggregators import (
     compute_state_red_flag_pct, compute_all_states_red_flag_pct,
-    compute_district_tier_counts, compute_cpwd_comparison
+    compute_district_tier_counts, compute_cpwd_comparison,
+    compute_all_districts_tier_counts_for_state
 )
 from webapi.config import DETECTOR_NAMES, get_tier, resolve_detector_type
 from mplads_fraud_detection.foundation.schema import Work, Anomaly
@@ -155,9 +156,13 @@ def get_state_detail(state: str, db: Session = Depends(get_db)):
     districts_list = []
     warnings = []
 
+    state_tiers_map = compute_all_districts_tier_counts_for_state(actual_state_name, db)
+
     for _, drow in dist_matches.iterrows():
         d_name = str(drow["district_nodal"])
-        calc = compute_district_tier_counts(actual_state_name, d_name, db)
+        calc = state_tiers_map.get(d_name.strip().lower())
+        if not calc:
+            calc = compute_district_tier_counts(actual_state_name, d_name, db)
         in_prog = float(drow.get("in_progress_payments_inr", 0.0))
         tot_w = int(drow.get("total_works", 0))
         

@@ -3,7 +3,7 @@ from functools import lru_cache
 from typing import Dict, Any, Optional
 from pathlib import Path
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, Session
 
 from webapi.config import (
@@ -11,6 +11,21 @@ from webapi.config import (
 )
 
 engine = create_engine(DB_URL, connect_args={"check_same_thread": False})
+
+@event.listens_for(engine, "connect")
+def set_sqlite_pragma(dbapi_connection, connection_record):
+    try:
+        cursor = dbapi_connection.cursor()
+        cursor.execute("PRAGMA journal_mode = WAL;")
+        cursor.execute("PRAGMA synchronous = NORMAL;")
+        cursor.execute("PRAGMA cache_size = -64000;")       # 64MB memory cache
+        cursor.execute("PRAGMA temp_store = MEMORY;")
+        cursor.execute("PRAGMA mmap_size = 268435456;")     # 256MB memory mapping
+        cursor.execute("PRAGMA query_only = 1;")            # read-only lock-free concurrent queries
+        cursor.close()
+    except Exception:
+        pass
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_db():
@@ -45,6 +60,21 @@ def load_mps_csv() -> pd.DataFrame:
     df["paymentGapPercentage"] = df["paymentGapPercentage"].clip(lower=0.0)
     return df
 
+_MP_RATE_MAP: Optional[Dict[str, float]] = None
+
+def get_mp_rate_map() -> Dict[str, float]:
+    global _MP_RATE_MAP
+    if _MP_RATE_MAP is None:
+        try:
+            df_mps = load_mps_csv()
+            names = df_mps["mpName"].astype(str).str.strip().str.lower()
+            rates = df_mps.get("completionRate", 0.0).fillna(0.0).astype(float)
+            _MP_RATE_MAP = dict(zip(names, rates))
+        except Exception:
+            _MP_RATE_MAP = {}
+    return _MP_RATE_MAP
+
+@lru_cache(maxsize=2048)
 def compute_district_completion_metrics(
     district_name: str,
     active_mps_str: str,
@@ -53,17 +83,19 @@ def compute_district_completion_metrics(
     state_util: float = 65.0
 ) -> Dict[str, Any]:
     """Compute reconciled completion rate and work counts for a district based on active MPs or baseline."""
-    df_mps = load_mps_csv()
-    mp_rate_map = {str(r["mpName"]).strip().lower(): float(r.get("completionRate", 0.0)) for _, r in df_mps.iterrows()}
+    mp_rate_map = get_mp_rate_map()
     
     rates = []
     if active_mps_str:
         for m in active_mps_str.split(","):
             m_clean = m.strip().lower()
-            for k, rate in mp_rate_map.items():
-                if k in m_clean or m_clean in k:
-                    rates.append(rate)
-                    break
+            if m_clean in mp_rate_map:
+                rates.append(mp_rate_map[m_clean])
+            else:
+                for k, rate in mp_rate_map.items():
+                    if k in m_clean or m_clean in k:
+                        rates.append(rate)
+                        break
     
     if rates:
         comp_rate = round(sum(rates) / len(rates), 1)

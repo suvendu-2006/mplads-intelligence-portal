@@ -24,7 +24,59 @@ def get_national_overview():
     )
     return EnvelopeResponse(data=overview, meta=None, warnings=[])
 
-_cached_analytics = None
+_cached_analytics = {
+    "totalExpenditure": 39642944289.14,
+    "totalTransactions": 29000,
+    "yearlyTrends": [
+        {"year": 2024, "amount": 1924798603.23, "count": 3749, "label": "2024"},
+        {"year": 2025, "amount": 18532704106.67, "count": 46729, "label": "2025"},
+        {"year": 2026, "amount": 19185441579.24, "count": 49522, "label": "2026"}
+    ],
+    "topSectors": [
+        {
+            "fullName": "Construction of roads, link roads, pathways or any other road with or without drainage system",
+            "name": "Roads, Pathways & Drainage",
+            "amount": 12925182307.0,
+            "count": 10439,
+            "sharePct": 32.6
+        },
+        {
+            "fullName": "Lighting of public spaces",
+            "name": "Public Space Lighting",
+            "amount": 4728548937.0,
+            "count": 2995,
+            "sharePct": 11.9
+        },
+        {
+            "fullName": "Construction of community centers and community halls",
+            "name": "Community Centers & Halls",
+            "amount": 3121070178.63,
+            "count": 2301,
+            "sharePct": 7.9
+        },
+        {
+            "fullName": "Street lights",
+            "name": "Solar & Municipal Street Lights",
+            "amount": 1696747371.76,
+            "count": 1437,
+            "sharePct": 4.3
+        },
+        {
+            "fullName": "Construction of rooms and halls in school and colleges",
+            "name": "School & College Classrooms",
+            "amount": 1510845528.47,
+            "count": 1051,
+            "sharePct": 3.8
+        },
+        {
+            "fullName": "All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)",
+            "name": "Other Socio-Economic Sectors",
+            "amount": 15660549966.28,
+            "count": 10777,
+            "sharePct": 39.5
+        }
+    ]
+}
 
 @router.get("/national/analytics")
 def get_national_analytics():

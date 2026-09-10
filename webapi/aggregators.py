@@ -80,13 +80,77 @@ def compute_state_red_flag_pct(state: str, db: Session) -> Dict[str, Any]:
         "totalWorksCount": 0
     })
 
+def compute_all_districts_tier_counts_for_state(state: str, db: Session) -> Dict[str, Dict[str, Any]]:
+    cache_key = f"all_dist_tiers_{state.lower()}"
+    cached = get_from_cache(cache_key)
+    if cached:
+        return cached
+
+    from sqlalchemy import text
+    query_works = text("""
+        SELECT work_id, LOWER(district), COALESCE(cost, 0.0)
+        FROM works
+        WHERE LOWER(state) = :state
+    """)
+    try:
+        rows = db.execute(query_works, {"state": state.lower()}).fetchall()
+    except Exception:
+        rows = []
+
+    query_anom = text("""
+        SELECT a.work_id, MAX(a.severity)
+        FROM anomalies a
+        JOIN works w ON a.work_id = w.work_id
+        WHERE LOWER(w.state) = :state
+        GROUP BY a.work_id
+    """)
+    try:
+        anom_rows = db.execute(query_anom, {"state": state.lower()}).fetchall()
+    except Exception:
+        anom_rows = []
+    sev_map = {r[0]: float(r[1]) for r in anom_rows}
+
+    dist_data: Dict[str, Dict[str, Any]] = {}
+    for wid, d_lower, cost in rows:
+        if d_lower not in dist_data:
+            dist_data[d_lower] = {
+                "portfolio_value": 0.0,
+                "tier_counts": {"red": 0, "orange": 0, "yellow": 0, "green": 0},
+                "red_work_count": 0
+            }
+        rec = dist_data[d_lower]
+        rec["portfolio_value"] += cost
+        sev = sev_map.get(wid)
+        if sev is not None:
+            if sev >= 0.70:
+                rec["tier_counts"]["red"] += 1
+                rec["red_work_count"] += 1
+            elif sev >= 0.50:
+                rec["tier_counts"]["orange"] += 1
+            elif sev >= 0.30:
+                rec["tier_counts"]["yellow"] += 1
+            else:
+                rec["tier_counts"]["green"] += 1
+        else:
+            rec["tier_counts"]["green"] += 1
+
+    set_in_cache(cache_key, dist_data)
+    return dist_data
+
 def compute_district_tier_counts(state: str, district: str, db: Session) -> Dict[str, Any]:
     cache_key = f"dist_tiers_{state.lower()}_{district.lower()}"
     cached = get_from_cache(cache_key)
     if cached:
         return cached
 
-    # Works in district
+    all_state_tiers = compute_all_districts_tier_counts_for_state(state, db)
+    d_clean = district.strip().lower()
+    if d_clean in all_state_tiers:
+        res = all_state_tiers[d_clean]
+        set_in_cache(cache_key, res)
+        return res
+
+    # Fallback to individual query if district name format differs
     subq = db.query(Work.work_id, Work.cost).filter(
         func.lower(Work.state) == state.lower(),
         func.lower(Work.district) == district.lower()
@@ -100,7 +164,6 @@ def compute_district_tier_counts(state: str, district: str, db: Session) -> Dict
     red_work_count = 0
 
     if work_ids:
-        # Max severity per work
         max_severities = db.query(
             Anomaly.work_id,
             func.max(Anomaly.severity).label("max_sev")

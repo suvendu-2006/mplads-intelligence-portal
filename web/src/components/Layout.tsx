@@ -84,7 +84,10 @@ export const Layout: React.FC = () => {
 
             <Link
               to="/states"
-              onMouseEnter={() => import('../pages/BrowseStates').catch(() => {})}
+              onMouseEnter={() => {
+                import('../pages/BrowseStates').catch(() => {})
+                fetch('/api/states?sort=red_pct&order=desc').catch(() => {})
+              }}
               className={navLinkClasses('/states')}
             >
               <MapPin size={14} className={isActive('/states') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
@@ -94,7 +97,10 @@ export const Layout: React.FC = () => {
 
             <Link
               to="/mps"
-              onMouseEnter={() => import('../pages/BrowseMPs').catch(() => {})}
+              onMouseEnter={() => {
+                import('../pages/BrowseMPs').catch(() => {})
+                fetch('/api/mps?page=1&page_size=50&sort=allocated&order=desc').catch(() => {})
+              }}
               className={navLinkClasses('/mps')}
             >
               <Users size={14} className={isActive('/mps') ? 'text-[var(--brand-primary)]' : 'text-[var(--text-tertiary)]'} />
@@ -119,7 +125,10 @@ export const Layout: React.FC = () => {
             {user.role !== 'viewer' && (
               <Link
                 to="/audit"
-                onMouseEnter={() => import('../pages/AuditDesk').catch(() => {})}
+                onMouseEnter={() => {
+                  import('../pages/AuditDesk').catch(() => {})
+                  fetch('/api/flags?page=1&page_size=50').catch(() => {})
+                }}
                 className={navLinkClasses('/audit')}
               >
                 <ShieldAlert size={14} className={isActive('/audit') ? 'text-rose-500' : 'text-[var(--text-tertiary)]'} />
