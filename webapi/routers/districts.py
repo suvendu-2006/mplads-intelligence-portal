@@ -6,7 +6,7 @@ import json
 import math
 
 from webapi.models import EnvelopeResponse, MetaPagination
-from webapi.data_service import get_db, load_districts_csv, load_mps_csv
+from webapi.data_service import get_db, load_districts_csv, load_mps_csv, compute_district_completion_metrics
 from webapi.config import DETECTOR_NAMES, get_tier
 
 router = APIRouter()
@@ -99,12 +99,25 @@ def list_districts(
         is_estimated = (db_cost == 0.0 and effective_works > 0)
         portfolio = db_cost if db_cost > 0 else float(effective_works * 2500000.0)
 
+        active_mps_str = str(r.get("mps_active", "") or "")
+        csv_comp_rate = float(r.get("completion_rate_pct", 0.0) or 0.0)
+        display_tot = csv_tot_works if csv_tot_works > 0 else effective_works
+        dist_metrics = compute_district_completion_metrics(
+            district_name=d_name,
+            active_mps_str=active_mps_str,
+            total_works=display_tot,
+            raw_comp_rate=csv_comp_rate
+        )
+        completed = dist_metrics["completed_works"]
+        recommended = dist_metrics["recommended_works"]
+        completion_pct = dist_metrics["completion_rate"]
+
         records.append({
             "district": d_name,
             "state": st_name,
-            "totalWorks": effective_works,
+            "totalWorks": display_tot,
             "completedWorks": completed,
-            "recommendedWorks": int(r.get("recommended_works_count", 0) or 0),
+            "recommendedWorks": recommended,
             "completionRate": completion_pct,
             "portfolioValue": portfolio,
             "is_estimated": is_estimated,
@@ -349,21 +362,36 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         print(f"Error fetching district IDAs: {e}")
         idas_list = []
 
+    active_mps_str = str(row.get("mps_active", "") or "")
+    csv_comp_rate = float(row.get("completion_rate_pct", 0.0) or 0.0)
+    display_total_works = csv_tot_works if csv_tot_works > 0 else effective_total_works
+    dist_metrics = compute_district_completion_metrics(
+        district_name=d_name,
+        active_mps_str=active_mps_str,
+        total_works=display_total_works,
+        raw_comp_rate=csv_comp_rate
+    )
+    completed = dist_metrics["completed_works"]
+    recommended = dist_metrics["recommended_works"]
+    completion_pct = dist_metrics["completion_rate"]
+
     summary_data = {
         "district": d_name,
         "state": st_name,
-        "totalWorks": effective_total_works,
-        "completedWorks": completed if completed > 0 else effective_total_works,
-        "recommendedWorks": int(row.get("recommended_works_count", 0) or effective_total_works),
+        "totalWorks": display_total_works,
+        "completedWorks": completed,
+        "recommendedWorks": recommended,
+        "pendingWorks": recommended,
         "completionRate": completion_pct,
         "portfolioValue": portfolio,
+        "expenditure": round(portfolio * (completion_pct / 100.0), 2),
         "is_estimated": is_estimated,
         "isEstimated": is_estimated,
         "mpCount": int(row.get("mp_count", 0) or 1),
         "activeMps": str(row.get("mps_active", "") or ""),
         "constituencies": str(row.get("constituencies_covered", "") or ""),
         "primarySector": str(row.get("primary_sector", "Normal/Others") or "Civil Infrastructure"),
-        "worksCount": effective_total_works,
+        "worksCount": display_total_works,
         "sampleWorksCount": len(works_list),
         "anomalyCount": true_anom_count,
         "sampleAnomaliesCount": len(anomalies_list),

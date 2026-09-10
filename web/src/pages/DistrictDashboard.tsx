@@ -47,6 +47,7 @@ export const DistrictDashboard: React.FC = () => {
   const [complianceToast, setComplianceToast] = useState<string | null>(null)
   const [selectedMBWork, setSelectedMBWork] = useState<any | null>(null)
   const [verifiedMBWorks, setVerifiedMBWorks] = useState<number[]>([])
+  const [worksStatusFilter, setWorksStatusFilter] = useState<'all' | 'completed' | 'active'>('all')
 
   const certifyMB = (workId: number) => {
     setVerifiedMBWorks((prev) => [...prev, workId])
@@ -111,11 +112,15 @@ export const DistrictDashboard: React.FC = () => {
   const idas = data?.idas || []
   const mpsList = data?.mps || []
 
-  const portfolioCr = Math.round((summary.portfolioValue || 0) / 10000000)
+  const portfolioVal = summary.portfolioValue || 0
+  const portfolioCr = portfolioVal >= 10000000 
+    ? (portfolioVal / 10000000).toFixed(2)
+    : (portfolioVal / 100000).toFixed(2)
+  const portfolioUnit = portfolioVal >= 10000000 ? 'Cr' : 'L'
   const completionRate = summary.completionRate || 0
   const totalWorks = summary.totalWorks || works.length || 0
-  const completedCount = summary.completedWorks || 0
-  const pendingCount = Math.max(0, totalWorks - completedCount)
+  const completedCount = summary.completedWorks ?? Math.round(totalWorks * (completionRate / 100))
+  const pendingCount = summary.recommendedWorks ?? Math.max(0, totalWorks - completedCount)
 
   const activeMpsList = summary.activeMps ? summary.activeMps.split(',').map((s: string) => s.trim()) : []
 
@@ -176,7 +181,7 @@ export const DistrictDashboard: React.FC = () => {
           label="District Sanction Portfolio"
           value={portfolioCr}
           prefix="₹"
-          unit="Cr"
+          unit={portfolioUnit}
           theme="gold"
           description="Cumulative sanctioned works value"
         />
@@ -185,15 +190,15 @@ export const DistrictDashboard: React.FC = () => {
           label="Completed Projects"
           value={completedCount}
           theme="emerald"
-          description={`${completionRate.toFixed(1)}% realization rate`}
+          description={`${Number(completionRate).toFixed(1)}% realization rate`}
         />
         <StatCard
           icon={Percent}
           label="Execution Velocity"
-          value={completionRate}
+          value={Number(completionRate).toFixed(1)}
           unit="%"
           theme="emerald"
-          gaugeValue={completionRate}
+          gaugeValue={Number(completionRate)}
           description="Physical delivery ratio"
         />
         <StatCard
@@ -259,87 +264,151 @@ export const DistrictDashboard: React.FC = () => {
       </div>
 
       {/* TAB 1: WORKS LEDGER */}
-      {effectiveTab === 'works' && (
-        <div className="space-y-4">
-          {works.length === 0 ? (
-            <EmptyState
-              title="No Works Registered in Central Ledger"
-              description={`No individual civil works are currently recorded for district ${districtName}. Total aggregated summary count is ${totalWorks}.`}
-            />
-          ) : (
-            <div className="lux-card overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
-                  <thead>
-                    <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Project Description</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Recommending MP</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Category</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-center">Status</th>
-                      {isAuthorized && <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>}
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[var(--border-primary)]">
-                    {works.map((w: any) => (
-                      <tr key={w.workId} className="hover:bg-[var(--surface-alt)]/50 transition">
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                          #{w.workId}
-                        </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
-                          {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
-                        </td>
-                        <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
-                          ₹{(w.cost / 100000).toFixed(2)} L
-                        </td>
-                        <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
-                          {w.mpName}
-                        </td>
-                        <td className="p-3 whitespace-nowrap">
-                          <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-medium text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                            {w.category}
-                          </span>
-                        </td>
-                        <td className="p-3 whitespace-nowrap">
-                          <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
-                        </td>
-                        <td className="p-3 text-center whitespace-nowrap">
-                          <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 inline-block whitespace-nowrap">
-                            {w.status}
-                          </span>
-                        </td>
-                        {isAuthorized && (
-                          <td className="p-3 text-right whitespace-nowrap">
-                            {verifiedMBWorks.includes(w.workId) ? (
-                              <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1 whitespace-nowrap">
-                                <CheckCircle2 size={13} />
-                                <span>MB Certified</span>
-                              </span>
-                            ) : (
-                              <button
-                                onClick={() => setSelectedMBWork(w)}
-                                className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm whitespace-nowrap"
-                              >
-                                Verify MB
-                              </button>
-                            )}
-                          </td>
-                        )}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+      {effectiveTab === 'works' && (() => {
+        const filteredWorks = works.filter((w: any) => {
+          const isComp = String(w.status || '').toLowerCase().includes('completed')
+          if (worksStatusFilter === 'completed') return isComp
+          if (worksStatusFilter === 'active') return !isComp
+          return true
+        })
+
+        const activeCount = works.filter((w: any) => !String(w.status || '').toLowerCase().includes('completed')).length
+        const completedCountInLedger = works.filter((w: any) => String(w.status || '').toLowerCase().includes('completed')).length
+
+        return (
+          <div className="space-y-4">
+            {works.length === 0 ? (
+              <EmptyState
+                title="No Works Registered in Central Ledger"
+                description={`No individual civil works are currently recorded for district ${districtName}. Total aggregated summary count is ${totalWorks}.`}
+              />
+            ) : (
+              <div className="space-y-3">
+                {/* Status Filter Tabs & Statutory Count Summary */}
+                <div className="flex items-center justify-between gap-3 flex-wrap">
+                  <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs">
+                    <button
+                      onClick={() => setWorksStatusFilter('all')}
+                      className={`px-3 py-1 rounded-lg font-bold transition ${
+                        worksStatusFilter === 'all'
+                          ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      }`}
+                    >
+                      All ({works.length})
+                    </button>
+                    <button
+                      onClick={() => setWorksStatusFilter('active')}
+                      className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
+                        worksStatusFilter === 'active'
+                          ? 'bg-[var(--surface-primary)] text-amber-600 dark:text-amber-400 shadow-xs'
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      }`}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                      <span>Under Execution ({activeCount})</span>
+                    </button>
+                    <button
+                      onClick={() => setWorksStatusFilter('completed')}
+                      className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
+                        worksStatusFilter === 'completed'
+                          ? 'bg-[var(--surface-primary)] text-emerald-600 dark:text-emerald-400 shadow-xs'
+                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                      }`}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span>Completed ({completedCountInLedger})</span>
+                    </button>
+                  </div>
+                  <span className="text-[11px] text-[var(--text-tertiary)] font-medium">
+                    {summary?.totalWorks ? `Statutory Registry: ${summary.totalWorks} Total Projects` : ''}
+                  </span>
+                </div>
+
+                <div className="lux-card overflow-hidden">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-xs border-collapse">
+                      <thead>
+                        <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
+                          <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
+                          <th className="p-3 font-bold min-w-[260px] max-w-sm">Project Description</th>
+                          <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
+                          <th className="p-3 font-bold whitespace-nowrap">Recommending MP</th>
+                          <th className="p-3 font-bold whitespace-nowrap">Category</th>
+                          <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
+                          <th className="p-3 font-bold whitespace-nowrap text-center">Status</th>
+                          {isAuthorized && <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[var(--border-primary)]">
+                        {filteredWorks.map((w: any) => {
+                          const isCompleted = String(w.status || '').toLowerCase().includes('completed')
+                          return (
+                            <tr key={w.workId} className="hover:bg-[var(--surface-alt)]/50 transition">
+                              <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                                #{w.workId}
+                              </td>
+                              <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
+                                {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                              </td>
+                              <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
+                                ₹{(w.cost / 100000).toFixed(2)} L
+                              </td>
+                              <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
+                                {w.mpName}
+                              </td>
+                              <td className="p-3 whitespace-nowrap">
+                                <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-medium text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
+                                  {w.category}
+                                </span>
+                              </td>
+                              <td className="p-3 whitespace-nowrap">
+                                <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
+                              </td>
+                              <td className="p-3 text-center whitespace-nowrap">
+                                <span className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
+                                  isCompleted
+                                    ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20'
+                                    : 'bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/20'
+                                }`}>
+                                  {w.status}
+                                </span>
+                              </td>
+                              {isAuthorized && (
+                                <td className="p-3 text-right whitespace-nowrap">
+                                  {verifiedMBWorks.includes(w.workId) ? (
+                                    <span className="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-bold text-[11px] inline-flex items-center gap-1 whitespace-nowrap">
+                                      <CheckCircle2 size={13} />
+                                      <span>MB Certified</span>
+                                    </span>
+                                  ) : (
+                                    <button
+                                      onClick={() => setSelectedMBWork(w)}
+                                      className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition shadow-sm whitespace-nowrap"
+                                    >
+                                      Verify MB
+                                    </button>
+                                  )}
+                                </td>
+                              )}
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex justify-between items-center">
+                    <span>
+                      Showing {filteredWorks.length} of {works.length} registered projects in ledger ({totalWorks} statutory total)
+                    </span>
+                    <span className="text-[11px] font-medium text-[var(--text-tertiary)]">{summary?.scope || 'District Ledger'}</span>
+                  </div>
+                </div>
               </div>
-              <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex justify-between items-center">
-                <span>Showing {works.length} of {summary?.totalWorks ?? works.length} registered projects (Top-valued works by outlay)</span>
-                <span className="text-[11px] font-medium text-[var(--text-tertiary)]">{summary?.scope || 'District Ledger'}</span>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
+            )}
+          </div>
+        )
+      })()}
 
       {/* TAB 2: MPS IN DISTRICT */}
       {effectiveTab === 'mps' && (

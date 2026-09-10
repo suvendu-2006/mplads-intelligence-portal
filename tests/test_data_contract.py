@@ -130,3 +130,36 @@ def test_sectoral_donut_and_expenditure_canonicity():
     # Total expenditure must match official national figure
     assert pytest.approx(data["totalExpenditure"], rel=1e-5) == 39642944289.14
 
+
+def test_district_reconciliation_integrity():
+    """Verify that district details and state district cards have reconciled, non-contradictory metrics."""
+    from webapi.main import app
+    from starlette.testclient import TestClient
+    client = TestClient(app)
+
+    # 1. Check AGRA specifically (reconciliation between StateDetail and DistrictDashboard)
+    st_res = client.get("/api/states/Uttar%20Pradesh")
+    assert st_res.status_code == 200
+    st_data = st_res.json()["data"]
+    agra_st = next((d for d in st_data["districts"] if d["district"].upper() == "AGRA"), None)
+    assert agra_st is not None, "AGRA district not found in Uttar Pradesh"
+
+    dist_res = client.get("/api/districts/AGRA")
+    assert dist_res.status_code == 200
+    agra_dist = dist_res.json()["data"]["summary"]
+
+    # Must have matching totalWorks, completedWorks, recommendedWorks, and completionRate
+    assert agra_dist["totalWorks"] == agra_st["totalWorks"]
+    assert agra_dist["completedWorks"] == agra_st["completedWorks"]
+    assert agra_dist["recommendedWorks"] == agra_st["recommendedWorks"]
+    assert agra_dist["completionRate"] == agra_st["completionRatePct"]
+    assert agra_dist["completedWorks"] <= agra_dist["totalWorks"]
+    assert agra_dist["portfolioValue"] > 0
+
+    # 2. Check all districts in directory for zero completed > totalWorks violations
+    dir_res = client.get("/api/districts?page_size=50")
+    assert dir_res.status_code == 200
+    for d in dir_res.json()["data"]:
+        assert d["completedWorks"] <= d["totalWorks"], f"District {d['district']} has completedWorks > totalWorks"
+        assert 0.0 <= d["completionRate"] <= 100.0, f"District {d['district']} invalid rate: {d['completionRate']}"
+

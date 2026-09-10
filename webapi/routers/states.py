@@ -8,7 +8,7 @@ from webapi.models import (
     EnvelopeResponse, StateSummaryItem, StateDetailData, StateDetailSummary,
     DistrictSummaryItem, DistrictTierCounts, FlagItem, MetaPagination
 )
-from webapi.data_service import load_states_csv, load_districts_csv, load_mps_csv, get_db
+from webapi.data_service import load_states_csv, load_districts_csv, load_mps_csv, get_db, compute_district_completion_metrics
 from webapi.aggregators import (
     compute_state_red_flag_pct, compute_all_states_red_flag_pct,
     compute_district_tier_counts, compute_cpwd_comparison
@@ -164,27 +164,16 @@ def get_state_detail(state: str, db: Session = Depends(get_db)):
         # Calculate real completion rate from active MPs instead of flat 100%
         active_mps_str = str(drow.get("mps_active", "") or "")
         csv_comp_rate = float(drow.get("completion_rate_pct", 0.0))
-        
-        rates = []
-        if active_mps_str:
-            for m in active_mps_str.split(","):
-                m_clean = m.strip().lower()
-                for k, rate in mp_rate_map.items():
-                    if k in m_clean or m_clean in k:
-                        rates.append(rate)
-                        break
-        
-        if rates:
-            comp_rate = round(sum(rates) / len(rates), 1)
-        elif csv_comp_rate > 0.0 and csv_comp_rate < 99.0:
-            comp_rate = round(csv_comp_rate, 1)
-        else:
-            # Derived from state baseline with deterministic variance per district
-            dist_hash_offset = (abs(hash(d_name)) % 25) - 12
-            comp_rate = round(min(92.0, max(24.0, util + dist_hash_offset)), 1)
-
-        comp_w = int(round(tot_w * (comp_rate / 100.0))) if tot_w > 0 else 0
-        recom_w = max(0, tot_w - comp_w)
+        dist_metrics = compute_district_completion_metrics(
+            district_name=d_name,
+            active_mps_str=active_mps_str,
+            total_works=tot_w,
+            raw_comp_rate=csv_comp_rate,
+            state_util=util
+        )
+        comp_rate = dist_metrics["completion_rate"]
+        comp_w = dist_metrics["completed_works"]
+        recom_w = dist_metrics["recommended_works"]
         
         # Determine realistic portfolio value
         port_val = calc["portfolio_value"] if calc["portfolio_value"] > 0 else in_prog
