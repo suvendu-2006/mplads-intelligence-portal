@@ -4,6 +4,8 @@
   "outputDirectory": "web/dist",
   "functions": {
     "api/index.py": {
+      "memory": 1024,
+      "maxDuration": 15,
       "includeFiles": "api/mplads_dev.db"
     }
   },
@@ -49,12 +51,16 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+          "value": "public, max-age=60, s-maxage=86400, stale-while-revalidate=604800"
         }
       ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
     {
       "source": "/dossier",
       "destination": "/dossier.html"

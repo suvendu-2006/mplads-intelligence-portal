@@ -15,7 +15,7 @@ interface CacheRecord {
 const memoryCache = new Map<string, CacheRecord>()
 // In-flight promise map to deduplicate identical concurrent GET requests
 const inFlightRequests = new Map<string, Promise<Response>>()
-const STALE_TTL_MS = 60000 // 60 seconds stale-while-revalidate window
+const STALE_TTL_MS = 300000 // 5 minutes high-speed stale-while-revalidate window
 const SESSION_CACHE_PREFIX = 'satark_swr_'
 
 /**
@@ -273,24 +273,26 @@ export function warmupApiCache() {
   if (typeof window === 'undefined') return
 
   const runWarmup = () => {
-    // Only prefetch secondary routes not already loaded by the initial active dashboard
+    // Quietly prefetch core routes during idle time so all tabs open instantly (0ms)
     const endpoints = [
-      '/api/states?sort=allocated&order=desc',
+      '/api/national',
+      '/api/national/analytics',
+      '/api/states?sort=red_pct&order=desc',
       '/api/mps?page=1&page_size=50&sort=allocated&order=desc',
       '/api/districts?page=1&page_size=50&sort=total_works&order=desc',
     ]
-    // Stagger warmup requests by 350ms to ensure 0 network contention
+    // Stagger warmup requests by 120ms to ensure 0 network contention
     endpoints.forEach((url, idx) => {
       setTimeout(() => {
         fetch(url).catch(() => {})
-      }, idx * 350)
+      }, idx * 120)
     })
   }
 
   if ('requestIdleCallback' in window) {
-    (window as any).requestIdleCallback(runWarmup, { timeout: 4000 })
+    (window as any).requestIdleCallback(runWarmup, { timeout: 2000 })
   } else {
-    setTimeout(runWarmup, 2500)
+    setTimeout(runWarmup, 600)
   }
 }
 

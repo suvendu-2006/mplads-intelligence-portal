@@ -23,3 +23,6 @@ for candidate in [
         break
 
 from webapi.main import app
+
+# Expose both app and handler for universal Vercel Python runtime compatibility
+handler = app

@@ -87,16 +87,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include API Routers under /api
-app.include_router(national.router, prefix="/api", tags=["National"])
-app.include_router(states.router, prefix="/api", tags=["States"])
-app.include_router(mps.router, prefix="/api", tags=["MPs"])
-app.include_router(flags.router, prefix="/api", tags=["Flags"])
-app.include_router(entity_risks.router, prefix="/api", tags=["Entity Risks"])
-app.include_router(roles.router, prefix="/api", tags=["Roles & RBAC"])
-app.include_router(meta.router, prefix="/api", tags=["Metadata"])
-app.include_router(map.router, prefix="/api", tags=["GIS Map"])
-app.include_router(districts.router, prefix="/api", tags=["Districts"])
+# Include API Routers under both /api and root for guaranteed 0-404 Vercel routing
+api_routers = [
+    (national.router, "National"),
+    (states.router, "States"),
+    (mps.router, "MPs"),
+    (flags.router, "Flags"),
+    (entity_risks.router, "Entity Risks"),
+    (roles.router, "Roles & RBAC"),
+    (meta.router, "Metadata"),
+    (map.router, "GIS Map"),
+    (districts.router, "Districts"),
+]
+for router, tag in api_routers:
+    app.include_router(router, prefix="/api", tags=[tag])
+    app.include_router(router, tags=[tag])
 
 # Mount static frontend and SPA catch-all (lowest priority)
 mount_static_files(app)

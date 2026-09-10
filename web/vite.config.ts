@@ -10,6 +10,10 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     sourcemap: false,
+    target: 'es2022',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 1200,
     rollupOptions: {
       output: {
         manualChunks(id: string) {
@@ -17,14 +21,14 @@ export default defineConfig({
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'react-vendor'
             }
-            if (id.includes('recharts')) {
+            if (id.includes('recharts') || id.includes('d3-')) {
               return 'charts'
             }
             if (id.includes('leaflet')) {
               return 'maps'
             }
-            if (id.includes('framer-motion')) {
-              return 'animation'
+            if (id.includes('lucide-react')) {
+              return 'icons'
             }
           }
         },
