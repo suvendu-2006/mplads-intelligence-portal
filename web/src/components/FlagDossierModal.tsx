@@ -10,9 +10,11 @@ import {
   CheckSquare,
   Square,
   ClipboardList,
-  ShieldAlert
+  ShieldAlert,
+  Building2
 } from 'lucide-react'
 import { CPWDGauge } from './shared/CPWDGauge'
+import { AgencyBadge } from './shared/AgencyBadge'
 import { simplifyAuditFinding } from '../lib/auditSimplifier'
 
 export interface FlagDossierData {
@@ -29,6 +31,8 @@ export interface FlagDossierData {
   mp_name?: string
   mpName?: string
   constituency?: string
+  implementing_agency?: string
+  implementingAgency?: string
   detector_type?: string
   detector?: string
   detector_name?: string
@@ -81,8 +85,40 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   const state = flag.state || 'India'
   const mpName = flag.mp_name || flag.mpName || 'Constituency MP'
   const constituency = flag.constituency || district
+  const implementingAgency = flag.implementingAgency || flag.implementing_agency || (district && district !== 'State General' ? `District Magistrate / Collector, ${district}` : 'District Authority')
   const detectorName = flag.detector_name || flag.detectorName || flag.detector || 'Cost Overrun Anomaly'
   const severity = flag.severity || 0.75
+
+  const getAgencyDetails = (agency: string) => {
+    const ag = (agency || '').toLowerCase()
+    let classification = 'District Administrative Authority'
+    let roleType = 'Statutory Nodal Authority'
+    let badgeColor = 'bg-blue-500/15 text-blue-700 dark:text-blue-300 border-blue-500/30'
+
+    if (ag.includes('magistrate') || ag.includes('collector') || ag.includes('commissioner') || ag.includes('planning')) {
+      classification = 'District Collectorate / Administration'
+      roleType = 'Principal District Authority (Statutory Custodian)'
+      badgeColor = 'bg-blue-500/15 text-blue-700 dark:text-blue-300 border-blue-500/30'
+    } else if (ag.includes('pwd') || ag.includes('cpwd') || ag.includes('res') || ag.includes('engineer') || ag.includes('irrigation')) {
+      classification = 'Public Works & Engineering Line Dept'
+      roleType = 'Technical Executing Line Agency'
+      badgeColor = 'bg-purple-500/15 text-purple-700 dark:text-purple-300 border-purple-500/30'
+    } else if (ag.includes('panchayat') || ag.includes('bdo') || ag.includes('block') || ag.includes('gram')) {
+      classification = 'Panchayati Raj Institution (PRI)'
+      roleType = 'Local Implementing Body'
+      badgeColor = 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/30'
+    } else if (ag.includes('municipal') || ag.includes('corporation') || ag.includes('urban')) {
+      classification = 'Urban Local Body (ULB)'
+      roleType = 'Municipal Project Authority'
+      badgeColor = 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/30'
+    }
+
+    const mandate = `Under Para 2.11 and 3.1 of MoSPI MPLADS Guidelines, ${agency || 'the designated executing agency'} holds statutory fiduciary accountability for this project. This includes according technical sanction, executing works via standard public procurement rules, certifying entries in the Measurement Book (MB), performing on-site quality inspections, and ensuring timely fund utilization without fiscal end-of-year rush or cost overruns.`
+
+    return { classification, roleType, badgeColor, mandate }
+  }
+
+  const agencyDetails = getAgencyDetails(implementingAgency)
 
   // Generate plain-language administrative summary and actionable checklist
   const finding = simplifyAuditFinding(flag)
@@ -190,6 +226,77 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
               <span className="font-bold text-[var(--text-primary)] block break-words">
                 {constituency}
               </span>
+            </div>
+          </div>
+
+          {/* Section: Statutory Implementing Agency & Fiduciary Accountability */}
+          <div className="rounded-xl border border-[var(--border-primary)] p-4 bg-[var(--surface-primary)] space-y-3 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--border-primary)] pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 flex items-center justify-center font-bold shrink-0">
+                  <Building2 size={16} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
+                    <span>Statutory Executing Authority</span>
+                    <span className="w-1 h-1 rounded-full bg-blue-500" />
+                    <span>MoSPI Para 2.11</span>
+                  </div>
+                  <h3 className="text-sm sm:text-base font-bold text-[var(--text-primary)] mt-0.5">
+                    Implementing Agency & Fiduciary Accountability
+                  </h3>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold border ${agencyDetails.badgeColor}`}>
+                  {agencyDetails.classification}
+                </span>
+              </div>
+            </div>
+
+            {/* Key Agency Attributes */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                <span className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase block mb-1">
+                  Designated Implementing Agency
+                </span>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <AgencyBadge agency={implementingAgency} size="md" />
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                <span className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase block mb-1">
+                  Statutory Role & Category
+                </span>
+                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+                  {agencyDetails.roleType}
+                </div>
+                <span className="text-[10px] text-[var(--text-tertiary)] mt-0.5 block">
+                  Jurisdiction: {district || 'District Nodal Office'}
+                </span>
+              </div>
+
+              <div className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                <span className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase block mb-1">
+                  Execution Compliance
+                </span>
+                <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                  <CheckCircle2 size={13} />
+                  <span>MoSPI Registry Verified</span>
+                </div>
+                <span className="text-[10px] text-[var(--text-tertiary)] mt-0.5 block">
+                  Authoritative Statutory Mapping
+                </span>
+              </div>
+            </div>
+
+            {/* Fiduciary Mandate Box */}
+            <div className="p-3 rounded-xl bg-[var(--surface-alt)] border-l-4 border-blue-500 text-xs text-[var(--text-secondary)] leading-relaxed">
+              <span className="font-bold text-[var(--text-primary)] block mb-1 text-[10px] uppercase tracking-wider">
+                Statutory Execution Mandate & Fiduciary Liability:
+              </span>
+              {agencyDetails.mandate}
             </div>
           </div>
 

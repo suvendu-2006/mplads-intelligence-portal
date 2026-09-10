@@ -6,7 +6,8 @@ import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModa
 import {
   StatCard,
   TierBadge,
-  EmptyState
+  EmptyState,
+  AgencyBadge
 } from '../components/shared'
 import {
   ChevronRight,
@@ -539,11 +540,20 @@ export const StateDetail: React.FC = () => {
                           </div>
                         )
                       })()}
+                      <div className="mt-3 pt-2.5 border-t border-[var(--border-primary)] flex items-center justify-between gap-2">
+                        <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold shrink-0">
+                          Nodal Authority
+                        </span>
+                        <AgencyBadge
+                          agency={d.implementingAgency || d.implementing_agency || `District Magistrate / Collector, ${distName}`}
+                          size="sm"
+                        />
+                      </div>
                     </div>
 
                     <Link
                       to={`/districts/${encodeURIComponent(distName)}`}
-                      className="mt-4 w-full py-2 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition shadow-2xs"
+                      className="mt-3 w-full py-2 px-3 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition shadow-2xs"
                     >
                       <span>Explore District Dashboard</span>
                       <ArrowRight size={12} />
@@ -642,6 +652,7 @@ export const StateDetail: React.FC = () => {
                       <th className="p-3 font-bold whitespace-nowrap">Sponsoring MP</th>
                       <th className="p-3 font-bold whitespace-nowrap">District</th>
                       <th className="p-3 font-bold whitespace-nowrap">Category</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                       <th className="p-3 font-bold text-right whitespace-nowrap">Sanctioned Cost</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
@@ -674,6 +685,9 @@ export const StateDetail: React.FC = () => {
                             <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] text-[11px] font-semibold text-[var(--text-secondary)] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                               {w.category}
                             </span>
+                          </td>
+                          <td className="p-3 whitespace-nowrap">
+                            <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
                           </td>
                           <td className="p-3 font-extrabold tabular-nums text-right text-[var(--text-primary)] whitespace-nowrap">
                             {w.cost >= 10000000
@@ -810,8 +824,8 @@ export const StateDetail: React.FC = () => {
                       <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                       <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                       <th className="p-3 font-bold whitespace-nowrap">District</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                       <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Primary Detector</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
                       <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                     </tr>
@@ -832,20 +846,11 @@ export const StateDetail: React.FC = () => {
                         <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                           {flag.district || 'Statewide'}
                         </td>
+                        <td className="p-3 whitespace-nowrap">
+                          <AgencyBadge agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'} size="sm" />
+                        </td>
                         <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                           ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
-                        </td>
-                        <td className="p-3 whitespace-nowrap min-w-[180px]">
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                              {flag.detector_name || flag.detectorName || flag.detector || 'Benchmark Cost Overrun'}
-                            </span>
-                            {flag.evidence?.duplicate_cluster_id && (
-                              <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 inline-block whitespace-nowrap">
-                                {flag.evidence.cluster_size}x cluster
-                              </span>
-                            )}
-                          </div>
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge

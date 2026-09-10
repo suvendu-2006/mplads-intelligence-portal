@@ -82,6 +82,16 @@ class DistrictSummaryItem(BaseModel):
     red_work_count: int
     is_estimated: Optional[bool] = False
     isEstimated: Optional[bool] = False
+    implementing_agency: Optional[str] = None
+    implementingAgency: Optional[str] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def populate_district_aliases(cls, data: Any) -> Any:
+        if isinstance(data, dict):
+            if "implementing_agency" in data and not data.get("implementingAgency"):
+                data["implementingAgency"] = data["implementing_agency"]
+        return data
 
 class StateDetailSummary(BaseModel):
     totalAllocated: float
@@ -108,6 +118,7 @@ class FlagItem(BaseModel):
     state: str
     mp_name: str
     constituency: str
+    implementing_agency: Optional[str] = None
     detector_type: str
     detector_name: str
     severity: float
@@ -123,6 +134,7 @@ class FlagItem(BaseModel):
     sanctionedCost: Optional[float] = None
     workId: Optional[int] = None
     mpName: Optional[str] = None
+    implementingAgency: Optional[str] = None
 
     @model_validator(mode="before")
     @classmethod
@@ -138,6 +150,8 @@ class FlagItem(BaseModel):
                 data["workId"] = data["work_id"]
             if "mp_name" in data and not data.get("mpName"):
                 data["mpName"] = data["mp_name"]
+            if "implementing_agency" in data and not data.get("implementingAgency"):
+                data["implementingAgency"] = data["implementing_agency"]
         return data
 
 class MPListItem(BaseModel):
@@ -171,6 +185,8 @@ class MPWorkItem(BaseModel):
     cost: float
     category: Optional[str] = None
     district: Optional[str] = None
+    implementing_agency: Optional[str] = None
+    implementingAgency: Optional[str] = None
     status: str
     completion_date: Optional[str] = None
     has_flags: bool
@@ -179,6 +195,18 @@ class MPWorkItem(BaseModel):
     delayDays: Optional[int] = None
     progress_pct: Optional[int] = None
     progressPct: Optional[int] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def populate_mp_work_aliases(cls, data: Any) -> Any:
+        if isinstance(data, dict):
+            if "implementing_agency" in data and not data.get("implementingAgency"):
+                data["implementingAgency"] = data["implementing_agency"]
+            if "work_description" in data and not data.get("workDescription"):
+                data["workDescription"] = data["work_description"]
+            if "work_id" in data and not data.get("workId"):
+                data["workId"] = data["work_id"]
+        return data
 
 class EntityRiskItem(BaseModel):
     entity_type: str

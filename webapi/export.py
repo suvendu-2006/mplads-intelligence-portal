@@ -14,14 +14,15 @@ def stream_flags_csv(
     state: Optional[str] = None,
     district: Optional[str] = None,
     tier: Optional[str] = None,
-    detector: Optional[str] = None
+    detector: Optional[str] = None,
+    agency: Optional[str] = None
 ) -> StreamingResponse:
     def generate() -> Generator[str, None, None]:
         yield "\ufeff"
         output = StringIO()
         fieldnames = [
             "work_id", "work_description", "cost_inr", "district", "state",
-            "mp_name", "constituency", "detector_type", "detector_name",
+            "mp_name", "constituency", "implementing_agency", "detector_type", "detector_name",
             "severity", "tier", "explanation", "evidence_json", "detected_at"
         ]
         writer = csv.DictWriter(output, fieldnames=fieldnames)
@@ -36,6 +37,8 @@ def stream_flags_csv(
             query = query.filter(func.lower(Work.state) == state.lower())
         if district:
             query = query.filter(func.lower(Work.district) == district.lower())
+        if agency:
+            query = query.filter(func.lower(Work.implementing_agency).like(f"%{agency.lower()}%"))
         resolved_detector = resolve_detector_type(detector)
         if resolved_detector:
             query = query.filter(func.lower(Anomaly.detector_type) == resolved_detector.lower())
@@ -69,6 +72,7 @@ def stream_flags_csv(
                     "state": work.state or "",
                     "mp_name": work.mp_name or "",
                     "constituency": work.mp_constituency or "",
+                    "implementing_agency": work.implementing_agency or "District Authority",
                     "detector_type": anomaly.detector_type,
                     "detector_name": DETECTOR_NAMES.get(anomaly.detector_type, anomaly.detector_type),
                     "severity": sev,

@@ -24,6 +24,7 @@ from mplads_fraud_detection.config import (
     ALL_MPS_FINANCIAL_BREAKDOWN_CSV
 )
 from mplads_fraud_detection.foundation.schema import Work, Dataset, IngestionRun
+from mplads_fraud_detection.foundation.ida_extractor import extract_and_normalize_agency, extract_ida_from_csv
 from mplads_fraud_detection.validation.schemas import WORK_INGESTION_SCHEMA
 
 logger = logging.getLogger(__name__)
@@ -183,6 +184,25 @@ def load_and_clean_works_data() -> Tuple[pd.DataFrame, Dict[str, Any]]:
     df_unified["state"] = df_unified["state"].fillna("ANDHRA PRADESH").astype(str) if "state" in df_unified.columns else "ANDHRA PRADESH"
     df_unified["data_origin"] = "OFFICIAL"
 
+    # Compute authoritative implementing agencies
+    all_works_path = WORKS_COMPLETED_DETAILED_CSV.parent / "all_mplads_works.csv"
+    ida_map = extract_ida_from_csv(all_works_path)
+
+    def _resolve(row):
+        wid = int(row["work_id"]) if pd.notna(row.get("work_id")) else None
+        raw_ida = row.get("ida") or (ida_map.get(wid) if wid else None)
+        return extract_and_normalize_agency(
+            raw_ida=raw_ida,
+            work_description=row.get("work_description"),
+            location=row.get("location"),
+            district=row.get("district"),
+            state=row.get("state")
+        )
+
+    resolved_agencies = df_unified.apply(_resolve, axis=1)
+    df_unified["implementing_agency"] = [r[0] for r in resolved_agencies]
+    df_unified["implementing_agency_raw"] = [r[1] for r in resolved_agencies]
+
     # Strict single-record deduplication
     df_unified = df_unified.drop_duplicates(subset=["work_id"], keep="first")
     canonical_count = len(df_unified)
@@ -337,6 +357,8 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
             w.data_completeness_score = completeness_score
             w.data_quality_status = data_quality
             w.payment_data_status = payment_status
+            w.implementing_agency = str(row.get("implementing_agency", "District Implementing Authority"))
+            w.implementing_agency_raw = str(row.get("implementing_agency_raw", "DEFAULT"))
             w.source_file = source_file_name
             w.source_file_checksum = source_chk
             w.source_url = source_link
@@ -354,6 +376,8 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
                 district=str(row["district"]),
                 mp_name=str(row["mp_name"]),
                 mp_constituency=str(row.get("mp_constituency", "")),
+                implementing_agency=str(row.get("implementing_agency", "District Implementing Authority")),
+                implementing_agency_raw=str(row.get("implementing_agency_raw", "DEFAULT")),
                 completion_date=c_date,
                 recommended_date=r_date,
                 status=str(row["status"]),
@@ -388,3 +412,19 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
 
     logger.info(f"Idempotent Upsert Complete: {records_upserted:,} canonical works synchronized with complete source file, checksum, and dataset lineage.")
     return records_upserted
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
+    from mplads_fraud_detection.foundation.db import SessionLocal
+    logger.info("Executing ETL pipeline demo run...")
+    df_clean, meta = load_and_clean_works_data()
+    logger.info(f"Loaded {len(df_clean):,} clean canonical works with implementing agencies.")
+    logger.info(f"Sample agency: {df_clean['implementing_agency'].iloc[0]}")
+    session = SessionLocal()
+    try:
+        count = load_works_into_db(session, df_clean)
+        logger.info(f"ETL pipeline executed successfully! Synchronized {count:,} works.")
+    finally:
+        session.close()
+

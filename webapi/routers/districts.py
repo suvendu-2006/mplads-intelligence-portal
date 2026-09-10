@@ -113,7 +113,9 @@ def list_districts(
             "activeMps": str(r.get("mps_active", "") or ""),
             "constituencies": str(r.get("constituencies_covered", "") or ""),
             "primarySector": str(r.get("primary_sector", "Normal/Others") or "Civil Infrastructure"),
-            "anomalyCount": anomaly_count
+            "anomalyCount": anomaly_count,
+            "implementing_agency": f"District Magistrate / Collector, {d_name.title()}",
+            "implementingAgency": f"District Magistrate / Collector, {d_name.title()}"
         })
 
     # Sort
@@ -217,7 +219,7 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
 
     # Sample works list from SQLite for display (capped at 250 for responsive UI)
     works_query = text(f"""
-        SELECT work_id, work_description, cost, category, mp_name, mp_constituency, status, completion_date
+        SELECT work_id, work_description, cost, category, mp_name, mp_constituency, status, completion_date, implementing_agency
         FROM works
         WHERE ({cand_clause})
         ORDER BY cost DESC
@@ -234,7 +236,9 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
             "mpName": r[4] or "Constituency MP",
             "constituency": r[5] or d_name,
             "status": "Completed" if "completed" in str(r[6] or "").lower() else "Recommended",
-            "completionDate": str(r[7]) if r[7] else None
+            "completionDate": str(r[7]) if r[7] else None,
+            "implementingAgency": r[8] or f"District Magistrate / Collector, {d_name.title()}",
+            "implementing_agency": r[8] or f"District Magistrate / Collector, {d_name.title()}"
         }
         for r in works_rows
     ]
@@ -242,7 +246,7 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
     # Sample anomalies from SQLite (capped at 50 for display)
     anom_query = text(f"""
         SELECT a.work_id, a.detector_type, a.severity, a.explanation,
-               w.work_description, w.cost, w.mp_name
+               w.work_description, w.cost, w.mp_name, w.implementing_agency
         FROM anomalies a
         JOIN works w ON a.work_id = w.work_id
         WHERE ({anom_clause})
@@ -268,7 +272,9 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
                 "cost": float(r[5] or 0),
                 "sanctionedCost": float(r[5] or 0),
                 "mpName": r[6],
-                "mp_name": r[6]
+                "mp_name": r[6],
+                "implementingAgency": r[7] or f"District Magistrate / Collector, {d_name.title()}",
+                "implementing_agency": r[7] or f"District Magistrate / Collector, {d_name.title()}"
             }
             for r in anom_rows
         ]

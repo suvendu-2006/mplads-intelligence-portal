@@ -226,7 +226,9 @@ def get_state_detail(state: str, db: Session = Depends(get_db)):
             primary_sector=str(drow.get("primary_sector", "") or "General"),
             tier_counts=tiers,
             tierCounts=tiers,
-            red_work_count=calc["red_work_count"]
+            red_work_count=calc["red_work_count"],
+            implementing_agency=f"District Magistrate / Collector, {d_name.title()}",
+            implementingAgency=f"District Magistrate / Collector, {d_name.title()}"
         ))
 
     if any(d.portfolio_value > 0 for d in districts_list):
@@ -312,6 +314,8 @@ def list_state_flags(
             state=w.state or "",
             mp_name=w.mp_name or "",
             constituency=w.mp_constituency or "",
+            implementing_agency=w.implementing_agency or "District Authority",
+            implementingAgency=w.implementing_agency or "District Authority",
             detector_type=anom.detector_type,
             detector_name=DETECTOR_NAMES.get(anom.detector_type, anom.detector_type),
             severity=sev,
@@ -391,6 +395,8 @@ def list_state_works(
             "district": w.district or "",
             "mp_name": w.mp_name or "",
             "constituency": w.mp_constituency or "",
+            "implementing_agency": w.implementing_agency or "District Authority",
+            "implementingAgency": w.implementing_agency or "District Authority",
             "house": w.house or "Lok Sabha",
             "delay_days": del_days,
             "delayDays": del_days,

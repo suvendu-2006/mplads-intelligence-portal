@@ -21,13 +21,14 @@ def list_all_flags(
     district: Optional[str] = None,
     tier: Optional[str] = None,
     detector: Optional[str] = None,
+    agency: Optional[str] = None,
     q: Optional[str] = None,
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=1, le=200),
     db: Session = Depends(get_db)
 ):
     resolved_detector = resolve_detector_type(detector)
-    cache_key = f"{state}_{district}_{tier}_{resolved_detector}_{q}_{page}_{page_size}".lower()
+    cache_key = f"{state}_{district}_{tier}_{resolved_detector}_{agency}_{q}_{page}_{page_size}".lower()
     if cache_key in _flags_cache:
         return _flags_cache[cache_key]
 
@@ -37,6 +38,8 @@ def list_all_flags(
         query = query.filter(func.lower(Work.state) == state.lower())
     if district:
         query = query.filter(func.lower(Work.district) == district.lower())
+    if agency:
+        query = query.filter(Work.implementing_agency.ilike(f"%{agency.strip()}%"))
     if resolved_detector:
         query = query.filter(func.lower(Anomaly.detector_type) == resolved_detector.lower())
     if tier:
@@ -57,7 +60,8 @@ def list_all_flags(
             query = query.filter(
                 Work.work_description.ilike(f"%{q_clean}%") |
                 Work.mp_name.ilike(f"%{q_clean}%") |
-                Work.district.ilike(f"%{q_clean}%")
+                Work.district.ilike(f"%{q_clean}%") |
+                Work.implementing_agency.ilike(f"%{q_clean}%")
             )
 
     try:
@@ -96,6 +100,8 @@ def list_all_flags(
             state=w.state or "",
             mp_name=w.mp_name or "",
             constituency=w.mp_constituency or "",
+            implementing_agency=w.implementing_agency or "District Authority",
+            implementingAgency=w.implementing_agency or "District Authority",
             detector_type=anom.detector_type,
             detector_name=DETECTOR_NAMES.get(anom.detector_type, anom.detector_type),
             severity=sev,
@@ -125,6 +131,7 @@ def export_flags(
     district: Optional[str] = None,
     tier: Optional[str] = None,
     detector: Optional[str] = None,
+    agency: Optional[str] = None,
     db: Session = Depends(get_db)
 ):
     resolved_detector = resolve_detector_type(detector)
@@ -133,5 +140,6 @@ def export_flags(
         state=state,
         district=district,
         tier=tier,
-        detector=resolved_detector
+        detector=resolved_detector,
+        agency=agency
     )

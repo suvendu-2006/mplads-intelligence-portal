@@ -9,7 +9,8 @@ import {
   StatCard,
   TierBadge,
   EmptyState,
-  SectionCard
+  SectionCard,
+  AgencyBadge
 } from '../components/shared'
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
@@ -62,6 +63,7 @@ export const MPDetail: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags' | 'risk'>('overview')
   const effectiveTab = (!isAuditorOrAdmin && (activeTab === 'flags' || activeTab === 'risk')) ? 'overview' : activeTab
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'pending'>('all')
+  const [agencyFilter, setAgencyFilter] = useState<string>('')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
 
   const [followed, setFollowed] = useState<boolean>(() => {
@@ -577,11 +579,46 @@ export const MPDetail: React.FC = () => {
             </button>
           </div>
 
+          {/* Agency Filter Dropdown */}
+          {(() => {
+            const uniqueAgencies: string[] = Array.from(new Set<string>(works.map((w: any) => String(w.implementingAgency || w.implementing_agency || 'District Authority').trim()))).sort()
+            if (uniqueAgencies.length <= 1) return null
+            return (
+              <div className="flex items-center gap-2 pt-2 border-t border-[var(--border-primary)]">
+                <span className="text-xs font-semibold text-[var(--text-tertiary)]">Filter by Agency:</span>
+                <select
+                  value={agencyFilter}
+                  onChange={(e) => setAgencyFilter(e.target.value)}
+                  className="px-2.5 py-1 rounded-lg border border-[var(--border-primary)] bg-[var(--surface-alt)] text-xs font-semibold text-[var(--text-primary)] outline-none"
+                >
+                  <option value="">All Executing Agencies ({uniqueAgencies.length})</option>
+                  {uniqueAgencies.map((ag: string) => (
+                    <option key={ag} value={ag}>
+                      {ag}
+                    </option>
+                  ))}
+                </select>
+                {agencyFilter && (
+                  <button
+                    onClick={() => setAgencyFilter('')}
+                    className="text-xs font-bold text-rose-500 hover:underline px-1"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+            )
+          })()}
+
           {(() => {
             const filteredWorks = works.filter((w: any) => {
               const isDone = (w.status || '').toLowerCase().includes('completed')
-              if (workFilter === 'completed') return isDone
-              if (workFilter === 'pending') return !isDone
+              if (workFilter === 'completed' && !isDone) return false
+              if (workFilter === 'pending' && isDone) return false
+              if (agencyFilter) {
+                const ag = (w.implementingAgency || w.implementing_agency || 'District Authority').trim()
+                if (ag !== agencyFilter) return false
+              }
               return true
             })
 
@@ -603,6 +640,7 @@ export const MPDetail: React.FC = () => {
                         <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                         <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                         <th className="p-3 font-bold whitespace-nowrap">District</th>
+                        <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                         <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
                         <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
                         <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
@@ -635,6 +673,9 @@ export const MPDetail: React.FC = () => {
                             </td>
                             <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                               {w.district || summary.constituency}
+                            </td>
+                            <td className="p-3 whitespace-nowrap">
+                              <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
                             </td>
                             <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                               ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
@@ -760,8 +801,8 @@ export const MPDetail: React.FC = () => {
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
                       <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                       <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                       <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
-                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Triggered Detector</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
                       <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                     </tr>
@@ -779,13 +820,11 @@ export const MPDetail: React.FC = () => {
                         <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                           {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                         </td>
+                        <td className="p-3 whitespace-nowrap">
+                          <AgencyBadge agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'} size="sm" />
+                        </td>
                         <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                           ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
-                        </td>
-                        <td className="p-3 whitespace-nowrap min-w-[180px]">
-                          <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                            {flag.detector_name || flag.detectorName || flag.detector || 'Forensic Flag'}
-                          </span>
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge

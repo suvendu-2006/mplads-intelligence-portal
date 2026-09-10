@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
-import { TierBadge, EmptyState, SectionCard } from '../components/shared'
+import { TierBadge, EmptyState, SectionCard, AgencyBadge } from '../components/shared'
 import { useStore } from '../store/useStore'
 import {
   ShieldAlert,
@@ -9,7 +9,8 @@ import {
   Download,
   ChevronLeft,
   ChevronRight,
-  MapPin
+  MapPin,
+  Building2
 } from 'lucide-react'
 import { t } from '../lib/i18n'
 
@@ -46,6 +47,7 @@ export const AuditDesk: React.FC = () => {
   const [prevUserStateKey, setPrevUserStateKey] = useState(() => `${user.role}:${user.state}`)
   const [tierFilter, setTierFilter] = useState('')
   const [detectorFilter, setDetectorFilter] = useState('')
+  const [agencyFilter, setAgencyFilter] = useState('')
   const [page, setPage] = useState(1)
   const [exporting, setExporting] = useState(false)
 
@@ -102,7 +104,7 @@ export const AuditDesk: React.FC = () => {
 
   useEffect(() => {
     async function fetchFlags() {
-      if (!sessionStorage.getItem('cached_audit_flags_1') || search || tierFilter || detectorFilter || stateFilter) {
+      if (!sessionStorage.getItem('cached_audit_flags_1') || search || tierFilter || detectorFilter || stateFilter || agencyFilter) {
         setLoading(true)
       }
       try {
@@ -116,13 +118,14 @@ export const AuditDesk: React.FC = () => {
         }
         if (tierFilter) params.set('tier', tierFilter)
         if (detectorFilter) params.set('detector', detectorFilter)
+        if (agencyFilter) params.set('agency', agencyFilter)
 
         const res = await fetch(`/api/flags?${params.toString()}`)
         if (res.ok) {
           const json = await res.json()
           setFlags(json.data || [])
           setMeta(json.meta)
-          if (page === 1 && !search && !tierFilter && !detectorFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
+          if (page === 1 && !search && !tierFilter && !detectorFilter && !agencyFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
             try { sessionStorage.setItem('cached_audit_flags_1', JSON.stringify(json.data || [])) } catch {}
           }
         }
@@ -133,7 +136,7 @@ export const AuditDesk: React.FC = () => {
       }
     }
     fetchFlags()
-  }, [page, search, stateFilter, tierFilter, detectorFilter])
+  }, [page, search, stateFilter, tierFilter, detectorFilter, agencyFilter])
 
   const handleExportCSV = async () => {
     setExporting(true)
@@ -144,6 +147,7 @@ export const AuditDesk: React.FC = () => {
       }
       if (tierFilter) params.append('tier', tierFilter)
       if (detectorFilter) params.append('detector', detectorFilter)
+      if (agencyFilter) params.append('agency', agencyFilter)
       const url = params.toString() ? `/api/flags/export?${params.toString()}` : '/api/flags/export'
 
       const res = await fetch(url)
@@ -255,6 +259,21 @@ export const AuditDesk: React.FC = () => {
             ))}
           </select>
 
+          {/* Agency Filter */}
+          <div className="relative min-w-[200px] flex-1 max-w-xs">
+            <Building2 className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-2.5" />
+            <input
+              type="text"
+              placeholder="Filter by agency (DM, GP...)"
+              value={agencyFilter}
+              onChange={(e) => {
+                setAgencyFilter(e.target.value)
+                setPage(1)
+              }}
+              className="w-full pl-9 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
+            />
+          </div>
+
           {/* State Nodal Active Indicator */}
           {user.role === 'state_nodal_officer' && stateFilter && (
             <span className="px-2.5 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-[11px] font-extrabold flex items-center gap-1.5 shrink-0">
@@ -264,12 +283,13 @@ export const AuditDesk: React.FC = () => {
           )}
 
           {/* Clear Filters */}
-          {(search || tierFilter || detectorFilter || (stateFilter && stateFilter !== initialRoleState)) && (
+          {(search || tierFilter || detectorFilter || agencyFilter || (stateFilter && stateFilter !== initialRoleState)) && (
             <button
               onClick={() => {
                 setSearch('')
                 setTierFilter('')
                 setDetectorFilter('')
+                setAgencyFilter('')
                 setStateFilter(initialRoleState)
                 setPage(1)
               }}
@@ -328,8 +348,8 @@ export const AuditDesk: React.FC = () => {
                   <th className="p-3 font-bold w-20 whitespace-nowrap">Work ID</th>
                   <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                   <th className="p-3 font-bold whitespace-nowrap">Location</th>
+                  <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                   <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                  <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Audit Finding</th>
                   <th className="p-3 font-bold text-center whitespace-nowrap">Risk Level</th>
                   <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
                 </tr>
@@ -351,13 +371,15 @@ export const AuditDesk: React.FC = () => {
                       {flag.district ? `${flag.district}, ` : ''}
                       <span className="text-[var(--text-tertiary)]">{flag.state}</span>
                     </td>
+                    <td className="p-3 whitespace-nowrap">
+                      <AgencyBadge
+                        agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'}
+                        variant={flag.severity >= 0.7 ? 'critical' : flag.severity >= 0.4 ? 'warning' : 'default'}
+                        size="sm"
+                      />
+                    </td>
                     <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                       ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
-                    </td>
-                    <td className="p-3 whitespace-nowrap min-w-[180px]">
-                      <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                        {flag.detector_name || flag.detectorName || flag.detector || 'Forensic Flag'}
-                      </span>
                     </td>
                     <td className="p-3 text-center whitespace-nowrap">
                       <TierBadge

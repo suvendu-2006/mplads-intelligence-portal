@@ -366,7 +366,6 @@ export const MyState: React.FC = () => {
                   <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                   <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                   <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                  <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Triggered Detector</th>
                   <th className="p-3 font-bold text-right whitespace-nowrap">Administrative Action</th>
                 </tr>
               </thead>
@@ -381,11 +380,6 @@ export const MyState: React.FC = () => {
                     </td>
                     <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                       ₹{((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2)} L
-                    </td>
-                    <td className="p-3 whitespace-nowrap min-w-[180px]">
-                      <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                        {f.detector_name || f.detectorName || f.detector || 'Forensic Flag'}
-                      </span>
                     </td>
                     <td className="p-3 text-right whitespace-nowrap">
                       <button

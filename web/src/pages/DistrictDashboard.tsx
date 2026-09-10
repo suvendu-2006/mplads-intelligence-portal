@@ -6,7 +6,8 @@ import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModa
 import {
   StatCard,
   TierBadge,
-  EmptyState
+  EmptyState,
+  AgencyBadge
 } from '../components/shared'
 import {
   Building2,
@@ -276,6 +277,7 @@ export const DistrictDashboard: React.FC = () => {
                       <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
                       <th className="p-3 font-bold whitespace-nowrap">Recommending MP</th>
                       <th className="p-3 font-bold whitespace-nowrap">Category</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                       <th className="p-3 font-bold whitespace-nowrap text-center">Status</th>
                       {isAuthorized && <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>}
                     </tr>
@@ -299,6 +301,9 @@ export const DistrictDashboard: React.FC = () => {
                           <span className="px-2 py-0.5 rounded bg-[var(--surface-alt)] font-medium text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
                             {w.category}
                           </span>
+                        </td>
+                        <td className="p-3 whitespace-nowrap">
+                          <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 inline-block whitespace-nowrap">
@@ -492,7 +497,7 @@ export const DistrictDashboard: React.FC = () => {
                       <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                       <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                       <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
-                      <th className="p-3 font-bold whitespace-nowrap min-w-[180px]">Triggered Model</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
                       <th className="p-3 font-bold text-right whitespace-nowrap">Collectorate Action</th>
                     </tr>
@@ -509,10 +514,8 @@ export const DistrictDashboard: React.FC = () => {
                         <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right">
                           ₹{((a.cost || a.sanctionedCost || 0) / 100000).toFixed(2)} L
                         </td>
-                        <td className="p-3 whitespace-nowrap min-w-[180px]">
-                          <span className="px-2.5 py-1 rounded bg-[var(--surface-alt)] font-semibold text-[11px] border border-[var(--border-primary)] inline-block whitespace-nowrap">
-                            {a.detector_name || a.detectorName || a.detector || 'Forensic Flag'}
-                          </span>
+                        <td className="p-3 whitespace-nowrap">
+                          <AgencyBadge agency={a.implementingAgency || a.implementing_agency || 'District Authority'} size="sm" />
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge tier={a.tier} count={Number(a.severity.toFixed(2))} size="sm" />

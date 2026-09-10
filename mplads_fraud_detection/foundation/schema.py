@@ -82,6 +82,8 @@ class Work(Base):
     district = Column(String(100), nullable=False, index=True)
     mp_name = Column(String(200), nullable=False, index=True)
     mp_constituency = Column(String(100), nullable=True, index=True)
+    implementing_agency = Column(String(255), nullable=True, index=True)
+    implementing_agency_raw = Column(String(500), nullable=True)
     completion_date = Column(Date, nullable=True, index=True)
     recommended_date = Column(Date, nullable=True, index=True)
     status = Column(String(50), default="completed", nullable=False, index=True)
@@ -126,6 +128,7 @@ class Work(Base):
         CheckConstraint("cost > 0", name="chk_positive_cost"),
         Index("idx_works_district_date", "district", "completion_date"),
         Index("idx_works_mp_date", "mp_name", "recommended_date"),
+        Index("ix_works_implementing_agency", "implementing_agency"),
     )
 
 
