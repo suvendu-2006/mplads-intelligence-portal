@@ -1,5 +1,7 @@
 .venv
 _uv
+.python-version
+uv.lock
 node_modules
 web/node_modules
 web/dist

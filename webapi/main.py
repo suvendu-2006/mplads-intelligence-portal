@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.gzip import GZipMiddleware
 
 from webapi.routers import (
-    national, states, mps, flags, entity_risks, roles, meta, map, districts, constituencies
+    national, states, mps, flags, entity_risks, roles, meta, map, districts
 )
 from webapi.static_serve import mount_static_files
 from webapi.data_service import load_national_csv, load_states_csv
@@ -98,7 +98,6 @@ api_routers = [
     (meta.router, "Metadata"),
     (map.router, "GIS Map"),
     (districts.router, "Districts"),
-    (constituencies.router, "Constituencies"),
 ]
 for router, tag in api_routers:
     app.include_router(router, prefix="/api", tags=[tag])
