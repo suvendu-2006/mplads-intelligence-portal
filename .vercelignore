@@ -54,7 +54,8 @@ requirements-full.txt
 uv.lock
 mplads.db
 mplads_dev.db
-!api/mplads_dev.db
+api/mplads_dev.db
+!api/mplads_dev.db.gz
 backfill_implementing_agencies.py
 seed_all_detectors.py
 build

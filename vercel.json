@@ -1,10 +1,11 @@
 {
   "version": 2,
+  "framework": null,
   "buildCommand": "cd web && npm install && npm run build",
   "outputDirectory": "web/dist",
   "functions": {
     "api/*.py": {
-      "includeFiles": "api/mplads_dev.db"
+      "includeFiles": "api/mplads_dev.db.gz"
     }
   },
   "headers": [

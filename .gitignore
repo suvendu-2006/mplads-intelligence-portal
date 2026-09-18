@@ -81,3 +81,5 @@ India_AC.dbf
 uv.lock
 .python-version
 _uv/
+api/mplads_dev.db
+!api/mplads_dev.db.gz
