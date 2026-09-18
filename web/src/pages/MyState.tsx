@@ -412,7 +412,7 @@ export const MyState: React.FC = () => {
 
       {/* Action Notice Alert Modal */}
       {actionNotice && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
           <div className="lux-card max-w-md w-full p-6 relative shadow-2xl">
             <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center mb-3">
               <CheckCircle2 size={22} />

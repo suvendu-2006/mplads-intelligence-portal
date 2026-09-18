@@ -97,7 +97,7 @@ export const StatCard: React.FC<StatCardProps> = ({
   const tooltipText = tooltip || description
 
   return (
-    <div className="lux-card p-5 relative overflow-visible group/card hover:z-40 transition-all flex flex-col justify-between">
+    <div className="lux-card p-5 relative overflow-visible group/card hover:z-10 transition-all flex flex-col justify-between">
       {/* Top row: Icon + Label + Tooltip */}
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2.5">

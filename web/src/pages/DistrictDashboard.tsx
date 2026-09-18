@@ -652,7 +652,7 @@ export const DistrictDashboard: React.FC = () => {
 
       {/* Measurement Book (MB) Verification Dialog */}
       {isAuthorized && selectedMBWork && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
           <div className="lux-card max-w-xl w-full p-6 relative shadow-2xl space-y-4">
             <button
               onClick={() => setSelectedMBWork(null)}

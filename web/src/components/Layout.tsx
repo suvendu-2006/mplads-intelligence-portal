@@ -72,7 +72,7 @@ export const Layout: React.FC = () => {
       <Navbar />
 
       {/* Sleek Horizontal Navigation Bar (Replaces 240px vertical sidebar for maximum space) */}
-      <div className="w-full bg-[var(--surface-primary)] border-b border-[var(--border-primary)] shadow-2xs sticky top-16 z-30 transition-colors">
+      <div className="w-full bg-[var(--surface-primary)] border-b border-[var(--border-primary)] shadow-2xs sticky top-16 z-40 transition-colors">
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Main Navigation Links */}
           <nav className="flex items-center gap-1 sm:gap-2 py-2 overflow-x-auto scrollbar-none">

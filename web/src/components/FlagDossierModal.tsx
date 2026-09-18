@@ -148,7 +148,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div
         className="relative w-full max-w-3xl rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl p-6 sm:p-8 my-8 text-[var(--text-primary)]"
         style={{ borderTop: '4px solid var(--brand-accent)' }}
@@ -492,7 +492,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
 
         {/* Action Draft Preview Submodal */}
         {activeActionModal && (
-          <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
+          <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
             <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] max-w-xl w-full p-6 shadow-2xl relative">
               <button
                 onClick={() => setActiveActionModal(null)}

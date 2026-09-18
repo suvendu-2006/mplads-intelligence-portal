@@ -858,7 +858,7 @@ export const NationalDashboard: React.FC = () => {
 
       {/* Explainer Modal (Video / Briefing) */}
       {showVideoModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
           <div className="lux-card max-w-xl w-full p-6 relative shadow-2xl">
             <button
               onClick={() => setShowVideoModal(false)}

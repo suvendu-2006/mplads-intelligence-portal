@@ -252,7 +252,7 @@ export const Navbar: React.FC = () => {
   }
 
   return (
-    <header className="sticky top-0 z-40 bg-[var(--surface-primary)] border-b border-[var(--border-primary)] shadow-sm">
+    <header className="sticky top-0 z-50 bg-[var(--surface-primary)] border-b border-[var(--border-primary)] shadow-sm">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-6">
         {/* Brand */}
         <Link to="/" className="flex items-center shrink-0 group">
