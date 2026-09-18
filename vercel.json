@@ -4,19 +4,8 @@
   "outputDirectory": "web/dist",
   "functions": {
     "api/*.py": {
-      "includeFiles": [
-        "api/mplads_dev.db",
-        "data/*.csv",
-        "data/*.json",
-        "01_Overview_and_National_Summary/**",
-        "02_States_and_UTs/**",
-        "03_MPs_Data/**",
-        "05_Analytics_and_Trends/**",
-        "09_MP_Demographics_ADR/**"
-      ],
-      "excludeFiles": [
-        "web/**"
-      ]
+      "includeFiles": "{api/mplads_dev.db,data/*.csv,data/*.json,01_Overview_and_National_Summary/**,02_States_and_UTs/**,03_MPs_Data/**,05_Analytics_and_Trends/**,09_MP_Demographics_ADR/**}",
+      "excludeFiles": "{web/**,data/*.geojson,data/works_*.csv}"
     }
   },
   "headers": [
