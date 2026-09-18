@@ -10,7 +10,8 @@ import {
   ChevronLeft,
   ChevronRight,
   MapPin,
-  Building2
+  Building2,
+  X
 } from 'lucide-react'
 import { t } from '../lib/i18n'
 
@@ -204,17 +205,28 @@ export const AuditDesk: React.FC = () => {
         <div className="flex flex-wrap items-center gap-3">
           {/* Search Box */}
           <div className="relative min-w-[220px] flex-1 max-w-sm">
-            <Search className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-2.5" />
+            <Search className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search Work ID or description..."
+              placeholder="Search Work ID, constituency, MP, agency..."
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value)
                 setPage(1)
               }}
-              className="w-full pl-9 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
+              className="w-full pl-9 pr-8 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
             />
+            {search && (
+              <button
+                onClick={() => {
+                  setSearch('')
+                  setPage(1)
+                }}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-0.5 cursor-pointer"
+              >
+                <X size={12} />
+              </button>
+            )}
           </div>
 
           {/* State Jurisdiction Filter */}

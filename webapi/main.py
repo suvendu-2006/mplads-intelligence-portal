@@ -101,7 +101,6 @@ api_routers = [
 ]
 for router, tag in api_routers:
     app.include_router(router, prefix="/api", tags=[tag])
-    app.include_router(router, tags=[tag])
 
 # Mount static frontend and SPA catch-all (lowest priority)
 mount_static_files(app)

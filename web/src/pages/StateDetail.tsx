@@ -21,7 +21,8 @@ import {
   Landmark,
   Coins,
   Percent,
-  Clock
+  Clock,
+  X
 } from 'lucide-react'
 
 const UNION_TERRITORIES = [
@@ -606,9 +607,20 @@ export const StateDetail: React.FC = () => {
                   setWorksSearch(e.target.value)
                   setWorksPage(1)
                 }}
-                placeholder="Search works, district, MP name..."
-                className="w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
+                placeholder="Search works, constituency, district, MP name..."
+                className="w-full pl-9 pr-8 py-2 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
               />
+              {worksSearch && (
+                <button
+                  onClick={() => {
+                    setWorksSearch('')
+                    setWorksPage(1)
+                  }}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-0.5 cursor-pointer"
+                >
+                  <X size={12} />
+                </button>
+              )}
             </div>
 
             <div className="flex items-center gap-2">

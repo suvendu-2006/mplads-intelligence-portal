@@ -60,7 +60,9 @@ def list_all_flags(
             query = query.filter(
                 Work.work_description.ilike(f"%{q_clean}%") |
                 Work.mp_name.ilike(f"%{q_clean}%") |
+                Work.mp_constituency.ilike(f"%{q_clean}%") |
                 Work.district.ilike(f"%{q_clean}%") |
+                Work.state.ilike(f"%{q_clean}%") |
                 Work.implementing_agency.ilike(f"%{q_clean}%")
             )
 

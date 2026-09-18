@@ -33,6 +33,51 @@ export const Navbar: React.FC = () => {
     'Delhi', 'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry'
   ]
 
+  const STATE_ACRONYMS: Record<string, string> = {
+    'up': 'Uttar Pradesh',
+    'mp': 'Madhya Pradesh',
+    'ap': 'Andhra Pradesh',
+    'wb': 'West Bengal',
+    'tn': 'Tamil Nadu',
+    'hp': 'Himachal Pradesh',
+    'uk': 'Uttarakhand',
+    'ua': 'Uttarakhand',
+    'dl': 'Delhi',
+    'nct': 'Delhi',
+    'jk': 'Jammu and Kashmir',
+    'j&k': 'Jammu and Kashmir',
+    'br': 'Bihar',
+    'mh': 'Maharashtra',
+    'rj': 'Rajasthan',
+    'gj': 'Gujarat',
+    'ka': 'Karnataka',
+    'kl': 'Kerala',
+    'od': 'Odisha',
+    'or': 'Odisha',
+    'pb': 'Punjab',
+    'hr': 'Haryana',
+    'ts': 'Telangana',
+    'tg': 'Telangana',
+    'cg': 'Chhattisgarh',
+    'jh': 'Jharkhand',
+    'as': 'Assam',
+    'ga': 'Goa',
+    'tr': 'Tripura',
+    'ml': 'Meghalaya',
+    'mn': 'Manipur',
+    'mz': 'Mizoram',
+    'nl': 'Nagaland',
+    'sk': 'Sikkim',
+    'ar': 'Arunachal Pradesh',
+    'py': 'Puducherry',
+    'ch': 'Chandigarh',
+    'an': 'Andaman and Nicobar Islands',
+    'la': 'Ladakh',
+    'ld': 'Lakshadweep',
+    'dnh': 'Dadra and Nagar Haveli and Daman and Diu',
+    'dd': 'Dadra and Nagar Haveli and Daman and Diu',
+  }
+
   // Query matching MPs when searchQuery changes
   const qClean = searchQuery.trim().toLowerCase()
   const isDigits = /^\d+$/.test(qClean)
@@ -57,10 +102,23 @@ export const Navbar: React.FC = () => {
         mpMatches.push(seat)
       }
 
-      if (constMatches.length >= 6 && mpMatches.length >= 4) {
+      if (constMatches.length >= 8 && mpMatches.length >= 6) {
         break
       }
     }
+
+    // Prioritize exact and prefix matches
+    constMatches.sort((a, b) => {
+      const aExact = a.constituency.toLowerCase() === q ? 0 : (a.constituency.toLowerCase().startsWith(q) ? 1 : 2)
+      const bExact = b.constituency.toLowerCase() === q ? 0 : (b.constituency.toLowerCase().startsWith(q) ? 1 : 2)
+      return aExact - bExact
+    })
+
+    mpMatches.sort((a, b) => {
+      const aExact = a.name.toLowerCase() === q ? 0 : (a.name.toLowerCase().startsWith(q) ? 1 : 2)
+      const bExact = b.name.toLowerCase() === q ? 0 : (b.name.toLowerCase().startsWith(q) ? 1 : 2)
+      return aExact - bExact
+    })
 
     return {
       matchingConstituencies: constMatches.slice(0, 5),
@@ -68,10 +126,20 @@ export const Navbar: React.FC = () => {
     }
   }, [searchQuery])
 
-  // Filter matching states
-  const matchingStates = qClean.length >= 1
-    ? INDIAN_STATES.filter(s => s.toLowerCase().includes(qClean)).slice(0, 4)
-    : []
+  // Filter matching states (including acronyms)
+  const acronymState = STATE_ACRONYMS[qClean]
+  const matchingStates = React.useMemo(() => {
+    if (qClean.length < 1) return []
+    const results: string[] = []
+    if (acronymState) results.push(acronymState)
+    for (const s of INDIAN_STATES) {
+      if (s.toLowerCase().includes(qClean) && !results.includes(s)) {
+        results.push(s)
+      }
+      if (results.length >= 4) break
+    }
+    return results
+  }, [qClean, acronymState])
 
   // Filter matching districts
   const matchingDistricts: { state: string; district: string }[] = []
@@ -129,28 +197,35 @@ export const Navbar: React.FC = () => {
 
     const qLower = q.toLowerCase()
 
-    // 2. Exact or partial Constituency match -> Direct to Constituency / MP page!
+    // 2. Acronym match -> State Detail
+    if (STATE_ACRONYMS[qLower]) {
+      navigate(`/states/${encodeURIComponent(STATE_ACRONYMS[qLower])}`)
+      return
+    }
+
+    // 3. Exact or prefix Constituency match -> Direct to Constituency / MP page!
     const matchedConst = ALL_MP_SEATS.find(
       m => m.constituency.toLowerCase() === qLower ||
-           m.constituency.toLowerCase().startsWith(qLower) ||
-           m.constituency.toLowerCase().includes(qLower)
-    )
+           m.constituency.toLowerCase().startsWith(qLower)
+    ) || ALL_MP_SEATS.find(m => m.constituency.toLowerCase().includes(qLower))
+
     if (matchedConst && q.length >= 2) {
       navigate(`/mps/${encodeURIComponent(matchedConst.id)}`)
       return
     }
 
-    // 3. Exact or partial MP Name match -> Direct to MP page!
+    // 4. Exact or prefix MP Name match -> Direct to MP page!
     const matchedMp = ALL_MP_SEATS.find(
       m => m.name.toLowerCase() === qLower ||
-           m.name.toLowerCase().includes(qLower)
-    )
+           m.name.toLowerCase().startsWith(qLower)
+    ) || ALL_MP_SEATS.find(m => m.name.toLowerCase().includes(qLower))
+
     if (matchedMp && q.length >= 3) {
       navigate(`/mps/${encodeURIComponent(matchedMp.id)}`)
       return
     }
 
-    // 4. State name match -> State Detail page
+    // 5. State name match -> State Detail page
     const matchedState = INDIAN_STATES.find(
       s => s.toLowerCase() === qLower || s.toLowerCase().startsWith(qLower)
     )
@@ -159,7 +234,7 @@ export const Navbar: React.FC = () => {
       return
     }
 
-    // 5. District name match -> District Dashboard page
+    // 6. District name match -> District Dashboard page
     for (const dists of Object.values(STATE_DISTRICTS_MAP)) {
       const matchedDist = dists.find(
         d => d.toLowerCase() === qLower || d.toLowerCase().startsWith(qLower)
@@ -170,7 +245,7 @@ export const Navbar: React.FC = () => {
       }
     }
 
-    // 6. Default fallback -> MPs Directory with query
+    // 7. Default fallback -> MPs Directory with query
     navigate(`/mps?q=${encodeURIComponent(q)}`)
   }
 
@@ -184,8 +259,8 @@ export const Navbar: React.FC = () => {
           </span>
         </Link>
 
-        {/* Global Search Bar with Live Suggestions Dropdown */}
-        <div ref={searchContainerRef} className="flex-1 max-w-xs md:max-w-md hidden md:block relative">
+        {/* Global Search Bar with Live Suggestions Dropdown (Responsive: visible on all screen sizes) */}
+        <div ref={searchContainerRef} className="flex-1 max-w-[200px] sm:max-w-xs md:max-w-md relative">
           <form onSubmit={handleSearchSubmit}>
             <div className="relative">
               <button

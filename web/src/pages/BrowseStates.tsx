@@ -10,8 +10,10 @@ import {
   ArrowUpDown,
   ArrowRight,
   CheckCircle2,
-  Clock
+  Clock,
+  X
 } from 'lucide-react'
+import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -73,7 +75,14 @@ export const BrowseStates: React.FC = () => {
   }, [effectiveSort, order])
 
   const filtered = states.filter((s) => {
-    const matchesSearch = s.state.toLowerCase().includes(search.toLowerCase())
+    const q = search.trim().toLowerCase()
+    const matchesState = s.state.toLowerCase().includes(q)
+    const matchesDistrict = q.length >= 2 && (() => {
+      const dists = STATE_DISTRICTS_MAP[s.state] || []
+      return dists.some((d: string) => d.toLowerCase().includes(q))
+    })()
+    const matchesSearch = !q || matchesState || matchesDistrict
+
     const isUT = UNION_TERRITORIES.includes(s.state)
     if (jurisdictionFilter === 'states') return matchesSearch && !isUT
     if (jurisdictionFilter === 'uts') return matchesSearch && isUT
@@ -113,9 +122,17 @@ export const BrowseStates: React.FC = () => {
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search state name..."
-              className="w-full pl-9 pr-3 py-1.5 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)] shadow-sm"
+              placeholder="Search state or district..."
+              className="w-full pl-9 pr-7 py-1.5 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)] shadow-sm"
             />
+            {search && (
+              <button
+                onClick={() => setSearch('')}
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-0.5 cursor-pointer"
+              >
+                <X size={12} />
+              </button>
+            )}
           </div>
 
           <div className="flex items-center gap-2">

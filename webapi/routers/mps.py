@@ -43,10 +43,12 @@ def list_mps(
     if house:
         filtered = filtered[filtered["house"].str.lower() == house.lower()]
     if q:
-        query_lower = q.lower()
+        query_lower = q.strip().lower()
         name_match = filtered["mpName"].astype(str).str.lower().str.contains(query_lower, na=False)
         const_match = filtered["constituency"].astype(str).str.lower().str.contains(query_lower, na=False)
-        filtered = filtered[name_match | const_match]
+        state_match = filtered["state"].astype(str).str.lower().str.contains(query_lower, na=False)
+        id_match = filtered["id"].astype(str).str.lower().str.contains(query_lower, na=False)
+        filtered = filtered[name_match | const_match | state_match | id_match]
 
     all_rf = compute_all_mps_red_flag_pct(db)
 
@@ -119,17 +121,25 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         return EnvelopeResponse(data=_mp_detail_cache[c_key], meta=None, warnings=[])
 
     df_mps = load_mps_csv()
+    # Tier 1: Exact ID match
     match = df_mps[df_mps["id"].astype(str) == id]
     if match.empty:
         match = df_mps[df_mps["id"].astype(str).str.lower() == id.lower()]
+    # Tier 2: Exact MP Name match
     if match.empty:
-        match = df_mps[df_mps["mpName"].astype(str).str.lower() == id.lower()]
+        match = df_mps[df_mps["mpName"].astype(str).str.strip().str.lower() == id.strip().lower()]
+    # Tier 3: Exact Constituency match
     if match.empty:
-        clean_name = id.split("(")[0].strip()
-        if clean_name:
-            match = df_mps[df_mps["mpName"].astype(str).str.contains(clean_name, case=False, na=False)]
+        match = df_mps[df_mps["constituency"].astype(str).str.strip().str.lower() == id.strip().lower()]
+    # Tier 4: Partial MP Name match
+    clean_name = id.split("(")[0].strip()
+    if match.empty and clean_name:
+        match = df_mps[df_mps["mpName"].astype(str).str.contains(clean_name, case=False, na=False)]
+    # Tier 5: Partial Constituency match
+    if match.empty and clean_name:
+        match = df_mps[df_mps["constituency"].astype(str).str.contains(clean_name, case=False, na=False)]
     if match.empty:
-        raise HTTPException(status_code=404, detail=f"MP with id '{id}' not found")
+        raise HTTPException(status_code=404, detail=f"MP or Constituency with identifier '{id}' not found")
 
     row = match.iloc[0]
     real_id = str(row["id"])

@@ -20,6 +20,7 @@ import {
   Landmark,
   Percent,
   ShieldAlert,
+  Search,
   X
 } from 'lucide-react'
 
@@ -48,6 +49,7 @@ export const DistrictDashboard: React.FC = () => {
   const [selectedMBWork, setSelectedMBWork] = useState<any | null>(null)
   const [verifiedMBWorks, setVerifiedMBWorks] = useState<number[]>([])
   const [worksStatusFilter, setWorksStatusFilter] = useState<'all' | 'completed' | 'active'>('all')
+  const [worksSearch, setWorksSearch] = useState('')
 
   const certifyMB = (workId: number) => {
     setVerifiedMBWorks((prev) => [...prev, workId])
@@ -265,11 +267,20 @@ export const DistrictDashboard: React.FC = () => {
 
       {/* TAB 1: WORKS LEDGER */}
       {effectiveTab === 'works' && (() => {
+        const qClean = worksSearch.trim().toLowerCase()
         const filteredWorks = works.filter((w: any) => {
           const isComp = String(w.status || '').toLowerCase().includes('completed')
-          if (worksStatusFilter === 'completed') return isComp
-          if (worksStatusFilter === 'active') return !isComp
-          return true
+          if (worksStatusFilter === 'completed' && !isComp) return false
+          if (worksStatusFilter === 'active' && isComp) return false
+          if (!qClean) return true
+
+          const wId = String(w.workId || '')
+          const desc = String(w.work_description || w.workDescription || w.description || '').toLowerCase()
+          const mp = String(w.mpName || '').toLowerCase()
+          const cat = String(w.category || '').toLowerCase()
+          const agency = String(w.implementingAgency || w.implementing_agency || '').toLowerCase()
+
+          return wId.includes(qClean) || desc.includes(qClean) || mp.includes(qClean) || cat.includes(qClean) || agency.includes(qClean)
         })
 
         const activeCount = works.filter((w: any) => !String(w.status || '').toLowerCase().includes('completed')).length
@@ -284,44 +295,67 @@ export const DistrictDashboard: React.FC = () => {
               />
             ) : (
               <div className="space-y-3">
-                {/* Status Filter Tabs & Statutory Count Summary */}
+                {/* Search & Status Filter Toolbar */}
                 <div className="flex items-center justify-between gap-3 flex-wrap">
-                  <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs">
-                    <button
-                      onClick={() => setWorksStatusFilter('all')}
-                      className={`px-3 py-1 rounded-lg font-bold transition ${
-                        worksStatusFilter === 'all'
-                          ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
-                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                      }`}
-                    >
-                      All ({works.length})
-                    </button>
-                    <button
-                      onClick={() => setWorksStatusFilter('active')}
-                      className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
-                        worksStatusFilter === 'active'
-                          ? 'bg-[var(--surface-primary)] text-amber-600 dark:text-amber-400 shadow-xs'
-                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                      }`}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                      <span>Under Execution ({activeCount})</span>
-                    </button>
-                    <button
-                      onClick={() => setWorksStatusFilter('completed')}
-                      className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
-                        worksStatusFilter === 'completed'
-                          ? 'bg-[var(--surface-primary)] text-emerald-600 dark:text-emerald-400 shadow-xs'
-                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                      }`}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      <span>Completed ({completedCountInLedger})</span>
-                    </button>
+                  <div className="flex items-center gap-2 flex-wrap flex-1">
+                    {/* Live Search Input */}
+                    <div className="relative min-w-[200px] sm:min-w-[260px] max-w-sm">
+                      <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
+                      <input
+                        type="text"
+                        placeholder="Search Work ID, project, MP..."
+                        value={worksSearch}
+                        onChange={(e) => setWorksSearch(e.target.value)}
+                        className="w-full pl-8 pr-7 py-1.5 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder-[var(--text-tertiary)] focus:outline-none focus:border-[var(--brand-primary)] shadow-2xs"
+                      />
+                      {worksSearch && (
+                        <button
+                          onClick={() => setWorksSearch('')}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-0.5 cursor-pointer"
+                        >
+                          <X size={12} />
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs">
+                      <button
+                        onClick={() => setWorksStatusFilter('all')}
+                        className={`px-3 py-1 rounded-lg font-bold transition ${
+                          worksStatusFilter === 'all'
+                            ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
+                            : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                        }`}
+                      >
+                        All ({works.length})
+                      </button>
+                      <button
+                        onClick={() => setWorksStatusFilter('active')}
+                        className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
+                          worksStatusFilter === 'active'
+                            ? 'bg-[var(--surface-primary)] text-amber-600 dark:text-amber-400 shadow-xs'
+                            : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                        }`}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                        <span>Under Execution ({activeCount})</span>
+                      </button>
+                      <button
+                        onClick={() => setWorksStatusFilter('completed')}
+                        className={`px-3 py-1 rounded-lg font-bold transition flex items-center gap-1.5 ${
+                          worksStatusFilter === 'completed'
+                            ? 'bg-[var(--surface-primary)] text-emerald-600 dark:text-emerald-400 shadow-xs'
+                            : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                        }`}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        <span>Completed ({completedCountInLedger})</span>
+                      </button>
+                    </div>
                   </div>
+
                   <span className="text-[11px] text-[var(--text-tertiary)] font-medium">
-                    {summary?.totalWorks ? `Statutory Registry: ${summary.totalWorks} Total Projects` : ''}
+                    Showing {filteredWorks.length} of {works.length} projects
                   </span>
                 </div>
 

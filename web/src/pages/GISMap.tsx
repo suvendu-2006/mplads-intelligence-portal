@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
-import { Globe2, MapPin, Info, ArrowRight } from 'lucide-react'
+import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
 
 const INDIA_CENTER: [number, number] = [22.5937, 79.5]
@@ -27,6 +27,37 @@ function ResetViewControl() {
   )
 }
 
+function MapFocusController({ bounds }: { bounds: [[number, number], [number, number]] | null }) {
+  const map = useMap()
+  useEffect(() => {
+    if (bounds) {
+      map.flyToBounds(bounds, { maxZoom: 8, duration: 1.2 })
+    }
+  }, [bounds, map])
+  return null
+}
+
+function getFeatureBounds(geom: any): [[number, number], [number, number]] | null {
+  if (!geom || !geom.coordinates) return null
+  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180
+
+  function scan(c: any) {
+    if (typeof c[0] === 'number' && typeof c[1] === 'number') {
+      const lng = c[0]
+      const lat = c[1]
+      if (lat < minLat) minLat = lat
+      if (lat > maxLat) maxLat = lat
+      if (lng < minLng) minLng = lng
+      if (lng > maxLng) maxLng = lng
+    } else if (Array.isArray(c)) {
+      c.forEach(scan)
+    }
+  }
+  scan(geom.coordinates)
+  if (minLat > maxLat || minLng > maxLng) return null
+  return [[minLat, minLng], [maxLat, maxLng]]
+}
+
 const GEO_CACHE: Record<string, any> = {}
 
 export const GISMap: React.FC = () => {
@@ -46,6 +77,20 @@ export const GISMap: React.FC = () => {
   const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'] && typeof window !== 'undefined' && !sessionStorage.getItem('cached_map_pcs'))
   const [metric, setMetric] = useState<'utilization' | 'works'>('utilization')
   const [selectedFeature, setSelectedFeature] = useState<any>(null)
+  const [mapSearch, setMapSearch] = useState('')
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [flyToBounds, setFlyToBounds] = useState<[[number, number], [number, number]] | null>(null)
+  const searchContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+        setIsSearchOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   useEffect(() => {
     async function loadGeoJson() {
@@ -68,15 +113,23 @@ export const GISMap: React.FC = () => {
 
       setLoading(true)
       try {
-        const primaryUrl = layerType === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
-        const res = await fetch(primaryUrl)
+        const staticUrl = `/data/${layerType === 'pcs' ? 'pcs_enriched' : 'districts_enriched'}.geojson`
+        const apiUrl = layerType === 'pcs' ? '/api/map/pcs' : '/api/map/districts'
+        
+        let res = await fetch(staticUrl)
+        if (!res.ok) {
+          res = await fetch(apiUrl)
+        }
         if (res.ok) {
           const json = await res.json()
           const featData = (json.data && json.data.type === 'FeatureCollection') ? json.data : json
           GEO_CACHE[layerType] = featData
           setGeoData(featData)
           try {
-            sessionStorage.setItem(`cached_map_${layerType}`, JSON.stringify(featData))
+            const serialized = JSON.stringify(featData)
+            if (serialized.length < 3 * 1024 * 1024) {
+              sessionStorage.setItem(`cached_map_${layerType}`, serialized)
+            }
           } catch {}
         }
       } catch (err) {
@@ -87,6 +140,40 @@ export const GISMap: React.FC = () => {
     }
     loadGeoJson()
   }, [layerType])
+
+  const mapSuggestions = React.useMemo(() => {
+    const q = mapSearch.trim().toLowerCase()
+    if (q.length < 2 || !geoData?.features) return []
+    const results: any[] = []
+
+    for (const feat of geoData.features) {
+      const p = feat.properties || {}
+      const name = String(p.pc_name || p.NAME_2 || p.district || p.district_name || '').trim()
+      const state = String(p.state || p.NAME_1 || '').trim()
+      const mp = String(p.mp_name || p.mps_active || '').trim()
+
+      if (name.toLowerCase().includes(q) || mp.toLowerCase().includes(q) || state.toLowerCase().includes(q)) {
+        results.push({
+          type: layerType === 'pcs' ? 'Constituency' : 'District',
+          name,
+          state,
+          mp,
+          feature: feat
+        })
+      }
+      if (results.length >= 8) break
+    }
+    return results
+  }, [mapSearch, geoData, layerType])
+
+  const handleSelectSuggestion = (s: any) => {
+    setIsSearchOpen(false)
+    setSelectedFeature(s.feature.properties)
+    const bounds = getFeatureBounds(s.feature.geometry)
+    if (bounds) {
+      setFlyToBounds(bounds)
+    }
+  }
 
   const isDark = typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'dark'
   const ramp = isDark ? palette.sequential.dark : palette.sequential.light
@@ -181,12 +268,70 @@ export const GISMap: React.FC = () => {
           </p>
         </div>
 
-        {/* Toggle Controls */}
+        {/* Toggle Controls & Interactive Map Search */}
         <div className="flex items-center gap-3 flex-wrap">
+          {/* Interactive Map Search Input with Autocomplete */}
+          <div ref={searchContainerRef} className="relative min-w-[240px] sm:min-w-[280px]">
+            <div className="relative">
+              <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={mapSearch}
+                onFocus={() => setIsSearchOpen(true)}
+                onChange={(e) => {
+                  setMapSearch(e.target.value)
+                  setIsSearchOpen(true)
+                }}
+                placeholder={layerType === 'pcs' ? "Search Constituency or MP..." : "Search District name..."}
+                className="w-full pl-8 pr-7 py-1.5 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder-[var(--text-tertiary)] focus:outline-none focus:border-[var(--brand-primary)] shadow-sm"
+              />
+              {mapSearch && (
+                <button
+                  onClick={() => {
+                    setMapSearch('')
+                    setIsSearchOpen(false)
+                  }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-0.5"
+                >
+                  <X size={12} />
+                </button>
+              )}
+            </div>
+
+            {/* Suggestions Dropdown */}
+            {isSearchOpen && mapSuggestions.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-xl shadow-xl z-50 overflow-hidden max-h-60 overflow-y-auto">
+                <div className="p-1 space-y-0.5">
+                  {mapSuggestions.map((s, idx) => (
+                    <button
+                      key={`${s.name}-${idx}`}
+                      onClick={() => handleSelectSuggestion(s)}
+                      className="w-full text-left px-2.5 py-1.5 rounded-lg text-xs hover:bg-[var(--surface-alt)] flex items-center justify-between group transition"
+                    >
+                      <div className="min-w-0">
+                        <div className="font-bold text-[var(--text-primary)] truncate">{s.name}</div>
+                        <div className="text-[10px] text-[var(--text-secondary)] truncate">
+                          {s.state} {s.mp ? `• MP: ${s.mp}` : ''}
+                        </div>
+                      </div>
+                      <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] shrink-0 ml-1.5">
+                        {s.type}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
           {/* Layer Selector */}
           <div className="flex items-center rounded-xl bg-[var(--surface-primary)] p-0.5 border border-[var(--border-primary)] text-xs font-bold shadow-sm">
             <button
-              onClick={() => setLayerType('pcs')}
+              onClick={() => {
+                setLayerType('pcs')
+                setMapSearch('')
+                setSelectedFeature(null)
+              }}
               className={`px-3 py-1.5 rounded-lg transition ${
                 layerType === 'pcs'
                   ? 'bg-[var(--brand-primary)] text-white shadow'
@@ -196,7 +341,11 @@ export const GISMap: React.FC = () => {
               PCs (543)
             </button>
             <button
-              onClick={() => setLayerType('districts')}
+              onClick={() => {
+                setLayerType('districts')
+                setMapSearch('')
+                setSelectedFeature(null)
+              }}
               className={`px-3 py-1.5 rounded-lg transition ${
                 layerType === 'districts'
                   ? 'bg-[var(--brand-primary)] text-white shadow'
@@ -248,6 +397,7 @@ export const GISMap: React.FC = () => {
             className="z-0"
           >
             <ResetViewControl />
+            <MapFocusController bounds={flyToBounds} />
             {geoData && (
               <GeoJSON
                 key={`${layerType}-${metric}`}

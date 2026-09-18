@@ -357,6 +357,7 @@ def list_state_works(
         query = query.filter(
             func.lower(Work.work_description).like(s) |
             func.lower(Work.mp_name).like(s) |
+            func.lower(Work.mp_constituency).like(s) |
             func.lower(Work.district).like(s)
         )
 
