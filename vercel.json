@@ -4,7 +4,8 @@
   "outputDirectory": "web/dist",
   "functions": {
     "api/*.py": {
-      "includeFiles": "api/mplads_dev.db"
+      "includeFiles": "api/mplads_dev.db",
+      "excludeFiles": "{web/**,data/**,0*/**,1*/**}"
     }
   },
   "headers": [
