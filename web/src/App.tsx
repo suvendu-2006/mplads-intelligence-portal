@@ -13,6 +13,7 @@ const DistrictDashboard = React.lazy(() => import('./pages/DistrictDashboard').t
 const MPDashboard = React.lazy(() => import('./pages/MPDashboard').then(m => ({ default: m.MPDashboard })))
 const AuditDesk = React.lazy(() => import('./pages/AuditDesk').then(m => ({ default: m.AuditDesk })))
 const GISMap = React.lazy(() => import('./pages/GISMap').then(m => ({ default: m.GISMap })))
+const ConstituencyDetail = React.lazy(() => import('./pages/ConstituencyDetail').then(m => ({ default: m.ConstituencyDetail })))
 const Login = React.lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
 const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
 
@@ -56,6 +57,10 @@ export const App: React.FC = () => {
           <Route path="mps/:id" element={<MPDetail />} />
           <Route path="mp/:id" element={<MPDetail />} />
           <Route path="mp" element={<BrowseMPs />} />
+          <Route path="constituency/:name" element={<ConstituencyDetail />} />
+          <Route path="constituencies/:name" element={<ConstituencyDetail />} />
+          <Route path="constituency" element={<BrowseMPs />} />
+          <Route path="constituencies" element={<BrowseMPs />} />
           <Route path="mp-dashboard" element={<MPDashboard />} />
           <Route path="mp-console" element={<MPDashboard />} />
           <Route path="district-dashboard" element={<DistrictDashboard />} />

@@ -9,7 +9,9 @@ import {
   Search,
   ArrowRight,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Landmark,
+  ExternalLink
 } from 'lucide-react'
 
 export const BrowseMPs: React.FC = () => {
@@ -329,18 +331,34 @@ export const BrowseMPs: React.FC = () => {
 
                   {/* Constituency & State */}
                   <div className="text-xs text-[var(--text-secondary)] mb-2 flex items-center gap-1">
-                    <span className="font-semibold text-[var(--text-primary)]">
-                      {mp.constituency || 'General'}
-                    </span>
+                    {mp.constituency && mp.constituency !== 'Sitting Rajya Sabha' ? (
+                      <Link
+                        to={`/constituency/${encodeURIComponent(mp.constituency)}`}
+                        className="font-semibold text-[var(--text-primary)] hover:text-[var(--brand-primary)] hover:underline flex items-center gap-1"
+                        title="Open Constituency Page"
+                      >
+                        <span>{mp.constituency}</span>
+                        <ExternalLink size={10} className="opacity-60" />
+                      </Link>
+                    ) : (
+                      <span className="font-semibold text-[var(--text-primary)]">
+                        {mp.constituency || 'General'}
+                      </span>
+                    )}
                     <span>&bull;</span>
                     <span>{mp.state}</span>
                   </div>
 
                   {/* Assembly Constituency Badge if matched via AC */}
                   {mp.assembly_name && (
-                    <div className="mb-3 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
+                    <Link
+                      to={`/constituency/${encodeURIComponent(mp.constituency || mp.assembly_name)}?ac=${encodeURIComponent(mp.assembly_name)}`}
+                      className="mb-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-800 dark:text-emerald-300 border border-emerald-500/30 transition shadow-sm group"
+                      title={`View ${mp.assembly_name} Assembly Segment`}
+                    >
                       <span>🏛️ Assembly: {mp.assembly_name}</span>
-                    </div>
+                      <ArrowRight size={10} className="group-hover:translate-x-0.5 transition" />
+                    </Link>
                   )}
 
                   {/* Dual Financial Outlay: Fund Allocated vs Utilization */}
@@ -376,15 +394,25 @@ export const BrowseMPs: React.FC = () => {
                   </div>
                 </div>
 
-                {/* View Details Action */}
-                <div className="pt-3 border-t border-[var(--border-primary)] mt-3">
+                {/* Dual Action: MP Dossier + Constituency Page */}
+                <div className="pt-3 border-t border-[var(--border-primary)] mt-3 flex items-center gap-2">
                   <Link
                     to={`/mps/${mp.id}`}
-                    className="w-full py-2 px-3 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1.5 transition border border-[var(--border-primary)]"
+                    className="flex-1 py-2 px-2.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--border-primary)]"
                   >
-                    <span>View Financial Report</span>
-                    <ArrowRight size={13} />
+                    <span>MP Dossier</span>
+                    <ArrowRight size={12} />
                   </Link>
+                  {mp.constituency && mp.constituency !== 'Sitting Rajya Sabha' && (
+                    <Link
+                      to={`/constituency/${encodeURIComponent(mp.constituency)}${mp.assembly_name ? `?ac=${encodeURIComponent(mp.assembly_name)}` : ''}`}
+                      className="py-2 px-3 rounded-xl bg-[var(--brand-primary)]/10 hover:bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--brand-primary)]/20"
+                      title="Open Constituency Page"
+                    >
+                      <Landmark size={13} />
+                      <span>Constituency</span>
+                    </Link>
+                  )}
                 </div>
               </div>
             )

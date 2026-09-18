@@ -599,15 +599,37 @@ export const GISMap: React.FC = () => {
                   )
                 })()}
 
-                {selectedFeature.state && (
-                  <Link
-                    to={`/states/${encodeURIComponent(selectedFeature.state)}`}
-                    className="w-full py-2 px-3 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow transition hover:opacity-90"
-                  >
-                    <span>View State Report</span>
-                    <ArrowRight size={14} />
-                  </Link>
-                )}
+                <div className="space-y-2 pt-2">
+                  {selectedFeature.pc_name && (
+                    <Link
+                      to={`/constituency/${encodeURIComponent(selectedFeature.pc_name)}`}
+                      className="w-full py-2 px-3 rounded-xl bg-emerald-600 text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow transition hover:bg-emerald-700"
+                    >
+                      <span>Open Constituency Dashboard</span>
+                      <ArrowRight size={14} />
+                    </Link>
+                  )}
+
+                  {(selectedFeature.district || selectedFeature.NAME_2) && (
+                    <Link
+                      to={`/districts/${encodeURIComponent(selectedFeature.district || selectedFeature.NAME_2)}`}
+                      className="w-full py-2 px-3 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow transition hover:opacity-90"
+                    >
+                      <span>Open District Collectorate</span>
+                      <ArrowRight size={14} />
+                    </Link>
+                  )}
+
+                  {selectedFeature.state && (
+                    <Link
+                      to={`/states/${encodeURIComponent(selectedFeature.state)}`}
+                      className="w-full py-2 px-3 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] text-[var(--text-primary)] text-xs font-bold flex items-center justify-center gap-1.5 transition hover:bg-[var(--surface-primary)]"
+                    >
+                      <span>View State Report</span>
+                      <ArrowRight size={14} />
+                    </Link>
+                  )}
+                </div>
               </div>
             ) : (
               <div className="py-12 text-center text-xs text-[var(--text-secondary)] space-y-2">

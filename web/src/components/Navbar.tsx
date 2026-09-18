@@ -188,14 +188,17 @@ export const Navbar: React.FC = () => {
     navigate(`/mps/${encodeURIComponent(mpId)}`)
   }
 
+  const handleSelectConstituency = (pcName: string) => {
+    setIsDropdownOpen(false)
+    navigate(`/constituency/${encodeURIComponent(pcName)}`)
+  }
+
   const handleSelectAssembly = (ac: AssemblyItem) => {
     setIsDropdownOpen(false)
-    if (ac.mpId && ac.mpId !== 'vacant') {
-      navigate(`/mps/${encodeURIComponent(ac.mpId)}`)
-    } else if (ac.pc) {
-      navigate(`/mps/${encodeURIComponent(ac.pc)}`)
+    if (ac.pc) {
+      navigate(`/constituency/${encodeURIComponent(ac.pc)}?ac=${encodeURIComponent(ac.ac)}`)
     } else {
-      navigate(`/mps?q=${encodeURIComponent(ac.ac)}`)
+      navigate(`/constituency/${encodeURIComponent(ac.ac)}`)
     }
   }
 
@@ -224,28 +227,28 @@ export const Navbar: React.FC = () => {
       return
     }
 
-    // 3. Exact or prefix Constituency match -> Direct to Constituency / MP page!
+    // 3. Exact or prefix Constituency match -> Direct to Constituency page!
     const matchedConst = ALL_MP_SEATS.find(
       m => m.constituency.toLowerCase() === qLower ||
            m.constituency.toLowerCase().startsWith(qLower)
     ) || ALL_MP_SEATS.find(m => m.constituency.toLowerCase().includes(qLower))
 
     if (matchedConst && q.length >= 2) {
-      navigate(`/mps/${encodeURIComponent(matchedConst.id)}`)
+      navigate(`/constituency/${encodeURIComponent(matchedConst.constituency)}`)
       return
     }
 
-    // 3b. Assembly Constituency match -> Direct to representative MP or PC page!
+    // 3b. Assembly Constituency match -> Direct to Constituency page with AC segment!
     const matchedAc = ASSEMBLY_CONSTITUENCIES.find(
       a => a.ac.toLowerCase() === qLower || a.ac.toLowerCase().startsWith(qLower)
     ) || ASSEMBLY_CONSTITUENCIES.find(a => a.ac.toLowerCase().includes(qLower))
 
     if (matchedAc && q.length >= 2) {
-      if (matchedAc.mpId && matchedAc.mpId !== 'vacant') {
-        navigate(`/mps/${encodeURIComponent(matchedAc.mpId)}`)
+      if (matchedAc.pc) {
+        navigate(`/constituency/${encodeURIComponent(matchedAc.pc)}?ac=${encodeURIComponent(matchedAc.ac)}`)
         return
-      } else if (matchedAc.pc) {
-        navigate(`/mps/${encodeURIComponent(matchedAc.pc)}`)
+      } else {
+        navigate(`/constituency/${encodeURIComponent(matchedAc.ac)}`)
         return
       }
     }
@@ -409,7 +412,7 @@ export const Navbar: React.FC = () => {
                     {matchingConstituencies.map((c) => (
                       <button
                         key={`const-${c.id}`}
-                        onClick={() => handleSelectMp(c.id)}
+                        onClick={() => handleSelectConstituency(c.constituency)}
                         className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
                       >
                         <div className="flex items-center gap-2.5 min-w-0">

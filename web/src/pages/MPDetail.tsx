@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link, useSearchParams } from 'react-router-dom'
+import { useParams, Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
@@ -46,6 +46,7 @@ import {
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
   const [acFilter, setAcFilter] = useState<string>(() => searchParams.get('ac') || '')
   const { user } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role)
@@ -119,6 +120,18 @@ export const MPDetail: React.FC = () => {
         const res = await fetch(`/api/mps/${id}`)
         if (res.ok) {
           const json = await res.json()
+          if (json.data?.summary) {
+            const isMpId = /^[0-9a-f]{24}$/i.test(id)
+            // If the route parameter was a constituency name or AC matched, redirect to dedicated Constituency Page!
+            if (!isMpId || json.data.summary.matched_assembly_constituency) {
+              const targetPc = json.data.summary.constituency
+              const targetAc = json.data.summary.matched_assembly_constituency || searchParams.get('ac')
+              if (targetPc && targetPc !== 'Sitting Rajya Sabha') {
+                navigate(`/constituency/${encodeURIComponent(targetPc)}${targetAc ? `?ac=${encodeURIComponent(targetAc)}` : ''}`, { replace: true })
+                return
+              }
+            }
+          }
           setData(json.data)
           if (json.data?.summary?.matched_assembly_constituency && !searchParams.get('ac')) {
             setAcFilter(json.data.summary.matched_assembly_constituency)
@@ -210,17 +223,28 @@ export const MPDetail: React.FC = () => {
           <ChevronRight size={12} />
           <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
         </div>
-        <button
-          onClick={toggleFollow}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
-            followed
-              ? 'bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-400'
-              : 'bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          <Star size={13} className={followed ? 'fill-amber-500 text-amber-500' : ''} />
-          <span>{followed ? 'Following MP' : 'Follow this MP'}</span>
-        </button>
+        <div className="flex items-center gap-2">
+          {summary.constituency && summary.constituency !== 'Sitting Rajya Sabha' && (
+            <Link
+              to={`/constituency/${encodeURIComponent(summary.constituency)}${acFilter ? `?ac=${encodeURIComponent(acFilter)}` : ''}`}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-[var(--brand-primary)]/30 bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] hover:bg-[var(--brand-primary)]/20"
+            >
+              <Landmark size={13} />
+              <span>{summary.constituency} Constituency Page &rarr;</span>
+            </Link>
+          )}
+          <button
+            onClick={toggleFollow}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
+              followed
+                ? 'bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-400'
+                : 'bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+            }`}
+          >
+            <Star size={13} className={followed ? 'fill-amber-500 text-amber-500' : ''} />
+            <span>{followed ? 'Following MP' : 'Follow this MP'}</span>
+          </button>
+        </div>
       </div>
 
       {/* ⭐ TOP HIGHLIGHT: ACRU Debit-Card Style Fund Card */}
