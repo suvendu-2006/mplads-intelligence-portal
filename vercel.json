@@ -1,80 +1,66 @@
 {
   "version": 2,
-  "buildCommand": "cd web && npm install && npm run build",
-  "outputDirectory": "web/dist",
-  "functions": {
-    "api/*.py": {
-      "includeFiles": "{api/mplads_dev.db,data/*.csv,data/*.json,01_Overview_and_National_Summary/**,02_States_and_UTs/**,03_MPs_Data/**,05_Analytics_and_Trends/**,09_MP_Demographics_ADR/**}",
-      "excludeFiles": "{web/**,data/*.geojson,data/works_*.csv}"
-    }
-  },
-  "headers": [
+  "builds": [
     {
-      "source": "/",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
+      "src": "web/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     },
     {
-      "source": "/index.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/data/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
-        }
-      ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=60, s-maxage=86400, stale-while-revalidate=604800"
-        }
-      ]
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": "{api/mplads_dev.db,webapi/**,mplads_fraud_detection/**,data/*.csv,data/*.json,01_Overview_and_National_Summary/**,02_States_and_UTs/**,03_MPs_Data/**,05_Analytics_and_Trends/**,09_MP_Demographics_ADR/**}"
+      }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/dossier",
-      "destination": "/dossier.html"
+      "src": "/api/(.*)",
+      "dest": "/api/index.py",
+      "headers": {
+        "Cache-Control": "public, max-age=60, s-maxage=86400, stale-while-revalidate=604800"
+      }
     },
     {
-      "source": "/docs",
-      "destination": "/documentation.html"
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
-      "source": "/documentation",
-      "destination": "/documentation.html"
+      "src": "/data/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
+      }
     },
     {
-      "source": "/summary",
-      "destination": "/summary.html"
+      "handle": "filesystem"
     },
     {
-      "source": "/((?!api|assets|favicon|data|documentation|dossier|summary|.*\\.pdf|.*\\.html|.*\\.svg|.*\\.ico|.*\\.json).*)",
-      "destination": "/index.html"
+      "src": "/dossier",
+      "dest": "/dossier.html"
+    },
+    {
+      "src": "/docs",
+      "dest": "/documentation.html"
+    },
+    {
+      "src": "/documentation",
+      "dest": "/documentation.html"
+    },
+    {
+      "src": "/summary",
+      "dest": "/summary.html"
+    },
+    {
+      "src": "/((?!api|assets|favicon|data|documentation|dossier|summary|.*\\.pdf|.*\\.html|.*\\.svg|.*\\.ico|.*\\.json).*)",
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
     }
   ]
 }
