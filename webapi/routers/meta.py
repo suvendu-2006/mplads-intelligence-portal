@@ -60,3 +60,61 @@ def get_last_updated():
         meta=None,
         warnings=[]
     )
+
+
+@router.post("/meta/clear-cache")
+def clear_backend_caches():
+    import gc
+    from webapi.routers import mps, flags, states, districts, entity_risks, map as map_router, national
+
+    cleared = []
+    if hasattr(mps, "_mps_cache"):
+        mps._mps_cache.clear()
+        cleared.append("mps")
+    if hasattr(mps, "_mp_detail_cache"):
+        mps._mp_detail_cache.clear()
+        cleared.append("mp_detail")
+    if hasattr(flags, "_flags_cache"):
+        flags._flags_cache.clear()
+        cleared.append("flags")
+    if hasattr(states, "_states_cache"):
+        states._states_cache.clear()
+        cleared.append("states")
+    if hasattr(states, "_state_detail_cache"):
+        states._state_detail_cache.clear()
+        cleared.append("state_detail")
+    if hasattr(districts, "_districts_cache"):
+        districts._districts_cache.clear()
+        cleared.append("districts")
+    if hasattr(districts, "_district_detail_cache"):
+        districts._district_detail_cache.clear()
+        cleared.append("district_detail")
+    if hasattr(districts, "_districts_maps_cache"):
+        districts._districts_maps_cache = None
+        cleared.append("district_maps")
+    if hasattr(entity_risks, "_LOCATION_STATE_MAP"):
+        entity_risks._LOCATION_STATE_MAP = None
+        cleared.append("location_map")
+    if hasattr(entity_risks, "_MP_STATE_MAP"):
+        entity_risks._MP_STATE_MAP = None
+        cleared.append("mp_state_map")
+    if hasattr(map_router, "_districts_geojson_cache"):
+        map_router._districts_geojson_cache = None
+        cleared.append("districts_geojson")
+    if hasattr(map_router, "_pcs_geojson_cache"):
+        map_router._pcs_geojson_cache = None
+        cleared.append("pcs_geojson")
+    if hasattr(national, "_cached_analytics"):
+        cleared.append("national_analytics")
+
+    gc.collect()
+
+    return EnvelopeResponse(
+        data={
+            "status": "cleared",
+            "caches_purged": cleared,
+            "message": "All backend in-memory caches successfully purged."
+        },
+        meta=None,
+        warnings=[]
+    )

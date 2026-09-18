@@ -67,7 +67,12 @@ def list_districts(
 
     # Apply search filter
     if q:
-        df = df[df["district_nodal"].str.contains(q, case=False, na=False) | df["state"].str.contains(q, case=False, na=False)]
+        q_clean = q.strip()
+        d_match = df["district_nodal"].astype(str).str.contains(q_clean, case=False, na=False)
+        st_match = df["state"].astype(str).str.contains(q_clean, case=False, na=False)
+        const_match = df["constituencies_covered"].astype(str).str.contains(q_clean, case=False, na=False) if "constituencies_covered" in df.columns else False
+        mp_match = df["mps_active"].astype(str).str.contains(q_clean, case=False, na=False) if "mps_active" in df.columns else False
+        df = df[d_match | st_match | const_match | mp_match]
 
     anom_map, cost_map, works_cnt_map = get_cached_district_maps(db)
 

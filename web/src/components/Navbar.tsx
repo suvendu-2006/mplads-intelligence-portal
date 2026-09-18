@@ -2,7 +2,8 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
-import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
+import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark, RotateCcw } from 'lucide-react'
+import { clearApiCache } from '../lib/api'
 
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
@@ -10,6 +11,7 @@ import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
 export const Navbar: React.FC = () => {
   const { theme, searchQuery, setTheme, setSearchQuery } = useStore()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
+  const [isClearingCache, setIsClearingCache] = React.useState(false)
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
@@ -497,6 +499,23 @@ export const Navbar: React.FC = () => {
 
           {/* Switch Role Dropdown */}
           <SwitchRoleDropdown />
+
+          {/* Quick Cache Purge & Hard Sync Button */}
+          <button
+            onClick={() => {
+              setIsClearingCache(true)
+              clearApiCache()
+              setTimeout(() => {
+                window.location.reload()
+              }, 200)
+            }}
+            aria-label="Purge cache and refresh fast data"
+            title="Purge all caches & sync fresh data"
+            disabled={isClearingCache}
+            className={`p-2 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-[var(--text-tertiary)] hover:text-[var(--brand-primary)] transition shadow-sm shrink-0 ${isClearingCache ? 'opacity-50 animate-spin text-[var(--brand-primary)]' : ''}`}
+          >
+            <RotateCcw size={14} className={isClearingCache ? 'animate-spin' : ''} />
+          </button>
         </div>
       </div>
     </header>

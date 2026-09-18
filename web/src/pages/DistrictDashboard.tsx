@@ -63,7 +63,8 @@ export const DistrictDashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadDistrict() {
-      if (!sessionStorage.getItem(`cached_district_${districtName}`)) {
+      sessionStorage.removeItem(`cached_district_${districtName}`)
+      if (!sessionStorage.getItem(`cached_district_v2_${districtName}`)) {
         setLoading(true)
       }
       try {
@@ -71,7 +72,7 @@ export const DistrictDashboard: React.FC = () => {
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
-          try { sessionStorage.setItem(`cached_district_${districtName}`, JSON.stringify(json.data)) } catch {}
+          try { sessionStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load district report:', err)

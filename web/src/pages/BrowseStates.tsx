@@ -39,14 +39,15 @@ export const BrowseStates: React.FC = () => {
 
   const [states, setStates] = useState<any[]>(() => {
     try {
-      const saved = sessionStorage.getItem('cached_states_allocated_desc')
+      sessionStorage.removeItem('cached_states_allocated_desc')
+      const saved = sessionStorage.getItem('cached_states_v2_allocated_desc')
       const parsed = saved ? JSON.parse(saved) : null
       return (parsed && parsed.length > 0) ? parsed : DEFAULT_TOP_STATES
     } catch { return DEFAULT_TOP_STATES }
   })
   const [loading, setLoading] = useState(() => {
     try {
-      const saved = sessionStorage.getItem('cached_states_allocated_desc')
+      const saved = sessionStorage.getItem('cached_states_v2_allocated_desc')
       return !saved && (!DEFAULT_TOP_STATES || DEFAULT_TOP_STATES.length === 0)
     } catch { return false }
   })
@@ -63,7 +64,7 @@ export const BrowseStates: React.FC = () => {
           const json = await res.json()
           const items = json.data || []
           setStates(items)
-          try { sessionStorage.setItem(`cached_states_${effectiveSort}_${order}`, JSON.stringify(items)) } catch {}
+          try { sessionStorage.setItem(`cached_states_v2_${effectiveSort}_${order}`, JSON.stringify(items)) } catch {}
         }
       } catch (err) {
         console.error('Failed to load states:', err)

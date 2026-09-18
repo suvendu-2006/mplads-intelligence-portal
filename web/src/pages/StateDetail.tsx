@@ -92,8 +92,16 @@ export const StateDetail: React.FC = () => {
   const [worksLoading, setWorksLoading] = useState(false)
   const [worksPage, setWorksPage] = useState(1)
   const [worksSearch, setWorksSearch] = useState('')
+  const [debouncedWorksSearch, setDebouncedWorksSearch] = useState('')
   const [worksStatus, setWorksStatus] = useState('all')
   const WORKS_PER_PAGE = 30
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedWorksSearch(worksSearch)
+    }, 250)
+    return () => clearTimeout(handler)
+  }, [worksSearch])
 
   // Flags filter & state
   const [flagTierFilter, setFlagTierFilter] = useState('all')
@@ -157,7 +165,7 @@ export const StateDetail: React.FC = () => {
           page_size: String(WORKS_PER_PAGE)
         })
         if (worksStatus !== 'all') queryParams.set('status', worksStatus)
-        if (worksSearch.trim()) queryParams.set('search', worksSearch.trim())
+        if (debouncedWorksSearch.trim()) queryParams.set('search', debouncedWorksSearch.trim())
 
         const res = await fetch(`/api/states/${encodeURIComponent(state)}/works?${queryParams.toString()}`)
         if (res.ok) {
@@ -172,7 +180,7 @@ export const StateDetail: React.FC = () => {
       }
     }
     loadWorks()
-  }, [state, worksPage, worksStatus, worksSearch])
+  }, [state, worksPage, worksStatus, debouncedWorksSearch])
 
   if (loading) {
     return <LoadingSkeleton rows={6} height="h-32" />

@@ -44,6 +44,7 @@ export const AuditDesk: React.FC = () => {
 
   // Filters
   const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
   const [stateFilter, setStateFilter] = useState(initialRoleState)
   const [prevUserStateKey, setPrevUserStateKey] = useState(() => `${user.role}:${user.state}`)
   const [tierFilter, setTierFilter] = useState('')
@@ -51,6 +52,14 @@ export const AuditDesk: React.FC = () => {
   const [agencyFilter, setAgencyFilter] = useState('')
   const [page, setPage] = useState(1)
   const [exporting, setExporting] = useState(false)
+
+  // Debounce search input by 250ms to prevent request flood
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearch(search)
+    }, 250)
+    return () => clearTimeout(handler)
+  }, [search])
 
   // Sync stateFilter during render if user role/state changes
   const currentUserStateKey = `${user.role}:${user.state}`
@@ -105,7 +114,8 @@ export const AuditDesk: React.FC = () => {
 
   useEffect(() => {
     async function fetchFlags() {
-      if (!sessionStorage.getItem('cached_audit_flags_1') || search || tierFilter || detectorFilter || stateFilter || agencyFilter) {
+      sessionStorage.removeItem('cached_audit_flags_1')
+      if (!sessionStorage.getItem('cached_audit_flags_v2_1') || debouncedSearch || tierFilter || detectorFilter || stateFilter || agencyFilter) {
         setLoading(true)
       }
       try {
@@ -113,7 +123,7 @@ export const AuditDesk: React.FC = () => {
           page: String(page),
           page_size: '50',
         })
-        if (search) params.set('q', search)
+        if (debouncedSearch) params.set('q', debouncedSearch)
         if (stateFilter && stateFilter !== 'ALL' && stateFilter !== 'ALL STATES & UNION TERRITORIES') {
           params.set('state', stateFilter)
         }
@@ -126,8 +136,8 @@ export const AuditDesk: React.FC = () => {
           const json = await res.json()
           setFlags(json.data || [])
           setMeta(json.meta)
-          if (page === 1 && !search && !tierFilter && !detectorFilter && !agencyFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
-            try { sessionStorage.setItem('cached_audit_flags_1', JSON.stringify(json.data || [])) } catch {}
+          if (page === 1 && !debouncedSearch && !tierFilter && !detectorFilter && !agencyFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
+            try { sessionStorage.setItem('cached_audit_flags_v2_1', JSON.stringify(json.data || [])) } catch {}
           }
         }
       } catch (err) {
@@ -137,7 +147,7 @@ export const AuditDesk: React.FC = () => {
       }
     }
     fetchFlags()
-  }, [page, search, stateFilter, tierFilter, detectorFilter, agencyFilter])
+  }, [page, debouncedSearch, stateFilter, tierFilter, detectorFilter, agencyFilter])
 
   const handleExportCSV = async () => {
     setExporting(true)

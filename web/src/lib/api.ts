@@ -16,10 +16,11 @@ const memoryCache = new Map<string, CacheRecord>()
 // In-flight promise map to deduplicate identical concurrent GET requests
 const inFlightRequests = new Map<string, Promise<Response>>()
 const STALE_TTL_MS = 300000 // 5 minutes high-speed stale-while-revalidate window
-const SESSION_CACHE_PREFIX = 'satark_swr_'
+const CACHE_VERSION = 'v2_fast_20260919'
+const SESSION_CACHE_PREFIX = `satark_swr_${CACHE_VERSION}_`
 
 /**
- * Clears the SWR API cache in RAM and sessionStorage.
+ * Clears the SWR API cache in RAM, sessionStorage, and synchronizes backend cache reset.
  */
 export function clearApiCache(pattern?: string) {
   if (pattern) {
@@ -28,11 +29,16 @@ export function clearApiCache(pattern?: string) {
         memoryCache.delete(key)
       }
     }
+    for (const key of inFlightRequests.keys()) {
+      if (key.includes(pattern)) {
+        inFlightRequests.delete(key)
+      }
+    }
     if (typeof window !== 'undefined' && window.sessionStorage) {
       try {
         for (let i = sessionStorage.length - 1; i >= 0; i--) {
           const k = sessionStorage.key(i)
-          if (k && k.startsWith(SESSION_CACHE_PREFIX) && k.includes(pattern)) {
+          if (k && (k.startsWith(SESSION_CACHE_PREFIX) || k.startsWith('satark_swr_') || k.startsWith('cached_')) && k.includes(pattern)) {
             sessionStorage.removeItem(k)
           }
         }
@@ -40,14 +46,21 @@ export function clearApiCache(pattern?: string) {
     }
   } else {
     memoryCache.clear()
+    inFlightRequests.clear()
     if (typeof window !== 'undefined' && window.sessionStorage) {
       try {
         for (let i = sessionStorage.length - 1; i >= 0; i--) {
           const k = sessionStorage.key(i)
-          if (k && k.startsWith(SESSION_CACHE_PREFIX)) {
+          if (k && (k.startsWith('satark_') || k.startsWith('cached_'))) {
             sessionStorage.removeItem(k)
           }
         }
+      } catch {}
+    }
+    // Silently notify backend to flush server-side memory caches
+    if (typeof window !== 'undefined') {
+      try {
+        window.fetch('/api/meta/clear-cache', { method: 'POST' }).catch(() => {})
       } catch {}
     }
   }
@@ -102,6 +115,15 @@ async function fetchAndCache(
 export function initApiSync() {
   if (typeof window === 'undefined' || isInterceptorInitialized) return
   isInterceptorInitialized = true
+
+  // Startup cache hygiene: if cache version differs or old un-versioned cache exists, purge all stale caches immediately
+  try {
+    const currentVersion = sessionStorage.getItem('satark_cache_version')
+    if (currentVersion !== CACHE_VERSION) {
+      clearApiCache()
+      sessionStorage.setItem('satark_cache_version', CACHE_VERSION)
+    }
+  } catch {}
 
   const originalFetch = window.fetch
 

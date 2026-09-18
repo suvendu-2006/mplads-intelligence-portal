@@ -101,7 +101,9 @@ export const GISMap: React.FC = () => {
       }
 
       try {
-        const saved = sessionStorage.getItem(`cached_map_${layerType}`)
+        sessionStorage.removeItem('cached_map_pcs')
+        sessionStorage.removeItem('cached_map_districts')
+        const saved = sessionStorage.getItem(`cached_map_v2_${layerType}`)
         if (saved) {
           const parsed = JSON.parse(saved)
           GEO_CACHE[layerType] = parsed
@@ -128,7 +130,7 @@ export const GISMap: React.FC = () => {
           try {
             const serialized = JSON.stringify(featData)
             if (serialized.length < 3 * 1024 * 1024) {
-              sessionStorage.setItem(`cached_map_${layerType}`, serialized)
+              sessionStorage.setItem(`cached_map_v2_${layerType}`, serialized)
             }
           } catch {}
         }
