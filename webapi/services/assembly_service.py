@@ -21,6 +21,8 @@ def _load_assembly_data():
 
     root_dir = Path(__file__).resolve().parent.parent.parent
     csv_candidates = [
+        root_dir / "api" / "data" / "assembly_constituencies_enriched.csv",
+        Path("/var/task/api/data/assembly_constituencies_enriched.csv"),
         root_dir / "data" / "assembly_constituencies_enriched.csv",
         Path("/var/task/data/assembly_constituencies_enriched.csv"),
         Path("data/assembly_constituencies_enriched.csv"),

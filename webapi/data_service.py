@@ -36,10 +36,20 @@ def get_db():
         db.close()
 
 def _resolve_file(primary: Path, *alternatives: Path) -> Optional[Path]:
-    candidates = [primary, *alternatives]
+    candidates = [
+        primary,
+        *alternatives,
+        BASE_DIR / "api" / "data" / primary.name,
+        Path("/var/task/api/data") / primary.name,
+    ]
     # Also add /var/task variants for serverless runtime
     for p in list(candidates):
-        candidates.append(Path("/var/task") / p.relative_to(BASE_DIR) if p.is_relative_to(BASE_DIR) else Path(f"/var/task/{p}"))
+        try:
+            if p.is_relative_to(BASE_DIR):
+                candidates.append(Path("/var/task") / p.relative_to(BASE_DIR))
+        except Exception:
+            pass
+        candidates.append(Path(f"/var/task/{p.name}"))
     for c in candidates:
         if c.exists() and c.is_file():
             return c

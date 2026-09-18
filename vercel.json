@@ -5,7 +5,7 @@
   "outputDirectory": "web/dist",
   "functions": {
     "api/*.py": {
-      "includeFiles": "api/mplads_dev.db.gz"
+      "includeFiles": "api/**"
     }
   },
   "headers": [
