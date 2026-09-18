@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
@@ -45,6 +45,8 @@ import {
 
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
+  const [searchParams] = useSearchParams()
+  const [acFilter, setAcFilter] = useState<string>(() => searchParams.get('ac') || '')
   const { user } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role)
   const chartTheme = useChartTheme()
@@ -118,6 +120,9 @@ export const MPDetail: React.FC = () => {
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
+          if (json.data?.summary?.matched_assembly_constituency && !searchParams.get('ac')) {
+            setAcFilter(json.data.summary.matched_assembly_constituency)
+          }
           try { sessionStorage.setItem(`cached_mp_${id}`, JSON.stringify(json.data)) } catch {}
         }
       } catch (err) {
@@ -230,6 +235,37 @@ export const MPDetail: React.FC = () => {
         party={summary.party}
         term={summary.term || (summary.house === 'Rajya Sabha' ? 'Rajya Sabha' : '18th Lok Sabha')}
       />
+
+      {/* Assembly Constituency Banner if user queried by AC */}
+      {(summary.matched_assembly_constituency || acFilter) && (
+        <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 shrink-0">
+              <Landmark size={18} />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-[var(--text-primary)] flex items-center gap-1.5">
+                <span>Assembly Segment: <strong>{acFilter || summary.matched_assembly_constituency}</strong></span>
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-200 border border-emerald-500/30">
+                  {summary.constituency} Lok Sabha
+                </span>
+              </div>
+              <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">
+                {summary.search_context || `This MP represents ${acFilter || summary.matched_assembly_constituency} Assembly Constituency as part of ${summary.constituency} Parliamentary Constituency.`}
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => {
+              setActiveTab('works')
+              setAcFilter(acFilter || summary.matched_assembly_constituency)
+            }}
+            className="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shrink-0 cursor-pointer shadow-sm"
+          >
+            View Projects in {acFilter || summary.matched_assembly_constituency} &rarr;
+          </button>
+        </div>
+      )}
 
       {/* Navigation Tabs */}
       <div className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-1 overflow-x-auto">
@@ -526,6 +562,40 @@ export const MPDetail: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Assembly Constituencies in this Parliamentary Constituency */}
+          {summary.all_assemblies_in_pc && summary.all_assemblies_in_pc.length > 0 && (
+            <SectionCard
+              title={`Assembly Constituencies in ${summary.constituency} (${summary.all_assemblies_in_pc.length})`}
+              subtitle="Vidhan Sabha assembly segments in this Parliamentary Constituency"
+            >
+              <p className="text-xs text-[var(--text-secondary)] mb-3">
+                This Parliamentary Constituency comprises the following Vidhan Sabha assembly segments. Click any assembly constituency to view specific local development works.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {summary.all_assemblies_in_pc.map((acName: string) => {
+                  const isCurrent = acFilter.toLowerCase() === acName.toLowerCase() || (summary.matched_assembly_constituency || '').toLowerCase() === acName.toLowerCase()
+                  return (
+                    <button
+                      key={acName}
+                      onClick={() => {
+                        setAcFilter(acName)
+                        setActiveTab('works')
+                      }}
+                      className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border cursor-pointer ${
+                        isCurrent
+                          ? 'bg-emerald-500 text-white border-emerald-600 shadow'
+                          : 'bg-[var(--surface-alt)] hover:bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-primary)] hover:border-emerald-500'
+                      }`}
+                    >
+                      <span>🏛️ {acName}</span>
+                      <span className="text-[10px] opacity-75">&rarr;</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </SectionCard>
+          )}
         </div>
       )}
 
@@ -619,20 +689,57 @@ export const MPDetail: React.FC = () => {
                 const ag = (w.implementingAgency || w.implementing_agency || 'District Authority').trim()
                 if (ag !== agencyFilter) return false
               }
+              if (acFilter) {
+                const desc = String(w.work_description || w.workDescription || '').toLowerCase()
+                const loc = String(w.location || '').toLowerCase()
+                const dist = String(w.district || '').toLowerCase()
+                const qAc = acFilter.toLowerCase()
+                if (!desc.includes(qAc) && !loc.includes(qAc) && !dist.includes(qAc)) {
+                  return false
+                }
+              }
               return true
             })
 
             if (filteredWorks.length === 0) {
               return (
-                <EmptyState
-                  title={`No ${workFilter === 'completed' ? 'completed' : workFilter === 'pending' ? 'pending' : ''} projects found`}
-                  description="No civil projects match the current status filter."
-                />
+                <div className="space-y-3">
+                  {acFilter && (
+                    <div className="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-800 dark:text-amber-200">
+                      <span>No specific works explicitly tagged with "{acFilter}" in the recorded ledger.</span>
+                      <button
+                        onClick={() => setAcFilter('')}
+                        className="text-xs font-bold text-amber-700 dark:text-amber-300 hover:underline cursor-pointer"
+                      >
+                        Show all {works.length} constituency projects
+                      </button>
+                    </div>
+                  )}
+                  <EmptyState
+                    title={`No ${workFilter === 'completed' ? 'completed' : workFilter === 'pending' ? 'pending' : ''} projects found`}
+                    description="No civil projects match the current filters."
+                  />
+                </div>
               )
             }
 
             return (
-              <div className="lux-card overflow-hidden">
+              <div className="space-y-3">
+                {acFilter && (
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-800 dark:text-emerald-200">
+                    <div className="flex items-center gap-2">
+                      <Landmark size={14} className="text-emerald-600 dark:text-emerald-400" />
+                      <span>Showing <strong>{filteredWorks.length}</strong> works mentioning Assembly / Area: <strong>{acFilter}</strong></span>
+                    </div>
+                    <button
+                      onClick={() => setAcFilter('')}
+                      className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline cursor-pointer"
+                    >
+                      Show All {works.length} Projects
+                    </button>
+                  </div>
+                )}
+                <div className="lux-card overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-xs border-collapse">
                     <thead>
@@ -738,9 +845,10 @@ export const MPDetail: React.FC = () => {
                   <span className="text-[11px] font-medium text-[var(--text-tertiary)]">Audited Parliamentary Ledger</span>
                 </div>
               </div>
-            )
-          })()}
-        </div>
+            </div>
+          )
+        })()}
+      </div>
       )}
 
       {/* TAB 3: FLAGS */}

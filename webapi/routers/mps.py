@@ -42,13 +42,67 @@ def list_mps(
         filtered = filtered[filtered["state"].str.lower() == state.lower()]
     if house:
         filtered = filtered[filtered["house"].str.lower() == house.lower()]
+    matched_ac_map = {}
     if q:
         query_lower = q.strip().lower()
         name_match = filtered["mpName"].astype(str).str.lower().str.contains(query_lower, na=False)
         const_match = filtered["constituency"].astype(str).str.lower().str.contains(query_lower, na=False)
         state_match = filtered["state"].astype(str).str.lower().str.contains(query_lower, na=False)
         id_match = filtered["id"].astype(str).str.lower().str.contains(query_lower, na=False)
-        filtered = filtered[name_match | const_match | state_match | id_match]
+        direct_matches = filtered[name_match | const_match | state_match | id_match]
+
+        # Step 2: Search Assembly Constituencies
+        from webapi.services.assembly_service import search_assembly_constituencies
+        ac_matches = search_assembly_constituencies(query_lower, limit=25)
+        
+        ac_pc_names = set()
+        ac_mp_ids = set()
+        ac_mp_names = set()
+        for a in ac_matches:
+            pc = a.get("pc_name", "").strip().upper()
+            mp_id = a.get("mp_id", "").strip()
+            ac_name = a.get("ac_name", "")
+            if pc and pc not in ["SITTING RAJYA SABHA", "RAJYA SABHA", "NOMINATED"]:
+                ac_pc_names.add(pc)
+                matched_ac_map[pc] = ac_name
+            if mp_id and mp_id != "vacant":
+                ac_mp_ids.add(mp_id)
+                matched_ac_map[mp_id] = ac_name
+
+        # Step 3: Query works table for projects in this location/block/description
+        try:
+            q_wildcard = f"%{query_lower}%"
+            works_matches = db.query(Work.mp_constituency, Work.mp_name).filter(
+                (func.lower(Work.work_description).like(q_wildcard)) |
+                (func.lower(Work.location).like(q_wildcard)) |
+                (func.lower(Work.district).like(q_wildcard))
+            ).distinct().all()
+            for w in works_matches:
+                pc_val = w[0].strip().upper() if w[0] else ""
+                mp_val = w[1].strip() if w[1] else ""
+                if pc_val and pc_val not in ["SITTING RAJYA SABHA", "RAJYA SABHA", "NOMINATED"]:
+                    ac_pc_names.add(pc_val)
+                    if pc_val not in matched_ac_map:
+                        matched_ac_map[pc_val] = q.title()
+                elif mp_val:
+                    ac_mp_names.add(mp_val.lower())
+                    matched_ac_map[mp_val.lower()] = q.title()
+        except Exception:
+            pass
+
+        ac_matched_df = df_mps[
+            df_mps["constituency"].astype(str).str.strip().str.upper().isin(ac_pc_names) |
+            df_mps["id"].astype(str).str.strip().isin(ac_mp_ids) |
+            df_mps["mpName"].astype(str).str.strip().str.lower().isin(ac_mp_names)
+        ]
+
+        if state:
+            ac_matched_df = ac_matched_df[ac_matched_df["state"].str.lower() == state.lower()]
+        if house:
+            ac_matched_df = ac_matched_df[ac_matched_df["house"].str.lower() == house.lower()]
+
+        import pandas as pd
+        filtered = pd.concat([ac_matched_df, direct_matches]).drop_duplicates(subset=["id"])
 
     all_rf = compute_all_mps_red_flag_pct(db)
 
@@ -57,6 +111,10 @@ def list_mps(
     for _, row in filtered.iterrows():
         mp_id = str(row["id"])
         mp_name = str(row["mpName"])
+        mp_const = str(row.get("constituency", "")).strip().upper()
+        ac_name = matched_ac_map.get(mp_id) or matched_ac_map.get(mp_const)
+        matched_via = "assembly_constituency" if ac_name else None
+
         rf = all_rf.get(mp_name.lower(), {
             "redFlagPct": 0.0,
             "redFlagCount": 0,
@@ -84,7 +142,9 @@ def list_mps(
             inProgressPayments=float(row.get("inProgressPayments", 0.0)),
             paymentGapPercentage=round(float(row.get("paymentGapPercentage", 0.0)), 1),
             redFlagPct=rf["redFlagPct"],
-            redFlagCount=rf["redFlagCount"]
+            redFlagCount=rf["redFlagCount"],
+            matched_via=matched_via,
+            assembly_name=ac_name
         ))
 
     # Sort
@@ -138,8 +198,58 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     # Tier 5: Partial Constituency match
     if match.empty and clean_name:
         match = df_mps[df_mps["constituency"].astype(str).str.contains(clean_name, case=False, na=False)]
+
+    matched_via_ac = None
+    # Tier 6: Exact Assembly Constituency match
     if match.empty:
-        raise HTTPException(status_code=404, detail=f"MP or Constituency with identifier '{id}' not found")
+        from webapi.services.assembly_service import get_mp_by_assembly_name
+        ac_info = get_mp_by_assembly_name(id)
+        if ac_info:
+            target_pc = ac_info.get("pc_name", "").strip().upper()
+            target_mp_id = ac_info.get("mp_id", "").strip()
+            if target_mp_id and target_mp_id != "vacant":
+                match = df_mps[df_mps["id"].astype(str) == target_mp_id]
+            if match.empty and target_pc:
+                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc]
+            if not match.empty:
+                matched_via_ac = ac_info
+
+    # Tier 7: Partial Assembly Constituency match
+    if match.empty:
+        from webapi.services.assembly_service import search_assembly_constituencies
+        ac_results = search_assembly_constituencies(id, limit=5)
+        if ac_results:
+            first_ac = ac_results[0]
+            target_pc = first_ac.get("pc_name", "").strip().upper()
+            target_mp_id = first_ac.get("mp_id", "").strip()
+            if target_mp_id and target_mp_id != "vacant":
+                match = df_mps[df_mps["id"].astype(str) == target_mp_id]
+            if match.empty and target_pc:
+                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc]
+            if not match.empty:
+                matched_via_ac = first_ac
+
+    # Tier 8: Search Works table directly by location or description
+    if match.empty:
+        try:
+            q_wild = f"%{id.strip().lower()}%"
+            work_top = db.query(Work.mp_constituency, func.count(Work.work_id).label("cnt")).filter(
+                (func.lower(Work.work_description).like(q_wild)) |
+                (func.lower(Work.location).like(q_wild)) |
+                (func.lower(Work.district).like(q_wild))
+            ).group_by(Work.mp_constituency).order_by(func.count(Work.work_id).desc()).first()
+            if work_top and work_top[0]:
+                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == work_top[0].strip().upper()]
+                if not match.empty:
+                    matched_via_ac = {"ac_name": id.title(), "pc_name": work_top[0]}
+        except Exception:
+            pass
+
+    if match.empty:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No MP found for '{id}'. Try searching by Parliamentary Constituency, MP name, or verify spelling."
+        )
 
     row = match.iloc[0]
     real_id = str(row["id"])
@@ -164,6 +274,21 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         "redFlagPct": rf["redFlagPct"],
         "redFlagCount": rf["redFlagCount"]
     }
+
+    from webapi.services.assembly_service import get_assemblies_by_pc
+    mp_const_name = str(row.get("constituency", "")).strip().upper()
+    all_acs_in_pc = get_assemblies_by_pc(mp_const_name)
+    
+    warnings = []
+    if matched_via_ac:
+        ac_name = matched_via_ac.get("ac_name", id)
+        warnings.append(
+            f"You searched for '{ac_name}' (Assembly Constituency). Showing sitting Member of Parliament for the parent Parliamentary Constituency '{mp_const_name}'."
+        )
+        summary_dict["matched_assembly_constituency"] = ac_name
+        summary_dict["search_context"] = f"This MP represents {ac_name} Assembly Constituency as part of {mp_const_name} Parliamentary Constituency."
+    
+    summary_dict["all_assemblies_in_pc"] = [a["ac_name"] for a in all_acs_in_pc]
 
     # Load profile JSON with ADR demographics
     raw_profile = load_mp_profile(real_id) or {}
@@ -334,5 +459,5 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     return EnvelopeResponse(
         data=detail_data,
         meta=None,
-        warnings=[]
+        warnings=warnings
     )

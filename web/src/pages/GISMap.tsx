@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
 import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
+import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
 
 const INDIA_CENTER: [number, number] = [22.5937, 79.5]
 const INDIA_BOUNDS: [[number, number], [number, number]] = [
@@ -148,6 +149,29 @@ export const GISMap: React.FC = () => {
     if (q.length < 2 || !geoData?.features) return []
     const results: any[] = []
 
+    // 1. Check Assembly Constituencies if on PC layer
+    if (layerType === 'pcs') {
+      const acMatches = findAssemblyConstituencies(q, 4)
+      for (const ac of acMatches) {
+        const pcFeature = geoData.features.find((f: any) => {
+          const pcName = String(f.properties?.pc_name || '').trim().toUpperCase()
+          return pcName === ac.pc.toUpperCase()
+        })
+        if (pcFeature) {
+          results.push({
+            type: 'Assembly',
+            name: `${ac.ac} (Assembly)`,
+            subtext: `Parent PC: ${ac.pc}, ${ac.state} • MP: ${ac.mpName}`,
+            state: ac.state,
+            mp: ac.mpName,
+            feature: pcFeature,
+            acName: ac.ac
+          })
+        }
+      }
+    }
+
+    // 2. Direct Feature matches
     for (const feat of geoData.features) {
       const p = feat.properties || {}
       const name = String(p.pc_name || p.NAME_2 || p.district || p.district_name || '').trim()
@@ -313,10 +337,10 @@ export const GISMap: React.FC = () => {
                       <div className="min-w-0">
                         <div className="font-bold text-[var(--text-primary)] truncate">{s.name}</div>
                         <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                          {s.state} {s.mp ? `• MP: ${s.mp}` : ''}
+                          {s.subtext || `${s.state} ${s.mp ? `• MP: ${s.mp}` : ''}`}
                         </div>
                       </div>
-                      <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] shrink-0 ml-1.5">
+                      <span className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded shrink-0 ml-1.5 ${s.type === 'Assembly' ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' : 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'}`}>
                         {s.type}
                       </span>
                     </button>

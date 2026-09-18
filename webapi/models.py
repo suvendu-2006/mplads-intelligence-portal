@@ -176,6 +176,8 @@ class MPListItem(BaseModel):
     paymentGapPercentage: float
     redFlagPct: float
     redFlagCount: int
+    matched_via: Optional[str] = None
+    assembly_name: Optional[str] = None
 
 class MPWorkItem(BaseModel):
     work_id: int

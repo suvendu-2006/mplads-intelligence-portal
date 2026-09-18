@@ -7,6 +7,7 @@ import { clearApiCache } from '../lib/api'
 
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
+import { findAssemblyConstituencies, ASSEMBLY_CONSTITUENCIES, AssemblyItem } from '../lib/assemblyConstituencies'
 
 export const Navbar: React.FC = () => {
   const { theme, searchQuery, setTheme, setSearchQuery } = useStore()
@@ -128,6 +129,12 @@ export const Navbar: React.FC = () => {
     }
   }, [searchQuery])
 
+  // Filter matching Assembly Constituencies (e.g. Padampur, Bijepur, Rohini, Varanasi South)
+  const matchingAssemblyConstituencies = React.useMemo(() => {
+    if (qClean.length < 2 || isDigits) return []
+    return findAssemblyConstituencies(qClean, 5)
+  }, [qClean, isDigits])
+
   // Filter matching states (including acronyms)
   const acronymState = STATE_ACRONYMS[qClean]
   const matchingStates = React.useMemo(() => {
@@ -159,6 +166,7 @@ export const Navbar: React.FC = () => {
 
   const hasSuggestions = isDropdownOpen && qClean.length >= 1 && (
     matchingConstituencies.length > 0 ||
+    matchingAssemblyConstituencies.length > 0 ||
     matchingMps.length > 0 ||
     matchingStates.length > 0 ||
     matchingDistricts.length > 0 ||
@@ -178,6 +186,17 @@ export const Navbar: React.FC = () => {
   const handleSelectMp = (mpId: string) => {
     setIsDropdownOpen(false)
     navigate(`/mps/${encodeURIComponent(mpId)}`)
+  }
+
+  const handleSelectAssembly = (ac: AssemblyItem) => {
+    setIsDropdownOpen(false)
+    if (ac.mpId && ac.mpId !== 'vacant') {
+      navigate(`/mps/${encodeURIComponent(ac.mpId)}`)
+    } else if (ac.pc) {
+      navigate(`/mps/${encodeURIComponent(ac.pc)}`)
+    } else {
+      navigate(`/mps?q=${encodeURIComponent(ac.ac)}`)
+    }
   }
 
   const handleSelectWork = (workId: string) => {
@@ -214,6 +233,21 @@ export const Navbar: React.FC = () => {
     if (matchedConst && q.length >= 2) {
       navigate(`/mps/${encodeURIComponent(matchedConst.id)}`)
       return
+    }
+
+    // 3b. Assembly Constituency match -> Direct to representative MP or PC page!
+    const matchedAc = ASSEMBLY_CONSTITUENCIES.find(
+      a => a.ac.toLowerCase() === qLower || a.ac.toLowerCase().startsWith(qLower)
+    ) || ASSEMBLY_CONSTITUENCIES.find(a => a.ac.toLowerCase().includes(qLower))
+
+    if (matchedAc && q.length >= 2) {
+      if (matchedAc.mpId && matchedAc.mpId !== 'vacant') {
+        navigate(`/mps/${encodeURIComponent(matchedAc.mpId)}`)
+        return
+      } else if (matchedAc.pc) {
+        navigate(`/mps/${encodeURIComponent(matchedAc.pc)}`)
+        return
+      }
     }
 
     // 4. Exact or prefix MP Name match -> Direct to MP page!
@@ -330,7 +364,42 @@ export const Navbar: React.FC = () => {
                   </div>
                 )}
 
-                {/* 2. Parliamentary Constituencies (Instant 0ms match) */}
+                {/* 2. Assembly Constituencies & Local Areas */}
+                {matchingAssemblyConstituencies.length > 0 && (
+                  <div>
+                    <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
+                      <span>Assembly Constituencies &amp; Local Areas</span>
+                      <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">Vidhan Sabha &bull; {matchingAssemblyConstituencies.length} matches</span>
+                    </div>
+                    {matchingAssemblyConstituencies.map((ac) => (
+                      <button
+                        key={`ac-${ac.ac}-${ac.pc}-${ac.state}`}
+                        onClick={() => handleSelectAssembly(ac)}
+                        className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                            <Landmark size={14} />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="font-bold text-[var(--text-primary)] truncate flex items-center gap-1.5">
+                              <span>{ac.ac}</span>
+                              <span className="text-[10px] font-normal px-1.5 py-0.5 rounded bg-[var(--surface-alt)] text-[var(--text-tertiary)] border border-[var(--border-primary)]">
+                                {ac.district ? `${ac.district} Dist` : 'Vidhan Sabha'}
+                              </span>
+                            </div>
+                            <div className="text-[10px] text-[var(--text-secondary)] truncate">
+                              Lok Sabha: <strong className="text-[var(--text-primary)]">{ac.pc}</strong> &bull; {ac.state} {ac.mpName && ac.mpName !== 'Vacant' ? `• MP: ${ac.mpName}` : ''}
+                            </div>
+                          </div>
+                        </div>
+                        <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition shrink-0 ml-2" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* 3. Parliamentary Constituencies (Instant 0ms match) */}
                 {matchingConstituencies.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
