@@ -48,7 +48,6 @@ uv.lock
 mplads.db
 mplads_dev.db
 !api/mplads_dev.db
-mplads_fraud_detection
 backfill_implementing_agencies.py
 seed_all_detectors.py
 build
