@@ -67,10 +67,11 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs font-semibold">
             <span className="text-slate-600 dark:text-slate-400">Expenditure Rate</span>
-            <span className="font-bold tabular-nums text-slate-800 dark:text-slate-200">
-              {item.expenditureRate.toFixed(1)}%
+            <span className="font-bold tabular-nums text-[var(--text-primary)]">
+              ↗{item.expenditureRate.toFixed(1)}%
             </span>
           </div>
+
 
           <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
             <div
