@@ -90,19 +90,17 @@ export const useStore = create<AppStore>()(
           ? ['read:mp', 'write:mp', 'read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter']
           : ['read:national', 'read:states', 'read:mps', 'read:map']
 
-        const newState = state || (
-          role === 'state_nodal_officer' ? DEFAULT_STATE :
-          role === 'district_authority' ? DEFAULT_STATE :
-          role === 'mp' ? DEFAULT_STATE_DISPLAY : 'ALL'
+        const newState = state ? state : (
+          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
         )
-        const newDistrict = district || (
-          role === 'district_authority' ? DEFAULT_DISTRICT : 'ALL'
+        const newDistrict = district ? district : (
+          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
         )
-        const newMpId = mpId || (
-          role === 'mp' ? DEFAULT_MP_ID : 'ALL'
+        const newMpId = mpId ? mpId : (
+          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
         )
-        const newMpName = mpName || (
-          role === 'mp' ? DEFAULT_MP_NAME : undefined
+        const newMpName = mpName ? mpName : (
+          role === 'viewer' || role === 'mospi' ? 'All Members of Parliament' : undefined
         )
 
         // 1. Instantaneous local update: reset search query & set clean role state

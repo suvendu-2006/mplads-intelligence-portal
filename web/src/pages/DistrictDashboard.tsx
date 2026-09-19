@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
@@ -21,25 +21,37 @@ import {
   Percent,
   ShieldAlert,
   Search,
-  X
+  X,
+  MapPin,
+  RotateCcw
 } from 'lucide-react'
+import { ALL_36_STATES_AND_UTS } from '../lib/constants'
+import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 
 export const DistrictDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
+  const navigate = useNavigate()
   const { district } = useParams<{ district?: string }>()
-  const districtName = district || (user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? user.district : 'SHIMLA')
+  const hasSelectedDistrict = Boolean(district || (user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'))
+  const districtName = district || (hasSelectedDistrict ? user.district! : '')
   const isAuthorized = ['district_authority', 'state_nodal_officer', 'admin', 'mospi'].includes(user.role)
+
+  // Gate Selection State
+  const [gateState, setGateState] = useState<string>(user.state && user.state !== 'ALL' ? user.state : '')
+  const [gateDistrictSearch, setGateDistrictSearch] = useState<string>('')
 
   const [data, setData] = useState<any>(() => {
     try {
+      if (!districtName) return null
       const saved = sessionStorage.getItem(`cached_district_${districtName}`)
       return saved ? JSON.parse(saved) : null
     } catch { return null }
   })
   const [loading, setLoading] = useState(() => {
     try {
+      if (!districtName) return false
       return !sessionStorage.getItem(`cached_district_${districtName}`)
-    } catch { return true }
+    } catch { return false }
   })
   const [activeTab, setActiveTab] = useState<'works' | 'mps' | 'idas' | 'compliance'>('works')
   const effectiveTab = (!isAuthorized && activeTab === 'compliance') ? 'works' : activeTab
@@ -63,6 +75,10 @@ export const DistrictDashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadDistrict() {
+      if (!districtName) {
+        setLoading(false)
+        return
+      }
       sessionStorage.removeItem(`cached_district_${districtName}`)
       if (!sessionStorage.getItem(`cached_district_v2_${districtName}`)) {
         setLoading(true)
@@ -96,11 +112,110 @@ export const DistrictDashboard: React.FC = () => {
           The District Authority Command Console is reserved for District Magistrates, Collectors, and District Planning Officers (DPO).
         </p>
         <button
-          onClick={() => switchRole('district_authority', 'HIMACHAL PRADESH', 'SHIMLA')}
+          onClick={() => switchRole('district_authority')}
           className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
         >
-          Switch to District Authority (Demo)
+          Open District Jurisdiction Gate
         </button>
+      </div>
+    )
+  }
+
+  // DISTRICT JURISDICTION GATE: User must select state and district first! No default page!
+  if (!hasSelectedDistrict) {
+    const districtsForState = gateState ? (STATE_DISTRICTS_MAP[gateState] || STATE_DISTRICTS_MAP[gateState.toUpperCase()] || []) : []
+    const filteredDistricts = districtsForState.filter((d: string) =>
+      d.toLowerCase().includes(gateDistrictSearch.toLowerCase().trim())
+    )
+
+    return (
+      <div className="max-w-4xl mx-auto py-8 px-4 space-y-6 animate-in fade-in duration-300">
+        <div className="rounded-3xl p-6 sm:p-8 bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] shadow-xl text-center space-y-4">
+          <div className="w-14 h-14 rounded-2xl bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 text-[var(--brand-primary)] flex items-center justify-center mx-auto shadow-sm">
+            <Building2 size={28} />
+          </div>
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-xs font-bold uppercase tracking-wider">
+              <span>District Authority Command Gate</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
+              Select District Jurisdiction
+            </h1>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-lg mx-auto">
+              Choose your State and District below to access civil project ledgers and physical inspection reports. No district is loaded by default.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto pt-2 text-left">
+            <div>
+              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
+                Step 1: Select State
+              </label>
+              <select
+                value={gateState}
+                onChange={(e) => {
+                  setGateState(e.target.value)
+                  setGateDistrictSearch('')
+                }}
+                className="w-full text-xs bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] rounded-xl px-3 py-2.5 text-[var(--text-primary)] font-bold outline-none focus:border-[var(--brand-primary)] cursor-pointer shadow-xs"
+              >
+                <option value="" disabled>-- Choose State / UT --</option>
+                {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
+                  <option key={st} value={st}>
+                    {st}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
+                Step 2: Filter District ({districtsForState.length} Available)
+              </label>
+              <div className="relative">
+                <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  disabled={!gateState}
+                  placeholder={gateState ? "Type district name..." : "Choose state first..."}
+                  value={gateDistrictSearch}
+                  onChange={(e) => setGateDistrictSearch(e.target.value)}
+                  className="w-full pl-9 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-primary)] font-medium disabled:opacity-50"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {gateState && (
+          <div className="space-y-3">
+            <div className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-1">
+              Select District in {gateState} ({filteredDistricts.length} matches):
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {filteredDistricts.map((d: string) => (
+                <button
+                  key={d}
+                  onClick={async () => {
+                    await switchRole('district_authority', gateState, d)
+                    navigate(`/districts/${encodeURIComponent(d)}`)
+                  }}
+                  className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-primary)] hover:bg-[var(--brand-primary)]/5 transition-all text-left flex items-center justify-between group cursor-pointer shadow-xs"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                    <div className="w-8 h-8 rounded-lg bg-[var(--surface-alt)] text-[var(--brand-primary)] group-hover:bg-[var(--brand-primary)] group-hover:text-white transition flex items-center justify-center shrink-0">
+                      <MapPin size={15} />
+                    </div>
+                    <span className="text-xs font-bold text-[var(--text-primary)] truncate">
+                      {d}
+                    </span>
+                  </div>
+                  <ArrowRight size={14} className="text-[var(--text-tertiary)] group-hover:text-[var(--brand-primary)] group-hover:translate-x-1 transition-all shrink-0" />
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     )
   }
@@ -155,6 +270,16 @@ export const DistrictDashboard: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={async () => {
+              await switchRole('district_authority', user.state, '')
+              navigate('/district-dashboard')
+            }}
+            className="text-xs px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-alt)] hover:border-[var(--brand-primary)] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer flex items-center gap-1.5"
+          >
+            <RotateCcw size={12} />
+            <span>Change District</span>
+          </button>
           <span className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] font-bold text-[var(--text-secondary)]">
             {user.role === 'district_authority' ? 'Role: District Authority (DM)' : 'Scope: Public Transparency View'}
           </span>

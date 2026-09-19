@@ -18,7 +18,23 @@ import {
 } from '../lib/constants'
 import { clearApiCache } from '../lib/api'
 
-const PERSONAS = [
+interface Persona {
+  role: string
+  title: string
+  hindiTitle: string
+  icon: any
+  badge: string
+  description: string
+  route: string
+  defaultContext: {
+    state?: string
+    district?: string
+    mpId?: string
+    mpName?: string
+  }
+}
+
+const PERSONAS: Persona[] = [
   {
     role: 'viewer',
     title: 'Public Citizen',
@@ -37,11 +53,7 @@ const PERSONAS = [
     badge: 'Constituency Command',
     description: 'Track your ₹5 Cr/year (avg ₹15.09 Cr/MP actual) entitlement corpus, verify recommended works delivery, and inspect compliance alerts.',
     route: '/mp-dashboard',
-    defaultContext: {
-      mpId: DEFAULT_MP_ID,
-      mpName: DEFAULT_MP_NAME,
-      state: DEFAULT_STATE_DISPLAY
-    }
+    defaultContext: {}
   },
   {
     role: 'district_authority',
@@ -51,10 +63,7 @@ const PERSONAS = [
     badge: 'Collectorate Sanctions',
     description: 'Supervise district works sanction queue, verify Measurement Books (MB), and inspect IDA agencies.',
     route: '/district-dashboard',
-    defaultContext: {
-      district: DEFAULT_DISTRICT,
-      state: DEFAULT_STATE
-    }
+    defaultContext: {}
   },
   {
     role: 'state_nodal_officer',
@@ -64,9 +73,7 @@ const PERSONAS = [
     badge: 'State Surveillance',
     description: 'Monitor cross-district liability, track Single Nodal Account (SNA) releases, and issue Show-Cause notices.',
     route: '/my-state',
-    defaultContext: {
-      state: DEFAULT_STATE
-    }
+    defaultContext: {}
   },
   {
     role: 'mospi',

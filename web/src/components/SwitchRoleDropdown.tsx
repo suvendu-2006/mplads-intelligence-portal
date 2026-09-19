@@ -11,7 +11,8 @@ import {
   DEFAULT_DISTRICT,
   DEFAULT_DISTRICT_DISPLAY,
   DEFAULT_MP_ID,
-  DEFAULT_MP_NAME
+  DEFAULT_MP_NAME,
+  ALL_36_STATES_AND_UTS
 } from '../lib/constants'
 
 // Exactly 5 Governance Roles:
@@ -28,47 +29,6 @@ const ROLES = [
   { id: 'mp', label: 'MP', sublabel: 'Member of Parliament (Works Ledger & Allocations)', icon: Landmark, targetPage: 'MP Console' },
 ]
 
-// Complete list of all 36 States & Union Territories + "ALL" option
-const ALL_36_STATES_AND_UTS = [
-  'ALL STATES & UNION TERRITORIES',
-  'ANDAMAN AND NICOBAR ISLANDS',
-  'ANDHRA PRADESH',
-  'ARUNACHAL PRADESH',
-  'ASSAM',
-  'BIHAR',
-  'CHANDIGARH',
-  'CHHATTISGARH',
-  'THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU',
-  'DELHI',
-  'GOA',
-  'GUJARAT',
-  'HARYANA',
-  'HIMACHAL PRADESH',
-  'JAMMU AND KASHMIR',
-  'JHARKHAND',
-  'KARNATAKA',
-  'KERALA',
-  'LADAKH',
-  'LAKSHADWEEP',
-  'MADHYA PRADESH',
-  'MAHARASHTRA',
-  'MANIPUR',
-  'MEGHALAYA',
-  'MIZORAM',
-  'NAGALAND',
-  'ODISHA',
-  'PUDUCHERRY',
-  'PUNJAB',
-  'RAJASTHAN',
-  'SIKKIM',
-  'TAMIL NADU',
-  'TELANGANA',
-  'TRIPURA',
-  'UTTAR PRADESH',
-  'UTTARAKHAND',
-  'WEST BENGAL'
-]
-
 export const SwitchRoleDropdown: React.FC = () => {
   const { user, switchRole } = useStore()
   const navigate = useNavigate()
@@ -77,23 +37,23 @@ export const SwitchRoleDropdown: React.FC = () => {
   // Track which role questionnaire is currently expanded for jurisdiction customization
   const [expandedRole, setExpandedRole] = useState<string | null>(null)
 
-  // State Nodal selection
+  // State Nodal selection (no default unless user already chosen)
   const [selectedState, setSelectedState] = useState(
     user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
       ? user.state
-      : DEFAULT_STATE
+      : ''
   )
 
-  // District Authority (DM) selection: State & District
+  // District Authority (DM) selection: State & District (no default unless user already chosen)
   const [dmState, setDmState] = useState<string>(
     user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
       ? user.state
-      : DEFAULT_STATE
+      : ''
   )
   const [dmDistrict, setDmDistrict] = useState<string>(
     user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
       ? user.district
-      : DEFAULT_DISTRICT
+      : ''
   )
 
   // MP selection & filters (State, House, Search across all 774 parliamentary seats)
@@ -105,7 +65,7 @@ export const SwitchRoleDropdown: React.FC = () => {
   const [mpHouse, setMpHouse] = useState<'ALL' | 'Lok Sabha' | 'Rajya Sabha'>('ALL')
   const [mpSearch, setMpSearch] = useState<string>('')
   const [selectedMpId, setSelectedMpId] = useState<string>(
-    user.mpId && user.mpId !== 'ALL' ? user.mpId : DEFAULT_MP_ID
+    user.mpId && user.mpId !== 'ALL' ? user.mpId : ''
   )
 
   // Filtered parliamentary seats based on State, House, and Search Query
@@ -129,22 +89,13 @@ export const SwitchRoleDropdown: React.FC = () => {
   }, [mpState, mpHouse, mpSearch])
 
   const selectedMpName = useMemo(() => {
-    if (selectedMpId === 'ALL') return 'Anurag Singh Thakur'
+    if (!selectedMpId || selectedMpId === 'ALL') return 'Select MP'
     const found = ALL_MP_SEATS.find(m => m.id === selectedMpId)
-    return found ? (found.constituency !== 'Sitting Rajya Sabha' ? `${found.constituency} (${found.name.split(' ').slice(-1)[0]})` : found.name) : 'Anurag Singh Thakur'
+    return found ? (found.constituency !== 'Sitting Rajya Sabha' ? `${found.constituency} (${found.name.split(' ').slice(-1)[0]})` : found.name) : 'Select MP'
   }, [selectedMpId])
 
-  // Auto-align selectedMpId with first search result when search is typed
-  React.useEffect(() => {
-    if (mpSearch.trim() && filteredMps.length > 0) {
-      if (!filteredMps.some(m => m.id === selectedMpId)) {
-        setSelectedMpId(filteredMps[0].id)
-      }
-    }
-  }, [mpSearch, filteredMps, selectedMpId])
-
   // Available districts for the chosen dmState
-  const availableDistricts = STATE_DISTRICTS_MAP[dmState] || STATE_DISTRICTS_MAP[dmState.toUpperCase()] || []
+  const availableDistricts = dmState ? (STATE_DISTRICTS_MAP[dmState] || STATE_DISTRICTS_MAP[dmState.toUpperCase()] || []) : []
 
   // Toggle open/close
   const toggleOpen = () => {
@@ -154,19 +105,8 @@ export const SwitchRoleDropdown: React.FC = () => {
     setIsOpen(!isOpen)
   }
 
-  // DIRECT ROLE SWITCH HANDLER: Immediately switches role & navigates to respective section!
+  // ROLE SWITCH HANDLER: Never auto-opens default page for State Nodal, District Authority, or MP!
   const handleRoleCardClick = async (roleId: string) => {
-    // Reset dropdown states so opening or switching profiles never carries over previous searches
-    setSelectedState(DEFAULT_STATE)
-    setDmState(DEFAULT_STATE)
-    setDmDistrict(DEFAULT_DISTRICT)
-    if (!user.mpId || user.mpId === 'ALL') {
-      setSelectedMpId(DEFAULT_MP_ID)
-    } else {
-      setSelectedMpId(user.mpId)
-    }
-    setMpSearch('')
-
     if (roleId === 'viewer') {
       await switchRole('viewer', 'ALL', 'ALL', 'ALL', 'All Members of Parliament')
       setIsOpen(false)
@@ -181,26 +121,19 @@ export const SwitchRoleDropdown: React.FC = () => {
       return
     }
 
+    // Explicit choice required: Toggle drawer so user selects State, District, or MP before opening
     if (roleId === 'state_nodal_officer') {
-      await switchRole('state_nodal_officer', DEFAULT_STATE)
-      setIsOpen(false)
-      navigate('/my-state')
+      setExpandedRole(expandedRole === 'state_nodal_officer' ? null : 'state_nodal_officer')
       return
     }
 
     if (roleId === 'district_authority') {
-      await switchRole('district_authority', DEFAULT_STATE, DEFAULT_DISTRICT)
-      setIsOpen(false)
-      navigate(`/districts/${encodeURIComponent(DEFAULT_DISTRICT)}`)
+      setExpandedRole(expandedRole === 'district_authority' ? null : 'district_authority')
       return
     }
 
     if (roleId === 'mp') {
-      const activeId = (user.mpId && user.mpId !== 'ALL') ? user.mpId : (selectedMpId || DEFAULT_MP_ID)
-      const found = ALL_MP_SEATS.find(m => m.id === activeId) || ALL_MP_SEATS[0]
-      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name || DEFAULT_MP_NAME)
-      setIsOpen(false)
-      navigate(`/mp-dashboard?id=${encodeURIComponent(found?.id)}`)
+      setExpandedRole(expandedRole === 'mp' ? null : 'mp')
       return
     }
   }
@@ -212,25 +145,24 @@ export const SwitchRoleDropdown: React.FC = () => {
     if (user.role === 'state_nodal_officer') {
       const st = user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
         ? user.state.split(' ')[0]
-        : DEFAULT_STATE_DISPLAY
-      return `State Nodal (${st})`
+        : null
+      return st ? `State Nodal (${st})` : 'State Nodal (Select)'
     }
     if (user.role === 'district_authority') {
       const dist = user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
         ? user.district
-        : DEFAULT_DISTRICT_DISPLAY
-      return `District Authority (${dist})`
+        : null
+      return dist ? `District (${dist})` : 'District (Select)'
     }
     if (user.role === 'mp') {
-      const found = ALL_MP_SEATS.find(m => m.id === user.mpId)
-      if (found) {
-        const label = found.constituency !== 'Sitting Rajya Sabha' ? found.constituency : found.name.split(' ').slice(-1)[0]
-        return `MP (${label})`
+      if (user.mpId && user.mpId !== 'ALL') {
+        const found = ALL_MP_SEATS.find(m => m.id === user.mpId)
+        if (found) {
+          const label = found.constituency !== 'Sitting Rajya Sabha' ? found.constituency : found.name.split(' ').slice(-1)[0]
+          return `MP (${label})`
+        }
       }
-      const mpN = user.mpName && !user.mpName.includes('All')
-        ? user.mpName.split(' ').slice(-1)[0]
-        : 'Hamirpur'
-      return `MP (${mpN})`
+      return 'MP (Select)'
     }
     return 'User (Citizen)'
   }
@@ -315,7 +247,15 @@ export const SwitchRoleDropdown: React.FC = () => {
                             {r.sublabel}
                           </div>
                           <div className="text-[10px] font-semibold text-[var(--brand-primary)] mt-1 flex items-center gap-1">
-                            <span>Opens {r.targetPage}</span>
+                            {r.id === 'state_nodal_officer' ? (
+                              <span>{user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' ? `Active: ${user.state}` : 'Select State to open console'}</span>
+                            ) : r.id === 'district_authority' ? (
+                              <span>{user.role === 'district_authority' && user.district && user.district !== 'ALL' ? `Active: ${user.district}` : 'Select District to open console'}</span>
+                            ) : r.id === 'mp' ? (
+                              <span>{user.role === 'mp' && user.mpName && !user.mpName.includes('All') ? `Active: ${user.mpName}` : 'Select MP to open console'}</span>
+                            ) : (
+                              <span>Opens {r.targetPage}</span>
+                            )}
                             <ArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
                           </div>
                         </div>
@@ -374,13 +314,13 @@ export const SwitchRoleDropdown: React.FC = () => {
                             const val = e.target.value
                             if (!val) return
                             setSelectedState(val)
-                            const stateParam = val === 'ALL STATES & UNION TERRITORIES' ? 'ALL' : val
-                            await switchRole('state_nodal_officer', stateParam)
+                            await switchRole('state_nodal_officer', val)
                             setIsOpen(false)
                             navigate('/my-state')
                           }}
                           className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold shadow-xs cursor-pointer"
                         >
+                          <option value="" disabled>-- Select State / UT (36 Available) --</option>
                           {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
                             <option key={st} value={st}>
                               {st}
@@ -389,15 +329,20 @@ export const SwitchRoleDropdown: React.FC = () => {
                         </select>
                         <button
                           type="button"
+                          disabled={!selectedState}
                           onClick={async () => {
-                            const stateParam = selectedState || DEFAULT_STATE
-                            await switchRole('state_nodal_officer', stateParam)
+                            if (!selectedState) return
+                            await switchRole('state_nodal_officer', selectedState)
                             setIsOpen(false)
                             navigate('/my-state')
                           }}
-                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-primary)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                          className={`w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg font-bold text-xs shadow transition ${
+                            selectedState
+                              ? 'bg-[var(--brand-primary)] hover:opacity-90 text-white cursor-pointer'
+                              : 'bg-[var(--surface-alt)] text-[var(--text-tertiary)] border border-[var(--border-primary)] cursor-not-allowed opacity-60'
+                          }`}
                         >
-                          <span>Confirm &amp; Open State Console ({selectedState})</span>
+                          <span>{selectedState ? `Confirm & Open State Console (${selectedState})` : 'Select a State to Open Console'}</span>
                           <ArrowRight size={13} />
                         </button>
                       </div>
@@ -411,7 +356,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                       >
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--brand-primary)]">1. State:</span>
+                            <span className="text-[var(--brand-primary)]">1. Select State:</span>
                             <span className="text-[9px] text-[var(--text-tertiary)] font-bold">36 States</span>
                           </div>
                           <select
@@ -419,11 +364,11 @@ export const SwitchRoleDropdown: React.FC = () => {
                             onChange={(e) => {
                               const newState = e.target.value
                               setDmState(newState)
-                              const dists = STATE_DISTRICTS_MAP[newState] || STATE_DISTRICTS_MAP[newState.toUpperCase()] || []
-                              setDmDistrict(dists[0] || DEFAULT_DISTRICT)
+                              setDmDistrict('')
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-lg px-2.5 py-1.5 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold cursor-pointer"
                           >
+                            <option value="" disabled>-- Choose State First --</option>
                             {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
                               <option key={st} value={st}>
                                 {st}
@@ -434,11 +379,12 @@ export const SwitchRoleDropdown: React.FC = () => {
 
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--brand-primary)]">2. District:</span>
+                            <span className="text-[var(--brand-primary)]">2. Select District:</span>
                             <span className="text-[9px] text-[var(--text-tertiary)] font-bold">{availableDistricts.length} Districts</span>
                           </div>
                           <select
                             value={dmDistrict}
+                            disabled={!dmState}
                             onChange={async (e) => {
                               const newDist = e.target.value
                               if (!newDist) return
@@ -447,8 +393,9 @@ export const SwitchRoleDropdown: React.FC = () => {
                               setIsOpen(false)
                               navigate(`/districts/${encodeURIComponent(newDist)}`)
                             }}
-                            className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-primary)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold shadow-xs cursor-pointer"
+                            className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-primary)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold shadow-xs cursor-pointer disabled:opacity-50"
                           >
+                            <option value="" disabled>{dmState ? '-- Choose District --' : '-- Select State in Step 1 First --'}</option>
                             {availableDistricts.map((d) => (
                               <option key={d} value={d}>
                                 {d}
@@ -459,15 +406,20 @@ export const SwitchRoleDropdown: React.FC = () => {
 
                         <button
                           type="button"
+                          disabled={!dmDistrict}
                           onClick={async () => {
-                            const targetDist = dmDistrict || availableDistricts[0] || DEFAULT_DISTRICT
-                            await switchRole('district_authority', dmState, targetDist)
+                            if (!dmDistrict || !dmState) return
+                            await switchRole('district_authority', dmState, dmDistrict)
                             setIsOpen(false)
-                            navigate(`/districts/${encodeURIComponent(targetDist)}`)
+                            navigate(`/districts/${encodeURIComponent(dmDistrict)}`)
                           }}
-                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-primary)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                          className={`w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg font-bold text-xs shadow transition ${
+                            dmDistrict
+                              ? 'bg-[var(--brand-primary)] hover:opacity-90 text-white cursor-pointer'
+                              : 'bg-[var(--surface-alt)] text-[var(--text-tertiary)] border border-[var(--border-primary)] cursor-not-allowed opacity-60'
+                          }`}
                         >
-                          <span>Confirm &amp; Open District Console ({dmDistrict})</span>
+                          <span>{dmDistrict ? `Confirm & Open District Console (${dmDistrict})` : 'Select State & District to Open Console'}</span>
                           <ArrowRight size={13} />
                         </button>
                       </div>
@@ -550,6 +502,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-accent)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-accent)] font-bold shadow-xs cursor-pointer"
                           >
+                            <option value="" disabled>-- Select Member of Parliament ({filteredMps.length} Seats) --</option>
                             {filteredMps.map((m) => (
                               <option key={m.id} value={m.id}>
                                 {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.name} ({m.house}, {m.state})
@@ -560,15 +513,23 @@ export const SwitchRoleDropdown: React.FC = () => {
 
                         <button
                           type="button"
+                          disabled={!selectedMpId}
                           onClick={async () => {
-                            const found = ALL_MP_SEATS.find(m => m.id === selectedMpId) || filteredMps[0] || ALL_MP_SEATS[0]
-                            await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name)
-                            setIsOpen(false)
-                            navigate(`/mp-dashboard?id=${encodeURIComponent(found?.id)}`)
+                            if (!selectedMpId) return
+                            const found = ALL_MP_SEATS.find(m => m.id === selectedMpId)
+                            if (found) {
+                              await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name)
+                              setIsOpen(false)
+                              navigate(`/mp-dashboard?id=${encodeURIComponent(found?.id)}`)
+                            }
                           }}
-                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-accent)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                          className={`w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg font-bold text-xs shadow transition ${
+                            selectedMpId
+                              ? 'bg-[var(--brand-accent)] hover:opacity-90 text-white cursor-pointer'
+                              : 'bg-[var(--surface-alt)] text-[var(--text-tertiary)] border border-[var(--border-primary)] cursor-not-allowed opacity-60'
+                          }`}
                         >
-                          <span>Confirm &amp; Open MP Console ({selectedMpName})</span>
+                          <span>{selectedMpId ? `Confirm & Open MP Console` : 'Select an MP to Open Console'}</span>
                           <ArrowRight size={13} />
                         </button>
                       </div>

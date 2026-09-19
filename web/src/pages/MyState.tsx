@@ -15,21 +15,28 @@ import {
   Coins,
   Percent,
   Clock,
-  Landmark
+  Landmark,
+  Search,
+  ArrowRight,
+  RotateCcw,
+  MapPin
 } from 'lucide-react'
 import { apiFetch } from '../lib/api'
 import { t } from '../lib/i18n'
 import { fmtCrore } from '../lib/currency'
-import { DEFAULT_STATE } from '../lib/constants'
+import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
   const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
   const isRedirect = user.role === 'mospi'
-  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? DEFAULT_STATE : user.state
+  const hasSelectedState = Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
+  const targetState = hasSelectedState ? user.state! : ''
+  const [stateSearch, setStateSearch] = useState('')
 
   const [data, setData] = useState<any>(() => {
     try {
+      if (!targetState) return null
       const saved = sessionStorage.getItem(`cached_my_state_${targetState}`)
       return saved ? JSON.parse(saved) : null
     } catch { return null }
@@ -39,8 +46,9 @@ export const MyState: React.FC = () => {
   const [idas, setIdas] = useState<any[]>([])
   const [loading, setLoading] = useState(() => {
     try {
+      if (!targetState) return false
       return !sessionStorage.getItem(`cached_my_state_${targetState}`)
-    } catch { return true }
+    } catch { return false }
   })
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [actionNotice, setActionNotice] = useState<string | null>(null)
@@ -55,7 +63,7 @@ export const MyState: React.FC = () => {
 
   useEffect(() => {
     async function loadMyState() {
-      if (!isAuthorized || isRedirect) {
+      if (!isAuthorized || isRedirect || !hasSelectedState) {
         setLoading(false)
         return
       }
@@ -103,7 +111,7 @@ export const MyState: React.FC = () => {
       }
     }
     loadMyState()
-  }, [isAuthorized, isRedirect, user.role, user.state, user.sessionToken])
+  }, [isAuthorized, isRedirect, hasSelectedState, targetState, user.sessionToken])
 
   // MoSPI (Apex Central Authority) or unassigned/ALL users navigate directly to national States & UT overview page
   if (isRedirect) {
@@ -123,11 +131,73 @@ export const MyState: React.FC = () => {
           The State Nodal Officer Command Center is restricted to designated state administrative secretaries and central oversight auditors.
         </p>
         <button
-          onClick={() => switchRole('state_nodal_officer', 'HIMACHAL PRADESH')}
+          onClick={() => switchRole('state_nodal_officer')}
           className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
         >
-          Switch to State Nodal Officer (Demo)
+          Open State Jurisdiction Gate
         </button>
+      </div>
+    )
+  }
+
+  // JURISDICTION GATE: User must explicitly choose a state first! No default state!
+  if (!hasSelectedState) {
+    const filteredStates = ALL_36_STATES_AND_UTS.filter(s =>
+      s !== 'ALL STATES & UNION TERRITORIES' &&
+      s.toLowerCase().includes(stateSearch.toLowerCase().trim())
+    )
+
+    return (
+      <div className="max-w-4xl mx-auto py-8 px-4 space-y-6 animate-in fade-in duration-300">
+        <div className="rounded-3xl p-6 sm:p-8 bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] shadow-xl text-center space-y-4">
+          <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-500 flex items-center justify-center mx-auto shadow-sm">
+            <Building2 size={28} />
+          </div>
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <span>Sovereign State Surveillance</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
+              Select State / UT Jurisdiction
+            </h1>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-lg mx-auto">
+              Please choose a State or Union Territory below to access sovereign audit ledgers and district telemetry. No state is loaded by default.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto relative">
+            <Search className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              placeholder="Search among 36 States & UTs..."
+              value={stateSearch}
+              onChange={(e) => setStateSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-emerald-500 font-medium transition"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {filteredStates.map((st) => (
+            <button
+              key={st}
+              onClick={async () => {
+                await switchRole('state_nodal_officer', st)
+              }}
+              className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-emerald-500 hover:bg-emerald-500/5 transition-all text-left flex items-center justify-between group cursor-pointer shadow-xs"
+            >
+              <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                <div className="w-8 h-8 rounded-lg bg-[var(--surface-alt)] text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition flex items-center justify-center shrink-0">
+                  <MapPin size={15} />
+                </div>
+                <span className="text-xs font-bold text-[var(--text-primary)] truncate">
+                  {st}
+                </span>
+              </div>
+              <ArrowRight size={14} className="text-[var(--text-tertiary)] group-hover:text-emerald-500 group-hover:translate-x-1 transition-all shrink-0" />
+            </button>
+          ))}
+        </div>
       </div>
     )
   }
@@ -136,7 +206,7 @@ export const MyState: React.FC = () => {
     return <LoadingSkeleton rows={6} height="h-32" />
   }
 
-  const stateName = data?.state || user.state || 'HIMACHAL PRADESH'
+  const stateName = data?.state || user.state || ''
   const summary = data?.summary || {}
   const districts = data?.districts || []
 
@@ -165,6 +235,15 @@ export const MyState: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={async () => {
+              await switchRole('state_nodal_officer', '')
+            }}
+            className="text-xs px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-alt)] hover:border-emerald-500 font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer flex items-center gap-1.5"
+          >
+            <RotateCcw size={12} />
+            <span>Change State</span>
+          </button>
           <span className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] font-bold text-[var(--text-secondary)]">
             Role: State Nodal Officer
           </span>

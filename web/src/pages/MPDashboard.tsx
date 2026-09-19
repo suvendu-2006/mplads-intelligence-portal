@@ -23,7 +23,7 @@ import {
   ChevronDown,
   X
 } from 'lucide-react'
-import { DEFAULT_MP_ID, DEFAULT_STATE_DISPLAY } from '../lib/constants'
+import { DEFAULT_MP_ID, DEFAULT_STATE_DISPLAY, ALL_36_STATES_AND_UTS } from '../lib/constants'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 
 export const MPDashboard: React.FC = () => {
@@ -33,20 +33,28 @@ export const MPDashboard: React.FC = () => {
   const { user, switchRole, setMpJurisdiction } = useStore()
   const navigate = useNavigate()
 
-  // Priority: URL route param -> URL query param -> store mpId -> default
-  const activeMpId = paramId || queryId || (user?.mpId && user.mpId !== 'ALL' ? user.mpId : DEFAULT_MP_ID)
+  // Priority: URL route param -> URL query param -> store mpId (NO DEFAULT FALLBACK)
+  const hasSelectedMp = Boolean(paramId || queryId || (user?.mpId && user.mpId !== 'ALL'))
+  const activeMpId = paramId || queryId || (hasSelectedMp ? user?.mpId : '')
   const isAuthorized = ['mp', 'admin', 'mospi', 'viewer'].includes(user.role)
+
+  // Gate selection state
+  const [gateSearch, setGateSearch] = useState('')
+  const [gateHouse, setGateHouse] = useState<'ALL' | 'Lok Sabha' | 'Rajya Sabha'>('ALL')
+  const [gateState, setGateState] = useState<string>('ALL')
 
   const [data, setData] = useState<any>(() => {
     try {
+      if (!activeMpId) return null
       const saved = sessionStorage.getItem(`cached_mp_${activeMpId}`)
       return saved ? JSON.parse(saved) : null
     } catch { return null }
   })
   const [loading, setLoading] = useState(() => {
     try {
+      if (!activeMpId) return false
       return !sessionStorage.getItem(`cached_mp_${activeMpId}`)
-    } catch { return true }
+    } catch { return false }
   })
   const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags'>('works')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
@@ -55,6 +63,10 @@ export const MPDashboard: React.FC = () => {
 
   useEffect(() => {
     async function loadMPDossier() {
+      if (!activeMpId) {
+        setLoading(false)
+        return
+      }
       if (!sessionStorage.getItem(`cached_mp_${activeMpId}`)) {
         setLoading(true)
       }
@@ -76,6 +88,21 @@ export const MPDashboard: React.FC = () => {
     }
     loadMPDossier()
   }, [activeMpId])
+
+  const filteredGateMps = useMemo(() => {
+    return ALL_MP_SEATS.filter((m) => {
+      if (gateHouse !== 'ALL' && m.house !== gateHouse) return false
+      if (gateState !== 'ALL' && m.state.toUpperCase() !== gateState.toUpperCase()) return false
+      if (gateSearch.trim()) {
+        const q = gateSearch.toLowerCase().trim()
+        const matchName = m.name.toLowerCase().includes(q)
+        const matchConst = m.constituency.toLowerCase().includes(q)
+        const matchState = m.state.toLowerCase().includes(q)
+        return matchName || matchConst || matchState
+      }
+      return true
+    })
+  }, [gateSearch, gateHouse, gateState])
 
   const filteredSelectorMps = useMemo(() => {
     if (!selectorSearch.trim()) return ALL_MP_SEATS.slice(0, 30)
@@ -110,18 +137,128 @@ export const MPDashboard: React.FC = () => {
           The Parliamentary Constituency Command Dashboard is designed exclusively for Lok Sabha and Rajya Sabha representatives.
         </p>
         <button
-          onClick={() =>
-            switchRole(
-              'mp',
-              undefined,
-              undefined,
-              activeMpId
-            )
-          }
+          onClick={() => switchRole('mp')}
           className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
         >
-          Switch to Member of Parliament
+          Open MP Jurisdiction Gate
         </button>
+      </div>
+    )
+  }
+
+  // MP JURISDICTION GATE: User must select an MP first! No default page!
+  if (!hasSelectedMp) {
+    return (
+      <div className="max-w-5xl mx-auto py-8 px-4 space-y-6 animate-in fade-in duration-300">
+        <div className="rounded-3xl p-6 sm:p-8 bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] shadow-xl text-center space-y-4">
+          <div className="w-14 h-14 rounded-2xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 text-[var(--gold-text)] flex items-center justify-center mx-auto shadow-sm">
+            <Landmark size={28} />
+          </div>
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--brand-accent)]/10 text-[var(--gold-text)] text-xs font-bold uppercase tracking-wider">
+              <span>Parliamentary Command Console</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
+              Select Member of Parliament
+            </h1>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-xl mx-auto">
+              Choose a Member of Parliament below to access verified constituency corpus ledgers, project recommendations, and financial utilization. No MP is loaded by default.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto pt-2 text-left">
+            <div className="sm:col-span-1">
+              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
+                Filter by House
+              </label>
+              <select
+                value={gateHouse}
+                onChange={(e) => setGateHouse(e.target.value as any)}
+                className="w-full text-xs bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] rounded-xl px-3 py-2.5 text-[var(--text-primary)] font-bold outline-none focus:border-[var(--brand-accent)] cursor-pointer shadow-xs"
+              >
+                <option value="ALL">All Houses (Both)</option>
+                <option value="Lok Sabha">Lok Sabha</option>
+                <option value="Rajya Sabha">Rajya Sabha</option>
+              </select>
+            </div>
+
+            <div className="sm:col-span-1">
+              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
+                Filter by State
+              </label>
+              <select
+                value={gateState}
+                onChange={(e) => setGateState(e.target.value)}
+                className="w-full text-xs bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] rounded-xl px-3 py-2.5 text-[var(--text-primary)] font-bold outline-none focus:border-[var(--brand-accent)] cursor-pointer shadow-xs"
+              >
+                <option value="ALL">All 36 States &amp; UTs</option>
+                {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
+                  <option key={st} value={st}>
+                    {st}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="sm:col-span-1">
+              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
+                Search Seat or MP
+              </label>
+              <div className="relative">
+                <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  placeholder="Type name, seat..."
+                  value={gateSearch}
+                  onChange={(e) => setGateSearch(e.target.value)}
+                  className="w-full pl-9 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-accent)] font-medium"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-1 flex items-center justify-between">
+            <span>Showing {filteredGateMps.length} Parliamentary Seats:</span>
+            <span className="text-[10px] text-[var(--text-secondary)] font-bold">Click any MP to open console</span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-h-[60vh] overflow-y-auto pr-1">
+            {filteredGateMps.map((m) => (
+              <button
+                key={m.id}
+                onClick={async () => {
+                  await switchRole('mp', m.state, m.constituency, m.id, m.name)
+                  setSearchParams({ id: m.id })
+                }}
+                className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:bg-[var(--brand-accent)]/5 transition-all text-left flex flex-col justify-between gap-2 group cursor-pointer shadow-xs"
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <span className="text-xs font-bold text-[var(--text-primary)] block truncate group-hover:text-[var(--gold-text)]">
+                      {m.name}
+                    </span>
+                    <span className="text-[11px] text-[var(--text-secondary)] font-medium truncate block">
+                      {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} • ` : ''}{m.state}
+                    </span>
+                  </div>
+                  <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold shrink-0 ${
+                    m.house === 'Lok Sabha' ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400' : 'bg-purple-500/10 text-purple-600 dark:text-purple-400'
+                  }`}>
+                    {m.house}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between pt-1 border-t border-[var(--border-primary)]/40 text-[10px] text-[var(--text-tertiary)]">
+                  <span>Member of Parliament</span>
+                  <span className="font-bold text-[var(--brand-accent)] flex items-center gap-0.5 group-hover:translate-x-1 transition-transform">
+                    Open Console &rarr;
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     )
   }
