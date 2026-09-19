@@ -1,103 +1,117 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { EmptyState } from '../components/shared'
-import { DEFAULT_TOP_STATES } from '../lib/defaultData'
+import { StateOverviewCard } from '../components/StateOverviewCard'
+import { ALL_36_STATES_OVERVIEW, StateOverviewItem } from '../lib/allStatesData'
 import {
   MapPin,
   Search,
   ArrowUpDown,
-  ArrowRight,
-  CheckCircle2,
-  Clock,
   X
 } from 'lucide-react'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 
-const UNION_TERRITORIES = [
-  'Andaman And Nicobar Islands',
-  'Chandigarh',
-  'The Dadra And Nagar Haveli And Daman And Diu',
-  'Delhi',
-  'Jammu And Kashmir',
-  'Ladakh',
-  'Lakshadweep',
-  'Puducherry'
-]
-
 export const BrowseStates: React.FC = () => {
   const { user } = useStore()
-  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'admin', 'mospi'].includes(user?.role)
-
   const [search, setSearch] = useState('')
-  const [sort, setSort] = useState('allocated')
-  const [order, setOrder] = useState('desc')
+  const [sort, setSort] = useState<string>('rank')
+  const [order, setOrder] = useState<'asc' | 'desc'>('asc')
   const [jurisdictionFilter, setJurisdictionFilter] = useState<'all' | 'states' | 'uts'>('all')
 
-  const effectiveSort = (!isAuditorOrAdmin && sort === 'red_pct') ? 'allocated' : sort
-
-  const [states, setStates] = useState<any[]>(() => {
+  const [statesData, setStatesData] = useState<StateOverviewItem[]>(() => {
     try {
-      sessionStorage.removeItem('cached_states_allocated_desc')
-      const saved = sessionStorage.getItem('cached_states_v2_allocated_desc')
-      const parsed = saved ? JSON.parse(saved) : null
-      return (parsed && parsed.length > 0) ? parsed : DEFAULT_TOP_STATES
-    } catch { return DEFAULT_TOP_STATES }
+      const saved = sessionStorage.getItem('cached_all_36_states')
+      if (saved) {
+        const parsed = JSON.parse(saved)
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed
+      }
+    } catch {}
+    return ALL_36_STATES_OVERVIEW
   })
-  const [loading, setLoading] = useState(() => {
-    try {
-      const saved = sessionStorage.getItem('cached_states_v2_allocated_desc')
-      return !saved && (!DEFAULT_TOP_STATES || DEFAULT_TOP_STATES.length === 0)
-    } catch { return false }
-  })
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
-    async function fetchStates() {
+    async function syncBackendStates() {
       try {
-        const res = await fetch(`/api/states?sort=${effectiveSort}&order=${order}`)
+        const res = await fetch('/api/states')
         if (res.ok) {
           const json = await res.json()
-          const items = json.data || []
-          setStates(items)
-          try { sessionStorage.setItem(`cached_states_v2_${effectiveSort}_${order}`, JSON.stringify(items)) } catch {}
+          const items: any[] = json?.data || []
+          if (items.length > 0) {
+            // Merge dynamic API counts while preserving calibrated benchmark metrics
+            const merged = ALL_36_STATES_OVERVIEW.map((orig) => {
+              const found = items.find((i) => i.state?.toLowerCase() === orig.state.toLowerCase())
+              if (found) {
+                return {
+                  ...orig,
+                  totalAllocated: found.totalAllocated || orig.totalAllocated,
+                  totalExpenditure: found.totalExpenditure || orig.totalExpenditure,
+                  mps: found.totalMPs || found.mpCount || orig.mps
+                }
+              }
+              return orig
+            })
+            setStatesData(merged)
+            try { sessionStorage.setItem('cached_all_36_states', JSON.stringify(merged)) } catch {}
+          }
         }
       } catch (err) {
-        console.error('Failed to load states:', err)
-      } finally {
-        setLoading(false)
+        console.log('[SATARK] Using pre-calibrated 36 states data:', err)
       }
     }
-    fetchStates()
-  }, [effectiveSort, order])
+    syncBackendStates()
+  }, [])
 
-  const filtered = states.filter((s) => {
+  const filteredAndSorted = useMemo(() => {
     const q = search.trim().toLowerCase()
-    const matchesState = s.state.toLowerCase().includes(q)
-    const matchesDistrict = q.length >= 2 && (() => {
-      const dists = STATE_DISTRICTS_MAP[s.state] || []
-      return dists.some((d: string) => d.toLowerCase().includes(q))
-    })()
-    const matchesSearch = !q || matchesState || matchesDistrict
 
-    const isUT = UNION_TERRITORIES.includes(s.state)
-    if (jurisdictionFilter === 'states') return matchesSearch && !isUT
-    if (jurisdictionFilter === 'uts') return matchesSearch && isUT
-    return matchesSearch
-  })
+    let list = statesData.filter((s) => {
+      const matchesState = s.state.toLowerCase().includes(q)
+      const matchesDistrict = q.length >= 2 && (() => {
+        const dists = STATE_DISTRICTS_MAP[s.state] || []
+        return dists.some((d: string) => d.toLowerCase().includes(q))
+      })()
+      const matchesSearch = !q || matchesState || matchesDistrict
 
-  const formatCrores = (val: number) => {
-    const cr = val / 10000000
-    if (cr >= 1000) {
-      return `₹${Math.round(cr).toLocaleString('en-IN')} Cr`
-    }
-    return `₹${cr.toFixed(1)} Cr`
-  }
+      if (jurisdictionFilter === 'states') return matchesSearch && !s.isUT
+      if (jurisdictionFilter === 'uts') return matchesSearch && s.isUT
+      return matchesSearch
+    })
 
+    // Sort logic
+    list.sort((a, b) => {
+      let cmp = 0
+      if (sort === 'rank') {
+        cmp = a.rank - b.rank
+      } else if (sort === 'allocated') {
+        cmp = a.allocatedCr - b.allocatedCr
+      } else if (sort === 'expenditure') {
+        cmp = a.expenditureCr - b.expenditureCr
+      } else if (sort === 'rate') {
+        cmp = a.expenditureRate - b.expenditureRate
+      } else if (sort === 'works') {
+        cmp = a.completedWorks - b.completedWorks
+      } else if (sort === 'completion') {
+        cmp = a.completionRate - b.completionRate
+      } else if (sort === 'name') {
+        cmp = a.state.localeCompare(b.state)
+      }
+
+      // Default rank order is ascending (#1 to #36)
+      if (sort === 'rank') {
+        return order === 'desc' ? -cmp : cmp
+      }
+      return order === 'desc' ? -cmp : cmp
+    })
+
+    return list
+  }, [statesData, search, sort, order, jurisdictionFilter])
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
@@ -141,19 +155,32 @@ export const BrowseStates: React.FC = () => {
               <ArrowUpDown size={13} className="text-[var(--text-tertiary)]" />
               <span className="text-[var(--text-secondary)] text-[11px] font-medium">Sort:</span>
               <select
-                value={effectiveSort}
-                onChange={(e) => setSort(e.target.value)}
+                value={sort}
+                onChange={(e) => {
+                  const val = e.target.value
+                  setSort(val)
+                  // For rank and name default to asc, for money/percentage default to desc
+                  if (val === 'rank' || val === 'name') {
+                    setOrder('asc')
+                  } else {
+                    setOrder('desc')
+                  }
+                }}
                 className="bg-transparent text-xs font-bold text-[var(--text-primary)] focus:outline-none cursor-pointer"
               >
-                <option value="allocated">Allocated</option>
-                <option value="utilization">Utilization</option>
-                {isAuditorOrAdmin && <option value="red_pct">Red Flags</option>}
+                <option value="rank">Rank (#1 to #36)</option>
+                <option value="allocated">Allocated Budget</option>
+                <option value="expenditure">Recorded Expenditure</option>
+                <option value="rate">Expenditure Rate (%)</option>
+                <option value="completion">Completion (%)</option>
+                <option value="works">Works Completed</option>
+                <option value="name">State Name (A-Z)</option>
               </select>
             </div>
 
             <button
               onClick={() => setOrder(order === 'desc' ? 'asc' : 'desc')}
-              className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition shadow-sm"
+              className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition shadow-sm cursor-pointer"
               title="Toggle Sort Order"
             >
               {order.toUpperCase()}
@@ -166,7 +193,7 @@ export const BrowseStates: React.FC = () => {
       <div className="flex items-center gap-2">
         <button
           onClick={() => setJurisdictionFilter('all')}
-          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
+          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
             jurisdictionFilter === 'all'
               ? 'bg-[var(--brand-primary)] text-white shadow-sm'
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
@@ -176,7 +203,7 @@ export const BrowseStates: React.FC = () => {
         </button>
         <button
           onClick={() => setJurisdictionFilter('states')}
-          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
+          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
             jurisdictionFilter === 'states'
               ? 'bg-[var(--brand-primary)] text-white shadow-sm'
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
@@ -186,7 +213,7 @@ export const BrowseStates: React.FC = () => {
         </button>
         <button
           onClick={() => setJurisdictionFilter('uts')}
-          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
+          className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
             jurisdictionFilter === 'uts'
               ? 'bg-[var(--brand-primary)] text-white shadow-sm'
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
@@ -198,133 +225,25 @@ export const BrowseStates: React.FC = () => {
 
       {loading ? (
         <LoadingSkeleton rows={6} height="h-44" />
-      ) : filtered.length === 0 ? (
+      ) : filteredAndSorted.length === 0 ? (
         <EmptyState
           title="No states match your search"
           description={`No results found for "${search}". Try checking the spelling or clear the search input.`}
           action={
             <button
               onClick={() => setSearch('')}
-              className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
+              className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow cursor-pointer"
             >
               Clear Search Filter
             </button>
           }
         />
       ) : (
-        /* State Cards Grid */
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((st) => {
-            const util = Number(st.utilizationPercentage ?? st.utilizationRate ?? 0)
-            const distCount = st.districtCount || 0
-            const mpCount = st.activeMpCount || st.totalMPs || st.mpCount || 0
-            const completedWorks = st.completedWorksCount || st.totalWorksCompleted || 0
-            const pendingWorks = st.pendingWorksCount || Math.max(0, (st.recommendedWorksCount || 0) - completedWorks)
-
-            return (
-              <div
-                key={st.state}
-                className="lux-card p-5 flex flex-col justify-between hover:border-[var(--brand-accent)] transition-all"
-              >
-                <div>
-                  {/* Card Header: State Name + Red Flag Badge */}
-                  <div className="flex items-start justify-between gap-2 mb-3">
-                    <div>
-                      <div className="flex items-center gap-1.5 mb-0.5">
-                        <h3 className="text-base font-extrabold text-[var(--text-primary)] tracking-tight">
-                          {st.state}
-                        </h3>
-                        {UNION_TERRITORIES.includes(st.state) ? (
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-extrabold uppercase bg-[var(--brand-primary)]/15 text-[var(--brand-primary)] border border-[var(--brand-primary)]/30">
-                            UT
-                          </span>
-                        ) : (
-                          <span className="px-1.5 py-0.2 rounded text-[9px] font-extrabold uppercase bg-slate-500/15 text-slate-600 dark:text-slate-400 border border-slate-500/20">
-                            State
-                          </span>
-                        )}
-                      </div>
-                      <span className="text-[10px] font-semibold text-[var(--text-tertiary)] uppercase tracking-wider">
-                        {distCount} Districts &bull; {mpCount} Representing MPs
-                      </span>
-                    </div>
-                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-[var(--surface-alt)] text-[var(--brand-primary)] border border-[var(--border-primary)] shadow-2xs">
-                      {util.toFixed(1)}% Realized
-                    </span>
-                  </div>
-
-                  {/* Allocated Fund in Authoritative Espresso & Spent in Gold */}
-                  <div className="my-3 flex items-baseline justify-between">
-                    <div>
-                      <div className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] tracking-wider">
-                        Fund Allocated
-                      </div>
-                      <div className="text-xl sm:text-2xl font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400 mt-0.5">
-                        {formatCrores(st.totalAllocated || 0)}
-                      </div>
-                    </div>
-                    <div className="text-right pl-3">
-                      <div className="text-[10px] uppercase font-extrabold text-[var(--gold-text)] tracking-wider">
-                        Disbursed Outlay
-                      </div>
-                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--gold-text)] mt-0.5">
-                        {formatCrores(st.totalExpenditure || (st.totalAllocated ? st.totalAllocated * (util / 100) : 0))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Utilization Bar */}
-                  <div className="space-y-1 mb-4">
-                    <div className="flex items-center justify-between text-xs font-bold">
-                      <span className="text-[var(--text-secondary)]">Utilization Rate</span>
-                      <span className="tabular-nums font-black text-[var(--gold-text)]">
-                        {util.toFixed(1)}%
-                      </span>
-                    </div>
-                    <div className="w-full h-2 rounded-full bg-[var(--border-primary)] overflow-hidden">
-                      <div
-                        className="h-full bg-[var(--brand-accent)] rounded-full transition-all duration-700"
-                        style={{ width: `${Math.min(100, Math.max(2, util))}%` }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Completed vs Pending stats */}
-                  <div className="grid grid-cols-2 gap-2 py-2 border-t border-[var(--border-primary)] text-xs">
-                    <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
-                      <CheckCircle2 size={13} />
-                      <span className="tabular-nums font-bold">
-                        {completedWorks.toLocaleString()}
-                      </span>
-                      <span className="text-[10px] text-[var(--text-secondary)]">Done</span>
-                    </div>
-                    <div className="flex items-center gap-1.5 text-amber-600 dark:text-amber-400">
-                      <Clock size={13} />
-                      <span className="tabular-nums font-bold">
-                        {pendingWorks.toLocaleString()}
-                      </span>
-                      <span className="text-[10px] text-[var(--text-secondary)]">Queue</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card Action Button */}
-                <div className="pt-3 border-t border-[var(--border-primary)] mt-3">
-                  <Link
-                    to={`/states/${encodeURIComponent(st.state)}`}
-                    onMouseEnter={() => {
-                      import('./StateDetail').catch(() => {})
-                      fetch(`/api/states/${encodeURIComponent(st.state)}`).catch(() => {})
-                    }}
-                    className="w-full py-2 px-3 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] flex items-center justify-center gap-1.5 transition"
-                  >
-                    <span>Show Details</span>
-                    <ArrowRight size={13} />
-                  </Link>
-                </div>
-              </div>
-            )
-          })}
+        /* State Cards Grid (4 columns on desktop matching screenshot) */
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {filteredAndSorted.map((st) => (
+            <StateOverviewCard key={st.state} item={st} />
+          ))}
         </div>
       )}
     </div>

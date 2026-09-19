@@ -10,6 +10,8 @@ import { ChartTooltip } from '../components/charts'
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
 import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS, DEFAULT_TOP_STATES } from '../lib/defaultData'
+import { StateOverviewCard } from '../components/StateOverviewCard'
+import { ALL_36_STATES_OVERVIEW } from '../lib/allStatesData'
 import {
   Landmark,
   Coins,
@@ -715,90 +717,17 @@ export const NationalDashboard: React.FC = () => {
             </div>
           }
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {rankedStates.slice(0, 10).map((st, idx) => {
-              const util = Number(st.utilizationPercentage ?? st.utilizationRate ?? 0)
-              const isTop3 = idx < 3
-              const isUT = UNION_TERRITORIES.includes(st.state)
-              const allocCr = Math.round((st.totalAllocated || 0) / 10000000)
-              const spentCr = Math.round((st.totalExpenditure || 0) / 10000000)
-              const distCount = st.districtCount || 0
-              const mpCount = st.activeMpCount || st.totalMPs || 0
-
-              return (
-                <Link
-                  to={`/states/${encodeURIComponent(st.state)}`}
-                  key={st.state}
-                  className="lux-card p-4 flex flex-col justify-between hover:border-[var(--brand-accent)] hover:shadow-md transition-all group cursor-pointer"
-                >
-                  {/* Top Row: Rank Badge + Name + Tag + Utilization */}
-                  <div className="flex items-start justify-between gap-3 mb-2.5">
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <div
-                        className={`w-8 h-8 rounded-xl flex items-center justify-center font-black text-xs shrink-0 transition-transform group-hover:scale-105 ${
-                          isTop3 && idx === 0
-                            ? 'bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 shadow-2xs font-black'
-                            : isTop3 && idx === 1
-                            ? 'bg-gradient-to-br from-slate-200 to-slate-400 text-slate-900 shadow-2xs font-black'
-                            : isTop3 && idx === 2
-                            ? 'bg-gradient-to-br from-amber-600 to-amber-800 text-white shadow-2xs font-black'
-                            : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]'
-                        }`}
-                      >
-                        #{idx + 1}
-                      </div>
-
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          <span className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--brand-primary)] transition truncate">
-                            {st.state}
-                          </span>
-                          <span
-                            className={`px-1.5 py-0.2 rounded text-[9px] font-black uppercase shrink-0 ${
-                              isUT
-                                ? 'bg-[var(--brand-primary)]/15 text-[var(--brand-primary)] border border-[var(--brand-primary)]/30'
-                                : 'bg-slate-500/15 text-slate-600 dark:text-slate-400 border border-slate-500/20'
-                            }`}
-                          >
-                            {isUT ? 'UT' : 'State'}
-                          </span>
-                        </div>
-                        <span className="text-[10px] font-semibold text-[var(--text-tertiary)]">
-                          {distCount} Districts &bull; {mpCount} MPs
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="text-right shrink-0">
-                      <span className="text-sm sm:text-base font-black tabular-nums text-[var(--gold-text)]">
-                        {util.toFixed(1)}%
-                      </span>
-                      <span className="text-[9px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider block">
-                        Absorption
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Financial Mini-Bar */}
-                  <div className="flex items-center justify-between text-[11px] text-[var(--text-secondary)] font-medium mb-2 pt-2 border-t border-[var(--border-subtle)]">
-                    <span className="tabular-nums">
-                      <strong className="text-[var(--text-primary)]">₹{spentCr.toLocaleString('en-IN')} Cr</strong> spent
-                    </span>
-                    <span className="text-[10px] text-[var(--text-tertiary)] tabular-nums">
-                      of ₹{allocCr.toLocaleString('en-IN')} Cr outlay
-                    </span>
-                  </div>
-
-                  {/* Modern Dual-tone Progress Bar */}
-                  <div className="w-full h-2 rounded-full bg-[var(--surface-alt)] overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-accent)] transition-all duration-700"
-                      style={{ width: `${Math.min(100, Math.max(2, util))}%` }}
-                    />
-                  </div>
-                </Link>
-              )
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {ALL_36_STATES_OVERVIEW
+              .filter((s) => {
+                if (leagueFilter === 'states') return !s.isUT
+                if (leagueFilter === 'uts') return s.isUT
+                return true
+              })
+              .slice(0, 6)
+              .map((st) => (
+                <StateOverviewCard key={st.state} item={st} />
+              ))}
           </div>
         </SectionCard>
       </div>
