@@ -717,17 +717,79 @@ export const NationalDashboard: React.FC = () => {
             </div>
           }
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="space-y-2.5">
+            {/* Column Headers */}
+            <div className="grid grid-cols-[40px_1fr_100px_120px_80px] sm:grid-cols-[40px_1fr_120px_minmax(180px,1fr)_100px] gap-3 px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-[var(--text-tertiary)]">
+              <span>#</span>
+              <span>State / UT</span>
+              <span className="text-right">Allocated</span>
+              <span className="text-center">Expenditure Rate</span>
+              <span className="text-right">Completion</span>
+            </div>
+
             {ALL_36_STATES_OVERVIEW
               .filter((s) => {
                 if (leagueFilter === 'states') return !s.isUT
                 if (leagueFilter === 'uts') return s.isUT
                 return true
               })
-              .slice(0, 6)
-              .map((st) => (
-                <StateOverviewCard key={st.state} item={st} />
-              ))}
+              .slice(0, 10)
+              .map((st, idx) => {
+                const formatCr = (val: number) => {
+                  if (val >= 1000) return `₹${val.toLocaleString('en-IN', { maximumFractionDigits: 1 })} Cr`
+                  const isWhole = Math.abs(val - Math.round(val)) < 0.05
+                  return `₹${isWhole ? Math.round(val) : val.toFixed(1)} Cr`
+                }
+                return (
+                  <Link
+                    key={st.state}
+                    to={`/states/${encodeURIComponent(st.state)}`}
+                    className="grid grid-cols-[40px_1fr_100px_120px_80px] sm:grid-cols-[40px_1fr_120px_minmax(180px,1fr)_100px] gap-3 items-center px-3 py-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:shadow-sm transition-all group"
+                  >
+                    {/* Rank Number */}
+                    <span className="text-sm font-black text-[var(--brand-primary)] tabular-nums">
+                      {st.rank}
+                    </span>
+
+                    {/* State Name + MPs */}
+                    <div className="min-w-0">
+                      <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--brand-primary)] transition">
+                        {st.state}
+                      </div>
+                      <div className="text-[10px] text-[var(--text-tertiary)] font-medium">
+                        {st.mps} MPs
+                      </div>
+                    </div>
+
+                    {/* Allocated Amount */}
+                    <div className="text-right">
+                      <div className="text-xs font-bold text-[var(--text-primary)] tabular-nums">
+                        {formatCr(st.allocatedCr)}
+                      </div>
+                    </div>
+
+                    {/* Expenditure Rate Bar */}
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-[#B7791F] dark:bg-[#FF9E3B] transition-all duration-700"
+                          style={{ width: `${Math.min(100, Math.max(3, st.expenditureRate))}%` }}
+                        />
+                      </div>
+                      <span className="text-[11px] font-bold text-[var(--text-primary)] tabular-nums w-10 text-right shrink-0">
+                        {st.expenditureRate.toFixed(1)}%
+                      </span>
+                    </div>
+
+                    {/* Completion Rate */}
+                    <div className="text-right">
+                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
+                        {st.completionRate.toFixed(1)}%
+                      </span>
+                    </div>
+                  </Link>
+                )
+              })}
           </div>
         </SectionCard>
       </div>
