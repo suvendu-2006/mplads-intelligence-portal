@@ -45,7 +45,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         {/* Two-Column Metrics: ALLOCATED vs RECORDED EXPENDITURE */}
         <div className="mt-6 mb-5 grid grid-cols-2 gap-4">
           <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)]">
               ALLOCATED
             </div>
             <div className="text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100 mt-1 tabular-nums">
@@ -54,7 +54,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
           </div>
 
           <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)]">
               RECORDED EXPENDITURE
             </div>
             <div className="text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100 mt-1 tabular-nums">
@@ -66,7 +66,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         {/* Expenditure Rate & Uniform Cohesive Progress Bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs font-semibold">
-            <span className="text-slate-600 dark:text-slate-400">Expenditure Rate</span>
+            <span className="text-[var(--text-secondary)]">Expenditure Rate</span>
             <span className="font-bold tabular-nums text-[var(--text-primary)]">
               ↗{item.expenditureRate.toFixed(1)}%
             </span>
@@ -91,14 +91,14 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
               <div className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 leading-tight tabular-nums">
                 {item.completedWorks.toLocaleString()}
               </div>
-              <div className="text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 font-medium leading-tight">
+              <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold leading-tight">
                 Works Completed
               </div>
             </div>
           </div>
 
           <div className="text-right">
-            <div className="text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 font-medium">
+            <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold">
               Completion
             </div>
             <div className="text-sm sm:text-base font-bold text-sky-900 dark:text-sky-200 tabular-nums">
