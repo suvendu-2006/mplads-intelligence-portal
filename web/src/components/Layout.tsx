@@ -140,13 +140,13 @@ export const Layout: React.FC = () => {
             {/* Contextual Role Console tabs - Only visible when relevant role is active */}
             {user.role === 'mospi' && (
               <Link
-                to="/mp-dashboard"
+                to={user.mpId && user.mpId !== 'ALL' ? `/mp-dashboard?id=${encodeURIComponent(user.mpId)}` : '/mp-dashboard'}
                 onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
                 className={navLinkClasses('/mp-dashboard')}
               >
                 <Users size={14} className="text-[var(--brand-accent)]" />
                 <span className="font-extrabold text-[var(--gold-text)]">
-                  MP Console
+                  MP Console {user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
                 </span>
                 {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
               </Link>
@@ -184,7 +184,7 @@ export const Layout: React.FC = () => {
 
             {user.role === 'mp' && (
               <Link
-                to="/mp-dashboard"
+                to={user.mpId && user.mpId !== 'ALL' ? `/mp-dashboard?id=${encodeURIComponent(user.mpId)}` : '/mp-dashboard'}
                 onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
                 className={navLinkClasses('/mp-dashboard')}
               >

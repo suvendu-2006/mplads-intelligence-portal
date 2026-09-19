@@ -134,6 +134,15 @@ export const SwitchRoleDropdown: React.FC = () => {
     return found ? (found.constituency !== 'Sitting Rajya Sabha' ? `${found.constituency} (${found.name.split(' ').slice(-1)[0]})` : found.name) : 'Anurag Singh Thakur'
   }, [selectedMpId])
 
+  // Auto-align selectedMpId with first search result when search is typed
+  React.useEffect(() => {
+    if (mpSearch.trim() && filteredMps.length > 0) {
+      if (!filteredMps.some(m => m.id === selectedMpId)) {
+        setSelectedMpId(filteredMps[0].id)
+      }
+    }
+  }, [mpSearch, filteredMps, selectedMpId])
+
   // Available districts for the chosen dmState
   const availableDistricts = STATE_DISTRICTS_MAP[dmState] || STATE_DISTRICTS_MAP[dmState.toUpperCase()] || []
 
@@ -151,7 +160,11 @@ export const SwitchRoleDropdown: React.FC = () => {
     setSelectedState(DEFAULT_STATE)
     setDmState(DEFAULT_STATE)
     setDmDistrict(DEFAULT_DISTRICT)
-    setSelectedMpId(DEFAULT_MP_ID)
+    if (!user.mpId || user.mpId === 'ALL') {
+      setSelectedMpId(DEFAULT_MP_ID)
+    } else {
+      setSelectedMpId(user.mpId)
+    }
     setMpSearch('')
 
     if (roleId === 'viewer') {
@@ -183,10 +196,11 @@ export const SwitchRoleDropdown: React.FC = () => {
     }
 
     if (roleId === 'mp') {
-      const found = ALL_MP_SEATS.find(m => m.id === DEFAULT_MP_ID) || ALL_MP_SEATS[0]
-      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, DEFAULT_MP_ID, found?.name || DEFAULT_MP_NAME)
+      const activeId = (user.mpId && user.mpId !== 'ALL') ? user.mpId : (selectedMpId || DEFAULT_MP_ID)
+      const found = ALL_MP_SEATS.find(m => m.id === activeId) || ALL_MP_SEATS[0]
+      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name || DEFAULT_MP_NAME)
       setIsOpen(false)
-      navigate('/mp-dashboard')
+      navigate(`/mp-dashboard?id=${encodeURIComponent(found?.id)}`)
       return
     }
   }
@@ -531,7 +545,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                               if (found) {
                                 await switchRole('mp', found.state, undefined, found.id, found.name)
                                 setIsOpen(false)
-                                navigate('/mp-dashboard')
+                                navigate(`/mp-dashboard?id=${encodeURIComponent(found.id)}`)
                               }
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-accent)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-accent)] font-bold shadow-xs cursor-pointer"
@@ -547,10 +561,10 @@ export const SwitchRoleDropdown: React.FC = () => {
                         <button
                           type="button"
                           onClick={async () => {
-                            const found = ALL_MP_SEATS.find(m => m.id === selectedMpId) || ALL_MP_SEATS[0]
+                            const found = ALL_MP_SEATS.find(m => m.id === selectedMpId) || filteredMps[0] || ALL_MP_SEATS[0]
                             await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name)
                             setIsOpen(false)
-                            navigate('/mp-dashboard')
+                            navigate(`/mp-dashboard?id=${encodeURIComponent(found?.id)}`)
                           }}
                           className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-accent)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
                         >

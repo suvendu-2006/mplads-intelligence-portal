@@ -33,6 +33,7 @@ interface AppStore {
   setLang: (lang: LangMode) => void
   setSearchQuery: (query: string) => void
   setBannerDismissed: (dismissed: boolean) => void
+  setMpJurisdiction: (mpId: string, mpName?: string, state?: string) => void
   switchRole: (
     role: string,
     state?: string,
@@ -59,6 +60,19 @@ export const useStore = create<AppStore>()(
       setLang: (lang) => set({ lang }),
       setSearchQuery: (searchQuery) => set({ searchQuery }),
       setBannerDismissed: (bannerDismissed) => set({ bannerDismissed }),
+      setMpJurisdiction: (mpId: string, mpName?: string, state?: string) => {
+        set((prev) => ({
+          user: {
+            ...prev.user,
+            mpId,
+            ...(mpName ? { mpName } : {}),
+            ...(state ? { state } : {})
+          }
+        }))
+        if (typeof window !== 'undefined') {
+          clearApiCache()
+        }
+      },
       switchRole: async (
         role: string,
         state?: string,
@@ -145,13 +159,17 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
-      version: 3,
+      version: 4,
       partialize: (state) => ({
         theme: state.theme,
         lang: state.lang,
         bannerDismissed: state.bannerDismissed,
         user: {
           role: state.user.role,
+          state: state.user.state,
+          district: state.user.district,
+          mpId: state.user.mpId,
+          mpName: state.user.mpName,
           permissions: state.user.permissions,
           sessionToken: state.user.sessionToken
         }

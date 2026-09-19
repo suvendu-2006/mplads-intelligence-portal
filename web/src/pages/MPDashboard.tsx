@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState, useMemo } from 'react'
+import { Link, useParams, useSearchParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
@@ -17,40 +17,56 @@ import {
   Clock,
   Coins,
   Percent,
-  Layers
+  Layers,
+  Users,
+  Search,
+  ChevronDown,
+  X
 } from 'lucide-react'
-import { DEFAULT_MP_ID } from '../lib/constants'
+import { DEFAULT_MP_ID, DEFAULT_STATE_DISPLAY } from '../lib/constants'
+import { ALL_MP_SEATS } from '../lib/allMpsData'
 
 export const MPDashboard: React.FC = () => {
-  const { user, switchRole } = useStore()
-  const mpId = (user?.mpId && user.mpId !== 'ALL') ? user.mpId : DEFAULT_MP_ID
-  const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
+  const { id: paramId } = useParams<{ id?: string }>()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const queryId = searchParams.get('id') || searchParams.get('mpId')
+  const { user, switchRole, setMpJurisdiction } = useStore()
+  const navigate = useNavigate()
+
+  // Priority: URL route param -> URL query param -> store mpId -> default
+  const activeMpId = paramId || queryId || (user?.mpId && user.mpId !== 'ALL' ? user.mpId : DEFAULT_MP_ID)
+  const isAuthorized = ['mp', 'admin', 'mospi', 'viewer'].includes(user.role)
 
   const [data, setData] = useState<any>(() => {
     try {
-      const saved = sessionStorage.getItem(`cached_mp_${mpId}`)
+      const saved = sessionStorage.getItem(`cached_mp_${activeMpId}`)
       return saved ? JSON.parse(saved) : null
     } catch { return null }
   })
   const [loading, setLoading] = useState(() => {
     try {
-      return !sessionStorage.getItem(`cached_mp_${mpId}`)
+      return !sessionStorage.getItem(`cached_mp_${activeMpId}`)
     } catch { return true }
   })
   const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags'>('works')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
+  const [showMpSelector, setShowMpSelector] = useState(false)
+  const [selectorSearch, setSelectorSearch] = useState('')
 
   useEffect(() => {
     async function loadMPDossier() {
-      if (!sessionStorage.getItem(`cached_mp_${mpId}`)) {
+      if (!sessionStorage.getItem(`cached_mp_${activeMpId}`)) {
         setLoading(true)
       }
       try {
-        const res = await fetch(`/api/mps/${mpId}`)
+        const res = await fetch(`/api/mps/${activeMpId}`)
         if (res.ok) {
           const json = await res.json()
           setData(json.data)
-          try { sessionStorage.setItem(`cached_mp_${mpId}`, JSON.stringify(json.data)) } catch {}
+          try { sessionStorage.setItem(`cached_mp_${activeMpId}`, JSON.stringify(json.data)) } catch {}
+          if (json.data?.summary?.mpName) {
+            setMpJurisdiction(activeMpId, json.data.summary.mpName, json.data.summary.state)
+          }
         }
       } catch (err) {
         console.error('Failed to load MP profile:', err)
@@ -59,7 +75,27 @@ export const MPDashboard: React.FC = () => {
       }
     }
     loadMPDossier()
-  }, [mpId])
+  }, [activeMpId])
+
+  const filteredSelectorMps = useMemo(() => {
+    if (!selectorSearch.trim()) return ALL_MP_SEATS.slice(0, 30)
+    const q = selectorSearch.toLowerCase().trim()
+    return ALL_MP_SEATS.filter(m =>
+      m.name.toLowerCase().includes(q) ||
+      m.constituency.toLowerCase().includes(q) ||
+      m.state.toLowerCase().includes(q)
+    ).slice(0, 50)
+  }, [selectorSearch])
+
+  const handleSwitchMP = (mp: typeof ALL_MP_SEATS[0]) => {
+    setMpJurisdiction(mp.id, mp.name, mp.state)
+    if (user.role === 'mp') {
+      switchRole('mp', mp.state, mp.constituency, mp.id, mp.name)
+    }
+    setSearchParams({ id: mp.id })
+    setShowMpSelector(false)
+    setSelectorSearch('')
+  }
 
   if (!isAuthorized) {
     return (
@@ -77,15 +113,14 @@ export const MPDashboard: React.FC = () => {
           onClick={() =>
             switchRole(
               'mp',
-              'Himachal Pradesh',
               undefined,
-              '6a932b5bcd944524379eddd9',
-              'Anurag Singh Thakur'
+              undefined,
+              activeMpId
             )
           }
           className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
         >
-          Switch to Member of Parliament (Demo)
+          Switch to Member of Parliament
         </button>
       </div>
     )
@@ -155,13 +190,77 @@ export const MPDashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
-          <span className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] font-bold text-[var(--text-secondary)]">
-            Role: Member of Parliament
-          </span>
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Quick In-Page MP Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setShowMpSelector(!showMpSelector)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white text-xs font-bold transition shadow-2xs cursor-pointer"
+            >
+              <Users size={14} />
+              <span>Switch MP ({summary.constituency || 'Select'})</span>
+              <ChevronDown size={13} className={`transition-transform duration-200 ${showMpSelector ? 'rotate-180' : ''}`} />
+            </button>
+
+            {showMpSelector && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setShowMpSelector(false)} />
+                <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-[var(--border-primary)]">
+                    <span className="text-xs font-extrabold text-[var(--text-primary)]">
+                      Select Member of Parliament ({ALL_MP_SEATS.length} Seats)
+                    </span>
+                    <button
+                      onClick={() => setShowMpSelector(false)}
+                      className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-1"
+                    >
+                      <X size={14} />
+                    </button>
+                  </div>
+                  <div className="relative mb-2">
+                    <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]" />
+                    <input
+                      type="text"
+                      value={selectorSearch}
+                      onChange={(e) => setSelectorSearch(e.target.value)}
+                      placeholder="Search MP name, constituency, or state..."
+                      autoFocus
+                      className="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
+                    />
+                  </div>
+                  <div className="max-h-64 overflow-y-auto space-y-1 divide-y divide-[var(--border-primary)]/40">
+                    {filteredSelectorMps.map((m) => (
+                      <button
+                        key={m.id}
+                        onClick={() => handleSwitchMP(m)}
+                        className={`w-full text-left p-2 rounded-lg text-xs transition flex items-center justify-between gap-2 cursor-pointer ${
+                          m.id === activeMpId
+                            ? 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold'
+                            : 'hover:bg-[var(--surface-alt)] text-[var(--text-primary)]'
+                        }`}
+                      >
+                        <div className="min-w-0">
+                          <div className="font-bold truncate">{m.name}</div>
+                          <div className="text-[10px] text-[var(--text-secondary)] truncate">
+                            {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.state} ({m.house})
+                          </div>
+                        </div>
+                        {m.id === activeMpId && (
+                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[var(--brand-primary)] text-white shrink-0">
+                            Active
+                          </span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+
           <Link
-            to={`/mps/${mpId}`}
-            className="text-xs px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition"
+            to={`/mps/${activeMpId}`}
+            className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-[var(--text-primary)] font-bold transition"
           >
             Public Report
           </Link>

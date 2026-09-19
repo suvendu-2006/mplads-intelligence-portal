@@ -10,7 +10,7 @@ import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
 import { findAssemblyConstituencies, ASSEMBLY_CONSTITUENCIES, AssemblyItem } from '../lib/assemblyConstituencies'
 
 export const Navbar: React.FC = () => {
-  const { theme, searchQuery, setTheme, setSearchQuery } = useStore()
+  const { theme, searchQuery, setTheme, setSearchQuery, user, setMpJurisdiction } = useStore()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
   const [isClearingCache, setIsClearingCache] = React.useState(false)
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
@@ -185,7 +185,15 @@ export const Navbar: React.FC = () => {
 
   const handleSelectMp = (mpId: string) => {
     setIsDropdownOpen(false)
-    navigate(`/mps/${encodeURIComponent(mpId)}`)
+    const found = ALL_MP_SEATS.find(m => m.id === mpId)
+    if (found) {
+      setMpJurisdiction(found.id, found.name, found.state)
+    }
+    if (user.role === 'mp') {
+      navigate(`/mp-dashboard?id=${encodeURIComponent(mpId)}`)
+    } else {
+      navigate(`/mps/${encodeURIComponent(mpId)}`)
+    }
   }
 
   const handleSelectConstituency = (constName: string) => {
@@ -443,24 +451,39 @@ export const Navbar: React.FC = () => {
                       Members of Parliament
                     </div>
                     {matchingMps.map((m) => (
-                      <button
+                      <div
                         key={`mp-${m.id}`}
-                        onClick={() => handleSelectMp(m.id)}
-                        className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
+                        className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-[var(--surface-alt)] transition group"
                       >
-                        <div className="flex items-center gap-2.5 min-w-0">
+                        <button
+                          onClick={() => handleSelectMp(m.id)}
+                          className="flex items-center gap-2.5 min-w-0 flex-1 text-left cursor-pointer"
+                        >
                           <div className="p-1.5 rounded-lg bg-[var(--brand-accent)]/15 text-[var(--gold-text)] shrink-0">
                             <Users size={14} />
                           </div>
                           <div className="min-w-0">
-                            <div className="font-bold text-[var(--text-primary)] truncate">{m.name}</div>
+                            <div className="font-bold text-[var(--text-primary)] truncate text-xs">{m.name}</div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              {m.constituency} &bull; {m.state} ({m.house})
+                              {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.state} ({m.house})
                             </div>
                           </div>
-                        </div>
-                        <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition shrink-0 ml-2" />
-                      </button>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setIsDropdownOpen(false)
+                            setMpJurisdiction(m.id, m.name, m.state)
+                            navigate(`/mp-dashboard?id=${encodeURIComponent(m.id)}`)
+                          }}
+                          className="px-2 py-1 rounded-lg text-[10px] font-bold bg-[var(--brand-accent)]/15 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white transition shrink-0 ml-2 cursor-pointer flex items-center gap-1"
+                          title="Open directly in MP Console"
+                        >
+                          <span>Console</span>
+                          <ArrowRight size={10} />
+                        </button>
+                      </div>
                     ))}
                   </div>
                 )}

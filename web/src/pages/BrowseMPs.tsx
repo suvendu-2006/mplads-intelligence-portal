@@ -4,15 +4,18 @@ import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { EmptyState } from '../components/shared'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { findAssemblyConstituencies, ASSEMBLY_CONSTITUENCIES } from '../lib/assemblyConstituencies'
+import { useStore } from '../store/useStore'
 import {
   Users,
   Search,
   ArrowRight,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Landmark
 } from 'lucide-react'
 
 export const BrowseMPs: React.FC = () => {
+  const { setMpJurisdiction } = useStore()
   const [searchParams] = useSearchParams()
   const qParam = searchParams.get('q') || ''
 
@@ -377,13 +380,20 @@ export const BrowseMPs: React.FC = () => {
                 </div>
 
                 {/* View Details Action */}
-                <div className="pt-3 border-t border-[var(--border-primary)] mt-3">
+                <div className="pt-3 border-t border-[var(--border-primary)] mt-3 grid grid-cols-2 gap-2">
                   <Link
                     to={`/mps/${mp.id}`}
-                    className="w-full py-2 px-3 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1.5 transition border border-[var(--border-primary)]"
+                    className="py-2 px-2.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--border-primary)] truncate"
                   >
-                    <span>View Financial Report</span>
-                    <ArrowRight size={13} />
+                    <span>Public Report</span>
+                  </Link>
+                  <Link
+                    to={`/mp-dashboard?id=${encodeURIComponent(mp.id)}`}
+                    onClick={() => setMpJurisdiction(mp.id, mp.mpName, mp.state)}
+                    className="py-2 px-2.5 rounded-xl bg-[var(--brand-accent)]/15 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--brand-accent)]/30 truncate"
+                  >
+                    <Landmark size={12} />
+                    <span>MP Console</span>
                   </Link>
                 </div>
               </div>

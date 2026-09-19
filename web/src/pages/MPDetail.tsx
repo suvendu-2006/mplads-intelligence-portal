@@ -47,7 +47,7 @@ export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const [searchParams] = useSearchParams()
   const [acFilter, setAcFilter] = useState<string>(() => searchParams.get('ac') || '')
-  const { user } = useStore()
+  const { user, switchRole, setMpJurisdiction } = useStore()
   const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role)
   const chartTheme = useChartTheme()
 
@@ -210,17 +210,34 @@ export const MPDetail: React.FC = () => {
           <ChevronRight size={12} />
           <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
         </div>
-        <button
-          onClick={toggleFollow}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
-            followed
-              ? 'bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-400'
-              : 'bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          <Star size={13} className={followed ? 'fill-amber-500 text-amber-500' : ''} />
-          <span>{followed ? 'Following MP' : 'Follow this MP'}</span>
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            to={`/mp-dashboard?id=${encodeURIComponent(summary.id || id || '')}`}
+            onClick={() => {
+              if (summary.id || id) {
+                setMpJurisdiction(summary.id || id, summary.mpName, summary.state)
+                if (user.role === 'mp') {
+                  switchRole('mp', summary.state, summary.constituency, summary.id || id, summary.mpName)
+                }
+              }
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-[var(--brand-accent)]/30 bg-[var(--brand-accent)]/15 text-[var(--gold-text)] hover:bg-[var(--brand-accent)] hover:text-white shadow-2xs"
+          >
+            <Landmark size={13} />
+            <span>Open in MP Console</span>
+          </Link>
+          <button
+            onClick={toggleFollow}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
+              followed
+                ? 'bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-400'
+                : 'bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+            }`}
+          >
+            <Star size={13} className={followed ? 'fill-amber-500 text-amber-500' : ''} />
+            <span>{followed ? 'Following MP' : 'Follow this MP'}</span>
+          </button>
+        </div>
       </div>
 
       {/* ⭐ TOP HIGHLIGHT: ACRU Debit-Card Style Fund Card */}

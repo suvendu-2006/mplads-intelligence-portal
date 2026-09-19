@@ -62,7 +62,9 @@ export const App: React.FC = () => {
           <Route path="constituency" element={<BrowseMPs />} />
           <Route path="constituencies" element={<BrowseMPs />} />
           <Route path="mp-dashboard" element={<MPDashboard />} />
+          <Route path="mp-dashboard/:id" element={<MPDashboard />} />
           <Route path="mp-console" element={<MPDashboard />} />
+          <Route path="mp-console/:id" element={<MPDashboard />} />
           <Route path="district-dashboard" element={<DistrictDashboard />} />
           <Route path="district-console" element={<DistrictDashboard />} />
           <Route path="districts/:district" element={<DistrictDashboard />} />
