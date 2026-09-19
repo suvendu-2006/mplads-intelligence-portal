@@ -402,9 +402,17 @@ def export_stratified_audit_sample(session: Session, run_id: str, output_path: O
     else:
         df_watch = df_ranked.iloc[1000:].sample(min(200, len(df_ranked.iloc[1000:])), random_state=42) if len(df_ranked) > 1000 else pd.DataFrame()
 
-    # Clean works sample
-    flagged_ids = set(df_ranked["work_id"])
-    clean_works = session.query(Work).filter(~Work.work_id.in_(flagged_ids)).all()
+    # Clean works sample (use database subquery to avoid SQLite parameter limit with 50k+ flagged IDs)
+    clean_subquery = session.query(Anomaly.work_id).filter(
+        Anomaly.run_id == run_id,
+        Anomaly.work_id.isnot(None)
+    ).subquery()
+    clean_works = (
+        session.query(Work)
+        .filter(~Work.work_id.in_(session.query(clean_subquery.c.work_id)))
+        .limit(500)
+        .all()
+    )
     clean_rows = [{
         "work_id": w.work_id,
         "mp_name": w.mp_name,
