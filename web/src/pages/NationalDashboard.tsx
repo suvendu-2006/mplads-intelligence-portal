@@ -492,7 +492,7 @@ export const NationalDashboard: React.FC = () => {
             ) : (
               /* Works Delivery Status (2-col layout) */
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                <div className="h-64 relative flex items-center justify-center chart-container">
+                <div className="h-52 relative flex items-center justify-center chart-container">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
@@ -512,26 +512,32 @@ export const NationalDashboard: React.FC = () => {
                         ]}
                         cx="50%"
                         cy="50%"
-                        innerRadius={60}
-                        outerRadius={92}
+                        innerRadius={52}
+                        outerRadius={78}
                         paddingAngle={3}
                         dataKey="value"
                         {...ANIMATION_CONFIG.getChartProps('pie')}
                       >
-                        <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        <Cell fill={chartTheme.utilized.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                        <Cell fill="#10B981" stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                        <Cell fill="#6366F1" stroke={chartTheme.tooltipBg} strokeWidth={2} />
                       </Pie>
                       <Tooltip content={<ChartTooltip formatter="number" />} />
                     </PieChart>
                   </ResponsiveContainer>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                    <span className="text-2xl font-black text-[var(--text-primary)] tabular-nums">
-                      {((completedWorks + pendingWorks) / 1000).toFixed(1)}k
-                    </span>
-                    <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold tracking-wider">
-                      Total Civil Works
-                    </span>
-                  </div>
+                  {(() => {
+                    const totalWorksCalc = completedWorks + pendingWorks
+                    const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
+                    return (
+                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+                        <span className="text-xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
+                          {compPct}%
+                        </span>
+                        <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
+                          Delivered
+                        </span>
+                      </div>
+                    )
+                  })()}
                 </div>
 
                 {(() => {
@@ -539,18 +545,18 @@ export const NationalDashboard: React.FC = () => {
                   const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
                   const pendPct = totalWorksCalc > 0 ? ((pendingWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
                   return (
-                    <div className="space-y-3.5">
+                    <div className="space-y-2.5">
                       <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
                         <div className="flex items-center justify-between text-xs mb-1">
                           <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: chartTheme.clean.hex }} />
+                            <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-emerald-500 shadow-sm" />
                             <span className="font-bold text-[var(--text-primary)]">Completed & Certified</span>
                           </div>
                           <span className="text-xs font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
                             {compPct}%
                           </span>
                         </div>
-                        <div className="flex items-baseline justify-between pt-1">
+                        <div className="flex items-baseline justify-between pt-0.5">
                           <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
                             {completedWorks.toLocaleString('en-IN')} works
                           </span>
@@ -561,18 +567,34 @@ export const NationalDashboard: React.FC = () => {
                       <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
                         <div className="flex items-center justify-between text-xs mb-1">
                           <div className="flex items-center gap-2">
-                            <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: chartTheme.utilized.hex }} />
+                            <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-indigo-500 shadow-sm" />
                             <span className="font-bold text-[var(--text-primary)]">Active in Progress Queue</span>
                           </div>
-                          <span className="text-xs font-black text-amber-600 dark:text-amber-400 tabular-nums">
+                          <span className="text-xs font-black text-indigo-600 dark:text-indigo-400 tabular-nums">
                             {pendPct}%
                           </span>
                         </div>
-                        <div className="flex items-baseline justify-between pt-1">
+                        <div className="flex items-baseline justify-between pt-0.5">
                           <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
                             {pendingWorks.toLocaleString('en-IN')} works
                           </span>
                           <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹1,577 Cr</span>
+                        </div>
+                      </div>
+
+                      {/* Dual Progress Bar */}
+                      <div className="pt-0.5">
+                        <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden flex">
+                          <div
+                            className="h-full bg-emerald-500 transition-all duration-500"
+                            style={{ width: `${compPct}%` }}
+                            title={`Completed: ${completedWorks.toLocaleString()} works (${compPct}%)`}
+                          />
+                          <div
+                            className="h-full bg-indigo-500 transition-all duration-500"
+                            style={{ width: `${pendPct}%` }}
+                            title={`In Progress: ${pendingWorks.toLocaleString()} works (${pendPct}%)`}
+                          />
                         </div>
                       </div>
                     </div>

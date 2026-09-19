@@ -423,19 +423,75 @@ export const MPDashboard: React.FC = () => {
       {activeTab === 'spending' && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="lux-card p-5 space-y-4">
-            <h3 className="font-bold text-sm text-[var(--text-primary)] border-b border-[var(--border-primary)] pb-2">
-              Delivery Completion Metrics
-            </h3>
+            <div className="flex items-center justify-between border-b border-[var(--border-primary)] pb-2">
+              <h3 className="font-bold text-sm text-[var(--text-primary)]">
+                Delivery Completion Metrics
+              </h3>
+              {(() => {
+                const tot = completedWorks + ongoingWorks
+                const compPct = tot > 0 ? ((completedWorks / tot) * 100).toFixed(1) : '0.0'
+                return (
+                  <span className="px-2 py-0.5 rounded-full text-xs font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 tabular-nums">
+                    {compPct}% Delivered
+                  </span>
+                )
+              })()}
+            </div>
             <div className="grid grid-cols-2 gap-3 text-center">
-              <div className="p-4 rounded-xl bg-[var(--surface-alt)]">
-                <span className="text-xs text-[var(--text-secondary)] block">Completed Projects</span>
-                <span className="text-2xl font-extrabold text-emerald-600">{completedWorks}</span>
+              <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                <span className="text-xs text-[var(--text-secondary)] block font-medium">Completed Projects</span>
+                <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">{completedWorks}</span>
+                {(() => {
+                  const tot = completedWorks + ongoingWorks
+                  const compPct = tot > 0 ? ((completedWorks / tot) * 100).toFixed(1) : '0.0'
+                  return (
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">
+                      {compPct}% of total
+                    </span>
+                  )
+                })()}
               </div>
-              <div className="p-4 rounded-xl bg-[var(--surface-alt)]">
-                <span className="text-xs text-[var(--text-secondary)] block">Active in Execution</span>
-                <span className="text-2xl font-extrabold text-amber-600">{ongoingWorks}</span>
+              <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
+                <span className="text-xs text-[var(--text-secondary)] block font-medium">Active in Execution</span>
+                <span className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tabular-nums">{ongoingWorks}</span>
+                {(() => {
+                  const tot = completedWorks + ongoingWorks
+                  const pendPct = tot > 0 ? ((ongoingWorks / tot) * 100).toFixed(1) : '0.0'
+                  return (
+                    <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">
+                      {pendPct}% of total
+                    </span>
+                  )
+                })()}
               </div>
             </div>
+
+            {/* Visual Delivery Track */}
+            {(() => {
+              const tot = completedWorks + ongoingWorks
+              const compPct = tot > 0 ? ((completedWorks / tot) * 100).toFixed(1) : '0.0'
+              const pendPct = tot > 0 ? ((ongoingWorks / tot) * 100).toFixed(1) : '0.0'
+              return (
+                <div className="pt-1 space-y-1">
+                  <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden flex">
+                    <div
+                      className="h-full bg-emerald-500 transition-all duration-500"
+                      style={{ width: `${compPct}%` }}
+                      title={`Completed: ${completedWorks} (${compPct}%)`}
+                    />
+                    <div
+                      className="h-full bg-indigo-500 transition-all duration-500"
+                      style={{ width: `${pendPct}%` }}
+                      title={`In Progress: ${ongoingWorks} (${pendPct}%)`}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center text-[9px] text-[var(--text-tertiary)] font-semibold">
+                    <span>{tot} Total Projects</span>
+                    <span>Target: 100% Delivery</span>
+                  </div>
+                </div>
+              )
+            })()}
           </div>
 
           <div className="lux-card p-5 space-y-4">
