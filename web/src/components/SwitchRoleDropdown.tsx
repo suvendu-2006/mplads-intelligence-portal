@@ -1,22 +1,23 @@
 import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
-import { Shield, ChevronDown, Check, User, Building2, Landmark, MapPin, ChevronRight, Search, X } from 'lucide-react'
+import { Shield, ChevronDown, Check, User, Building2, Landmark, MapPin, ChevronRight, Search, X, ArrowRight, SlidersHorizontal } from 'lucide-react'
 import { t } from '../lib/i18n'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 
-// Exactly 4 Switch Role Options:
+// Exactly 5 Governance Roles:
 // 1. User (Public Citizen)
-// 2. MP (Member of Parliament)
+// 2. MoSPI (Apex Central Authority)
 // 3. State Nodal (State Nodal Officer)
-// 4. District Authority (District Collector / Authority)
+// 4. District Authority (District Collector / DM)
+// 5. MP (Member of Parliament)
 const ROLES = [
-  { id: 'viewer', label: 'User', sublabel: 'Public Citizen & National Transparency', icon: User },
-  { id: 'mospi', label: 'MoSPI', sublabel: 'Ministry of Statistics & Programme Implementation (Apex Central Authority - Full System Action)', icon: Shield },
-  { id: 'mp', label: 'MP', sublabel: 'Member of Parliament (Works Ledger & Allocations)', icon: Landmark },
-  { id: 'state_nodal_officer', label: 'State Nodal', sublabel: 'State Nodal Command & Jurisdiction Supervision', icon: Building2 },
-  { id: 'district_authority', label: 'District Authority', sublabel: 'District Collector / DM Sanctions & MB Inspection', icon: MapPin },
+  { id: 'viewer', label: 'User', sublabel: 'Public Citizen & National Transparency Overview', icon: User, targetPage: 'National Overview' },
+  { id: 'mospi', label: 'MoSPI', sublabel: 'Central Authority (Full System Action & Audit Desk)', icon: Shield, targetPage: 'Audit Desk' },
+  { id: 'state_nodal_officer', label: 'State Nodal', sublabel: 'State Nodal Command & Jurisdiction Supervision', icon: Building2, targetPage: 'State Console' },
+  { id: 'district_authority', label: 'District Authority', sublabel: 'District Collector / DM Sanctions & Inspection Desk', icon: MapPin, targetPage: 'District Console' },
+  { id: 'mp', label: 'MP', sublabel: 'Member of Parliament (Works Ledger & Allocations)', icon: Landmark, targetPage: 'MP Console' },
 ]
 
 // Complete list of all 36 States & Union Territories + "ALL" option
@@ -65,21 +66,27 @@ export const SwitchRoleDropdown: React.FC = () => {
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
 
-  // Track which role questionnaire is currently expanded
+  // Track which role questionnaire is currently expanded for jurisdiction customization
   const [expandedRole, setExpandedRole] = useState<string | null>(null)
 
   // State Nodal selection
-  const [selectedState, setSelectedState] = useState(user.state || 'ALL STATES & UNION TERRITORIES')
+  const [selectedState, setSelectedState] = useState(
+    user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
+      ? user.state
+      : 'ASSAM'
+  )
 
-  // District Authority (DM) 2-step selection:
-  // Step 1: Select State
-  // Step 2: Select Respective District within that State
+  // District Authority (DM) selection: State & District
   const [dmState, setDmState] = useState<string>(
     user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
       ? user.state
-      : 'UTTAR PRADESH'
+      : 'HIMACHAL PRADESH'
   )
-  const [dmDistrict, setDmDistrict] = useState<string>(user.district || 'ALL DISTRICTS')
+  const [dmDistrict, setDmDistrict] = useState<string>(
+    user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
+      ? user.district
+      : 'SHIMLA'
+  )
 
   // MP selection & filters (State, House, Search across all 774 parliamentary seats)
   const [mpState, setMpState] = useState<string>(
@@ -89,7 +96,9 @@ export const SwitchRoleDropdown: React.FC = () => {
   )
   const [mpHouse, setMpHouse] = useState<'ALL' | 'Lok Sabha' | 'Rajya Sabha'>('ALL')
   const [mpSearch, setMpSearch] = useState<string>('')
-  const [selectedMpId, setSelectedMpId] = useState<string>(user.mpId || 'ALL')
+  const [selectedMpId, setSelectedMpId] = useState<string>(
+    user.mpId && user.mpId !== 'ALL' ? user.mpId : '6a932b5bcd944524379eddd9'
+  )
 
   // Filtered parliamentary seats based on State, House, and Search Query
   const filteredMps = useMemo(() => {
@@ -111,38 +120,64 @@ export const SwitchRoleDropdown: React.FC = () => {
     })
   }, [mpState, mpHouse, mpSearch])
 
-  // Handle toggle open/close
-  const toggleOpen = () => {
-    if (!isOpen) {
-      setExpandedRole(user.role)
-    }
-    setIsOpen(!isOpen)
-  }
+  const selectedMpName = useMemo(() => {
+    if (selectedMpId === 'ALL') return 'Anurag Singh Thakur'
+    const found = ALL_MP_SEATS.find(m => m.id === selectedMpId)
+    return found ? (found.constituency !== 'Sitting Rajya Sabha' ? `${found.constituency} (${found.name.split(' ').slice(-1)[0]})` : found.name) : 'Anurag Singh Thakur'
+  }, [selectedMpId])
 
   // Available districts for the chosen dmState
   const availableDistricts = STATE_DISTRICTS_MAP[dmState] || STATE_DISTRICTS_MAP[dmState.toUpperCase()] || []
 
-  // Handle clicking a role option in the list
+  // Toggle open/close
+  const toggleOpen = () => {
+    if (!isOpen) {
+      setExpandedRole(null)
+    }
+    setIsOpen(!isOpen)
+  }
+
+  // DIRECT ROLE SWITCH HANDLER: Immediately switches role & navigates to respective section!
   const handleRoleCardClick = async (roleId: string) => {
     if (roleId === 'viewer') {
-      // User role requires no questions -> directly switch and go to national overview
-      await switchRole('viewer')
+      await switchRole('viewer', 'ALL', 'ALL', 'ALL', 'All Members of Parliament')
       setIsOpen(false)
       navigate('/')
       return
     }
 
     if (roleId === 'mospi') {
-      // MoSPI has apex central oversight over all 36 States, all Districts, and all MPs
       await switchRole('mospi', 'ALL', 'ALL', 'ALL', 'All Members of Parliament')
       setIsOpen(false)
       navigate('/audit')
       return
     }
 
-    // For State Nodal, District Authority, or MP:
-    // Expand the questionnaire asking for their jurisdiction / seat!
-    setExpandedRole(roleId)
+    if (roleId === 'state_nodal_officer') {
+      const stateParam = (selectedState && selectedState !== 'ALL STATES & UNION TERRITORIES') ? selectedState : 'ASSAM'
+      await switchRole('state_nodal_officer', stateParam)
+      setIsOpen(false)
+      navigate('/my-state')
+      return
+    }
+
+    if (roleId === 'district_authority') {
+      const stateParam = dmState || 'HIMACHAL PRADESH'
+      const distParam = (dmDistrict && dmDistrict !== 'ALL DISTRICTS') ? dmDistrict : (availableDistricts[0] || 'SHIMLA')
+      await switchRole('district_authority', stateParam, distParam)
+      setIsOpen(false)
+      navigate(`/districts/${encodeURIComponent(distParam)}`)
+      return
+    }
+
+    if (roleId === 'mp') {
+      const targetId = (selectedMpId && selectedMpId !== 'ALL') ? selectedMpId : '6a932b5bcd944524379eddd9'
+      const found = ALL_MP_SEATS.find(m => m.id === targetId) || ALL_MP_SEATS[0]
+      await switchRole('mp', found?.state || 'Himachal Pradesh', undefined, targetId, found?.name || 'Anurag Singh Thakur')
+      setIsOpen(false)
+      navigate('/mp-dashboard')
+      return
+    }
   }
 
   const getRoleDisplayTitle = () => {
@@ -152,13 +187,13 @@ export const SwitchRoleDropdown: React.FC = () => {
     if (user.role === 'state_nodal_officer') {
       const st = user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
         ? user.state.split(' ')[0]
-        : 'All States'
+        : 'Assam'
       return `State Nodal (${st})`
     }
     if (user.role === 'district_authority') {
       const dist = user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
         ? user.district
-        : 'All Districts'
+        : 'Shimla'
       return `District Authority (${dist})`
     }
     if (user.role === 'mp') {
@@ -169,17 +204,18 @@ export const SwitchRoleDropdown: React.FC = () => {
       }
       const mpN = user.mpName && !user.mpName.includes('All')
         ? user.mpName.split(' ').slice(-1)[0]
-        : 'All MPs'
+        : 'Hamirpur'
       return `MP (${mpN})`
     }
-    return 'User'
+    return 'User (Citizen)'
   }
 
   return (
     <div className="relative">
       <button
         onClick={toggleOpen}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-primary)] text-xs font-medium transition shadow-sm"
+        aria-label="Switch User Role"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-primary)] text-xs font-medium transition shadow-sm cursor-pointer"
       >
         <div className="text-left">
           <div className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] tracking-wider leading-tight">
@@ -194,60 +230,120 @@ export const SwitchRoleDropdown: React.FC = () => {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
-          <div className="absolute right-0 mt-2 w-96 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-3 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-            <div className="px-2 py-1.5 border-b border-[var(--border-primary)] mb-2">
-              <div className="text-xs font-bold uppercase tracking-wider text-[var(--brand-primary)] flex items-center gap-1.5">
-                <Shield className="w-3.5 h-3.5" /> Demo Persona Switcher
+          {/* Backdrop overlay to close on outside click */}
+          <div className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[1px]" onClick={() => setIsOpen(false)} />
+
+          <div className="absolute right-0 mt-2 w-[400px] max-w-[92vw] rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-3.5 shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+            {/* Header */}
+            <div className="px-2 py-1.5 border-b border-[var(--border-primary)] mb-2.5 flex items-center justify-between">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-wider text-[var(--brand-primary)] flex items-center gap-1.5">
+                  <Shield className="w-3.5 h-3.5" /> Demo Persona Switcher
+                </div>
+                <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">
+                  Click any profile to switch instantly to that governance dashboard
+                </p>
               </div>
-              <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">
-                Select your governance persona and jurisdiction scope
-              </p>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-1 rounded-lg text-[var(--text-tertiary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)] transition cursor-pointer"
+              >
+                <X size={14} />
+              </button>
             </div>
 
-            <div className="space-y-1.5 max-h-[75vh] overflow-y-auto pr-0.5">
+            {/* List of Role Cards */}
+            <div className="space-y-2 max-h-[75vh] overflow-y-auto pr-0.5">
               {ROLES.map((r) => {
                 const isActive = user.role === r.id
                 const isExpanded = expandedRole === r.id
                 const Icon = r.icon
+                const hasScopeConfig = ['state_nodal_officer', 'district_authority', 'mp'].includes(r.id)
+
                 return (
-                  <div key={r.id} className="rounded-xl border border-transparent transition overflow-hidden">
-                    <button
+                  <div
+                    key={r.id}
+                    className={`rounded-xl border transition-all overflow-hidden ${
+                      isActive
+                        ? 'border-[var(--brand-primary)] bg-[var(--brand-primary)]/5 shadow-xs'
+                        : 'border-[var(--border-primary)] bg-[var(--surface-primary)] hover:border-[var(--brand-primary)] hover:bg-[var(--surface-alt)]/80 hover:shadow-xs'
+                    }`}
+                  >
+                    {/* Main Row: Click to switch role & navigate directly! */}
+                    <div
                       onClick={() => handleRoleCardClick(r.id)}
-                      className={`w-full flex items-center justify-between p-2.5 rounded-xl text-left text-xs transition ${
-                        isActive
-                          ? 'bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/40 text-[var(--text-primary)] font-bold'
-                          : isExpanded
-                          ? 'bg-[var(--surface-alt)] border border-[var(--border-primary)]'
-                          : 'hover:bg-[var(--surface-alt)] text-[var(--text-secondary)]'
-                      }`}
+                      className="w-full flex items-center justify-between p-2.5 text-left text-xs transition cursor-pointer group select-none active:scale-[0.995]"
                     >
-                      <div className="flex items-start gap-2.5">
-                        <div className={`p-1.5 rounded-lg mt-0.5 ${isActive ? 'bg-[var(--brand-primary)] text-white' : 'bg-[var(--surface-alt)] text-[var(--text-secondary)]'}`}>
-                          <Icon size={14} />
+                      <div className="flex items-start gap-2.5 min-w-0 pr-2">
+                        <div className={`p-2 rounded-lg mt-0.5 shrink-0 ${
+                          isActive
+                            ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                            : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] group-hover:text-[var(--text-primary)]'
+                        }`}>
+                          <Icon size={16} />
                         </div>
-                        <div>
-                          <div className="font-bold text-[var(--text-primary)] text-xs">{r.label}</div>
-                          <div className="text-[10px] text-[var(--text-secondary)] leading-snug mt-0.5">{r.sublabel}</div>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="font-bold text-[var(--text-primary)] text-xs">{r.label}</span>
+                          </div>
+                          <div className="text-[10px] text-[var(--text-secondary)] leading-snug mt-0.5">
+                            {r.sublabel}
+                          </div>
+                          <div className="text-[10px] font-semibold text-[var(--brand-primary)] mt-1 flex items-center gap-1">
+                            <span>Opens {r.targetPage}</span>
+                            <ArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
+                          </div>
                         </div>
                       </div>
-                      <div className="flex items-center gap-1 shrink-0 ml-1">
-                        {isActive && <Check className="w-4 h-4 text-[var(--brand-primary)] mr-1" />}
-                        {r.id !== 'viewer' && (
-                          <ChevronRight className={`w-3.5 h-3.5 text-[var(--text-tertiary)] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}`} />
+
+                      {/* Right action: Scope toggle & status indicator */}
+                      <div className="flex items-center gap-2 shrink-0 ml-2">
+                        {hasScopeConfig && (
+                          <button
+                            type="button"
+                            title="Customize State or District Scope"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setExpandedRole(isExpanded ? null : r.id)
+                            }}
+                            className={`px-2 py-1 rounded-lg border text-[10px] font-bold flex items-center gap-1 transition cursor-pointer ${
+                              isExpanded
+                                ? 'bg-[var(--surface-primary)] border-[var(--brand-primary)] text-[var(--brand-primary)]'
+                                : 'bg-[var(--surface-alt)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--brand-primary)]/40'
+                            }`}
+                          >
+                            <SlidersHorizontal size={11} />
+                            <span className="text-[10px]">Scope</span>
+                            <ChevronDown size={10} className={`transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
+                          </button>
+                        )}
+
+                        {isActive ? (
+                          <div
+                            title="Active Persona"
+                            className="w-7 h-7 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0"
+                          >
+                            <Check size={14} strokeWidth={2.5} />
+                          </div>
+                        ) : (
+                          <div className="w-7 h-7 rounded-full flex items-center justify-center text-[var(--text-tertiary)] group-hover:text-[var(--brand-primary)] group-hover:bg-[var(--surface-alt)] transition-all shrink-0">
+                            <ChevronRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
+                          </div>
                         )}
                       </div>
-                    </button>
+                    </div>
 
-                    {/* Question for State Nodal: Ask which state, then land on that state's overall dashboard */}
+                    {/* Scope Config Drawer for State Nodal */}
                     {r.id === 'state_nodal_officer' && isExpanded && (
-                      <div className="pl-9 pr-2 py-3 mt-1.5 bg-[var(--surface-alt)] rounded-xl border border-[var(--border-primary)] shadow-xs animate-in fade-in duration-150">
-                        <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1.5 flex items-center justify-between">
-                          <span className="text-[var(--brand-primary)]">Which State do you represent?</span>
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-3 py-3 border-t border-[var(--border-primary)] bg-[var(--surface-alt)] space-y-2 animate-in fade-in duration-150"
+                      >
+                        <div className="text-[11px] font-extrabold text-[var(--text-primary)] flex items-center justify-between">
+                          <span className="text-[var(--brand-primary)]">Select State Jurisdiction:</span>
                           <span className="text-[9px] text-[var(--text-tertiary)] font-bold">36 States &amp; UTs</span>
                         </div>
                         <select
-                          autoFocus
                           value={selectedState}
                           onChange={async (e) => {
                             const val = e.target.value
@@ -256,36 +352,41 @@ export const SwitchRoleDropdown: React.FC = () => {
                             const stateParam = val === 'ALL STATES & UNION TERRITORIES' ? 'ALL' : val
                             await switchRole('state_nodal_officer', stateParam)
                             setIsOpen(false)
-                            if (stateParam === 'ALL') {
-                              navigate('/states')
-                            } else {
-                              navigate(`/states/${encodeURIComponent(stateParam)}`)
-                            }
+                            navigate('/my-state')
                           }}
                           className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold shadow-xs cursor-pointer"
                         >
-                          <option value="" disabled>-- Select State / Union Territory --</option>
-                          {ALL_36_STATES_AND_UTS.map((st) => (
+                          {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
                             <option key={st} value={st}>
                               {st}
                             </option>
                           ))}
                         </select>
-                        <p className="text-[10px] text-[var(--text-tertiary)] mt-1.5 font-medium">
-                          Selecting a state will immediately open that state&apos;s overall dashboard.
-                        </p>
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const stateParam = selectedState || 'ASSAM'
+                            await switchRole('state_nodal_officer', stateParam)
+                            setIsOpen(false)
+                            navigate('/my-state')
+                          }}
+                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-primary)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                        >
+                          <span>Confirm &amp; Open State Console ({selectedState})</span>
+                          <ArrowRight size={13} />
+                        </button>
                       </div>
                     )}
 
-                    {/* Question for District Authority (DM): 2 Questions as requested:
-                        Question 1: Select State
-                        Question 2: Select Respective District, then land on that district's dashboard */}
+                    {/* Scope Config Drawer for District Authority */}
                     {r.id === 'district_authority' && isExpanded && (
-                      <div className="pl-9 pr-2 py-3 mt-1.5 bg-[var(--surface-alt)] rounded-xl border border-[var(--border-primary)] shadow-xs space-y-2.5 animate-in fade-in duration-150">
-                        {/* Question 1: Selection of State */}
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-3 py-3 border-t border-[var(--border-primary)] bg-[var(--surface-alt)] space-y-2.5 animate-in fade-in duration-150"
+                      >
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--brand-primary)]">1. Which State / UT is your Collectorate in?</span>
+                            <span className="text-[var(--brand-primary)]">1. State:</span>
                             <span className="text-[9px] text-[var(--text-tertiary)] font-bold">36 States</span>
                           </div>
                           <select
@@ -294,11 +395,10 @@ export const SwitchRoleDropdown: React.FC = () => {
                               const newState = e.target.value
                               setDmState(newState)
                               const dists = STATE_DISTRICTS_MAP[newState] || STATE_DISTRICTS_MAP[newState.toUpperCase()] || []
-                              setDmDistrict(dists[0] || 'ALL DISTRICTS')
+                              setDmDistrict(dists[0] || 'SHIMLA')
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-lg px-2.5 py-1.5 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold cursor-pointer"
                           >
-                            <option value="" disabled>-- Select State --</option>
                             {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
                               <option key={st} value={st}>
                                 {st}
@@ -307,10 +407,9 @@ export const SwitchRoleDropdown: React.FC = () => {
                           </select>
                         </div>
 
-                        {/* Question 2: Selection of Respective District */}
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--brand-primary)]">2. Select Respective District:</span>
+                            <span className="text-[var(--brand-primary)]">2. District:</span>
                             <span className="text-[9px] text-[var(--text-tertiary)] font-bold">{availableDistricts.length} Districts</span>
                           </div>
                           <select
@@ -321,16 +420,10 @@ export const SwitchRoleDropdown: React.FC = () => {
                               setDmDistrict(newDist)
                               await switchRole('district_authority', dmState, newDist)
                               setIsOpen(false)
-                              if (newDist !== 'ALL DISTRICTS') {
-                                navigate(`/districts/${encodeURIComponent(newDist)}`)
-                              } else {
-                                navigate('/district-dashboard')
-                              }
+                              navigate(`/districts/${encodeURIComponent(newDist)}`)
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-primary)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold shadow-xs cursor-pointer"
                           >
-                            <option value="" disabled>-- Select District --</option>
-                            <option value="ALL DISTRICTS">All Districts ({dmState})</option>
                             {availableDistricts.map((d) => (
                               <option key={d} value={d}>
                                 {d}
@@ -338,27 +431,37 @@ export const SwitchRoleDropdown: React.FC = () => {
                             ))}
                           </select>
                         </div>
-                        <p className="text-[10px] text-[var(--text-tertiary)] font-medium">
-                          Selecting a district will immediately open that district&apos;s inspection dashboard.
-                        </p>
+
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const targetDist = dmDistrict || availableDistricts[0] || 'SHIMLA'
+                            await switchRole('district_authority', dmState, targetDist)
+                            setIsOpen(false)
+                            navigate(`/districts/${encodeURIComponent(targetDist)}`)
+                          }}
+                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-primary)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                        >
+                          <span>Confirm &amp; Open District Console ({dmDistrict})</span>
+                          <ArrowRight size={13} />
+                        </button>
                       </div>
                     )}
 
-                    {/* Question for MP: Parliamentary Seat Scope across all 774 Parliamentary Seats */}
+                    {/* Scope Config Drawer for MP */}
                     {r.id === 'mp' && isExpanded && (
-                      <div className="pl-9 pr-2 py-3 mt-1.5 bg-[var(--surface-alt)] rounded-xl border border-[var(--brand-accent)]/30 shadow-xs space-y-2.5 animate-in fade-in duration-150">
-                        {/* Question 1: Selection of State / UT or Pan-India */}
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-3 py-3 border-t border-[var(--border-primary)] bg-[var(--surface-alt)] space-y-2.5 animate-in fade-in duration-150"
+                      >
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--gold-text)]">1. Which State / UT is your Parliamentary Seat in?</span>
+                            <span className="text-[var(--gold-text)]">1. State Scope:</span>
                             <span className="text-[9px] text-[var(--text-tertiary)] font-bold">36 States + Pan-India</span>
                           </div>
                           <select
                             value={mpState}
-                            onChange={(e) => {
-                              const newState = e.target.value
-                              setMpState(newState)
-                            }}
+                            onChange={(e) => setMpState(e.target.value)}
                             className="w-full text-xs bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-lg px-2.5 py-1.5 text-[var(--text-primary)] outline-none focus:border-[var(--brand-accent)] font-bold cursor-pointer"
                           >
                             <option value="ALL">ALL STATES &amp; UNION TERRITORIES (Pan-India)</option>
@@ -370,22 +473,18 @@ export const SwitchRoleDropdown: React.FC = () => {
                           </select>
                         </div>
 
-                        {/* Question 2: Selection of Parliamentary Seat / MP */}
                         <div>
                           <div className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 flex items-center justify-between">
-                            <span className="text-[var(--gold-text)]">2. Select Parliamentary Seat / MP:</span>
-                            <span className="text-[9px] text-[var(--text-tertiary)] font-bold">
-                              {filteredMps.length} Seats Available
-                            </span>
+                            <span className="text-[var(--gold-text)]">2. Member of Parliament Seat:</span>
+                            <span className="text-[9px] text-[var(--text-tertiary)] font-bold">{filteredMps.length} Seats</span>
                           </div>
 
-                          {/* Quick Filter Controls: Search & House Selector */}
                           <div className="flex items-center gap-1.5 mb-1.5">
                             <div className="relative flex-1">
                               <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-2.5 top-1/2 -translate-y-1/2" />
                               <input
                                 type="text"
-                                placeholder="Search seat or MP (e.g. Varanasi, Shimla)..."
+                                placeholder="Search seat or MP..."
                                 value={mpSearch}
                                 onChange={(e) => setMpSearch(e.target.value)}
                                 className="w-full text-xs bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-lg pl-8 pr-6 py-1.5 text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-accent)] font-medium"
@@ -415,24 +514,17 @@ export const SwitchRoleDropdown: React.FC = () => {
                             value={selectedMpId}
                             onChange={async (e) => {
                               const val = e.target.value
+                              if (!val) return
                               setSelectedMpId(val)
-                              if (val === 'ALL') {
-                                await switchRole('mp', 'ALL', undefined, 'ALL', 'All Members of Parliament')
+                              const found = ALL_MP_SEATS.find(m => m.id === val)
+                              if (found) {
+                                await switchRole('mp', found.state, undefined, found.id, found.name)
                                 setIsOpen(false)
-                                navigate('/mps')
-                              } else {
-                                const found = ALL_MP_SEATS.find(m => m.id === val)
-                                if (found) {
-                                  await switchRole('mp', found.state, undefined, found.id, found.name)
-                                  setIsOpen(false)
-                                  navigate(`/mps/${encodeURIComponent(found.id)}`)
-                                }
+                                navigate('/mp-dashboard')
                               }
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border-2 border-[var(--brand-accent)]/40 rounded-lg px-2.5 py-2 text-[var(--text-primary)] outline-none focus:border-[var(--brand-accent)] font-bold shadow-xs cursor-pointer"
                           >
-                            <option value="" disabled>-- Select MP / Parliamentary Seat --</option>
-                            <option value="ALL">All Members of Parliament — National (Pan-India)</option>
                             {filteredMps.map((m) => (
                               <option key={m.id} value={m.id}>
                                 {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.name} ({m.house}, {m.state})
@@ -441,9 +533,19 @@ export const SwitchRoleDropdown: React.FC = () => {
                           </select>
                         </div>
 
-                        <p className="text-[10px] text-[var(--text-tertiary)] font-medium">
-                          Selecting an MP will immediately open that member&apos;s allocation ledger.
-                        </p>
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const found = ALL_MP_SEATS.find(m => m.id === selectedMpId) || ALL_MP_SEATS[0]
+                            await switchRole('mp', found?.state || 'Himachal Pradesh', undefined, found?.id, found?.name)
+                            setIsOpen(false)
+                            navigate('/mp-dashboard')
+                          }}
+                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[var(--brand-accent)] hover:opacity-90 text-white font-bold text-xs shadow transition cursor-pointer"
+                        >
+                          <span>Confirm &amp; Open MP Console ({selectedMpName})</span>
+                          <ArrowRight size={13} />
+                        </button>
                       </div>
                     )}
                   </div>

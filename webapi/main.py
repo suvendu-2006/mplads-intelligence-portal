@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.gzip import GZipMiddleware
 
 from webapi.routers import (
-    national, states, mps, flags, entity_risks, roles, meta, map, districts
+    national, states, mps, flags, entity_risks, roles, meta, map, districts, constituencies
 )
 from webapi.static_serve import mount_static_files
 from webapi.data_service import load_national_csv, load_states_csv
@@ -71,6 +71,8 @@ async def add_performance_cache_headers(request: Request, call_next):
         if path.startswith("/api/"):
             if not response.headers.get("Cache-Control"):
                 response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+    elif request.method in ["POST", "PUT", "DELETE", "PATCH"]:
+        response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
     return response
 
 allowed_origins = os.getenv(
@@ -98,6 +100,7 @@ api_routers = [
     (meta.router, "Metadata"),
     (map.router, "GIS Map"),
     (districts.router, "Districts"),
+    (constituencies.router, "Constituencies"),
 ]
 for router, tag in api_routers:
     app.include_router(router, prefix="/api", tags=[tag])

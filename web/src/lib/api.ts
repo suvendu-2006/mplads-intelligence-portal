@@ -13,8 +13,8 @@ interface CacheRecord {
 
 // In-memory instant RAM cache for sub-millisecond responses
 const memoryCache = new Map<string, CacheRecord>()
-// In-flight promise map to deduplicate identical concurrent GET requests
-const inFlightRequests = new Map<string, Promise<Response>>()
+// In-flight promise map to deduplicate identical concurrent GET requests safely
+const inFlightRequests = new Map<string, Promise<CacheRecord | Response>>()
 const STALE_TTL_MS = 300000 // 5 minutes high-speed stale-while-revalidate window
 const CACHE_VERSION = 'v2_fast_20260919'
 const SESSION_CACHE_PREFIX = `satark_swr_${CACHE_VERSION}_`
@@ -57,12 +57,6 @@ export function clearApiCache(pattern?: string) {
         }
       } catch {}
     }
-    // Silently notify backend to flush server-side memory caches
-    if (typeof window !== 'undefined') {
-      try {
-        window.fetch('/api/meta/clear-cache', { method: 'POST' }).catch(() => {})
-      } catch {}
-    }
   }
 }
 
@@ -74,7 +68,7 @@ async function fetchAndCache(
   init: RequestInit,
   cacheKey: string,
   originalFetch: typeof window.fetch
-): Promise<Response> {
+): Promise<CacheRecord | Response> {
   const response = await originalFetch(input, init)
   if (response.ok) {
     try {
@@ -98,6 +92,7 @@ async function fetchAndCache(
       } catch {
         // Ignore quota limits
       }
+      return record
     } catch (e) {
       console.warn('[SATARK-CACHE] Failed to cache response:', e)
     }
@@ -214,18 +209,23 @@ export function initApiSync() {
         })
       }
 
-      // Deduplicate concurrent in-flight requests for identical cacheKey
+      // Deduplicate concurrent in-flight requests for identical cacheKey safely
       if (inFlightRequests.has(cacheKey)) {
         try {
           const inFlightRes = await inFlightRequests.get(cacheKey)!
-          return inFlightRes.clone()
+          if (inFlightRes && 'body' in inFlightRes && typeof inFlightRes.body === 'string') {
+            return new Response(inFlightRes.body, {
+              status: inFlightRes.status,
+              statusText: inFlightRes.statusText,
+              headers: new Headers(inFlightRes.headers),
+            })
+          }
         } catch {
           // If in-flight failed, continue with new attempt
         }
       }
 
-      // Not cached: execute network request with in-flight deduplication
-      let response: Response
+      // Not cached: execute network request with safe in-flight deduplication
       const fetchPromise = (async () => {
         try {
           return await fetchAndCache(input, modifiedInit, cacheKey, originalFetch)
@@ -236,12 +236,21 @@ export function initApiSync() {
 
       inFlightRequests.set(cacheKey, fetchPromise)
 
+      let result: CacheRecord | Response
       try {
-        response = await fetchPromise
+        result = await fetchPromise
       } catch (networkErr) {
         console.warn('[SATARK-SYNC] Network error contacting API:', networkErr)
         throw networkErr
       }
+
+      let response: Response = (result && 'body' in result && typeof result.body === 'string')
+        ? new Response(result.body, {
+            status: result.status,
+            statusText: result.statusText,
+            headers: new Headers(result.headers),
+          })
+        : (result as Response)
 
       // Transparent Session Auto-Healing
       // If the backend restarted or session expired (HTTP 403 / 401), re-sync with /api/switch-role and retry
@@ -271,7 +280,14 @@ export function initApiSync() {
 
             // Retry original request with freshly minted token
             headers.set('X-Session-Token', newToken)
-            response = await fetchAndCache(input, { ...init, headers }, cacheKey, originalFetch)
+            const retryRes = await fetchAndCache(input, { ...init, headers }, cacheKey, originalFetch)
+            response = (retryRes && 'body' in retryRes && typeof retryRes.body === 'string')
+              ? new Response(retryRes.body, {
+                  status: retryRes.status,
+                  statusText: retryRes.statusText,
+                  headers: new Headers(retryRes.headers),
+                })
+              : (retryRes as Response)
             console.log('[SATARK-SYNC] Session seamlessly re-synchronized with backend.')
           }
         } catch (reconnectErr) {

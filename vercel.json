@@ -4,8 +4,8 @@
   "buildCommand": "cd web && npm install && npm run build",
   "outputDirectory": "web/dist",
   "functions": {
-    "api/*.py": {
-      "includeFiles": "api/**"
+    "api/index.py": {
+      "includeFiles": "api/mplads_dev.db.gz"
     }
   },
   "headers": [
@@ -44,18 +44,13 @@
           "value": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000"
         }
       ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=60, s-maxage=86400, stale-while-revalidate=604800"
-        }
-      ]
     }
   ],
   "rewrites": [
+    {
+      "source": "/api",
+      "destination": "/api/index.py"
+    },
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py"

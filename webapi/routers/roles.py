@@ -56,7 +56,7 @@ def get_my_state(
             status_code=403,
             detail=f"Access denied. State Nodal Officer role required (current: '{role}')"
         )
-    assigned_state = state or user.get("state") or "ALL"
+    assigned_state = state or user.get("state") or "UTTAR PRADESH"
     if assigned_state.upper() in ["ALL", "ALL STATES", "ALL STATES & UNION TERRITORIES"]:
         assigned_state = "UTTAR PRADESH"  # Canonical representative state for demonstration
     return get_state_detail(state=assigned_state, db=db)

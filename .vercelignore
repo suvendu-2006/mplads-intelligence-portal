@@ -61,3 +61,4 @@ seed_all_detectors.py
 build
 app.egg-info
 untitled folder
+.vercel_python_packages

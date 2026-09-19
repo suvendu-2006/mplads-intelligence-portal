@@ -154,15 +154,15 @@ export const Layout: React.FC = () => {
 
             {user.role === 'state_nodal_officer' && (
               <Link
-                to={user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `/states/${encodeURIComponent(user.state)}` : '/states'}
-                onMouseEnter={() => import('../pages/StateDetail').catch(() => {})}
-                className={navLinkClasses(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `/states/${encodeURIComponent(user.state)}` : '/states')}
+                to="/my-state"
+                onMouseEnter={() => import('../pages/MyState').catch(() => {})}
+                className={navLinkClasses('/my-state')}
               >
                 <MapPin size={14} className="text-emerald-500" />
                 <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
-                  State Console {user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `(${user.state})` : '(All)'}
+                  State Console {user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `(${user.state})` : ''}
                 </span>
-                {(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? (location.pathname.startsWith('/states') || location.pathname.startsWith('/my-state')) : isActive('/states')) && (
+                {(location.pathname.startsWith('/my-state') || location.pathname.startsWith('/states')) && (
                   <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />
                 )}
               </Link>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
 import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
@@ -82,6 +82,24 @@ export const GISMap: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [flyToBounds, setFlyToBounds] = useState<[[number, number], [number, number]] | null>(null)
   const searchContainerRef = useRef<HTMLDivElement>(null)
+  const [searchParams] = useSearchParams()
+  const queryParam = searchParams.get('pc') || searchParams.get('q') || searchParams.get('district')
+
+  useEffect(() => {
+    if (queryParam && geoData?.features) {
+      const q = queryParam.trim().toLowerCase()
+      const match = geoData.features.find((f: any) => {
+        const p = f.properties || {}
+        const name = String(p.pc_name || p.NAME_2 || p.district || '').trim().toLowerCase()
+        return name === q || name.includes(q)
+      })
+      if (match) {
+        setSelectedFeature(match.properties)
+        const bounds = getFeatureBounds(match.geometry)
+        if (bounds) setFlyToBounds(bounds)
+      }
+    }
+  }, [geoData, queryParam])
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -104,7 +122,9 @@ export const GISMap: React.FC = () => {
       try {
         sessionStorage.removeItem('cached_map_pcs')
         sessionStorage.removeItem('cached_map_districts')
-        const saved = sessionStorage.getItem(`cached_map_v2_${layerType}`)
+        sessionStorage.removeItem('cached_map_v2_pcs')
+        sessionStorage.removeItem('cached_map_v2_districts')
+        const saved = sessionStorage.getItem(`cached_map_v3_${layerType}`)
         if (saved) {
           const parsed = JSON.parse(saved)
           GEO_CACHE[layerType] = parsed
@@ -131,7 +151,7 @@ export const GISMap: React.FC = () => {
           try {
             const serialized = JSON.stringify(featData)
             if (serialized.length < 3 * 1024 * 1024) {
-              sessionStorage.setItem(`cached_map_v2_${layerType}`, serialized)
+              sessionStorage.setItem(`cached_map_v3_${layerType}`, serialized)
             }
           } catch {}
         }
@@ -487,10 +507,14 @@ export const GISMap: React.FC = () => {
                 </div>
 
                 {(() => {
-                  const totalWorks = Number(selectedFeature.total_works ?? selectedFeature.recommended_works ?? 0)
                   const completedWorks = Number(selectedFeature.completed_works_count ?? selectedFeature.completed_works ?? 0)
+                  const rawRecommended = Number(selectedFeature.remaining_works ?? selectedFeature.recommended_works ?? selectedFeature.ongoing_works ?? 0)
+                  // Total works: If explicit total_works exists and is >= completed, use it; otherwise compute completed + rawRecommended
+                  const totalWorks = (selectedFeature.total_works != null && Number(selectedFeature.total_works) >= completedWorks)
+                    ? Number(selectedFeature.total_works)
+                    : (completedWorks + rawRecommended)
                   const remainedWorks = Math.max(0, totalWorks - completedWorks)
-                  const completionRate = totalWorks > 0 ? ((completedWorks / totalWorks) * 100).toFixed(1) : '0.0'
+                  const completionRate = totalWorks > 0 ? Math.min(100, Math.max(0, (completedWorks / totalWorks) * 100)).toFixed(1) : '0.0'
                   const allocated = selectedFeature.total_allocated ?? selectedFeature.allocated_amount
                   const spent = selectedFeature.total_expenditure
                   const utilRate = selectedFeature.utilization_pct ?? (allocated && spent ? ((spent / allocated) * 100).toFixed(1) : null)

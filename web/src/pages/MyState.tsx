@@ -24,9 +24,8 @@ import { fmtCrore } from '../lib/currency'
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
   const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
-  const isRedirect = user.role === 'mospi' || !user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES'
-
-  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? 'BIHAR' : user.state
+  const isRedirect = user.role === 'mospi'
+  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? 'ASSAM' : user.state
 
   const [data, setData] = useState<any>(() => {
     try {

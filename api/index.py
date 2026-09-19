@@ -21,8 +21,10 @@ if not tmp_db.exists() or tmp_db.stat().st_size == 0:
         ROOT_DIR / "api" / "mplads_dev.db.gz",
     ]:
         if gz_candidate.exists() and gz_candidate.is_file():
-            with gzip.open(gz_candidate, "rb") as f_in, open(tmp_db, "wb") as f_out:
+            tmp_write = Path(f"/tmp/mplads_dev.db.tmp.{os.getpid()}")
+            with gzip.open(gz_candidate, "rb") as f_in, open(tmp_write, "wb") as f_out:
                 shutil.copyfileobj(f_in, f_out)
+            os.replace(str(tmp_write), str(tmp_db))
             break
 
 if tmp_db.exists() and tmp_db.stat().st_size > 0:

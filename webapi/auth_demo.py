@@ -66,23 +66,46 @@ def switch_role_session(
     SESSIONS[session_token] = session_data
     return session_data
 
-def get_current_user(x_session_token: Optional[str] = Header(None)) -> Dict[str, Any]:
+def get_current_user(
+    x_session_token: Optional[str] = Header(None),
+    x_role: Optional[str] = Header(None),
+    x_state: Optional[str] = Header(None),
+    x_district: Optional[str] = Header(None),
+    x_mp_id: Optional[str] = Header(None),
+    x_mp_name: Optional[str] = Header(None),
+) -> Dict[str, Any]:
+    # 1. Active in-memory session lookup
     if x_session_token and x_session_token in SESSIONS:
         return SESSIONS[x_session_token]
-    
-    # Auto-heal demo sessions if server restarted
-    if x_session_token and ("demo_" in x_session_token or x_session_token.startswith("demo_session_")):
+
+    # 2. Stateless role header passed by client frontend
+    if x_role and x_role in ROLE_PERMISSIONS:
         return {
-            "role": "state_nodal_officer",
-            "state": "HIMACHAL PRADESH",
-            "district": "SHIMLA",
-            "mp_id": "6a932b5bcd944524379eddd9",
-            "mp_name": "Anurag Singh Thakur",
-            "session_token": x_session_token,
-            "permissions": ROLE_PERMISSIONS["state_nodal_officer"]
+            "role": x_role,
+            "state": x_state or "ALL",
+            "district": x_district or "ALL",
+            "mp_id": x_mp_id or "ALL",
+            "mp_name": x_mp_name or ("All Members of Parliament" if x_role == "mp" else None),
+            "session_token": x_session_token or f"stateless_{x_role}",
+            "permissions": get_permissions(x_role)
         }
 
-    # Default unauthenticated access is viewer
+    # 3. Auto-detect role embedded in session token
+    if x_session_token:
+        lower_token = x_session_token.lower()
+        for role_key in ["mospi", "state_nodal_officer", "district_authority", "mp", "auditor", "analyst", "admin"]:
+            if role_key in lower_token:
+                return {
+                    "role": role_key,
+                    "state": x_state or "ALL",
+                    "district": x_district or "ALL",
+                    "mp_id": x_mp_id or "ALL",
+                    "mp_name": x_mp_name or ("All Members of Parliament" if role_key == "mp" else None),
+                    "session_token": x_session_token,
+                    "permissions": get_permissions(role_key)
+                }
+
+    # 4. Default unauthenticated access is viewer
     return {
         "role": "viewer",
         "state": None,

@@ -16,6 +16,14 @@ interface StatCardProps {
   gaugeValue?: number
 }
 
+const formatStatValue = (val: number | string): string | number => {
+  if (typeof val !== 'number') return val
+  if (isNaN(val)) return '0'
+  if (val >= 1000) return Math.round(val).toLocaleString('en-IN')
+  if (Number.isInteger(val)) return val
+  return val.toFixed(1)
+}
+
 export const StatCard: React.FC<StatCardProps> = ({
   icon: Icon,
   label,
@@ -27,17 +35,23 @@ export const StatCard: React.FC<StatCardProps> = ({
   tooltip,
   theme = 'espresso'
 }) => {
-  const isNumeric = typeof value === 'number'
-  const [animatedNumber, setAnimatedNumber] = useState<string | number>(() =>
-    typeof value === 'number' ? 0 : value
-  )
+  const [displayValue, setDisplayValue] = useState<string | number>(() => formatStatValue(value))
 
   useEffect(() => {
-    if (typeof value !== 'number') return
+    if (typeof value !== 'number') {
+      setDisplayValue(value)
+      return
+    }
+
+    // Immediately display the real formatted value to prevent any 0-freeze
+    setDisplayValue(formatStatValue(value))
+
+    // Gracefully animate upward if requestAnimationFrame is available
+    if (typeof window === 'undefined' || !window.requestAnimationFrame || value === 0) return
 
     const startVal = 0
     const endVal = value
-    const duration = 800
+    const duration = 600
     const startTime = performance.now()
     let frameId: number
 
@@ -47,32 +61,18 @@ export const StatCard: React.FC<StatCardProps> = ({
       const easeOut = 1 - Math.pow(1 - progress, 3)
       const current = startVal + (endVal - startVal) * easeOut
 
-      if (endVal >= 1000) {
-        setAnimatedNumber(Math.round(current).toLocaleString('en-IN'))
-      } else if (Number.isInteger(endVal)) {
-        setAnimatedNumber(Math.round(current))
-      } else {
-        setAnimatedNumber(current.toFixed(1))
-      }
+      setDisplayValue(formatStatValue(current))
 
       if (progress < 1) {
         frameId = requestAnimationFrame(step)
       } else {
-        if (endVal >= 1000) {
-          setAnimatedNumber(endVal.toLocaleString('en-IN'))
-        } else if (Number.isInteger(endVal)) {
-          setAnimatedNumber(endVal)
-        } else {
-          setAnimatedNumber(endVal.toFixed(1))
-        }
+        setDisplayValue(formatStatValue(endVal))
       }
     }
 
     frameId = requestAnimationFrame(step)
     return () => cancelAnimationFrame(frameId)
   }, [value])
-
-  const displayValue = isNumeric ? animatedNumber : value
 
   const iconBgClasses = {
     gold: 'bg-[var(--brand-gold)]/15 text-[var(--brand-gold)] border-[var(--brand-gold)]/30',

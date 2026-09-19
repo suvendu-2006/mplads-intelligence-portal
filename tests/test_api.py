@@ -177,3 +177,22 @@ def test_districts_endpoints():
     assert "summary" in detail_json["data"]
     assert "works" in detail_json["data"]
 
+def test_constituency_detail():
+    # Test Parliamentary Constituency detail endpoint
+    response = client.get("/api/constituencies/DAMOH")
+    assert response.status_code == 200
+    json_data = response.json()
+    assert json_data["data"]["summary"]["name"] == "DAMOH"
+    assert json_data["data"]["summary"]["state"] == "Madhya Pradesh"
+    assert json_data["data"]["summary"]["totalWorks"] > 0
+    assert "sectorBreakdown" in json_data["data"]
+    assert "works" in json_data["data"]
+
+def test_constituency_via_assembly():
+    # Test Assembly Constituency lookup mapping to parent PC
+    response = client.get("/api/constituencies/Pathariya")
+    assert response.status_code == 200
+    json_data = response.json()
+    assert json_data["data"]["summary"]["name"] == "DAMOH"
+    assert json_data["data"]["summary"]["matched_assembly_constituency"] == "Pathariya"
+

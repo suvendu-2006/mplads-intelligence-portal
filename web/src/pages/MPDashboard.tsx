@@ -24,7 +24,7 @@ import {
 
 export const MPDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
-  const mpId = user.mpId || '6a932b5bcd944524379eddd9'
+  const mpId = (user?.mpId && user.mpId !== 'ALL') ? user.mpId : '6a932b5bcd944524379eddd9'
   const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
 
   const [data, setData] = useState<any>(() => {
