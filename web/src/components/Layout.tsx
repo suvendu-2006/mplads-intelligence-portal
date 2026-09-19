@@ -170,27 +170,27 @@ export const Layout: React.FC = () => {
 
             {user.role === 'district_authority' && (
               <Link
-                to={user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? `/districts/${encodeURIComponent(user.district)}` : '/district-dashboard'}
+                to="/district-dashboard"
                 onMouseEnter={() => import('../pages/DistrictDashboard').catch(() => {})}
-                className={navLinkClasses(user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? `/districts/${user.district}` : '/district-dashboard')}
+                className={navLinkClasses('/district-dashboard')}
               >
                 <Building2 size={14} className="text-[var(--brand-primary)]" />
                 <span className="font-extrabold text-[var(--brand-primary)]">
-                  District Console {user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS' ? `(${user.district})` : '(All)'}
+                  District Console
                 </span>
-                {(isActive('/district') || isActive('/districts')) && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
+                {(isActive('/district') || isActive('/districts') || isActive('/district-dashboard')) && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
               </Link>
             )}
 
             {user.role === 'mp' && (
               <Link
-                to={user.mpId && user.mpId !== 'ALL' ? `/mp-dashboard?id=${encodeURIComponent(user.mpId)}` : '/mp-dashboard'}
+                to="/mp-dashboard"
                 onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
                 className={navLinkClasses('/mp-dashboard')}
               >
                 <Users size={14} className="text-[var(--brand-accent)]" />
                 <span className="font-extrabold text-[var(--gold-text)]">
-                  MP Console {user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
+                  MP Console
                 </span>
                 {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
               </Link>

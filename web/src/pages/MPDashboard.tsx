@@ -33,9 +33,10 @@ export const MPDashboard: React.FC = () => {
   const { user, switchRole, setMpJurisdiction } = useStore()
   const navigate = useNavigate()
 
-  // Priority: URL route param -> URL query param -> store mpId (NO DEFAULT FALLBACK)
-  const hasSelectedMp = Boolean(paramId || queryId || (user?.mpId && user.mpId !== 'ALL'))
-  const activeMpId = paramId || queryId || (hasSelectedMp ? user?.mpId : '')
+  // Priority: URL route param -> URL query param ONLY.
+  // When user opens /mp-dashboard without an ID, always show the original MP console selection gate!
+  const activeMpId = paramId || queryId || ''
+  const hasSelectedMp = Boolean(activeMpId)
   const isAuthorized = ['mp', 'admin', 'mospi', 'viewer'].includes(user.role)
 
   // Gate selection state

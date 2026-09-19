@@ -33,8 +33,10 @@ export const DistrictDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
   const navigate = useNavigate()
   const { district } = useParams<{ district?: string }>()
-  const hasSelectedDistrict = Boolean(district || (user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'))
-  const districtName = district || (hasSelectedDistrict ? user.district! : '')
+  // Priority: URL route param ONLY.
+  // When user opens /district-dashboard without a param, always show the original District selection gate!
+  const districtName = district || ''
+  const hasSelectedDistrict = Boolean(districtName)
   const isAuthorized = ['district_authority', 'state_nodal_officer', 'admin', 'mospi'].includes(user.role)
 
   // Gate Selection State
