@@ -14,17 +14,16 @@ import {
   FileCheck2,
   AlertTriangle,
   Lock,
-  CheckCircle2,
   Clock,
-  Mail,
   Coins,
   Percent,
   Layers
 } from 'lucide-react'
+import { DEFAULT_MP_ID } from '../lib/constants'
 
 export const MPDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
-  const mpId = (user?.mpId && user.mpId !== 'ALL') ? user.mpId : '6a932b5bcd944524379eddd9'
+  const mpId = (user?.mpId && user.mpId !== 'ALL') ? user.mpId : DEFAULT_MP_ID
   const isAuthorized = ['mp', 'admin', 'mospi'].includes(user.role)
 
   const [data, setData] = useState<any>(() => {
@@ -38,9 +37,8 @@ export const MPDashboard: React.FC = () => {
       return !sessionStorage.getItem(`cached_mp_${mpId}`)
     } catch { return true }
   })
-  const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags' | 'action'>('works')
+  const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags'>('works')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
-  const [doLetterNotice, setDoLetterNotice] = useState<string | null>(null)
 
   useEffect(() => {
     async function loadMPDossier() {
@@ -260,18 +258,6 @@ export const MPDashboard: React.FC = () => {
           <AlertTriangle size={14} className="text-amber-500" />
           <span>Compliance Alerts ({flags.length})</span>
         </button>
-
-        <button
-          onClick={() => setActiveTab('action')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'action'
-              ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
-              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          <Mail size={14} className="text-[var(--brand-accent)]" />
-          <span>Issue D.O. Letter to Collector</span>
-        </button>
       </div>
 
       {/* TAB 1: PROJECTS */}
@@ -444,50 +430,6 @@ export const MPDashboard: React.FC = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-          )}
-        </div>
-      )}
-
-      {/* TAB 4: ISSUE D.O. LETTER */}
-      {activeTab === 'action' && (
-        <div className="lux-card max-w-2xl mx-auto p-6 space-y-4">
-          <div className="flex items-center gap-2 text-[var(--gold-text)] font-bold text-sm border-b border-[var(--border-primary)] pb-3">
-            <Mail size={18} />
-            <span>DISPATCH OFFICIAL PARLIAMENTARY DEMI-OFFICIAL (D.O.) INQUIRY LETTER</span>
-          </div>
-
-          <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-            As the recommending Member of Parliament, you have statutory authority under MoSPI MPLADS Guidelines Rule 5.2 to call for physical site inspections and Measurement Book (MB) verification from the District Collector.
-          </p>
-
-          <div className="p-4 rounded-xl bg-[var(--surface-alt)] font-mono text-[11px] text-[var(--text-secondary)] leading-relaxed border border-[var(--border-primary)]">
-            OFFICE OF {summary.mpName || user.mpName}<br />
-            Member of Parliament ({summary.house}, {summary.constituency})<br />
-            Date: {new Date().toLocaleDateString()}<br /><br />
-            To: The District Collector & District Magistrate, {summary.constituency || 'District'}<br /><br />
-            Subject: Review of project execution timelines and Measurement Book verification<br /><br />
-            Dear District Collector,<br />
-            In exercise of oversight for works sanctioned under my MPLADS 5-year entitlement envelope, please arrange a physical joint inspection for ongoing civil works in the constituency and furnish an updated Action-Taken Report (ATR) within 15 days.
-          </div>
-
-          <div className="flex justify-end gap-2 pt-2">
-            <button
-              onClick={() =>
-                setDoLetterNotice(
-                  `Parliamentary D.O. Letter recorded and dispatched to District Collectorate of ${summary.constituency || 'District'} (Simulated Demo Console).`
-                )
-              }
-              className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-90 transition"
-            >
-              Dispatch Parliamentary D.O. Letter
-            </button>
-          </div>
-
-          {doLetterNotice && (
-            <div className="p-3 rounded-xl bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-2">
-              <CheckCircle2 size={16} />
-              <span>{doLetterNotice}</span>
             </div>
           )}
         </div>

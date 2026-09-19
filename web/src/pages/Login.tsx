@@ -26,7 +26,7 @@ const PERSONAS = [
     hindiTitle: 'संसद सदस्य (सांसद)',
     icon: Landmark,
     badge: 'Constituency Command',
-    description: 'Track your ₹5 Cr/year (avg ₹15.09 Cr/MP actual) entitlement corpus, verify recommended works delivery, and issue D.O. letters.',
+    description: 'Track your ₹5 Cr/year (avg ₹15.09 Cr/MP actual) entitlement corpus, verify recommended works delivery, and inspect compliance alerts.',
     route: '/mp-dashboard',
     defaultContext: {
       mpId: '6a932b5bcd944524379eddd9',

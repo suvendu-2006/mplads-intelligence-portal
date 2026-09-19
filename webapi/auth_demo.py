@@ -15,7 +15,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
 
 ROLE_DESCRIPTIONS: Dict[str, str] = {
     "viewer": "Public citizen read-only access to national analytics, states, MPs, and maps",
-    "mp": "Member of Parliament dashboard with personal allocation ledger, recommended works, and D.O. letters",
+    "mp": "Member of Parliament dashboard with personal allocation ledger, recommended works, and compliance alerts",
     "district_authority": "District Collector & DPA command console for local sanctions, IDA supervision, and MB verification",
     "analyst": "Viewer permissions plus advanced multi-detector filtering and risk inspection",
     "auditor": "Full forensic workbench with deep diagnostic drawer and CSV audit dossier export",
