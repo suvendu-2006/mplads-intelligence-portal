@@ -276,10 +276,9 @@ export const MPDashboard: React.FC = () => {
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
                       <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                       <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Executing District</th>
+                      <th className="p-3 font-bold whitespace-nowrap">District</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">Amount</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -293,11 +292,11 @@ export const MPDashboard: React.FC = () => {
                           <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
                             {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                           </td>
-                          <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
-                            ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
-                          </td>
                           <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                             {w.district || summary.constituency}
+                          </td>
+                          <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
+                            ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
                           </td>
                           <td className="p-3 text-center whitespace-nowrap">
                             <span
@@ -309,9 +308,6 @@ export const MPDashboard: React.FC = () => {
                             >
                               {w.status || 'In Progress'}
                             </span>
-                          </td>
-                          <td className="p-3 font-medium text-[var(--text-secondary)] whitespace-nowrap">
-                            {w.implementingAgency || w.implementing_agency || 'District Authority'}
                           </td>
                         </tr>
                       )

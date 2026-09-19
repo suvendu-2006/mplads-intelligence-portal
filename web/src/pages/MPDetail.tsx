@@ -747,7 +747,6 @@ export const MPDetail: React.FC = () => {
                         <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                         <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                         <th className="p-3 font-bold whitespace-nowrap">District</th>
-                        <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                         <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
                         <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
                         <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
@@ -779,9 +778,6 @@ export const MPDetail: React.FC = () => {
                             </td>
                             <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                               {w.district || summary.constituency}
-                            </td>
-                            <td className="p-3 whitespace-nowrap">
-                              <AgencyBadge agency={w.implementingAgency || w.implementing_agency || 'District Authority'} size="sm" />
                             </td>
                             <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                               ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
