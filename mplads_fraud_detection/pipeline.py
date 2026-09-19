@@ -106,11 +106,14 @@ def run_full_pipeline(
         # ETL Ingestion
         load_works_into_db(session)
 
+        failed_detectors = []
+
         def run_safe_detector(func, *args, **kwargs):
             try:
                 with session.begin_nested():
                     func(*args, **kwargs)
             except Exception as err:
+                failed_detectors.append(func.__name__)
                 logger.error(f"Detector {func.__name__} failed (rolled back savepoint): {err}", exc_info=True)
 
         # Execute 13 Work-Level Detectors in Logical Dependency Order
@@ -151,7 +154,7 @@ def run_full_pipeline(
         # Update PipelineRun status directly within active transaction
         active_run = session.query(PipelineRun).filter(PipelineRun.run_id == run_id).first()
         if active_run:
-            active_run.status = "COMPLETED"
+            active_run.status = "DEGRADED" if failed_detectors else "COMPLETED"
             active_run.completed_at = datetime.now(timezone.utc)
 
         # Commit All Detector Records and Status Atomically

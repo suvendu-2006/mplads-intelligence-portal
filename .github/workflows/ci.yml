@@ -45,7 +45,7 @@ jobs:
 
     - name: Run Pytest Suite
       run: |
-        pytest -v tests/ --ignore=tests/test_idempotency.py --ignore=tests/test_metrics_integrity.py
+        pytest -v tests/ -m "not slow"
 
     - name: Run Full Acceptance Gate
       run: |

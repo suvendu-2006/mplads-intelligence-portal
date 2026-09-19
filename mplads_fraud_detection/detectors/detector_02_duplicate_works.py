@@ -68,10 +68,19 @@ def get_text_embeddings(descriptions: List[str], work_ids: List[int]) -> np.ndar
         
         try:
             from sentence_transformers import SentenceTransformer
-            try:
-                model = SentenceTransformer(SENTENCE_TRANSFORMER_MODEL)
-            except Exception:
-                model = SentenceTransformer(FALLBACK_TRANSFORMER_MODEL)
+            model = None
+            # Attempt to load from local cache first to prevent hanging on network downloads
+            for m_name in [SENTENCE_TRANSFORMER_MODEL, FALLBACK_TRANSFORMER_MODEL]:
+                try:
+                    model = SentenceTransformer(m_name, local_files_only=True)
+                    break
+                except Exception:
+                    pass
+
+            if model is None:
+                logger.warning("SentenceTransformer models not cached locally. Using fast char n-gram TF-IDF fallback.")
+                tfidf = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), max_features=384)
+                return tfidf.fit_transform(descriptions).toarray()
 
             new_embeddings = model.encode(
                 prefixed_texts,

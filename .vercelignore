@@ -45,10 +45,8 @@ migrations
 app.py
 check_env.sh
 docker-entrypoint.sh
-runtime.txt
 MPLADS_Master_Summary.xlsx
 pyproject.toml
-requirements-minimal.lock
 requirements.lock
 requirements-full.txt
 uv.lock

@@ -4,8 +4,12 @@ Guarantees physical plausibility, valid dates, and strict data origin attributio
 """
 
 from datetime import datetime
-import pandera as pa
-from pandera import Column, Check, DataFrameSchema
+try:
+    import pandera.pandas as pa
+    from pandera.pandas import Column, Check, DataFrameSchema
+except (ImportError, AttributeError):
+    import pandera as pa
+    from pandera import Column, Check, DataFrameSchema
 
 WORK_INGESTION_SCHEMA = DataFrameSchema({
     "work_id": Column(

@@ -18,6 +18,7 @@ ENV/
 mplads_fraud.db.backup
 backups/
 test_*.db
+!api/mplads_dev.db.gz
 
 # Version control & CI
 .git/
@@ -66,3 +67,10 @@ build/
 
 # Docs build
 docs/_build/
+
+# Node & Frontend build
+node_modules/
+web/node_modules/
+web/dist/
+.vercel_python_packages/
+.vercel/

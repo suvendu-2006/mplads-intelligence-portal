@@ -103,6 +103,34 @@ Full operational, governance, technical, and compliance documentation is organiz
 
 ---
 
+## Modern Application Architecture & Deployment
+
+SATARK-MPLADS is powered by a high-performance decoupled architecture:
+- **Backend**: FastAPI 0.141+ with SQLite WAL / PostgreSQL, SQLAlchemy 2, and 15 administrative forensic detectors.
+- **Frontend**: React 19 Single Page Application built with Vite, Tailwind CSS, Lucide icons, and Leaflet GIS mapping.
+- **Serverless Edge**: Deployed seamlessly to Vercel Serverless Functions (`api/index.py`) with per-role variant cache control (`Vary: x-role, x-state, x-district, x-mp-id`).
+
+### Running Locally
+
+```bash
+# Install frontend dependencies and build assets
+npm run build
+
+# Start both API and Web UI concurrently
+npm run dev
+
+# Run fast test suite (skips heavy full-database semantic pipeline tests)
+npm run test:all
+
+# Run complete test suite including heavy idempotency and pipeline integrity checks
+npm run test:all:full
+
+# Run 16-point production acceptance suite
+bash tests/acceptance_tests.sh
+```
+
+---
+
 ## Evidence Store Policy
 
 The `data/evidence/` directory contains cryptographically verified audit evidence documents.
@@ -119,12 +147,7 @@ Always run commands from the project root directory:
 ```bash
 # ✅ CORRECT (resolves all datasets and settings accurately)
 cd /path/to/SIH-DATA
-python -m mplads_fraud_detection.pipeline
-alembic upgrade head
-pytest
-
-# ❌ WRONG
-cd /tmp
-python -m mplads_fraud_detection.pipeline
+.venv/bin/pytest tests/ -m "not slow"
+bash tests/acceptance_tests.sh
 ```
 

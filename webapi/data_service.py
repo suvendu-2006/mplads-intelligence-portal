@@ -1,4 +1,5 @@
 import json
+import logging
 from functools import lru_cache
 from typing import Dict, Any, Optional
 from pathlib import Path
@@ -9,6 +10,8 @@ from sqlalchemy.orm import sessionmaker, Session
 from webapi.config import (
     BASE_DIR, DB_URL, DATA_DIR, OVERVIEW_DIR, STATES_DIR, MPS_DIR, ANALYTICS_DIR, BOUNDARIES_DIR, DEMOGRAPHICS_DIR
 )
+
+logger = logging.getLogger(__name__)
 
 engine = create_engine(DB_URL, connect_args={"check_same_thread": False})
 
@@ -243,7 +246,7 @@ def load_mp_profile(mp_id: str) -> Optional[Dict[str, Any]]:
 
                 profile["dossier"] = dossier
     except Exception as e:
-        print(f"Error merging demographics for MP {mp_id}: {e}")
+        logger.warning(f"Error merging demographics for MP {mp_id}: {e}")
 
     return profile
 

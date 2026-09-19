@@ -1,5 +1,5 @@
 # Multi-stage production Dockerfile for MPLADS Forensic Platform
-FROM python:3.11-slim AS base
+FROM python:3.12-slim AS base
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -16,14 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install python dependencies with deterministic lockfile
-ARG ML_ENABLED=true
-COPY pyproject.toml requirements.lock requirements-minimal.lock* ./
+COPY pyproject.toml requirements.lock ./
 RUN pip install --upgrade pip setuptools wheel && \
-    if [ "$ML_ENABLED" = "false" ] && [ -f requirements-minimal.lock ]; then \
-      pip install -r requirements-minimal.lock; \
-    else \
-      pip install -r requirements.lock; \
-    fi && \
+    pip install -r requirements.lock && \
     pip install --no-deps .
 
 # Copy application source

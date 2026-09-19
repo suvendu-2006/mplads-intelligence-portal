@@ -34,7 +34,6 @@ htmlcov/
 .nox/
 
 *.db
-!api/mplads_dev.db
 *.db-journal
 *.db-wal
 *.db-shm
@@ -54,6 +53,8 @@ backups/
 artifacts/*.pkl
 artifacts/*.log
 artifacts/*test*
+artifacts/audit_ground_truth_sample.csv
+artifacts/metrics_*.json
 
 # IDE & OS files
 .DS_Store

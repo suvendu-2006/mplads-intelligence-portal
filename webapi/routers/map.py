@@ -2,6 +2,7 @@ import copy
 import difflib
 import gzip
 import json
+import logging
 import re
 from typing import Any, Dict, Optional
 
@@ -10,6 +11,8 @@ from fastapi.responses import JSONResponse
 
 from webapi.config import BASE_DIR, BOUNDARIES_DIR, DATA_DIR
 from webapi.data_service import load_districts_csv, load_geojson
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -141,7 +144,7 @@ def get_districts_geojson(request: Request):
                     "completion_rate_pct": round(cw / tw * 100, 1) if tw > 0 else 0.0
                 }
         except Exception as e:
-            print(f"Error querying DB works for map: {e}")
+            logger.warning(f"Error querying DB works for map: {e}")
 
         # Index by normalized name and state
         dist_lookup: Dict[str, Dict[str, Any]] = {}

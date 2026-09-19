@@ -66,13 +66,29 @@ from starlette.requests import Request
 @app.middleware("http")
 async def add_performance_cache_headers(request: Request, call_next):
     response = await call_next(request)
+    path = request.url.path
     if request.method == "GET" and response.status_code == 200:
-        path = request.url.path
         if path.startswith("/api/"):
-            if not response.headers.get("Cache-Control"):
-                response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+            # Check if this endpoint is role-scoped or sensitive
+            is_role_scoped = (
+                path.startswith("/api/my-state")
+                or path.startswith("/api/roles")
+                or path.startswith("/api/switch-role")
+                or path.startswith("/api/review-queue")
+            )
+            if is_role_scoped:
+                response.headers["Cache-Control"] = "private, no-store, no-cache, must-revalidate"
+                response.headers["Vary"] = "x-role, x-state, x-district, x-mp-id, Authorization, Cookie"
+            else:
+                if not response.headers.get("Cache-Control"):
+                    response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+                # Retain edge caching while isolating per-role variants and content encoding
+                existing_vary = response.headers.get("Vary")
+                role_vary = "x-role, x-state, x-district, x-mp-id, Accept-Encoding"
+                response.headers["Vary"] = f"{existing_vary}, {role_vary}" if existing_vary else role_vary
     elif request.method in ["POST", "PUT", "DELETE", "PATCH"]:
-        response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
+        response.headers["Cache-Control"] = "private, no-store, no-cache, must-revalidate"
+        response.headers["Vary"] = "x-role, x-state, x-district, x-mp-id, Authorization, Cookie"
     return response
 
 allowed_origins = os.getenv(
@@ -89,7 +105,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include API Routers under both /api and root for guaranteed 0-404 Vercel routing
+# Mount core API Routers under /api prefix
 api_routers = [
     (national.router, "National"),
     (states.router, "States"),

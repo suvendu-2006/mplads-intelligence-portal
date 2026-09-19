@@ -15,14 +15,16 @@ DEV_DB_PATH = PROJECT_ROOT / "mplads_dev.db"
 if not DEV_DB_PATH.exists() and (PROJECT_ROOT / "api" / "mplads_dev.db").exists():
     DEV_DB_PATH = PROJECT_ROOT / "api" / "mplads_dev.db"
 
-TEST_DB_PATH = Path(tempfile.gettempdir()) / "test_mplads_isolated.db"
+TEST_DB_PATH = Path(tempfile.gettempdir()) / f"test_mplads_isolated_{os.getpid()}.db"
 
 # Ensure fresh, clean, atomic copy for the test session
-if TEST_DB_PATH.exists():
-    try:
-        TEST_DB_PATH.unlink()
-    except OSError:
-        pass
+for suffix in ["", "-wal", "-shm"]:
+    target = Path(f"{TEST_DB_PATH}{suffix}")
+    if target.exists():
+        try:
+            target.unlink()
+        except OSError:
+            pass
 
 if DEV_DB_PATH.exists():
     with sqlite3.connect(str(DEV_DB_PATH)) as src, sqlite3.connect(str(TEST_DB_PATH)) as dst:
@@ -40,11 +42,13 @@ from mplads_fraud_detection.foundation.schema import Base
 def cleanup_test_database():
     """Yield during test execution, then clean up test database file."""
     yield
-    if TEST_DB_PATH.exists():
-        try:
-            TEST_DB_PATH.unlink()
-        except OSError:
-            pass
+    for suffix in ["", "-wal", "-shm"]:
+        target = Path(f"{TEST_DB_PATH}{suffix}")
+        if target.exists():
+            try:
+                target.unlink()
+            except OSError:
+                pass
 
 
 @pytest.fixture(scope="function")

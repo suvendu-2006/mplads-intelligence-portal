@@ -10,6 +10,7 @@ charset-normalizer==3.5.1
 click==8.5.0
 cloudpickle==3.1.2
 filelock==3.32.5
+fastapi==0.141.1
 formulaic==1.2.2
 fsspec==2026.7.0
 h11==0.16.0

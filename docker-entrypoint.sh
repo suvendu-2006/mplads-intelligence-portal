@@ -6,6 +6,12 @@ if [ -f /app/check_env.sh ]; then
     /app/check_env.sh || exit 1
 fi
 
+if [ ! -f /app/mplads_dev.db ] && [ -f /app/api/mplads_dev.db.gz ]; then
+    echo "📦 Seeding database from compressed archive..."
+    gzip -dc /app/api/mplads_dev.db.gz > /app/mplads_dev.db
+    echo "✅ Database seeded successfully"
+fi
+
 echo "🔧 Running database migrations..."
 alembic upgrade head
 

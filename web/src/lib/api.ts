@@ -16,7 +16,7 @@ const memoryCache = new Map<string, CacheRecord>()
 // In-flight promise map to deduplicate identical concurrent GET requests safely
 const inFlightRequests = new Map<string, Promise<CacheRecord | Response>>()
 const STALE_TTL_MS = 300000 // 5 minutes high-speed stale-while-revalidate window
-const CACHE_VERSION = 'v2_fast_20260919'
+const CACHE_VERSION = 'v3_fast_20260919'
 const SESSION_CACHE_PREFIX = `satark_swr_${CACHE_VERSION}_`
 
 /**
@@ -94,7 +94,7 @@ async function fetchAndCache(
       }
       return record
     } catch (e) {
-      console.warn('[SATARK-CACHE] Failed to cache response:', e)
+      console.log('[SATARK-CACHE] Failed to cache response:', e)
     }
   }
   return response
@@ -158,7 +158,7 @@ export function initApiSync() {
         try {
           response = await originalFetch(input, modifiedInit)
         } catch (err) {
-          console.warn('[SATARK-SYNC] Network error contacting API:', err)
+          console.log('[SATARK-SYNC] Network error contacting API:', err)
           throw err
         }
         return response
@@ -240,7 +240,7 @@ export function initApiSync() {
       try {
         result = await fetchPromise
       } catch (networkErr) {
-        console.warn('[SATARK-SYNC] Network error contacting API:', networkErr)
+        console.log('[SATARK-SYNC] Network error contacting API:', networkErr)
         throw networkErr
       }
 
@@ -255,7 +255,7 @@ export function initApiSync() {
       // Transparent Session Auto-Healing
       // If the backend restarted or session expired (HTTP 403 / 401), re-sync with /api/switch-role and retry
       if ((response.status === 403 || response.status === 401) && user?.role && user.role !== 'viewer') {
-        console.warn(`[SATARK-SYNC] Session invalid or server restarted. Auto-reconnecting role '${user.role}'...`)
+        console.log(`[SATARK-SYNC] Session invalid or server restarted. Auto-reconnecting role '${user.role}'...`)
         try {
           const syncRes = await originalFetch('/api/switch-role', {
             method: 'POST',

@@ -69,7 +69,7 @@ export const ConstituencyDetail: React.FC = () => {
     async function loadConstituency() {
       if (!name) return
       setLoading(true)
-      const cleanName = decodeURIComponent(name).trim()
+      const cleanName = (name || '').trim()
 
       try {
         const res = await fetch(`/api/constituencies/${encodeURIComponent(cleanName)}`)
@@ -83,7 +83,7 @@ export const ConstituencyDetail: React.FC = () => {
           return
         }
       } catch (err) {
-        console.warn('API fetch failed, trying fallback:', err)
+        console.log('API fetch failed, trying fallback:', err)
       }
 
       // Resilient Fallback using ALL_MP_SEATS & assembly data

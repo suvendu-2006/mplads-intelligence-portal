@@ -121,7 +121,7 @@ export const useStore = create<AppStore>()(
             }
           }
         }).catch((err) => {
-          console.warn('[SATARK-ROLE] Background sync note:', err)
+          console.log('[SATARK-ROLE] Background sync note:', err)
         })
       },
     }),

@@ -9,6 +9,7 @@ from mplads_fraud_detection.foundation.schema import Work, Anomaly, EntityRisk
 from mplads_fraud_detection.pipeline import run_full_pipeline
 
 
+@pytest.mark.slow
 def test_metrics_mathematical_integrity():
     """Verify runtime metrics satisfy all conservation and consistency laws."""
     metrics = run_full_pipeline(run_key="test_metrics_integrity_key")

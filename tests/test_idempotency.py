@@ -9,6 +9,7 @@ from mplads_fraud_detection.foundation.etl import load_works_into_db
 from mplads_fraud_detection.pipeline import run_full_pipeline
 
 
+@pytest.mark.slow
 def test_idempotent_pipeline_execution():
     """Verify executing the same run_key twice produces deterministic, collision-free results."""
     init_db()

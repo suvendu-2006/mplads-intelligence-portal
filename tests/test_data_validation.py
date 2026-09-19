@@ -5,7 +5,10 @@ Verifies rejection of invalid costs, future dates, duplicate IDs, and invalid da
 
 import pytest
 import pandas as pd
-import pandera as pa
+try:
+    import pandera.pandas as pa
+except (ImportError, AttributeError):
+    import pandera as pa
 from datetime import datetime, timedelta
 from mplads_fraud_detection.validation.schemas import WORK_INGESTION_SCHEMA
 

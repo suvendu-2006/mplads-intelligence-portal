@@ -9,7 +9,8 @@
     "demo": "npm run build && .venv/bin/uvicorn webapi.main:app --port 8000 --host 0.0.0.0",
     "demo-implement": "npm run demo",
     "test:api": ".venv/bin/pytest tests/test_api.py -v",
-    "test:all": ".venv/bin/pytest tests/",
+    "test:all": ".venv/bin/pytest tests/ -m 'not slow'",
+    "test:all:full": ".venv/bin/pytest tests/",
     "test:web": "cd web && npm run build"
   },
   "devDependencies": {

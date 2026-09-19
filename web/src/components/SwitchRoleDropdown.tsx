@@ -5,6 +5,14 @@ import { Shield, ChevronDown, Check, User, Building2, Landmark, MapPin, ChevronR
 import { t } from '../lib/i18n'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
+import {
+  DEFAULT_STATE,
+  DEFAULT_STATE_DISPLAY,
+  DEFAULT_DISTRICT,
+  DEFAULT_DISTRICT_DISPLAY,
+  DEFAULT_MP_ID,
+  DEFAULT_MP_NAME
+} from '../lib/constants'
 
 // Exactly 5 Governance Roles:
 // 1. User (Public Citizen)
@@ -73,19 +81,19 @@ export const SwitchRoleDropdown: React.FC = () => {
   const [selectedState, setSelectedState] = useState(
     user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
       ? user.state
-      : 'ASSAM'
+      : DEFAULT_STATE
   )
 
   // District Authority (DM) selection: State & District
   const [dmState, setDmState] = useState<string>(
     user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
       ? user.state
-      : 'HIMACHAL PRADESH'
+      : DEFAULT_STATE
   )
   const [dmDistrict, setDmDistrict] = useState<string>(
     user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
       ? user.district
-      : 'SHIMLA'
+      : DEFAULT_DISTRICT
   )
 
   // MP selection & filters (State, House, Search across all 774 parliamentary seats)
@@ -97,7 +105,7 @@ export const SwitchRoleDropdown: React.FC = () => {
   const [mpHouse, setMpHouse] = useState<'ALL' | 'Lok Sabha' | 'Rajya Sabha'>('ALL')
   const [mpSearch, setMpSearch] = useState<string>('')
   const [selectedMpId, setSelectedMpId] = useState<string>(
-    user.mpId && user.mpId !== 'ALL' ? user.mpId : '6a932b5bcd944524379eddd9'
+    user.mpId && user.mpId !== 'ALL' ? user.mpId : DEFAULT_MP_ID
   )
 
   // Filtered parliamentary seats based on State, House, and Search Query
@@ -154,7 +162,7 @@ export const SwitchRoleDropdown: React.FC = () => {
     }
 
     if (roleId === 'state_nodal_officer') {
-      const stateParam = (selectedState && selectedState !== 'ALL STATES & UNION TERRITORIES') ? selectedState : 'ASSAM'
+      const stateParam = (selectedState && selectedState !== 'ALL STATES & UNION TERRITORIES') ? selectedState : DEFAULT_STATE
       await switchRole('state_nodal_officer', stateParam)
       setIsOpen(false)
       navigate('/my-state')
@@ -162,8 +170,8 @@ export const SwitchRoleDropdown: React.FC = () => {
     }
 
     if (roleId === 'district_authority') {
-      const stateParam = dmState || 'HIMACHAL PRADESH'
-      const distParam = (dmDistrict && dmDistrict !== 'ALL DISTRICTS') ? dmDistrict : (availableDistricts[0] || 'SHIMLA')
+      const stateParam = dmState || DEFAULT_STATE
+      const distParam = (dmDistrict && dmDistrict !== 'ALL DISTRICTS') ? dmDistrict : (availableDistricts[0] || DEFAULT_DISTRICT)
       await switchRole('district_authority', stateParam, distParam)
       setIsOpen(false)
       navigate(`/districts/${encodeURIComponent(distParam)}`)
@@ -171,9 +179,9 @@ export const SwitchRoleDropdown: React.FC = () => {
     }
 
     if (roleId === 'mp') {
-      const targetId = (selectedMpId && selectedMpId !== 'ALL') ? selectedMpId : '6a932b5bcd944524379eddd9'
+      const targetId = (selectedMpId && selectedMpId !== 'ALL') ? selectedMpId : DEFAULT_MP_ID
       const found = ALL_MP_SEATS.find(m => m.id === targetId) || ALL_MP_SEATS[0]
-      await switchRole('mp', found?.state || 'Himachal Pradesh', undefined, targetId, found?.name || 'Anurag Singh Thakur')
+      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, targetId, found?.name || DEFAULT_MP_NAME)
       setIsOpen(false)
       navigate('/mp-dashboard')
       return
@@ -187,13 +195,13 @@ export const SwitchRoleDropdown: React.FC = () => {
     if (user.role === 'state_nodal_officer') {
       const st = user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
         ? user.state.split(' ')[0]
-        : 'Assam'
+        : DEFAULT_STATE_DISPLAY
       return `State Nodal (${st})`
     }
     if (user.role === 'district_authority') {
       const dist = user.district && user.district !== 'ALL' && user.district !== 'ALL DISTRICTS'
         ? user.district
-        : 'Shimla'
+        : DEFAULT_DISTRICT_DISPLAY
       return `District Authority (${dist})`
     }
     if (user.role === 'mp') {
@@ -365,7 +373,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                         <button
                           type="button"
                           onClick={async () => {
-                            const stateParam = selectedState || 'ASSAM'
+                            const stateParam = selectedState || DEFAULT_STATE
                             await switchRole('state_nodal_officer', stateParam)
                             setIsOpen(false)
                             navigate('/my-state')

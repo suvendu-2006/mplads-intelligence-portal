@@ -3,11 +3,14 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 from typing import Optional, List, Dict, Any
 import json
+import logging
 import math
 
 from webapi.models import EnvelopeResponse, MetaPagination
 from webapi.data_service import get_db, load_districts_csv, load_mps_csv, compute_district_completion_metrics
 from webapi.config import DETECTOR_NAMES, get_tier
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -297,7 +300,7 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
             for r in anom_rows
         ]
     except Exception as e:
-        print(f"Error fetching district anomalies: {e}")
+        logger.warning(f"Error fetching district anomalies: {e}")
         anomalies_list = []
 
     # Real IDAs from entity_risks table (matching actual schema: entity_key, composite_risk, risk_tier, risk_rank, breakdown)
@@ -364,7 +367,7 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
                 "flaggedWorks": len(anomalies_list)
             })
     except Exception as e:
-        print(f"Error fetching district IDAs: {e}")
+        logger.warning(f"Error fetching district IDAs: {e}")
         idas_list = []
 
     active_mps_str = str(row.get("mps_active", "") or "")
@@ -450,7 +453,7 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
                     "status": "Active"
                 })
     except Exception as e:
-        print(f"Error resolving district MPs: {e}")
+        logger.warning(f"Error resolving district MPs: {e}")
 
     res_data = {
         "summary": summary_data,

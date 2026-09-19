@@ -8,7 +8,18 @@ def find_database_path() -> Path:
     env_path = os.getenv("DATABASE_PATH")
     if env_path and Path(env_path).exists():
         return Path(env_path)
-    
+
+    env_url = os.getenv("DATABASE_URL")
+    if env_url and env_url.startswith("sqlite:///"):
+        # Strip sqlite:/// or sqlite:///file: and any query parameters
+        raw = env_url[len("sqlite:///"):]
+        if raw.startswith("file:"):
+            raw = raw[len("file:"):]
+        raw = raw.split("?")[0]
+        p = Path(raw)
+        if p.exists() and p.is_file():
+            return p
+
     candidates = [
         BASE_DIR / "api" / "mplads_dev.db",
         BASE_DIR / "mplads_dev.db",

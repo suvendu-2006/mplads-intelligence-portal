@@ -20,12 +20,13 @@ import {
 import { apiFetch } from '../lib/api'
 import { t } from '../lib/i18n'
 import { fmtCrore } from '../lib/currency'
+import { DEFAULT_STATE } from '../lib/constants'
 
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
   const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
   const isRedirect = user.role === 'mospi'
-  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? 'ASSAM' : user.state
+  const targetState = (!user.state || user.state === 'ALL' || user.state === 'ALL STATES & UNION TERRITORIES') ? DEFAULT_STATE : user.state
 
   const [data, setData] = useState<any>(() => {
     try {
@@ -67,7 +68,7 @@ export const MyState: React.FC = () => {
           const json = await apiFetch(`/api/my-state?state=${encodeURIComponent(targetState)}`)
           if (json?.data) stateData = json.data
         } catch (e) {
-          console.warn('apiFetch /api/my-state failed, trying direct state endpoint:', e)
+          console.log('apiFetch /api/my-state failed, trying direct state endpoint:', e)
         }
 
         if (!stateData) {

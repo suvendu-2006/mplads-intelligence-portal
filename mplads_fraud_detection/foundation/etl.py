@@ -14,7 +14,10 @@ from typing import Optional, Dict, Any, Tuple
 
 import pandas as pd
 import numpy as np
-import pandera as pa
+try:
+    import pandera.pandas as pa
+except (ImportError, AttributeError):
+    import pandera as pa
 from sqlalchemy.orm import Session
 
 from mplads_fraud_detection.config import (
