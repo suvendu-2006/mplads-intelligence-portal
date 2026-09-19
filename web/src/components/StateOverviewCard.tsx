@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Users, Info, MapPin, TrendingUp, Check, ArrowRight } from 'lucide-react'
+import { Users, Check, ArrowRight } from 'lucide-react'
 import { StateOverviewItem } from '../lib/allStatesData'
 
 interface StateOverviewCardProps {
@@ -8,8 +8,6 @@ interface StateOverviewCardProps {
 }
 
 export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) => {
-  const isHighRate = item.expenditureRate >= 70
-
   // Format Crore amounts cleanly: e.g. 19.0 -> "19 CR", 35.4 -> "35.4 CR", 1778.3 -> "1,778.3 CR"
   const formatCr = (val: number) => {
     if (val >= 1000) {
@@ -22,38 +20,26 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
   return (
     <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
       <div>
-        {/* Top Header: State Name + Info Badges + Top Right Location Pin Box */}
+        {/* Top Header: State Name in clean sans font + Rank Badge on Top Right, MPs count below Name (no "i" and no location pin) */}
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h3 className="text-xl sm:text-2xl font-bold font-serif text-[var(--text-primary)] tracking-tight truncate">
+            <Link
+              to={`/states/${encodeURIComponent(item.state)}`}
+              className="text-lg sm:text-xl font-bold font-sans text-[var(--text-primary)] tracking-tight hover:text-[var(--brand-primary)] transition truncate block"
+            >
               {item.state}
-            </h3>
+            </Link>
 
-            <div className="flex items-center gap-2 mt-1.5 flex-wrap">
-              {/* MPs badge with info circle */}
-              <div className="flex items-center gap-1 text-xs text-[var(--text-secondary)] font-medium">
-                <Users size={13} className="text-[var(--text-tertiary)]" />
-                <span>{item.mps} MPs</span>
-                <span title={`${item.mps} Members of Parliament representing ${item.state}`}>
-                  <Info size={13} className="text-sky-600 dark:text-sky-400 fill-sky-500/20 cursor-help inline-block" />
-                </span>
-              </div>
-
-              {/* Rank Badge */}
-              <span className="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-sky-50 dark:bg-sky-950/50 text-sky-700 dark:text-sky-300 border border-sky-100 dark:border-sky-900/60">
-                Rank #{item.rank} of 36
-              </span>
+            <div className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] font-medium mt-1">
+              <Users size={13} className="text-[var(--text-tertiary)]" />
+              <span>{item.mps} MPs</span>
             </div>
           </div>
 
-          {/* Top Right Location Pin in Light Blue Rounded Square */}
-          <Link
-            to={`/states/${encodeURIComponent(item.state)}`}
-            aria-label={`Open ${item.state} overview`}
-            className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-100 dark:border-sky-900/40 hover:scale-105 transition-transform"
-          >
-            <MapPin size={18} className="stroke-[2]" />
-          </Link>
+          {/* Rank Badge */}
+          <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/50 text-sky-700 dark:text-sky-300 border border-sky-100 dark:border-sky-900/60 shrink-0">
+            Rank #{item.rank} of 36
+          </span>
         </div>
 
         {/* Two-Column Metrics: ALLOCATED vs RECORDED EXPENDITURE */}
@@ -77,23 +63,18 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
           </div>
         </div>
 
-        {/* Expenditure Rate & Visual Progress Bar */}
+        {/* Expenditure Rate & Uniform Cohesive Progress Bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs font-semibold">
-            <span className="text-slate-700 dark:text-slate-300">Expenditure Rate</span>
-            <span className={`font-bold flex items-center gap-0.5 tabular-nums ${
-              isHighRate ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-500 dark:text-rose-400'
-            }`}>
-              <TrendingUp size={13} className="shrink-0" />
-              <span>{item.expenditureRate.toFixed(1)}%</span>
+            <span className="text-slate-600 dark:text-slate-400">Expenditure Rate</span>
+            <span className="font-bold tabular-nums text-slate-800 dark:text-slate-200">
+              {item.expenditureRate.toFixed(1)}%
             </span>
           </div>
 
           <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
             <div
-              className={`h-full rounded-full transition-all duration-700 ${
-                isHighRate ? 'bg-emerald-500' : 'bg-rose-500'
-              }`}
+              className="h-full rounded-full transition-all duration-700 bg-[#B7791F] dark:bg-[#FF9E3B]"
               style={{ width: `${Math.min(100, Math.max(3, item.expenditureRate))}%` }}
             />
           </div>
@@ -139,3 +120,4 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
     </div>
   )
 }
+
