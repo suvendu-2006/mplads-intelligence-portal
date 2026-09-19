@@ -119,7 +119,7 @@ export const MPDashboard: React.FC = () => {
     if (user.role === 'mp') {
       switchRole('mp', mp.state, mp.constituency, mp.id, mp.name)
     }
-    setSearchParams({ id: mp.id })
+    setSearchParams({ id: mp.id }, { replace: true })
     setShowMpSelector(false)
     setSelectorSearch('')
   }
@@ -230,7 +230,7 @@ export const MPDashboard: React.FC = () => {
                 key={m.id}
                 onClick={async () => {
                   await switchRole('mp', m.state, m.constituency, m.id, m.name)
-                  setSearchParams({ id: m.id })
+                  setSearchParams({ id: m.id }, { replace: true })
                 }}
                 className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:bg-[var(--brand-accent)]/5 transition-all text-left flex flex-col justify-between gap-2 group cursor-pointer shadow-xs"
               >
@@ -394,6 +394,20 @@ export const MPDashboard: React.FC = () => {
               </>
             )}
           </div>
+
+          <button
+            onClick={async () => {
+              setMpJurisdiction('', '', '')
+              if (user.role === 'mp') {
+                await switchRole('mp', undefined, undefined, undefined, undefined)
+              }
+              setSearchParams({}, { replace: true })
+              navigate('/mp-dashboard', { replace: true })
+            }}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer"
+          >
+            <span>Change MP</span>
+          </button>
 
           <Link
             to={`/mps/${activeMpId}`}

@@ -23,7 +23,8 @@ import {
   Search,
   X,
   MapPin,
-  RotateCcw
+  RotateCcw,
+  ChevronRight
 } from 'lucide-react'
 import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
@@ -249,6 +250,21 @@ export const DistrictDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
+      {/* Breadcrumb Navigation */}
+      <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)]">
+        <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
+        <ChevronRight size={12} />
+        {(summary.state || user.state) && (
+          <>
+            <Link to={`/states/${encodeURIComponent(summary.state || user.state || '')}`} className="hover:text-[var(--text-primary)] transition">
+              {summary.state || user.state}
+            </Link>
+            <ChevronRight size={12} />
+          </>
+        )}
+        <span className="font-bold text-[var(--text-primary)]">{districtName}</span>
+      </div>
+
       {/* Official District Collectorate Header */}
       <div className="rounded-2xl p-5 bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
@@ -273,7 +289,7 @@ export const DistrictDashboard: React.FC = () => {
           <button
             onClick={async () => {
               await switchRole('district_authority', user.state, '')
-              navigate('/district-dashboard')
+              navigate('/district-dashboard', { replace: true })
             }}
             className="text-xs px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-alt)] hover:border-[var(--brand-primary)] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer flex items-center gap-1.5"
           >

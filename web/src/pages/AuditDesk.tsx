@@ -48,7 +48,6 @@ export const AuditDesk: React.FC = () => {
   const [stateFilter, setStateFilter] = useState(initialRoleState)
   const [prevUserStateKey, setPrevUserStateKey] = useState(() => `${user.role}:${user.state}`)
   const [tierFilter, setTierFilter] = useState('')
-  const [detectorFilter, setDetectorFilter] = useState('')
   const [agencyFilter, setAgencyFilter] = useState('')
   const [page, setPage] = useState(1)
   const [exporting, setExporting] = useState(false)
@@ -68,26 +67,10 @@ export const AuditDesk: React.FC = () => {
     setStateFilter(initialRoleState)
   }
 
-  // Available detectors & risks
-  const [detectors, setDetectors] = useState<any[]>([])
+  // Available entity risks
   const [entityTab, setEntityTab] = useState<'ida' | 'mp'>('ida')
   const [idaRisks, setIdaRisks] = useState<any[]>([])
   const [mpRisks, setMpRisks] = useState<any[]>([])
-
-  useEffect(() => {
-    async function loadDetectors() {
-      try {
-        const resDet = await fetch('/api/meta/detectors')
-        if (resDet.ok) {
-          const json = await resDet.json()
-          setDetectors(json.data || [])
-        }
-      } catch (err) {
-        console.error('Failed to load metadata:', err)
-      }
-    }
-    loadDetectors()
-  }, [])
 
   useEffect(() => {
     async function loadRisks() {
@@ -115,7 +98,7 @@ export const AuditDesk: React.FC = () => {
   useEffect(() => {
     async function fetchFlags() {
       sessionStorage.removeItem('cached_audit_flags_1')
-      if (!sessionStorage.getItem('cached_audit_flags_v2_1') || debouncedSearch || tierFilter || detectorFilter || stateFilter || agencyFilter) {
+      if (!sessionStorage.getItem('cached_audit_flags_v2_1') || debouncedSearch || tierFilter || stateFilter || agencyFilter) {
         setLoading(true)
       }
       try {
@@ -128,7 +111,6 @@ export const AuditDesk: React.FC = () => {
           params.set('state', stateFilter)
         }
         if (tierFilter) params.set('tier', tierFilter)
-        if (detectorFilter) params.set('detector', detectorFilter)
         if (agencyFilter) params.set('agency', agencyFilter)
 
         const res = await fetch(`/api/flags?${params.toString()}`)
@@ -136,7 +118,7 @@ export const AuditDesk: React.FC = () => {
           const json = await res.json()
           setFlags(json.data || [])
           setMeta(json.meta)
-          if (page === 1 && !debouncedSearch && !tierFilter && !detectorFilter && !agencyFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
+          if (page === 1 && !debouncedSearch && !tierFilter && !agencyFilter && (!stateFilter || stateFilter === 'ALL' || stateFilter === 'ALL STATES & UNION TERRITORIES')) {
             try { sessionStorage.setItem('cached_audit_flags_v2_1', JSON.stringify(json.data || [])) } catch {}
           }
         }
@@ -147,7 +129,7 @@ export const AuditDesk: React.FC = () => {
       }
     }
     fetchFlags()
-  }, [page, debouncedSearch, stateFilter, tierFilter, detectorFilter, agencyFilter])
+  }, [page, debouncedSearch, stateFilter, tierFilter, agencyFilter])
 
   const handleExportCSV = async () => {
     setExporting(true)
@@ -157,7 +139,6 @@ export const AuditDesk: React.FC = () => {
         params.append('state', stateFilter)
       }
       if (tierFilter) params.append('tier', tierFilter)
-      if (detectorFilter) params.append('detector', detectorFilter)
       if (agencyFilter) params.append('agency', agencyFilter)
       const url = params.toString() ? `/api/flags/export?${params.toString()}` : '/api/flags/export'
 
@@ -193,10 +174,10 @@ export const AuditDesk: React.FC = () => {
             </span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
-            Vigilance & Anomaly Command Desk
+            Vigilance &amp; Anomaly Command Desk
           </h1>
           <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5">
-            Automated audit screening across 15 project risk checks, cost benchmarking, and guideline compliance indicators.
+            Automated vigilance screening across statutory project risk checks, cost benchmarking, and guideline compliance indicators.
           </p>
         </div>
 
@@ -260,27 +241,6 @@ export const AuditDesk: React.FC = () => {
             ))}
           </select>
 
-          {/* Detector Filter */}
-          <select
-            value={detectorFilter}
-            onChange={(e) => {
-              setDetectorFilter(e.target.value)
-              setPage(1)
-            }}
-            className={`px-3 py-2 rounded-xl border text-xs font-semibold outline-none transition cursor-pointer ${
-              detectorFilter
-                ? 'bg-amber-500/10 border-amber-500 text-amber-700 dark:text-amber-300 font-bold'
-                : 'bg-[var(--surface-alt)] border-[var(--border-primary)] text-[var(--text-primary)]'
-            }`}
-          >
-            <option value="">All Detectors (D01-D15)</option>
-            {detectors.map((d: any) => (
-              <option key={d.detector_id} value={d.detector_id}>
-                {d.detector_id}: {d.name}
-              </option>
-            ))}
-          </select>
-
           {/* Agency Filter */}
           <div className="relative min-w-[200px] flex-1 max-w-xs">
             <Building2 className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-2.5" />
@@ -305,12 +265,11 @@ export const AuditDesk: React.FC = () => {
           )}
 
           {/* Clear Filters */}
-          {(search || tierFilter || detectorFilter || agencyFilter || (stateFilter && stateFilter !== initialRoleState)) && (
+          {(search || tierFilter || agencyFilter || (stateFilter && stateFilter !== initialRoleState)) && (
             <button
               onClick={() => {
                 setSearch('')
                 setTierFilter('')
-                setDetectorFilter('')
                 setAgencyFilter('')
                 setStateFilter(initialRoleState)
                 setPage(1)

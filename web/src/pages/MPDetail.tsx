@@ -265,7 +265,15 @@ export const MPDetail: React.FC = () => {
         <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)]">
           <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
           <ChevronRight size={12} />
-          <Link to="/mps" className="hover:text-[var(--text-primary)] transition">MPs Performance</Link>
+          <Link to="/mps" className="hover:text-[var(--text-primary)] transition">MPs</Link>
+          {summary.state && (
+            <>
+              <ChevronRight size={12} />
+              <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
+                {summary.state}
+              </Link>
+            </>
+          )}
           <ChevronRight size={12} />
           <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
         </div>

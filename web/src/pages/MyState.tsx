@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
@@ -29,7 +29,6 @@ import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
   const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
-  const isRedirect = user.role === 'mospi'
   const hasSelectedState = Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
   const targetState = hasSelectedState ? user.state! : ''
   const [stateSearch, setStateSearch] = useState('')
@@ -54,16 +53,15 @@ export const MyState: React.FC = () => {
   const [actionNotice, setActionNotice] = useState<string | null>(null)
 
   useEffect(() => {
-    if (isRedirect) return
     fetch('/api/national')
       .then(r => r.json())
       .then(j => { if (j?.data) setNationalMeta(j.data) })
       .catch(() => {})
-  }, [isRedirect])
+  }, [])
 
   useEffect(() => {
     async function loadMyState() {
-      if (!isAuthorized || isRedirect || !hasSelectedState) {
+      if (!isAuthorized || !hasSelectedState) {
         setLoading(false)
         return
       }
@@ -111,12 +109,7 @@ export const MyState: React.FC = () => {
       }
     }
     loadMyState()
-  }, [isAuthorized, isRedirect, hasSelectedState, targetState, user.sessionToken])
-
-  // MoSPI (Apex Central Authority) or unassigned/ALL users navigate directly to national States & UT overview page
-  if (isRedirect) {
-    return <Navigate to="/states" replace />
-  }
+  }, [isAuthorized, hasSelectedState, targetState, user.sessionToken])
 
   if (!isAuthorized) {
     return (
