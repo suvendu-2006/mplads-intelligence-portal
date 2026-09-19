@@ -611,8 +611,7 @@ export const ConstituencyDetail: React.FC = () => {
                     <th className="p-3.5">Location</th>
                     <th className="p-3.5">Cost</th>
                     <th className="p-3.5">Status</th>
-                    <th className="p-3.5">Agency</th>
-                    <th className="p-3.5 text-right">Audit</th>
+                    <th className="p-3.5">Implementing Agency</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[var(--border-primary)]">
@@ -650,14 +649,6 @@ export const ConstituencyDetail: React.FC = () => {
                           </td>
                           <td className="p-3.5 text-[var(--text-secondary)] truncate max-w-[140px]" title={w.implementing_agency}>
                             {w.implementing_agency || 'State Agency'}
-                          </td>
-                          <td className="p-3.5 text-right">
-                            <Link
-                              to={`/audit?q=${encodeURIComponent(w.work_id)}`}
-                              className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 hover:bg-[var(--brand-primary)] text-[var(--brand-primary)] hover:text-white font-bold text-[10px] transition"
-                            >
-                              Inspect &rarr;
-                            </Link>
                           </td>
                         </tr>
                       )

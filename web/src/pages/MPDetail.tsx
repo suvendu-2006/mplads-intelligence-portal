@@ -752,7 +752,6 @@ export const MPDetail: React.FC = () => {
                         <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
                         <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
                         <th className="p-3 font-bold whitespace-nowrap">Timeline / Delay</th>
-                        <th className="p-3 font-bold text-right whitespace-nowrap">Audit</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-[var(--border-primary)]">
@@ -822,16 +821,6 @@ export const MPDetail: React.FC = () => {
                                   <Clock size={12} />
                                   <span>{del}d delay</span>
                                 </span>
-                              )}
-                            </td>
-                            <td className="p-3 text-right">
-                              {flags.some((f: any) => f.workId === (w.workId || w.work_id)) ? (
-                                <span className="text-rose-600 dark:text-rose-400 font-bold flex items-center justify-end gap-1">
-                                  <AlertTriangle size={13} />
-                                  <span>Flagged</span>
-                                </span>
-                              ) : (
-                                <span className="text-emerald-600 font-semibold">Clean</span>
                               )}
                             </td>
                           </tr>

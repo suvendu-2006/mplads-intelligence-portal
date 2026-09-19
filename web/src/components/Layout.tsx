@@ -121,8 +121,8 @@ export const Layout: React.FC = () => {
               {isActive('/map') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-primary)] rounded-full" />}
             </Link>
 
-            {/* Audit Desk - Only visible for administrative/auditor roles (Hidden for Public Citizen) */}
-            {user.role !== 'viewer' && (
+            {/* Audit Desk - Only visible for administrative/auditor roles (Hidden for Public Citizen & MP) */}
+            {user.role !== 'viewer' && user.role !== 'mp' && (
               <Link
                 to="/audit"
                 onMouseEnter={() => {
