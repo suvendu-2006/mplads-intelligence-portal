@@ -45,19 +45,19 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         {/* Two-Column Metrics: ALLOCATED vs RECORDED EXPENDITURE */}
         <div className="mt-6 mb-5 grid grid-cols-2 gap-4">
           <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)]">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] min-h-[28px] flex items-end">
               ALLOCATED
             </div>
-            <div className="text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100 mt-1 tabular-nums">
+            <div className="text-xl sm:text-2xl font-black text-[var(--text-primary)] mt-1 tabular-nums">
               {formatCr(item.allocatedCr)}
             </div>
           </div>
 
           <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)]">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] min-h-[28px] flex items-end">
               RECORDED EXPENDITURE
             </div>
-            <div className="text-xl sm:text-2xl font-black text-slate-800 dark:text-slate-100 mt-1 tabular-nums">
+            <div className="text-xl sm:text-2xl font-black text-[var(--text-primary)] mt-1 tabular-nums">
               {formatCr(item.expenditureCr)}
             </div>
           </div>
