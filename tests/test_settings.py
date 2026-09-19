@@ -1,6 +1,6 @@
-"""
-Unit tests for typed settings and fail-closed production validation.
-"""
+# Unit tests for typed settings and fail-closed production validation.
+
+
 
 import pytest
 from mplads_fraud_detection.settings import Settings
