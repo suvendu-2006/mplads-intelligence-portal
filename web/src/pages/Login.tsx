@@ -8,6 +8,15 @@ import {
   Lock,
   Landmark
 } from 'lucide-react'
+import {
+  DEFAULT_STATE,
+  DEFAULT_STATE_DISPLAY,
+  DEFAULT_DISTRICT,
+  DEFAULT_DISTRICT_DISPLAY,
+  DEFAULT_MP_ID,
+  DEFAULT_MP_NAME
+} from '../lib/constants'
+import { clearApiCache } from '../lib/api'
 
 const PERSONAS = [
   {
@@ -29,9 +38,9 @@ const PERSONAS = [
     description: 'Track your ₹5 Cr/year (avg ₹15.09 Cr/MP actual) entitlement corpus, verify recommended works delivery, and inspect compliance alerts.',
     route: '/mp-dashboard',
     defaultContext: {
-      mpId: '6a932b5bcd944524379eddd9',
-      mpName: 'Anurag Singh Thakur',
-      state: 'Himachal Pradesh'
+      mpId: DEFAULT_MP_ID,
+      mpName: DEFAULT_MP_NAME,
+      state: DEFAULT_STATE_DISPLAY
     }
   },
   {
@@ -43,8 +52,8 @@ const PERSONAS = [
     description: 'Supervise district works sanction queue, verify Measurement Books (MB), and inspect IDA agencies.',
     route: '/district-dashboard',
     defaultContext: {
-      district: 'SHIMLA',
-      state: 'HIMACHAL PRADESH'
+      district: DEFAULT_DISTRICT,
+      state: DEFAULT_STATE
     }
   },
   {
@@ -56,7 +65,7 @@ const PERSONAS = [
     description: 'Monitor cross-district liability, track Single Nodal Account (SNA) releases, and issue Show-Cause notices.',
     route: '/my-state',
     defaultContext: {
-      state: 'HIMACHAL PRADESH'
+      state: DEFAULT_STATE
     }
   },
   {
@@ -85,6 +94,10 @@ export const Login: React.FC = () => {
   const handlePersonaLogin = async (persona: typeof PERSONAS[0]) => {
     setLoading(true)
     try {
+      if (typeof window !== 'undefined') {
+        try { sessionStorage.clear() } catch {}
+        clearApiCache()
+      }
       await switchRole(
         persona.role,
         persona.defaultContext.state,

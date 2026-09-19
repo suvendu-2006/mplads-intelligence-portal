@@ -1,5 +1,13 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import {
+  DEFAULT_STATE,
+  DEFAULT_STATE_DISPLAY,
+  DEFAULT_DISTRICT,
+  DEFAULT_MP_ID,
+  DEFAULT_MP_NAME
+} from '../lib/constants'
+import { clearApiCache } from '../lib/api'
 
 export type ThemeMode = 'device' | 'light' | 'dark' | 'auto'
 export type LangMode = 'en' | 'hi'
@@ -68,13 +76,24 @@ export const useStore = create<AppStore>()(
           ? ['read:mp', 'write:mp', 'read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter']
           : ['read:national', 'read:states', 'read:mps', 'read:map']
 
-        const newState = state || 'ALL'
-        const newDistrict = district || 'ALL'
-        const newMpId = mpId || 'ALL'
-        const newMpName = mpName || (role === 'mp' ? 'All Members of Parliament' : undefined)
+        const newState = state || (
+          role === 'state_nodal_officer' ? DEFAULT_STATE :
+          role === 'district_authority' ? DEFAULT_STATE :
+          role === 'mp' ? DEFAULT_STATE_DISPLAY : 'ALL'
+        )
+        const newDistrict = district || (
+          role === 'district_authority' ? DEFAULT_DISTRICT : 'ALL'
+        )
+        const newMpId = mpId || (
+          role === 'mp' ? DEFAULT_MP_ID : 'ALL'
+        )
+        const newMpName = mpName || (
+          role === 'mp' ? DEFAULT_MP_NAME : undefined
+        )
 
-        // 1. Instantaneous local update (0ms UI latency)
+        // 1. Instantaneous local update: reset search query & set clean role state
         set({
+          searchQuery: '',
           user: {
             role,
             state: newState,
@@ -86,13 +105,12 @@ export const useStore = create<AppStore>()(
           }
         })
 
-        // 2. Clear role-specific stale data from session storage
-        if (typeof window !== 'undefined' && window.sessionStorage) {
+        // 2. Clear ALL role-specific, searched and cached data from session storage and RAM
+        if (typeof window !== 'undefined') {
           try {
-            sessionStorage.removeItem('cached_nat_data')
-            sessionStorage.removeItem('cached_nat_states')
-            sessionStorage.removeItem('cached_nat_analytics')
+            sessionStorage.clear()
           } catch {}
+          clearApiCache()
         }
 
         // 3. Asynchronously synchronize with backend in background (never block navigation)
@@ -127,9 +145,19 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
-      version: 2,
+      version: 3,
+      partialize: (state) => ({
+        theme: state.theme,
+        lang: state.lang,
+        bannerDismissed: state.bannerDismissed,
+        user: {
+          role: state.user.role,
+          permissions: state.user.permissions,
+          sessionToken: state.user.sessionToken
+        }
+      }),
       migrate: (persistedState: any, version: number) => {
-        if (version < 2) {
+        if (version < 3) {
           return {
             ...persistedState,
             theme: persistedState?.theme === 'dark' ? 'dark' : 'light'

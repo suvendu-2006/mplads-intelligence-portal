@@ -279,7 +279,7 @@ export const MPDashboard: React.FC = () => {
                       <th className="p-3 font-bold whitespace-nowrap text-right">Sanction Cost</th>
                       <th className="p-3 font-bold whitespace-nowrap">Executing District</th>
                       <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
-                      <th className="p-3 font-bold text-right whitespace-nowrap">Audit</th>
+                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -310,20 +310,8 @@ export const MPDashboard: React.FC = () => {
                               {w.status || 'In Progress'}
                             </span>
                           </td>
-                          <td className="p-3 text-right whitespace-nowrap">
-                            {flags.some((f: any) => f.workId === (w.workId || w.work_id)) ? (
-                              <button
-                                onClick={() => {
-                                  const f = flags.find((f: any) => f.workId === (w.workId || w.work_id))
-                                  if (f) setSelectedFlag(f)
-                                }}
-                                className="text-rose-600 dark:text-rose-400 font-bold hover:underline"
-                              >
-                                View Anomaly
-                              </button>
-                            ) : (
-                              <span className="text-emerald-600 font-semibold">Verified</span>
-                            )}
+                          <td className="p-3 font-medium text-[var(--text-secondary)] whitespace-nowrap">
+                            {w.implementingAgency || w.implementing_agency || 'District Authority'}
                           </td>
                         </tr>
                       )

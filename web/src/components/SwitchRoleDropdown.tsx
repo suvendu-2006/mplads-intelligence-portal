@@ -147,6 +147,13 @@ export const SwitchRoleDropdown: React.FC = () => {
 
   // DIRECT ROLE SWITCH HANDLER: Immediately switches role & navigates to respective section!
   const handleRoleCardClick = async (roleId: string) => {
+    // Reset dropdown states so opening or switching profiles never carries over previous searches
+    setSelectedState(DEFAULT_STATE)
+    setDmState(DEFAULT_STATE)
+    setDmDistrict(DEFAULT_DISTRICT)
+    setSelectedMpId(DEFAULT_MP_ID)
+    setMpSearch('')
+
     if (roleId === 'viewer') {
       await switchRole('viewer', 'ALL', 'ALL', 'ALL', 'All Members of Parliament')
       setIsOpen(false)
@@ -162,26 +169,22 @@ export const SwitchRoleDropdown: React.FC = () => {
     }
 
     if (roleId === 'state_nodal_officer') {
-      const stateParam = (selectedState && selectedState !== 'ALL STATES & UNION TERRITORIES') ? selectedState : DEFAULT_STATE
-      await switchRole('state_nodal_officer', stateParam)
+      await switchRole('state_nodal_officer', DEFAULT_STATE)
       setIsOpen(false)
       navigate('/my-state')
       return
     }
 
     if (roleId === 'district_authority') {
-      const stateParam = dmState || DEFAULT_STATE
-      const distParam = (dmDistrict && dmDistrict !== 'ALL DISTRICTS') ? dmDistrict : (availableDistricts[0] || DEFAULT_DISTRICT)
-      await switchRole('district_authority', stateParam, distParam)
+      await switchRole('district_authority', DEFAULT_STATE, DEFAULT_DISTRICT)
       setIsOpen(false)
-      navigate(`/districts/${encodeURIComponent(distParam)}`)
+      navigate(`/districts/${encodeURIComponent(DEFAULT_DISTRICT)}`)
       return
     }
 
     if (roleId === 'mp') {
-      const targetId = (selectedMpId && selectedMpId !== 'ALL') ? selectedMpId : DEFAULT_MP_ID
-      const found = ALL_MP_SEATS.find(m => m.id === targetId) || ALL_MP_SEATS[0]
-      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, targetId, found?.name || DEFAULT_MP_NAME)
+      const found = ALL_MP_SEATS.find(m => m.id === DEFAULT_MP_ID) || ALL_MP_SEATS[0]
+      await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, DEFAULT_MP_ID, found?.name || DEFAULT_MP_NAME)
       setIsOpen(false)
       navigate('/mp-dashboard')
       return
@@ -403,7 +406,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                               const newState = e.target.value
                               setDmState(newState)
                               const dists = STATE_DISTRICTS_MAP[newState] || STATE_DISTRICTS_MAP[newState.toUpperCase()] || []
-                              setDmDistrict(dists[0] || 'SHIMLA')
+                              setDmDistrict(dists[0] || DEFAULT_DISTRICT)
                             }}
                             className="w-full text-xs bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-lg px-2.5 py-1.5 text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] font-bold cursor-pointer"
                           >
@@ -443,7 +446,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                         <button
                           type="button"
                           onClick={async () => {
-                            const targetDist = dmDistrict || availableDistricts[0] || 'SHIMLA'
+                            const targetDist = dmDistrict || availableDistricts[0] || DEFAULT_DISTRICT
                             await switchRole('district_authority', dmState, targetDist)
                             setIsOpen(false)
                             navigate(`/districts/${encodeURIComponent(targetDist)}`)
@@ -545,7 +548,7 @@ export const SwitchRoleDropdown: React.FC = () => {
                           type="button"
                           onClick={async () => {
                             const found = ALL_MP_SEATS.find(m => m.id === selectedMpId) || ALL_MP_SEATS[0]
-                            await switchRole('mp', found?.state || 'Himachal Pradesh', undefined, found?.id, found?.name)
+                            await switchRole('mp', found?.state || DEFAULT_STATE_DISPLAY, undefined, found?.id, found?.name)
                             setIsOpen(false)
                             navigate('/mp-dashboard')
                           }}
