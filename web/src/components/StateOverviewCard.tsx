@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Users, Check, ArrowRight } from 'lucide-react'
+import { Users, TrendingUp, Check, ArrowRight } from 'lucide-react'
 import { StateOverviewItem } from '../lib/allStatesData'
 
 interface StateOverviewCardProps {
@@ -20,7 +20,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
   return (
     <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
       <div>
-        {/* Top Header: State Name in clean sans font + Rank Badge on Top Right, MPs count below Name (no "i" and no location pin) */}
+        {/* Header: State Name + MPs + Rank Badge */}
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <Link
@@ -43,35 +43,35 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         </div>
 
         {/* Two-Column Metrics: ALLOCATED vs RECORDED EXPENDITURE */}
-        <div className="mt-6 mb-5 grid grid-cols-2 gap-4">
-          <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] min-h-[28px] flex items-end">
+        <div className="mt-5 mb-4 grid grid-cols-2 gap-4">
+          <div className="flex flex-col">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
               ALLOCATED
             </div>
-            <div className="text-xl sm:text-2xl font-black text-[var(--text-primary)] mt-1 tabular-nums">
+            <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
               {formatCr(item.allocatedCr)}
             </div>
           </div>
 
-          <div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] min-h-[28px] flex items-end">
+          <div className="flex flex-col">
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
               RECORDED EXPENDITURE
             </div>
-            <div className="text-xl sm:text-2xl font-black text-[var(--text-primary)] mt-1 tabular-nums">
+            <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
               {formatCr(item.expenditureCr)}
             </div>
           </div>
         </div>
 
-        {/* Expenditure Rate & Uniform Cohesive Progress Bar */}
+        {/* Expenditure Rate with TrendingUp icon + Uniform Progress Bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs font-semibold">
             <span className="text-[var(--text-secondary)]">Expenditure Rate</span>
-            <span className="font-bold tabular-nums text-[var(--text-primary)]">
-              ↗{item.expenditureRate.toFixed(1)}%
+            <span className="font-bold flex items-center gap-0.5 tabular-nums text-rose-500 dark:text-rose-400">
+              <TrendingUp size={14} className="shrink-0" />
+              <span>{item.expenditureRate.toFixed(1)}%</span>
             </span>
           </div>
-
 
           <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
             <div
@@ -88,7 +88,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
               <Check size={11} strokeWidth={3} />
             </div>
             <div>
-              <div className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-100 leading-tight tabular-nums">
+              <div className="text-sm sm:text-base font-bold text-[var(--text-primary)] leading-tight tabular-nums">
                 {item.completedWorks.toLocaleString()}
               </div>
               <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold leading-tight">
@@ -121,4 +121,3 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
     </div>
   )
 }
-
