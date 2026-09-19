@@ -157,7 +157,7 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
-      version: 4,
+      version: 5,
       partialize: (state) => ({
         theme: state.theme,
         lang: state.lang,
@@ -173,10 +173,15 @@ export const useStore = create<AppStore>()(
         }
       }),
       migrate: (persistedState: any, version: number) => {
-        if (version < 3) {
+        if (version < 5) {
           return {
             ...persistedState,
-            theme: persistedState?.theme === 'dark' ? 'dark' : 'light'
+            theme: persistedState?.theme === 'dark' ? 'dark' : 'light',
+            user: {
+              role: 'viewer',
+              permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+              sessionToken: 'default_viewer'
+            }
           }
         }
         return persistedState
