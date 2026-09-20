@@ -5,10 +5,10 @@ import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
 
-const INDIA_CENTER: [number, number] = [22.5937, 79.5]
+const INDIA_CENTER: [number, number] = [22.0, 80.5]
 const INDIA_BOUNDS: [[number, number], [number, number]] = [
-  [6.5, 68.0],
-  [37.5, 97.5]
+  [5.5, 67.0],
+  [37.5, 98.0]
 ]
 
 function ResetViewControl() {
@@ -17,7 +17,7 @@ function ResetViewControl() {
     <div className="leaflet-top leaflet-left" style={{ marginTop: '70px', marginLeft: '10px' }}>
       <div className="leaflet-control leaflet-bar shadow-md border border-[var(--border-primary)] rounded-lg overflow-hidden">
         <button
-          onClick={() => map.setView(INDIA_CENTER, 5)}
+          onClick={() => map.setView(INDIA_CENTER, 4.8)}
           title="Reset to Full Sovereign India View"
           className="w-8 h-8 flex items-center justify-center bg-[var(--surface-primary)] text-[var(--text-primary)] hover:bg-[var(--surface-alt)] font-bold text-xs transition cursor-pointer"
         >
@@ -434,8 +434,8 @@ export const GISMap: React.FC = () => {
         <div className="lg:col-span-3 lux-card p-2 overflow-hidden h-[640px] relative">
           <MapContainer
             center={INDIA_CENTER}
-            zoom={5}
-            minZoom={4.5}
+            zoom={4.8}
+            minZoom={4}
             maxZoom={8.5}
             maxBounds={INDIA_BOUNDS}
             maxBoundsViscosity={1.0}
