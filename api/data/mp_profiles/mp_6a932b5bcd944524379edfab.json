@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfab",
+    "name": "TARIQ ANWAR",
+    "constituency": "KATIHAR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 79735060,
+    "utilizationPercentage": 54.24153741496599,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 26,
+    "completedWorksValue": 58505060,
+    "inProgressPayments": 21230000,
+    "paymentGapPercentage": 26.625677587751234,
+    "completionRate": 69.76744186046511,
+    "pendingWorks": -34,
+    "unspentAmount": 67264940,
+    "totalRecommendedAmount": 25220000,
+    "name_hi": "TARIQ ANWAR",
+    "constituency_hi": "KATIHAR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 79735060,
+      "totalEntries": 82,
+      "avgExpenditure": 972378.7804878049,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7760000,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 71975060,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 79735060,
+        "transactionCount": 82,
+        "avgAmount": 972378.7804878049
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 26,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e360",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and installation of 16 meter high electric powered high mast LED lights",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 965000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e358",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and installation of 16 meter high electric powered high mast LED lights",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 965000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e357",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and installation of 16 meter high electric powered high mast LED lights",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 965000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e35a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and installation of 16 meter high electric powered high mast LED lights",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 965000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e35d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and installation of 16 meter high electric powered high mast LED lights",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 965000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.874Z"
+}

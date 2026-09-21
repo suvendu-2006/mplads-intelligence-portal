@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddeb",
+    "name": "B K PARTHASARATHI",
+    "constituency": "HINDUPUR",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 160491894.11,
+    "totalExpenditure": 47797914,
+    "utilizationPercentage": 29.78213589232092,
+    "completedWorksCount": 52,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 33917897,
+    "inProgressPayments": 13880017,
+    "paymentGapPercentage": 29.038959733682102,
+    "completionRate": 56.52173913043478,
+    "pendingWorks": -12,
+    "unspentAmount": 112693980.11000001,
+    "totalRecommendedAmount": 46650000,
+    "name_hi": "B K PARTHASARATHI",
+    "constituency_hi": "HINDUPUR",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47797914,
+      "totalEntries": 64,
+      "avgExpenditure": 746842.40625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22539098,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25258816,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47797914,
+        "transactionCount": 64,
+        "avgAmount": 746842.40625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 52,
+    "recommendedCount": 40,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cfc0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Sno.149 Kesapuram (V) Kothacheruvu(M)",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d123",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Ravi house to Neela Nagaraju house at Weaver colony.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 492292
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Sno 111 Chonduruvandlapalli of Gorantla mandal",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 996764
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d122",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from NH road to Neela Nagaraju house at weavers colony of Nallacheruvu",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 494881
+      },
+      {
+        "_id": "6a932bb5cd94452437a17da0",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of community hall at survey no:782-2a & 782-2c of somandepalli village",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 7963254
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.687Z"
+}

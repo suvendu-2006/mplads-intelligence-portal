@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddee",
+    "name": "BAG MITALI",
+    "constituency": "ARAMBAG",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 53162451,
+    "utilizationPercentage": 36.16493265306123,
+    "completedWorksCount": 87,
+    "recommendedWorksCount": 97,
+    "completedWorksValue": 43155174,
+    "inProgressPayments": 10007277,
+    "paymentGapPercentage": 18.82395715728005,
+    "completionRate": 47.28260869565217,
+    "pendingWorks": 10,
+    "unspentAmount": 93837549,
+    "totalRecommendedAmount": 58499151,
+    "name_hi": "BAG MITALI",
+    "constituency_hi": "ARAMBAG",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53162451,
+      "totalEntries": 100,
+      "avgExpenditure": 531624.51,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34198839,
+        "transactionCount": 70
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18963612,
+        "transactionCount": 30
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53162451,
+        "transactionCount": 100,
+        "avgAmount": 531624.51
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 87,
+    "recommendedCount": 97,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bfa4",
+        "workCategory": "Normal/Others",
+        "workDescription": "PURCHASE OF AMBULANCES MAHINDRA BOLERA NEO+ (AC) WITH AXIGEN CYLINDER AT HAZIPUR GP UNDAR GOGHAT-II DEV. BLOCK",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1420000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SUMMERSIBLE PUMP WITH WATER TANK AT TENHURIA NEAR PLAY GROUND WITHIN HAZIPUR GP UNDER GOGHAT-II DEV.BLOCK",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 294420
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Eletical High Mast Light at Aujgar Play Ground Within Mandaran GP undar Goghat-II Dev. Block.",
+        "completedDate": "2026-08-23T00:00:00.000Z",
+        "finalAmount": 377793
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e748",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF JALASATRA (STAND ALONE) AT BELUN PANPOTA NEAR TARAPITH MANDIR UNDER KUMARGANJ GRAM PANCHAYAT WITHIN GOGHAT-II DEV.BLOCK",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 891616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e746",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF PROPOSED  ROOF TRUSS OF DEBKHANDA PRIMARY SCHOOL, AT MOUJA-DEBKHANDA, J.L NO-169, P.O HAJIPUR.P.S-GOGHAT.PIN-712614. UNDER HAIPUR G.P.GOGHAT II BLOCK",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 899320
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.269Z"
+}

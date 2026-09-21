@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddaf",
+    "name": "ABDUL RASHID SHEIKH",
+    "constituency": "BARAMULLAH",
+    "state": "Jammu And Kashmir",
+    "house": "Lok Sabha",
+    "allocatedAmount": 154773472.11,
+    "totalExpenditure": 27714021,
+    "utilizationPercentage": 17.906182902134027,
+    "completedWorksCount": 44,
+    "recommendedWorksCount": 114,
+    "completedWorksValue": 20833605,
+    "inProgressPayments": 6880416,
+    "paymentGapPercentage": 24.826480430248647,
+    "completionRate": 27.848101265822784,
+    "pendingWorks": 70,
+    "unspentAmount": 127059451.11000001,
+    "totalRecommendedAmount": 45098028.46,
+    "name_hi": "ABDUL RASHID SHEIKH",
+    "constituency_hi": "BARAMULLAH",
+    "state_hi": "Jammu And Kashmir"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27714021,
+      "totalEntries": 70,
+      "avgExpenditure": 395914.5857142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7262212,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20451809,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27714021,
+        "transactionCount": 70,
+        "avgAmount": 395914.5857142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 44,
+    "recommendedCount": 114,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e227",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights in different villages of Baramulla, wagoora Kreeri and Pattan Assembly Constituency. Location to be identified later.",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 598400
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf74",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at different spots in Rafiabad Constituency. Locations will be identified later.",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 498400
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e226",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights at different spots of Uri Assembly Constituency. Location to be identified later.",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 498400
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cfda",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Side screens on both sides of Warpora Playground Block Zaingeer",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 153497
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Protection Bund (P-Bund) near house of Tawseef Ahmad wani, Mohd Yousuf and others in convergence with MGNREGA on 60 40 (1.50 from MPLADS and 1.00 from MGNREGA)",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 116758
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.689Z"
+}

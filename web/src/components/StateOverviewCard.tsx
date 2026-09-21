@@ -2,23 +2,25 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Users, TrendingUp, Check, ArrowRight } from 'lucide-react'
 import { StateOverviewItem } from '../lib/allStatesData'
+import { useTranslation, toNativeDigits, translateState } from '../lib/i18n'
 
 interface StateOverviewCardProps {
   item: StateOverviewItem
 }
 
 export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) => {
-  // Format Crore amounts cleanly: e.g. 19.0 -> "19 CR", 35.4 -> "35.4 CR", 1778.3 -> "1,778.3 CR"
+  const { t, lang } = useTranslation()
+  // Format Crore amounts cleanly with native numerals
   const formatCr = (val: number) => {
-    if (val >= 1000) {
-      return `${val.toLocaleString('en-IN', { minimumFractionDigits: val % 1 === 0 ? 0 : 1, maximumFractionDigits: 1 })} CR`
-    }
     const isWhole = Math.abs(val - Math.round(val)) < 0.05
-    return `${isWhole ? Math.round(val) : val.toFixed(1)} CR`
+    const numStr = val >= 1000
+      ? val.toLocaleString('en-IN', { minimumFractionDigits: val % 1 === 0 ? 0 : 1, maximumFractionDigits: 1 })
+      : (isWhole ? String(Math.round(val)) : val.toFixed(1))
+    return `₹${toNativeDigits(numStr, lang)} ${t('unit.cr')}`
   }
 
   return (
-    <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
+    <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:border-[var(--brand-accent)] hover:shadow-md transition-colors duration-150 flex flex-col justify-between group">
       <div>
         {/* Header: State Name + MPs + Rank Badge */}
         <div className="flex items-start justify-between gap-3">
@@ -27,18 +29,18 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
               to={`/states/${encodeURIComponent(item.state)}`}
               className="text-lg sm:text-xl font-bold font-sans text-[var(--text-primary)] tracking-tight hover:text-[var(--brand-primary)] transition truncate block"
             >
-              {item.state}
+              {translateState(item.state, lang)}
             </Link>
 
             <div className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] font-medium mt-1">
               <Users size={13} className="text-[var(--text-tertiary)]" />
-              <span>{item.mps} MPs</span>
+              <span>{toNativeDigits(item.mps, lang)} {t('unit.mps')}</span>
             </div>
           </div>
 
           {/* Rank Badge */}
           <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/50 text-sky-700 dark:text-sky-300 border border-sky-100 dark:border-sky-900/60 shrink-0">
-            Rank #{item.rank} of 36
+            {t('label.rank')} #{toNativeDigits(item.rank, lang)} / {toNativeDigits(36, lang)}
           </span>
         </div>
 
@@ -46,7 +48,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         <div className="mt-5 mb-4 grid grid-cols-2 gap-4">
           <div className="flex flex-col">
             <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
-              ALLOCATED
+              {t('kpi.allocated')}
             </div>
             <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
               {formatCr(item.allocatedCr)}
@@ -55,7 +57,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
 
           <div className="flex flex-col">
             <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
-              RECORDED EXPENDITURE
+              {t('kpi.used')}
             </div>
             <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
               {formatCr(item.expenditureCr)}
@@ -66,10 +68,10 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         {/* Expenditure Rate with TrendingUp icon + Uniform Progress Bar */}
         <div className="mb-4">
           <div className="flex items-center justify-between text-xs font-semibold">
-            <span className="text-[var(--text-secondary)]">Expenditure Rate</span>
+            <span className="text-[var(--text-secondary)]">{t('kpi.utilization')}</span>
             <span className="font-bold flex items-center gap-0.5 tabular-nums text-rose-500 dark:text-rose-400">
               <TrendingUp size={14} className="shrink-0" />
-              <span>{item.expenditureRate.toFixed(1)}%</span>
+              <span>{toNativeDigits(item.expenditureRate.toFixed(1), lang)}%</span>
             </span>
           </div>
 
@@ -89,20 +91,20 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
             </div>
             <div>
               <div className="text-sm sm:text-base font-bold text-[var(--text-primary)] leading-tight tabular-nums">
-                {item.completedWorks.toLocaleString()}
+                {toNativeDigits(item.completedWorks.toLocaleString(), lang)}
               </div>
               <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold leading-tight">
-                Works Completed
+                {t('kpi.completed')}
               </div>
             </div>
           </div>
 
           <div className="text-right">
             <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold">
-              Completion
+              {t('kpi.completion_rate')}
             </div>
             <div className="text-sm sm:text-base font-bold text-sky-900 dark:text-sky-200 tabular-nums">
-              {item.completionRate.toFixed(1)}%
+              {toNativeDigits(item.completionRate.toFixed(1), lang)}%
             </div>
           </div>
         </div>
@@ -114,7 +116,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
           to={`/states/${encodeURIComponent(item.state)}`}
           className="text-xs font-semibold text-sky-700 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 inline-flex items-center justify-center gap-1 group-hover:underline transition"
         >
-          <span>View Details</span>
+          <span>{t('btn.show_details')}</span>
           <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
         </Link>
       </div>

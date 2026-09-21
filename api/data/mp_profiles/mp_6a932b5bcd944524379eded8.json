@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded8",
+    "name": "MUKESHKUMAR CHANDRAKAANT DALAL",
+    "constituency": "SURAT",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26395724,
+    "utilizationPercentage": 17.956274829931974,
+    "completedWorksCount": 92,
+    "recommendedWorksCount": 128,
+    "completedWorksValue": 22916852,
+    "inProgressPayments": 3478872,
+    "paymentGapPercentage": 13.17968016334767,
+    "completionRate": 41.81818181818181,
+    "pendingWorks": 36,
+    "unspentAmount": 120604276,
+    "totalRecommendedAmount": 94331200,
+    "name_hi": "MUKESHKUMAR CHANDRAKAANT DALAL",
+    "constituency_hi": "SURAT",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26395724,
+      "totalEntries": 112,
+      "avgExpenditure": 235676.10714285713,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18490482,
+        "transactionCount": 76
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7905242,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26395724,
+        "transactionCount": 112,
+        "avgAmount": 235676.10714285713
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 92,
+    "recommendedCount": 128,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d88c",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Ward No. 11, a total of 58 benches will be installed at 14 locations for elders to sit.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 273760
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d87b",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Ward No. 10, a total of 24 benches will be installed at 9 locations for elders to sit.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 113280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d876",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Ward No. 02, a total of 111 benches will be installed at 30 locations for elders to sit.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 523920
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Allocate 1 unit of a 1000-liter L.P.H.R.O. (attached with a water cooler) at Veer Narmad South Gujarat University, Udhna-Magdalla Road, located in Ward No. 22.",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 205760
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df23",
+        "workCategory": "Normal/Others",
+        "workDescription": "To allocate 60 benches to Urban Primary Education Committee Schools No.159 and 161 located in Ward No. 9.",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 223500
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.779Z"
+}

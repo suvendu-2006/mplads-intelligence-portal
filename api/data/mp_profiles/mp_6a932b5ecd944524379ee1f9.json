@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f9",
+    "name": "Dr. K. Laxman (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 197637007.11,
+    "totalExpenditure": 123809716,
+    "utilizationPercentage": 62.64500652506364,
+    "completedWorksCount": 275,
+    "recommendedWorksCount": 48,
+    "completedWorksValue": 90523200,
+    "inProgressPayments": 33286516,
+    "paymentGapPercentage": 26.885221188941262,
+    "completionRate": 85.13931888544892,
+    "pendingWorks": -227,
+    "unspentAmount": 73827291.11000001,
+    "totalRecommendedAmount": 54605900,
+    "name_hi": "Dr. K. Laxman (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 123809716,
+      "totalEntries": 323,
+      "avgExpenditure": 383311.8142414861,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1614439,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 81379892,
+        "transactionCount": 274
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40815385,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 123809716,
+        "transactionCount": 323,
+        "avgAmount": 383311.8142414861
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 275,
+    "recommendedCount": 48,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3180f",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC construction work from Chandrabhan house towards Ramu house in village Kukathala (Nagla) of Achhnera.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 2497564
+      },
+      {
+        "_id": "6a932bb5cd94452437a30b77",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction and redevelopment of boundary wall at crematorium ground",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 3687074
+      },
+      {
+        "_id": "6a932bb5cd94452437a31811",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC construction work from main road towards Sundar house in Majra Nagla Dayaram of Gram Panchayat Gahra Khurd of Akola.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 2696306
+      },
+      {
+        "_id": "6a932bb5cd94452437a31810",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Construction work from main roads towards Devendra Rajput house in village Kalwari (H.R. State) in Bichpuri.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 1498044
+      },
+      {
+        "_id": "6a932bb5cd94452437a30b76",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction and redevelopment of community center at crematorium ground",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 3894337
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.696Z"
+}

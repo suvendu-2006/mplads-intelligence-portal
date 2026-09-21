@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee222",
+    "name": "Shri Babubhai Jesangbhai Desai (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 84930425,
+    "utilizationPercentage": 49.522113702623905,
+    "completedWorksCount": 137,
+    "recommendedWorksCount": 145,
+    "completedWorksValue": 68091874,
+    "inProgressPayments": 16838551,
+    "paymentGapPercentage": 19.826288400181678,
+    "completionRate": 48.58156028368794,
+    "pendingWorks": 8,
+    "unspentAmount": 86569575,
+    "totalRecommendedAmount": 82867300,
+    "name_hi": "Shri Babubhai Jesangbhai Desai (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 84930425,
+      "totalEntries": 170,
+      "avgExpenditure": 499590.73529411765,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 750000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55256674,
+        "transactionCount": 111
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28923751,
+        "transactionCount": 57
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 84930425,
+        "transactionCount": 170,
+        "avgAmount": 499590.73529411765
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 137,
+    "recommendedCount": 145,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vaghrol Ta.Dantiwada : Work of flood protection wall in the area including Rabariwas\n(2024-25)",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32281",
+        "workCategory": "Normal/Others",
+        "workDescription": "Samarvada Ta.Dhanera : For building of Public Library near Mahakali Temple (2023-24)",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32143",
+        "workCategory": "Trust and Society",
+        "workDescription": "Malupur Ta Tharad Library room at Shri Gopalak Education Service Trust(2025-26)",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ef1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Karanpura  Ta. Tharad  Flood protection wall work from R.M.S.A. High School to Gaushala in Karanpura village of Ghesda Group Gram Panchayat (2025-26)",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32144",
+        "workCategory": "Trust and Society",
+        "workDescription": "Malupur  Ta Tharad Computer room at Shri Gopalak Education Seva Trust (2025-26)",
+        "completedDate": "2026-03-20T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.647Z"
+}

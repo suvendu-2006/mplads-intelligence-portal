@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee9",
+    "name": "Om Birla",
+    "constituency": "KOTA",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 163906956.6,
+    "totalExpenditure": 28500390,
+    "utilizationPercentage": 17.388151541092064,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 46,
+    "completedWorksValue": 12085606,
+    "inProgressPayments": 16414784,
+    "paymentGapPercentage": 57.59494519197808,
+    "completionRate": 24.59016393442623,
+    "pendingWorks": 31,
+    "unspentAmount": 135406566.6,
+    "totalRecommendedAmount": 38300779,
+    "name_hi": "Om Birla",
+    "constituency_hi": "KOTA",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28500390,
+      "totalEntries": 91,
+      "avgExpenditure": 313191.0989010989,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12176124,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16324266,
+        "transactionCount": 41
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28500390,
+        "transactionCount": 91,
+        "avgAmount": 313191.0989010989
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 46,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e09d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward No.-21 Ramganjmandi Me Goverdhanpura Mataji Mandir Ke Pass High mask Light Lagane Ka  Karya. Place- Ward No.-21 Ramganjmandi. Recommended Amount 6 Lakh Rs., Implementing Agency- Nagar Palika Ramganjmandi.  (44 Dated 16.10.2025)",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 545483
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Banthali Mai Sarvjanik Samudayik Bhawan Nirman ka karya Place - Banthali , gram panchayat-Talwas, Block -Nainwa, Recommended amount-  10.00 lakh rs., Implementing agency - Gram panchayat Talwas (13 dated 12.11.2024)",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 990833
+      },
+      {
+        "_id": "6a932bb5cd94452437a17438",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Rankyakhedi Me C.C. Interloking Sadak May Nali Nirman Kary Bheelo Ki Basti Se Hariram Banjara Ke Makan Ki Or. Place - Rankyakhedi , Gram Panchayat-Kasar, Block -Ladpura, Recommended Amount-  5.00 Lakh Rs., Implementing Agency - Gram Panchayat Kasar (12 Dated 23.10.2024)",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 454143
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d4e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ramganjmandi Mai Baypas Road Per Sthit Shri Baba Ramdev Bairwa Samaj Uthan Samiti K Bhukhand Per Chatrawas Mai Hall Ka Nirman Karya. Place- Ramganjmandi,  Recommended Amount 10.00 Lakh Rs., Implementing Agency  Ex.En., Pwd Div. Ramganjmandi (Mplad 2025 26 07 Dated 13.04.2025)",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 989459
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d112",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Mandawra Mai Atta Ji Maharaj K Mandir K Pass Sarvjanik Sthan Per Road Light Lagane Hetu. Place - Mandawra, Block - Sultanpur, Recommended Amount - 3.53 Lakh Rs., Implementing Agency - Sahayak Abhiyanta (O and M), Jvvnl, Sultanpur (60 Dated 21.12.2025)",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 353000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.240Z"
+}

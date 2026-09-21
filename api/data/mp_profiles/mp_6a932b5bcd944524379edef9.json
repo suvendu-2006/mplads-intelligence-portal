@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef9",
+    "name": "PRADEEP PUROHIT",
+    "constituency": "BARGARH",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30901278,
+    "utilizationPercentage": 21.021277551020408,
+    "completedWorksCount": 42,
+    "recommendedWorksCount": 241,
+    "completedWorksValue": 14317223,
+    "inProgressPayments": 16584055,
+    "paymentGapPercentage": 53.667861245091544,
+    "completionRate": 14.840989399293287,
+    "pendingWorks": 199,
+    "unspentAmount": 116098722,
+    "totalRecommendedAmount": 98966800,
+    "name_hi": "PRADEEP PUROHIT",
+    "constituency_hi": "BARGARH",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30901278,
+      "totalEntries": 112,
+      "avgExpenditure": 275904.26785714284,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4832904,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26068374,
+        "transactionCount": 96
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30901278,
+        "transactionCount": 112,
+        "avgAmount": 275904.26785714284
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 42,
+    "recommendedCount": 241,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional Construction of Building Wall near by Siba Mandir",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e741",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathing Step at Uparkata at Turcha",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e623",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathing Steps (Taliband) AT GP Gandhibahal, Block Gaisilet, Dist Bargarh",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e83a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Open Shed in Nehru Association at Backside of Ministadium at Ward No.13, Through BDO Bargarh",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of Changing room of Playground in front of College, Gaisilet",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.214Z"
+}

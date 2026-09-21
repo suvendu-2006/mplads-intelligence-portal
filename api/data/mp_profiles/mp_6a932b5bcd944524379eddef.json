@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddef",
+    "name": "BAIJAYANT PANDA",
+    "constituency": "KENDRAPARA",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 17127535,
+    "utilizationPercentage": 11.651384353741497,
+    "completedWorksCount": 8,
+    "recommendedWorksCount": 48,
+    "completedWorksValue": 6418056,
+    "inProgressPayments": 10709479,
+    "paymentGapPercentage": 62.52784770254447,
+    "completionRate": 14.285714285714285,
+    "pendingWorks": 40,
+    "unspentAmount": 129872465,
+    "totalRecommendedAmount": 82470000,
+    "name_hi": "BAIJAYANT PANDA",
+    "constituency_hi": "KENDRAPARA",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 17127535,
+      "totalEntries": 28,
+      "avgExpenditure": 611697.6785714285,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3200000,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13927535,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 17127535,
+        "transactionCount": 28,
+        "avgAmount": 611697.6785714285
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 8,
+    "recommendedCount": 48,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d759",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of one classroom of Mallikeswar Govt. High School at Adhanga, Palei GP, Derabish Block, Kendrapara",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ccac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of one Girls Common room of Delta Higher Secondary School at Narayani Vihar, Bhitara Bampu, GP-Janara Barimula, Kendrapara",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 618056
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c42c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of classroom of Saraswati Sishu Mandir to be fully completed at Purusottampur, Dist-Kendrapara, Pin 754223",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c79f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of classroom of Saraswati Sishu Mandir",
+        "completedDate": "2026-01-15T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b76f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of one classroom of R.D.M. Girls High School at Adhanga, Post Bhagabanpur, GP Indalo, Derabish Block, Kendrapara",
+        "completedDate": "2025-11-20T00:00:00.000Z",
+        "finalAmount": 800000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.686Z"
+}

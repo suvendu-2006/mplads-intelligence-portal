@@ -1,0 +1,86 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf90",
+    "name": "Smt Raksha Nikhil Khadse",
+    "constituency": "RAVER",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 153112586.11,
+    "totalExpenditure": 5871973,
+    "utilizationPercentage": 3.8350687877359895,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 6,
+    "completedWorksValue": 5871973,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 3,
+    "unspentAmount": 147240613.11,
+    "totalRecommendedAmount": 12130000,
+    "name_hi": "Smt Raksha Nikhil Khadse",
+    "constituency_hi": "RAVER",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5871973,
+      "totalEntries": 3,
+      "avgExpenditure": 1957324.3333333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2974718,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 914736,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 1982519,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5871973,
+        "transactionCount": 3,
+        "avgAmount": 1957324.3333333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 6,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c517",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of paver blocks within the village at Mouje Chinchol, Taluka Muktainagar.",
+        "completedDate": "2026-01-07T00:00:00.000Z",
+        "finalAmount": 1982519
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc96",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing equipment (furniture) at Jawahar Navodaya Vidyalaya, Bhusawal",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 914736
+      },
+      {
+        "_id": "6a932bb5cd94452437a16592",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mauje Bodwad Bodwad District  Seating Arrangment at various places for inner city citizens in Jalgaon.",
+        "completedDate": "2024-09-11T00:00:00.000Z",
+        "finalAmount": 2974718
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.227Z"
+}

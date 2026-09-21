@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2bc",
+    "name": "Smt. Jaya Amitabh Bachchan (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 21904185,
+    "utilizationPercentage": 14.900806122448978,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 19565958,
+    "inProgressPayments": 2338227,
+    "paymentGapPercentage": 10.674795706847801,
+    "completionRate": 43.47826086956522,
+    "pendingWorks": 3,
+    "unspentAmount": 125095815,
+    "totalRecommendedAmount": 22444000,
+    "name_hi": "Smt. Jaya Amitabh Bachchan (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21904185,
+      "totalEntries": 21,
+      "avgExpenditure": 1043056.4285714285,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17390271,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4513914,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21904185,
+        "transactionCount": 21,
+        "avgAmount": 1043056.4285714285
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 13,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31cbc",
+        "workCategory": "Normal/Others",
+        "workDescription": "District Mainpuri Block Tehsil Mainpuri Sadar Siyaram Nagar Sansarpur Ward No. 5 CC road from Vivekan Residential University Gate to Mainpuri Aliganj Road. Road construction work distance 150 meters. Kamle Singh Yadav Dhanachay Mob. 8909900856 8449204120",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 1739259
+      },
+      {
+        "_id": "6a932bb5cd94452437a31cfc",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road in Shri Mulayam Singh Yadav park Road distance approximately 250 metres. Mainpuri district Gram Panchayat Augautha Majra Gram Nagariya",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 2397051
+      },
+      {
+        "_id": "6a932bb5cd94452437a3170a",
+        "workCategory": "Normal/Others",
+        "workDescription": "The CC road distance is about 86 meters from the house of Shri Mahipal Singh to the house of Shri Ravindra Singh in Majra Kamal of Gram Sabha Rui Sinaura in Tehsil Bhogaon Block Sultanganj of Mainpuri district.",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 522240
+      },
+      {
+        "_id": "6a932bb5cd94452437a31a8f",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road from the house of Shri Bidhe Ram Fauji to the temple of Asharam in Majra village Khajuriya of Gram Panchayat Bamtapur of Tehsil Karhal Block Barnhal of Mainpuri district. Road distance approximately 200 metres.",
+        "completedDate": "2026-01-17T00:00:00.000Z",
+        "finalAmount": 889871
+      },
+      {
+        "_id": "6a932bb5cd94452437a31396",
+        "workCategory": "Normal/Others",
+        "workDescription": "The CC road distance from the primary school to the house of Shri Bhajanlal in Gram Sabha Virthua of Tehsil Karhal Block Barnahal of Mainpuri district is 225 meters",
+        "completedDate": "2025-10-04T00:00:00.000Z",
+        "finalAmount": 1192097
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.682Z"
+}

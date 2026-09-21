@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede61",
+    "name": "Giridhari Yadav",
+    "constituency": "BANKA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 114805889,
+    "utilizationPercentage": 78.09924421768707,
+    "completedWorksCount": 85,
+    "recommendedWorksCount": 35,
+    "completedWorksValue": 97151866,
+    "inProgressPayments": 17654023,
+    "paymentGapPercentage": 15.37727999301499,
+    "completionRate": 70.83333333333334,
+    "pendingWorks": -50,
+    "unspentAmount": 32194111,
+    "totalRecommendedAmount": 40070899,
+    "name_hi": "Giridhari Yadav",
+    "constituency_hi": "BANKA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 114805889,
+      "totalEntries": 96,
+      "avgExpenditure": 1195894.6770833333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 57917066,
+        "transactionCount": 45
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 56888823,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 114805889,
+        "transactionCount": 96,
+        "avgAmount": 1195894.6770833333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 85,
+    "recommendedCount": 35,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e8e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sultanganj Prakhand antargat Uchh Vidyalaya Khanpur mey Prayogik Upkaran ka adhishthapan.",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 2097395
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shahkund Prakhand antargat Uchch Madhyamik Vidyalaya Kishanpur amarveriya mey Prayogik Upkaran ka adhishthapan.",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 2097395
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e10c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sultanganj Prakhand antargat Utkramit Uchh Vidyalaya Kishanpur mey Upkarana ka adhishthapan.",
+        "completedDate": "2026-04-19T00:00:00.000Z",
+        "finalAmount": 2097910
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e10e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sultanganj Prakhand antargat Utkramit Uchh Vidyalaya asimachak mey Upkarana ka adhishthapan.",
+        "completedDate": "2026-04-19T00:00:00.000Z",
+        "finalAmount": 2097910
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e10f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sultanganj Prakhand antargat Uchch Vidyalaya Kumaitha mey Upkarana ka adhishthapan.",
+        "completedDate": "2026-04-19T00:00:00.000Z",
+        "finalAmount": 2097910
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.016Z"
+}

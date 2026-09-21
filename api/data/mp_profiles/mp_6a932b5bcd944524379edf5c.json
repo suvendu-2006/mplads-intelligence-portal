@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5c",
+    "name": "SHOBHA KARANDLAJE",
+    "constituency": "BANGALORE NORTH",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61473509,
+    "utilizationPercentage": 41.81871360544218,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 88,
+    "completedWorksValue": 17121818,
+    "inProgressPayments": 44351691,
+    "paymentGapPercentage": 72.14764818452124,
+    "completionRate": 19.26605504587156,
+    "pendingWorks": 67,
+    "unspentAmount": 85526491,
+    "totalRecommendedAmount": 96540000,
+    "name_hi": "SHOBHA KARANDLAJE",
+    "constituency_hi": "BANGALORE NORTH",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61473509,
+      "totalEntries": 104,
+      "avgExpenditure": 591091.4326923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16855582,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44617927,
+        "transactionCount": 77
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61473509,
+        "transactionCount": 104,
+        "avgAmount": 591091.4326923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 88,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1db8a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of street lights with pillars near Valagerahally Govt Higher Primary School",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 498685
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d978",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of high mast lights at Ward no 130, Doddabasti Main road, Opposite to Sonnenahalli Bus Stop",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 399589
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d97c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting of High Mast Light at punugumaranahaly village of Chunchanakuppe GP",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 499398
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d97a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of high mast electricity poles at Yeshwantpur (urban) Vidhana Sabha constituency, Ward no 40, Doddabidarakallu, Suprabhata Nagara Circle",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 399778
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d979",
+        "workCategory": "Normal/Others",
+        "workDescription": "Electric lighting work at Shree Shivakumara Swamiji Park, Ward no 130, Ullalu, KCHS Layout",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 399589
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.328Z"
+}

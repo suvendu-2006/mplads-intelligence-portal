@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf69",
+    "name": "Shri Chandra Prakash Choudhary",
+    "constituency": "GIRIDIH",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55034366,
+    "utilizationPercentage": 37.438344217687074,
+    "completedWorksCount": 49,
+    "recommendedWorksCount": 625,
+    "completedWorksValue": 14533632,
+    "inProgressPayments": 40500734,
+    "paymentGapPercentage": 73.59171540197265,
+    "completionRate": 7.270029673590504,
+    "pendingWorks": 576,
+    "unspentAmount": 91965634,
+    "totalRecommendedAmount": 101617680,
+    "name_hi": "Shri Chandra Prakash Choudhary",
+    "constituency_hi": "GIRIDIH",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55034366,
+      "totalEntries": 301,
+      "avgExpenditure": 182838.42524916944,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2288000,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 30878252,
+        "transactionCount": 166
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21868114,
+        "transactionCount": 125
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55034366,
+        "transactionCount": 301,
+        "avgAmount": 182838.42524916944
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 49,
+    "recommendedCount": 625,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1caba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of mask light in nagri panchayat:\n1)Near shiv mandir in nagri\n2)Near mahuwa ped in jolhadih of nagri panchayat",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 149710
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cab8",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of mask light near bishu mandir of jamtara village of jamtara panchayat.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 149710
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cad2",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of mask light near hatiyatand of isri north panchayat.",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 149710
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cac1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of mask light in roshnatunda panchayat:\n1)Near thakurbadi mandir\n2)Near dom tola chagarbarai",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 149710
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a1ab",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of mask light near shiv mandir in singra panchayat.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 160000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.467Z"
+}

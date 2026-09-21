@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec1",
+    "name": "MALVINDER SINGH KANG",
+    "constituency": "ANANDPUR SAHIB",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 78725294,
+    "utilizationPercentage": 53.55462176870748,
+    "completedWorksCount": 109,
+    "recommendedWorksCount": 236,
+    "completedWorksValue": 40027429,
+    "inProgressPayments": 38697865,
+    "paymentGapPercentage": 49.15556745967821,
+    "completionRate": 31.594202898550726,
+    "pendingWorks": 127,
+    "unspentAmount": 68274706,
+    "totalRecommendedAmount": 86364068,
+    "name_hi": "MALVINDER SINGH KANG",
+    "constituency_hi": "ANANDPUR SAHIB",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 78725294,
+      "totalEntries": 779,
+      "avgExpenditure": 101059.42747111681,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 161698,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 34140408,
+        "transactionCount": 354
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44423188,
+        "transactionCount": 423
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 78725294,
+        "transactionCount": 779,
+        "avgAmount": 101059.42747111681
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 109,
+    "recommendedCount": 236,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e686",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sitting RCC Banch at village Manshua klan",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d76d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fitting of Sitting 25 RCC Benches in Public Places AT VILLAGE MANAK MAJRA",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d76b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fitting of Sitting 25 RCC Benches in Public Places AT Lakhmipur",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of buildings for multi-gym VILL Dulchi Majra",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c7d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community center at village Machhipur",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.706Z"
+}

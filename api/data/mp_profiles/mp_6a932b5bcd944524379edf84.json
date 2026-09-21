@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf84",
+    "name": "Shrirang Appa Barne",
+    "constituency": "MAVAL",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35720911,
+    "utilizationPercentage": 24.29993945578231,
+    "completedWorksCount": 32,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 23546814,
+    "inProgressPayments": 12174097,
+    "paymentGapPercentage": 34.08114927416045,
+    "completionRate": 29.906542056074763,
+    "pendingWorks": 43,
+    "unspentAmount": 111279089,
+    "totalRecommendedAmount": 84900000,
+    "name_hi": "Shrirang Appa Barne",
+    "constituency_hi": "MAVAL",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35720911,
+      "totalEntries": 53,
+      "avgExpenditure": 673979.4528301887,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14872228,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20848683,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35720911,
+        "transactionCount": 53,
+        "avgAmount": 673979.4528301887
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 32,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dc98",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Road At Vakdi Tal Panvel Dist Raigad Between Gavdevi Mandir To Smashan Bhumi Road",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d900",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing RO Drinking Water Plant 500LPH With Chiler facility At Jambhavade Tal Maval Dist Pune",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 697697
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construct a Road At Thergaon Ward 23 sandip Nagar near ashvini Mini Market In PCMC",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6c5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construct road At Thergaon PCmc Area in Sandip Nagar sainath colony",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d177",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Raod At Chiple Tal Panvel Dist Raigad Between Bhokarpada To Devad  Jod Rasta",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 1498219
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.690Z"
+}

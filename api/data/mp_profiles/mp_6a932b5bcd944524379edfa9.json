@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa9",
+    "name": "TANGELLA UDAY SRINIVAS",
+    "constituency": "KAKINADA",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 199417886.76,
+    "totalExpenditure": 16907864,
+    "utilizationPercentage": 8.47860955439201,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 16,
+    "completedWorksValue": 13752233,
+    "inProgressPayments": 3155631,
+    "paymentGapPercentage": 18.66368809212092,
+    "completionRate": 27.27272727272727,
+    "pendingWorks": 10,
+    "unspentAmount": 182510022.76,
+    "totalRecommendedAmount": 25660000,
+    "name_hi": "TANGELLA UDAY SRINIVAS",
+    "constituency_hi": "KAKINADA",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16907864,
+      "totalEntries": 10,
+      "avgExpenditure": 1690786.4,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11208927,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5698937,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16907864,
+        "transactionCount": 10,
+        "avgAmount": 1690786.4
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 16,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e43b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal CC Drains from Plot no 1511 to 2172H and Plot no 1929 to 1888 in 22nd Ward",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1420283
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal CC Drains from Plot no 260 to 909 Plot no 894 to 919 to 938 Plot no 289 to 918 Plot no 328 to 959 and Plot no 310 to 919",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 1123023
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a881",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a new 11 kV power line from the residence of Sri Angara Krupanandam to the residence of Sri Vemagiri Baburao at V.K.Rayapuram",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 773000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aa24",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing four (04) Patrolling Vehicles to District Police Office, Kakinada for Public Conveniences, Safety and Security",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 3656800
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be61",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at 14th ward",
+        "completedDate": "2025-12-16T00:00:00.000Z",
+        "finalAmount": 820164
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.494Z"
+}

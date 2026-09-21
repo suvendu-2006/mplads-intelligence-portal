@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edded",
+    "name": "BACHHAV SHOBHA DINESH",
+    "constituency": "DHULE",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 15115446,
+    "utilizationPercentage": 10.282616326530611,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 14191877,
+    "inProgressPayments": 923569,
+    "paymentGapPercentage": 6.11010088620607,
+    "completionRate": 15.957446808510639,
+    "pendingWorks": 64,
+    "unspentAmount": 131884554,
+    "totalRecommendedAmount": 88498032,
+    "name_hi": "BACHHAV SHOBHA DINESH",
+    "constituency_hi": "DHULE",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15115446,
+      "totalEntries": 16,
+      "avgExpenditure": 944715.375,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2000000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 3000000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10115446,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15115446,
+        "transactionCount": 16,
+        "avgAmount": 944715.375
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Assembly hall at Ekta Nagar, Biladi Road Devpur. Tel dist dhule",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 987617
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concrete road Ward no.18 at Lokre Nagar tel dist dhule",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 992586
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e948",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of green gym at ward no .4, sr.no. 124 2 a a in Satana MC Tel satana  dist nashik",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 989456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of green gym at ward no 5 , sr.no.  138 3 a a in Satana Municipal Council",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 989456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e734",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concrete Road and Sewerage at anchade tada",
+        "completedDate": "2026-07-15T00:00:00.000Z",
+        "finalAmount": 899164
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.748Z"
+}

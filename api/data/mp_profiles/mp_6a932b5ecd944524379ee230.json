@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee230",
+    "name": "Shri Damodar Rao Divakonda (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Telangana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 239919406.11,
+    "totalExpenditure": 77052481,
+    "utilizationPercentage": 32.11598521741605,
+    "completedWorksCount": 110,
+    "recommendedWorksCount": 185,
+    "completedWorksValue": 49064209,
+    "inProgressPayments": 27988272,
+    "paymentGapPercentage": 36.32364803412365,
+    "completionRate": 37.28813559322034,
+    "pendingWorks": 75,
+    "unspentAmount": 162866925.11,
+    "totalRecommendedAmount": 130140000,
+    "name_hi": "Shri Damodar Rao Divakonda (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 77052481,
+      "totalEntries": 195,
+      "avgExpenditure": 395140.9282051282,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 16092436,
+        "transactionCount": 28
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 36664812,
+        "transactionCount": 136
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24295233,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 77052481,
+        "transactionCount": 195,
+        "avgAmount": 395140.9282051282
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 110,
+    "recommendedCount": 185,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of VO Building at Dumpalapally, Dubbak Municipality, Siddipet Dist.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 476344
+      },
+      {
+        "_id": "6a932bb5cd94452437a32466",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Samba Nagamallesh house to Dayala Kistaiah House in Ramreddypally (v) of Urkonda (m).",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 484325
+      },
+      {
+        "_id": "6a932bb5cd94452437a322d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road From R and B Road to Raithuvedika at Maithapur Village MP Raikal at Jagtial Dist.",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 436178
+      },
+      {
+        "_id": "6a932bb5cd94452437a322d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road From Durga Matha Temple to MD Basha field at Maithapur Village MP Raikal at Jagtial Dist",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 447034
+      },
+      {
+        "_id": "6a932bb5cd94452437a32286",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of High mast Lights (2no)at near Shivalayam and near Poshamma Temple at Manatathi Gramapanchyath of NagarKurnool Dist",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.205Z"
+}

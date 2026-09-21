@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf6b",
+    "name": "Shri Gurjeet Singh Aujla",
+    "constituency": "AMRITSAR",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 67439837,
+    "utilizationPercentage": 45.87744013605442,
+    "completedWorksCount": 91,
+    "recommendedWorksCount": 190,
+    "completedWorksValue": 38537872,
+    "inProgressPayments": 28901965,
+    "paymentGapPercentage": 42.855923569328915,
+    "completionRate": 32.38434163701068,
+    "pendingWorks": 99,
+    "unspentAmount": 79560163,
+    "totalRecommendedAmount": 69797179,
+    "name_hi": "Shri Gurjeet Singh Aujla",
+    "constituency_hi": "AMRITSAR",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67439837,
+      "totalEntries": 328,
+      "avgExpenditure": 205609.25914634147,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 286000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 31070514,
+        "transactionCount": 135
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36083323,
+        "transactionCount": 192
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67439837,
+        "transactionCount": 328,
+        "avgAmount": 205609.25914634147
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 91,
+    "recommendedCount": 190,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d24b",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR CONST OF SHED AND WARANDA AND INTERLOCKING TILES OF CREMATON GROUND",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df6d",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Construction of Toewall and Retaining Wall along the Phirni",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d24a",
+        "workCategory": "Normal/Others",
+        "workDescription": "FOR CONST OF STREET AND DRAINS",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e25a",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Purchase of 2 Bede and 2 Bediyaan",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 857441
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c88e",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "FOR SPECIAL REPAIR AND RENOVATION OF 2 ROOMS AND WARANDA AND INVERTOR, RO WATER PURIFIER",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 220000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.227Z"
+}

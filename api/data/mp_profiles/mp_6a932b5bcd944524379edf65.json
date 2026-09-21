@@ -1,0 +1,93 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf65",
+    "name": "Shri Arun Kumar Sagar ",
+    "constituency": "SHAHJAHANPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 138723000,
+    "utilizationPercentage": 94.36938775510204,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 3,
+    "completedWorksValue": 97143000,
+    "inProgressPayments": 41580000,
+    "paymentGapPercentage": 29.9734002292338,
+    "completionRate": 57.14285714285714,
+    "pendingWorks": -1,
+    "unspentAmount": 8277000,
+    "totalRecommendedAmount": 48733200,
+    "name_hi": "Shri Arun Kumar Sagar ",
+    "constituency_hi": "SHAHJAHANPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 138723000,
+      "totalEntries": 45,
+      "avgExpenditure": 3082733.3333333335,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 47808000,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 49335000,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41580000,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 138723000,
+        "transactionCount": 45,
+        "avgAmount": 3082733.3333333335
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 3,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1828d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 165 LED Highmast Lights for rural and urban areas as per enclosed list",
+        "completedDate": "2025-07-26T00:00:00.000Z",
+        "finalAmount": 40095000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1828c",
+        "workCategory": "Normal/Others",
+        "workDescription": "14 Yatri Tin Bus shades List for rural and Urban Areas as per enclosed List",
+        "completedDate": "2025-07-26T00:00:00.000Z",
+        "finalAmount": 9240000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1658d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 156 LED Highmast Lights for Rural and Urban areas as per enclosed List",
+        "completedDate": "2024-11-25T00:00:00.000Z",
+        "finalAmount": 37908000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1658e",
+        "workCategory": "Normal/Others",
+        "workDescription": "15 Yatri Tin/Bus shades List for rural and Urban Areas as per enclosed List",
+        "completedDate": "2024-11-25T00:00:00.000Z",
+        "finalAmount": 9900000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.403Z"
+}

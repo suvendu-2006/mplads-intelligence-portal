@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee245",
+    "name": "Shri Jagat Prakash Nadda (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 2100000,
+    "utilizationPercentage": 1.4285714285714286,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 0,
+    "inProgressPayments": 2100000,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 74,
+    "unspentAmount": 144900000,
+    "totalRecommendedAmount": 49300000,
+    "name_hi": "Shri Jagat Prakash Nadda (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 2100000,
+      "totalEntries": 5,
+      "avgExpenditure": 420000,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 2100000,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 2100000,
+        "transactionCount": 5,
+        "avgAmount": 420000
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 74,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:04.660Z"
+}

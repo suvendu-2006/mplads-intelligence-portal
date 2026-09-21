@@ -122,28 +122,30 @@ export const PremiumDonut: React.FC<PremiumDonutProps> = ({
 
       {/* Center Label */}
       <div
-        className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+        className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none px-2 text-center"
         style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
       >
-        {activeIndex === null ? (
-          <>
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
-              {totalLabel}
-            </div>
-            <div className="text-xl sm:text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
-              {formatValue(total)}
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="text-[11px] font-bold text-[var(--text-secondary)] text-center px-4 max-w-[160px] truncate">
-              {activeName}
-            </div>
-            <div className="text-lg sm:text-xl font-extrabold text-[var(--text-primary)] tabular-nums">
-              {activeValue !== null && formatValue(activeValue)}
-            </div>
-          </>
-        )}
+        <div className="max-w-[130px] flex flex-col items-center justify-center">
+          {activeIndex === null ? (
+            <>
+              <div className="text-[10px] sm:text-[11px] font-bold text-[var(--text-tertiary)] leading-tight text-center line-clamp-2">
+                {totalLabel}
+              </div>
+              <div className="text-base sm:text-xl font-extrabold text-[var(--text-primary)] tabular-nums leading-tight mt-0.5">
+                {formatValue(total)}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="text-[10px] sm:text-[11px] font-bold text-[var(--text-secondary)] text-center px-1 max-w-[120px] truncate leading-tight">
+                {activeName}
+              </div>
+              <div className="text-base sm:text-lg font-extrabold text-[var(--text-primary)] tabular-nums leading-tight mt-0.5">
+                {activeValue !== null && formatValue(activeValue)}
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   )

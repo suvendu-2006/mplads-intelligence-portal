@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede44",
+    "name": "DR. M.P ABDUSSAMAD SAMADANI",
+    "constituency": "PONNANI",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 170434031.11,
+    "totalExpenditure": 15076499,
+    "utilizationPercentage": 8.845944029962807,
+    "completedWorksCount": 48,
+    "recommendedWorksCount": 276,
+    "completedWorksValue": 11730005,
+    "inProgressPayments": 3346494,
+    "paymentGapPercentage": 22.196758013912913,
+    "completionRate": 14.814814814814813,
+    "pendingWorks": 228,
+    "unspentAmount": 155357532.11,
+    "totalRecommendedAmount": 138034000,
+    "name_hi": "DR. M.P ABDUSSAMAD SAMADANI",
+    "constituency_hi": "PONNANI",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15076499,
+      "totalEntries": 53,
+      "avgExpenditure": 284462.24528301886,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 400000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14676499,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15076499,
+        "transactionCount": 53,
+        "avgAmount": 284462.24528301886
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 48,
+    "recommendedCount": 276,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e995",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kollazhiparambu Padam Road Concreting",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 231959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e994",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chalpram Rajeev Gandhi Road Concreting",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 161286
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e95e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Panchayath kinar  Karimbayil Road Concreting",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 232223
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e960",
+        "workCategory": "Normal/Others",
+        "workDescription": "Cholakundu Chola Road Concreting",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 226217
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e946",
+        "workCategory": "Normal/Others",
+        "workDescription": "Illathuvalappil  Nadappatha  concreting",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 232986
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.509Z"
+}

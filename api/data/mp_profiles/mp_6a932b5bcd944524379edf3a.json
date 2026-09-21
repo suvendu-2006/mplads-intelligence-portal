@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3a",
+    "name": "S SUPONGMEREN JAMIR",
+    "constituency": "NAGALAND",
+    "state": "Nagaland",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 138150000,
+    "utilizationPercentage": 93.9795918367347,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 18,
+    "completedWorksValue": 88600000,
+    "inProgressPayments": 49550000,
+    "paymentGapPercentage": 35.86681143684401,
+    "completionRate": 67.85714285714286,
+    "pendingWorks": -20,
+    "unspentAmount": 8850000,
+    "totalRecommendedAmount": 58400000,
+    "name_hi": "S SUPONGMEREN JAMIR",
+    "constituency_hi": "NAGALAND",
+    "state_hi": "Nagaland"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 138150000,
+      "totalEntries": 81,
+      "avgExpenditure": 1705555.5555555555,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 38762380,
+        "transactionCount": 31
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 56337620,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 43050000,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 138150000,
+        "transactionCount": 81,
+        "avgAmount": 1705555.5555555555
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 18,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19a69",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of approach road from Kusuru to Limakumzuk residence",
+        "completedDate": "2026-01-18T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a189f0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road and drainage at Notun basti",
+        "completedDate": "2026-01-18T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a189ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protection wall",
+        "completedDate": "2026-01-18T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d72",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of fishery pond at Aoyimti",
+        "completedDate": "2026-01-17T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1977e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Extension of public ground",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.429Z"
+}

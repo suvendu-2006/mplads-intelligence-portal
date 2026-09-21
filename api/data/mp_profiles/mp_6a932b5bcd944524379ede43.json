@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede43",
+    "name": "DR. LATA WANKHEDE",
+    "constituency": "SAGAR",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 99315853,
+    "utilizationPercentage": 67.56180476190477,
+    "completedWorksCount": 103,
+    "recommendedWorksCount": 155,
+    "completedWorksValue": 78629489,
+    "inProgressPayments": 20686364,
+    "paymentGapPercentage": 20.828864048522043,
+    "completionRate": 39.922480620155035,
+    "pendingWorks": 52,
+    "unspentAmount": 47684147,
+    "totalRecommendedAmount": 71512932,
+    "name_hi": "DR. LATA WANKHEDE",
+    "constituency_hi": "SAGAR",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 99315853,
+      "totalEntries": 272,
+      "avgExpenditure": 365131.8125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 10435130,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 68706540,
+        "transactionCount": 163
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20174183,
+        "transactionCount": 97
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 99315853,
+        "transactionCount": 272,
+        "avgAmount": 365131.8125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 103,
+    "recommendedCount": 155,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Shikarpur me O1 piece Water Tenkar 900X16 New tyre tube Sahit capacity 5000 Liter",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 150229
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9b2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Hinotiya Kalan me O1 piece Water Tenkar 900X16 New tyre tube Sahit capacity 5000 Liter",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 150229
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e99f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Dhagarniya me O1 piece Water Tenkar 900X16 New tyre tube Sahit capacity 5000 Liter",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 150229
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat Bichpuri me O1 piece Water Tenkar 900X16 New tyre tube Sahit capacity 5000 Liter",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 150229
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar Palika Parishad Makroniya me O1 piece Water Tenkar 900X16 New tyre tube Sahit capacity 5000 Liter",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 157341
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.551Z"
+}

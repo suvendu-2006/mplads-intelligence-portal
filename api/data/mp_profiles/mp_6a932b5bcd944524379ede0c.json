@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0c",
+    "name": "BRIJENDRA SINGH OLA",
+    "constituency": "JHUNJHUNU",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57494662,
+    "utilizationPercentage": 39.1120149659864,
+    "completedWorksCount": 92,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 42941562,
+    "inProgressPayments": 14553100,
+    "paymentGapPercentage": 25.312088972711937,
+    "completionRate": 55.08982035928144,
+    "pendingWorks": -17,
+    "unspentAmount": 89505338,
+    "totalRecommendedAmount": 40986672,
+    "name_hi": "BRIJENDRA SINGH OLA",
+    "constituency_hi": "JHUNJHUNU",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57494662,
+      "totalEntries": 450,
+      "avgExpenditure": 127765.91555555556,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25911952,
+        "transactionCount": 181
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31582710,
+        "transactionCount": 269
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57494662,
+        "transactionCount": 450,
+        "avgAmount": 127765.91555555556
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 92,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e744",
+        "workCategory": "Normal/Others",
+        "workDescription": "For laying MP3 pipeline from near the house of Ramkumar Kadavasara in village Nahar Singhani towards Main Chowk (Bad Gatte).",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 354348
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e938",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a new tube well in place of the dry tube well located in Meghwal Mohalla in village Sari Panchayat Samiti Chirawa and extension of 4 delivery pipes and cable work etc.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 510993
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e74d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundarywall of the playground of Government Higher Secondary School in village Urika. Working agency- Gram Panchayat Urika",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 498312
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e47c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlock road construction work from Birbal Jhajhadia farm towards Jhadiyon ki Johri in village Ranasar",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 199976
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e47b",
+        "workCategory": "Normal/Others",
+        "workDescription": "nterlock road construction work from Jagdish Vaidya house towards to Rajendra Singh son Dalip Singh house in village Ranasar",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 699939
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.763Z"
+}

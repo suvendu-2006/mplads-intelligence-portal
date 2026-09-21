@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeba",
+    "name": "MAHESH KASHYAP",
+    "constituency": "BASTAR",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 63670367.5,
+    "utilizationPercentage": 43.31317517006802,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 168,
+    "completedWorksValue": 17171172,
+    "inProgressPayments": 46499195.5,
+    "paymentGapPercentage": 73.0311404280806,
+    "completionRate": 18.446601941747574,
+    "pendingWorks": 130,
+    "unspentAmount": 83329632.5,
+    "totalRecommendedAmount": 93983181,
+    "name_hi": "MAHESH KASHYAP",
+    "constituency_hi": "BASTAR",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 63670367.5,
+      "totalEntries": 194,
+      "avgExpenditure": 328197.7706185567,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1350000,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 32825349.5,
+        "transactionCount": 93
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29495018,
+        "transactionCount": 96
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 63670367.5,
+        "transactionCount": 194,
+        "avgAmount": 328197.7706185567
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 168,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18c3d",
+        "workCategory": "Normal/Others",
+        "workDescription": "saraswati shishu mandir school bhairamgarh ke samip samudayik bhavan ka jirnodhar karya",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 839631
+      },
+      {
+        "_id": "6a932bb5cd94452437a18c3f",
+        "workCategory": "Normal/Others",
+        "workDescription": "bhairamgarh ke permapara ganesh manch ke samip shed nirman karya",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 537823
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ccc2",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram guhaborand me budhakot ke samip shed nirman karya",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 497860
+      },
+      {
+        "_id": "6a932bb5cd94452437a16d7d",
+        "workCategory": "Normal/Others",
+        "workDescription": "primary school se ramdev ghar tak 300 metre c.c.road nirman karya",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 898745
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e132",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram Baghmohalai me peyjal aapurti hetu 02 chakka 3500 letre ka pani tanker praday",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 175000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.692Z"
+}

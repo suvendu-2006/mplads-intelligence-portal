@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9b",
+    "name": "KANWAR SINGH TANWAR",
+    "constituency": "AMROHA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 78135018,
+    "utilizationPercentage": 53.153073469387756,
+    "completedWorksCount": 59,
+    "recommendedWorksCount": 46,
+    "completedWorksValue": 65163043,
+    "inProgressPayments": 12971975,
+    "paymentGapPercentage": 16.60199911901217,
+    "completionRate": 56.19047619047619,
+    "pendingWorks": -13,
+    "unspentAmount": 68864982,
+    "totalRecommendedAmount": 59300800,
+    "name_hi": "KANWAR SINGH TANWAR",
+    "constituency_hi": "AMROHA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 78135018,
+      "totalEntries": 81,
+      "avgExpenditure": 964629.8518518518,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 49148579,
+        "transactionCount": 57
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28986439,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 78135018,
+        "transactionCount": 81,
+        "avgAmount": 964629.8518518518
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 59,
+    "recommendedCount": 46,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c572",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block joya ke gram sekhupura gurjar me mukhya chaurahe se devataon ki or 45 meter CC road va nali nirman (PCCD Amroha)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 639371
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c47d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Dhanaura ke gram gherkunda me ramsingh ke makan se chandar ke makan ki or 110 mtr. Rcc va nali nirman karya (Impliment Agency PCCD Amroha).",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1226329
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c574",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Amroha ke Gram Chamrawa mein Sachin ke Makan se Nepal ke Makan ki aor 130 meter CC road evam Nali Nirman (PCCD Amroha)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1377001
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c573",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block joya ke gram mangupura me gopal ki dery se dungar singh ke makan ki or 125 meter CC road evam nali nirman (PCCD Amroha)",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1395672
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c47b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Gajraula ke gram salempur gausai me syoraj jatav ke makan se rinku jatav ke makan ki or 125 mtr.  Rcc va nali nirman karya (Impliment Agency PCCD Amroha).",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 1468262
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.679Z"
+}

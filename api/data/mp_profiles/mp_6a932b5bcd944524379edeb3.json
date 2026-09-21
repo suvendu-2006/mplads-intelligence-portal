@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb3",
+    "name": "LUMBARAM",
+    "constituency": "JALORE",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61110381,
+    "utilizationPercentage": 41.57168775510204,
+    "completedWorksCount": 75,
+    "recommendedWorksCount": 105,
+    "completedWorksValue": 36575490,
+    "inProgressPayments": 24534891,
+    "paymentGapPercentage": 40.14848311942287,
+    "completionRate": 41.66666666666667,
+    "pendingWorks": 30,
+    "unspentAmount": 85889619,
+    "totalRecommendedAmount": 56454884,
+    "name_hi": "LUMBARAM",
+    "constituency_hi": "JALORE",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61110381,
+      "totalEntries": 609,
+      "avgExpenditure": 100345.45320197045,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 39732477,
+        "transactionCount": 426
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21377904,
+        "transactionCount": 183
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61110381,
+        "transactionCount": 609,
+        "avgAmount": 100345.45320197045
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 75,
+    "recommendedCount": 105,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18e87",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking Blocks and other works near Mahatma Gandhi Government School, Goyali Tehsil-Sirohi",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 498530
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db47",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Electric Scooty for Handicap person Smt Rekha Devi wife of Ranchhodram Village Poseetara Teh Reodar Dist Sirohi Mob 8094784879",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 98499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Electric Scooty for Handicap Person Mukesh Kumar Son of Sakaram New Dhanari Teh Pindwara Dist Sirohi Mob no 9649113231",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 98499
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c1fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of furniture in GSSS Khejadiya GP Kesarpura PS Sheoganj Dist Sirohi",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c1fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of furniture in GSSS Naradara GP Naradara PS Sheoganj Dist Sirohi",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.866Z"
+}

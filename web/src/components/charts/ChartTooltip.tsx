@@ -1,5 +1,6 @@
 import React from 'react'
 import { fmtCrore, fmtLakh } from '../../lib/currency'
+import { useTranslation } from '../../lib/i18n'
 
 export interface ChartTooltipProps {
   active?: boolean
@@ -18,6 +19,7 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
   label,
   formatter = 'crore',
 }) => {
+  const { t, toNativeDigits, lang } = useTranslation()
   if (!active || !payload || payload.length === 0) return null
 
   const formatValue = (value: number): string => {
@@ -25,19 +27,21 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
       case 'crore':
         // If already scaled in Crores (e.g. 150 Cr vs 1500000000)
         if (Math.abs(value) < 100000) {
-          return `₹${value.toLocaleString('en-IN', { maximumFractionDigits: 1 })} Cr`
+          const formatted = toNativeDigits(value.toLocaleString('en-IN', { maximumFractionDigits: 1 }))
+          return `₹${formatted} ${t('unit.cr')}`
         }
-        return `₹${fmtCrore(value, 2)} Cr`
+        return `₹${toNativeDigits(fmtCrore(value, 2))} ${t('unit.cr')}`
       case 'lakh':
         if (Math.abs(value) < 100000) {
-          return `₹${value.toLocaleString('en-IN', { maximumFractionDigits: 1 })} L`
+          const formatted = toNativeDigits(value.toLocaleString('en-IN', { maximumFractionDigits: 1 }))
+          return `₹${formatted} ${t('unit.lakh')}`
         }
-        return `₹${fmtLakh(value, 2)} L`
+        return `₹${toNativeDigits(fmtLakh(value, 2))} ${t('unit.lakh')}`
       case 'percent':
-        return `${value.toFixed(1)}%`
+        return `${toNativeDigits(value.toFixed(1))}%`
       case 'number':
       default:
-        return value.toLocaleString('en-IN')
+        return toNativeDigits(value.toLocaleString('en-IN'))
     }
   }
 
@@ -52,7 +56,7 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
     >
       {label && (
         <div className="text-xs font-bold text-[var(--text-secondary)] mb-2">
-          {label}
+          {toNativeDigits(label)}
         </div>
       )}
       <div className="space-y-1">
@@ -74,3 +78,4 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
     </div>
   )
 }
+

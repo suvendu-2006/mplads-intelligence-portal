@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede90",
+    "name": "KALI CHARAN SINGH",
+    "constituency": "CHATRA",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 49787316,
+    "utilizationPercentage": 33.868922448979596,
+    "completedWorksCount": 75,
+    "recommendedWorksCount": 429,
+    "completedWorksValue": 19221680,
+    "inProgressPayments": 30565636,
+    "paymentGapPercentage": 61.392415690775536,
+    "completionRate": 14.880952380952381,
+    "pendingWorks": 354,
+    "unspentAmount": 97212684,
+    "totalRecommendedAmount": 84699600,
+    "name_hi": "KALI CHARAN SINGH",
+    "constituency_hi": "CHATRA",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 49787316,
+      "totalEntries": 291,
+      "avgExpenditure": 171090.43298969071,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1320000,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 48467316,
+        "transactionCount": 281
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 49787316,
+        "transactionCount": 291,
+        "avgAmount": 171090.43298969071
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 75,
+    "recommendedCount": 429,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dae2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Dashgatra Shed in village-Sagalim, Panchait- Sagalim, Block-Panki",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 249840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dae3",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Smashan Shed near Pul of Amanat Nadi vill-Bishunpur, Panchait-Udaypura-1, Block-Tarhasi",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 249840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed in Goridah Prayatan Sthal in village-Baida, Panchait-Tetrai, Block-Panki",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 249840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfdd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Smshan Shed in village-Sunri, near Ghormuhan dah Sakhoiya Tand, Panchait-Sunri, Block-Panki",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 249840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfdc",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Smshan Shed on the Bank of Amanat Nadi vill-Manjhganwan, Panchait-Manjholi-2, Block-Tarhasi",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 249840
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.982Z"
+}

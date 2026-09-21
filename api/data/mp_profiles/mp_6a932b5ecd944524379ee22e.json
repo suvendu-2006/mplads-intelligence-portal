@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee22e",
+    "name": "Shri Chunnilal Garasiya (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75813515,
+    "utilizationPercentage": 51.573819727891156,
+    "completedWorksCount": 24,
+    "recommendedWorksCount": 153,
+    "completedWorksValue": 39527191,
+    "inProgressPayments": 36286324,
+    "paymentGapPercentage": 47.86260602743456,
+    "completionRate": 13.559322033898304,
+    "pendingWorks": 129,
+    "unspentAmount": 71186485,
+    "totalRecommendedAmount": 110808390,
+    "name_hi": "Shri Chunnilal Garasiya (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75813515,
+      "totalEntries": 177,
+      "avgExpenditure": 428324.94350282487,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3099801,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 38275431,
+        "transactionCount": 84
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34438283,
+        "transactionCount": 86
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75813515,
+        "transactionCount": 177,
+        "avgAmount": 428324.94350282487
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 24,
+    "recommendedCount": 153,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31880",
+        "workCategory": "Normal/Others",
+        "workDescription": "Check dam construction in Dubaliya pass, Wada Hathai",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1480500
+      },
+      {
+        "_id": "6a932bb5cd94452437a31881",
+        "workCategory": "Normal/Others",
+        "workDescription": "Check dam construction behind the patwar house and near the water tank in Hathai",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1476000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31913",
+        "workCategory": "Normal/Others",
+        "workDescription": "Check dam construction in Virpur Mukesh pass in village Virpur",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1489020
+      },
+      {
+        "_id": "6a932bb5cd94452437a31912",
+        "workCategory": "Normal/Others",
+        "workDescription": "Check dam construction in Valeng pass in village Tijwad",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1489930
+      },
+      {
+        "_id": "6a932bb5cd94452437a30b03",
+        "workCategory": "Normal/Others",
+        "workDescription": "culvert road construction\n(Road construction with culvert in Hansla)",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 1399952
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.207Z"
+}

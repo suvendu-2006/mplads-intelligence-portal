@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0e",
+    "name": "BUNTY VIVEK SAHU",
+    "constituency": "CHHINDWARA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 54579699,
+    "utilizationPercentage": 37.12904693877551,
+    "completedWorksCount": 100,
+    "recommendedWorksCount": 373,
+    "completedWorksValue": 18384130,
+    "inProgressPayments": 36195569,
+    "paymentGapPercentage": 66.31690841680897,
+    "completionRate": 21.141649048625794,
+    "pendingWorks": 273,
+    "unspentAmount": 92420301,
+    "totalRecommendedAmount": 79996000,
+    "name_hi": "BUNTY VIVEK SAHU",
+    "constituency_hi": "CHHINDWARA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54579699,
+      "totalEntries": 442,
+      "avgExpenditure": 123483.48190045249,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 180000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 30159244,
+        "transactionCount": 245
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24240455,
+        "transactionCount": 195
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54579699,
+        "transactionCount": 442,
+        "avgAmount": 123483.48190045249
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 100,
+    "recommendedCount": 373,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bab8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Rungmanch At Kamthi Kalan",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e13c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Rungmanch At Bus Stand Saradar Patel Chouk Gp Badegaon",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e13d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rungmanch At Near Mathua Baba Gp Dhadara",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e13b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Rungmanch At Near pani Tanki Gp babai",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a178e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Rungmanch At Khamkheda Junnardeo",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.533Z"
+}

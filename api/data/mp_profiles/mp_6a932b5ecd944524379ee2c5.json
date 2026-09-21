@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c5",
+    "name": "Smt. Phulo Devi Netam (2026-32)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Chhattisgarh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 49000000,
+    "totalExpenditure": 11348157,
+    "utilizationPercentage": 23.159504081632655,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 0,
+    "inProgressPayments": 11348157,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 81,
+    "unspentAmount": 37651843,
+    "totalRecommendedAmount": 48777604,
+    "name_hi": "Smt. Phulo Devi Netam (2026-32)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11348157,
+      "totalEntries": 18,
+      "avgExpenditure": 630453.1666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 11348157,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11348157,
+        "transactionCount": 18,
+        "avgAmount": 630453.1666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 81,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:55.871Z"
+}

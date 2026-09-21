@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
+import { BackButton } from '../components/BackButton'
 import { TierBadge, EmptyState, SectionCard, AgencyBadge } from '../components/shared'
 import { useStore } from '../store/useStore'
 import {
@@ -13,7 +14,8 @@ import {
   Building2,
   X
 } from 'lucide-react'
-import { t } from '../lib/i18n'
+import { useTranslation, translateState } from '../lib/i18n'
+import { useToastStore } from '../store/useToastStore'
 
 const ALL_STATES_LIST = [
   'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat',
@@ -26,6 +28,8 @@ const ALL_STATES_LIST = [
 
 export const AuditDesk: React.FC = () => {
   const { user } = useStore()
+  const { t, formatNum, toNativeDigits, lang } = useTranslation()
+  const { showToast } = useToastStore()
   const isStateNodal = user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
   const initialRoleState = isStateNodal ? user.state : ''
   const [flags, setFlags] = useState<any[]>(() => {
@@ -152,9 +156,11 @@ export const AuditDesk: React.FC = () => {
         document.body.appendChild(a)
         a.click()
         a.remove()
+        showToast('Forensic audit flags CSV successfully exported', 'success', 4000, 'Audit Export')
       }
     } catch (err) {
       console.error('CSV Export failed:', err)
+      showToast('CSV Export encountered an issue', 'error', 4000, 'Export Failed')
     } finally {
       setExporting(false)
     }
@@ -162,23 +168,42 @@ export const AuditDesk: React.FC = () => {
 
   const totalPages = meta?.total_pages || Math.ceil((meta?.total || 100) / 50)
 
+  if (user.role === 'viewer') {
+    return (
+      <div className="lux-card p-10 max-w-lg mx-auto text-center my-12 space-y-4 animate-in fade-in">
+        <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-500 flex items-center justify-center mx-auto">
+          <ShieldAlert size={26} />
+        </div>
+        <h2 className="text-xl font-bold text-[var(--text-primary)]">
+          Administrative & Vigilance Access Required
+        </h2>
+        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+          The Statutory Audit Desk and anomaly surveillance records are reserved for designated auditing authorities, State Nodal Officers, and District Authorities.
+        </p>
+      </div>
+    )
+  }
+
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* 8B. Header & Export */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
-              <ShieldAlert size={16} />
-              <span>FORENSIC AUDIT WORKBENCH</span>
-            </span>
+        <div className="flex items-start gap-3">
+          <BackButton fallback="/" className="mt-1" />
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+                <ShieldAlert size={16} />
+                <span>{t('audit.workbench')}</span>
+              </span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
+              {t('audit.title')}
+            </h1>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5">
+              {t('audit.subtitle')}
+            </p>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
-            Vigilance &amp; Anomaly Command Desk
-          </h1>
-          <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5">
-            Automated vigilance screening across statutory project risk checks, cost benchmarking, and guideline compliance indicators.
-          </p>
         </div>
 
         <button
@@ -187,7 +212,7 @@ export const AuditDesk: React.FC = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[var(--surface-primary)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-primary)] transition shadow-sm shrink-0 disabled:opacity-50"
         >
           <Download size={14} className="text-[var(--brand-primary)]" />
-          <span>{exporting ? 'Generating CSV...' : t('btn.export_csv')}</span>
+          <span>{exporting ? t('audit.generating_csv') : t('btn.export_csv')}</span>
         </button>
       </div>
 
@@ -199,7 +224,7 @@ export const AuditDesk: React.FC = () => {
             <Search className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search Work ID, constituency, MP, agency..."
+              placeholder={t('common.search')}
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value)
@@ -233,10 +258,10 @@ export const AuditDesk: React.FC = () => {
                 : 'bg-[var(--surface-alt)] border-[var(--border-primary)] text-[var(--text-primary)]'
             }`}
           >
-            <option value="">All States &amp; UTs (National Ledger)</option>
+            <option value="">{t('audit.all_states_national')}</option>
             {ALL_STATES_LIST.map((st) => (
               <option key={st} value={st}>
-                {st}
+                {translateState(st, lang)}
               </option>
             ))}
           </select>
@@ -246,7 +271,7 @@ export const AuditDesk: React.FC = () => {
             <Building2 className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-2.5" />
             <input
               type="text"
-              placeholder="Filter by agency (DM, GP...)"
+              placeholder={t('audit.filter_agency')}
               value={agencyFilter}
               onChange={(e) => {
                 setAgencyFilter(e.target.value)
@@ -260,7 +285,7 @@ export const AuditDesk: React.FC = () => {
           {user.role === 'state_nodal_officer' && stateFilter && (
             <span className="px-2.5 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-[11px] font-extrabold flex items-center gap-1.5 shrink-0">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Jurisdiction: {stateFilter}</span>
+              <span>{t('audit.jurisdiction')}: {translateState(stateFilter, lang)}</span>
             </span>
           )}
 
@@ -276,7 +301,7 @@ export const AuditDesk: React.FC = () => {
               }}
               className="text-xs font-bold text-rose-500 hover:underline px-2"
             >
-              Reset Filters
+              {t('common.reset_filters')}
             </button>
           )}
         </div>
@@ -284,14 +309,14 @@ export const AuditDesk: React.FC = () => {
         {/* Tier Filter Chips */}
         <div className="flex items-center gap-2 pt-2 border-t border-[var(--border-primary)]">
           <span className="text-[11px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider">
-            Severity Tier:
+            {t('filter.priority')}:
           </span>
           <div className="flex items-center gap-1.5 flex-wrap">
             {[
-              { id: '', label: 'All Priority Levels' },
-              { id: 'red', label: 'Immediate Action' },
-              { id: 'orange', label: 'Priority Review' },
-              { id: 'yellow', label: 'Standard Check' }
+              { id: '', label: t('audit.all_priority') },
+              { id: 'red', label: t('audit.immediate_action') },
+              { id: 'orange', label: t('audit.priority_review') },
+              { id: 'yellow', label: t('audit.standard_check') }
             ].map((tier) => (
               <button
                 key={tier.id}
@@ -317,8 +342,8 @@ export const AuditDesk: React.FC = () => {
         <LoadingSkeleton rows={8} height="h-28" />
       ) : flags.length === 0 ? (
         <EmptyState
-          title="No anomalies match current filter criteria"
-          description="Try broadening your filter thresholds or search keywords."
+          title={t('audit.no_anomalies_title')}
+          description={t('audit.no_anomalies_desc')}
         />
       ) : (
         <div className="lux-card overflow-hidden">
@@ -326,31 +351,31 @@ export const AuditDesk: React.FC = () => {
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  <th className="p-3 font-bold w-20 whitespace-nowrap">Work ID</th>
-                  <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                  <th className="p-3 font-bold whitespace-nowrap">Location</th>
-                  <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
-                  <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                  <th className="p-3 font-bold text-center whitespace-nowrap">Risk Level</th>
-                  <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
+                  <th className="p-3 font-bold w-20 whitespace-nowrap">{t('table.work_id')}</th>
+                  <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
+                  <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
+                  <th className="p-3 font-bold whitespace-nowrap">{t('table.agency')}</th>
+                  <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
+                  <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
+                  <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : t('table.action')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border-primary)]">
                 {flags.map((flag: any) => (
                   <tr
                     key={flag.workId || flag.work_id}
-                    className="hover:bg-[var(--surface-alt)]/50 transition cursor-pointer"
+                    className="hover:bg-[var(--surface-alt)]/50 transition-colors duration-100 cursor-pointer"
                     onClick={() => setSelectedFlag(flag)}
                   >
                     <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                      #{flag.workId || flag.work_id}
+                      #{toNativeDigits(flag.workId || flag.work_id)}
                     </td>
                     <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                       {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
                     </td>
                     <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
                       {flag.district ? `${flag.district}, ` : ''}
-                      <span className="text-[var(--text-tertiary)]">{flag.state}</span>
+                      <span className="text-[var(--text-tertiary)]">{translateState(flag.state, lang)}</span>
                     </td>
                     <td className="p-3 whitespace-nowrap">
                       <AgencyBadge
@@ -360,7 +385,7 @@ export const AuditDesk: React.FC = () => {
                       />
                     </td>
                     <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
-                      ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
+                      ₹{formatNum(((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                     </td>
                     <td className="p-3 text-center whitespace-nowrap">
                       <TierBadge
@@ -378,7 +403,7 @@ export const AuditDesk: React.FC = () => {
                         }}
                         className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition shadow-sm whitespace-nowrap"
                       >
-                        Inspect Report
+                        {user.role === 'viewer' ? 'View Findings' : t('audit.inspect_report')}
                       </button>
                     </td>
                   </tr>
@@ -428,8 +453,8 @@ export const AuditDesk: React.FC = () => {
 
       {/* Entity Risks Workbench (Tabs: IDAs | MPs) */}
       <SectionCard
-        title="Implementing Agencies & High-Risk Watchlist"
-        subtitle="Priority inspection list for executing agencies and MP portfolios with repeated audit flags or unusual spending patterns"
+        title={t('audit.watchlist_title')}
+        subtitle={t('audit.watchlist_subtitle')}
         action={
           <div className="flex items-center rounded-lg bg-[var(--surface-alt)] p-0.5 border border-[var(--border-primary)] text-xs font-bold">
             <button
@@ -440,7 +465,7 @@ export const AuditDesk: React.FC = () => {
                   : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              IDAs &amp; Contractors ({idaRisks.length})
+              {t('audit.idas_contractors')} ({formatNum(idaRisks.length)})
             </button>
             <button
               onClick={() => setEntityTab('mp')}
@@ -450,7 +475,7 @@ export const AuditDesk: React.FC = () => {
                   : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              MP Portfolios ({mpRisks.length})
+              {t('audit.mp_portfolios')} ({formatNum(mpRisks.length)})
             </button>
           </div>
         }
@@ -465,7 +490,7 @@ export const AuditDesk: React.FC = () => {
                   onClick={() => setStateFilter('')}
                   className="px-3 py-1.5 rounded-lg bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs font-bold text-[var(--brand-primary)]"
                 >
-                  View Pan-India National Matrix
+                  {t('audit.pan_india_matrix')}
                 </button>
               ) : undefined
             }
@@ -508,30 +533,30 @@ export const AuditDesk: React.FC = () => {
                   </div>
 
                   <div className="my-2 p-2.5 rounded-lg bg-[var(--surface-alt)] flex items-center justify-between">
-                    <span className="text-xs text-[var(--text-secondary)]">Overall Risk Rating</span>
+                    <span className="text-xs text-[var(--text-secondary)]">{t('audit.overall_risk')}</span>
                     <span className="text-sm font-extrabold tabular-nums text-rose-600 dark:text-rose-400">
-                      {score > 0 ? `${score.toFixed(1)} / 20.0` : '—'}
+                      {score > 0 ? `${formatNum(score.toFixed(1))} / ${formatNum('20.0')}` : '—'}
                     </span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-1.5 text-[9px] text-center pt-2 border-t border-[var(--border-primary)] mt-2">
                   <div className="p-1.5 rounded bg-[var(--surface-alt)]">
-                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">Monopoly Share</span>
+                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">{t('audit.monopoly_share')}</span>
                     <span className="font-extrabold text-[var(--text-primary)] text-[11px] tabular-nums">
-                      {concPct}%
+                      {formatNum(concPct)}%
                     </span>
                   </div>
                   <div className="p-1.5 rounded bg-[var(--surface-alt)]">
-                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">March Rush</span>
+                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">{t('audit.march_rush')}</span>
                     <span className="font-extrabold text-[var(--text-primary)] text-[11px] tabular-nums">
-                      {velocPct}%
+                      {formatNum(velocPct)}%
                     </span>
                   </div>
                   <div className="p-1.5 rounded bg-[var(--surface-alt)]">
-                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">Bill Anomaly</span>
+                    <span className="text-[var(--text-tertiary)] block font-bold text-[8px] uppercase tracking-wider">{t('audit.bill_anomaly')}</span>
                     <span className="font-extrabold text-[var(--text-primary)] text-[11px] tabular-nums">
-                      {patternPct}%
+                      {formatNum(patternPct)}%
                     </span>
                   </div>
                 </div>

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede40",
+    "name": "DR. HEMANG JOSHI",
+    "constituency": "VADODARA",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 68089263,
+    "utilizationPercentage": 46.31922653061225,
+    "completedWorksCount": 71,
+    "recommendedWorksCount": 134,
+    "completedWorksValue": 44784968,
+    "inProgressPayments": 23304295,
+    "paymentGapPercentage": 34.22609376752984,
+    "completionRate": 34.63414634146341,
+    "pendingWorks": 63,
+    "unspentAmount": 78910737,
+    "totalRecommendedAmount": 75948621,
+    "name_hi": "DR. HEMANG JOSHI",
+    "constituency_hi": "VADODARA",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68089263,
+      "totalEntries": 121,
+      "avgExpenditure": 562721.1818181818,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27048164,
+        "transactionCount": 42
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41041099,
+        "transactionCount": 79
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68089263,
+        "transactionCount": 121,
+        "avgAmount": 562721.1818181818
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 71,
+    "recommendedCount": 134,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e7ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "ankodiya gam a bank of Baroda ni bajuma avel kuli jagya ma pewar block nakhvani kamgiri",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "ankodiya gam a prathmik school ni bagua avel kuli jagya ma pewar block nakhvani kamgiri",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7d1",
+        "workCategory": "Normal/Others",
+        "workDescription": "vahivati ward no.6 khate avel sarsiya mahadev mandir (fatepura) ni bagua avel jagyama shed bannavvani kamgiri",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 183139
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e622",
+        "workCategory": "Normal/Others",
+        "workDescription": "vahivati wardno. 12 vasar khate avel billa bongs school ni bajumathi royal acer society taraf jata T.P. rasta ni bane baju ma oewar block nakhvani kamgiri",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 301658
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d41c",
+        "workCategory": "Normal/Others",
+        "workDescription": "vahivati wardNo.1 ma Chhani khati vil Ramakaka n dairy pase yoginagar township ma shed bannavvani kamgiri",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 286299
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.420Z"
+}

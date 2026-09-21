@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede95",
+    "name": "Kamaljeet Sehrawat",
+    "constituency": "WEST DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 13075365,
+    "utilizationPercentage": 8.89480612244898,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 32,
+    "completedWorksValue": 12116129,
+    "inProgressPayments": 959236,
+    "paymentGapPercentage": 7.336208205277635,
+    "completionRate": 49.2063492063492,
+    "pendingWorks": 1,
+    "unspentAmount": 133924635,
+    "totalRecommendedAmount": 72611679,
+    "name_hi": "Kamaljeet Sehrawat",
+    "constituency_hi": "WEST DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13075365,
+      "totalEntries": 34,
+      "avgExpenditure": 384569.5588235294,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 13075365,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13075365,
+        "transactionCount": 34,
+        "avgAmount": 384569.5588235294
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 32,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e93b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Fixing of Rubber Flooring under Open Gym Equipment at D44A Old Slum Park Paschim Puri West Zone",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 184469
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e939",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Fixing of Rubber Flooring under Open Gym Equipment at B-157 Raghubir Nagar 25Gaj West Zone",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 231471
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e93a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Fixing of Rubber Flooring under Open Gym Equipment at Park Road No.17 West Punjabi Bagh West Zone",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 249628
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e937",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Fixing of Rubber Flooring under Open Gym Equipment at Goverdhan Park Opp. WZ-67 in Titar Pur Tagore Garden New Delhi",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 127304
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e93f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Fixing of Rubber Flooring under Open Gym Equipment at A8A Ne Slum Paschim Puri West Zone",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 220099
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.499Z"
+}

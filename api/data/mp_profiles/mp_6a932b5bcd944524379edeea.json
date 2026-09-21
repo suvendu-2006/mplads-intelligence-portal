@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeea",
+    "name": "Omprakash Bhupalsinh Alias Pawan Rajenimbalkar",
+    "constituency": "OSMANABAD",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 184758519.11,
+    "totalExpenditure": 27342263,
+    "utilizationPercentage": 14.798918681374138,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 164,
+    "completedWorksValue": 19682980,
+    "inProgressPayments": 7659283,
+    "paymentGapPercentage": 28.012615488337595,
+    "completionRate": 15.025906735751295,
+    "pendingWorks": 135,
+    "unspentAmount": 157416256.11,
+    "totalRecommendedAmount": 114198899,
+    "name_hi": "Omprakash Bhupalsinh Alias Pawan Rajenimbalkar",
+    "constituency_hi": "OSMANABAD",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27342263,
+      "totalEntries": 43,
+      "avgExpenditure": 635866.5813953489,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4685589,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22656674,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27342263,
+        "transactionCount": 43,
+        "avgAmount": 635866.5813953489
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 164,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community centers   Yashwandi ta. Washi",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 694535
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e950",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community centre on GP own open land (property no. 1) at Dhotri block Tuljapur dist Dharashiv.",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 497237
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e94e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road on public space from bhagwat nagu jamadar house to arjun gundiba jamadar house at Kond block and dist. Dharashiv. (ST)",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 696292
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e261",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road on public space from waruda raod to mount litera english school at Upla (Ma) block and dist. Dharashiv.",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 995416
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e258",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road on public space from Sheshrao Fattepure house to Vaman Madane s house at bori block  omarga dist. Dharashiv.",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 995670
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.687Z"
+}

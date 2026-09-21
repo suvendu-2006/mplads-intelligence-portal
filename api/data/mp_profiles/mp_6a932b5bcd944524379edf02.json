@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf02",
+    "name": "PRAVEEN PATEL",
+    "constituency": "PHULPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151559884.09,
+    "totalExpenditure": 95102075,
+    "utilizationPercentage": 62.748843845463774,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 10,
+    "completedWorksValue": 50524702,
+    "inProgressPayments": 44577373,
+    "paymentGapPercentage": 46.873186520903985,
+    "completionRate": 58.333333333333336,
+    "pendingWorks": -4,
+    "unspentAmount": 56457809.09,
+    "totalRecommendedAmount": 47228077,
+    "name_hi": "PRAVEEN PATEL",
+    "constituency_hi": "PHULPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95102075,
+      "totalEntries": 37,
+      "avgExpenditure": 2570326.3513513515,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 54589852,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40512223,
+        "transactionCount": 16
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95102075,
+        "transactionCount": 37,
+        "avgAmount": 2570326.3513513515
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 10,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b90d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Phulpur Sansdiya Kshetra me suchi ke anusar block wise 215 Solar High Mast light ka work",
+        "completedDate": "2026-01-31T00:00:00.000Z",
+        "finalAmount": 20609400
+      },
+      {
+        "_id": "6a932bb5cd94452437a17e0d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rudra Sangam Apartment Jhunsi Prayagraj ke Mukhya Gate ke Samne 20 mtr. High Mast Light",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 959712
+      },
+      {
+        "_id": "6a932bb5cd94452437a17e10",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward No 19 Andaw Petorl Pump ke pass 20mtr. High Mast Light",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 959712
+      },
+      {
+        "_id": "6a932bb5cd94452437a17e12",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Sahanso Vill Manethu Phulpur me Gau Sala Ke pass 20 mtr. High Mast Light",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 959712
+      },
+      {
+        "_id": "6a932bb5cd94452437a17e11",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward No 19 Andwa Mukhay Marg Par 20mtr. High Mast light",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 959712
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.674Z"
+}

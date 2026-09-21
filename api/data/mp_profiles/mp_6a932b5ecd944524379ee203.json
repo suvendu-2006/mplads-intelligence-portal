@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee203",
+    "name": "Dr. Parmar Jashvantsinh Salamsinh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 37839089,
+    "utilizationPercentage": 25.7408768707483,
+    "completedWorksCount": 61,
+    "recommendedWorksCount": 312,
+    "completedWorksValue": 26672911,
+    "inProgressPayments": 11166178,
+    "paymentGapPercentage": 29.509637507393478,
+    "completionRate": 16.353887399463808,
+    "pendingWorks": 251,
+    "unspentAmount": 109160911,
+    "totalRecommendedAmount": 81012814,
+    "name_hi": "Dr. Parmar Jashvantsinh Salamsinh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37839089,
+      "totalEntries": 99,
+      "avgExpenditure": 382213.0202020202,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3387836,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 8401153,
+        "transactionCount": 33
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26050100,
+        "transactionCount": 50
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37839089,
+        "transactionCount": 99,
+        "avgAmount": 382213.0202020202
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 61,
+    "recommendedCount": 312,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324a0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of pawer blocks at relva primary school relva kadana",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3249e",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation of pawer blocks at Bhagat faliya towards gulabsinh faliya",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 249639
+      },
+      {
+        "_id": "6a932bb5cd94452437a32470",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of pawer blockat Ratnakar mataji faliya towards main road raiyoli",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3233c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of one  Hand Held (Portable X-Ray Machine) for District TB Centre , Civil Hospital Campus, Godhra Dist Panchmahal 389001",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 3340000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32348",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation of pawer blocks at machhar faliya udava",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.692Z"
+}

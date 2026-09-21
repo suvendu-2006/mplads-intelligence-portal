@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf2c",
+    "name": "Ramvir Singh Bidhuri",
+    "constituency": "SOUTH DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147559100,
+    "totalExpenditure": 28849836,
+    "utilizationPercentage": 19.551377041470165,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 82,
+    "completedWorksValue": 21147903,
+    "inProgressPayments": 7701933,
+    "paymentGapPercentage": 26.69662662900406,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 41,
+    "unspentAmount": 118709264,
+    "totalRecommendedAmount": 94894181,
+    "name_hi": "Ramvir Singh Bidhuri",
+    "constituency_hi": "SOUTH DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28849836,
+      "totalEntries": 48,
+      "avgExpenditure": 601038.25,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2318959,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26530877,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28849836,
+        "transactionCount": 48,
+        "avgAmount": 601038.25
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 82,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e2ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement with Octagonal poles (alongwith fittings) at various location under South Delhi Parliayment Constituency, CNZ MCD",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 704321
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d5fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 4 semi high mast poles with LED fittings in ward no. 175, Kalkaji under Central Zone",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 741512
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement the semi high mast pole (with LED fittings) at various location under South Delhi Parliyamentary Constituency, CNZ, MCD",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 696725
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2ab",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement with 12mtrs semi high mast poles with LED at various locations in ward no. 177, Harkesh Nagar, CNZ",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 750105
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d38b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and fixing 195 nos of LED lights fittings with accessories at various locations in ward no. 181 molarband under central zone",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 692752
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.690Z"
+}

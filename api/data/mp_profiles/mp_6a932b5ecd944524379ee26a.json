@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee26a",
+    "name": "Shri Narain Dass Gupta (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Delhi",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 160837070,
+    "totalExpenditure": 24703922,
+    "utilizationPercentage": 15.359594650661071,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 18500703,
+    "inProgressPayments": 6203219,
+    "paymentGapPercentage": 25.11025982028279,
+    "completionRate": 21.153846153846153,
+    "pendingWorks": 30,
+    "unspentAmount": 136133148,
+    "totalRecommendedAmount": 55292852,
+    "name_hi": "Shri Narain Dass Gupta (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 24703922,
+      "totalEntries": 16,
+      "avgExpenditure": 1543995.125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1342048,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23361874,
+        "transactionCount": 15
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 24703922,
+        "transactionCount": 16,
+        "avgAmount": 1543995.125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Semi Mast Light at Municipal Park Rani Laxmi Bai DDA Flats Munirka, Municipal Park in front of F-13 DDA Flats Munirka, Municipal Park Rock Garden, Municipal Central Park Munirka Enclave, park in front of 819 type IV R K Puram, park in front of 381 type IV R K Puram in ward no. 151 under south zone",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 1263706
+      },
+      {
+        "_id": "6a932bb5cd94452437a3244c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement at various location in Ward No.151- Munirka under South Zone",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 1402407
+      },
+      {
+        "_id": "6a932bb5cd94452437a3246b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and Installation of Children play equipment in park",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 592149
+      },
+      {
+        "_id": "6a932bb5cd94452437a32414",
+        "workCategory": "Normal/Others",
+        "workDescription": "Lighting arrangement at Kalka Das Marg Mehrauli, Jahaj Mahal Park and various places in ward no 155 Mehrauli",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 6662918
+      },
+      {
+        "_id": "6a932bb5cd94452437a323e1",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Supply and Installation of 3 Sets of Arch Swing Childrens Play Equipment in LIG East Patel Nagar",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 159922
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.667Z"
+}

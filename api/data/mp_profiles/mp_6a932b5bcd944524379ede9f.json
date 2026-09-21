@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9f",
+    "name": "Khagen Murmu",
+    "constituency": "MALDAHA UTTAR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 6003169,
+    "utilizationPercentage": 4.08378843537415,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 31,
+    "completedWorksValue": 6003169,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 18.421052631578945,
+    "pendingWorks": 24,
+    "unspentAmount": 140996831,
+    "totalRecommendedAmount": 35217949,
+    "name_hi": "Khagen Murmu",
+    "constituency_hi": "MALDAHA UTTAR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 6003169,
+      "totalEntries": 7,
+      "avgExpenditure": 857595.5714285715,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 739817,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5263352,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 6003169,
+        "transactionCount": 7,
+        "avgAmount": 857595.5714285715
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 31,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cc road with covered drain from Rokomari to Vivekananda Sishu Mandir(JL No. 68, Mouza- Singia, GP- Chanchal, Block-Chanchal I)",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1399456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5dc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Reservior with Sub Marshal near  Bharatiya Sanatan Santal Kalyan Ashram (JL No. 92, Mouza- Kotalhati, GP- Gazole II , Block- Gazole)",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 799750
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca25",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Hi Must Light between Ranjit Chowdhury House and Rajen Chowdhury House at Narayanpur (JL No. 100, Mouza- Aradpur, GP- Mangalbari, Block- Old Malda)",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 524472
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca27",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Hi Must Light Near Soladanga Shiv Mandir (JL-  210, Mouza-Soladanga , Khatian- 86, Dag No. 101, GP- Bulbulchandi, Block- Habibpur)",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 520361
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f38",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar light at 20 Location of Gazole-II Gram Panchayet (Near JL No.- 94, Mouza- Near Fatepur, GP- Gazole II, Block- Gazole)",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 739817
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.674Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede29",
+    "name": "DEVESH CHANDRA THAKUR",
+    "constituency": "SITAMARHI",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 163809205.11,
+    "totalExpenditure": 41894417,
+    "utilizationPercentage": 25.57512990302795,
+    "completedWorksCount": 119,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 38054803,
+    "inProgressPayments": 3839614,
+    "paymentGapPercentage": 9.164977758253565,
+    "completionRate": 56.9377990430622,
+    "pendingWorks": -29,
+    "unspentAmount": 121914788.11000001,
+    "totalRecommendedAmount": 52613659,
+    "name_hi": "DEVESH CHANDRA THAKUR",
+    "constituency_hi": "SITAMARHI",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41894417,
+      "totalEntries": 129,
+      "avgExpenditure": 324762.92248062015,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 23246657,
+        "transactionCount": 82
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18647760,
+        "transactionCount": 47
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41894417,
+        "transactionCount": 129,
+        "avgAmount": 324762.92248062015
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 119,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e344",
+        "workCategory": "Normal/Others",
+        "workDescription": "A 9-meter high, 36-watt Fourlims solar LED semi mast equipped with an L1 P04 battery and mounted on an octagonal pole has been installed near Radhur Kirtan Bhawan, in Ward No. 08, Sursand, Sitamarhi district. This solar-powered installation stands on government land",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 360000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e336",
+        "workCategory": "Normal/Others",
+        "workDescription": "A 9-meter high, 36-watt Fourlims solar LED semi mast equipped with an L1 P04 battery and mounted on an octagonal pole has been installed in front of Athri Garh, located in Ward No. 05, Village Athri, Runisaidpur block, Sitamarhi district. The installation stands on government land",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 360000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e343",
+        "workCategory": "Normal/Others",
+        "workDescription": "A 9-meter high, 36-watt Fourlims solar LED semi mast equipped with an L1 P04 battery and mounted on an octagonal pole has been installed near the house of Sudesh Mandal, located in Ward No. 01, Village Sonbarsa, Panchayat Turkaulia, Bathnaha block, Sitamarhi district.The installation stands on government land.",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 360000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e345",
+        "workCategory": "Normal/Others",
+        "workDescription": "A 9-meter high, 36-watt Fourlims solar LED semi mast equipped with an L1 P04 battery and mounted on an octagonal pole has been installed at Sarkhandio Bitha North Ram Tola, near the house of Shailesh Jha, in Ward No. 01, Sursand, Sitamarhi district. The installation is located on government land",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 360000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e347",
+        "workCategory": "Normal/Others",
+        "workDescription": "A 9-meter high, 36-watt Fourlims solar LED semi mast fitted with an L1 P04 battery and mounted on an octagonal pole has been installed at Ward No. 04, Karpuri Chowk (Ramana), Naranga, Sitamarhi district. The installation stands on government land and is intended to enhance public lighting and improve nighttime visibility in the area. This solar-powered unit contributes to sustainable infrastructure development and supports local safety and accessibility.",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 360000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.254Z"
+}

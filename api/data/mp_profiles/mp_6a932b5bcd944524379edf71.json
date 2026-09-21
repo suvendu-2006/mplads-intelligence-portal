@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf71",
+    "name": "Shri Jyotirmay Singh Mahato ",
+    "constituency": "PURULIA",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11711831,
+    "utilizationPercentage": 7.967231972789116,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 92,
+    "completedWorksValue": 5667015,
+    "inProgressPayments": 6044816,
+    "paymentGapPercentage": 51.61290322580645,
+    "completionRate": 14.018691588785046,
+    "pendingWorks": 77,
+    "unspentAmount": 135288169,
+    "totalRecommendedAmount": 65654737,
+    "name_hi": "Shri Jyotirmay Singh Mahato ",
+    "constituency_hi": "PURULIA",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11711831,
+      "totalEntries": 31,
+      "avgExpenditure": 377801,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 11711831,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11711831,
+        "transactionCount": 31,
+        "avgAmount": 377801
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 92,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e656",
+        "workCategory": "Normal/Others",
+        "workDescription": "SOLAR LIGHT",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 377801
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e65e",
+        "workCategory": "Normal/Others",
+        "workDescription": "solar light",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 377801
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e654",
+        "workCategory": "Normal/Others",
+        "workDescription": "SOLAR LIGHT",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 377801
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e64b",
+        "workCategory": "Normal/Others",
+        "workDescription": "SOLSR LIGHT",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 377801
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e655",
+        "workCategory": "Normal/Others",
+        "workDescription": "SOLAR HIGH MAST LIGHT",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 377801
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.532Z"
+}

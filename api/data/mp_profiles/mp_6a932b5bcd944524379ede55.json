@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede55",
+    "name": "EATALA RAJENDER",
+    "constituency": "MALKAJGIRI",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 327477390.86,
+    "totalExpenditure": 34708670,
+    "utilizationPercentage": 10.598798869396854,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 268,
+    "completedWorksValue": 16792312,
+    "inProgressPayments": 17916358,
+    "paymentGapPercentage": 51.619258242969266,
+    "completionRate": 9.764309764309765,
+    "pendingWorks": 239,
+    "unspentAmount": 292768720.86,
+    "totalRecommendedAmount": 224097500,
+    "name_hi": "EATALA RAJENDER",
+    "constituency_hi": "MALKAJGIRI",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34708670,
+      "totalEntries": 59,
+      "avgExpenditure": 588282.5423728813,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8115384,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26593286,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34708670,
+        "transactionCount": 59,
+        "avgAmount": 588282.5423728813
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 268,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e187",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of Borewell with Motor in Opp Lane to Mahankali Tempel, Old Malkajgiri, near Old Borewell Tank, Ward No. 140, Malkajgiri Cirlce GHMC-28, Medchal Malkjgiri District",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 389868
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e18d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of Borewell wit motor near Patel  Company Shop, Mallikarjuna Nagar, Gouthamnagar, Division No. 141, Malkajgiri CIrcle-28, Secunderabad Zone",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 340207
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e172",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of Borewell with motor, near Siddhi Vinayaka Temple, Yadav Nagar, Gouthamnagar, Division No. 141, Malkajgiri Circle-28, Secunderabad Zone",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 334245
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e42e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC road with drain from 1. Anil (H) to Main road, 2. Rajinireddy (H) to Satyanarayana (H) and Perka Ramesh (H) to Balraj (H) in Dabilpur (V), Medchal (M), Medchal Malkajgiri Dist",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CCTV Cameras in NCL North Avenue Colony from Gajanana Appartment to Colony Main Road (NH-44). Ward No. 12, Kompally Municipality, Dundigal Gandimaisamma Mandal, Medchal -  Malkajgiri District.",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 299944
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.216Z"
+}

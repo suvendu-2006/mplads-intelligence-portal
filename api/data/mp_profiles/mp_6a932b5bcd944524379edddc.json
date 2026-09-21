@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edddc",
+    "name": "ARUN GOVIL",
+    "constituency": "MEERUT",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66737649,
+    "utilizationPercentage": 45.3997612244898,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 196,
+    "completedWorksValue": 26677116,
+    "inProgressPayments": 40060533,
+    "paymentGapPercentage": 60.026886772712054,
+    "completionRate": 15.517241379310345,
+    "pendingWorks": 160,
+    "unspentAmount": 80262351,
+    "totalRecommendedAmount": 80973105,
+    "name_hi": "ARUN GOVIL",
+    "constituency_hi": "MEERUT",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66737649,
+      "totalEntries": 172,
+      "avgExpenditure": 388009.58720930235,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31296832,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35440817,
+        "transactionCount": 86
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66737649,
+        "transactionCount": 172,
+        "avgAmount": 388009.58720930235
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 196,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19bc5",
+        "workCategory": "Normal/Others",
+        "workDescription": "??  ??  ?? / ??  ??",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 634955
+      },
+      {
+        "_id": "6a932bb5cd94452437a19682",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Dhanota me monoj ke makan se Mahinder ke  maken ke aur nali ve c.c. interloking tiles dwera sadak nirman krya",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 915563
+      },
+      {
+        "_id": "6a932bb5cd94452437a187a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "??  ??   ??  ?? ??    ?",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 977158
+      },
+      {
+        "_id": "6a932bb5cd94452437a187a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "??  ??    ?? ??    ?",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 973276
+      },
+      {
+        "_id": "6a932bb5cd94452437a18631",
+        "workCategory": "Normal/Others",
+        "workDescription": "??    ??    ??  ??   ??",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 803015
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.252Z"
+}

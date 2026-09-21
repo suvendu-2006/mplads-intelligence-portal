@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9d",
+    "name": "KARTICK CHANDRA PAUL",
+    "constituency": "RAIGANJ",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 202677986.56,
+    "totalExpenditure": 28148611,
+    "utilizationPercentage": 13.888341540074947,
+    "completedWorksCount": 99,
+    "recommendedWorksCount": 302,
+    "completedWorksValue": 25731440,
+    "inProgressPayments": 2417171,
+    "paymentGapPercentage": 8.587176823751623,
+    "completionRate": 24.688279301745634,
+    "pendingWorks": 203,
+    "unspentAmount": 174529375.56,
+    "totalRecommendedAmount": 124881703,
+    "name_hi": "KARTICK CHANDRA PAUL",
+    "constituency_hi": "RAIGANJ",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28148611,
+      "totalEntries": 102,
+      "avgExpenditure": 275966.7745098039,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 28148611,
+        "transactionCount": 102
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28148611,
+        "transactionCount": 102,
+        "avgAmount": 275966.7745098039
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 99,
+    "recommendedCount": 302,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ddc0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light at Saheb Ghata Durga Mandir, Malgaon GP",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ddbe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light at Bagcha Hariya Chandi More, Bagcha Village, Radhikapur GP, Kaliaganj Block",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ddde",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light at Chotparua pachimpara Haribasar Mundir",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ddc2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light at Twingle Bilpara Choddo Gosai More, Bhandar GP",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ddbf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar High Mast Light at Radhikapur Samshan, radhikapur Village and GP, Kaliaganj Block",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 249315
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.245Z"
+}

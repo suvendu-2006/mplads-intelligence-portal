@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf03",
+    "name": "PRIYA SAROJ",
+    "constituency": "MACHHLISHAHR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 69805592,
+    "utilizationPercentage": 47.48679727891157,
+    "completedWorksCount": 725,
+    "recommendedWorksCount": 670,
+    "completedWorksValue": 34383272,
+    "inProgressPayments": 35422320,
+    "paymentGapPercentage": 50.744244100100175,
+    "completionRate": 51.971326164874554,
+    "pendingWorks": -55,
+    "unspentAmount": 77194408,
+    "totalRecommendedAmount": 103648139,
+    "name_hi": "PRIYA SAROJ",
+    "constituency_hi": "MACHHLISHAHR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 69805592,
+      "totalEntries": 1048,
+      "avgExpenditure": 66608.3893129771,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34971313,
+        "transactionCount": 742
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34834279,
+        "transactionCount": 306
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 69805592,
+        "transactionCount": 1048,
+        "avgAmount": 66608.3893129771
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 725,
+    "recommendedCount": 670,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cc1a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mere sansadiy kshetra Machhalishahr ke vidhansabha Zafrabad nagar panchayat me CCTV Camera ka adhishthapan ka kary hona hain kul 25 sthano pe hona sunushchit hua jo vivran ki file attach hai sath me",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 997000
+      },
+      {
+        "_id": "6a932bb5cd94452437a190b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "1- ASHOK YADAV S\\O KEDAR NATH YADAV, 2- SANTOSH GAUTAM S\\O LAUHARI GAUTAM K GHAR KUL 02 NAG SOLAR LIGHT",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 41792
+      },
+      {
+        "_id": "6a932bb5cd94452437a190b4",
+        "workCategory": "Normal/Others",
+        "workDescription": "SUJIT KANNOUJIYA S\\O BINDU LAL K GHAR 01 NAG SOLAR LIGHT",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 20896
+      },
+      {
+        "_id": "6a932bb5cd94452437a190b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "RAMJEET YADAV S\\O BALJOR YADAV K GHAR 01 NAG SOLAR LIGHT",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 20896
+      },
+      {
+        "_id": "6a932bb5cd94452437a190ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "1- SHIV MURAT SAROJ S\\O CHHANGUR SAROJ, 2-RAM PRASAD NAGAR S\\O MUKHRAM, 3- PRAMOD KUMAR S\\O PARDEHI K GHAR KUL 03 NAG SOLAR LIGHT",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 62688
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.662Z"
+}

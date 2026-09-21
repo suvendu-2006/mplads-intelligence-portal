@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf4",
+    "name": "BALWANT BASWANT WANKHADE",
+    "constituency": "AMRAVATI",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 198293678,
+    "totalExpenditure": 93790658,
+    "utilizationPercentage": 47.298864465058735,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 116,
+    "completedWorksValue": 45228630,
+    "inProgressPayments": 48562028,
+    "paymentGapPercentage": 51.77704158979245,
+    "completionRate": 30.538922155688624,
+    "pendingWorks": 65,
+    "unspentAmount": 104503020,
+    "totalRecommendedAmount": 102763000,
+    "name_hi": "BALWANT BASWANT WANKHADE",
+    "constituency_hi": "AMRAVATI",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 93790658,
+      "totalEntries": 120,
+      "avgExpenditure": 781588.8166666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27519724,
+        "transactionCount": 36
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 66270934,
+        "transactionCount": 84
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 93790658,
+        "transactionCount": 120,
+        "avgAmount": 781588.8166666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 116,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3de",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall at  shri datt mandir area at khartalegaon taluka Bhatkuli",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 1996461
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e094",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of crematoriums at ratnapur (kapustalni) ta. anjangav surji",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 694648
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e060",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of paving blocks at Police Station Kotwali, Amravati.",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 973361
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e02a",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of road towards mahanubhav smashanbhumi from bus stop tondgaon , at tondgaon ta chandur bajar",
+        "completedDate": "2026-04-12T00:00:00.000Z",
+        "finalAmount": 2872795
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df7d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Of Community Hall At Chincholi Rahimapur (Kh)Ta. Anjangaon Surji Dist Amravati",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 1496534
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.685Z"
+}

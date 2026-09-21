@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee240",
+    "name": "Shri Harsh Mahajan (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Himachal Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75081105,
+    "utilizationPercentage": 51.07558163265307,
+    "completedWorksCount": 152,
+    "recommendedWorksCount": 309,
+    "completedWorksValue": 37740073,
+    "inProgressPayments": 37341032,
+    "paymentGapPercentage": 49.73426003786172,
+    "completionRate": 32.97180043383948,
+    "pendingWorks": 157,
+    "unspentAmount": 71918895,
+    "totalRecommendedAmount": 81224755,
+    "name_hi": "Shri Harsh Mahajan (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Himachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75081105,
+      "totalEntries": 472,
+      "avgExpenditure": 159070.1377118644,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6919685,
+        "transactionCount": 36
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 49023144,
+        "transactionCount": 309
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19138276,
+        "transactionCount": 127
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75081105,
+        "transactionCount": 472,
+        "avgAmount": 159070.1377118644
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 152,
+    "recommendedCount": 309,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32055",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of flood control and embankment work near kishori lal plot and etc",
+        "completedDate": "2026-08-16T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bd8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Pucca Path at Shailla to paddu",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32339",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of link road from shamshan ghat towards jamli ward no3 village lafran gp jamli aezp  sub div bijhari",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32236",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of link road village ganoh  brahmna gp bhabriana aezp sub div bijhari",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31af7",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of path from house of kameshwar sharma shashtri Nalawan towards main Village along with retaining wall damaged due to disaster at viallge Nalawan",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.270Z"
+}

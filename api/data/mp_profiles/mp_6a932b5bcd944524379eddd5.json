@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd5",
+    "name": "ANOOP PRADHAN BALMIKI",
+    "constituency": "HATHRAS",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 97915147,
+    "utilizationPercentage": 66.60894353741497,
+    "completedWorksCount": 69,
+    "recommendedWorksCount": 37,
+    "completedWorksValue": 94261505,
+    "inProgressPayments": 3653642,
+    "paymentGapPercentage": 3.731436975731651,
+    "completionRate": 65.09433962264151,
+    "pendingWorks": -32,
+    "unspentAmount": 49084853,
+    "totalRecommendedAmount": 52663000,
+    "name_hi": "ANOOP PRADHAN BALMIKI",
+    "constituency_hi": "HATHRAS",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 97915147,
+      "totalEntries": 141,
+      "avgExpenditure": 694433.6666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13590925,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 78575955,
+        "transactionCount": 114
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5748267,
+        "transactionCount": 17
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 97915147,
+        "transactionCount": 141,
+        "avgAmount": 694433.6666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 69,
+    "recommendedCount": 37,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b30c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Chirayal Block Sikandrarau mai Rajbhan Singh kai Duaar se Ravindra kai Ghar ki taraf 75  meeter sadak ka Interlocking work",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 801749
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af39",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Liha Alampur Block Sikandrarau mai Holi sai Shiv Mandir ki taraf 165 meeter sadak ka Interlocking work.",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 1751228
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aa8c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Kachaura Block Sikandrarau kai Nagla Sardar mai Devendra Raghav kai Ghar sai Kuwarpal Raghav kai Ghar ki taraf 110 meeter sadhak ka Interlocking work",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 1275275
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b130",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Nagla Daya Block Mursaan mai Vipin Rana kai Ghar se Panchyat Ghar ki taraf 100 meeter Interlocking work.",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 1139543
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b12f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mazra Nagla Thadha Gram Panchyat Naugawana mai Sarupa Marg sai Veerpal kai Makaan ki Taraf 150 meeter Interlocking work.",
+        "completedDate": "2026-01-23T00:00:00.000Z",
+        "finalAmount": 1146318
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.441Z"
+}

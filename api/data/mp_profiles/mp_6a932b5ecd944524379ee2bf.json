@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2bf",
+    "name": "Smt. Mahua Maji (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Jharkhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 232524001.2,
+    "totalExpenditure": 163193927,
+    "utilizationPercentage": 70.18369121372233,
+    "completedWorksCount": 150,
+    "recommendedWorksCount": 315,
+    "completedWorksValue": 81123339,
+    "inProgressPayments": 82070588,
+    "paymentGapPercentage": 50.2902218904261,
+    "completionRate": 32.25806451612903,
+    "pendingWorks": 165,
+    "unspentAmount": 69330074.19999999,
+    "totalRecommendedAmount": 118420476,
+    "name_hi": "Smt. Mahua Maji (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 163193927,
+      "totalEntries": 598,
+      "avgExpenditure": 272899.54347826086,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 11166750,
+        "transactionCount": 31
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 64979900,
+        "transactionCount": 209
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 66826232,
+        "transactionCount": 238
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20221045,
+        "transactionCount": 120
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 163193927,
+        "transactionCount": 598,
+        "avgAmount": 272899.54347826086
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 150,
+    "recommendedCount": 315,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a308b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Boring , Construction of Platform , Installation of Water Tank , Submersible Pump etc in WARD No. – 23 MADINA MASJID, lah factory road hindpiri.",
+        "completedDate": "2025-12-14T00:00:00.000Z",
+        "finalAmount": 484000
+      },
+      {
+        "_id": "6a932bb5cd94452437a304f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Boring, Construction of Platform, Installation of Water Tank, Submirsible Pump etc. near Shalo devi house Mahabir Mandir Lower Chutia W.N.-46.",
+        "completedDate": "2025-12-14T00:00:00.000Z",
+        "finalAmount": 484000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3123d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Boring , Construction of Platform, Installation of Water Tank, Submersible Pump, etc. in WARD No. 23, near Badi Masjid.",
+        "completedDate": "2025-12-14T00:00:00.000Z",
+        "finalAmount": 484000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31238",
+        "workCategory": "Normal/Others",
+        "workDescription": "Boring Construction of Platform Installation of Water Tank Submersible Pump etc. in WARD No.  22 Harijan Basti Hindpidi.",
+        "completedDate": "2025-12-14T00:00:00.000Z",
+        "finalAmount": 484000
+      },
+      {
+        "_id": "6a932bb5cd94452437a308b5",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Renovation of Paramvir Abdul Hamid chowk, Kantatoli under ward 16",
+        "completedDate": "2025-12-14T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.006Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd3",
+    "name": "ANITA SUBHADARSHINI",
+    "constituency": "ASKA",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 13418448,
+    "utilizationPercentage": 9.128195918367348,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 123,
+    "completedWorksValue": 7200000,
+    "inProgressPayments": 6218448,
+    "paymentGapPercentage": 46.34252783928514,
+    "completionRate": 12.142857142857142,
+    "pendingWorks": 106,
+    "unspentAmount": 133581552,
+    "totalRecommendedAmount": 42500000,
+    "name_hi": "ANITA SUBHADARSHINI",
+    "constituency_hi": "ASKA",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13418448,
+      "totalEntries": 34,
+      "avgExpenditure": 394660.23529411765,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 700000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12718448,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13418448,
+        "transactionCount": 34,
+        "avgAmount": 394660.23529411765
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 123,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e065",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall of Kurulai",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df71",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Gouda Samaja Community Hall",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd34",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction  and improvement of paver road and boundary wall of AWC-3 and 5",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc99",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of school building of Kumudini Bidyapitha",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc62",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Anikot over Jagata Canal",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 600000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.683Z"
+}

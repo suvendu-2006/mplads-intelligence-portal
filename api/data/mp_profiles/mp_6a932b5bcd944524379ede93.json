@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede93",
+    "name": "KALYAN VAIJINATHRAO KALE",
+    "constituency": "JALNA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 39254291,
+    "utilizationPercentage": 26.70359931972789,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 42,
+    "completedWorksValue": 18358754,
+    "inProgressPayments": 20895537,
+    "paymentGapPercentage": 53.23121744830394,
+    "completionRate": 31.147540983606557,
+    "pendingWorks": 23,
+    "unspentAmount": 107745709,
+    "totalRecommendedAmount": 41650000,
+    "name_hi": "KALYAN VAIJINATHRAO KALE",
+    "constituency_hi": "JALNA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 39254291,
+      "totalEntries": 41,
+      "avgExpenditure": 957421.731707317,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15866145,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23388146,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 39254291,
+        "transactionCount": 41,
+        "avgAmount": 957421.731707317
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 42,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1deb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Strengthening of Apegaon to Nandar (Gondhal) Road VR-114 in Paithan Taluka.",
+        "completedDate": "2026-04-05T00:00:00.000Z",
+        "finalAmount": 999563
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcb0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road at Santoshimata Nagar of Ward No.82 Ambika Nagar in Chhatrapati Sambhajinagar municipal limits.",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 989809
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db1b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Strengthening of VR-86 from Pachod to Zodegaon in Paithan taluka.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 970505
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0a9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road at Waregaon in Phulambri taluka.",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d09e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Social Hall at Waregaon in Phulumbri Taluka.",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.436Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeaa",
+    "name": "KRISHNA DEVI SHIVSHANKER PATEL",
+    "constituency": "BANDA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75878699.67,
+    "utilizationPercentage": 51.61816304081632,
+    "completedWorksCount": 202,
+    "recommendedWorksCount": 240,
+    "completedWorksValue": 46541122.12,
+    "inProgressPayments": 29337577.550000004,
+    "paymentGapPercentage": 38.66378532788582,
+    "completionRate": 45.70135746606335,
+    "pendingWorks": 38,
+    "unspentAmount": 71121300.33,
+    "totalRecommendedAmount": 80066801,
+    "name_hi": "KRISHNA DEVI SHIVSHANKER PATEL",
+    "constituency_hi": "BANDA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75878699.67,
+      "totalEntries": 341,
+      "avgExpenditure": 222518.18085043988,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 11000754.120000001,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 39108387.55,
+        "transactionCount": 198
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25769558,
+        "transactionCount": 97
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75878699.67,
+        "transactionCount": 341,
+        "avgAmount": 222518.18085043988
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 202,
+    "recommendedCount": 240,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a187bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat patvan ke majra Gahabara Dera me kunwa ke paas sarwajanik sthan par high mast light sthapana karya",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 231930
+      },
+      {
+        "_id": "6a932bb5cd94452437a187bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchat Miyan Baroulee me Shree Sureshchandra Yadav ke makan ke paas sarwajanik sthan par solar high  mast light sthapna karya",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 121962
+      },
+      {
+        "_id": "6a932bb5cd94452437a187b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat Bhabhuwa me Mohan talab ke kinare bheete ke paas sarwajanik sthan par high mast light sthapana karya",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 231930
+      },
+      {
+        "_id": "6a932bb5cd94452437a187be",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat Rayan me Barat Ghar ke paas sarwajanik sthan par high mast light sthapana karya",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 231930
+      },
+      {
+        "_id": "6a932bb5cd94452437a18765",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat Bhitee me purane madarse ke paas sarwajanik sthan par high mast light sthapna karya",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 231930
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.449Z"
+}

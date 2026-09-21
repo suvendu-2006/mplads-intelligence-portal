@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfac",
+    "name": "Thalikkottai Rajuthevar Baalu",
+    "constituency": "SRIPERUMBUDUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 196905535.11,
+    "totalExpenditure": 71998395,
+    "utilizationPercentage": 36.56494214841577,
+    "completedWorksCount": 63,
+    "recommendedWorksCount": 63,
+    "completedWorksValue": 51067019,
+    "inProgressPayments": 20931376,
+    "paymentGapPercentage": 29.07200361896956,
+    "completionRate": 50,
+    "pendingWorks": 0,
+    "unspentAmount": 124907140.11000001,
+    "totalRecommendedAmount": 89357900,
+    "name_hi": "Thalikkottai Rajuthevar Baalu",
+    "constituency_hi": "SRIPERUMBUDUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71998395,
+      "totalEntries": 90,
+      "avgExpenditure": 799982.1666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 24979630,
+        "transactionCount": 26
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 47018765,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71998395,
+        "transactionCount": 90,
+        "avgAmount": 799982.1666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 63,
+    "recommendedCount": 63,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e533",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1 Nos Mini Highmast Light.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 518062
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e581",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1 Nos. Mini Highmast Light.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 399300
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e518",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1 Nos. Mini Highmast Light.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 399300
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e503",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1 Nos of Mini Highmast Light.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 424635
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1 Nos of Mini Highmast Light.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 424635
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.272Z"
+}

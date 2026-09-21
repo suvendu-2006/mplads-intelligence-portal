@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf0c",
+    "name": "RACHNA BANERJEE",
+    "constituency": "HOOGHLY",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 34234471,
+    "utilizationPercentage": 23.288755782312926,
+    "completedWorksCount": 36,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 14998488,
+    "inProgressPayments": 19235983,
+    "paymentGapPercentage": 56.18893015755961,
+    "completionRate": 34.61538461538461,
+    "pendingWorks": 32,
+    "unspentAmount": 112765529,
+    "totalRecommendedAmount": 83394407.44,
+    "name_hi": "RACHNA BANERJEE",
+    "constituency_hi": "HOOGHLY",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34234471,
+      "totalEntries": 54,
+      "avgExpenditure": 633971.6851851852,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16201221,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18033250,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34234471,
+        "transactionCount": 54,
+        "avgAmount": 633971.6851851852
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 36,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e931",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of 12.5 mtr and 1200 watt LED based electric high mast lighting system with complete set.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 283857
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6c7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of 12.5mtr and 1200 watt LED based electric high mast lighting system with complete set.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 283857
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of 12.5mtr and 1200 watt LED based electric high mast lighting system with complete set.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 283857
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d861",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road.",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 249979
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a298",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase Mahindra Neo+ Bolero Ac Ambulance at Gurap Police station",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 1395000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:24:37.272Z"
+}

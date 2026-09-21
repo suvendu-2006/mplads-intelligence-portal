@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede36",
+    "name": "DR C N MANJUNATH",
+    "constituency": "BANGALORE RURAL",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58047695,
+    "utilizationPercentage": 39.48822789115646,
+    "completedWorksCount": 64,
+    "recommendedWorksCount": 170,
+    "completedWorksValue": 30171271,
+    "inProgressPayments": 27876424,
+    "paymentGapPercentage": 48.023309108139436,
+    "completionRate": 27.350427350427353,
+    "pendingWorks": 106,
+    "unspentAmount": 88952305,
+    "totalRecommendedAmount": 80716000,
+    "name_hi": "DR C N MANJUNATH",
+    "constituency_hi": "BANGALORE RURAL",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58047695,
+      "totalEntries": 187,
+      "avgExpenditure": 310415.48128342244,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34725121,
+        "transactionCount": 113
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23322574,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58047695,
+        "transactionCount": 187,
+        "avgAmount": 310415.48128342244
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 64,
+    "recommendedCount": 170,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c620",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C road From the House of Sri. Kalayya To the House of Sri.Kurubarahalli Thimmana at Ramapura Janatha Colony, Tungani Grama panchayath, Kanakapura Taluk, Ramanagara District, Karnataka State.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 375000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e962",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community Hall at Bolamaranahalli Village, Anegola Grama Panchayath, Kikkeri Hobli, Krishnarajpet Taluk, Mandya District, Karnataka State.",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 490000
+      },
+      {
+        "_id": "6a932bb5cd94452437a17570",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New Building of Milk Producers Co-operative Society at Kodiyala Karenahalli, Byramangala Grama Panchayath, Bidadi Hobli, Ramanagara Taluk & District, Karnataka State.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19786",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New Building for Hujenahalli Milk Producers Co-operative Society Ltd.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e32f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C. Road and  drainage system at S.C Colony from the house Sri. Chandrappa to Sri. Ambarish In Sarjapura Village, Anekal Taluk, Bangalore Urban District, Karnataka State",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 299142
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.236Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede2b",
+    "name": "Devusinh Jesingbhai Chauhan",
+    "constituency": "KHEDA",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 54783374,
+    "utilizationPercentage": 37.26760136054422,
+    "completedWorksCount": 247,
+    "recommendedWorksCount": 341,
+    "completedWorksValue": 44304206,
+    "inProgressPayments": 10479168,
+    "paymentGapPercentage": 19.128372779668517,
+    "completionRate": 42.00680272108844,
+    "pendingWorks": 94,
+    "unspentAmount": 92216626,
+    "totalRecommendedAmount": 85410814,
+    "name_hi": "Devusinh Jesingbhai Chauhan",
+    "constituency_hi": "KHEDA",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54783374,
+      "totalEntries": 292,
+      "avgExpenditure": 187614.29452054793,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 21984311,
+        "transactionCount": 116
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32799063,
+        "transactionCount": 176
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54783374,
+        "transactionCount": 292,
+        "avgAmount": 187614.29452054793
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 247,
+    "recommendedCount": 341,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e88c",
+        "workCategory": "Normal/Others",
+        "workDescription": "C.C.Road Works Indiranagri Area towords navagam Village remaining Works",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 495000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e681",
+        "workCategory": "Normal/Others",
+        "workDescription": "Paver Block Work From Brahman Area towards Tulja Bhavani Temple",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e675",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dajipura Area, Paver Block work towards Jayeshbhai House",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e67f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tarvariya Area, Paver Block work towards Ishwarbhai Punambhai house",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e760",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C Road Work, Baliyadev Mandir towards Satishbhai House Area",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 196510
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.476Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede50",
+    "name": "DURAI VAIKO",
+    "constituency": "TIRUCHIRAPPALLI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 65218053,
+    "utilizationPercentage": 44.36602244897959,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 33,
+    "completedWorksValue": 44163117,
+    "inProgressPayments": 21054936,
+    "paymentGapPercentage": 32.28390764747301,
+    "completionRate": 57.692307692307686,
+    "pendingWorks": -12,
+    "unspentAmount": 81781947,
+    "totalRecommendedAmount": 49870000,
+    "name_hi": "DURAI VAIKO",
+    "constituency_hi": "TIRUCHIRAPPALLI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65218053,
+      "totalEntries": 57,
+      "avgExpenditure": 1144176.3684210526,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 21592756,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 43625297,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65218053,
+        "transactionCount": 57,
+        "avgAmount": 1144176.3684210526
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 33,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e951",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a PDS  shop at Tiruchirappalli Corporation Ward 44 Melakalkandarkottai Nagammai Veedhi visthiripiriyal (2025-2026 fund)",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1573823
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e219",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 30000 liter overhead water tank in Pallavarayanpathai village, Pallavarayanpathai panchayat, Karambakudi panchayat union, Pudukkottai district (2025-2026 fund)",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 1798024
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2df",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kunnandarkoil PU, Visalur VP, Sivagamipuram- Kalaiyarangam",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 699818
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e213",
+        "workCategory": "Normal/Others",
+        "workDescription": "PDS Shop construction at Puduviduthi Pt.",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 995139
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kunnandarkoil PU, T. Keelaiyur VP, Nachiyarpatti- Kalaiyarangam construction",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 699470
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.902Z"
+}

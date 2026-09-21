@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc0",
+    "name": "AKSHAYA YADAV",
+    "constituency": "FIROZABAD",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 95931875,
+    "utilizationPercentage": 65.25977891156462,
+    "completedWorksCount": 37,
+    "recommendedWorksCount": 6,
+    "completedWorksValue": 87311813,
+    "inProgressPayments": 8620062,
+    "paymentGapPercentage": 8.98560775550358,
+    "completionRate": 86.04651162790698,
+    "pendingWorks": -31,
+    "unspentAmount": 51068125,
+    "totalRecommendedAmount": 10297000,
+    "name_hi": "AKSHAYA YADAV",
+    "constituency_hi": "FIROZABAD",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95931875,
+      "totalEntries": 83,
+      "avgExpenditure": 1155805.7228915663,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 36566243,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 48886598,
+        "transactionCount": 42
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10479034,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95931875,
+        "transactionCount": 83,
+        "avgAmount": 1155805.7228915663
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 37,
+    "recommendedCount": 6,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1931a",
+        "workCategory": "Normal/Others",
+        "workDescription": "in ward no 52 mohalla deedamai Akram canteen to Shahjahan shop cc 200 meter and drainage",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 1895749
+      },
+      {
+        "_id": "6a932bb5cd94452437a1931f",
+        "workCategory": "Normal/Others",
+        "workDescription": "in ward 57 transfarmer by javed churri to taufeek house200 meter cc",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 1794433
+      },
+      {
+        "_id": "6a932bb5cd94452437a1931c",
+        "workCategory": "Normal/Others",
+        "workDescription": "mohalla husani rom Aroz house to Hansho bhai house cc and drainage 160 meter",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 1747395
+      },
+      {
+        "_id": "6a932bb5cd94452437a1931d",
+        "workCategory": "Normal/Others",
+        "workDescription": "in ward number 63 mohalla chapria Hasien bhai house to Jamalu bhai House cc and drainage 200 meter",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 2095479
+      },
+      {
+        "_id": "6a932bb5cd94452437a16733",
+        "workCategory": "Normal/Others",
+        "workDescription": "developement of interlocking road from bholebaba tample to rajender prasdhad house 110 meters  by 4 meters",
+        "completedDate": "2026-01-19T00:00:00.000Z",
+        "finalAmount": 1307559
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.844Z"
+}

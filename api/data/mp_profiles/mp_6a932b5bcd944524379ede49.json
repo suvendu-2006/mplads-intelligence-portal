@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede49",
+    "name": "DR. RAJ KUMAR CHABBEWAL",
+    "constituency": "HOSHIARPUR",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75344197,
+    "utilizationPercentage": 51.25455578231293,
+    "completedWorksCount": 93,
+    "recommendedWorksCount": 186,
+    "completedWorksValue": 33721626,
+    "inProgressPayments": 41622571,
+    "paymentGapPercentage": 55.24323392815508,
+    "completionRate": 33.33333333333333,
+    "pendingWorks": 93,
+    "unspentAmount": 71655803,
+    "totalRecommendedAmount": 78734587,
+    "name_hi": "DR. RAJ KUMAR CHABBEWAL",
+    "constituency_hi": "HOSHIARPUR",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75344197,
+      "totalEntries": 1255,
+      "avgExpenditure": 60035.216733067726,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 500000,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 37827547,
+        "transactionCount": 540
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37016650,
+        "transactionCount": 694
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75344197,
+        "transactionCount": 1255,
+        "avgAmount": 60035.216733067726
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 93,
+    "recommendedCount": 186,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d256",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street Lights in Patti Bai  ( Work executed through Xen Mandi Board )",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 233080
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e21e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Lights in Patti Lohiwal ( Work executed through Xen Mandi Board )",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 233080
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ccb5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of RCC Benches",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Flood Solar Street Lights 30 Watt and Panel 100 Watt",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 49059
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c432",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Vakmiki Dharamshalla",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:23:50.565Z"
+}

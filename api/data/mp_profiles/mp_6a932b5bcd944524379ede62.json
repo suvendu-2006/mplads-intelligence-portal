@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede62",
+    "name": "Giriraj Singh",
+    "constituency": "BEGUSARAI",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 32994877,
+    "utilizationPercentage": 22.445494557823128,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 50,
+    "completedWorksValue": 21896679,
+    "inProgressPayments": 11098198,
+    "paymentGapPercentage": 33.636124783856594,
+    "completionRate": 25.37313432835821,
+    "pendingWorks": 33,
+    "unspentAmount": 114005123,
+    "totalRecommendedAmount": 68570882,
+    "name_hi": "Giriraj Singh",
+    "constituency_hi": "BEGUSARAI",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32994877,
+      "totalEntries": 38,
+      "avgExpenditure": 868286.2368421053,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16937210,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16057667,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32994877,
+        "transactionCount": 38,
+        "avgAmount": 868286.2368421053
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 50,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dc55",
+        "workCategory": "Normal/Others",
+        "workDescription": "community hall ward no 3 rajkrit wani vilas sanskrit uchh Vidhyalay",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1390459
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c513",
+        "workCategory": "Normal/Others",
+        "workDescription": "2 classrooms in M.V. Bagwada- Pachamba-",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1389639
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of library in Government Middle School , Paparour in Paparour Panchayat Ward 02",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 1398390
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c857",
+        "workCategory": "Normal/Others",
+        "workDescription": "Matihani Milk Producers Co-operative Society Ltd. Construction of assembly hall on the upper floor of the building- Matihani",
+        "completedDate": "2026-01-17T00:00:00.000Z",
+        "finalAmount": 1390075
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a533",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of auditorium in basic school of Bajalpura Panchayat- Bajalpura",
+        "completedDate": "2026-01-13T00:00:00.000Z",
+        "finalAmount": 1389736
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.689Z"
+}

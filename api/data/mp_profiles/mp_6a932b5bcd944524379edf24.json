@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf24",
+    "name": "RAM PRASAD CHAUDHARY",
+    "constituency": "BASTI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 204176957.11,
+    "totalExpenditure": 148429426,
+    "utilizationPercentage": 72.69646296081976,
+    "completedWorksCount": 37,
+    "recommendedWorksCount": 146,
+    "completedWorksValue": 63914240,
+    "inProgressPayments": 84515186,
+    "paymentGapPercentage": 56.93964349090726,
+    "completionRate": 20.21857923497268,
+    "pendingWorks": 109,
+    "unspentAmount": 55747531.110000014,
+    "totalRecommendedAmount": 134157534,
+    "name_hi": "RAM PRASAD CHAUDHARY",
+    "constituency_hi": "BASTI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 148429426,
+      "totalEntries": 239,
+      "avgExpenditure": 621043.6234309623,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 87589750,
+        "transactionCount": 155
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 60839676,
+        "transactionCount": 84
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 148429426,
+        "transactionCount": 239,
+        "avgAmount": 621043.6234309623
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 37,
+    "recommendedCount": 146,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a189c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Under the MP Local Area Development Fund Scheme 2025-26, Patel Inter College Tenua Asanhara District Basti for construction of room, veranda.",
+        "completedDate": "2026-01-30T00:00:00.000Z",
+        "finalAmount": 2500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a043",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction work from Nayi Duniya Pitch Road to Brij Kishore Yadavs house in Village Panchayat Dharoli Pandey, distance about 130 meters, development block - Vikramjot",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 872020
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a044",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction work from Village Panchayat Damrua Jungle Pitch Road to Madhuban Yadavs house, distance approximately 210 meters, Development Block-Gaur",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1912780
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a046",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Medhaye Pitch Road in Gram Panchayat to Rajkumar Vermas house, distance approx 150 meters, Development Block- Vikramjot",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 996510
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a045",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction work from Village Panchayat Chitha Pitch Road to Rammilan Choudharys house, distance approximately 350 meters, Development Block-Gaur.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1973550
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.841Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd4",
+    "name": "Annpurna Devi ",
+    "constituency": "KODARMA",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 166665931.8,
+    "totalExpenditure": 42079828,
+    "utilizationPercentage": 25.24800812351742,
+    "completedWorksCount": 85,
+    "recommendedWorksCount": 303,
+    "completedWorksValue": 24734006,
+    "inProgressPayments": 17345822,
+    "paymentGapPercentage": 41.221228375743365,
+    "completionRate": 21.90721649484536,
+    "pendingWorks": 218,
+    "unspentAmount": 124586103.80000001,
+    "totalRecommendedAmount": 93036600,
+    "name_hi": "Annpurna Devi ",
+    "constituency_hi": "KODARMA",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 42079828,
+      "totalEntries": 146,
+      "avgExpenditure": 288218,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10489246,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31590582,
+        "transactionCount": 108
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 42079828,
+        "transactionCount": 146,
+        "avgAmount": 288218
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 85,
+    "recommendedCount": 303,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d41b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of paver block next to Sant Moni Baba Ashram Janakpur Temple located in village Nawadih of Nawadih Panchayat under Sariya block.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d837",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of paver block path from the well of former district council member to the main gate of PCC road in village Pokhariya of Panchayat Ballia under Birni block.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 247327
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e225",
+        "workCategory": "Trust and Society",
+        "workDescription": "Installation of 25 KVA Silent Generator set with 1500 RPM at Mandal Welfare Society Bhagwan Lal Saundik Dharamshala situated in ward no 07  sariya  nagar panchayat",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 539900
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d212",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of paver block road from Durga Mandap to Anil Singh house in village Pesham of Pesham Panchayat under Birni block.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 225000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1daa3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Zila Parishad road to cremation ground in village Kendua of Panchayat Kendua under Birni block.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 298955
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.863Z"
+}

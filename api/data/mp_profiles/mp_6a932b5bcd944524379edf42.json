@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf42",
+    "name": "SANJAY DINA PATIL",
+    "constituency": "MUMBAI NORTH EAST",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 5955517,
+    "utilizationPercentage": 4.0513721088435375,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 0,
+    "inProgressPayments": 5955517,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 40,
+    "unspentAmount": 141044483,
+    "totalRecommendedAmount": 87500000,
+    "name_hi": "SANJAY DINA PATIL",
+    "constituency_hi": "MUMBAI NORTH EAST",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5955517,
+      "totalEntries": 3,
+      "avgExpenditure": 1985172.3333333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 5955517,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5955517,
+        "transactionCount": 3,
+        "avgAmount": 1985172.3333333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 40,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.224Z"
+}

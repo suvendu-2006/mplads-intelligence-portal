@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3c",
+    "name": "S. Jagathrakshakan",
+    "constituency": "ARAKKONAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 180589332.34,
+    "totalExpenditure": 52167418,
+    "utilizationPercentage": 28.887319823400816,
+    "completedWorksCount": 34,
+    "recommendedWorksCount": 130,
+    "completedWorksValue": 36513077,
+    "inProgressPayments": 15654341,
+    "paymentGapPercentage": 30.007889215448614,
+    "completionRate": 20.73170731707317,
+    "pendingWorks": 96,
+    "unspentAmount": 128421914.34,
+    "totalRecommendedAmount": 112988000,
+    "name_hi": "S. Jagathrakshakan",
+    "constituency_hi": "ARAKKONAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 52167418,
+      "totalEntries": 54,
+      "avgExpenditure": 966063.2962962963,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1996264,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 20774078,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29397076,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 52167418,
+        "transactionCount": 54,
+        "avgAmount": 966063.2962962963
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 34,
+    "recommendedCount": 130,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e58a",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cement road and bridge near Erimannur village",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 3389297
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CCTV camera in Ward3,4 and 7",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 375000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of fair price shop in perur kaveripakkam",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 1650000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6be",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shed in Velithangipuram",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 844725
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cement Road in Meleri village",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 399580
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.223Z"
+}

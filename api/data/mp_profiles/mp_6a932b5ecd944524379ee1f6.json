@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f6",
+    "name": "Dr. Faiyaz Ahmad (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 235263957.11,
+    "totalExpenditure": 183753433,
+    "utilizationPercentage": 78.10522073046839,
+    "completedWorksCount": 132,
+    "recommendedWorksCount": 57,
+    "completedWorksValue": 147781746,
+    "inProgressPayments": 35971687,
+    "paymentGapPercentage": 19.576062559876092,
+    "completionRate": 69.84126984126983,
+    "pendingWorks": -75,
+    "unspentAmount": 51510524.110000014,
+    "totalRecommendedAmount": 75183100,
+    "name_hi": "Dr. Faiyaz Ahmad (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 183753433,
+      "totalEntries": 174,
+      "avgExpenditure": 1056054.212643678,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 37408875,
+        "transactionCount": 35
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 81151053,
+        "transactionCount": 83
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 65193505,
+        "transactionCount": 56
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 183753433,
+        "transactionCount": 174,
+        "avgAmount": 1056054.212643678
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 132,
+    "recommendedCount": 57,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bisfi Prakhand ke Singhiya Purvi ke gram Bhataura me Wasi Ahmad ke ghar se Mohammad Hannan ke ghar tak PCC Sadak Nirman.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 1394446
+      },
+      {
+        "_id": "6a932bb5cd94452437a324ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bisfi Prakhand ke Tisi Narsam Dakshni Panchayat ke gram Kathaila me Late Maulana Ibrar sahab ke ghar se Mukhye Sadak tak and Abdul Bari Sahab ke ghar se Masjid tak PCC Sadak Nirman.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 1172310
+      },
+      {
+        "_id": "6a932bb5cd94452437a31b41",
+        "workCategory": "Normal/Others",
+        "workDescription": "Madhubani jila ke bisfi prakhand ke madarsa nure rahman bengra banhi Dih me 2 room ke bhawan ka nirman",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 1270760
+      },
+      {
+        "_id": "6a932bb5cd94452437a323ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bisfi Prakhand ke Tisi Narsam Dakshini Panchayat ke Kathaila gown me Jayram Yadav ke ghar se Jasodhar Yadav ke Dukan tak PCC sadak nirman 400 fit",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 681275
+      },
+      {
+        "_id": "6a932bb5cd94452437a323ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bisfi Prakhand ke Parsauni Dakshni ke gram usrahi me Qari Faizuddin ke ghar se Madarsa jane wali sadak me 250 fit PCC nirman",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 598861
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.214Z"
+}

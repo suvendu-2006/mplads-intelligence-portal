@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfae",
+    "name": "THARANIVENTHAN M S",
+    "constituency": "ARANI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 168337124.35,
+    "totalExpenditure": 111315790,
+    "utilizationPercentage": 66.12670284693503,
+    "completedWorksCount": 180,
+    "recommendedWorksCount": 137,
+    "completedWorksValue": 91405416,
+    "inProgressPayments": 19910374,
+    "paymentGapPercentage": 17.886387905974523,
+    "completionRate": 56.782334384858046,
+    "pendingWorks": -43,
+    "unspentAmount": 57021334.349999994,
+    "totalRecommendedAmount": 74170000,
+    "name_hi": "THARANIVENTHAN M S",
+    "constituency_hi": "ARANI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 111315790,
+      "totalEntries": 214,
+      "avgExpenditure": 520167.2429906542,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 299880,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 76405942,
+        "transactionCount": 158
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34609968,
+        "transactionCount": 55
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 111315790,
+        "transactionCount": 214,
+        "avgAmount": 520167.2429906542
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 180,
+    "recommendedCount": 137,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e966",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Installation in Mini Mass Solar Light 9 Mt, 150W, Solar LED Light 6 No. at Devadanampettai Panchayat",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 549872
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca3d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Threshing Floor at Nallur panchayat in Thellar Block",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 399689
+      },
+      {
+        "_id": "6a932bb5cd94452437a185c5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Installation of Mini High Mass Light (9 Mt Height 100 W) 6 numbers at Konndayakuppam Panchayat Uthukulam near Murugar Temple",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a199dc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Installation in Mini Mass Light 9 Mt, 150W, LED Light 6 No. at Periyakuppam village in Thellar Block",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e612",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Multipurpose Building at Matam Panchayat",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 1997509
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.209Z"
+}

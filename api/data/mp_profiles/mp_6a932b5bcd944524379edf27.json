@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf27",
+    "name": "RAMASHANKAR RAJBHAR",
+    "constituency": "SALEMPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 160056927.07,
+    "totalExpenditure": 61281620,
+    "utilizationPercentage": 38.28739006915885,
+    "completedWorksCount": 84,
+    "recommendedWorksCount": 231,
+    "completedWorksValue": 34604339,
+    "inProgressPayments": 26677281,
+    "paymentGapPercentage": 43.53227117690427,
+    "completionRate": 26.666666666666668,
+    "pendingWorks": 147,
+    "unspentAmount": 98775307.07,
+    "totalRecommendedAmount": 119580000,
+    "name_hi": "RAMASHANKAR RAJBHAR",
+    "constituency_hi": "SALEMPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61281620,
+      "totalEntries": 263,
+      "avgExpenditure": 233009.96197718632,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 480000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 31916988,
+        "transactionCount": 122
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28884632,
+        "transactionCount": 140
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61281620,
+        "transactionCount": 263,
+        "avgAmount": 233009.96197718632
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 84,
+    "recommendedCount": 231,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b7fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC road from Tirkalpur mukhya marg to the house of Rakesh Pandey Development block Revati",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 693320
+      },
+      {
+        "_id": "6a932bb5cd94452437a192e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking work from Sen Road to Aftab Ahmed's house in development block Siar village Tendua",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 597657
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf10",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of interlocking from Vikas Khand Bansdih village Jitoura Patisa Musa Marg to Chandradeep Verma's house",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 597361
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development Block Bansdih Village Sarangpur RCC construction work from T S Bandha to Panchdev Verma's house",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 699671
+      },
+      {
+        "_id": "6a932bb5cd94452437a18b77",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kharanja work from Block Siar village Tirnai Khurd Ramanand Rajbhar's house to railway line",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 495148
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.704Z"
+}

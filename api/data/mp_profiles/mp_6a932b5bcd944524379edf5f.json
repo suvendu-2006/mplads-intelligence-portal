@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5f",
+    "name": "Shri  Dharambir Singh",
+    "constituency": "BHIWANI MAHENDRAGARH",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 64374998,
+    "utilizationPercentage": 43.7925156462585,
+    "completedWorksCount": 103,
+    "recommendedWorksCount": 107,
+    "completedWorksValue": 42542737,
+    "inProgressPayments": 21832261,
+    "paymentGapPercentage": 33.914192898305025,
+    "completionRate": 49.047619047619044,
+    "pendingWorks": 4,
+    "unspentAmount": 82625002,
+    "totalRecommendedAmount": 53152552,
+    "name_hi": "Shri  Dharambir Singh",
+    "constituency_hi": "BHIWANI MAHENDRAGARH",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 64374998,
+      "totalEntries": 185,
+      "avgExpenditure": 347972.9621621622,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 26579616,
+        "transactionCount": 74
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37795382,
+        "transactionCount": 111
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 64374998,
+        "transactionCount": 185,
+        "avgAmount": 347972.9621621622
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 103,
+    "recommendedCount": 107,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e62b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and fixing of Gym items in the Vyamshala of GP",
+        "completedDate": "2026-08-23T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ce23",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and fixing of gym items in the Park of Village Bass (GP Kanti)",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 286959
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Completion of pole for National Flag on GP land park",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 149357
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d88a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Kabddi Mats for GP",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 399885
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8ef",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and providing one water tanker to GP for drinking water purposes",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 180000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.690Z"
+}

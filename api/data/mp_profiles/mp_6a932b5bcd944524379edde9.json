@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde9",
+    "name": "AWADHESH PRASAD",
+    "constituency": "FAIZABAD",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 92097873,
+    "utilizationPercentage": 62.65161428571429,
+    "completedWorksCount": 108,
+    "recommendedWorksCount": 106,
+    "completedWorksValue": 81824252,
+    "inProgressPayments": 10273621,
+    "paymentGapPercentage": 11.15511212729093,
+    "completionRate": 50.467289719626166,
+    "pendingWorks": -2,
+    "unspentAmount": 54902127,
+    "totalRecommendedAmount": 55262061,
+    "name_hi": "AWADHESH PRASAD",
+    "constituency_hi": "FAIZABAD",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 92097873,
+      "totalEntries": 288,
+      "avgExpenditure": 319784.28125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 49752492,
+        "transactionCount": 152
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42345381,
+        "transactionCount": 136
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 92097873,
+        "transactionCount": 288,
+        "avgAmount": 319784.28125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 108,
+    "recommendedCount": 106,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e677",
+        "workCategory": "Normal/Others",
+        "workDescription": "khanpur me captan dr himanshu singh ke ghar ke pas light",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 242639
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e320",
+        "workCategory": "Normal/Others",
+        "workDescription": "deogao chaurahe per light",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 242639
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e678",
+        "workCategory": "Normal/Others",
+        "workDescription": "barwa basaitpur chauraha raju verma ki dukan per light",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 242639
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e67e",
+        "workCategory": "Normal/Others",
+        "workDescription": "deogao rajkiya nalkoop tirahe per light",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 242639
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e674",
+        "workCategory": "Normal/Others",
+        "workDescription": "jagdishpur me masjid ke pas light",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 242639
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.690Z"
+}

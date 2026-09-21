@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede80",
+    "name": "JITIN PRASADA",
+    "constituency": "PILIBHIT",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41842816,
+    "utilizationPercentage": 28.46450068027211,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 37,
+    "completedWorksValue": 7678364,
+    "inProgressPayments": 34164452,
+    "paymentGapPercentage": 81.64950466048938,
+    "completionRate": 37.28813559322034,
+    "pendingWorks": 15,
+    "unspentAmount": 105157184,
+    "totalRecommendedAmount": 73211600,
+    "name_hi": "JITIN PRASADA",
+    "constituency_hi": "PILIBHIT",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41842816,
+      "totalEntries": 106,
+      "avgExpenditure": 394743.5471698113,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1716235,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40126581,
+        "transactionCount": 84
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41842816,
+        "transactionCount": 106,
+        "avgAmount": 394743.5471698113
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 37,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ab95",
+        "workCategory": "Normal/Others",
+        "workDescription": "N/A",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 348986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ab9f",
+        "workCategory": "Normal/Others",
+        "workDescription": "N/A",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 348986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ab98",
+        "workCategory": "Normal/Others",
+        "workDescription": "N/A",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 348904
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ab97",
+        "workCategory": "Normal/Others",
+        "workDescription": "N/A",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 349090
+      },
+      {
+        "_id": "6a932bb5cd94452437a1abb7",
+        "workCategory": "Normal/Others",
+        "workDescription": "N/A",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 348502
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.219Z"
+}

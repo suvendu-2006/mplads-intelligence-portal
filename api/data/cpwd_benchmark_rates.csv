@@ -1,0 +1,16 @@
+category,work_type,standard_unit,standard_rate_inr,tolerance_pct_upper,source_schedule,rate_year
+Roads & Pathways,CC Road (M20 grade 3m width),per meter,3200,25,CPWD DSR 2023,2023
+Roads & Pathways,Paver Block / Interlocking Road,per sq. meter,950,20,CPWD DSR 2023,2023
+Drinking Water,Borewell with Submersible Pump & Pipe,per unit,180000,30,State Jal Nigam 2023,2023
+Drinking Water,RO Water Purification Plant (500 LPH),per plant,450000,25,CPWD DSR 2023,2023
+Drinking Water,Handpump Installation & Platform,per unit,75000,20,State Jal Nigam 2023,2023
+Sanitation & Public Health,Community Toilet Block (4 Seater),per block,550000,20,CPWD Plinth Rates 2023,2023
+Sanitation & Public Health,Individual / School Toilet Unit,per unit,65000,20,Swachh Bharat Norms,2023
+Electricity & Energy,Solar High-Mast Street Light (4x100W),per mast,280000,25,MNRE Benchmark 2023,2023
+Electricity & Energy,Solar Street Light with Battery,per pole,24000,20,MNRE Benchmark 2023,2023
+Education & Community,Community Hall / Sansad Bhavan (RCC),per sq. feet,1850,20,CPWD Plinth Rates 2023,2023
+Education & Community,Anganwadi Center Building (RCC),per building,1200000,20,CPWD Plinth Rates 2023,2023
+Education & Community,School Additional Classroom (RCC),per classroom,850000,20,CPWD Plinth Rates 2023,2023
+Irrigation & Flood Control,Check Dam / Water Harvesting Structure,per structure,650000,30,State Minor Irrigation,2023
+Health & Family Welfare,Mobile Medical Dispensary Van (Equipped),per vehicle,2800000,15,MoHFW Standard Rates,2023
+Repair and Renovation,Building Repair & Plastering/Painting,per sq. meter,350,30,CPWD DSR 2023,2023

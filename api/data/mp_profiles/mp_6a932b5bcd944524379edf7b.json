@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7b",
+    "name": "Shri Satish Kumar Gautam ",
+    "constituency": "ALIGARH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 87713538,
+    "utilizationPercentage": 59.669073469387754,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 24736769,
+    "inProgressPayments": 62976769,
+    "paymentGapPercentage": 71.79823142010302,
+    "completionRate": 27.631578947368425,
+    "pendingWorks": 34,
+    "unspentAmount": 59286462,
+    "totalRecommendedAmount": 73080000,
+    "name_hi": "Shri Satish Kumar Gautam ",
+    "constituency_hi": "ALIGARH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87713538,
+      "totalEntries": 127,
+      "avgExpenditure": 690657.7795275591,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31698660,
+        "transactionCount": 47
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 56014878,
+        "transactionCount": 80
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87713538,
+        "transactionCount": 127,
+        "avgAmount": 690657.7795275591
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b688",
+        "workCategory": "Normal/Others",
+        "workDescription": "S. No 26 Gram Singharpur me Keshav Sevadham me 55 Mt Interloking Nirman Karya or 90Mt Fensing Taar May Pol se kath",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 410967
+      },
+      {
+        "_id": "6a932bb5cd94452437a19acd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Govli me Ram Jajki Mandir se Gaav me Andar ki Taraf Interloking Nirman Karya Lambai 100 Mt.",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 729742
+      },
+      {
+        "_id": "6a932bb5cd94452437a19ad0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Narauna Akapur me Bhagwandas ke Ghar se Murarilal Lodhi ke Ghar Tak Interloking Nirman Karya Lambai 100 Mt.",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 662446
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b01c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Korah Raghupura me Balvir Chaudhary ke Makan se Charan Singh Chaudhary ke Makan Tak Interloking Nirman Karya Lambai  200 Mt.",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 2353971
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b01a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ramnagar me Harprasad ji ke Ghar se Panchyat ghar se Phatwari Mandir Tak Interloking Nirman Karya Lambai 80 Mt.",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 869507
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.239Z"
+}

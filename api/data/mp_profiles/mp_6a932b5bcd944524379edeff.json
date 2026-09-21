@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeff",
+    "name": "Prataprao Jadhav",
+    "constituency": "BULDHANA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 1208028,
+    "utilizationPercentage": 0.8217877551020408,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 0,
+    "inProgressPayments": 1208028,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 68,
+    "unspentAmount": 145791972,
+    "totalRecommendedAmount": 50050000,
+    "name_hi": "Prataprao Jadhav",
+    "constituency_hi": "BULDHANA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 1208028,
+      "totalEntries": 2,
+      "avgExpenditure": 604014,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 1208028,
+        "transactionCount": 2
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 1208028,
+        "transactionCount": 2,
+        "avgAmount": 604014
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 68,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:04.232Z"
+}

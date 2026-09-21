@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf75",
+    "name": "Shri M K Raghavan",
+    "constituency": "KOZHIKODE",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 9365325,
+    "utilizationPercentage": 6.3709693877551015,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 254,
+    "completedWorksValue": 5064335,
+    "inProgressPayments": 4300990,
+    "paymentGapPercentage": 45.924620875410085,
+    "completionRate": 5.223880597014925,
+    "pendingWorks": 240,
+    "unspentAmount": 137634675,
+    "totalRecommendedAmount": 89762050,
+    "name_hi": "Shri M K Raghavan",
+    "constituency_hi": "KOZHIKODE",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 9365325,
+      "totalEntries": 26,
+      "avgExpenditure": 360204.8076923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 9365325,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 9365325,
+        "transactionCount": 26,
+        "avgAmount": 360204.8076923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 254,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd3f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Karimbarukuzhi Edivettimmal Road",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 384403
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd3c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Kolikkal Thattancheri Road",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 438969
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd3a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Vattakkoru Kambikkunnu Malayil Road",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 339734
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd3b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Mullampoyil Kalathingal Road",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 326820
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd39",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and Renovation of Vellattukulam Ambalath Thazham Road",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 357809
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.666Z"
+}

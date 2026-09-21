@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ededf",
+    "name": "NARAYAN TATU RANE",
+    "constituency": "RATNAGIRI-SINDHUDURG",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 22993974,
+    "utilizationPercentage": 15.642159183673469,
+    "completedWorksCount": 25,
+    "recommendedWorksCount": 70,
+    "completedWorksValue": 17520224,
+    "inProgressPayments": 5473750,
+    "paymentGapPercentage": 23.805149992776368,
+    "completionRate": 26.31578947368421,
+    "pendingWorks": 45,
+    "unspentAmount": 124006026,
+    "totalRecommendedAmount": 67500000,
+    "name_hi": "NARAYAN TATU RANE",
+    "constituency_hi": "RATNAGIRI-SINDHUDURG",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 22993974,
+      "totalEntries": 39,
+      "avgExpenditure": 589589.0769230769,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1640236,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21353738,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 22993974,
+        "transactionCount": 39,
+        "avgAmount": 589589.0769230769
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 25,
+    "recommendedCount": 70,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e961",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of causeway at Pisekamte Bouddhavadi (Backward Class Work) FY 2024-25",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a918",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sewerage at Vagde Bauddhwadi Saipark Colony ( SC ) FY 2024-25",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 999686
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e82e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road extending from the Keravade Tarfe Mangaon Ghadiwadi main road, via Bhoiwadi and the Kuldevata Temple, up to Mandkuli  Keravade High School FY 2025-26",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 799728
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e403",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mouzhe Kaluste B. Mavalatwadi to water pond Pakhari FY 2024-25",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 488647
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Raipatan Takkewadi road gravelling and asphalting. Tal. Rajapur FY 2024-25",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.214Z"
+}

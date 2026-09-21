@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa6",
+    "name": "SURESH KUMAR SHETKAR",
+    "constituency": "ZAHIRABAD",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28674768,
+    "utilizationPercentage": 19.506644897959184,
+    "completedWorksCount": 64,
+    "recommendedWorksCount": 291,
+    "completedWorksValue": 12400782,
+    "inProgressPayments": 16273986,
+    "paymentGapPercentage": 56.75367975078299,
+    "completionRate": 18.028169014084508,
+    "pendingWorks": 227,
+    "unspentAmount": 118325232,
+    "totalRecommendedAmount": 88458654,
+    "name_hi": "SURESH KUMAR SHETKAR",
+    "constituency_hi": "ZAHIRABAD",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28674768,
+      "totalEntries": 121,
+      "avgExpenditure": 236981.55371900825,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5315913,
+        "transactionCount": 30
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23358855,
+        "transactionCount": 91
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28674768,
+        "transactionCount": 121,
+        "avgAmount": 236981.55371900825
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 64,
+    "recommendedCount": 291,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3ce",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction of 10 toilets girls in school at ZPHS Bichukunda village, Bihcukunda Mandal",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 649464
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall,Gangaputhrawada,Narva Village, Mohammed nagar,Jukkal MAndal",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 499664
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e17e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Extension of Community Hall,Munnurkapu Wada,Wajidnagar, Bichukonda MAndal",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 489213
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e136",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase three wheel scooter for Mr.Mamidi Praveen Kumar , son of Mamidi Sangaiah, H No.3-80, Gajwada Village, Regode MAndal",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 126851
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e137",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Tri scooter or Three wheeler Scooter for Mr.Chakali Betaiah, son of Chakali Durgaiah,, Kollapalle Village, Shankarampet A Mandal, Medak district",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 130165
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.683Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf36",
+    "name": "Rodmal Nagar ",
+    "constituency": "RAJGARH",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 92107905,
+    "utilizationPercentage": 62.658438775510206,
+    "completedWorksCount": 54,
+    "recommendedWorksCount": 301,
+    "completedWorksValue": 35993694,
+    "inProgressPayments": 56114211,
+    "paymentGapPercentage": 60.92225309000351,
+    "completionRate": 15.211267605633802,
+    "pendingWorks": 247,
+    "unspentAmount": 54892095,
+    "totalRecommendedAmount": 110254822,
+    "name_hi": "Rodmal Nagar ",
+    "constituency_hi": "RAJGARH",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 92107905,
+      "totalEntries": 265,
+      "avgExpenditure": 347577,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 11900000,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 47175276,
+        "transactionCount": 139
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33032629,
+        "transactionCount": 121
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 92107905,
+        "transactionCount": 265,
+        "avgAmount": 347577
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 54,
+    "recommendedCount": 301,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18a6c",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of community hall",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 474678
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bbda",
+        "workCategory": "Normal/Others",
+        "workDescription": "G.I. water tanker capacity 5000 liter with chiller and filter plant",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 480213
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bbd9",
+        "workCategory": "Normal/Others",
+        "workDescription": "G.I. water tanker capacity 5000 liter with chiller and filter plant",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 480213
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bbdc",
+        "workCategory": "Normal/Others",
+        "workDescription": "G.I. water tanker capacity 5000 liter with chiller and filter plant",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 480213
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bbdd",
+        "workCategory": "Normal/Others",
+        "workDescription": "G.I. water tanker capacity 5000 liter with chiller and filter plant",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 480213
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.683Z"
+}

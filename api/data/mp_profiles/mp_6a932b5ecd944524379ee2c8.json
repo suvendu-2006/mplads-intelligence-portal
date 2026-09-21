@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c8",
+    "name": "Smt. Rekha Sharma (2024-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Haryana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 14183077,
+    "utilizationPercentage": 14.47252755102041,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 144,
+    "completedWorksValue": 487913,
+    "inProgressPayments": 13695164,
+    "paymentGapPercentage": 96.55989317409755,
+    "completionRate": 0.6896551724137931,
+    "pendingWorks": 143,
+    "unspentAmount": 83816923,
+    "totalRecommendedAmount": 77941585,
+    "name_hi": "Smt. Rekha Sharma (2024-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14183077,
+      "totalEntries": 187,
+      "avgExpenditure": 75845.33155080213,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 972040,
+        "transactionCount": 30
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13211037,
+        "transactionCount": 157
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14183077,
+        "transactionCount": 187,
+        "avgAmount": 75845.33155080213
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 144,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f6e",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of retraining wall and road in thapli village",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 487913
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.467Z"
+}

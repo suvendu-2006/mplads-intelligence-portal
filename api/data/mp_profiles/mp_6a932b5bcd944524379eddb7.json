@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb7",
+    "name": "ADV GOWAAL KAGADA PADAVI",
+    "constituency": "NANDURBAR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147816309.11,
+    "totalExpenditure": 32041066,
+    "utilizationPercentage": 21.67627252562239,
+    "completedWorksCount": 189,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 32041066,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 67.74193548387096,
+    "pendingWorks": -99,
+    "unspentAmount": 115775243.11000001,
+    "totalRecommendedAmount": 56006000,
+    "name_hi": "ADV GOWAAL KAGADA PADAVI",
+    "constituency_hi": "NANDURBAR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 32041066,
+      "totalEntries": 189,
+      "avgExpenditure": 169529.44973544974,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 32041066,
+        "transactionCount": 189
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 32041066,
+        "transactionCount": 189,
+        "avgAmount": 169529.44973544974
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 189,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e903",
+        "workCategory": "Normal/Others",
+        "workDescription": "Install 2 set of solar street lights",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 169530
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Install 2 set of Street lights",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 169530
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e868",
+        "workCategory": "Normal/Others",
+        "workDescription": "Install 2 set of Street lights",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 169530
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e854",
+        "workCategory": "Normal/Others",
+        "workDescription": "Install 2 set of Street lights",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 169530
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e886",
+        "workCategory": "Normal/Others",
+        "workDescription": "Install 2 set of Street lights",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 169530
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.459Z"
+}

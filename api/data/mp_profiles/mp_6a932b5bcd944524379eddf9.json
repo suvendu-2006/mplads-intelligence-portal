@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf9",
+    "name": "BASTIPATI NAGARAJU PANCHALINGALA",
+    "constituency": "KURNOOL",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159998515.11,
+    "totalExpenditure": 44033277,
+    "utilizationPercentage": 27.521053535857405,
+    "completedWorksCount": 143,
+    "recommendedWorksCount": 65,
+    "completedWorksValue": 43534075,
+    "inProgressPayments": 499202,
+    "paymentGapPercentage": 1.133692593444726,
+    "completionRate": 68.75,
+    "pendingWorks": -78,
+    "unspentAmount": 115965238.11000001,
+    "totalRecommendedAmount": 38500000,
+    "name_hi": "BASTIPATI NAGARAJU PANCHALINGALA",
+    "constituency_hi": "KURNOOL",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44033277,
+      "totalEntries": 145,
+      "avgExpenditure": 303677.7724137931,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 39320058,
+        "transactionCount": 142
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4713219,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44033277,
+        "transactionCount": 145,
+        "avgAmount": 303677.7724137931
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 143,
+    "recommendedCount": 65,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d580",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional Amenities to IWH Boys Hostel, Kosigi, Kosigi Mandal, Mantralayam Constituency",
+        "completedDate": "2026-04-25T00:00:00.000Z",
+        "finalAmount": 489831
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb3f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing a new bus for Govt. Nursing College, Kurnool for transportation and field training.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 3724186
+      },
+      {
+        "_id": "6a932bb5cd94452437a1939a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of a new borewell for scheme source near Sachivalyam BC Colony of K. Nagalapuram (V)",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 199998
+      },
+      {
+        "_id": "6a932bb5cd94452437a19399",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of a new borewell for scheme source in Panchalinga (V)",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 199947
+      },
+      {
+        "_id": "6a932bb5cd94452437a193a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of a new borewell for scheme source near SC in Palukudoddi (V)",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 199939
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.224Z"
+}

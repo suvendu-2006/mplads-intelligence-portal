@@ -4,6 +4,7 @@ import gzip
 import json
 import logging
 import re
+from pathlib import Path
 from typing import Any, Dict, Optional
 
 from fastapi import APIRouter, Request, Response
@@ -67,6 +68,8 @@ def get_pcs_geojson(request: Request):
     global _CACHED_PCS_RAW, _CACHED_PCS_GZIP
     if _CACHED_PCS_RAW is None:
         for candidate in [
+            BASE_DIR / "api" / "data" / "pcs_enriched.geojson",
+            Path("/var/task/api/data/pcs_enriched.geojson"),
             BASE_DIR / "web" / "public" / "data" / "pcs_enriched.geojson",
             DATA_DIR / "pcs_enriched_optimized.geojson",
             DATA_DIR / "pcs_enriched.geojson",
@@ -93,6 +96,8 @@ def get_districts_geojson(request: Request):
     global _CACHED_DISTRICTS_RAW, _CACHED_DISTRICTS_GZIP
     if _CACHED_DISTRICTS_RAW is None:
         for candidate in [
+            BASE_DIR / "api" / "data" / "districts_enriched.geojson",
+            Path("/var/task/api/data/districts_enriched.geojson"),
             BASE_DIR / "web" / "public" / "data" / "districts_enriched.geojson",
             DATA_DIR / "districts_enriched_optimized.geojson",
             DATA_DIR / "districts_enriched.geojson",

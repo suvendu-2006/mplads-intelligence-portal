@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede34",
+    "name": "DINESHBHAI MAKWANA",
+    "constituency": "AHMEDABAD WEST",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 160434965.11,
+    "totalExpenditure": 25122452,
+    "utilizationPercentage": 15.658963108680915,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 205,
+    "completedWorksValue": 8122452,
+    "inProgressPayments": 17000000,
+    "paymentGapPercentage": 67.6685540089797,
+    "completionRate": 0.966183574879227,
+    "pendingWorks": 203,
+    "unspentAmount": 135312513.11,
+    "totalRecommendedAmount": 81689955,
+    "name_hi": "DINESHBHAI MAKWANA",
+    "constituency_hi": "AHMEDABAD WEST",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25122452,
+      "totalEntries": 4,
+      "avgExpenditure": 6280613,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8000000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17122452,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25122452,
+        "transactionCount": 4,
+        "avgAmount": 6280613
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 205,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e0d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bodakdev Ward Walinath nagar Section-1, R-3 Near Mall\n1). Ishwarlal's Chali, 2). Jagdishbhai Kalyanbhai's Chali and 3). Dharamsingh bhai's Chali Paver block work",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 122452
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b66e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Advanced  Phacoemulsification Machine 1 Nose M J Western Regional Institute of ophthalmology",
+        "completedDate": "2025-11-25T00:00:00.000Z",
+        "finalAmount": 8000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.907Z"
+}

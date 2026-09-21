@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee268",
+    "name": "Shri Mukul Wasnik (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Rajasthan",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 113851736.01,
+    "utilizationPercentage": 58.06867192123663,
+    "completedWorksCount": 94,
+    "recommendedWorksCount": 79,
+    "completedWorksValue": 74795735,
+    "inProgressPayments": 39056001.010000005,
+    "paymentGapPercentage": 34.30426480854853,
+    "completionRate": 54.33526011560693,
+    "pendingWorks": -15,
+    "unspentAmount": 82212221.10000001,
+    "totalRecommendedAmount": 89617988,
+    "name_hi": "Shri Mukul Wasnik (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 113851736.01,
+      "totalEntries": 453,
+      "avgExpenditure": 251328.3355629139,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 2049774.01,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 25790818,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 49176013,
+        "transactionCount": 229
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36835131,
+        "transactionCount": 183
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 113851736.01,
+        "transactionCount": 453,
+        "avgAmount": 251328.3355629139
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 94,
+    "recommendedCount": 79,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a315a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Centre (Samudayik Bhawan - Nichla Mohalla) Kitchen Shed and Interlocking works at Gram Panchayat Meloosar, PS Ratangarh, Dist Churu",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 972905
+      },
+      {
+        "_id": "6a932bb5cd94452437a30bb0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Interlocking Kharanja Road from the house of Jaynarayan Balai to Satveer's house in Gram Panchayat Dayal Ki Nangal, P.S. & Dist. Neem ka Thana",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 637113
+      },
+      {
+        "_id": "6a932bb5cd94452437a31b1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Tin Shed and other development works in the playground of Govt Higher Secondary School Patoda Village and Gran Panchayat Patoda PS Lachhmangarh Dist Sikar",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 1499999
+      },
+      {
+        "_id": "6a932bb5cd94452437a32277",
+        "workCategory": "Normal/Others",
+        "workDescription": "Leveling and Boundary Wall of Sports Ground and construction of Track in Shaheed Subedar Nihal Singh Govt. Higher Secondary School, Nooniya Gothra, P.S. Chirawa, Dist. Jhunjhunu",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 1476538
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Single Phase Tube-wells with its accessories near Community Centre, Nawad, Gram Panchayat Dhananwa, P.S. Makrana, Dist. Didwana Kuchaman, Nagaur",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 496592
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.683Z"
+}

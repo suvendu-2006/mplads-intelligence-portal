@@ -1,0 +1,40 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a8",
+    "name": "Shri Shivesh Kumar (2026-32)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 49000000,
+    "totalExpenditure": 0,
+    "utilizationPercentage": 0,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 0,
+    "completedWorksValue": 0,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 0,
+    "pendingWorks": 0,
+    "unspentAmount": 49000000,
+    "totalRecommendedAmount": 0,
+    "name_hi": "Shri Shivesh Kumar (2026-32)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "totalExpenditure": 0,
+      "totalEntries": 0,
+      "avgExpenditure": 0,
+      "categories": []
+    },
+    "yearlyTrend": [],
+    "categoryBreakdown": []
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 0,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:06.234Z"
+}

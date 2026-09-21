@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ededd",
+    "name": "NALIN SOREN",
+    "constituency": "DUMKA",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147364097.11,
+    "totalExpenditure": 86550781,
+    "utilizationPercentage": 58.73261038297145,
+    "completedWorksCount": 106,
+    "recommendedWorksCount": 319,
+    "completedWorksValue": 30263976,
+    "inProgressPayments": 56286805,
+    "paymentGapPercentage": 65.03327220120636,
+    "completionRate": 24.941176470588236,
+    "pendingWorks": 213,
+    "unspentAmount": 60813316.110000014,
+    "totalRecommendedAmount": 110900000,
+    "name_hi": "NALIN SOREN",
+    "constituency_hi": "DUMKA",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86550781,
+      "totalEntries": 289,
+      "avgExpenditure": 299483.67128027685,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 48213634,
+        "transactionCount": 158
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38337147,
+        "transactionCount": 131
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86550781,
+        "transactionCount": 289,
+        "avgAmount": 299483.67128027685
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 106,
+    "recommendedCount": 319,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1aebf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road in Village- Arajori from Ram Prasad House to Sidhni Pond, Panchayat- Bochbandh",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aebd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road in Village- Tetriya Main Road to Rohit Rai House, Panchayat- Bochbandh",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 299996
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aeb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road in Village- Samlapur main road to Silphari Aadiwasi Tola, Panchayat- Bashatanr",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aeb5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road in Village- Sagrajore School Tola to Vishwanath House, Panchayat- Sagrajore",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 299934
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aec1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road in Village- Sagrajore Iftaq House to Haripara, Panchayat- Sagrajore",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.222Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3c",
+    "name": "DR RAJKUMAR SANGWAN",
+    "constituency": "BAGHPAT",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 36662976,
+    "utilizationPercentage": 24.9408,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 103,
+    "completedWorksValue": 10927859,
+    "inProgressPayments": 25735117,
+    "paymentGapPercentage": 70.19374804707616,
+    "completionRate": 13.445378151260504,
+    "pendingWorks": 87,
+    "unspentAmount": 110337024,
+    "totalRecommendedAmount": 77236924,
+    "name_hi": "DR RAJKUMAR SANGWAN",
+    "constituency_hi": "BAGHPAT",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36662976,
+      "totalEntries": 78,
+      "avgExpenditure": 470038.1538461539,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7854108,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28808868,
+        "transactionCount": 64
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36662976,
+        "transactionCount": 78,
+        "avgAmount": 470038.1538461539
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 103,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e538",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of interlocking tiles road from chaman singh tyagi house to isswarchand house village didauli , length-125 meter",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 915507
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bcb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of khandnja from ompal field to rampal tubewell village dhikana , length-135 meter",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 229645
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b910",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of Interlocking road from the house pappu to the house of rakesh in village of pilana ,distance-126meter",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 706234
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bcca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of Interlocking road from the Lakhichand market to the Amul Milk factory in village of ahera ,Distance-150 meter",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 403057
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bcbb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of interlocking tiles main road to johnny shop village Basetikri, length-130meter",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 659392
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.655Z"
+}

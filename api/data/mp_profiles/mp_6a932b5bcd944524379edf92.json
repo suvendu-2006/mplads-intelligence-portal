@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf92",
+    "name": "Smt Sajda Ahmed",
+    "constituency": "ULUBERIA",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47212277,
+    "utilizationPercentage": 32.117195238095235,
+    "completedWorksCount": 91,
+    "recommendedWorksCount": 88,
+    "completedWorksValue": 44780219,
+    "inProgressPayments": 2432058,
+    "paymentGapPercentage": 5.151325363951415,
+    "completionRate": 50.83798882681564,
+    "pendingWorks": -3,
+    "unspentAmount": 99787723,
+    "totalRecommendedAmount": 52420000,
+    "name_hi": "Smt Sajda Ahmed",
+    "constituency_hi": "ULUBERIA",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47212277,
+      "totalEntries": 111,
+      "avgExpenditure": 425335.8288288288,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 129039,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 25809870,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21273368,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47212277,
+        "transactionCount": 111,
+        "avgAmount": 425335.8288288288
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 91,
+    "recommendedCount": 88,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e838",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of new Chulli at Asariya Samsan in Asharia Village",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 349642
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ba9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of building of Halyan Gram Panchayat office at Basudevpur Mouza under Bagnan II Block",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e836",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Highmast Light near Santoshpur Mohammad para Jamemasjid",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 199892
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e77b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of Graveyard near Fazel house in the village of Uttar Benapur",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 149279
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e774",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of roof of Rabibhag Board Free Pry. School",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 396281
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.216Z"
+}

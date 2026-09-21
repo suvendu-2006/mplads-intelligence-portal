@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede13",
+    "name": "CHAMALA KIRAN KUMAR REDDY",
+    "constituency": "BHONGIR",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 62689273,
+    "utilizationPercentage": 42.64576394557823,
+    "completedWorksCount": 417,
+    "recommendedWorksCount": 71,
+    "completedWorksValue": 57532244,
+    "inProgressPayments": 5157029,
+    "paymentGapPercentage": 8.226334033256375,
+    "completionRate": 85.45081967213115,
+    "pendingWorks": -346,
+    "unspentAmount": 84310727,
+    "totalRecommendedAmount": 30684000,
+    "name_hi": "CHAMALA KIRAN KUMAR REDDY",
+    "constituency_hi": "BHONGIR",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62689273,
+      "totalEntries": 434,
+      "avgExpenditure": 144445.32949308757,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 52208895,
+        "transactionCount": 402
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10480378,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62689273,
+        "transactionCount": 434,
+        "avgAmount": 144445.32949308757
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 417,
+    "recommendedCount": 71,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e2d4",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Civil works in ZPHS PERKAKONDARAM VILLAGE",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Infrastrucuture Facilities Furniture ZPHS PERKAKONDARAM",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 199064
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ashoor khana at Pallerla Village of Athmakur( M) Mandal",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 398221
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df04",
+        "workCategory": "Normal/Others",
+        "workDescription": "Balance work construction of BC YADAV  COMMUNITY HALL AT SIDDAPURAM  Village of Athmakur( M) Mandal",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 499251
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbd8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of 30W LED Street Lights",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 497939
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.433Z"
+}

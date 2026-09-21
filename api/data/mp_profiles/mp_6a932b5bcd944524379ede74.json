@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede74",
+    "name": "JAGADISH CHANDRA BARMA BASUNIA",
+    "constituency": "COOCHBEHAR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 168604641.11,
+    "totalExpenditure": 36689865,
+    "utilizationPercentage": 21.760886745734965,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 4898435,
+    "inProgressPayments": 31791430,
+    "paymentGapPercentage": 86.64907870334218,
+    "completionRate": 1.0309278350515463,
+    "pendingWorks": 95,
+    "unspentAmount": 131914776.11000001,
+    "totalRecommendedAmount": 119458523,
+    "name_hi": "JAGADISH CHANDRA BARMA BASUNIA",
+    "constituency_hi": "COOCHBEHAR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36689865,
+      "totalEntries": 41,
+      "avgExpenditure": 894874.756097561,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 36689865,
+        "transactionCount": 41
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36689865,
+        "transactionCount": 41,
+        "avgAmount": 894874.756097561
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bbe4",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction for Strengthening and retrofitting structural works including other allied works of Cooch Behar Bhawan 3rd Floor at Ward No.31 of Bidhannagar Municipality Sector 1 Bidhannagar Kolkata West Bengal 700064",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 4898435
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.440Z"
+}

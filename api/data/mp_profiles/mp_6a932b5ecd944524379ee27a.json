@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee27a",
+    "name": "Shri Praful Patel (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 25340576,
+    "utilizationPercentage": 17.23848707482993,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 95,
+    "completedWorksValue": 15664898,
+    "inProgressPayments": 9675678,
+    "paymentGapPercentage": 38.18254959950397,
+    "completionRate": 18.803418803418804,
+    "pendingWorks": 73,
+    "unspentAmount": 121659424,
+    "totalRecommendedAmount": 64852944,
+    "name_hi": "Shri Praful Patel (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 25340576,
+      "totalEntries": 37,
+      "avgExpenditure": 684880.4324324324,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7755466,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17585110,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 25340576,
+        "transactionCount": 37,
+        "avgAmount": 684880.4324324324
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 95,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32289",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gondia City ke Ward No. 1 Vijay Nagar, Ward No. 13 Suryatola and Ward No. 4 Mangruji Fendar Ward me Street Ellectric Light",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 613944
+      },
+      {
+        "_id": "6a932bb5cd94452437a32134",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kesalwada (Wagh )me arogya kendra ke pass ls samshan bhoomi ki or jane wale raste par cement road nirma",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 989802
+      },
+      {
+        "_id": "6a932bb5cd94452437a321e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Mundipar Khurd, Ta. Dist. Gondia ward No. 2 me Chhabilal Gautam ke niwas ke pass Community Hall",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 495592
+      },
+      {
+        "_id": "6a932bb5cd94452437a32175",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chirchalbandh me uma maorya se ramesh bramhankar ke niwas tak cement road nirman",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 499999
+      },
+      {
+        "_id": "6a932bb5cd94452437a3214e",
+        "workCategory": "Normal/Others",
+        "workDescription": "DIGHORI MOTHI ME HIRAMAN AWACHAT SE MANOHAR KARANJEKAR KE DUKAN TAK CEMENT ROAD NIRMAN",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 998794
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.713Z"
+}

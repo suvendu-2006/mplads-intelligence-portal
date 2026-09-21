@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf22",
+    "name": "RAKESH RATHOR",
+    "constituency": "SITAPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 91524162,
+    "utilizationPercentage": 62.261334693877544,
+    "completedWorksCount": 21,
+    "recommendedWorksCount": 50,
+    "completedWorksValue": 32047044,
+    "inProgressPayments": 59477118,
+    "paymentGapPercentage": 64.985154412012,
+    "completionRate": 29.577464788732392,
+    "pendingWorks": 29,
+    "unspentAmount": 55475838,
+    "totalRecommendedAmount": 106852496,
+    "name_hi": "RAKESH RATHOR",
+    "constituency_hi": "SITAPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91524162,
+      "totalEntries": 105,
+      "avgExpenditure": 871658.6857142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 70063938,
+        "transactionCount": 65
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21460224,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91524162,
+        "transactionCount": 105,
+        "avgAmount": 871658.6857142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 21,
+    "recommendedCount": 50,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a177f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM HABIBPUR MAI SURENDRA RATHORE K MAKAN SE VINOD BAJPEI K MAKAN TAK 135 METER INTERLOCKIN WA NALI NIRMAN KARYA.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1514227
+      },
+      {
+        "_id": "6a932bb5cd94452437a177e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gudruwa Deoria me guddu ke maakan tak 120M CC road nirman karya.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1588649
+      },
+      {
+        "_id": "6a932bb5cd94452437a174c7",
+        "workCategory": "Normal/Others",
+        "workDescription": "HUMAYUNPUR MAI BRAJKISHOR K MAKAN SE SUBHASH MISRA K MAKAN TAK 105 METER CC WA NALI NIRMAN KARYA.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 995754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1744f",
+        "workCategory": "Normal/Others",
+        "workDescription": "KARIYAMAU K PIPRI MAI AASHARAM K MAKAN SE DURJANLAL K MAKAN TAK 151.50 METER INTERLOCKIN WA NALI NIRMAN KARYA.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1795952
+      },
+      {
+        "_id": "6a932bb5cd94452437a17557",
+        "workCategory": "Normal/Others",
+        "workDescription": "NAGARPALIKA SITAPUR WARD NO 20 MAI RAIFAL CLUB K PASS TARANTAL GET SE HABIB ASHRAF MASZID K PASS TAK 105 METER CC NIRMAN KARYA.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 1243818
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.245Z"
+}

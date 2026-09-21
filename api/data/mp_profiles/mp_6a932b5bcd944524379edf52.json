@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf52",
+    "name": "SELVAGANAPATHI T M",
+    "constituency": "SALEM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 4244214,
+    "utilizationPercentage": 2.8872204081632655,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 17,
+    "completedWorksValue": 0,
+    "inProgressPayments": 4244214,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 17,
+    "unspentAmount": 142755786,
+    "totalRecommendedAmount": 35380025.5,
+    "name_hi": "SELVAGANAPATHI T M",
+    "constituency_hi": "SALEM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 4244214,
+      "totalEntries": 2,
+      "avgExpenditure": 2122107,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 4244214,
+        "transactionCount": 2
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 4244214,
+        "transactionCount": 2,
+        "avgAmount": 2122107
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 17,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:02.899Z"
+}

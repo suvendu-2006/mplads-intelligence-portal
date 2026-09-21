@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf5b",
+    "name": "SHIVRAJ SINGH CHOUHAN",
+    "constituency": "VIDISHA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 38851625,
+    "utilizationPercentage": 26.4296768707483,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 97,
+    "completedWorksValue": 6443125,
+    "inProgressPayments": 32408500,
+    "paymentGapPercentage": 83.4160733302661,
+    "completionRate": 9.345794392523365,
+    "pendingWorks": 87,
+    "unspentAmount": 108148375,
+    "totalRecommendedAmount": 56000000,
+    "name_hi": "SHIVRAJ SINGH CHOUHAN",
+    "constituency_hi": "VIDISHA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38851625,
+      "totalEntries": 128,
+      "avgExpenditure": 303528.3203125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27580125,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11271500,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38851625,
+        "transactionCount": 128,
+        "avgAmount": 303528.3203125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 97,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a185ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd18",
+        "workCategory": "Normal/Others",
+        "workDescription": "work sheds",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18f59",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a185e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "ccroad",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 445000
+      },
+      {
+        "_id": "6a932bb5cd94452437a185ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "cc road",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.433Z"
+}

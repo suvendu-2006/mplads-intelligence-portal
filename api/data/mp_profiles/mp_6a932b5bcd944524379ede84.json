@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede84",
+    "name": "JYOTIRADITYA M. SCINDIA",
+    "constituency": "GUNA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 55870850,
+    "utilizationPercentage": 38.007380952380956,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 18,
+    "completedWorksValue": 44664197,
+    "inProgressPayments": 11206653,
+    "paymentGapPercentage": 20.05813944122919,
+    "completionRate": 71.42857142857143,
+    "pendingWorks": -27,
+    "unspentAmount": 91129150,
+    "totalRecommendedAmount": 45205000,
+    "name_hi": "JYOTIRADITYA M. SCINDIA",
+    "constituency_hi": "GUNA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55870850,
+      "totalEntries": 99,
+      "avgExpenditure": 564352.0202020202,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 44338170,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11532680,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55870850,
+        "transactionCount": 99,
+        "avgAmount": 564352.0202020202
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 18,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a198bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 996291
+      },
+      {
+        "_id": "6a932bb5cd94452437a198bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road Construction",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 994899
+      },
+      {
+        "_id": "6a932bb5cd94452437a188db",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction",
+        "completedDate": "2026-08-16T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1896f",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road construction",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 997937
+      },
+      {
+        "_id": "6a932bb5cd94452437a18969",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.717Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef7",
+    "name": "Pradan Baruah",
+    "constituency": "LAKHIMPUR",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 56538627,
+    "utilizationPercentage": 38.46165102040816,
+    "completedWorksCount": 33,
+    "recommendedWorksCount": 115,
+    "completedWorksValue": 16715001,
+    "inProgressPayments": 39823626,
+    "paymentGapPercentage": 70.43613917260495,
+    "completionRate": 22.2972972972973,
+    "pendingWorks": 82,
+    "unspentAmount": 90461373,
+    "totalRecommendedAmount": 63299800,
+    "name_hi": "Pradan Baruah",
+    "constituency_hi": "LAKHIMPUR",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 56538627,
+      "totalEntries": 175,
+      "avgExpenditure": 323077.8685714286,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31371296,
+        "transactionCount": 102
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25167331,
+        "transactionCount": 73
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 56538627,
+        "transactionCount": 175,
+        "avgAmount": 323077.8685714286
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 33,
+    "recommendedCount": 115,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd57",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of community hall near Garmarah Bhakati Roshan Prathamik Hakha Namghar, Sissiborgaon LAC under MPLADS, FY 2025-26",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 297000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d925",
+        "workCategory": "Normal/Others",
+        "workDescription": "Infrastructure Development of Sissiborgaon MV School, Sissiborgaon LAC under MPLADS, FY 2025-26",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Infrastructure Development of Sankardev Sishu Niketan, Sripani, Sissiborgaon LAC under MPLADS, 2025-26",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 499940
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7de",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of community hall near Kharagarh Namghar, Sissiborgaon LAC",
+        "completedDate": "2026-03-11T00:00:00.000Z",
+        "finalAmount": 299994
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d553",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of community hall near Simoluguri Jengrai Murangghar, Sissiborgaon LAC",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.924Z"
+}

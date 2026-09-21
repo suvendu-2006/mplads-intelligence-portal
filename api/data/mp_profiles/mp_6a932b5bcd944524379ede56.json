@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede56",
+    "name": "ESWARASAMY K",
+    "constituency": "POLLACHI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 162315106.11,
+    "totalExpenditure": 59028493,
+    "utilizationPercentage": 36.36660469543527,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 44430894,
+    "inProgressPayments": 14597599,
+    "paymentGapPercentage": 24.72975042747576,
+    "completionRate": 57.49999999999999,
+    "pendingWorks": -12,
+    "unspentAmount": 103286613.11000001,
+    "totalRecommendedAmount": 48700000,
+    "name_hi": "ESWARASAMY K",
+    "constituency_hi": "POLLACHI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 59028493,
+      "totalEntries": 59,
+      "avgExpenditure": 1000482.9322033898,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 24230168,
+        "transactionCount": 30
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34798325,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 59028493,
+        "transactionCount": 59,
+        "avgAmount": 1000482.9322033898
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e826",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 60000 litre OHT at Solapalayam H/o. Solapalayam panchayat",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 1229625
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df27",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Passenger Shelter near Puthur madam Kovil at Ariyanachipalayam Village H.o Jothampatti Panchayat",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 998685
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da53",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing a Highmast Light near Municipality Vasavi nagar Park at Udumalpet Municipalaity",
+        "completedDate": "2026-03-27T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da00",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New Public Distribution Shop at Chinnapappanuth H.o Periya pappanuthu",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 999912
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d06f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of passenger shelter near Indhira nagar Juction shanmugaPiriya mill H.o Periyakottai",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 996349
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.276Z"
+}

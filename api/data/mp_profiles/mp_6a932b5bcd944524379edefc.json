@@ -1,0 +1,69 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edefc",
+    "name": "PRANITI SUSHILKUMAR SHINDE",
+    "constituency": "SOLAPUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 8440395,
+    "utilizationPercentage": 5.741765306122449,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 122,
+    "completedWorksValue": 1498751,
+    "inProgressPayments": 6941644,
+    "paymentGapPercentage": 82.24311776877741,
+    "completionRate": 1.6129032258064515,
+    "pendingWorks": 120,
+    "unspentAmount": 138559605,
+    "totalRecommendedAmount": 110531804,
+    "name_hi": "PRANITI SUSHILKUMAR SHINDE",
+    "constituency_hi": "SOLAPUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 8440395,
+      "totalEntries": 9,
+      "avgExpenditure": 937821.6666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 8440395,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 8440395,
+        "transactionCount": 9,
+        "avgAmount": 937821.6666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 122,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df30",
+        "workCategory": "Normal/Others",
+        "workDescription": "At Post Wadata North Solapur Shri Krishna Mandir somoril Gram Panchayat jage Madhya Sabha mandap bandhne",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d894",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Light in front of Khandoba Temple at Waluj Gaon in Mohol Taluka",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 498751
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.236Z"
+}

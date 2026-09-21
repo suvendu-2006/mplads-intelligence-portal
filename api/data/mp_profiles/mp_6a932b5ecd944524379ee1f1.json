@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f1",
+    "name": "Dr. Ashok Kumar Mittal (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 222487632.14,
+    "totalExpenditure": 41939879,
+    "utilizationPercentage": 18.850431638199737,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 32,
+    "completedWorksValue": 25534470,
+    "inProgressPayments": 16405409,
+    "paymentGapPercentage": 39.11649101324303,
+    "completionRate": 31.914893617021278,
+    "pendingWorks": 17,
+    "unspentAmount": 180547753.14,
+    "totalRecommendedAmount": 64005095,
+    "name_hi": "Dr. Ashok Kumar Mittal (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41939879,
+      "totalEntries": 240,
+      "avgExpenditure": 174749.49583333332,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27270671,
+        "transactionCount": 110
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14669208,
+        "transactionCount": 130
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41939879,
+        "transactionCount": 240,
+        "avgAmount": 174749.49583333332
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 32,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a319b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Procurement of water tankers, fogging machines and gensets for flood- affected villages of Amritsar",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 821800
+      },
+      {
+        "_id": "6a932bb5cd94452437a30ae1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from Reru Dogari road to jalandhar pathankot Road, District Jalandhar",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 1866057
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d2b",
+        "workCategory": "Trust and Society",
+        "workDescription": "construction of community hall in above mentioned NGO",
+        "completedDate": "2026-02-06T00:00:00.000Z",
+        "finalAmount": 997135
+      },
+      {
+        "_id": "6a932bb5cd94452437a315a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of Village Bhathe Dharamshala",
+        "completedDate": "2026-01-30T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e6c",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Construction work of Ravidas Dharamshala in Arya nagar",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 979000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.526Z"
+}

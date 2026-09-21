@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede21",
+    "name": "D Ravikumar ",
+    "constituency": "VILUPPURAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 197598306.11,
+    "totalExpenditure": 104427486,
+    "utilizationPercentage": 52.848371049226905,
+    "completedWorksCount": 222,
+    "recommendedWorksCount": 66,
+    "completedWorksValue": 102865450,
+    "inProgressPayments": 1562036,
+    "paymentGapPercentage": 1.4958092546630875,
+    "completionRate": 77.08333333333334,
+    "pendingWorks": -156,
+    "unspentAmount": 93170820.11000001,
+    "totalRecommendedAmount": 49110000,
+    "name_hi": "D Ravikumar ",
+    "constituency_hi": "VILUPPURAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 104427486,
+      "totalEntries": 229,
+      "avgExpenditure": 456015.22270742356,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 76084179,
+        "transactionCount": 183
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28343307,
+        "transactionCount": 46
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 104427486,
+        "transactionCount": 229,
+        "avgAmount": 456015.22270742356
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 222,
+    "recommendedCount": 66,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e5b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Drama Stage at Echchangkuppam village in Vikravandi Taluk",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 799706
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e439",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Drama stage at Muttaththur SC area",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 794188
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional Anganwadi at Srilankan refugee camp",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1599817
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de7c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Waiting shed at Kurumapuram graveyard, Kandhadu, Alandur post, Marakkanam Block, Tindivanam.",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 599729
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de7d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 200 metre Cement concrete Road at Mettu Street in Munnur Panchayat",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1249980
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.239Z"
+}

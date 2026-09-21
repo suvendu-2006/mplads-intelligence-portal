@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede5d",
+    "name": "Ganesan Selvam",
+    "constituency": "KANCHEEPURAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 186508749.11,
+    "totalExpenditure": 110717216,
+    "utilizationPercentage": 59.36301461906255,
+    "completedWorksCount": 273,
+    "recommendedWorksCount": 177,
+    "completedWorksValue": 96645925,
+    "inProgressPayments": 14071291,
+    "paymentGapPercentage": 12.709216785219743,
+    "completionRate": 60.66666666666667,
+    "pendingWorks": -96,
+    "unspentAmount": 75791533.11000001,
+    "totalRecommendedAmount": 74511000,
+    "name_hi": "Ganesan Selvam",
+    "constituency_hi": "KANCHEEPURAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 110717216,
+      "totalEntries": 290,
+      "avgExpenditure": 381783.50344827585,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6800000,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 60863017,
+        "transactionCount": 195
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 43054199,
+        "transactionCount": 78
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 110717216,
+        "transactionCount": 290,
+        "avgAmount": 381783.50344827585
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 273,
+    "recommendedCount": 177,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ba19",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PDS Building at Nedunkuram Panchayat, Kattankolathur Panchayat Union.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1010704
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e534",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PDS Buildings at Karanaipuducheri Panchayat, Kattankolathur Panchayat Union.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 999869
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e63f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High Mast Light at Mugaiyur Panchayt, Naduthittu at Lathur Panchayat Union.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 749894
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e639",
+        "workCategory": "Normal/Others",
+        "workDescription": "RO PLANT in Cheyyur Taluk Office Campus, Chengalpattu District.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 1495280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e659",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter at Kalpakkam Panchayat, Thirukalukundram Panchayat Union.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 1998477
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.866Z"
+}

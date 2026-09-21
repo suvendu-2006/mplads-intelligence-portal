@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf9e",
+    "name": "SUKHDEO BHAGAT",
+    "constituency": "LOHARDAGA",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171821957.11,
+    "totalExpenditure": 138586757,
+    "utilizationPercentage": 80.65718685259597,
+    "completedWorksCount": 80,
+    "recommendedWorksCount": 204,
+    "completedWorksValue": 45856503,
+    "inProgressPayments": 92730254,
+    "paymentGapPercentage": 66.91133843329634,
+    "completionRate": 28.169014084507044,
+    "pendingWorks": 124,
+    "unspentAmount": 33235200.110000014,
+    "totalRecommendedAmount": 113007587,
+    "name_hi": "SUKHDEO BHAGAT",
+    "constituency_hi": "LOHARDAGA",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 138586757,
+      "totalEntries": 358,
+      "avgExpenditure": 387113.8463687151,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 70121248,
+        "transactionCount": 164
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 68465509,
+        "transactionCount": 194
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 138586757,
+        "transactionCount": 358,
+        "avgAmount": 387113.8463687151
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 80,
+    "recommendedCount": 204,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e159",
+        "workCategory": "Normal/Others",
+        "workDescription": "buying books for the school",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e157",
+        "workCategory": "Normal/Others",
+        "workDescription": "buying books for the school",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e161",
+        "workCategory": "Normal/Others",
+        "workDescription": "buying books for the school",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e15f",
+        "workCategory": "Normal/Others",
+        "workDescription": "buying books for the school",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e150",
+        "workCategory": "Normal/Others",
+        "workDescription": "buying books for the school",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.234Z"
+}

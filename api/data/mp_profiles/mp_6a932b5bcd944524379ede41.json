@@ -1,0 +1,62 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede41",
+    "name": "DR. HEMANT VISHNU SAVARA",
+    "constituency": "PALGHAR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 8415952,
+    "utilizationPercentage": 5.725137414965986,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 84,
+    "completedWorksValue": 991449,
+    "inProgressPayments": 7424503,
+    "paymentGapPercentage": 88.21940762019555,
+    "completionRate": 1.1764705882352942,
+    "pendingWorks": 83,
+    "unspentAmount": 138584048,
+    "totalRecommendedAmount": 80749000,
+    "name_hi": "DR. HEMANT VISHNU SAVARA",
+    "constituency_hi": "PALGHAR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 8415952,
+      "totalEntries": 11,
+      "avgExpenditure": 765086.5454545454,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 8415952,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 8415952,
+        "transactionCount": 11,
+        "avgAmount": 765086.5454545454
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 84,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dfb4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constructing a community hall at Jamshet Gorwadi, Taluka and District Palghar.",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 991449
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.245Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2af",
+    "name": "Shri Tejveer Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 89900058,
+    "utilizationPercentage": 61.15650204081633,
+    "completedWorksCount": 53,
+    "recommendedWorksCount": 33,
+    "completedWorksValue": 61465997,
+    "inProgressPayments": 28434061,
+    "paymentGapPercentage": 31.628523532209513,
+    "completionRate": 61.627906976744185,
+    "pendingWorks": -20,
+    "unspentAmount": 57099942,
+    "totalRecommendedAmount": 36465400,
+    "name_hi": "Shri Tejveer Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 89900058,
+      "totalEntries": 152,
+      "avgExpenditure": 591447.75,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 54223565,
+        "transactionCount": 84
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35676493,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 89900058,
+        "transactionCount": 152,
+        "avgAmount": 591447.75
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 53,
+    "recommendedCount": 33,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f2b",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road house of puran pandit to house of hariom vill bhur garhi gram panchayat baroth block naujheel distt mathura",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 879568
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f46",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road at house of raja ji to plot of rotan vill shivli block raya distt mathura",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 779391
+      },
+      {
+        "_id": "6a932bb5cd94452437a32195",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road at house of ramvir to house of sheela devi pradhan vill luhara block mathura distt mathura",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 1399291
+      },
+      {
+        "_id": "6a932bb5cd94452437a32073",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of c c road at ho of suresh to towards ho man singh vill nagla uaday singh block baldev distt mathura",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 779556
+      },
+      {
+        "_id": "6a932bb5cd94452437a32071",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of c c road ho of radhey shiyam master to towards dev sathan vill nagla uday singh distt mathura",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 359623
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.477Z"
+}

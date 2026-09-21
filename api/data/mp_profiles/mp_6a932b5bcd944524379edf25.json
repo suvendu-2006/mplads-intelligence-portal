@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf25",
+    "name": "Ram Shiromani",
+    "constituency": "SHRAWASTI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151746878.11,
+    "totalExpenditure": 16300060,
+    "utilizationPercentage": 10.741611427540686,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 1356,
+    "completedWorksValue": 0,
+    "inProgressPayments": 16300060,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 1356,
+    "unspentAmount": 135446818.11,
+    "totalRecommendedAmount": 89840310,
+    "name_hi": "Ram Shiromani",
+    "constituency_hi": "SHRAWASTI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16300060,
+      "totalEntries": 58,
+      "avgExpenditure": 281035.5172413793,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 16300060,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16300060,
+        "transactionCount": 58,
+        "avgAmount": 281035.5172413793
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 1356,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.221Z"
+}

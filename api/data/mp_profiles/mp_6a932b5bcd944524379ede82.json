@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede82",
+    "name": "JOYANTA BASUMATARY",
+    "constituency": "KOKRAJHAR",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 62630971,
+    "utilizationPercentage": 42.60610272108843,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 102,
+    "completedWorksValue": 20909203,
+    "inProgressPayments": 41721768,
+    "paymentGapPercentage": 66.61523417863025,
+    "completionRate": 16.39344262295082,
+    "pendingWorks": 82,
+    "unspentAmount": 84369029,
+    "totalRecommendedAmount": 119490000,
+    "name_hi": "JOYANTA BASUMATARY",
+    "constituency_hi": "KOKRAJHAR",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62630971,
+      "totalEntries": 80,
+      "avgExpenditure": 782887.1375,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30478355,
+        "transactionCount": 33
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32152616,
+        "transactionCount": 47
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62630971,
+        "transactionCount": 80,
+        "avgAmount": 782887.1375
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 102,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c407",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of box culvert at Daloabari Bagicha near Rasing  Bhagat house with approach road under Daloabari VCDC.",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 1199393
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c4a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RRC box culvert with approach road under West Maligaon VCDC",
+        "completedDate": "2026-02-11T00:00:00.000Z",
+        "finalAmount": 1231455
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af6f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC box culvert with approach road at No. 2 Jaleswari village under Jaleswari VCDC.",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 1798242
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b275",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC box culvert with approach road at Romendrapur village under Nandipur VCDC.",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 1798310
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f98",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of box culvert at Jogendrapur under Kachugaon Dev. block",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 999588
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.457Z"
+}

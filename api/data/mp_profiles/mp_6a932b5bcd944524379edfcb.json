@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfcb",
+    "name": "Yogendra Chandoliya",
+    "constituency": "NORTH WEST DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147876307,
+    "totalExpenditure": 10961614,
+    "utilizationPercentage": 7.412691202790181,
+    "completedWorksCount": 11,
+    "recommendedWorksCount": 48,
+    "completedWorksValue": 10222872,
+    "inProgressPayments": 738742,
+    "paymentGapPercentage": 6.739354259327139,
+    "completionRate": 18.64406779661017,
+    "pendingWorks": 37,
+    "unspentAmount": 136914693,
+    "totalRecommendedAmount": 35836827,
+    "name_hi": "Yogendra Chandoliya",
+    "constituency_hi": "NORTH WEST DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 10961614,
+      "totalEntries": 14,
+      "avgExpenditure": 782972.4285714285,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 332004,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10629610,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 10961614,
+        "transactionCount": 14,
+        "avgAmount": 782972.4285714285
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 11,
+    "recommendedCount": 48,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df54",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement in various dark spot in ward no.49, ward no.50 and ward no.51",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 3731085
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e834",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing and installation of open gym equipment in Park opposite Venus Apartment, Sector 9, Rohini, Delhi under MPLAD funds",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 427191
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e833",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Children Play Equipment in Mange Ram Park in Ward No.23, Rohini Zone, MCD",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 506420
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e582",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 5 Nos. semi high mast poles with LED lights at MPL Park near MCPS Shahbad Daulatpur, 2) Mpl. Park in Sai Nath APartment, 3) Shamshan Ghat CHowk, Khera Garhi Village, 4) Near Community Centre Khera Garhi Village in Ward No.29, Pooth Khurd under Narela Zone",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 921748
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df57",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangements with 5 metre poles in various locations in Guru Harikishan Nagar in ward No.48 under Rohini Zone from MPLAD funds",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 2199394
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.228Z"
+}

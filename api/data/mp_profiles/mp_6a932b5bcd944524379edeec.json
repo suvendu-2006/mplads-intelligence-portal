@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeec",
+    "name": "Pankaj Chowdhary",
+    "constituency": "MAHARAJGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 95676373,
+    "utilizationPercentage": 65.08596802721088,
+    "completedWorksCount": 35,
+    "recommendedWorksCount": 30,
+    "completedWorksValue": 75335566,
+    "inProgressPayments": 20340807,
+    "paymentGapPercentage": 21.260010556629275,
+    "completionRate": 53.84615384615385,
+    "pendingWorks": -5,
+    "unspentAmount": 51323627,
+    "totalRecommendedAmount": 56016732,
+    "name_hi": "Pankaj Chowdhary",
+    "constituency_hi": "MAHARAJGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 95676373,
+      "totalEntries": 94,
+      "avgExpenditure": 1017833.7553191489,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 7569582,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 37985569,
+        "transactionCount": 37
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 50121222,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 95676373,
+        "transactionCount": 94,
+        "avgAmount": 1017833.7553191489
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 35,
+    "recommendedCount": 30,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cfa6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Shishghrah me Primary Vidhyalay se Rajaram Prajapati ke ghar tak 200 meter CC ROad",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 2424546
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cfac",
+        "workCategory": "Normal/Others",
+        "workDescription": "BMCT Road se Amahwa ke Bich 3 meter RCC Puliya",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1998920
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cfaa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Kamasin Khurd Main Road se Rajesh Yadav ke Ghar tak 200 meter CC Road",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 2161996
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c378",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Jungal Jaralaha kanchanpur Tole par Jharela ke Ghar tak 200 meter CC Road",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1929300
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c37a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Jungal Gulahariya me Rajeshwar Chauhan ke Ghar main Road tak 200 meter CC Road",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 2453102
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.221Z"
+}

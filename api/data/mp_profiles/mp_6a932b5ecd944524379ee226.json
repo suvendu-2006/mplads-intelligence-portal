@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee226",
+    "name": "Shri Banshilal Gurjar (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41424435,
+    "utilizationPercentage": 28.17988775510204,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 71,
+    "completedWorksValue": 10570000,
+    "inProgressPayments": 30854435,
+    "paymentGapPercentage": 74.48365922190611,
+    "completionRate": 12.345679012345679,
+    "pendingWorks": 61,
+    "unspentAmount": 105575565,
+    "totalRecommendedAmount": 50400222,
+    "name_hi": "Shri Banshilal Gurjar (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41424435,
+      "totalEntries": 94,
+      "avgExpenditure": 440685.47872340423,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2170000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 23919973,
+        "transactionCount": 52
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15334462,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41424435,
+        "transactionCount": 94,
+        "avgAmount": 440685.47872340423
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 71,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31066",
+        "workCategory": "Normal/Others",
+        "workDescription": "road damarikaran kary \nWard No. 33\nAgency Municipal Council Mandsaur",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30a09",
+        "workCategory": "Normal/Others",
+        "workDescription": "cc road construction\nnagar palika parishad mandsaur\nas attachment",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31701",
+        "workCategory": "Normal/Others",
+        "workDescription": "as attached letter",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 2195000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30a0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road and drain construction\nWard No. 37 \nAgency Municipal Council Mandsaur",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f89",
+        "workCategory": "Normal/Others",
+        "workDescription": "word and agency as attached letter",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 675000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.887Z"
+}

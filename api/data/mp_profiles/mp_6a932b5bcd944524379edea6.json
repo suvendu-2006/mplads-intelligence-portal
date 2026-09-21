@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea6",
+    "name": "KONDA VISHWESHWAR REDDY",
+    "constituency": "CHELVELLA",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 233721420.96,
+    "totalExpenditure": 57214092,
+    "utilizationPercentage": 24.479609855611756,
+    "completedWorksCount": 180,
+    "recommendedWorksCount": 339,
+    "completedWorksValue": 47532371,
+    "inProgressPayments": 9681721,
+    "paymentGapPercentage": 16.921916719398432,
+    "completionRate": 34.68208092485549,
+    "pendingWorks": 159,
+    "unspentAmount": 176507328.96,
+    "totalRecommendedAmount": 97234000,
+    "name_hi": "KONDA VISHWESHWAR REDDY",
+    "constituency_hi": "CHELVELLA",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57214092,
+      "totalEntries": 214,
+      "avgExpenditure": 267355.57009345794,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25482067,
+        "transactionCount": 121
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31732025,
+        "transactionCount": 93
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57214092,
+        "transactionCount": 214,
+        "avgAmount": 267355.57009345794
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 180,
+    "recommendedCount": 339,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e932",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Nyalata BT Road to Dunsa Papaiah House and Internal at Ramannaguda Village of Chevella Mandal",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 499620
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e934",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Dunsa Papaiah House to Beerappa Temple Road and Internal at Ramannaguda Village of Chevella Mandal",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 499837
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e93d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Chittanuri Prabhakar House to Basa Yadagiri House and Internal location in Chevella of Chevlla Mandal",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 499837
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e93c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Kompalli Kamal Reddy House to Chittanuri Prabhakar House and Internal location in Chevella of Chevella Mandal",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 499837
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Chevella Suresh (H) to Badri Ramchander (H) at Maharajpet (V) of Shankerpally (M)",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.671Z"
+}

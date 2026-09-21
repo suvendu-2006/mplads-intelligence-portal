@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edebc",
+    "name": "MAHIMA KUMARI MEWAR",
+    "constituency": "RAJSAMAND",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 183892143,
+    "totalExpenditure": 48238044,
+    "utilizationPercentage": 26.23170474444903,
+    "completedWorksCount": 26,
+    "recommendedWorksCount": 109,
+    "completedWorksValue": 21655271,
+    "inProgressPayments": 26582773,
+    "paymentGapPercentage": 55.10748528692415,
+    "completionRate": 19.25925925925926,
+    "pendingWorks": 83,
+    "unspentAmount": 135654099,
+    "totalRecommendedAmount": 88925000,
+    "name_hi": "MAHIMA KUMARI MEWAR",
+    "constituency_hi": "RAJSAMAND",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 48238044,
+      "totalEntries": 272,
+      "avgExpenditure": 177345.75,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13548430,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34689614,
+        "transactionCount": 199
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 48238044,
+        "transactionCount": 272,
+        "avgAmount": 177345.75
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 26,
+    "recommendedCount": 109,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e862",
+        "workCategory": "Normal/Others",
+        "workDescription": "Community building construction work in village Gudha Jodha",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 999967
+      },
+      {
+        "_id": "6a932bb5cd94452437a18cdf",
+        "workCategory": "Normal/Others",
+        "workDescription": "sarvjanik chowk me  sarvjank sabha bhavan ka nirmaan aakeli -b gaon me",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 917947
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d80b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary wall and tin shed near Kalika Mata Temple, Tarsingda Gram Panchayat, Bhava",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 299516
+      },
+      {
+        "_id": "6a932bb5cd94452437a19b55",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram kairu me mukhy bas stand ka nirman or sondrikaryan",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 1999760
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cfe1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a CC road with drainage system from the main road (Tasol Road) towards Sajjan Singh Ji s enclosure, Pasund.",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 596798
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.458Z"
+}

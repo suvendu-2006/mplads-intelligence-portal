@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde5",
+    "name": "Ashok Kumar Yadav ",
+    "constituency": "MADHUBANI",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70438959,
+    "utilizationPercentage": 47.917659183673464,
+    "completedWorksCount": 81,
+    "recommendedWorksCount": 108,
+    "completedWorksValue": 47148959,
+    "inProgressPayments": 23290000,
+    "paymentGapPercentage": 33.06408886593568,
+    "completionRate": 42.857142857142854,
+    "pendingWorks": 27,
+    "unspentAmount": 76561041,
+    "totalRecommendedAmount": 60227600,
+    "name_hi": "Ashok Kumar Yadav ",
+    "constituency_hi": "MADHUBANI",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70438959,
+      "totalEntries": 132,
+      "avgExpenditure": 533628.4772727273,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 38782896,
+        "transactionCount": 71
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31656063,
+        "transactionCount": 61
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70438959,
+        "transactionCount": 132,
+        "avgAmount": 533628.4772727273
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 81,
+    "recommendedCount": 108,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d460",
+        "workCategory": "Normal/Others",
+        "workDescription": "benipatti prakhand antargat pandit dukhmochan chaudhary padmadahan M S raja Inter college basaith me ek kamra ka bhawan nirman karya",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 965698
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c997",
+        "workCategory": "Normal/Others",
+        "workDescription": "bisfi prakhand antargat jagban purvi panchayat ke munirabag gawn me Samsan ghat dhancha nirman karya (khata 1542, khesra (3627 new, 671 old) lenght 400 feet",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 794707
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d77e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply And installation Mini High Mast Lightning System near Ladar Durga Temple block  Keoti darbhanga",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 495000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d778",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply And installation Mini High Mast Lightning System Keoti Bazaar Chowk",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 495000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d77b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply And installation Mini High Mast Lightning System AT Gandhi Chowk Chhatwan",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 495000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.853Z"
+}

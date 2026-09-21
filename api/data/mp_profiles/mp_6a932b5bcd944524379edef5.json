@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef5",
+    "name": "PRABHAKAR REDDY VEMIREDDY",
+    "constituency": "NELLORE",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 73610054,
+    "utilizationPercentage": 50.074866666666665,
+    "completedWorksCount": 124,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 66527947,
+    "inProgressPayments": 7082107,
+    "paymentGapPercentage": 9.621113713623956,
+    "completionRate": 78.48101265822784,
+    "pendingWorks": -90,
+    "unspentAmount": 73389946,
+    "totalRecommendedAmount": 32291000,
+    "name_hi": "PRABHAKAR REDDY VEMIREDDY",
+    "constituency_hi": "NELLORE",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 73610054,
+      "totalEntries": 136,
+      "avgExpenditure": 541250.3970588235,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 35173626,
+        "transactionCount": 63
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38436428,
+        "transactionCount": 73
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 73610054,
+        "transactionCount": 136,
+        "avgAmount": 541250.3970588235
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 124,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Internal CC road from Janda Chettu Bhaskar Naidu house at Mannavarappadu Village at amancharla GP in Nellore Rural Mandal",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 398619
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road From PR Road to Pachavavaripalem of Kothapeta  Village and GP  of Duttalur Mandal",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 284601
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e472",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC roads from Polimera Jayaramreddy house to Anjaneya Swamy temple in Thimmareddipalem GP of Lingasamudram Mandal",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 497936
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e478",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC roads from Anjaneya swamy temple to Vennapusa Bullaiah place in Thimmareddypalem GP",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 497144
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e423",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Granular Sub Base (GSB) to the road from Purimitla Nageswara Rao house to Neelam Balaiah house in Thimmareddypalem Village and GP of Lingasamudram Mandal",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 498619
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.654Z"
+}

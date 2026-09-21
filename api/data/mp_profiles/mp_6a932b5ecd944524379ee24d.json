@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee24d",
+    "name": "Shri K.R.N. Rajeshkumar (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 238513975.53,
+    "totalExpenditure": 152999036,
+    "utilizationPercentage": 64.14678035533224,
+    "completedWorksCount": 84,
+    "recommendedWorksCount": 18,
+    "completedWorksValue": 131487423,
+    "inProgressPayments": 21511613,
+    "paymentGapPercentage": 14.059966364755397,
+    "completionRate": 82.35294117647058,
+    "pendingWorks": -66,
+    "unspentAmount": 85514939.53,
+    "totalRecommendedAmount": 54439000,
+    "name_hi": "Shri K.R.N. Rajeshkumar (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 152999036,
+      "totalEntries": 97,
+      "avgExpenditure": 1577309.6494845361,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 30388756,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 60572637,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 62037643,
+        "transactionCount": 38
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 152999036,
+        "transactionCount": 97,
+        "avgAmount": 1577309.6494845361
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 84,
+    "recommendedCount": 18,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of OHT  capacity of 60000 liters in the old ward 8th ward new ward 20 of Pallapatti municipality in Karur district.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1516609
+      },
+      {
+        "_id": "6a932bb5cd94452437a324a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New Anganwadi building at Anna Colony H/o Athanoor Town panchayat",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 1850000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32497",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of OHT  tank in ward no. 26, Chettiyannan Street, Rasipuram municipality.",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32474",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of two high mass  streetlights near the Maruthakali Amman Temple in Namakkal Corporation- 2 No",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 398190
+      },
+      {
+        "_id": "6a932bb5cd94452437a32426",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a new Anganwadi center at the municipal primary school on Anna Street in Ward No. 27 of the Rasipuram municipality",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 1600000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.959Z"
+}

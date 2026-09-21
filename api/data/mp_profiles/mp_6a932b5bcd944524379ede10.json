@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede10",
+    "name": "C.M.RAMESH",
+    "constituency": "ANAKAPALLE",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 202531656.11,
+    "totalExpenditure": 36002667,
+    "utilizationPercentage": 17.776315906114966,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 19053089,
+    "inProgressPayments": 16949578,
+    "paymentGapPercentage": 47.07867336605924,
+    "completionRate": 21.052631578947366,
+    "pendingWorks": 55,
+    "unspentAmount": 166528989.11,
+    "totalRecommendedAmount": 62424007,
+    "name_hi": "C.M.RAMESH",
+    "constituency_hi": "ANAKAPALLE",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36002667,
+      "totalEntries": 42,
+      "avgExpenditure": 857206.3571428572,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12178055,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23824612,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36002667,
+        "transactionCount": 42,
+        "avgAmount": 857206.3571428572
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e44b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 1000 LPH RO Water Plant with shed at Dondapudi village of Ravikamatham Mandal of Anakapalli District.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 598332
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e270",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High-Mast lights at K.Thalarivanipalem hamlet of Golagam Village of Anakapalli Mandal and District",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 149826
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e26e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High - Mast lights at Shankaram Village of Anakapalli Mandal and District",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 149826
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e271",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High-Mast lights at Akkireddy Palem hamlet of Gopalapuram Village of Anakapalli Mandal and District",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 149845
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e26f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High-Mast lights at Gopalapuram Village of Anakapalli Mandal and District",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 149845
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.718Z"
+}

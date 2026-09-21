@@ -39,7 +39,7 @@ export const FundCard: React.FC<FundCardProps> = ({
 
   return (
     <div
-      className="relative rounded-2xl p-6 sm:p-8 text-white overflow-hidden shadow-2xl transition-all hover:scale-[1.005]"
+      className="relative rounded-2xl p-6 sm:p-8 text-white overflow-hidden shadow-2xl"
       style={{
         background: 'linear-gradient(135deg, #0A192F 0%, #112240 50%, #1A365D 100%)',
         border: '1px solid rgba(255, 255, 255, 0.15)',

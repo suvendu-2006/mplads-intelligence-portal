@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede46",
+    "name": "DR. PRABHA MALLIKARJUN",
+    "constituency": "DAVANAGERE",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57444696,
+    "utilizationPercentage": 39.07802448979592,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 92,
+    "completedWorksValue": 5300000,
+    "inProgressPayments": 52144696,
+    "paymentGapPercentage": 90.77373479354821,
+    "completionRate": 5.154639175257731,
+    "pendingWorks": 87,
+    "unspentAmount": 89555304,
+    "totalRecommendedAmount": 88800000,
+    "name_hi": "DR. PRABHA MALLIKARJUN",
+    "constituency_hi": "DAVANAGERE",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57444696,
+      "totalEntries": 90,
+      "avgExpenditure": 638274.4,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 33450000,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23994696,
+        "transactionCount": 44
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57444696,
+        "transactionCount": 90,
+        "avgAmount": 638274.4
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 92,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ab0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "continuation work of Beeralingeshwara samudaya bhavan in kotemalluru village",
+        "completedDate": "2026-07-22T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1810d",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Toilets blocks in Finearts college in davanagere",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 1200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a189ae",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of trus in ghps school sri rama badavane nittuvalli",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1810e",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of school compound",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1758d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Khabarastan in Davanagere North Constituency near P.B. Road in Davanagere City",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 2500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.760Z"
+}

@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeeb",
+    "name": "P C Mohan",
+    "constituency": "BANGALORE CENTRAL",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159995711.11,
+    "totalExpenditure": 10439505,
+    "utilizationPercentage": 6.5248655276907055,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 17,
+    "completedWorksValue": 5339505,
+    "inProgressPayments": 5100000,
+    "paymentGapPercentage": 48.8528910135107,
+    "completionRate": 10.526315789473683,
+    "pendingWorks": 15,
+    "unspentAmount": 149556206.11,
+    "totalRecommendedAmount": 20587500,
+    "name_hi": "P C Mohan",
+    "constituency_hi": "BANGALORE CENTRAL",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 10439505,
+      "totalEntries": 21,
+      "avgExpenditure": 497119.28571428574,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4739506,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5699999,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 10439505,
+        "transactionCount": 21,
+        "avgAmount": 497119.28571428574
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 17,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d20c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of toilets (for men and women) at the CEN Police Station building",
+        "completedDate": "2026-03-03T00:00:00.000Z",
+        "finalAmount": 599999
+      },
+      {
+        "_id": "6a932bb5cd94452437a1803e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 15 Nos. Dell Optiplex 7400 A10 12th Gen Core i7-12700T/16GB/512GB SSD + 1TB/WIN 10 Pro/FHD 24''/3 years on-site warranty, 02 Nos. Dell Optiplex 3280 A10 10th Gen Intel Core i5-10500T/8GB/1TB/22'' FHD/WIN 10 Pro/3 years on-site warranty, 03 Nos. Dell Optiplex 5400 A10 12th Gen Intel Core i5-12500T/8GB/256GB SSD + 1TB/WIN 11 Pro/24''/3 years on-site warranty, 02 Nos. Canon Jumbo Xerox Machines, and 02 Nos. Canon Laser Jet Printers 2900B",
+        "completedDate": "2025-05-09T00:00:00.000Z",
+        "finalAmount": 4739506
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.901Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfca",
+    "name": "YADUVEER KRISHNADATTA CHAMARAJA WADIYAR",
+    "constituency": "MYSORE",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 62346570,
+    "utilizationPercentage": 42.41263265306122,
+    "completedWorksCount": 34,
+    "recommendedWorksCount": 148,
+    "completedWorksValue": 16950000,
+    "inProgressPayments": 45396570,
+    "paymentGapPercentage": 72.81325981525526,
+    "completionRate": 18.681318681318682,
+    "pendingWorks": 114,
+    "unspentAmount": 84653430,
+    "totalRecommendedAmount": 98500000,
+    "name_hi": "YADUVEER KRISHNADATTA CHAMARAJA WADIYAR",
+    "constituency_hi": "MYSORE",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 62346570,
+      "totalEntries": 178,
+      "avgExpenditure": 350261.62921348313,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20250000,
+        "transactionCount": 61
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 42096570,
+        "transactionCount": 117
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 62346570,
+        "transactionCount": 178,
+        "avgAmount": 350261.62921348313
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 34,
+    "recommendedCount": 148,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ba20",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cheluvanarayanaswamy and Dundamma community hall (Temple)",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b0d0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from Chowkur village main road till Shivanna house",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b095",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from Kalethimmanna village main road till Subbaiah and Mohankumar house",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b0ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from Boothanahalli village main road till Bematti main road",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b0d1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from Hemmige village Annegowdas home till Govt. School",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.457Z"
+}

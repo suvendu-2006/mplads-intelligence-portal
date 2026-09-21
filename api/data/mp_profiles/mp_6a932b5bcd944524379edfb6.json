@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb6",
+    "name": "V S Matheswaran",
+    "constituency": "NAMAKKAL",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 162539930.11,
+    "totalExpenditure": 90580955,
+    "utilizationPercentage": 55.7284323542521,
+    "completedWorksCount": 140,
+    "recommendedWorksCount": 70,
+    "completedWorksValue": 90580955,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 66.66666666666666,
+    "pendingWorks": -70,
+    "unspentAmount": 71958975.11000001,
+    "totalRecommendedAmount": 47912000,
+    "name_hi": "V S Matheswaran",
+    "constituency_hi": "NAMAKKAL",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 90580955,
+      "totalEntries": 141,
+      "avgExpenditure": 642418.1205673759,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 53274786,
+        "transactionCount": 79
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37306169,
+        "transactionCount": 62
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 90580955,
+        "transactionCount": 141,
+        "avgAmount": 642418.1205673759
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 140,
+    "recommendedCount": 70,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e70f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High mass Light at near Sankari old bus stop Salem dist    (12 mts Ladder - 200 Watts - 6 nos)",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 348591
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a121",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of OHT 10000 lits  in Koneripatti, Sangakiri Assembly Constituency in Salem dist",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1052845
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e998",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing High mass Light in Andavernager Namakkal cor",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 380000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e997",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a high mass light near the government officers residential colony in NGGOs Colony, Namakkal Corporation.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 199882
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e996",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a high mass light in the near Andaver petorl station in Namakkal Cor",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 199882
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.236Z"
+}

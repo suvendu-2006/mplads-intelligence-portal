@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede30",
+    "name": "DHAVAL LAXMANBHAI PATEL",
+    "constituency": "VALSAD",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 36923530,
+    "utilizationPercentage": 25.11804761904762,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 176,
+    "completedWorksValue": 32437956,
+    "inProgressPayments": 4485574,
+    "paymentGapPercentage": 12.148280513807862,
+    "completionRate": 25.423728813559322,
+    "pendingWorks": 116,
+    "unspentAmount": 110076470,
+    "totalRecommendedAmount": 78172377,
+    "name_hi": "DHAVAL LAXMANBHAI PATEL",
+    "constituency_hi": "VALSAD",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 36923530,
+      "totalEntries": 69,
+      "avgExpenditure": 535123.6231884058,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15121139,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21802391,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 36923530,
+        "transactionCount": 69,
+        "avgAmount": 535123.6231884058
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 176,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e483",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing solar ro plant at Police Adhikshak office Ahwa-Dang  Taluka Ahwa",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 496700
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4a1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Solar RO plant at Police Station Ahwa Taluka Ahwa",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 495900
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc82",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing  Solar  RO  plant at City Police station Valsad  Taluka Valsad",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 498030
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc83",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing  Solar  RO  plant at Police Adhikshak office Valsad  Taluka-Valsad",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 497220
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc84",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing  Solar  RO  plant at  Nayab  Police Adhikshak office Valsad Vibhag  Taluka-Valsad",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 497220
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.667Z"
+}

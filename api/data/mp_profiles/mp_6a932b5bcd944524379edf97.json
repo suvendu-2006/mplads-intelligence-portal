@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf97",
+    "name": "Smt Veena Devi ",
+    "constituency": "VAISHALI",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 131108889,
+    "utilizationPercentage": 89.18972040816327,
+    "completedWorksCount": 30,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 93983889,
+    "inProgressPayments": 37125000,
+    "paymentGapPercentage": 28.31615787698422,
+    "completionRate": 50.847457627118644,
+    "pendingWorks": -1,
+    "unspentAmount": 15891111,
+    "totalRecommendedAmount": 52876790,
+    "name_hi": "Smt Veena Devi ",
+    "constituency_hi": "VAISHALI",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 131108889,
+      "totalEntries": 49,
+      "avgExpenditure": 2675691.612244898,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 34961000,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 59022889,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37125000,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 131108889,
+        "transactionCount": 49,
+        "avgAmount": 2675691.612244898
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 30,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b439",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of public parks",
+        "completedDate": "2025-12-06T00:00:00.000Z",
+        "finalAmount": 1472889
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b86b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of fixed garden gym equipment",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 3000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b86e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multi-gym equipment",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 4000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b86a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multi-gym equipment",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 4000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19275",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of laboratories",
+        "completedDate": "2025-07-22T00:00:00.000Z",
+        "finalAmount": 2450000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.402Z"
+}

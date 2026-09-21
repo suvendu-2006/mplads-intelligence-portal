@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede96",
+    "name": "KAMLESH JANGDE",
+    "constituency": "JANJGIR CHAMPA",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150384382.11,
+    "totalExpenditure": 99411941,
+    "utilizationPercentage": 66.10522954922556,
+    "completedWorksCount": 254,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 78661679,
+    "inProgressPayments": 20750262,
+    "paymentGapPercentage": 20.873007599761078,
+    "completionRate": 73.83720930232558,
+    "pendingWorks": -164,
+    "unspentAmount": 50972441.110000014,
+    "totalRecommendedAmount": 36000000,
+    "name_hi": "KAMLESH JANGDE",
+    "constituency_hi": "JANJGIR CHAMPA",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 99411941,
+      "totalEntries": 602,
+      "avgExpenditure": 165136.1146179402,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 36035095,
+        "transactionCount": 94
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 29995378,
+        "transactionCount": 111
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33381468,
+        "transactionCount": 397
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 99411941,
+        "transactionCount": 602,
+        "avgAmount": 165136.1146179402
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 254,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d06c",
+        "workCategory": "Normal/Others",
+        "workDescription": "AHATA NIRMAN (SAHU MOHALLA KE SAMUDAIK BHAWAN ME )",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "BOR KHANAN AVM PUMP STHAPANA SAH PANI TANKI NIRMAN (KHAIRWAR PARA ME)",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c5d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "BOR KHANAN AVM PUMP STHAPANA SAH PANI TANKI NIRMAN (DEVRAM SATNAMI GHAR KE PASS)",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a89e",
+        "workCategory": "Normal/Others",
+        "workDescription": "DURUG ME BOR KHANAN AVM MOTER PUMP STHAPANA SAHA PANI TANKI NIRAMARAN-5 NAG",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 1245584
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb7d",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM-DHANPUR ME SHASKIYA HIGH SCHOOLO KI PUSTAKALAYO ME PUSTAK KHARIDI",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 40000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.722Z"
+}

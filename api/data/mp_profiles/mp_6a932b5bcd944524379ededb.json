@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ededb",
+    "name": "MURLIDHAR MOHOL",
+    "constituency": "PUNE",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 18945481,
+    "utilizationPercentage": 12.88808231292517,
+    "completedWorksCount": 12,
+    "recommendedWorksCount": 87,
+    "completedWorksValue": 11996657,
+    "inProgressPayments": 6948824,
+    "paymentGapPercentage": 36.678002527357314,
+    "completionRate": 12.121212121212121,
+    "pendingWorks": 75,
+    "unspentAmount": 128054519,
+    "totalRecommendedAmount": 134500000,
+    "name_hi": "MURLIDHAR MOHOL",
+    "constituency_hi": "PUNE",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 18945481,
+      "totalEntries": 19,
+      "avgExpenditure": 997130.5789473684,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11996657,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6948824,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 18945481,
+        "transactionCount": 19,
+        "avgAmount": 997130.5789473684
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 12,
+    "recommendedCount": 87,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ba45",
+        "workCategory": "Normal/Others",
+        "workDescription": "Sai Ganesh Park S.N. 122 Khandvenagar Lohegaon Road from Arora Bungalow to Yogiraj Residency to be concretized.",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 999348
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b9f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a social hall at Kelewadi, Rajiv Gandhi Park, S.N. Kothrud.",
+        "completedDate": "2025-11-28T00:00:00.000Z",
+        "finalAmount": 999203
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aa76",
+        "workCategory": "Normal/Others",
+        "workDescription": "To carry out road and drainage line repair works in Kalasgaon, Survey No. 83, Khalsewasti.",
+        "completedDate": "2025-10-07T00:00:00.000Z",
+        "finalAmount": 999992
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a68f",
+        "workCategory": "Normal/Others",
+        "workDescription": "To carry out drainage works in Shelar Complex, Kothrud area.",
+        "completedDate": "2025-10-07T00:00:00.000Z",
+        "finalAmount": 999860
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a67f",
+        "workCategory": "Normal/Others",
+        "workDescription": "To carry out drainage works in Shravandhara area, Kothrud.",
+        "completedDate": "2025-10-06T00:00:00.000Z",
+        "finalAmount": 999199
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.683Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee3",
+    "name": "NEERAJ MAURYA",
+    "constituency": "AONLA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 97488644,
+    "utilizationPercentage": 66.31880544217688,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 19,
+    "completedWorksValue": 96558369,
+    "inProgressPayments": 930275,
+    "paymentGapPercentage": 0.9542393470976988,
+    "completionRate": 47.22222222222222,
+    "pendingWorks": 2,
+    "unspentAmount": 49511356,
+    "totalRecommendedAmount": 50352260,
+    "name_hi": "NEERAJ MAURYA",
+    "constituency_hi": "AONLA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 97488644,
+      "totalEntries": 101,
+      "avgExpenditure": 965234.0990099009,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 34599624,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 58427147,
+        "transactionCount": 59
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4461873,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 97488644,
+        "transactionCount": 101,
+        "avgAmount": 965234.0990099009
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 19,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e2fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand ram nagar me 8 led semi high mast light ke karya",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 1569599
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand majhgawan me 7 led semi high mast light ka karya total 18 lights",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1373399
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2fd",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand alampur jafra bad me 3 led light ka karya total 18 light",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 588600
+      },
+      {
+        "_id": "6a932bb5cd94452437a19531",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND BHUTA KE 10 VILLAGE ME LED SEMI HIGH MAST LIGHT INSTALLATION(TOTAL 118)",
+        "completedDate": "2025-11-06T00:00:00.000Z",
+        "finalAmount": 1961997
+      },
+      {
+        "_id": "6a932bb5cd94452437a19536",
+        "workCategory": "Normal/Others",
+        "workDescription": "VIKAS KHAND RAMNAGAR KE 12 VILLAGE ME LED SEMI HIGH MAST LIGHT INSTALLATION(TOTAL 118)",
+        "completedDate": "2025-11-06T00:00:00.000Z",
+        "finalAmount": 2354397
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.661Z"
+}

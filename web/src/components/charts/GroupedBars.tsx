@@ -11,6 +11,7 @@ import {
 import { useChartTheme } from '../../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../../lib/animationConfig'
 import { ChartTooltip } from './ChartTooltip'
+import { useTranslation } from '../../lib/i18n'
 
 export interface BarSeriesConfig {
   key: string
@@ -42,6 +43,7 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
   layout = 'horizontal',
 }) => {
   const theme = useChartTheme()
+  const { t, formatNum } = useTranslation()
   const barAnimation = ANIMATION_CONFIG.getChartProps('bar')
 
   return (
@@ -69,7 +71,7 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
                 stroke={theme.textColor}
                 fontSize={11}
                 tickLine={false}
-                tickFormatter={(v) => (formatter === 'crore' ? `₹${v}Cr` : String(v))}
+                tickFormatter={(v) => (formatter === 'crore' ? `₹${formatNum(v)} ${t('unit.cr')}` : formatNum(String(v)))}
               />
             </>
           ) : (

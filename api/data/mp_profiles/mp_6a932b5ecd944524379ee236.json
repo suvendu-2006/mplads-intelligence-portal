@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee236",
+    "name": "Shri Dorjee Tshering Lepcha (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Sikkim",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 150170726.11,
+    "totalExpenditure": 91921040,
+    "utilizationPercentage": 61.21102453261621,
+    "completedWorksCount": 85,
+    "recommendedWorksCount": 33,
+    "completedWorksValue": 84930114,
+    "inProgressPayments": 6990926,
+    "paymentGapPercentage": 7.605359991575378,
+    "completionRate": 72.03389830508475,
+    "pendingWorks": -52,
+    "unspentAmount": 58249686.110000014,
+    "totalRecommendedAmount": 60900000,
+    "name_hi": "Shri Dorjee Tshering Lepcha (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Sikkim"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91921040,
+      "totalEntries": 183,
+      "avgExpenditure": 502300.7650273224,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 26053419,
+        "transactionCount": 82
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 58871275,
+        "transactionCount": 92
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6996346,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91921040,
+        "transactionCount": 183,
+        "avgAmount": 502300.7650273224
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 85,
+    "recommendedCount": 33,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Retrofitting and Preservation Statue of Unity at MG Marg, Gangtok",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 499626
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bc8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up of Kitchen and Pantries at Sang Monastic School",
+        "completedDate": "2026-01-29T00:00:00.000Z",
+        "finalAmount": 997143
+      },
+      {
+        "_id": "6a932bb5cd94452437a31dc8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Flood Control Embankments at Kholsa Upper Aho ward Under Aho Yangtam GPU",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 499089
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c1d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protection wall at land slides zone along the PWD Road at Lower Sichey",
+        "completedDate": "2025-11-06T00:00:00.000Z",
+        "finalAmount": 4499685
+      },
+      {
+        "_id": "6a932bb5cd94452437a30c1e",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of protection Wall at end Point of Adampool Raod, Khelgaon Complex",
+        "completedDate": "2025-11-06T00:00:00.000Z",
+        "finalAmount": 4499977
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.222Z"
+}

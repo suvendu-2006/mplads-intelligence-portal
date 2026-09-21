@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf9d",
+    "name": "SUKANTA KUMAR PANIGRAHI",
+    "constituency": "KANDHAMAL",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 190712424.11,
+    "totalExpenditure": 54209040,
+    "utilizationPercentage": 28.424493188096157,
+    "completedWorksCount": 148,
+    "recommendedWorksCount": 202,
+    "completedWorksValue": 40058531,
+    "inProgressPayments": 14150509,
+    "paymentGapPercentage": 26.103596374331662,
+    "completionRate": 42.285714285714285,
+    "pendingWorks": 54,
+    "unspentAmount": 136503384.11,
+    "totalRecommendedAmount": 65804238,
+    "name_hi": "SUKANTA KUMAR PANIGRAHI",
+    "constituency_hi": "KANDHAMAL",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54209040,
+      "totalEntries": 352,
+      "avgExpenditure": 154002.95454545456,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 28335022,
+        "transactionCount": 118
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25874018,
+        "transactionCount": 234
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54209040,
+        "transactionCount": 352,
+        "avgAmount": 154002.95454545456
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 148,
+    "recommendedCount": 202,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e40a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar street lights at Ushaguda Mandapsahi and AWC",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of boundary wall of Community Centre near Neelakantheswar temple, Kalamba",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e333",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street light at Guma",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e331",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street light at Letedikia, Karukudupa",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e332",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar Street light at",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.247Z"
+}

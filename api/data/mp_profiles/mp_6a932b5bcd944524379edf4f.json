@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4f",
+    "name": "SAVITRI THAKUR",
+    "constituency": "DHAR",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 79325366,
+    "utilizationPercentage": 53.962834013605445,
+    "completedWorksCount": 179,
+    "recommendedWorksCount": 160,
+    "completedWorksValue": 58812391,
+    "inProgressPayments": 20512975,
+    "paymentGapPercentage": 25.85928818784145,
+    "completionRate": 52.8023598820059,
+    "pendingWorks": -19,
+    "unspentAmount": 67674634,
+    "totalRecommendedAmount": 62227332,
+    "name_hi": "SAVITRI THAKUR",
+    "constituency_hi": "DHAR",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 79325366,
+      "totalEntries": 481,
+      "avgExpenditure": 164917.60083160084,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 54588227,
+        "transactionCount": 284
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24737139,
+        "transactionCount": 197
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 79325366,
+        "transactionCount": 481,
+        "avgAmount": 164917.60083160084
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 179,
+    "recommendedCount": 160,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d0a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "shed nirman khalghat narmada ghat",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 2461567
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bf20",
+        "workCategory": "Normal/Others",
+        "workDescription": "bayadipura mohalla daluram ke ghar se ramlal ke ghar tak cc road nirman",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 499871
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c3cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "kabaddi khel samagri",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 197456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c0f9",
+        "workCategory": "Normal/Others",
+        "workDescription": "talab se vinod ke ghar tak cc road nirman",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cde4",
+        "workCategory": "Normal/Others",
+        "workDescription": "GI cotted water tankar 5500liter tyre 900x16",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 159212
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.883Z"
+}

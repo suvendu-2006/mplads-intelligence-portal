@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee290",
+    "name": "Shri Rwngwra Narzary (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Assam",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 118131237,
+    "utilizationPercentage": 53.55872217194825,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 150,
+    "completedWorksValue": 18169662,
+    "inProgressPayments": 99961575,
+    "paymentGapPercentage": 84.6190876677267,
+    "completionRate": 9.63855421686747,
+    "pendingWorks": 134,
+    "unspentAmount": 102432720.11000001,
+    "totalRecommendedAmount": 185700000,
+    "name_hi": "Shri Rwngwra Narzary (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 118131237,
+      "totalEntries": 175,
+      "avgExpenditure": 675035.64,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4512224,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 61379807,
+        "transactionCount": 72
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 52239206,
+        "transactionCount": 95
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 118131237,
+        "transactionCount": 175,
+        "avgAmount": 675035.64
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 150,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3127e",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Construction and renovation of Bagals road Naboclay Sangha under Pub Bahjani no.8  G.P.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31790",
+        "workCategory": "Normal/Others",
+        "workDescription": "Restoration of R S afflux bund and improvement of upstream floor of Ujanigaon FIS under Kodomtal VCDC.",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 1484837
+      },
+      {
+        "_id": "6a932bb5cd94452437a316c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of road at Nayachora p-5 under Aeibhandarani VCDC.",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 1499451
+      },
+      {
+        "_id": "6a932bb5cd94452437a31284",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of RCC Box culvert at No.2 Makelikanda village approached road to Nijdala MB road under Balipara VCDC, Bhergaon.",
+        "completedDate": "2025-11-07T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a312f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of structure on burial/ cremation ground for public convenience at Ramfalbil Shamshan ghat under Ramfalbil VCDC,Kokrajahr",
+        "completedDate": "2025-07-29T00:00:00.000Z",
+        "finalAmount": 999000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.902Z"
+}

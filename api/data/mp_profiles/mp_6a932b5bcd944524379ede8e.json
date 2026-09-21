@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede8e",
+    "name": "Kalanidhi Veeraswamy",
+    "constituency": "CHENNAI NORTH",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 83933669,
+    "utilizationPercentage": 48.94091486880466,
+    "completedWorksCount": 40,
+    "recommendedWorksCount": 60,
+    "completedWorksValue": 58102632,
+    "inProgressPayments": 25831037,
+    "paymentGapPercentage": 30.77553657281442,
+    "completionRate": 40,
+    "pendingWorks": 20,
+    "unspentAmount": 87566331,
+    "totalRecommendedAmount": 88114000,
+    "name_hi": "Kalanidhi Veeraswamy",
+    "constituency_hi": "CHENNAI NORTH",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 83933669,
+      "totalEntries": 57,
+      "avgExpenditure": 1472520.50877193,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25019259,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 58914410,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 83933669,
+        "transactionCount": 57,
+        "avgAmount": 1472520.50877193
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 40,
+    "recommendedCount": 60,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "High End Multipara Monitor with Provision for invasive BP and End Tidal carbon dioxide monitoring and all accessories",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 9977320
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d28b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Formation of Foot Ball Ground at C Kalayanapuram Chennai Hr, Sec. School Div 46, zone,4",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1944524
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d995",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of Desk Bench Phase 2 50 Nos to Govt, Hr, sec, school, Manali, Chennai",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d97e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of CCTV Surveillance System Phase II to Jai Gopal Garodia Govt, Hr. sec, school, Thiruvetriyur, Chennai",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 990000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d96c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of Sports Equipments to G.K.M,  Colony Govt, Model Hr. Sec, school, Chennai",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 990000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.417Z"
+}

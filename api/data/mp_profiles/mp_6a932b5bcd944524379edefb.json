@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edefb",
+    "name": "Pralhad Venkatesh Joshi",
+    "constituency": "DHARWAD",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 20761060,
+    "utilizationPercentage": 14.12317006802721,
+    "completedWorksCount": 28,
+    "recommendedWorksCount": 174,
+    "completedWorksValue": 12859023,
+    "inProgressPayments": 7902037,
+    "paymentGapPercentage": 38.061818616197826,
+    "completionRate": 13.861386138613863,
+    "pendingWorks": 146,
+    "unspentAmount": 126238940,
+    "totalRecommendedAmount": 82850000,
+    "name_hi": "Pralhad Venkatesh Joshi",
+    "constituency_hi": "DHARWAD",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 20761060,
+      "totalEntries": 66,
+      "avgExpenditure": 314561.51515151514,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1247185,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 9430345,
+        "transactionCount": 39
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10083530,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 20761060,
+        "transactionCount": 66,
+        "avgAmount": 314561.51515151514
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 28,
+    "recommendedCount": 174,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d0eb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Bhavan at Shiggaon Taluk Chickbendageri Village Pry No 64 Near Bailbasaveshwar Temple",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 497336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1caad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Farmers Community Bhavan of Farmers Association at Shiggaon Taluk Dundshi Village Pry No 47",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 496663
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c991",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Bhavan at Shiggaon Taluk Belavalkoppa Village Pry No 503 347 Near BeerlingeshwarTempl",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 496236
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d594",
+        "workCategory": "Trust and Society",
+        "workDescription": "CONTINUE WORK OF CONSTRUCTION OF COMMUNITY BHAVAN OF DHARWAD ZILLA SAVITA SAMAJ (R) AT ARAVIND NAGAR, HUBLI CITY  WARD NO 55",
+        "completedDate": "2026-03-01T00:00:00.000Z",
+        "finalAmount": 896943
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d519",
+        "workCategory": "Normal/Others",
+        "workDescription": "onstruction of Cultural Bhavan at Kundagal Taluk Jigaloor Village Pry No 376 A near Sheshcharya Temple",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 398067
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.640Z"
+}

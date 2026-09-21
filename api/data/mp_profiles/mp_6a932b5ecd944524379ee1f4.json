@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f4",
+    "name": "Dr. Dharmshila Gupta (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Bihar",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 186200000,
+    "totalExpenditure": 136714265,
+    "utilizationPercentage": 73.42334317937701,
+    "completedWorksCount": 87,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 114316446,
+    "inProgressPayments": 22397819,
+    "paymentGapPercentage": 16.382942189682986,
+    "completionRate": 61.267605633802816,
+    "pendingWorks": -32,
+    "unspentAmount": 49485735,
+    "totalRecommendedAmount": 65333882,
+    "name_hi": "Dr. Dharmshila Gupta (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 136714265,
+      "totalEntries": 113,
+      "avgExpenditure": 1209860.7522123894,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 22503379,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 64054664,
+        "transactionCount": 59
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 50156222,
+        "transactionCount": 38
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 136714265,
+        "transactionCount": 113,
+        "avgAmount": 1209860.7522123894
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 87,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31e67",
+        "workCategory": "Normal/Others",
+        "workDescription": "BOUNDARY WALL- DARBHANGA, BAHADURPUR, WARD NO 48 PANDASARAI ME BHUTNATH SHAMSHAN KE BOUNDARY WALL WITH BRICKS WORK.",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 1385836
+      },
+      {
+        "_id": "6a932bb5cd94452437a323c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC ROAD- PATNA, SAMPATCHAK, PRAKHADN CHIPUURA WARD NO 5 ME MAHADALIT TOLA ME ENGINEER RAMPRAVESH KE GHAR SE MANIDEV JI KE GHAR KI ORE PCC ROAD.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1497111
+      },
+      {
+        "_id": "6a932bb5cd94452437a323c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC ROAD- PATNA, SAMPATCHAK, PRAKHADN CHIPUURA WARD NO 5 ME MAHADALIT TOLA ME KAMTA SINGH KE GHAR SE SURESH SINGH KE GHAR KI ORE PCC ROAD.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1497309
+      },
+      {
+        "_id": "6a932bb5cd94452437a323be",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC ROAD- PATNA, SAMPATCHAK, PRAKHADN CHIPURA WARD NO-3 CHIPURA KHURD MAIN ROAD SE CHANDAN JI KE GHAR KI TARAF PCC ROAD.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1497194
+      },
+      {
+        "_id": "6a932bb5cd94452437a323bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC ROAD- PATNA, SAMPATCHAK, PRAKHADN CHIPURA WARD NO-1 PARSA MAIN ROAD SE SANJAY SINGH KE GHAR KI TARAF PCC ROAD.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1497268
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.815Z"
+}

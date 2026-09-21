@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede14",
+    "name": "CHANDAN CHAUHAN",
+    "constituency": "BIJNOR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 80796698,
+    "utilizationPercentage": 54.96374013605442,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 102,
+    "completedWorksValue": 11364013,
+    "inProgressPayments": 69432685,
+    "paymentGapPercentage": 85.93505269237612,
+    "completionRate": 12.068965517241379,
+    "pendingWorks": 88,
+    "unspentAmount": 66203302,
+    "totalRecommendedAmount": 85813704,
+    "name_hi": "CHANDAN CHAUHAN",
+    "constituency_hi": "BIJNOR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 80796698,
+      "totalEntries": 209,
+      "avgExpenditure": 386587.0717703349,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34473366,
+        "transactionCount": 100
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 46323332,
+        "transactionCount": 109
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 80796698,
+        "transactionCount": 209,
+        "avgAmount": 386587.0717703349
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 102,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1abeb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of CC road and drain from the house of Lokenser to the House of Dharmender of Village Ahrola.",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 1380021
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c0c9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of RCC Road and Draning Road system to Satpal Malik House to Dinesh House in Maholla Gali No 6 Ankit Vihar ward 31",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 395440
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b9a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road and Drain construction work from NH58 to Jagan Tuble  in Rampur village",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 693703
+      },
+      {
+        "_id": "6a932bb5cd94452437a19721",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road and drain construction work of the road from Ranjeet’s house to Chandarpal’s house in Village Lalbhag, Purkaji",
+        "completedDate": "2025-11-04T00:00:00.000Z",
+        "finalAmount": 518742
+      },
+      {
+        "_id": "6a932bb5cd94452437a19691",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drain construction work from Ravinder’s house to Sinny/Aditya's farm in Village Karhera, Block Jansath.",
+        "completedDate": "2025-11-04T00:00:00.000Z",
+        "finalAmount": 1412124
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.875Z"
+}

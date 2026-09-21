@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a1",
+    "name": "Shri Sanjay Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Delhi",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 184466426.11,
+    "totalExpenditure": 16687160,
+    "utilizationPercentage": 9.046177319036474,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 85,
+    "completedWorksValue": 11222682,
+    "inProgressPayments": 5464478,
+    "paymentGapPercentage": 32.74660277722513,
+    "completionRate": 15.841584158415841,
+    "pendingWorks": 69,
+    "unspentAmount": 167779266.11,
+    "totalRecommendedAmount": 132806669,
+    "name_hi": "Shri Sanjay Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16687160,
+      "totalEntries": 22,
+      "avgExpenditure": 758507.2727272727,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 797663,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15889497,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16687160,
+        "transactionCount": 22,
+        "avgAmount": 758507.2727272727
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 85,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3214c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Regarding the provision of octagonal poles and semi-high Mast Poles With LED Fittings at various locations of Kotla Mubarakpur, Ward No. 147. I give my consent for the transfer  for the above-mentioned work from my MPLADS fund.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 732602
+      },
+      {
+        "_id": "6a932bb5cd94452437a31fb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Regarding the provisions of 171 Street Lights on Existing Poles at various locations of Kotla Mubarakpur, . I give my consent for the transfer  for the above-mentioned work from my MPLADS fund.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 701100
+      },
+      {
+        "_id": "6a932bb5cd94452437a32463",
+        "workCategory": "Normal/Others",
+        "workDescription": "regarding the provision of lighting arrangement with octagonal poles (along with fittings) at various locations in Ward No. 147 under Central Zone.",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 710048
+      },
+      {
+        "_id": "6a932bb5cd94452437a32282",
+        "workCategory": "Normal/Others",
+        "workDescription": "regarding the provision of lighting arrangement in R Block Park and Gandhi Park in Ward No. 147 under Central Zone",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 355941
+      },
+      {
+        "_id": "6a932bb5cd94452437a32283",
+        "workCategory": "Normal/Others",
+        "workDescription": "regarding the provision of lighting arrangement in C-96 Park in Ward No. 147 under Central Zone",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 370414
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.219Z"
+}

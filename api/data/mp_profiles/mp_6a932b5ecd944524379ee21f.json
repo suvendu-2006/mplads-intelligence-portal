@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee21f",
+    "name": "Shri Ashwini Vaishnaw (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Odisha",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 265563957.11,
+    "totalExpenditure": 20469117,
+    "utilizationPercentage": 7.707791833935292,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 4178264,
+    "inProgressPayments": 16290853,
+    "paymentGapPercentage": 79.587473167504,
+    "completionRate": 23.52941176470588,
+    "pendingWorks": 9,
+    "unspentAmount": 245094840.11,
+    "totalRecommendedAmount": 129119600,
+    "name_hi": "Shri Ashwini Vaishnaw (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 20469117,
+      "totalEntries": 23,
+      "avgExpenditure": 889961.6086956522,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1000000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19469117,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 20469117,
+        "transactionCount": 23,
+        "avgAmount": 889961.6086956522
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 13,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31f8b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Fixed Garden Gym equipment and playing equipment for children",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31fb8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rest Shed and Public Toilet facilities (Women)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3217a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of additional rooms & halls and peripheral development of Champanath Kalyan Mandap",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 1178264
+      },
+      {
+        "_id": "6a932bb5cd94452437a31b08",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of Public Park at Bhattarika (Drinking water, Sanitation, Parking Light etc.)",
+        "completedDate": "2025-10-13T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.734Z"
+}

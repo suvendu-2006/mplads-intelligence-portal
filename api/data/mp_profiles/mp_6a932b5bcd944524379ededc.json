@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ededc",
+    "name": "NABA CHARAN MAJHI",
+    "constituency": "MAYURBHANJ",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147563957.11,
+    "totalExpenditure": 34422207,
+    "utilizationPercentage": 23.326974739732904,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 194,
+    "completedWorksValue": 13783962,
+    "inProgressPayments": 20638245,
+    "paymentGapPercentage": 59.956193395734324,
+    "completionRate": 12.217194570135746,
+    "pendingWorks": 167,
+    "unspentAmount": 113141750.11000001,
+    "totalRecommendedAmount": 118700000,
+    "name_hi": "NABA CHARAN MAJHI",
+    "constituency_hi": "MAYURBHANJ",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34422207,
+      "totalEntries": 76,
+      "avgExpenditure": 452923.7763157895,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4800000,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29622207,
+        "transactionCount": 67
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34422207,
+        "transactionCount": 76,
+        "avgAmount": 452923.7763157895
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 194,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dfd0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CCROAD inside Of Nanduburu new primeary School from gate to office room and class room At- Nuagan Executive Agaency- ITDA KARANJIA",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db98",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Boundary wall  and site development of community center near jagannath mandir vill -Nudadiha executive agency ITDA Kaptipada",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db08",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road Sukruli PWD Road to Sai Mandir Road  AT- Sukruli Executive agency- ITDA Karanjia",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1daa9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road  with protection wall inside of Sukruli  PLUs 3 Degree College At- Sukruli Executive Agency- ITDA karnjia",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d64e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary wall at Badampahar  SISU MANDIR AT- Dhangdimuta executive agaency- B.D.O (KUSUMI)",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.703Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3a",
+    "name": "DR KALGE SHIVAJI BANDAPPA",
+    "constituency": "LATUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28846420,
+    "utilizationPercentage": 19.623414965986395,
+    "completedWorksCount": 26,
+    "recommendedWorksCount": 89,
+    "completedWorksValue": 21271865,
+    "inProgressPayments": 7574555,
+    "paymentGapPercentage": 26.258215057535732,
+    "completionRate": 22.608695652173914,
+    "pendingWorks": 63,
+    "unspentAmount": 118153580,
+    "totalRecommendedAmount": 69643514,
+    "name_hi": "DR KALGE SHIVAJI BANDAPPA",
+    "constituency_hi": "LATUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28846420,
+      "totalEntries": 34,
+      "avgExpenditure": 848424.1176470588,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11573990,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17272430,
+        "transactionCount": 20
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28846420,
+        "transactionCount": 34,
+        "avgAmount": 848424.1176470588
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 26,
+    "recommendedCount": 89,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e0d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement concrete road in open land owned by Gram Panchayat or Government from Bus Stand (Chhatrapati Shivaji Maharaj Chowk to Hanuman Mandir and Jama Masjid) at Shivanked (Khu.), Taluka Ahmedpur",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 999843
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0ba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement concrete road in open land owned by Gram Panchayat or Government from the house of Mr. Baburao Mugave to the houses of Mr. Ankush Mailare, Mr. Shekhar Dongre, Mr. Dongave under Jalkot Nagar Panchayat, Ward No. 1",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 941831
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e042",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road from Mohsin Sheikh's house, Gafar Sheikh's house to Pasha Attar's house at Pangaon, Tq.Renapur",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 797573
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dca6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement concrete road from Balaji Ugle to Kantabai Chopwad house and from Bandu Pandilwad to Tanaji Vitthal Ugle house at Nurangpura Taluka Kandhar District Nanded",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 990848
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbfc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement concrete road in open land of Gram Panchayat government within village at Baspur Taluka Nilanga",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 498425
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.897Z"
+}

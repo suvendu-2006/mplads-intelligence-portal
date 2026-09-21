@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede4a",
+    "name": "DR. RAJESH MISHRA",
+    "constituency": "SIDHI",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 262724510.35,
+    "totalExpenditure": 184983789,
+    "utilizationPercentage": 70.40979494207286,
+    "completedWorksCount": 172,
+    "recommendedWorksCount": 169,
+    "completedWorksValue": 136499025,
+    "inProgressPayments": 48484764,
+    "paymentGapPercentage": 26.210277269215197,
+    "completionRate": 50.43988269794721,
+    "pendingWorks": -3,
+    "unspentAmount": 77740721.35,
+    "totalRecommendedAmount": 99862816,
+    "name_hi": "DR. RAJESH MISHRA",
+    "constituency_hi": "SIDHI",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 184983789,
+      "totalEntries": 656,
+      "avgExpenditure": 281987.4832317073,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1250000,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 145193877,
+        "transactionCount": 454
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38539912,
+        "transactionCount": 199
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 184983789,
+        "transactionCount": 656,
+        "avgAmount": 281987.4832317073
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 172,
+    "recommendedCount": 169,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a53e",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT NAUDIYA ME RAJU KOL KE GHAR SE SHYAMLAL KOL KE GHAR TAK WBM SADAK NIRMAN KARYA",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1499438
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d255",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT NAUDHIYA ME VEERENDRA SINGH KE GHAR SE JAGYABHAN SAHU KE GHAR TAK NAVEEN SADAK NIRMAN KARYA",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1597944
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT BHAGOHAR ANTARGAT GRAM SUKHI CHAURAHA SE SENDURA TAK NAVEEN SADAK NIRMAN KARYA",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 996950
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a675",
+        "workCategory": "Normal/Others",
+        "workDescription": "GRAM PANCHAYAT KURRWAH ANTARGAT MADHURI PAWAI ME CM RISE SCHOOL SE PUSHPRAJ SINGH KE GHAR TAK NAVEEN SADAK NIRMAN KARYA",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 1499438
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c94a",
+        "workCategory": "Normal/Others",
+        "workDescription": "SHASAKIY UCHCHATAR MADHYAMIK VIDHYALAY CHARGODA JILA SINGRAULI ME WATER PURIFIER AND WATER COOLER LAGANA",
+        "completedDate": "2026-02-23T00:00:00.000Z",
+        "finalAmount": 148300
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.908Z"
+}

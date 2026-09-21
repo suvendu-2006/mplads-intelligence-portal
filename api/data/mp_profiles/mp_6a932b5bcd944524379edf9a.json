@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf9a",
+    "name": "SUDHA R",
+    "constituency": "MAYILADUTHURAI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147332315.11,
+    "totalExpenditure": 33193145,
+    "utilizationPercentage": 22.529439638016694,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 127,
+    "completedWorksValue": 17100375,
+    "inProgressPayments": 16092770,
+    "paymentGapPercentage": 48.48220920313517,
+    "completionRate": 14.76510067114094,
+    "pendingWorks": 105,
+    "unspentAmount": 114139170.11000001,
+    "totalRecommendedAmount": 79111000,
+    "name_hi": "SUDHA R",
+    "constituency_hi": "MAYILADUTHURAI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33193145,
+      "totalEntries": 47,
+      "avgExpenditure": 706237.1276595745,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17097070,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16096075,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33193145,
+        "transactionCount": 47,
+        "avgAmount": 706237.1276595745
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 127,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e496",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of High Mast Light (16 m) at Suryanar Kovil Panchayat",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e444",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of High Mast Light (16 m) near Pallivasal  in NachiyarKovil Panchayat",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b852",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Anganwadi Building at Uluthukuppai Panchayat",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1630446
+      },
+      {
+        "_id": "6a932bb5cd94452437a19b41",
+        "workCategory": "Normal/Others",
+        "workDescription": "Instalation of High Mast Light at Bazzar Street in Patteeswaram Panchayat",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c4e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter near Annanperumalkoil  in Karaimedu Panchayat.",
+        "completedDate": "2026-01-06T00:00:00.000Z",
+        "finalAmount": 599784
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.236Z"
+}

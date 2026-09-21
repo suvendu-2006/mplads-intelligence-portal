@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ededa",
+    "name": "MURASOLI S",
+    "constituency": "THANJAVUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76201785,
+    "utilizationPercentage": 51.83794897959184,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 44,
+    "completedWorksValue": 66622387,
+    "inProgressPayments": 9579398,
+    "paymentGapPercentage": 12.571093971092672,
+    "completionRate": 50.56179775280899,
+    "pendingWorks": -1,
+    "unspentAmount": 70798215,
+    "totalRecommendedAmount": 65917600,
+    "name_hi": "MURASOLI S",
+    "constituency_hi": "THANJAVUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76201785,
+      "totalEntries": 71,
+      "avgExpenditure": 1073264.5774647887,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 43435201,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32766584,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76201785,
+        "transactionCount": 71,
+        "avgAmount": 1073264.5774647887
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 44,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a179bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "New PDS building work at Venkatasamuthram panchayat, Kandamangalam",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 1348469
+      },
+      {
+        "_id": "6a932bb5cd94452437a179c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "thillaisanam Panchayat, Construction of New PDS Building,thiruvaiyaru",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 1348754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8fa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a new bus stop near Marunkulam Government Higher Secondary School in Marunkulam Panchayat",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 799695
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e57f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a multi-purpose waiting room in Mela Ulur Panchayat",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 4221324
+      },
+      {
+        "_id": "6a932bb5cd94452437a1792d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of New PDS Building at Vallam Municipality, Vallam South, ward no 8, Thanjavur",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1360000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.448Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf7",
+    "name": "BAPI HALDAR",
+    "constituency": "MATHURAPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 39006328,
+    "utilizationPercentage": 26.534917006802722,
+    "completedWorksCount": 87,
+    "recommendedWorksCount": 78,
+    "completedWorksValue": 33330839,
+    "inProgressPayments": 5675489,
+    "paymentGapPercentage": 14.550175038265586,
+    "completionRate": 52.72727272727272,
+    "pendingWorks": -9,
+    "unspentAmount": 107993672,
+    "totalRecommendedAmount": 43205343,
+    "name_hi": "BAPI HALDAR",
+    "constituency_hi": "MATHURAPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 39006328,
+      "totalEntries": 101,
+      "avgExpenditure": 386201.2673267327,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2640767,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 27746108,
+        "transactionCount": 76
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8619453,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 39006328,
+        "transactionCount": 101,
+        "avgAmount": 386201.2673267327
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 87,
+    "recommendedCount": 78,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a178b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OC CC ROAD  FROM ISWARIPUR PANCHANAN MONDIR TO FAKIR PARA CULVERT",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 199288
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e837",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CONCRETE ROAD FROM DINESH MONDAL HOUSE TO UTTAM BARIK HOUSE",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 491847
+      },
+      {
+        "_id": "6a932bb5cd94452437a17585",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTIONOF CONCRETE ROAD FROM RAYPURTRNCEFORMAR TO MUNAF MOLLA HOUSE VIA REJAUL MOLLA HOUSE",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 349590
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c920",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CONCRETE ROAD FROM ARFUN NAGAR BUSSTAND TO SUDARSHAN HALDER HOUSE AT SHYAMNAGAR",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 799834
+      },
+      {
+        "_id": "6a932bb5cd94452437a178b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OC CC ROAD FROM REBATI BAZKHA HOUSE TO PATIT HALDER HOUSE",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 199850
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.435Z"
+}

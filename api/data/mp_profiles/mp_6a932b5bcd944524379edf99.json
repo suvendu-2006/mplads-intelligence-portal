@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf99",
+    "name": "SUDAMA PRASAD",
+    "constituency": "ARRAH",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57716958,
+    "utilizationPercentage": 39.263236734693876,
+    "completedWorksCount": 66,
+    "recommendedWorksCount": 153,
+    "completedWorksValue": 44337622,
+    "inProgressPayments": 13379336,
+    "paymentGapPercentage": 23.180944498149053,
+    "completionRate": 30.136986301369863,
+    "pendingWorks": 87,
+    "unspentAmount": 89283042,
+    "totalRecommendedAmount": 97341878,
+    "name_hi": "SUDAMA PRASAD",
+    "constituency_hi": "ARRAH",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57716958,
+      "totalEntries": 86,
+      "avgExpenditure": 671127.4186046511,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4094959,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 53621999,
+        "transactionCount": 82
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57716958,
+        "transactionCount": 86,
+        "avgAmount": 671127.4186046511
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 66,
+    "recommendedCount": 153,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e1d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Opposite Old Police Station Ara Sasram Road",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "At turn of Baligaon Road Isadhi",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Lakshmipur Bazaar",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "At Saraiya Bazaar",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "At kolharampur market",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.217Z"
+}

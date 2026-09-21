@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf23",
+    "name": "RAKIBUL HUSSAIN",
+    "constituency": "DHUBRI",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47053373,
+    "utilizationPercentage": 32.00909727891156,
+    "completedWorksCount": 25,
+    "recommendedWorksCount": 152,
+    "completedWorksValue": 11696429,
+    "inProgressPayments": 35356944,
+    "paymentGapPercentage": 75.1422092524589,
+    "completionRate": 14.124293785310735,
+    "pendingWorks": 127,
+    "unspentAmount": 99946627,
+    "totalRecommendedAmount": 85542000,
+    "name_hi": "RAKIBUL HUSSAIN",
+    "constituency_hi": "DHUBRI",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47053373,
+      "totalEntries": 140,
+      "avgExpenditure": 336095.52142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2175000,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 32078694,
+        "transactionCount": 85
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12799679,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47053373,
+        "transactionCount": 140,
+        "avgAmount": 336095.52142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 25,
+    "recommendedCount": 152,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16eb4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary Wall at Joypur MPHC under Roumari GP",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a16ea8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction & Renovation of Central Library cum Auditorium Hall at Jaleswar",
+        "completedDate": "2026-04-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca09",
+        "workCategory": "Normal/Others",
+        "workDescription": "Pro-siltation  measures to protect KathuIipara area from erosion of river Tipkai under MPLAD 2024-25",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 299829
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca06",
+        "workCategory": "Normal/Others",
+        "workDescription": "Pro-siltation  measures to protect Suwapata pt- V area from erosion of river Gaurang under MPLAD 2024-25",
+        "completedDate": "2026-01-24T00:00:00.000Z",
+        "finalAmount": 299974
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c994",
+        "workCategory": "Normal/Others",
+        "workDescription": "Pro-siltation  measures to protect Hatipota pt - II arean from erosion of river Gaurang under MPLAD 2024-25",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 299974
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.664Z"
+}

@@ -11,6 +11,7 @@ import {
 import { useChartTheme } from '../../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../../lib/animationConfig'
 import { ChartTooltip } from './ChartTooltip'
+import { useTranslation } from '../../lib/i18n'
 
 export interface AreaSeriesConfig {
   key: string
@@ -42,6 +43,7 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
   formatter = 'crore',
 }) => {
   const theme = useChartTheme()
+  const { t, formatNum } = useTranslation()
   const areaAnimation = ANIMATION_CONFIG.getChartProps('area')
 
   return (
@@ -68,7 +70,7 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
             stroke={theme.textColor}
             fontSize={11}
             tickLine={false}
-            tickFormatter={(v) => (formatter === 'crore' ? `₹${v}Cr` : String(v))}
+            tickFormatter={(v) => (formatter === 'crore' ? `₹${formatNum(v)} ${t('unit.cr')}` : formatNum(String(v)))}
           />
 
           <Tooltip

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc0",
+    "name": "Vinod Chavda",
+    "constituency": "KACHCHH",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 51051603,
+    "utilizationPercentage": 34.72898163265306,
+    "completedWorksCount": 98,
+    "recommendedWorksCount": 256,
+    "completedWorksValue": 40172708,
+    "inProgressPayments": 10878895,
+    "paymentGapPercentage": 21.309605106817116,
+    "completionRate": 27.683615819209038,
+    "pendingWorks": 158,
+    "unspentAmount": 95948397,
+    "totalRecommendedAmount": 101436797,
+    "name_hi": "Vinod Chavda",
+    "constituency_hi": "KACHCHH",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 51051603,
+      "totalEntries": 126,
+      "avgExpenditure": 405171.45238095237,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13838966,
+        "transactionCount": 34
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37212637,
+        "transactionCount": 92
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 51051603,
+        "transactionCount": 126,
+        "avgAmount": 405171.45238095237
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 98,
+    "recommendedCount": 256,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e443",
+        "workCategory": "Normal/Others",
+        "workDescription": "Anjar talukana Anjar Shaher shri maru kansara soni ghnati smashan bhathi par chhatedi",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 483483
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e43f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Anjar Shaher Dashnam Goswami Samaj Kailash Dham Survey No. 42 Paase",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e08f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Anjar talukana chandrola gaame maheshwari samaj vistar sanskrutik hall",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bhuj talukana khavda gaame ranavaas ma sanskrutik hall",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Bhuj talukana vandhay gaame shri paschim kutch machchhu kathiya sai sutar darji gyati samajvadi pase karigar koman workshed",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.445Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec3",
+    "name": "Manickam Tagore B",
+    "constituency": "VIRUDHUNAGAR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 90165437,
+    "utilizationPercentage": 61.33703197278911,
+    "completedWorksCount": 69,
+    "recommendedWorksCount": 19,
+    "completedWorksValue": 73873945,
+    "inProgressPayments": 16291492,
+    "paymentGapPercentage": 18.068444563741203,
+    "completionRate": 78.4090909090909,
+    "pendingWorks": -50,
+    "unspentAmount": 56834563,
+    "totalRecommendedAmount": 23870000,
+    "name_hi": "Manickam Tagore B",
+    "constituency_hi": "VIRUDHUNAGAR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 90165437,
+      "totalEntries": 93,
+      "avgExpenditure": 969520.8279569893,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 37643145,
+        "transactionCount": 41
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 52522292,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 90165437,
+        "transactionCount": 93,
+        "avgAmount": 969520.8279569893
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 69,
+    "recommendedCount": 19,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e72f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus stop at N.Mettupatti Village and panchayat",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 999628
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6f2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter in P.Kammaipatti Village at Papakudi Panchayat",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 799993
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e65b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community Hall Building in Sengamalapatti Village and panchayat 2024 25",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 3000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PDS Building in Thenpalai Village and Puliyooran panchayat",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1099641
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bathtub with borewell at Kanjanaiyakkenpatti Village and panchayat",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 599264
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.429Z"
+}

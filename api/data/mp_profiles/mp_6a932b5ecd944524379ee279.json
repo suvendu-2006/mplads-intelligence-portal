@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee279",
+    "name": "Shri Pradip Kumar Varma (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Jharkhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 178564551.09,
+    "totalExpenditure": 101069118,
+    "utilizationPercentage": 56.60088600063694,
+    "completedWorksCount": 24,
+    "recommendedWorksCount": 214,
+    "completedWorksValue": 20485000,
+    "inProgressPayments": 80584118,
+    "paymentGapPercentage": 79.73169212775755,
+    "completionRate": 10.084033613445378,
+    "pendingWorks": 190,
+    "unspentAmount": 77495433.09,
+    "totalRecommendedAmount": 128406716,
+    "name_hi": "Shri Pradip Kumar Varma (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 101069118,
+      "totalEntries": 244,
+      "avgExpenditure": 414217.6967213115,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 80049374,
+        "transactionCount": 154
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21019744,
+        "transactionCount": 90
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 101069118,
+        "transactionCount": 244,
+        "avgAmount": 414217.6967213115
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 24,
+    "recommendedCount": 214,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a PCC road and Drain with Slab from the house of Mansoor Khalifa towards the Srirampur Aahar near Anganbaadi bhag 2 in Lesliganj village of Lesliganj Panchayat of Nilamber-Pitamber Block under Palamu District.",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 1400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d97",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Siddhnath's house towards Adiwasi Masna via Kaushal Kumar's house in Vindhya Vasini Nagar Kathitand Panchayat Ratu East of Ratu block under Ranchi district.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 630000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d9a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Sunil Kumar Sinha's house towards Yashoda Devi's house in  village Hotwasi Panchayat Balalong of Nagri block under Ranchi district.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d90",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC road from Ram Mandir towards Jaleshwar Nayak's house in Baridih, Village-Baridih, Panchayat-Baridih, Ormanjhi Block, Ranchi District.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 820000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d8d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a PCC road from Surendra Pandey's house towards Temple in Senetorium Ara in Ara Panchayat of Namkum block under Ranchi district.",
+        "completedDate": "2026-04-03T00:00:00.000Z",
+        "finalAmount": 1400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.419Z"
+}

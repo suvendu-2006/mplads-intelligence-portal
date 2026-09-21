@@ -10,7 +10,30 @@ import {
 import { clearApiCache } from '../lib/api'
 
 export type ThemeMode = 'device' | 'light' | 'dark' | 'auto'
-export type LangMode = 'en' | 'hi'
+export type LangMode =
+  | 'en'
+  | 'hi'
+  | 'bn'
+  | 'te'
+  | 'mr'
+  | 'ta'
+  | 'ur'
+  | 'gu'
+  | 'kn'
+  | 'or'
+  | 'ml'
+  | 'pa'
+  | 'as'
+  | 'mai'
+  | 'sat'
+  | 'ks'
+  | 'ne'
+  | 'kok'
+  | 'sd'
+  | 'doi'
+  | 'mni'
+  | 'brx'
+  | 'sa'
 
 export interface UserState {
   role: string
@@ -20,6 +43,8 @@ export interface UserState {
   mpName?: string
   sessionToken?: string
   permissions: string[]
+  isAuthenticated: boolean
+  email?: string
 }
 
 interface AppStore {
@@ -34,6 +59,15 @@ interface AppStore {
   setSearchQuery: (query: string) => void
   setBannerDismissed: (dismissed: boolean) => void
   setMpJurisdiction: (mpId: string, mpName?: string, state?: string) => void
+  login: (
+    role: string,
+    email?: string,
+    state?: string,
+    district?: string,
+    mpId?: string,
+    mpName?: string
+  ) => Promise<void>
+  logout: () => void
   switchRole: (
     role: string,
     state?: string,
@@ -49,7 +83,9 @@ export const useStore = create<AppStore>()(
       user: {
         role: 'viewer',
         permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
-        sessionToken: 'default_viewer'
+        sessionToken: 'default_viewer',
+        isAuthenticated: false,
+        email: 'citizen@satark.gov.in'
       },
       theme: 'light',
       lang: 'en',
@@ -73,8 +109,9 @@ export const useStore = create<AppStore>()(
           clearApiCache()
         }
       },
-      switchRole: async (
+      login: async (
         role: string,
+        email?: string,
         state?: string,
         district?: string,
         mpId?: string,
@@ -103,7 +140,6 @@ export const useStore = create<AppStore>()(
           role === 'viewer' || role === 'mospi' ? 'All Members of Parliament' : undefined
         )
 
-        // 1. Instantaneous local update: reset search query & set clean role state
         set({
           searchQuery: '',
           user: {
@@ -112,10 +148,110 @@ export const useStore = create<AppStore>()(
             district: newDistrict,
             mpId: newMpId,
             mpName: newMpName,
-            sessionToken: `demo_session_${role}_${Date.now()}`,
-            permissions: defaultPermissions
+            sessionToken: `auth_session_${role}_${Date.now()}`,
+            permissions: defaultPermissions,
+            isAuthenticated: true,
+            email: email || `${role}@satark.gov.in`
           }
         })
+
+        if (typeof window !== 'undefined') {
+          try {
+            sessionStorage.clear()
+          } catch {}
+          clearApiCache()
+        }
+
+        fetch('/api/switch-role', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            role,
+            state: newState,
+            district: newDistrict,
+            mp_id: newMpId,
+            mp_name: newMpName
+          }),
+        }).catch(() => {})
+      },
+      logout: () => {
+        set({
+          searchQuery: '',
+          user: {
+            role: 'viewer',
+            permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+            sessionToken: 'default_viewer',
+            isAuthenticated: false,
+            email: 'citizen@satark.gov.in',
+            state: 'ALL',
+            district: 'ALL',
+            mpId: 'ALL',
+            mpName: 'All Members of Parliament'
+          }
+        })
+        if (typeof window !== 'undefined') {
+          try {
+            sessionStorage.clear()
+          } catch {}
+          clearApiCache()
+        }
+      },
+      switchRole: async (
+        role: string,
+        state?: string,
+        district?: string,
+        mpId?: string,
+        mpName?: string
+      ) => {
+        const isOfficial = role !== 'viewer'
+        const defaultPermissions = role === 'mospi'
+          ? ['read:all', 'write:all', 'audit:execute', 'admin:access']
+          : role === 'state_nodal_officer'
+          ? ['read:state', 'write:state', 'audit:inspect', 'read:my_state', 'read:entity_risks', 'read:national', 'read:states', 'read:mps', 'read:map']
+          : role === 'district_authority'
+          ? ['read:district', 'write:district', 'audit:inspect', 'read:district_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:sanction_work', 'action:review_mb']
+          : role === 'mp'
+          ? ['read:mp', 'write:mp', 'read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter']
+          : ['read:national', 'read:states', 'read:mps', 'read:map']
+
+        const newState = state ? state : (
+          role === 'state_nodal_officer' || role === 'district_authority' || role === 'mp' ? 'Odisha' : 'ALL'
+        )
+        const newDistrict = district ? district : (
+          role === 'district_authority' ? 'Sambalpur' : (role === 'viewer' || role === 'mospi' ? 'ALL' : undefined)
+        )
+        const newMpId = mpId ? mpId : (
+          role === 'mp' ? 'MP-OD-03' : (role === 'viewer' || role === 'mospi' ? 'ALL' : undefined)
+        )
+        const newMpName = mpName ? mpName : (
+          role === 'mp' ? 'Dharmendra Pradhan' : (role === 'viewer' || role === 'mospi' ? 'All Members of Parliament' : undefined)
+        )
+
+        const defaultEmail = role === 'viewer'
+          ? 'citizen@satark.gov.in'
+          : role === 'mospi'
+          ? 'officer.mospi@gov.in'
+          : role === 'state_nodal_officer'
+          ? `sna.${(newState || 'odisha').toLowerCase().replace(/\s+/g, '')}@gov.in`
+          : role === 'district_authority'
+          ? `collector.${(newDistrict || 'sambalpur').toLowerCase().replace(/\s+/g, '')}@gov.in`
+          : `mp.${(newMpId || 'sambalpur').toLowerCase()}@sansad.nic.in`
+
+        // 1. Instantaneous local update: reset search query & set clean role state
+        set((prev) => ({
+          searchQuery: '',
+          user: {
+            role,
+            state: newState,
+            district: newDistrict,
+            mpId: newMpId,
+            mpName: newMpName,
+            sessionToken: `session_${role}_${Date.now()}`,
+            permissions: defaultPermissions,
+            isAuthenticated: isOfficial,
+            email: defaultEmail
+          }
+        }))
 
         // 2. Clear ALL role-specific, searched and cached data from session storage and RAM
         if (typeof window !== 'undefined') {
@@ -157,7 +293,7 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
-      version: 5,
+      version: 6,
       partialize: (state) => ({
         theme: state.theme,
         lang: state.lang,
@@ -169,18 +305,26 @@ export const useStore = create<AppStore>()(
           mpId: state.user.mpId,
           mpName: state.user.mpName,
           permissions: state.user.permissions,
-          sessionToken: state.user.sessionToken
+          sessionToken: state.user.sessionToken,
+          isAuthenticated: state.user.isAuthenticated,
+          email: state.user.email
         }
       }),
       migrate: (persistedState: any, version: number) => {
-        if (version < 5) {
+        if (version < 6) {
           return {
             ...persistedState,
             theme: persistedState?.theme === 'dark' ? 'dark' : 'light',
             user: {
-              role: 'viewer',
-              permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
-              sessionToken: 'default_viewer'
+              role: persistedState?.user?.role || 'viewer',
+              permissions: persistedState?.user?.permissions || ['read:national', 'read:states', 'read:mps', 'read:map'],
+              sessionToken: persistedState?.user?.sessionToken || 'default_viewer',
+              isAuthenticated: Boolean(persistedState?.user?.isAuthenticated && persistedState?.user?.role !== 'viewer'),
+              email: persistedState?.user?.email || 'citizen@satark.gov.in',
+              state: persistedState?.user?.state || 'ALL',
+              district: persistedState?.user?.district || 'ALL',
+              mpId: persistedState?.user?.mpId || 'ALL',
+              mpName: persistedState?.user?.mpName || 'All Members of Parliament'
             }
           }
         }

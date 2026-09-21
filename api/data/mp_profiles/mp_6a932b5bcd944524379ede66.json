@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede66",
+    "name": "GOVIND MAKTHAPPA KARJOL",
+    "constituency": "CHITRADURGA",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 45195747,
+    "utilizationPercentage": 30.745406122448983,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 204,
+    "completedWorksValue": 8719720,
+    "inProgressPayments": 36476027,
+    "paymentGapPercentage": 80.70676871432173,
+    "completionRate": 8.520179372197308,
+    "pendingWorks": 185,
+    "unspentAmount": 101804253,
+    "totalRecommendedAmount": 110100000,
+    "name_hi": "GOVIND MAKTHAPPA KARJOL",
+    "constituency_hi": "CHITRADURGA",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 45195747,
+      "totalEntries": 121,
+      "avgExpenditure": 373518.5702479339,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22516539,
+        "transactionCount": 54
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22679208,
+        "transactionCount": 67
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 45195747,
+        "transactionCount": 121,
+        "avgAmount": 373518.5702479339
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 204,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e160",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rangamandira at Adanuru village of Holalkere Grama Panchayath",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 399248
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d287",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound wall to Anganawadi  B centre at Dogganahal Village of Dummi Grama Panchayath",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 389712
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c1e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound wall to Anganawadi centre at Chikkumthi village of Tumkoorlahalli grama Panchayath",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 397033
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c038",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound wall to Government Higher Primary School of P.Gowripura Village of Siddeshwaranadurga Grama Panchayath",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 251077
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b9a9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Continuation work of Construction of Community hall at Bangarakkanahalli village of Turuvanuru Panchayath of Chitradurga taluk",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 499517
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.894Z"
+}

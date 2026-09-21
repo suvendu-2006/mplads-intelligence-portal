@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef6",
+    "name": "Prabhubhai Nagarbhai Vasava",
+    "constituency": "BARDOLI",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 27468376,
+    "utilizationPercentage": 18.68597006802721,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 253,
+    "completedWorksValue": 19899308,
+    "inProgressPayments": 7569068,
+    "paymentGapPercentage": 27.55557154161571,
+    "completionRate": 19.682539682539684,
+    "pendingWorks": 191,
+    "unspentAmount": 119531624,
+    "totalRecommendedAmount": 79406828,
+    "name_hi": "Prabhubhai Nagarbhai Vasava",
+    "constituency_hi": "BARDOLI",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27468376,
+      "totalEntries": 84,
+      "avgExpenditure": 327004.4761904762,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 294287,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 15744035,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11430054,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27468376,
+        "transactionCount": 84,
+        "avgAmount": 327004.4761904762
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 253,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e631",
+        "workCategory": "Normal/Others",
+        "workDescription": "Divyang Hiteshbhai Chaudhari (resident of Kasal, Mandvi, Dist.Surat) at Kasal village, the work of electric scooter facility, Taluka Mandvi, Dist.Surat",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 75000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc46",
+        "workCategory": "Normal/Others",
+        "workDescription": "the following facility work regarding placing electricity pole near the field in front of the P.S., fixing till commissioning 11.00 M.T.R.G.I. Tuber Light Poles with 150 Volt 6 Flooded LEDs Lights Attachment and Leader with 1 Year Maintenance Work Nos.1, at kevadi village near Surat District bank, Taluka Umarpada, District Surat",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 177500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc43",
+        "workCategory": "Normal/Others",
+        "workDescription": "The following facility work regarding installation of electricity pole , fixing till commissioning 11.00 M.T.R.G.I. Tuber Light Poles with 150 Volt 6 Flooded LEDs LIGHT ATTACHMENT AND LEADER WITH 1 EAR MAINTENANCE WORK NO-1, Near Primary health center, at Kevadi, Taluka Umarpada, District Surat",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 177500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc45",
+        "workCategory": "Normal/Others",
+        "workDescription": "The following facility work regarding installation of electricity pole , fixing till commissioning 11.00 M.T.R.G.I. Tuber Light Poles with 150 Volt 6 Flooded LEDs LIGHT ATTACHMENT AND LEADER WITH 1 EAR MAINTENANCE WORK NO-1, Upla faliya, at Kali jaman villege, Taluka Umarpada, District Surat",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 177500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mandvi Municipality for Community Purpose of drinking water tanker Nos-2, Taluka Mandvi, District surat",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 499350
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.514Z"
+}

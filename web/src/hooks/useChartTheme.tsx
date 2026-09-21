@@ -114,14 +114,14 @@ export const useChartTheme = () => {
       hex: getComputedColor('--success', palette.risk.clean[isDark ? 'dark' : 'light']),
     }
 
-    const gridColor = getComputedColor('--border-primary', isDark ? '#232A3D' : '#E7E2D9')
-    const textColor = getComputedColor('--text-secondary', isDark ? '#A5B0C2' : '#423229')
-    const mutedTextColor = getComputedColor('--text-tertiary', isDark ? '#6B7A93' : '#705F55')
+    const gridColor = getComputedColor('--border-primary', isDark ? '#2D2723' : '#E7E2D9')
+    const textColor = getComputedColor('--text-secondary', isDark ? '#C8C0B6' : '#4A443D')
+    const mutedTextColor = getComputedColor('--text-tertiary', isDark ? '#A39A90' : '#6B645C')
 
     const tooltip = {
-      bg: getComputedColor('--surface-primary', isDark ? '#111520' : '#FFFFFF'),
-      border: getComputedColor('--border-primary', isDark ? '#232A3D' : '#E7E2D9'),
-      text: getComputedColor('--text-primary', isDark ? '#F4F6FA' : '#24140E'),
+      bg: getComputedColor('--surface-primary', isDark ? '#1D1916' : '#FFFFFF'),
+      border: getComputedColor('--border-primary', isDark ? '#2D2723' : '#E7E2D9'),
+      text: getComputedColor('--text-primary', isDark ? '#F3EEE8' : '#1F1A17'),
     }
 
     // Chart color pairs array for category

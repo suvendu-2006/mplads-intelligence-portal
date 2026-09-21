@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede57",
+    "name": "Faggan Singh Kulaste",
+    "constituency": "MANDLA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151861648.41,
+    "totalExpenditure": 54608168,
+    "utilizationPercentage": 35.95915662166887,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 268,
+    "completedWorksValue": 16232310,
+    "inProgressPayments": 38375858,
+    "paymentGapPercentage": 70.27494128717154,
+    "completionRate": 10.367892976588628,
+    "pendingWorks": 237,
+    "unspentAmount": 97253480.41,
+    "totalRecommendedAmount": 77540985,
+    "name_hi": "Faggan Singh Kulaste",
+    "constituency_hi": "MANDLA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 54608168,
+      "totalEntries": 286,
+      "avgExpenditure": 190937.65034965036,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1000000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 26031433,
+        "transactionCount": 153
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27576735,
+        "transactionCount": 131
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 54608168,
+        "transactionCount": 286,
+        "avgAmount": 190937.65034965036
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 268,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e47f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of G.S.V. Road gram payli, gram panchayat jogigufa, janpad panchayat lakhanadaun",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 999976
+      },
+      {
+        "_id": "6a932bb5cd94452437a16825",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of grewal road from bareli to Kadawi Thawri",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a16826",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of grewal road from Jhalwani to Kadawi Thawri",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1861c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Janpad Panchayat Beejadandi, mandla ke gram panchayat khamher Kheda ke antergat poshak gram Kurkuti ke bhurka tola nala me puliya nirman karya.",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 499927
+      },
+      {
+        "_id": "6a932bb5cd94452437a1756f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kherapati mandir ke pas shed nirman",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.942Z"
+}

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
+import { BackButton } from '../components/BackButton'
 import {
   StatCard,
   EmptyState,
@@ -19,16 +20,22 @@ import {
   Search,
   ArrowRight,
   RotateCcw,
-  MapPin
+  MapPin,
+  TrendingUp,
+  Users,
+  Check,
+  Eye
 } from 'lucide-react'
 import { apiFetch } from '../lib/api'
-import { t } from '../lib/i18n'
+import { useTranslation, translateState } from '../lib/i18n'
 import { fmtCrore } from '../lib/currency'
 import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 
 export const MyState: React.FC = () => {
   const { user, switchRole } = useStore()
-  const isAuthorized = ['state_nodal_officer', 'admin', 'mospi'].includes(user.role)
+  const { t, toNativeDigits: formatNum, lang } = useTranslation()
+  const navigate = useNavigate()
+  const isAuthorized = Boolean(user.isAuthenticated && ['state_nodal_officer', 'admin', 'mospi'].includes(user.role))
   const hasSelectedState = Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
   const targetState = hasSelectedState ? user.state! : ''
   const [stateSearch, setStateSearch] = useState('')
@@ -124,10 +131,10 @@ export const MyState: React.FC = () => {
           The State Nodal Officer Command Center is restricted to designated state administrative secretaries and central oversight auditors.
         </p>
         <button
-          onClick={() => switchRole('state_nodal_officer')}
-          className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
+          onClick={() => navigate('/login?role=state_nodal_officer')}
+          className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition cursor-pointer"
         >
-          Open State Jurisdiction Gate
+          Log In as State Nodal Authority (Autofilled)
         </button>
       </div>
     )
@@ -142,6 +149,9 @@ export const MyState: React.FC = () => {
 
     return (
       <div className="max-w-4xl mx-auto py-8 px-4 space-y-6 animate-in fade-in duration-300">
+        <div className="flex items-center justify-start">
+          <BackButton fallback="/states" />
+        </div>
         <div className="rounded-3xl p-6 sm:p-8 bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] shadow-xl text-center space-y-4">
           <div className="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-500 flex items-center justify-center mx-auto shadow-sm">
             <Building2 size={28} />
@@ -177,17 +187,17 @@ export const MyState: React.FC = () => {
               onClick={async () => {
                 await switchRole('state_nodal_officer', st)
               }}
-              className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-emerald-500 hover:bg-emerald-500/5 transition-all text-left flex items-center justify-between group cursor-pointer shadow-xs"
+              className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-emerald-500 hover:bg-emerald-500/5 transition-colors duration-150 text-left flex items-center justify-between group cursor-pointer shadow-xs"
             >
               <div className="flex items-center gap-2.5 min-w-0 pr-2">
-                <div className="w-8 h-8 rounded-lg bg-[var(--surface-alt)] text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-[var(--surface-alt)] text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-150 flex items-center justify-center shrink-0">
                   <MapPin size={15} />
                 </div>
                 <span className="text-xs font-bold text-[var(--text-primary)] truncate">
                   {st}
                 </span>
               </div>
-              <ArrowRight size={14} className="text-[var(--text-tertiary)] group-hover:text-emerald-500 group-hover:translate-x-1 transition-all shrink-0" />
+              <ArrowRight size={14} className="text-[var(--text-tertiary)] group-hover:text-emerald-500 group-hover:translate-x-1 transition-transform duration-150 shrink-0" />
             </button>
           ))}
         </div>
@@ -213,38 +223,32 @@ export const MyState: React.FC = () => {
       {/* 8A. Banner: You are viewing your assigned state */}
       <div className="rounded-2xl p-4 sm:p-5 bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
+          <BackButton fallback="/states" />
           <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center font-bold">
             <Building2 size={20} />
           </div>
           <div>
             <div className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>OFFICIAL STATE NODAL JURISDICTION</span>
+              <span>{t('state_nodal.banner_title')}</span>
             </div>
             <h1 className="text-xl sm:text-2xl font-black text-[var(--text-primary)] tracking-tight">
-              {stateName}
+              {translateState(stateName, lang)}
             </h1>
           </div>
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={async () => {
-              await switchRole('state_nodal_officer', '')
-            }}
-            className="text-xs px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-alt)] hover:border-emerald-500 font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer flex items-center gap-1.5"
-          >
-            <RotateCcw size={12} />
-            <span>Change State</span>
-          </button>
           <span className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] font-bold text-[var(--text-secondary)]">
-            Role: State Nodal Officer
+            {t('state_nodal.role_badge')}
           </span>
           <Link
             to={`/states/${encodeURIComponent(stateName)}`}
-            className="text-xs px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition"
+            className="text-xs px-3.5 py-1.5 rounded-xl bg-[var(--brand-primary)] !text-white font-bold hover:opacity-90 shadow-sm transition flex items-center gap-1.5 cursor-pointer"
+            style={{ color: '#ffffff' }}
           >
-            Public View
+            <Eye size={13} style={{ color: '#ffffff' }} />
+            <span style={{ color: '#ffffff' }}>{t('state_nodal.public_view')}</span>
           </Link>
         </div>
       </div>
@@ -252,31 +256,31 @@ export const MyState: React.FC = () => {
       {/* National Mini KPIs (Context Only, 4 small cards) */}
       <div>
         <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-1">
-          National Scheme Context (Macro Baseline)
+          {t('macro.title')}
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="p-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)]">
-            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">National Corpus</span>
+            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">{t('macro.corpus')}</span>
             <span className="text-base font-extrabold tabular-nums text-[var(--text-primary)]">
-              ₹{fmtCrore(nationalMeta?.totalAllocated ?? 116819035627.53)} Cr
+              ₹{formatNum(fmtCrore(nationalMeta?.totalAllocated ?? 116819035627.53))} {t('unit.cr')}
             </span>
           </div>
           <div className="p-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)]">
-            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">National Disbursed</span>
+            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">{t('macro.disbursed')}</span>
             <span className="text-base font-extrabold tabular-nums text-emerald-600 dark:text-emerald-400">
-              ₹{fmtCrore(nationalMeta?.totalExpenditure ?? 39642944289.14)} Cr
+              ₹{formatNum(fmtCrore(nationalMeta?.totalExpenditure ?? 39642944289.14))} {t('unit.cr')}
             </span>
           </div>
           <div className="p-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)]">
-            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">National Realization</span>
+            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">{t('macro.realization')}</span>
             <span className="text-base font-extrabold tabular-nums text-[var(--text-primary)]">
-              {nationalMeta?.utilizationPercentage != null ? `${nationalMeta.utilizationPercentage.toFixed(1)}%` : '33.9%'}
+              {formatNum(nationalMeta?.utilizationPercentage != null ? nationalMeta.utilizationPercentage.toFixed(1) : '33.9')}%
             </span>
           </div>
           <div className="p-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)]">
-            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">Total Monitored MPs</span>
+            <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">{t('macro.monitored_mps')}</span>
             <span className="text-base font-extrabold tabular-nums text-[var(--text-primary)]">
-              {nationalMeta?.totalMPs ?? 774}
+              {formatNum(nationalMeta?.totalMPs ?? 774)}
             </span>
           </div>
         </div>
@@ -285,115 +289,213 @@ export const MyState: React.FC = () => {
       {/* State Focus (4 KPIs, large) */}
       <div>
         <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] mb-2 px-1">
-          State Operational Outlay ({stateName})
+          {t('state.operational_outlay')} ({translateState(stateName, lang)})
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
             icon={Landmark}
-            label="State Sanctioned"
-            value={allocCr}
+            label="mps.fund_allocated"
+            value={Number(allocCr)}
             prefix="₹"
             unit="Cr"
             theme="gold"
-            description="Total state envelope"
+            description="kpi.total_central_sanction"
           />
           <StatCard
             icon={Coins}
-            label="Used / Disbursed"
-            value={expCr}
+            label="mps.disbursed"
+            value={Number(expCr)}
             prefix="₹"
             unit="Cr"
             theme="gold"
-            description="Funds released to IDAs"
+            description="kpi.verified_expenditure"
           />
           <StatCard
             icon={Percent}
-            label="Utilization Velocity"
-            value={util}
+            label="kpi.utilization"
+            value={Number(util)}
             unit="%"
             theme="emerald"
-            gaugeValue={util}
-            description="Tranche absorption rate"
+            gaugeValue={Number(util)}
+            description="kpi.expenditure_ratio"
           />
           <StatCard
             icon={Clock}
-            label="Unspent Payment Gap"
-            value={paymentGap}
+            label="kpi.payment_gap"
+            value={Number(paymentGap)}
             unit="%"
             theme="amber"
-            description="Committed balance in queue"
+            description="kpi.pending_disbursement"
           />
         </div>
       </div>
 
-      {/* District Performance Table (All Districts, No Pagination) */}
+      {/* District Performance & Liability Ledger (Card Grid Style) */}
       <SectionCard
-        title="District Performance & Liability Ledger"
-        subtitle={`Complete census across all ${districts.length} administrative districts in ${stateName}`}
+        title={t('ledger.title')}
+        subtitle={t('ledger.subtitle', { count: formatNum(districts.length), state: translateState(stateName, lang) })}
       >
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead>
-              <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                <th className="p-3 font-bold whitespace-nowrap">District Name</th>
-                <th className="p-3 font-bold whitespace-nowrap text-right">Amount Allocated</th>
-                <th className="p-3 font-bold whitespace-nowrap text-right">Amount Spent</th>
-                <th className="p-3 font-bold whitespace-nowrap text-center">Total Works</th>
-                <th className="p-3 font-bold whitespace-nowrap">Members of Parliament</th>
-                <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[var(--border-primary)]">
-              {districts.map((d: any) => {
-                const distName = d.district_nodal || d.districtNodal || d.district || 'District'
-                const completionPct = Number(d.completion_rate_pct ?? d.completionRatePct ?? 0)
-                const totWorks = d.total_works ?? d.totalWorks ?? 0
-                const rawPort = d.portfolio_value ?? d.portfolioValue ?? d.totalExpenditure ?? 0
-                const allocatedVal = rawPort > 0 ? rawPort : (totWorks * 2500000.0)
-                const spentVal = d.expenditure ?? d.totalExpenditure ?? (allocatedVal * (completionPct / 100))
-                const allocatedCr = (allocatedVal / 10000000).toFixed(2)
-                const spentCr = (spentVal / 10000000).toFixed(2)
-                const activeMps = d.mps_active || d.activeMps || ''
-                const mpCount = d.mp_count ?? d.mpCount ?? (activeMps ? activeMps.split(',').filter(Boolean).length : 0)
-
-                return (
-                  <tr key={distName} className="hover:bg-[var(--surface-alt)]/50 transition">
-                    <td className="p-3 font-bold text-[var(--text-primary)] whitespace-nowrap">
-                      {distName}
-                    </td>
-                    <td className="p-3 font-black tabular-nums text-[var(--brand-primary)] dark:text-blue-400 whitespace-nowrap text-right">
-                      ₹{allocatedCr} Cr
-                    </td>
-                    <td className="p-3 font-black tabular-nums text-[var(--gold-text)] whitespace-nowrap text-right">
-                      ₹{spentCr} Cr
-                    </td>
-                    <td className="p-3 text-[var(--text-secondary)] font-medium whitespace-nowrap text-center">
-                      {totWorks} works
-                    </td>
-                    <td className="p-3 text-[var(--text-secondary)] font-semibold whitespace-nowrap">
-                      {mpCount} {mpCount === 1 ? 'MP' : 'MPs'}
-                    </td>
-                    <td className="p-3 text-right whitespace-nowrap">
-                      <Link
-                        to={`/districts/${encodeURIComponent(distName)}`}
-                        className="px-2.5 py-1 rounded bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] whitespace-nowrap inline-block"
-                      >
-                        Explore
-                      </Link>
-                    </td>
-                  </tr>
-                )
+        <div className="space-y-4">
+          {/* Search bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="relative max-w-sm w-full">
+              <Search className="w-4 h-4 text-[var(--text-tertiary)] absolute left-3 top-2.5" />
+              <input
+                type="text"
+                value={stateSearch}
+                onChange={(e) => setStateSearch(e.target.value)}
+                placeholder={t('district.filter_placeholder')}
+                className="w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)]"
+              />
+            </div>
+            <div className="text-xs text-[var(--text-secondary)] font-medium">
+              {t('common.showing_simple', {
+                count: formatNum(districts.filter((d: any) => (d.district_nodal || d.districtNodal || d.district || '').toLowerCase().includes(stateSearch.toLowerCase().trim())).length),
+                total: formatNum(districts.length)
               })}
-            </tbody>
-          </table>
+            </div>
+          </div>
+
+          {districts.filter((d: any) => (d.district_nodal || d.districtNodal || d.district || '').toLowerCase().includes(stateSearch.toLowerCase().trim())).length === 0 ? (
+            <EmptyState
+              title={t('state.no_districts_match')}
+              description={`No district matches "${stateSearch}".`}
+            />
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {districts
+                .filter((d: any) => (d.district_nodal || d.districtNodal || d.district || '').toLowerCase().includes(stateSearch.toLowerCase().trim()))
+                .map((d: any, idx: number) => {
+                  const distName = d.district_nodal || d.districtNodal || d.district || 'District'
+                  const completionPct = Number(d.completion_rate_pct ?? d.completionRatePct ?? 0)
+                  const totWorks = d.total_works ?? d.totalWorks ?? 0
+                  const rawPort = d.portfolio_value ?? d.portfolioValue ?? d.totalExpenditure ?? 0
+                  const allocatedVal = rawPort > 0 ? rawPort : (totWorks * 2500000.0)
+                  const spentVal = d.expenditure ?? d.totalExpenditure ?? (allocatedVal * (completionPct / 100))
+                  const allocatedCr = (allocatedVal / 10000000).toFixed(2)
+                  const spentCr = (spentVal / 10000000).toFixed(2)
+                  const activeMps = d.mps_active || d.activeMps || ''
+                  const mpCount = d.mp_count ?? d.mpCount ?? (activeMps ? activeMps.split(',').filter(Boolean).length : 0)
+                  const compW = d.completed_works_count ?? d.completedWorks ?? Math.round(totWorks * (completionPct / 100))
+                  const expenditureRate = allocatedVal > 0 ? Number(((spentVal / allocatedVal) * 100).toFixed(1)) : completionPct
+
+                  return (
+                    <div
+                      key={distName}
+                      className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:border-[var(--brand-accent)] hover:shadow-md transition-colors duration-150 flex flex-col justify-between group"
+                    >
+                      <div>
+                        {/* Header: District Name + MPs + Rank Badge */}
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0">
+                            <Link
+                              to={`/districts/${encodeURIComponent(distName)}`}
+                              className="text-lg sm:text-xl font-bold font-sans text-[var(--text-primary)] tracking-tight hover:text-[var(--brand-primary)] transition truncate block"
+                            >
+                              {distName}
+                            </Link>
+
+                            <div className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] font-medium mt-1">
+                              <Users size={13} className="text-[var(--text-tertiary)]" />
+                              <span>{formatNum(mpCount)} {mpCount === 1 ? t('unit.mp') : t('unit.mps')}</span>
+                            </div>
+                          </div>
+
+                          {/* Rank Badge */}
+                          <span className="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/50 text-sky-700 dark:text-sky-300 border border-sky-100 dark:border-sky-900/60 shrink-0">
+                            {t('label.rank')} #{formatNum(idx + 1)} / {formatNum(districts.length)}
+                          </span>
+                        </div>
+
+                        {/* Two-Column Metrics: ALLOCATED vs RECORDED EXPENDITURE */}
+                        <div className="mt-5 mb-4 grid grid-cols-2 gap-4">
+                          <div className="flex flex-col">
+                            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
+                              {t('kpi.allocated')}
+                            </div>
+                            <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
+                              ₹{formatNum(allocatedCr)} {t('unit.cr')}
+                            </div>
+                          </div>
+
+                          <div className="flex flex-col">
+                            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider font-bold text-[var(--text-secondary)] h-8 flex items-end pb-0.5">
+                              {t('kpi.used')}
+                            </div>
+                            <div className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-snug">
+                              ₹{formatNum(spentCr)} {t('unit.cr')}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Expenditure Rate with TrendingUp icon + Uniform Progress Bar */}
+                        <div className="mb-4">
+                          <div className="flex items-center justify-between text-xs font-semibold">
+                            <span className="text-[var(--text-secondary)]">{t('kpi.utilization')}</span>
+                            <span className="font-bold flex items-center gap-0.5 tabular-nums text-rose-500 dark:text-rose-400">
+                              <TrendingUp size={14} className="shrink-0" />
+                              <span>{formatNum(expenditureRate.toFixed(1))}%</span>
+                            </span>
+                          </div>
+
+                          <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
+                            <div
+                              className="h-full rounded-full transition-all duration-700 bg-[#B7791F] dark:bg-[#FF9E3B]"
+                              style={{ width: `${Math.min(100, Math.max(3, expenditureRate))}%` }}
+                            />
+                          </div>
+                        </div>
+
+                        {/* Works Completed & Completion Rate */}
+                        <div className="flex items-center justify-between py-3 border-t border-slate-100 dark:border-slate-800/80">
+                          <div className="flex items-center gap-2">
+                            <div className="w-5 h-5 rounded-full border border-emerald-500 text-emerald-500 flex items-center justify-center shrink-0">
+                              <Check size={11} strokeWidth={3} />
+                            </div>
+                            <div>
+                              <div className="text-sm sm:text-base font-bold text-[var(--text-primary)] leading-tight tabular-nums">
+                                {formatNum(compW.toLocaleString())}
+                              </div>
+                              <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold leading-tight">
+                                {t('kpi.completed')}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="text-right">
+                            <div className="text-[10px] sm:text-[11px] text-[var(--text-secondary)] font-semibold">
+                              {t('kpi.completion_rate')}
+                            </div>
+                            <div className="text-sm sm:text-base font-bold text-sky-900 dark:text-sky-200 tabular-nums">
+                              {formatNum(completionPct.toFixed(1))}%
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Footer Link */}
+                      <div className="pt-3 border-t border-slate-100 dark:border-slate-800/60 mt-1 text-center">
+                        <Link
+                          to={`/districts/${encodeURIComponent(distName)}`}
+                          className="text-xs font-semibold text-sky-700 dark:text-sky-400 hover:text-sky-800 dark:hover:text-sky-300 inline-flex items-center justify-center gap-1 group-hover:underline transition"
+                        >
+                          <span>{t('btn.show_details')}</span>
+                          <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
+                        </Link>
+                      </div>
+                    </div>
+                  )
+                })}
+            </div>
+          )}
         </div>
       </SectionCard>
 
       {/* Elevated IDA Entity Risks (Top High-Risk Districts) */}
       {idas.length > 0 && (
         <SectionCard
-          title="Implementing Development Agency (IDA) Risk Profiles"
-          subtitle="Top agencies and contractors operating in the state flagged for cost deviation or high concentration"
+          title={t('state.ida_risk_title')}
+          subtitle={t('state.ida_risk_subtitle')}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {idas.slice(0, 3).map((ida: any) => {
@@ -451,7 +553,7 @@ export const MyState: React.FC = () => {
                   <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
                   <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
                   <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                  <th className="p-3 font-bold text-right whitespace-nowrap">Administrative Action</th>
+                  <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : 'Administrative Action'}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border-primary)]">
@@ -471,7 +573,7 @@ export const MyState: React.FC = () => {
                         onClick={() => setSelectedFlag(f)}
                         className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap"
                       >
-                        Action Report
+                        {user.role === 'viewer' ? 'View Findings' : 'Action Report'}
                       </button>
                     </td>
                   </tr>

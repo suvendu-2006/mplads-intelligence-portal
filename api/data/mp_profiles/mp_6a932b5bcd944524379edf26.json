@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf26",
+    "name": "RAMASAHAYAM RAGHURAM REDDY",
+    "constituency": "KHAMMAM",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 21423748,
+    "utilizationPercentage": 14.573978231292518,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 194,
+    "completedWorksValue": 8211610,
+    "inProgressPayments": 13212138,
+    "paymentGapPercentage": 61.67052562418116,
+    "completionRate": 8.49056603773585,
+    "pendingWorks": 176,
+    "unspentAmount": 125576252,
+    "totalRecommendedAmount": 67270000,
+    "name_hi": "RAMASAHAYAM RAGHURAM REDDY",
+    "constituency_hi": "KHAMMAM",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21423748,
+      "totalEntries": 46,
+      "avgExpenditure": 465733.652173913,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6088497,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15335251,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21423748,
+        "transactionCount": 46,
+        "avgAmount": 465733.652173913
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 194,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e349",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Culverts and Side Drains at Darelli Dharmaiah, Gollapally Veeramma,Mathangi Nagaraju and Mathangi Prasad,  MDO office colony,Chintakani village and Mandal",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 994502
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e087",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from P Bharathamma home to Boddu Krishna home, Arikayalapadu village, Enkoor Mandal",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 398073
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcbb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cc Road from Velugu office to DPRE office at 27th Ward, Kothagudem",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 420152
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcb6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from R and B Road to ZP GPF office, 27th ward division, Kothagudem Munipality",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 431315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Digging of bore well and installing handpump at  Talari Papaiah house, Pedda Munagala village of Konijerla mandal",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 71905
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.442Z"
+}

@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb1",
+    "name": "LAXMIKANT PAPPU NISHAD",
+    "constituency": "SANT KABIR NAGAR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23806477,
+    "utilizationPercentage": 16.19488231292517,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 503,
+    "completedWorksValue": 1998365,
+    "inProgressPayments": 21808112,
+    "paymentGapPercentage": 91.60579282688488,
+    "completionRate": 0.39603960396039606,
+    "pendingWorks": 501,
+    "unspentAmount": 123193523,
+    "totalRecommendedAmount": 103609923,
+    "name_hi": "LAXMIKANT PAPPU NISHAD",
+    "constituency_hi": "SANT KABIR NAGAR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23806477,
+      "totalEntries": 33,
+      "avgExpenditure": 721408.3939393939,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3905082,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19901395,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23806477,
+        "transactionCount": 33,
+        "avgAmount": 721408.3939393939
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 503,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19dca",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction and renovation work related , in\nfavour of School Manager  of LATE IFTEKHAR AHMAD KHAN MEMORIAL GIC NANDAUR MEHDAWAL SANT KABIR NAGAR",
+        "completedDate": "2025-11-22T00:00:00.000Z",
+        "finalAmount": 998365
+      },
+      {
+        "_id": "6a932bb5cd94452437a18264",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction and renovation work related , in favour of School Manager of Lt. Ram Belas Yadav Purva Madhamik Balika Vidhyalay, bhagwanpur, baghauli, santkabir nagar",
+        "completedDate": "2025-09-03T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.226Z"
+}

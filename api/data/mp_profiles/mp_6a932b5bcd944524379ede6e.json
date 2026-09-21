@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede6e",
+    "name": "Harsh Malhotra",
+    "constituency": "EAST DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147134131,
+    "totalExpenditure": 24390277,
+    "utilizationPercentage": 16.5768994822826,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 61,
+    "completedWorksValue": 21860766,
+    "inProgressPayments": 2529511,
+    "paymentGapPercentage": 10.370981026578747,
+    "completionRate": 45.535714285714285,
+    "pendingWorks": 10,
+    "unspentAmount": 122743854,
+    "totalRecommendedAmount": 50522084,
+    "name_hi": "Harsh Malhotra",
+    "constituency_hi": "EAST DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 24390277,
+      "totalEntries": 57,
+      "avgExpenditure": 427899.5964912281,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6020862,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18369415,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 24390277,
+        "transactionCount": 57,
+        "avgAmount": 427899.5964912281
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 61,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e94f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Installation of Open Gym Equipments",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 121336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e949",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Installation of Open Gym Equipments",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 121336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e94d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Installation of Open Gym Equipments",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 121336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e947",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Installation of Open Gym Equipments",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 121336
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e943",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing or fixing of Open Air Gym Equipment",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 809363
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.497Z"
+}

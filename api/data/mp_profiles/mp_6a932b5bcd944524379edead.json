@@ -1,0 +1,69 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edead",
+    "name": "KULDEEP INDORA",
+    "constituency": "GANGANAGAR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11236750,
+    "utilizationPercentage": 7.644047619047618,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 1598794,
+    "inProgressPayments": 9637956,
+    "paymentGapPercentage": 85.77174004939151,
+    "completionRate": 2.1739130434782608,
+    "pendingWorks": 88,
+    "unspentAmount": 135763250,
+    "totalRecommendedAmount": 68381280,
+    "name_hi": "KULDEEP INDORA",
+    "constituency_hi": "GANGANAGAR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11236750,
+      "totalEntries": 68,
+      "avgExpenditure": 165246.32352941178,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 11236750,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11236750,
+        "transactionCount": 68,
+        "avgAmount": 165246.32352941178
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1be27",
+        "workCategory": "Normal/Others",
+        "workDescription": "rajkiya uchh madyamik vidyalya prarthana shtal par cc block work",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 599294
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc60",
+        "workCategory": "Normal/Others",
+        "workDescription": "interlocking nirman aam guvad mein chhapawali",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 999500
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.242Z"
+}

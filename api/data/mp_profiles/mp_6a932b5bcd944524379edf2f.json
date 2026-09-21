@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf2f",
+    "name": "Rao Rajendra Singh",
+    "constituency": "JAIPUR RURAL",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 14160844,
+    "utilizationPercentage": 9.633227210884353,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 94,
+    "completedWorksValue": 7169783,
+    "inProgressPayments": 6991061,
+    "paymentGapPercentage": 49.36895710453417,
+    "completionRate": 9.615384615384617,
+    "pendingWorks": 84,
+    "unspentAmount": 132839156,
+    "totalRecommendedAmount": 63840000,
+    "name_hi": "Rao Rajendra Singh",
+    "constituency_hi": "JAIPUR RURAL",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14160844,
+      "totalEntries": 35,
+      "avgExpenditure": 404595.54285714286,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6660752,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 7500092,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14160844,
+        "transactionCount": 35,
+        "avgAmount": 404595.54285714286
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 94,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d1a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Roads",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 998344
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b95c",
+        "workCategory": "Normal/Others",
+        "workDescription": "interlock construction work at prayer place",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 991225
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c53a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road and Tin shed",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 699714
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c231",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing sports equipment, except consumable items",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 997776
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bafd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of immovable sports equipment",
+        "completedDate": "2026-01-22T00:00:00.000Z",
+        "finalAmount": 499785
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.667Z"
+}

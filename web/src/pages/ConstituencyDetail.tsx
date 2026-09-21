@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react'
 import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
+import { BackButton } from '../components/BackButton'
 import {
   FundCard,
   StatCard,
@@ -42,9 +43,13 @@ import {
 } from 'recharts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
+import { useTranslation } from '../lib/i18n'
+import { useStore } from '../store/useStore'
 
 export const ConstituencyDetail: React.FC = () => {
+  const { user } = useStore()
   const { name } = useParams<{ name: string }>()
+  const { t, toNativeDigits: formatNum } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
   const acParam = searchParams.get('ac') || ''
   const [selectedAc, setSelectedAc] = useState<string>(acParam)
@@ -53,10 +58,13 @@ export const ConstituencyDetail: React.FC = () => {
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags'>('overview')
+  const effectiveTab = (user?.role === 'viewer' && activeTab === 'flags') ? 'overview' : activeTab
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'remained'>('all')
   const [workSearch, setWorkSearch] = useState<string>('')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
+  const [workPage, setWorkPage] = useState(1)
+  const [workPageSize, setWorkPageSize] = useState<number | 'all'>(30)
 
   // Sync acParam to selectedAc
   useEffect(() => {
@@ -245,19 +253,22 @@ export const ConstituencyDetail: React.FC = () => {
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* Breadcrumb Navigation */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)]">
-          <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
-          <ChevronRight size={12} />
-          {summary.state && (
-            <>
-              <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
-                {summary.state}
-              </Link>
-              <ChevronRight size={12} />
-            </>
-          )}
-          <span className="font-bold text-[var(--text-primary)]">{summary.name}</span>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <BackButton fallback="/map" />
+          <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)] flex-wrap">
+            <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
+            <ChevronRight size={12} />
+            {summary.state && (
+              <>
+                <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
+                  {summary.state}
+                </Link>
+                <ChevronRight size={12} />
+              </>
+            )}
+            <span className="font-bold text-[var(--text-primary)]">{summary.name}</span>
+          </div>
         </div>
       </div>
 
@@ -366,31 +377,31 @@ export const ConstituencyDetail: React.FC = () => {
       {/* Key Works & Governance Metrics */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          label="Total Works Sanctioned"
-          value={totalWorks.toLocaleString()}
+          label="status.sanctioned"
+          value={totalWorks}
           icon={FileCheck2}
           theme="navy"
           tooltip="Total developmental civil projects sanctioned and executed in this constituency."
         />
 
         <StatCard
-          label="Completed Works"
-          value={completedWorks.toLocaleString()}
+          label="status.completed"
+          value={completedWorks}
           icon={CheckCircle2}
           theme="emerald"
           tooltip="Civil projects that have received final completion certificates."
         />
 
         <StatCard
-          label="Remained / Ongoing"
-          value={remainedWorks.toLocaleString()}
+          label="status.in_progress"
+          value={remainedWorks}
           icon={Clock}
           theme="amber"
           tooltip="Projects actively under physical construction or administrative progress."
         />
 
         <StatCard
-          label="Forensic Integrity Flags"
+          label="states.tab_forensic_flags"
           value={summary.redFlagCount ?? 0}
           icon={AlertTriangle}
           theme={(summary.redFlagCount ?? 0) > 0 ? 'red' : 'emerald'}
@@ -448,7 +459,7 @@ export const ConstituencyDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('overview')}
           className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
-            activeTab === 'overview'
+            effectiveTab === 'overview'
               ? 'bg-[var(--brand-primary)] text-white shadow-sm'
               : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
           }`}
@@ -460,7 +471,7 @@ export const ConstituencyDetail: React.FC = () => {
         <button
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
-            activeTab === 'works'
+            effectiveTab === 'works'
               ? 'bg-[var(--brand-primary)] text-white shadow-sm'
               : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
           }`}
@@ -469,21 +480,23 @@ export const ConstituencyDetail: React.FC = () => {
           <span>Developmental Works ({works.length > 0 ? filteredWorks.length : totalWorks})</span>
         </button>
 
-        <button
-          onClick={() => setActiveTab('flags')}
-          className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
-            activeTab === 'flags'
-              ? 'bg-rose-600 text-white shadow-sm'
-              : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
-          }`}
-        >
-          <ShieldAlert size={14} />
-          <span>Forensic Alerts ({flags.length || summary.redFlagCount || 0})</span>
-        </button>
+        {user?.role !== 'viewer' && (
+          <button
+            onClick={() => setActiveTab('flags')}
+            className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
+              effectiveTab === 'flags'
+                ? 'bg-rose-600 text-white shadow-sm'
+                : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
+            }`}
+          >
+            <ShieldAlert size={14} />
+            <span>Forensic Alerts ({flags.length || summary.redFlagCount || 0})</span>
+          </button>
+        )}
       </div>
 
       {/* TAB 1: Overview & Sector Breakdown */}
-      {activeTab === 'overview' && (
+      {effectiveTab === 'overview' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Sector Outlay Chart */}
           <SectionCard
@@ -577,7 +590,10 @@ export const ConstituencyDetail: React.FC = () => {
                 <input
                   type="text"
                   value={workSearch}
-                  onChange={(e) => setWorkSearch(e.target.value)}
+                  onChange={(e) => {
+                    setWorkSearch(e.target.value)
+                    setWorkPage(1)
+                  }}
                   placeholder="Search works by ID, description, location..."
                   className="pl-8 pr-3 py-1.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-primary)] w-64"
                 />
@@ -587,7 +603,10 @@ export const ConstituencyDetail: React.FC = () => {
                 {(['all', 'completed', 'remained'] as const).map((status) => (
                   <button
                     key={status}
-                    onClick={() => setWorkFilter(status)}
+                    onClick={() => {
+                      setWorkFilter(status)
+                      setWorkPage(1)
+                    }}
                     className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition ${
                       workFilter === status
                         ? 'bg-[var(--surface-primary)] text-[var(--text-primary)] shadow-sm'
@@ -595,6 +614,27 @@ export const ConstituencyDetail: React.FC = () => {
                     }`}
                   >
                     {status === 'remained' ? 'Ongoing / Remained' : status}
+                  </button>
+                ))}
+              </div>
+
+              {/* Page Size Selector */}
+              <div className="flex items-center gap-1 bg-[var(--surface-alt)] px-2 py-1 rounded-xl border border-[var(--border-primary)] text-xs">
+                <span className="text-[10px] text-[var(--text-tertiary)] font-bold uppercase mr-1">{t('common.per_page')}:</span>
+                {[30, 50, 100, 'all'].map((sz) => (
+                  <button
+                    key={sz}
+                    onClick={() => {
+                      setWorkPageSize(sz as any)
+                      setWorkPage(1)
+                    }}
+                    className={`px-2 py-0.5 rounded text-xs font-bold transition ${
+                      workPageSize === sz
+                        ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {sz === 'all' ? t('common.all') : formatNum(sz)}
                   </button>
                 ))}
               </div>
@@ -606,75 +646,109 @@ export const ConstituencyDetail: React.FC = () => {
           </div>
 
           {/* Works Table */}
-          <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
-                <thead>
-                  <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-tertiary)] font-bold uppercase text-[10px] tracking-wider">
-                    <th className="p-3.5">Work ID</th>
-                    <th className="p-3.5">Description</th>
-                    <th className="p-3.5">Category</th>
-                    <th className="p-3.5">Location</th>
-                    <th className="p-3.5">Cost</th>
-                    <th className="p-3.5">Status</th>
-                    <th className="p-3.5">Implementing Agency</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[var(--border-primary)]">
-                  {filteredWorks.length > 0 ? (
-                    filteredWorks.map((w: any) => {
-                      const isComp = (w.status || '').toLowerCase().includes('completed')
-                      return (
-                        <tr key={w.work_id} className="hover:bg-[var(--surface-alt)]/60 transition">
-                          <td className="p-3.5 font-bold font-mono text-[var(--brand-primary)]">
-                            #{w.work_id}
-                          </td>
-                          <td className="p-3.5 max-w-xs font-medium text-[var(--text-primary)] truncate" title={w.description}>
-                            {w.description}
-                          </td>
-                          <td className="p-3.5 text-[var(--text-secondary)]">
-                            <span className="px-2 py-0.5 rounded-md bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[10px]">
-                              {w.category}
-                            </span>
-                          </td>
-                          <td className="p-3.5 text-[var(--text-secondary)]">
-                            {w.location}
-                          </td>
-                          <td className="p-3.5 font-bold text-[var(--text-primary)] tabular-nums">
-                            ₹{Number(w.cost || 0).toLocaleString('en-IN')}
-                          </td>
-                          <td className="p-3.5">
-                            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold border ${
-                              isComp
-                                ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
-                                : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
-                            }`}>
-                              {isComp ? <CheckCircle2 size={10} /> : <Clock size={10} />}
-                              <span>{isComp ? 'Completed' : 'In Progress'}</span>
-                            </span>
-                          </td>
-                          <td className="p-3.5 text-[var(--text-secondary)] truncate max-w-[140px]" title={w.implementing_agency}>
-                            {w.implementing_agency || 'State Agency'}
+          {(() => {
+            const paginatedWorks = workPageSize === 'all'
+              ? filteredWorks
+              : filteredWorks.slice((workPage - 1) * Number(workPageSize), workPage * Number(workPageSize))
+            const totalWorkPages = workPageSize === 'all' ? 1 : Math.ceil(filteredWorks.length / Number(workPageSize)) || 1
+
+            return (
+              <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden shadow-sm">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-xs">
+                    <thead>
+                      <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-tertiary)] font-bold uppercase text-[10px] tracking-wider">
+                        <th className="p-3.5">Work ID</th>
+                        <th className="p-3.5">Description</th>
+                        <th className="p-3.5">Category</th>
+                        <th className="p-3.5">Location</th>
+                        <th className="p-3.5">Cost</th>
+                        <th className="p-3.5">Status</th>
+                        <th className="p-3.5">Implementing Agency</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[var(--border-primary)]">
+                      {paginatedWorks.length > 0 ? (
+                        paginatedWorks.map((w: any) => {
+                          const isComp = (w.status || '').toLowerCase().includes('completed')
+                          return (
+                            <tr key={w.work_id} className="hover:bg-[var(--surface-alt)]/60 transition-colors duration-100">
+                              <td className="p-3.5 font-bold font-mono text-[var(--brand-primary)]">
+                                #{formatNum(w.work_id)}
+                              </td>
+                              <td className="p-3.5 max-w-xs font-medium text-[var(--text-primary)] truncate" title={w.description}>
+                                {w.description}
+                              </td>
+                              <td className="p-3.5 text-[var(--text-secondary)]">
+                                <span className="px-2 py-0.5 rounded-md bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[10px]">
+                                  {w.category}
+                                </span>
+                              </td>
+                              <td className="p-3.5 text-[var(--text-secondary)]">
+                                {w.location}
+                              </td>
+                              <td className="p-3.5 font-bold text-[var(--text-primary)] tabular-nums">
+                                ₹{formatNum(Number(w.cost || 0).toLocaleString('en-IN'))}
+                              </td>
+                              <td className="p-3.5">
+                                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold border ${
+                                  isComp
+                                    ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
+                                    : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
+                                }`}>
+                                  {isComp ? <CheckCircle2 size={10} /> : <Clock size={10} />}
+                                  <span>{isComp ? t('status.completed') : t('status.in_progress')}</span>
+                                </span>
+                              </td>
+                              <td className="p-3.5 text-[var(--text-secondary)] truncate max-w-[140px]" title={w.implementing_agency}>
+                                {w.implementing_agency || 'State Agency'}
+                              </td>
+                            </tr>
+                          )
+                        })
+                      ) : (
+                        <tr>
+                          <td colSpan={8} className="py-12 text-center text-xs text-[var(--text-secondary)]">
+                            No projects match the selected criteria.
                           </td>
                         </tr>
-                      )
-                    })
-                  ) : (
-                    <tr>
-                      <td colSpan={8} className="py-12 text-center text-xs text-[var(--text-secondary)]">
-                        No projects match the selected criteria.
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
+                {totalWorkPages > 1 && (
+                  <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex justify-between items-center">
+                    <span>Showing {paginatedWorks.length} of {filteredWorks.length} works</span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        disabled={workPage === 1}
+                        onClick={() => setWorkPage((p) => Math.max(1, p - 1))}
+                        className="px-2.5 py-1 rounded-lg border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40"
+                      >
+                        {t('common.previous')}
+                      </button>
+                      <span className="text-xs font-semibold text-[var(--text-secondary)] px-1">
+                        {t('common.page')} {formatNum(workPage)} {t('common.of')} {formatNum(totalWorkPages)}
+                      </span>
+                      <button
+                        disabled={workPage === totalWorkPages}
+                        onClick={() => setWorkPage((p) => Math.min(totalWorkPages, p + 1))}
+                        className="px-2.5 py-1 rounded-lg border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40"
+                      >
+                        {t('common.next')}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )
+          })()}
         </div>
       )}
 
       {/* TAB 3: Forensic Flags */}
-      {activeTab === 'flags' && (
+      {effectiveTab === 'flags' && user?.role !== 'viewer' && (
         <div className="space-y-3">
           {flags.length > 0 ? (
             flags.map((flag: any) => (
@@ -715,7 +789,7 @@ export const ConstituencyDetail: React.FC = () => {
                     Severity: {Math.round(flag.severity * 100)}%
                   </span>
                   <div className="text-[10px] text-[var(--brand-primary)] font-bold mt-1 group-hover:underline">
-                    View Forensic Dossier &rarr;
+                    {user?.role === 'viewer' ? 'View Findings →' : 'View Forensic Dossier →'}
                   </div>
                 </div>
               </div>

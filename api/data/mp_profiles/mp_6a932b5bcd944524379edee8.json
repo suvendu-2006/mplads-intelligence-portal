@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee8",
+    "name": "Nityanand Rai",
+    "constituency": "UJJARPUR",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 22994739,
+    "utilizationPercentage": 15.642679591836734,
+    "completedWorksCount": 40,
+    "recommendedWorksCount": 54,
+    "completedWorksValue": 16494739,
+    "inProgressPayments": 6500000,
+    "paymentGapPercentage": 28.267335410938998,
+    "completionRate": 42.5531914893617,
+    "pendingWorks": 14,
+    "unspentAmount": 124005261,
+    "totalRecommendedAmount": 40416300,
+    "name_hi": "Nityanand Rai",
+    "constituency_hi": "UJJARPUR",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 22994739,
+      "totalEntries": 50,
+      "avgExpenditure": 459894.78,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7724908,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15269831,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 22994739,
+        "transactionCount": 50,
+        "avgAmount": 459894.78
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 40,
+    "recommendedCount": 54,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e53e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PRAKHAND SARAYRANJAN PANCHAYAT HARPUR BARHETA KE UTKRAMIT MADHAY HARPUR BARHETA ME SAMUDAYIK PEYJAL PANI TANKI (WATER ATM)  BHAWAN KE SATH NIRMAN",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 322967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e68b",
+        "workCategory": "Normal/Others",
+        "workDescription": "PRAKHAND UJIYARPUR PANCHAYAT LOHAGIR KE UTKRAMIT MADHAY VIDHALAY PACHATRA VARD NO.12 ME SAMUDAYIK PEYJAL SANYANTRO WATER ATM RO UV CAPICITY 250 LPH WATER CHILLER WITH 500 LITER SS TANK KA ADHISHTHAPAN",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 650000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "PRAKHAND UJIYARPUR PANCHAYAT RAMCHANDRAPUR ANDHAIL KE PRATHMIK VIDHALAY CHHAPRA RAMCHANDRAPUR ANDHAIL VARD NO.14 ME SAMUDAYIK PEYJAL SANYANTRO WATER ATM RO UV CAPICITY 250 LPH WATER CHILLER WITH 500 LITER SS TANK KA ADHISHTHAPAN",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 650000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "PRAKHAND DALSINGHSARAY PANCHAYAT RAMPUR JALALPUR KE MALPUR MADHAY VIDHALAY MALPUR WARD NO.04 ME SAMUDAYIK PEYJAL SANYANTRO WATER ATM RO UV CAPICITY 250 LPH WATER CHILLER WITH 500 LITER SS TANK  KA ADHISHTHAPAN",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 650000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e68c",
+        "workCategory": "Normal/Others",
+        "workDescription": "PRAKHAND UJIYARPUR PANCHAYAT GANWPUR KE PRATHMIK VIDHALAY CINEMA CHAUK GANWPUR ME SAMUDAYIK PEYJAL SANYANTRO WATER ATM RO UV CAPICITY 250 LPH WATER CHILLER WITH 500 LITER SS TANK KA ADHISHTHAPAN",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 650000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.680Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf78",
+    "name": "Shri PP Chaudhary",
+    "constituency": "PALI",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 13376714,
+    "utilizationPercentage": 9.099805442176871,
+    "completedWorksCount": 8,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 5035442,
+    "inProgressPayments": 8341272,
+    "paymentGapPercentage": 62.35665949051463,
+    "completionRate": 19.047619047619047,
+    "pendingWorks": 26,
+    "unspentAmount": 133623286,
+    "totalRecommendedAmount": 26657000,
+    "name_hi": "Shri PP Chaudhary",
+    "constituency_hi": "PALI",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 13376714,
+      "totalEntries": 144,
+      "avgExpenditure": 92893.84722222222,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3925277,
+        "transactionCount": 49
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9451437,
+        "transactionCount": 95
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 13376714,
+        "transactionCount": 144,
+        "avgAmount": 92893.84722222222
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 8,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d501",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tin Shade Nirman Kary  Govt.Sr. Sec. School, Bhaiser Kotwali Ps Tinwari",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 998499
+      },
+      {
+        "_id": "6a932bb5cd94452437a18b04",
+        "workCategory": "Normal/Others",
+        "workDescription": "TIN SHED NIRMAN VISTAR KARYA, RAJKIYA UCCH MADHYAMIK VIDHYALAY, SONAI MANJHI",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 499646
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da17",
+        "workCategory": "Normal/Others",
+        "workDescription": "C.C. SADAK NIRMAN KARYA, PICHKA SE BADER CHOWK, GRAM GADANA ,PS MARWAR JN.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 749694
+      },
+      {
+        "_id": "6a932bb5cd94452437a192e2",
+        "workCategory": "Normal/Others",
+        "workDescription": "TIN SHED NIRMAN KARYA, RAJKIYA UCHH MADHYAMIK VIDHYALAY, MADRI,  GP DAYALPURA",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 389575
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad9d",
+        "workCategory": "Normal/Others",
+        "workDescription": "TIN SHED NIRMAN KARYA, RAJKIYA UCHH MADHYAMIK VIDHYALAY, MANIHARI,PS PALI",
+        "completedDate": "2025-12-06T00:00:00.000Z",
+        "finalAmount": 498700
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.209Z"
+}

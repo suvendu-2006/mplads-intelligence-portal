@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf62",
+    "name": "Shri Amit Shah",
+    "constituency": "GANDHINAGAR",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 11529274,
+    "utilizationPercentage": 7.8430435374149665,
+    "completedWorksCount": 22,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 4147274,
+    "inProgressPayments": 7382000,
+    "paymentGapPercentage": 64.02831609345047,
+    "completionRate": 18.64406779661017,
+    "pendingWorks": 74,
+    "unspentAmount": 135470726,
+    "totalRecommendedAmount": 49010000,
+    "name_hi": "Shri Amit Shah",
+    "constituency_hi": "GANDHINAGAR",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 11529274,
+      "totalEntries": 27,
+      "avgExpenditure": 427010.14814814815,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 11529274,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 11529274,
+        "transactionCount": 27,
+        "avgAmount": 427010.14814814815
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 22,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df5f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gandhinagar Loksabha - For Baal vishvavidyalay, Sector-20, Gandhinagar, Taluka Gandhinagar Uttar, District Gandhinagar, an amount of Rs. 2.00 Lakhs may be sanctioned for purchase of books",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de5b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gandhinagar Loksabha - For Sarvjanik Pustakalay, Vavol, Gandhinagar, Taluka  Gandhinagar, District Gandhinagar, an amount of Rs. 2.00 Lakhs may be sanctioned for purchase of books",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 194505
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbb4",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Uma Arts and Commerce College, Sector-23, Gandhinagar, Taluka Gandhinagar uttar, District Gandhinagar -  an amount of Rs. 2.00 Lakhs may be sanctioned for purchase of books",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 199656
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d696",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gandhinagar Loksabha- For Sarkari Vigyan College, Sector-15, Gandhinagar, Taluka  Gandhinagar Uttar, District Gandhinagar, an amount of Rs. 2.00 Lakhs may be sanctioned for purchase of books",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 198921
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d161",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gandhinagar Loksabha - For Sarkari Commerce College, Sector-24, Gandhinagar,  Taluka  Gandhinagar uttar, District Gandhinagar- an amount of Rs. 2.00 Lakhs may be sanctioned for purchase of books",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.724Z"
+}

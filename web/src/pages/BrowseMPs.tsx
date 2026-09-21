@@ -11,21 +11,41 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
-  Landmark
+  Landmark,
+  MapPin
 } from 'lucide-react'
+import { useTranslation, translateState } from '../lib/i18n'
+import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 
 export const BrowseMPs: React.FC = () => {
-  const { setMpJurisdiction } = useStore()
+  const { user, setMpJurisdiction } = useStore()
+  const { t, toNativeDigits: formatNum, lang } = useTranslation()
   const [searchParams] = useSearchParams()
   const qParam = searchParams.get('q') || ''
+
+  // State Nodal Officer Scope Detection
+  const isStateNodal = user.role === 'state_nodal_officer' && Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
+  const nodalState = isStateNodal ? user.state! : ''
 
   // Filters & State
   const [search, setSearch] = useState(qParam)
   const [prevQParam, setPrevQParam] = useState(qParam)
+  const [stateFilter, setStateFilter] = useState<string>(() => {
+    if (isStateNodal) return nodalState
+    return searchParams.get('state') || 'ALL'
+  })
   const [house, setHouse] = useState('all')
   const [sort, setSort] = useState('allocated')
   const [order, setOrder] = useState('desc')
   const [page, setPage] = useState(1)
+
+  // Sync state filter whenever State Nodal Officer role or state changes
+  useEffect(() => {
+    if (user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES') {
+      setStateFilter(user.state)
+      setPage(1)
+    }
+  }, [user.role, user.state])
 
   if (qParam !== prevQParam) {
     setPrevQParam(qParam)
@@ -33,16 +53,25 @@ export const BrowseMPs: React.FC = () => {
     setPage(1)
   }
 
+  const effectiveStateFilter = isStateNodal ? nodalState : stateFilter
+  const hasState = Boolean(effectiveStateFilter && effectiveStateFilter !== 'ALL')
+
   const [mps, setMps] = useState<any[]>(() => {
+    const effectiveInitialState = isStateNodal ? nodalState : (searchParams.get('state') || 'ALL')
+    const initialSeats = (effectiveInitialState && effectiveInitialState !== 'ALL')
+      ? ALL_MP_SEATS.filter(s => s.state.toLowerCase() === effectiveInitialState.toLowerCase())
+      : ALL_MP_SEATS
+
     try {
-      const saved = sessionStorage.getItem('cached_mps_1_allocated_desc_all_')
+      const saved = sessionStorage.getItem(`cached_mps_1_allocated_desc_all_${effectiveInitialState || 'ALL'}_`)
       if (saved) {
         const parsed = JSON.parse(saved)
         if (parsed && parsed.length > 0) return parsed
       }
     } catch {}
-    // Seed with canonical seat list so page 1 renders instantaneously with 0 buffering
-    return ALL_MP_SEATS.slice(0, 50).map(s => ({
+
+    // Seed with state-scoped canonical seat list so page 1 renders instantaneously with 0 buffering
+    return initialSeats.slice(0, 50).map(s => ({
       id: s.id,
       mpName: s.name,
       constituency: s.constituency,
@@ -65,7 +94,7 @@ export const BrowseMPs: React.FC = () => {
     const qClean = search.trim().toLowerCase()
     
     // 1. Instant 0ms client-side filter fallback across all seats and 4,120+ Assembly Constituencies
-    if (qClean || house !== 'all') {
+    if (qClean || house !== 'all' || hasState) {
       const acMatches = qClean ? findAssemblyConstituencies(qClean, 30) : []
       const matchedPcNames = new Set(acMatches.map(a => a.pc.toUpperCase()))
       const matchedMpIds = new Set(acMatches.map(a => a.mpId).filter(id => id && id !== 'vacant'))
@@ -76,6 +105,7 @@ export const BrowseMPs: React.FC = () => {
       })
 
       const localMatches = ALL_MP_SEATS.filter(s => {
+        if (hasState && s.state.toLowerCase() !== effectiveStateFilter.toLowerCase()) return false
         if (house !== 'all' && s.house !== house) return false
         if (!qClean) return true
         const isDirect = (
@@ -121,7 +151,7 @@ export const BrowseMPs: React.FC = () => {
 
     // 2. Debounced API synchronization to load full live audited financial metrics
     const timer = setTimeout(async () => {
-      const cacheKey = `cached_mps_${page}_${sort}_${order}_${house}_${search}`
+      const cacheKey = `cached_mps_${page}_${sort}_${order}_${house}_${effectiveStateFilter}_${search}`
       try {
         const saved = sessionStorage.getItem(cacheKey)
         if (saved) {
@@ -142,6 +172,7 @@ export const BrowseMPs: React.FC = () => {
         })
         if (search.trim()) queryParams.set('q', search.trim())
         if (house !== 'all') queryParams.set('house', house)
+        if (hasState) queryParams.set('state', effectiveStateFilter)
 
         const res = await fetch(`/api/mps?${queryParams.toString()}`)
         if (res.ok) {
@@ -159,7 +190,7 @@ export const BrowseMPs: React.FC = () => {
     }, search ? 250 : 0)
 
     return () => clearTimeout(timer)
-  }, [page, sort, order, house, search])
+  }, [page, sort, order, house, search, stateFilter, isStateNodal, nodalState, effectiveStateFilter, hasState])
 
   const getInitials = (name: string) => {
     const parts = name.replace(/^(Shri|Smt\.|Dr\.|Prof\.)\s+/i, '').split(' ')
@@ -172,9 +203,9 @@ export const BrowseMPs: React.FC = () => {
   const formatCrores = (val: number) => {
     const cr = val / 10000000
     if (cr >= 100) {
-      return `₹${Math.round(cr).toLocaleString('en-IN')} Cr`
+      return `₹${formatNum(Math.round(cr).toLocaleString('en-IN'))} ${t('unit.cr')}`
     }
-    return `₹${cr.toFixed(1)} Cr`
+    return `₹${formatNum(cr.toFixed(1))} ${t('unit.cr')}`
   }
 
   const totalRecords = meta?.total_records || meta?.total || 774
@@ -190,12 +221,26 @@ export const BrowseMPs: React.FC = () => {
       {/* Top Header & Search Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight flex items-center gap-2.5">
-            <Users className="w-6 h-6 text-[var(--brand-primary)] shrink-0" />
-            Browse Members of Parliament
-          </h1>
+          <div className="flex items-center gap-3 flex-wrap">
+            <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight flex items-center gap-2.5">
+              <Users className="w-6 h-6 text-[var(--brand-primary)] shrink-0" />
+              {t('mps.title')}
+            </h1>
+            {isStateNodal && (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs font-black uppercase tracking-wider">
+                <MapPin size={12} className="text-emerald-500" />
+                <span>{translateState(nodalState, lang)} Jurisdiction Scope</span>
+              </span>
+            )}
+          </div>
           <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">
-            Performance directory across Lok Sabha and Rajya Sabha representatives, tracking statutory allocations, liquid expenditure, and utilization velocity.
+            {isStateNodal ? (
+              <span>
+                Showing Lok Sabha and Rajya Sabha representatives exclusively for <strong>{translateState(nodalState, lang)}</strong>.
+              </span>
+            ) : (
+              t('mps.subtitle')
+            )}
           </p>
         </div>
 
@@ -210,10 +255,33 @@ export const BrowseMPs: React.FC = () => {
                 setSearch(e.target.value)
                 setPage(1)
               }}
-              placeholder="Search MP, Constituency, or Assembly..."
+              placeholder={isStateNodal ? `Search ${nodalState} MPs...` : t('mps.search_placeholder')}
               className="w-full pl-8 pr-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-primary)]"
             />
           </div>
+
+          {/* State / Jurisdiction Selector */}
+          <select
+            value={effectiveStateFilter}
+            onChange={(e) => {
+              setStateFilter(e.target.value)
+              setPage(1)
+            }}
+            disabled={isStateNodal}
+            className={`px-3 py-2 rounded-xl bg-[var(--surface-primary)] border text-xs font-semibold outline-none transition cursor-pointer ${
+              isStateNodal
+                ? 'border-emerald-500/50 bg-emerald-500/5 text-emerald-700 dark:text-emerald-400 font-bold opacity-90 cursor-not-allowed'
+                : 'border-[var(--border-primary)] text-[var(--text-primary)] focus:border-[var(--brand-primary)]'
+            }`}
+            title={isStateNodal ? `Locked to ${nodalState} (State Nodal Officer)` : 'Filter by State / UT'}
+          >
+            {!isStateNodal && <option value="ALL">All States &amp; UTs (36)</option>}
+            {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
+              <option key={st} value={st}>
+                {translateState(st, lang)}
+              </option>
+            ))}
+          </select>
 
           <select
             value={house}
@@ -223,9 +291,9 @@ export const BrowseMPs: React.FC = () => {
             }}
             className="px-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
           >
-            <option value="all">All Houses</option>
-            <option value="Lok Sabha">Lok Sabha</option>
-            <option value="Rajya Sabha">Rajya Sabha</option>
+            <option value="all">{t('mps.all_houses')}</option>
+            <option value="Lok Sabha">{t('mps.lok_sabha_count')}</option>
+            <option value="Rajya Sabha">{t('mps.rajya_sabha_count')}</option>
           </select>
 
           <select
@@ -233,16 +301,16 @@ export const BrowseMPs: React.FC = () => {
             onChange={(e) => setSort(e.target.value)}
             className="px-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
           >
-            <option value="allocated">Sort: Allocated</option>
-            <option value="utilization">Sort: Utilization %</option>
-            <option value="red_pct">Sort: Red Flag %</option>
+            <option value="allocated">{t('mps.sort_allocated')}</option>
+            <option value="utilization">{t('mps.sort_utilization')}</option>
+            <option value="red_pct">{t('mps.sort_red_pct')}</option>
           </select>
 
           <button
             onClick={() => setOrder(order === 'desc' ? 'asc' : 'desc')}
             className="px-3 py-2 text-xs font-bold rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] hover:border-[var(--brand-primary)]"
           >
-            {order.toUpperCase()}
+            {order === 'asc' ? t('common.asc') : t('common.desc')}
           </button>
         </div>
       </div>
@@ -262,7 +330,7 @@ export const BrowseMPs: React.FC = () => {
                 }}
                 className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
               >
-                Clear Filters
+                {t('common.clear_filters')}
               </button>
             }
           />
@@ -297,7 +365,7 @@ export const BrowseMPs: React.FC = () => {
             return (
               <div
                 key={mp.id}
-                className="lux-card p-5 flex flex-col justify-between hover:border-[var(--brand-accent)] transition-all"
+                className="lux-card p-5 flex flex-col justify-between hover:border-[var(--brand-accent)] transition-colors duration-150"
               >
                 <div>
                   {/* Top row: Avatar + House badge */}
@@ -336,7 +404,7 @@ export const BrowseMPs: React.FC = () => {
                       {mp.constituency || 'General'}
                     </span>
                     <span>&bull;</span>
-                    <span>{mp.state}</span>
+                    <span>{translateState(mp.state, lang)}</span>
                   </div>
 
                   {/* Assembly Constituency Badge if matched via AC */}
@@ -350,24 +418,24 @@ export const BrowseMPs: React.FC = () => {
                   <div className="grid grid-cols-2 gap-2.5 my-2.5">
                     <div>
                       <span className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] block tracking-wider">
-                        Fund Allocated
+                        {t('mps.fund_allocated')}
                       </span>
                       <div className="text-base sm:text-lg font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400 mt-0.5">
-                        {formatCrores(mp.allocatedAmount ?? mp.totalAllocated ?? 0)}
+                        {formatCrores(mp.allocatedAmount ?? mp.totalAllocated ?? mp.allocated ?? 0)}
                       </div>
                       <span className="text-[11px] font-bold text-[var(--text-secondary)] block mt-0.5">
-                        Disbursed: <span className="text-[var(--gold-text)] font-extrabold">{formatCrores(mp.totalExpenditure || 0)}</span>
+                        {t('mps.disbursed')}: <span className="text-[var(--gold-text)] font-extrabold">{formatCrores(mp.totalExpenditure ?? mp.expenditure ?? 0)}</span>
                       </span>
                     </div>
 
                     <div className="text-right flex flex-col justify-between items-end">
                       <div className="flex items-center justify-end gap-1.5 w-full">
                         <span className="text-[10px] uppercase font-extrabold text-[var(--gold-text)] tracking-wider">
-                          Utilization
+                          {t('mps.utilization')}
                         </span>
                       </div>
                       <div className="text-base sm:text-lg font-black tabular-nums text-[var(--gold-text)] mt-0.5">
-                        {util.toFixed(1)}%
+                        {formatNum(util.toFixed(1))}%
                       </div>
                       <div className="w-full h-1.5 rounded-full bg-[var(--border-primary)] mt-1 overflow-hidden">
                         <div
@@ -385,7 +453,7 @@ export const BrowseMPs: React.FC = () => {
                     to={`/mps/${mp.id}`}
                     className="py-2 px-2.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--border-primary)] truncate"
                   >
-                    <span>Public Report</span>
+                    <span>{t('btn.public_report')}</span>
                   </Link>
                   <Link
                     to={`/mp-dashboard?id=${encodeURIComponent(mp.id)}`}
@@ -393,7 +461,7 @@ export const BrowseMPs: React.FC = () => {
                     className="py-2 px-2.5 rounded-xl bg-[var(--brand-accent)]/15 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--brand-accent)]/30 truncate"
                   >
                     <Landmark size={12} />
-                    <span>MP Console</span>
+                    <span>{t('nav.mp_console')}</span>
                   </Link>
                 </div>
               </div>
@@ -406,8 +474,8 @@ export const BrowseMPs: React.FC = () => {
       {totalPages > 1 && (
         <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[var(--border-primary)]">
           <div className="text-xs text-[var(--text-secondary)]">
-            Showing Page <strong className="text-[var(--text-primary)]">{page}</strong> of{' '}
-            <strong className="text-[var(--text-primary)]">{totalPages}</strong> ({totalRecords} Total MPs)
+            {t('common.page')} <strong className="text-[var(--text-primary)]">{formatNum(page)}</strong> {t('common.of')}{' '}
+            <strong className="text-[var(--text-primary)]">{formatNum(totalPages)}</strong> ({formatNum(totalRecords)} {t('unit.mps')})
           </div>
 
           <div className="flex items-center gap-2">
@@ -417,11 +485,11 @@ export const BrowseMPs: React.FC = () => {
               className="px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40 flex items-center gap-1"
             >
               <ChevronLeft size={14} />
-              <span>Previous</span>
+              <span>{t('common.previous')}</span>
             </button>
 
             <span className="text-xs font-bold px-2 tabular-nums">
-              {page} / {totalPages}
+              {formatNum(page)} / {formatNum(totalPages)}
             </span>
 
             <button
@@ -429,7 +497,7 @@ export const BrowseMPs: React.FC = () => {
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               className="px-3 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40 flex items-center gap-1"
             >
-              <span>Next</span>
+              <span>{t('common.next')}</span>
               <ChevronRight size={14} />
             </button>
           </div>

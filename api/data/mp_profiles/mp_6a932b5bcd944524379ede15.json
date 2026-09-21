@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede15",
+    "name": "Chandra Prakash Joshi",
+    "constituency": "CHITTORGARH",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 4862785,
+    "utilizationPercentage": 3.3080170068027206,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 186,
+    "completedWorksValue": 3277114,
+    "inProgressPayments": 1585671,
+    "paymentGapPercentage": 32.60828928278754,
+    "completionRate": 5.1020408163265305,
+    "pendingWorks": 176,
+    "unspentAmount": 142137215,
+    "totalRecommendedAmount": 82555000,
+    "name_hi": "Chandra Prakash Joshi",
+    "constituency_hi": "CHITTORGARH",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 4862785,
+      "totalEntries": 42,
+      "avgExpenditure": 115780.59523809524,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2495308,
+        "transactionCount": 35
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2367477,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 4862785,
+        "transactionCount": 42,
+        "avgAmount": 115780.59523809524
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 186,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b151",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dom construction work near Khakal Dev ji place in village Binota",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 686091
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c2de",
+        "workCategory": "Normal/Others",
+        "workDescription": "GAO MULIYAKHERA MAI RUPA BAVJI MANDIR KE PAS SAMUDAYIK BHAWAN NIRMAN KARY WORKING AGENCY GRAM PANCHYAT PADLIYA",
+        "completedDate": "2026-03-29T00:00:00.000Z",
+        "finalAmount": 397594
+      },
+      {
+        "_id": "6a932bb5cd94452437a16cfc",
+        "workCategory": "Normal/Others",
+        "workDescription": "GARAM PANCHAYAT ME KACHARA SAGRNHAN HETU VAHAN/MINI TAKTAR",
+        "completedDate": "2025-12-22T00:00:00.000Z",
+        "finalAmount": 399900
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bde7",
+        "workCategory": "Normal/Others",
+        "workDescription": "GAV KHERMALIYA ME HIGH MASK LIGHT NIRMA KARY",
+        "completedDate": "2025-12-15T00:00:00.000Z",
+        "finalAmount": 147140
+      },
+      {
+        "_id": "6a932bb5cd94452437a19a66",
+        "workCategory": "Normal/Others",
+        "workDescription": "GAO DINDOLI MAI MOKSHDHAM KI CHAR DIWARI NIRMAN KARY",
+        "completedDate": "2025-11-21T00:00:00.000Z",
+        "finalAmount": 399866
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.240Z"
+}

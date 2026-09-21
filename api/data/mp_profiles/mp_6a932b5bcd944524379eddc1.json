@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc1",
+    "name": "ALFRED KANNGAM S ARTHUR",
+    "constituency": "OUTER MANIPUR",
+    "state": "Manipur",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 84951963,
+    "utilizationPercentage": 57.79045102040816,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 29751963,
+    "inProgressPayments": 55200000,
+    "paymentGapPercentage": 64.97789815639693,
+    "completionRate": 42.857142857142854,
+    "pendingWorks": 5,
+    "unspentAmount": 62048037,
+    "totalRecommendedAmount": 74900000,
+    "name_hi": "ALFRED KANNGAM S ARTHUR",
+    "constituency_hi": "OUTER MANIPUR",
+    "state_hi": "Manipur"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 84951963,
+      "totalEntries": 72,
+      "avgExpenditure": 1179888.375,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 20400001,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 42651962,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21900000,
+        "transactionCount": 16
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 84951963,
+        "transactionCount": 72,
+        "avgAmount": 1179888.375
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d4c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Repairing of road from D Minlun Village to Kolhen Village under Henglep Sub-Division",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18c39",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of classrooms for Upper Primary School at Irong Chesaba Mayai",
+        "completedDate": "2025-12-20T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b36",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Renovation of badminton court at Peace ground mini sports complex- Tuibong",
+        "completedDate": "2025-10-16T00:00:00.000Z",
+        "finalAmount": 1879510
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b34",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Mini Playground and retaining wall",
+        "completedDate": "2025-10-16T00:00:00.000Z",
+        "finalAmount": 1879510
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b32",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of inter village road from-\nSangaikot village to G Songgel",
+        "completedDate": "2025-10-16T00:00:00.000Z",
+        "finalAmount": 1879511
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.676Z"
+}

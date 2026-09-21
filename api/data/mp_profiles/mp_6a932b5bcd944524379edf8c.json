@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8c",
+    "name": "Smt Harsimrat Kaur Badal",
+    "constituency": "BHATINDA",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159775982.39,
+    "totalExpenditure": 85393082,
+    "utilizationPercentage": 53.44550584052272,
+    "completedWorksCount": 147,
+    "recommendedWorksCount": 206,
+    "completedWorksValue": 47784075,
+    "inProgressPayments": 37609007,
+    "paymentGapPercentage": 44.04221761196065,
+    "completionRate": 41.64305949008499,
+    "pendingWorks": 59,
+    "unspentAmount": 74382900.38999999,
+    "totalRecommendedAmount": 75063385,
+    "name_hi": "Smt Harsimrat Kaur Badal",
+    "constituency_hi": "BHATINDA",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 85393082,
+      "totalEntries": 1484,
+      "avgExpenditure": 57542.50808625337,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 44841660,
+        "transactionCount": 877
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40551422,
+        "transactionCount": 607
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 85393082,
+        "transactionCount": 1484,
+        "avgAmount": 57542.50808625337
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 147,
+    "recommendedCount": 206,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dba9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Street Lights",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca52",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Interlock Tiles from Main Chowk to Govt. School",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbab",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of 1 pump set for water lift",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 50000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Interlock Tile and Booth side Drain from Village Phirni to Road",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cd48",
+        "workCategory": "Normal/Others",
+        "workDescription": "R.C.C Bench",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 105000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.918Z"
+}

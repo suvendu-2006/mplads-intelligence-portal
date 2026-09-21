@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb6",
+    "name": "Adv Dean Kuriakose",
+    "constituency": "IDUKKI",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58754261,
+    "utilizationPercentage": 39.96888503401361,
+    "completedWorksCount": 95,
+    "recommendedWorksCount": 95,
+    "completedWorksValue": 50223513,
+    "inProgressPayments": 8530748,
+    "paymentGapPercentage": 14.519369071802299,
+    "completionRate": 50,
+    "pendingWorks": 0,
+    "unspentAmount": 88245739,
+    "totalRecommendedAmount": 80248986,
+    "name_hi": "Adv Dean Kuriakose",
+    "constituency_hi": "IDUKKI",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58754261,
+      "totalEntries": 116,
+      "avgExpenditure": 506502.25,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20639532,
+        "transactionCount": 40
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38114729,
+        "transactionCount": 76
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58754261,
+        "transactionCount": 116,
+        "avgAmount": 506502.25
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 95,
+    "recommendedCount": 95,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e70b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreating and irish drainage of Chirappady- Parakkadavu road in ward 21st  Puthuppady  of Kothamangalam muncipality",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 699744
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of minimast light    (8Mtr,Octogonal  pole LED Flood Light 150 Wx5 no.s) at Keerampara church junction , in ward 12th of Keerampara gramapanchayathu.",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 220427
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e57c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreating of JCI-Kanyamala road in ward 11th of Muttom Grama panchayathu in Thodupuzha Block",
+        "completedDate": "2026-07-20T00:00:00.000Z",
+        "finalAmount": 674135
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Tarring  of Painavu- Mahavishnu Temple road in ward 12 of Vazhathoppu Gramapanchayathu,in Idukki village & Idukki Block",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 995809
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e367",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchasing of 5 laptops for St.Thomas UPS- Mankuva in ward 13 of  Konnathady  Grama Panchayathu , Adimaly Block",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 176035
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.469Z"
+}

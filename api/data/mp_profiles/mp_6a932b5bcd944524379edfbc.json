@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfbc",
+    "name": "Vijay Baghel",
+    "constituency": "DURG",
+    "state": "Chhattisgarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57650594,
+    "utilizationPercentage": 39.218091156462584,
+    "completedWorksCount": 70,
+    "recommendedWorksCount": 144,
+    "completedWorksValue": 21985512,
+    "inProgressPayments": 35665082,
+    "paymentGapPercentage": 61.86420559691024,
+    "completionRate": 32.71028037383177,
+    "pendingWorks": 74,
+    "unspentAmount": 89349406,
+    "totalRecommendedAmount": 96052000,
+    "name_hi": "Vijay Baghel",
+    "constituency_hi": "DURG",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57650594,
+      "totalEntries": 246,
+      "avgExpenditure": 234352.0081300813,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 750000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24997501,
+        "transactionCount": 149
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31903093,
+        "transactionCount": 96
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57650594,
+        "transactionCount": 246,
+        "avgAmount": 234352.0081300813
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 70,
+    "recommendedCount": 144,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b682",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b681",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 249918
+      },
+      {
+        "_id": "6a932bb5cd94452437a1acf2",
+        "workCategory": "Normal/Others",
+        "workDescription": "PAIP LINE EVAM TANKI STHAPNA",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 296481
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a865",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC ROAD NIRMAN",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 539875
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b247",
+        "workCategory": "Normal/Others",
+        "workDescription": "BHAWAN NIRMAN",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.761Z"
+}

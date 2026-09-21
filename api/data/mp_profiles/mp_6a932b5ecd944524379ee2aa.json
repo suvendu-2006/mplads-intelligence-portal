@@ -1,0 +1,76 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2aa",
+    "name": "Shri Subhasish Khuntia (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Odisha",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 5720036,
+    "utilizationPercentage": 3.891180952380952,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 219,
+    "completedWorksValue": 1600000,
+    "inProgressPayments": 4120036,
+    "paymentGapPercentage": 72.02814807459254,
+    "completionRate": 1.3513513513513513,
+    "pendingWorks": 216,
+    "unspentAmount": 141279964,
+    "totalRecommendedAmount": 94650000,
+    "name_hi": "Shri Subhasish Khuntia (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5720036,
+      "totalEntries": 32,
+      "avgExpenditure": 178751.125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 5720036,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5720036,
+        "transactionCount": 32,
+        "avgAmount": 178751.125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 219,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3238b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Gagan Pradhan house to Ujjanipada RD, GP- Bharatipur",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3203f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road at Champadeipur Harijana Sahi.",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31fd5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Mohanty Sahi to Melana Padia at Jenapur 1, Delanga",
+        "completedDate": "2026-01-30T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.230Z"
+}

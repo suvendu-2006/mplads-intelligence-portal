@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee219",
+    "name": "Shri Amar Pal Maurya (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26365566,
+    "utilizationPercentage": 17.93575918367347,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 120,
+    "completedWorksValue": 14305309,
+    "inProgressPayments": 12060257,
+    "paymentGapPercentage": 45.742454381597575,
+    "completionRate": 13.043478260869565,
+    "pendingWorks": 102,
+    "unspentAmount": 120634434,
+    "totalRecommendedAmount": 80856603,
+    "name_hi": "Shri Amar Pal Maurya (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26365566,
+      "totalEntries": 33,
+      "avgExpenditure": 798956.5454545454,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13201969,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13163597,
+        "transactionCount": 12
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26365566,
+        "transactionCount": 33,
+        "avgAmount": 798956.5454545454
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 120,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31e62",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the construction work of a 350 meter long CC (Cement Concrete) Road",
+        "completedDate": "2026-03-06T00:00:00.000Z",
+        "finalAmount": 2100197
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e63",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of a 200-meter-long CC track at Composite School Aimapur, Block Babaganj, District Pratapgarh,",
+        "completedDate": "2026-02-21T00:00:00.000Z",
+        "finalAmount": 901672
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of ten 10 units of high mast solar lights, each unit comprising 4 lights with 7meterlong poles",
+        "completedDate": "2026-02-21T00:00:00.000Z",
+        "finalAmount": 1079000
+      },
+      {
+        "_id": "6a932bb5cd94452437a311c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Pure Kolahal village of Magraura development block of Pratapgarh district, 220 meter interlocking construction work from Umesh's garden to Shyam Lal Nau's house via Atal Sarovar.",
+        "completedDate": "2026-02-05T00:00:00.000Z",
+        "finalAmount": 1109045
+      },
+      {
+        "_id": "6a932bb5cd94452437a3177a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Under the Member of Parliament Local Area Development Scheme Rajya Sabha I am providing an amount of 10 lakh for the construction of classrooms at Pandit Sahdev Tiwari Vidya Mandir Village Nagpur Belauli District Sant Kabir Nagar Uttar Pradesh",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 999912
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.795Z"
+}

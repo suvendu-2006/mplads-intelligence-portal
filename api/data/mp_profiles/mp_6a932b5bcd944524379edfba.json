@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfba",
+    "name": "VARUN CHAUDHRY",
+    "constituency": "AMBALA",
+    "state": "Haryana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 255454264,
+    "totalExpenditure": 28023758,
+    "utilizationPercentage": 10.97016646392718,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 154,
+    "completedWorksValue": 706632,
+    "inProgressPayments": 27317126,
+    "paymentGapPercentage": 97.47845381765,
+    "completionRate": 1.910828025477707,
+    "pendingWorks": 151,
+    "unspentAmount": 227430506,
+    "totalRecommendedAmount": 125088576,
+    "name_hi": "VARUN CHAUDHRY",
+    "constituency_hi": "AMBALA",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28023758,
+      "totalEntries": 105,
+      "avgExpenditure": 266892.93333333335,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4418077,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23605681,
+        "transactionCount": 88
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28023758,
+        "transactionCount": 105,
+        "avgAmount": 266892.93333333335
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 154,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ba30",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed adjacent to BC Choupal in village Shahpur",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 306732
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be9c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Competitive exam Books and periodicals",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b44c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of table and chairs for increasing seating capacity in the library",
+        "completedDate": "2025-11-11T00:00:00.000Z",
+        "finalAmount": 299900
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.667Z"
+}

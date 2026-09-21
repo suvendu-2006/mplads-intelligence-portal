@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea7",
+    "name": "KOTA SRINIVAS POOJARY",
+    "constituency": "UDUPI CHIKMAGALUR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 40865192,
+    "utilizationPercentage": 27.799450340136055,
+    "completedWorksCount": 51,
+    "recommendedWorksCount": 269,
+    "completedWorksValue": 21595331,
+    "inProgressPayments": 19269861,
+    "paymentGapPercentage": 47.15470564777966,
+    "completionRate": 15.937499999999998,
+    "pendingWorks": 218,
+    "unspentAmount": 106134808,
+    "totalRecommendedAmount": 100780000,
+    "name_hi": "KOTA SRINIVAS POOJARY",
+    "constituency_hi": "UDUPI CHIKMAGALUR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40865192,
+      "totalEntries": 112,
+      "avgExpenditure": 364867.78571428574,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20922549,
+        "transactionCount": 51
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19942643,
+        "transactionCount": 61
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40865192,
+        "transactionCount": 112,
+        "avgAmount": 364867.78571428574
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 51,
+    "recommendedCount": 269,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a8b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chikmagalur District, Kadur Taluk, Nagenahalli Grama panchayath, construction work of Huwadigar community hall of Agrahara village.",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e27b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Udupi District, Karkala taluk, Kalya grama panchayath, kalya village, near patla place culverts & bridges construction",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 486039
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6c9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreting of road leading to S.C Beranagod Ishwara Temple, Basarahalli Gram Panchayat, Chikmagalur District, Chikmagalur, Taluk Avuti Hobli. (S.C)",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 198635
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6c5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chikkamagaluru District, Chikkamagaluru Taluk Avuti Hobli, Basasarahalli Grama Panchayath Bettadamalali village Ramegowda, others house going road development work.",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 398638
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concretisation of road leading to Keremakki S.C. village from Avati Hobli, Chikmagalur Taluk, Chikmagalur District. (S.C)",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 147067
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.673Z"
+}

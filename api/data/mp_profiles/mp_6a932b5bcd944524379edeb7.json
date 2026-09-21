@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb7",
+    "name": "MADHAVANENI RAGHUNANDAN RAO",
+    "constituency": "MEDAK",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30484168,
+    "utilizationPercentage": 20.737529251700682,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 141,
+    "completedWorksValue": 22868518,
+    "inProgressPayments": 7615650,
+    "paymentGapPercentage": 24.982312130021064,
+    "completionRate": 22.52747252747253,
+    "pendingWorks": 100,
+    "unspentAmount": 116515832,
+    "totalRecommendedAmount": 89221247,
+    "name_hi": "MADHAVANENI RAGHUNANDAN RAO",
+    "constituency_hi": "MEDAK",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30484168,
+      "totalEntries": 49,
+      "avgExpenditure": 622125.8775510204,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12598008,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17886160,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30484168,
+        "transactionCount": 49,
+        "avgAmount": 622125.8775510204
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 141,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e979",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound wall to Reddy Community Hall in ward no 14 in Dubbak Municipality",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 493131
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e978",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Compound wall to Reddy Community Hall at Dumpalapally road in ward no 14 of Dubbak Municipality",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 493984
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1f8",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Work of Grave yard",
+        "completedDate": "2026-04-25T00:00:00.000Z",
+        "finalAmount": 793284
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Fixing of LED Street Lights at Alwal Village of Mirdoddi Mandal",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 995776
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of reading room at Chinna Nizampet village of Akbarpet Bhoompalle Mandal",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.242Z"
+}

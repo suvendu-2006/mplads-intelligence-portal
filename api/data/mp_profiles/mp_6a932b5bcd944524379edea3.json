@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea3",
+    "name": "Kirti Vardhan Singh",
+    "constituency": "GONDA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 71075338,
+    "utilizationPercentage": 48.35057006802721,
+    "completedWorksCount": 35,
+    "recommendedWorksCount": 118,
+    "completedWorksValue": 31368454,
+    "inProgressPayments": 39706884,
+    "paymentGapPercentage": 55.86590949451412,
+    "completionRate": 22.875816993464053,
+    "pendingWorks": 83,
+    "unspentAmount": 75924662,
+    "totalRecommendedAmount": 70691200,
+    "name_hi": "Kirti Vardhan Singh",
+    "constituency_hi": "GONDA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71075338,
+      "totalEntries": 180,
+      "avgExpenditure": 394862.9888888889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 40082704,
+        "transactionCount": 89
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30992634,
+        "transactionCount": 91
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71075338,
+        "transactionCount": 180,
+        "avgAmount": 394862.9888888889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 35,
+    "recommendedCount": 118,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dbae",
+        "workCategory": "Normal/Others",
+        "workDescription": "S.No. 3- Work of supply of 04 nos. high mast lights with all co-ordinating equipments of 20 meter height pole with 40 LED flood lights in the ground of Police Line, Gonda.",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 1497977
+      },
+      {
+        "_id": "6a932bb5cd94452437a18745",
+        "workCategory": "Normal/Others",
+        "workDescription": "No.20 Interlocking work in 215 meter length from paved road to Vijay Shankar's house in Gram Panchayat Kanchanpur.",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 1082097
+      },
+      {
+        "_id": "6a932bb5cd94452437a186fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "No.12 Interlocking work in 120 meter length from Madhav Raj Sahu's house to Santoshi's house in Gram Panchayat Baidora Bazaar.",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 394009
+      },
+      {
+        "_id": "6a932bb5cd94452437a18741",
+        "workCategory": "Normal/Others",
+        "workDescription": "No.5 Interlocking work in 0.100 meter length from Pintu Srivastava's house to Rajnarayan Srivastava's house in Gram Panchayat Kazidewar.",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 470542
+      },
+      {
+        "_id": "6a932bb5cd94452437a18706",
+        "workCategory": "Normal/Others",
+        "workDescription": "No.19 Interlocking work in 200 meter length from Suryalal Nau's house in Gram Panchayat Karuapara to Panchayat Bhawan via the houses of Rajkumar Tiwari and Captain Tiwari.",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 1006971
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.233Z"
+}

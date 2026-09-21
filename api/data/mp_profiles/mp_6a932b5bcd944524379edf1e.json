@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf1e",
+    "name": "Rajkumar Chahar ",
+    "constituency": "FATEHPUR SIKRI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 96369831,
+    "utilizationPercentage": 65.5577081632653,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 5,
+    "completedWorksValue": 95259092,
+    "inProgressPayments": 1110739,
+    "paymentGapPercentage": 1.1525795868626147,
+    "completionRate": 90,
+    "pendingWorks": -40,
+    "unspentAmount": 50630169,
+    "totalRecommendedAmount": 11718000,
+    "name_hi": "Rajkumar Chahar ",
+    "constituency_hi": "FATEHPUR SIKRI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 96369831,
+      "totalEntries": 92,
+      "avgExpenditure": 1047498.1630434783,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 16207406,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 54439962,
+        "transactionCount": 61
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25722463,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 96369831,
+        "transactionCount": 92,
+        "avgAmount": 1047498.1630434783
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 5,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d1fe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Akola Baruli Aheer Bichpuri 14gramo k sarvjanik Isthal par Semi High Mast Light",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 3489555
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d201",
+        "workCategory": "Normal/Others",
+        "workDescription": "Achhner, Kheragarh, Fatehabad and Fatehpur Sikri k 09 Sarvjanik Isthal par Semi high mast light",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 2243286
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d202",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Fatehpur Sikri 10 Gramo me Sarvjanik Isthal puar Semi High Mast Light",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 2492540
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d1ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Shamshabad and Fatehabad 14 Gramo k Sarvjanik Isthal par Semi High Mast Light",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 3489740
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "15 Installation of Semi High Mask Light as Letter no 103-10280-2025 dated 9-10-2025  in Block Kheragarh",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 3489729
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.719Z"
+}

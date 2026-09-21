@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede6b",
+    "name": "HARENDRA SINGH MALIK",
+    "constituency": "MUZAFFARNAGAR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 45077485,
+    "utilizationPercentage": 30.664955782312926,
+    "completedWorksCount": 32,
+    "recommendedWorksCount": 183,
+    "completedWorksValue": 19524140,
+    "inProgressPayments": 25553345,
+    "paymentGapPercentage": 56.68760136019123,
+    "completionRate": 14.883720930232558,
+    "pendingWorks": 151,
+    "unspentAmount": 101922515,
+    "totalRecommendedAmount": 86841262,
+    "name_hi": "HARENDRA SINGH MALIK",
+    "constituency_hi": "MUZAFFARNAGAR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 45077485,
+      "totalEntries": 140,
+      "avgExpenditure": 321982.03571428574,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 984518,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 17560316,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26532651,
+        "transactionCount": 89
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 45077485,
+        "transactionCount": 140,
+        "avgAmount": 321982.03571428574
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 32,
+    "recommendedCount": 183,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ccbd",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram-amirnagar, block-baghra me mukhy sadak se idgah marg tak 250 meter khadanja ka nirman",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 297887
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ccba",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram-silajuddi, vikaskhand-sadar, tehsil-sadar me tej singh ke makan se nale tak paepline work.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 980787
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c966",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram-barwala vikash khand-baghra me mukhy marg se ajit singh ki tube wel tak khadanja ka nirman 250meter",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 298491
+      },
+      {
+        "_id": "6a932bb5cd94452437a177eb",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram-lalu kheri, vikaskhand-baghra, tehsil-sadar me yogesh ke ghar se devkant pandit ke makan tak inter louking work.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 544783
+      },
+      {
+        "_id": "6a932bb5cd94452437a177ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram-sonhjani jatan, vikaskhand-baghra, tehsil-sadar me tejpal ke makan se satendra ke makan tak inter louking work.",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 421984
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.217Z"
+}

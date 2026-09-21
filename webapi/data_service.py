@@ -191,27 +191,45 @@ def load_expenditures_csv() -> pd.DataFrame:
 
 @lru_cache(maxsize=1)
 def load_mplads_trends_csv() -> pd.DataFrame:
-    file_path = ANALYTICS_DIR / "mplads_trends.csv"
-    if file_path.exists():
+    file_path = _resolve_file(
+        ANALYTICS_DIR / "mplads_trends.csv",
+        BASE_DIR / "05_Analytics_and_Trends" / "mplads_trends.csv"
+    )
+    if file_path:
         return pd.read_csv(file_path, encoding="utf-8-sig")
     return pd.DataFrame()
 
 @lru_cache(maxsize=1)
 def load_demographics_merged_csv() -> pd.DataFrame:
-    file_path = DEMOGRAPHICS_DIR / "mp_mplads_demographics_merged.csv"
-    if file_path.exists():
+    file_path = _resolve_file(
+        DEMOGRAPHICS_DIR / "mp_mplads_demographics_merged.csv",
+        BASE_DIR / "09_MP_Demographics_ADR" / "mp_mplads_demographics_merged.csv"
+    )
+    if file_path:
         return pd.read_csv(file_path, encoding="utf-8-sig")
     return pd.DataFrame()
 
 @lru_cache(maxsize=1024)
 def load_mp_profile(mp_id: str) -> Optional[Dict[str, Any]]:
-    # In 03_MPs_Data/mp_profiles/ files are named mp_{mp_id}.json
-    file_path = MPS_DIR / "mp_profiles" / f"mp_{mp_id}.json"
-    if not file_path.exists():
-        file_path = MPS_DIR / "mp_profiles" / f"{mp_id}.json"
+    # In 03_MPs_Data/mp_profiles/ and api/data/mp_profiles/, files are named mp_{mp_id}.json
+    candidates = [
+        BASE_DIR / "api" / "data" / "mp_profiles" / f"mp_{mp_id}.json",
+        BASE_DIR / "api" / "data" / "mp_profiles" / f"{mp_id}.json",
+        Path(f"/var/task/api/data/mp_profiles/mp_{mp_id}.json"),
+        Path(f"/var/task/api/data/mp_profiles/{mp_id}.json"),
+        MPS_DIR / "mp_profiles" / f"mp_{mp_id}.json",
+        MPS_DIR / "mp_profiles" / f"{mp_id}.json",
+        Path(f"/var/task/03_MPs_Data/mp_profiles/mp_{mp_id}.json"),
+        Path(f"/var/task/03_MPs_Data/mp_profiles/{mp_id}.json"),
+    ]
+    file_path = None
+    for c in candidates:
+        if c.exists() and c.is_file():
+            file_path = c
+            break
     
     profile: Dict[str, Any] = {}
-    if file_path.exists():
+    if file_path:
         with open(file_path, "r", encoding="utf-8") as f:
             profile = json.load(f)
     else:

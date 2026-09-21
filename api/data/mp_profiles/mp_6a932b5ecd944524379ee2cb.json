@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2cb",
+    "name": "Smt. Sadhna Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 101298179,
+    "utilizationPercentage": 68.91032585034014,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 82840596,
+    "inProgressPayments": 18457583,
+    "paymentGapPercentage": 18.22104126866881,
+    "completionRate": 27.77777777777778,
+    "pendingWorks": 8,
+    "unspentAmount": 45701821,
+    "totalRecommendedAmount": 37556200,
+    "name_hi": "Smt. Sadhna Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 101298179,
+      "totalEntries": 37,
+      "avgExpenditure": 2737788.621621622,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 10797000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 59653378,
+        "transactionCount": 18
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30847801,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 101298179,
+        "transactionCount": 37,
+        "avgAmount": 2737788.621621622
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 13,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3239e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Ghat Near Buddhu Baba Temple Under MPLADS",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 985418
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d52",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of LED semi high-mast lights at 120 different locations in District Chandauli.",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 28512000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3092f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of High Mast Lights at various places of rural and urban areas of chandauli district. total Nos. 95 units.",
+        "completedDate": "2026-02-01T00:00:00.000Z",
+        "finalAmount": 18042779
+      },
+      {
+        "_id": "6a932bb5cd94452437a317cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and installation of led semi highmast light at 79 different places in district chandauli",
+        "completedDate": "2025-12-02T00:00:00.000Z",
+        "finalAmount": 18770400
+      },
+      {
+        "_id": "6a932bb5cd94452437a30e51",
+        "workCategory": "Normal/Others",
+        "workDescription": "supply and installation of led semi high mast light at 87 different places at distt chandauli",
+        "completedDate": "2025-07-21T00:00:00.000Z",
+        "finalAmount": 16529999
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.473Z"
+}

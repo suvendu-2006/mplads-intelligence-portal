@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc1",
+    "name": "VINOD KUMAR BIND",
+    "constituency": "BHADOHI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75517267,
+    "utilizationPercentage": 51.37229047619047,
+    "completedWorksCount": 407,
+    "recommendedWorksCount": 137,
+    "completedWorksValue": 52573170,
+    "inProgressPayments": 22944097,
+    "paymentGapPercentage": 30.382583893032038,
+    "completionRate": 74.81617647058823,
+    "pendingWorks": -270,
+    "unspentAmount": 71482733,
+    "totalRecommendedAmount": 44004892,
+    "name_hi": "VINOD KUMAR BIND",
+    "constituency_hi": "BHADOHI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75517267,
+      "totalEntries": 525,
+      "avgExpenditure": 143842.41333333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30738977,
+        "transactionCount": 259
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44778290,
+        "transactionCount": 266
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75517267,
+        "transactionCount": 525,
+        "avgAmount": 143842.41333333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 407,
+    "recommendedCount": 137,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a194b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Jagdishpur me Nandlal Bind Putra Jeet Narayan ke Ghar ke pas",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 118957
+      },
+      {
+        "_id": "6a932bb5cd94452437a194b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Girdhkot Shiv Mandir va Bhagauti singh ke ghar ke pas",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 118957
+      },
+      {
+        "_id": "6a932bb5cd94452437a195fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Sujaola Devnipur me dr. Nand Lal ke ghar ke pas",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 118957
+      },
+      {
+        "_id": "6a932bb5cd94452437a194bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Tela me susheel kumar putra Late Radhe Shyam ke ghar ke pas",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 118957
+      },
+      {
+        "_id": "6a932bb5cd94452437a194b6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Dubaki kala Shuddha Devi Prathmik School Chuaraha par",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 118957
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.260Z"
+}

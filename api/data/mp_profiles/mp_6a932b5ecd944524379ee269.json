@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee269",
+    "name": "Shri Nagendra Ray (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 91735859,
+    "utilizationPercentage": 53.49029679300291,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 20,
+    "completedWorksValue": 23775426,
+    "inProgressPayments": 67960433,
+    "paymentGapPercentage": 74.08273464796356,
+    "completionRate": 9.090909090909092,
+    "pendingWorks": 18,
+    "unspentAmount": 79764141,
+    "totalRecommendedAmount": 98659608.68,
+    "name_hi": "Shri Nagendra Ray (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91735859,
+      "totalEntries": 14,
+      "avgExpenditure": 6552561.357142857,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 36708092,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 55027767,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91735859,
+        "transactionCount": 14,
+        "avgAmount": 6552561.357142857
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 20,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a310e6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of books for 65 number of public libraries and schools",
+        "completedDate": "2025-08-07T00:00:00.000Z",
+        "finalAmount": 13800426
+      },
+      {
+        "_id": "6a932bb5cd94452437a316c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Seating furniture (Low and High Bench set) for Maharaja Nripendra Narayan High School (H.S.) and other 13 School of Coochbehar District",
+        "completedDate": "2025-08-07T00:00:00.000Z",
+        "finalAmount": 9975000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.901Z"
+}

@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf89",
+    "name": "Smt Anupriya Patel",
+    "constituency": "MIRZAPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 51732584,
+    "utilizationPercentage": 35.19223401360544,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 10,
+    "completedWorksValue": 0,
+    "inProgressPayments": 51732584,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 10,
+    "unspentAmount": 95267416,
+    "totalRecommendedAmount": 71228000,
+    "name_hi": "Smt Anupriya Patel",
+    "constituency_hi": "MIRZAPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 51732584,
+      "totalEntries": 10,
+      "avgExpenditure": 5173258.4,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 51732584,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 51732584,
+        "transactionCount": 10,
+        "avgAmount": 5173258.4
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 10,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:52.672Z"
+}

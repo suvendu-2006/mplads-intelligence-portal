@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea5",
+    "name": "KISHORI LAL",
+    "constituency": "AMETHI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 82481354,
+    "utilizationPercentage": 48.094083965014576,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 31,
+    "completedWorksValue": 31769442,
+    "inProgressPayments": 50711912,
+    "paymentGapPercentage": 61.48288011857807,
+    "completionRate": 38,
+    "pendingWorks": 12,
+    "unspentAmount": 89018646,
+    "totalRecommendedAmount": 55504919,
+    "name_hi": "KISHORI LAL",
+    "constituency_hi": "AMETHI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 82481354,
+      "totalEntries": 75,
+      "avgExpenditure": 1099751.3866666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 49367530,
+        "transactionCount": 31
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33113824,
+        "transactionCount": 44
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 82481354,
+        "transactionCount": 75,
+        "avgAmount": 1099751.3866666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 31,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b0b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 39 (Thirty Nine) solar street lights, as per the list attached",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 838118
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d76",
+        "workCategory": "Normal/Others",
+        "workDescription": "Electrification work in Pure Gosain of Village Panchayat Jangal Ramnagar, Block-Amethi, Amethi.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 59685
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d74",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the purchase of a new 250 KVA transformer with a suitable trolley for use in the Electricity Distribution Division, Amethi, District Amethi, U.P.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 970870
+      },
+      {
+        "_id": "6a932bb5cd94452437a18d75",
+        "workCategory": "Normal/Others",
+        "workDescription": "Electrification work in Pure Khan Jahan of Village Panchayat Ghatkaur, Block- Bhetua, Amethi.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 199696
+      },
+      {
+        "_id": "6a932bb5cd94452437a19a92",
+        "workCategory": "Normal/Others",
+        "workDescription": "Electrification work in Pure Ganeshlal of Village Panchayat Bhretha, Block-Bhetua, Amethi.",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 217107
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.854Z"
+}

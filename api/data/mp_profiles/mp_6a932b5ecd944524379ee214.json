@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee214",
+    "name": "Shri A. A. Rahim (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 56633403,
+    "utilizationPercentage": 25.67663535876612,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 58,
+    "completedWorksValue": 26629839,
+    "inProgressPayments": 30003564,
+    "paymentGapPercentage": 52.978564611418456,
+    "completionRate": 22.666666666666664,
+    "pendingWorks": 41,
+    "unspentAmount": 163930554.11,
+    "totalRecommendedAmount": 90785000,
+    "name_hi": "Shri A. A. Rahim (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 56633403,
+      "totalEntries": 36,
+      "avgExpenditure": 1573150.0833333333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4996902,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 17444002,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34192499,
+        "transactionCount": 20
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 56633403,
+        "transactionCount": 36,
+        "avgAmount": 1573150.0833333333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 58,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32462",
+        "workCategory": "Normal/Others",
+        "workDescription": "To provide minimast light in front of Attukal Temple,Attukal Ward,Thiruvananthapuram Corporation,TVPM District",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 235332
+      },
+      {
+        "_id": "6a932bb5cd94452437a32399",
+        "workCategory": "Normal/Others",
+        "workDescription": "road njaraneeli- Meeaconam Peringamal GP",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 1626438
+      },
+      {
+        "_id": "6a932bb5cd94452437a3214d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Road in puthenkonam Colony  Thalayil W Manikkal GP",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 2339512
+      },
+      {
+        "_id": "6a932bb5cd94452437a32089",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mahadeveshvaram - aayiravalli road, pappala ward -16, pazhayakunnummel GP",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 1279328
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f14",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of building Aksharam Library,Pattamkallu,Nedumangadu Municipality ,TVPM",
+        "completedDate": "2026-01-13T00:00:00.000Z",
+        "finalAmount": 1821116
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.251Z"
+}

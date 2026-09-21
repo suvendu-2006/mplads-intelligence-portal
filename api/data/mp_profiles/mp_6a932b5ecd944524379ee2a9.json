@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2a9",
+    "name": "Shri Subhash Barala (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Haryana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 29532538,
+    "utilizationPercentage": 20.090161904761906,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 73,
+    "completedWorksValue": 4163539,
+    "inProgressPayments": 25368999,
+    "paymentGapPercentage": 85.90185848571498,
+    "completionRate": 5.194805194805195,
+    "pendingWorks": 69,
+    "unspentAmount": 117467462,
+    "totalRecommendedAmount": 79646165,
+    "name_hi": "Shri Subhash Barala (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 29532538,
+      "totalEntries": 61,
+      "avgExpenditure": 484139.9672131148,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6707338,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22825200,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 29532538,
+        "transactionCount": 61,
+        "avgAmount": 484139.9672131148
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 73,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322f4",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of public libraries in SHRI DURGA MAHILA MAHAVIDYALAYA",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 2012000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d7b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction new Community Center in Bahal Bhiwani",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 1100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31dd6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mobile water tanker for Gram Panchayat Sidhan.",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 180000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e7a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed for Cows in the Gaushala, Village Uchana Khurd, Distt Jind",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 871539
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.894Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf79",
+    "name": "Shri Rajmohan Unnithan ",
+    "constituency": "KASARAGOD",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 156754633.11,
+    "totalExpenditure": 28932795,
+    "utilizationPercentage": 18.45737789434069,
+    "completedWorksCount": 56,
+    "recommendedWorksCount": 151,
+    "completedWorksValue": 13539308,
+    "inProgressPayments": 15393487,
+    "paymentGapPercentage": 53.20428600140429,
+    "completionRate": 27.053140096618357,
+    "pendingWorks": 95,
+    "unspentAmount": 127821838.11000001,
+    "totalRecommendedAmount": 59251035,
+    "name_hi": "Shri Rajmohan Unnithan ",
+    "constituency_hi": "KASARAGOD",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28932795,
+      "totalEntries": 120,
+      "avgExpenditure": 241106.625,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11315934,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17616861,
+        "transactionCount": 77
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28932795,
+        "transactionCount": 120,
+        "avgAmount": 241106.625
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 56,
+    "recommendedCount": 151,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9b7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Books for Kanavu Granthalayam, Pukkalam (Tribal Library, Periya PO Regn No. 14HDG8480 Pullur Periya Grama Panchayath, Kasaragod District",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e438",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Mini High mast Light near Illyas Masjid, Illyas Nagar, ward No.40",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 298935
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of books for Kaithapram PothujanaVayanasala and Granthalayam,Kaithapram Regn. No. 3320 Mathamangalam P.O. Kannur",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mini High Mast Light at Kushal Nagar   ( Ward 39), Kanhangad",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 298935
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e253",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction and Tarring/Concrete work for the Podithadam SC Colony Road in Ward 8 of Ezhom Grama Panchayath (First or second reach as required by concerend LGIs) [Work to be included under SC Category]",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 526192
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.517Z"
+}

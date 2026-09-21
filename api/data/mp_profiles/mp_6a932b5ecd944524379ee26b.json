@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee26b",
+    "name": "Shri Narayanasa K. Bhandage (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147450000,
+    "totalExpenditure": 76863625,
+    "utilizationPercentage": 52.1286029162428,
+    "completedWorksCount": 87,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 68036055,
+    "inProgressPayments": 8827570,
+    "paymentGapPercentage": 11.484717250845247,
+    "completionRate": 55.769230769230774,
+    "pendingWorks": -18,
+    "unspentAmount": 70586375,
+    "totalRecommendedAmount": 72904980,
+    "name_hi": "Shri Narayanasa K. Bhandage (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76863625,
+      "totalEntries": 164,
+      "avgExpenditure": 468680.64024390245,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 68095796,
+        "transactionCount": 137
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 8767829,
+        "transactionCount": 27
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76863625,
+        "transactionCount": 164,
+        "avgAmount": 468680.64024390245
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 87,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a322ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boundary Wall at Government Junior High School, in Pakyong Bazar village, Pakyong district of Sikkim state.",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 2498224
+      },
+      {
+        "_id": "6a932bb5cd94452437a3217f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Property no.138-1 in Hirebadwadagi village of Hunagund taluk.",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 375000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32066",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall. At property no.118-1 in Zunjarakoppa village.",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31f33",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall.",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 499965
+      },
+      {
+        "_id": "6a932bb5cd94452437a313aa",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair and Renovation work of Government Model Primary School.",
+        "completedDate": "2026-01-12T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.427Z"
+}

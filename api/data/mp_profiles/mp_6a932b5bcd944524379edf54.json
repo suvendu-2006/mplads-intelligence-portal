@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf54",
+    "name": "SHAFI PARAMBIL",
+    "constituency": "VADAKARA",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 15909800,
+    "utilizationPercentage": 10.822993197278912,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 228,
+    "completedWorksValue": 1512000,
+    "inProgressPayments": 14397800,
+    "paymentGapPercentage": 90.49642358797723,
+    "completionRate": 6.172839506172839,
+    "pendingWorks": 213,
+    "unspentAmount": 131090200,
+    "totalRecommendedAmount": 101041500,
+    "name_hi": "SHAFI PARAMBIL",
+    "constituency_hi": "VADAKARA",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15909800,
+      "totalEntries": 56,
+      "avgExpenditure": 284103.5714285714,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2642570,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13267230,
+        "transactionCount": 54
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15909800,
+        "transactionCount": 56,
+        "avgAmount": 284103.5714285714
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 228,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of wheelchairs (Motorized)",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 70000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db19",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Tricycle (Motorized)",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 103000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db00",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Tricycle (Motorized)",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 103000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Tricycle (Motorized)",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 103000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Tricycle (Motorized)",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 103000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.214Z"
+}

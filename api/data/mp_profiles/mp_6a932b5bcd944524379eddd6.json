@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd6",
+    "name": "Anto Antony",
+    "constituency": "PATHANAMTHITTA",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26984855,
+    "utilizationPercentage": 18.357044217687076,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 296,
+    "completedWorksValue": 14782777,
+    "inProgressPayments": 12202078,
+    "paymentGapPercentage": 45.21824556774531,
+    "completionRate": 16.853932584269664,
+    "pendingWorks": 236,
+    "unspentAmount": 120015145,
+    "totalRecommendedAmount": 128891581,
+    "name_hi": "Anto Antony",
+    "constituency_hi": "PATHANAMTHITTA",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26984855,
+      "totalEntries": 78,
+      "avgExpenditure": 345959.6794871795,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9878555,
+        "transactionCount": 33
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17106300,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26984855,
+        "transactionCount": 78,
+        "avgAmount": 345959.6794871795
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 296,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e723",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 8 Meter LED Mini Mast Light at Mayyavu Temple Junction in Aranmula Grama Panchayat.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 217562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e72e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 8 Meter LED Mini Mast Light at Kozhippalam Junction in Aranmula Grama Panchayat.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 217562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e73c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 8 Meter LED Mini Mast Light at Devaru Temple Junction, Perumpulickal in Pandalam Thekkekkara Grama Panchayat.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 217562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e773",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 8 Meter LED Mini Mast Light at Indira Nagar Junction in Kulanada Grama Panchayat.",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 217562
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e884",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 8 Meter LED Mini Mast Light in front of Cheruvally Sree Devi Temple in Chirakkadavu Grama Panchayat. (Ward-13)",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 217652
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.732Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee200",
+    "name": "Dr. Medha Vishram Kulkarni (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 41737818,
+    "utilizationPercentage": 28.39307346938775,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 76,
+    "completedWorksValue": 30816058,
+    "inProgressPayments": 10921760,
+    "paymentGapPercentage": 26.167539472235944,
+    "completionRate": 28.971962616822427,
+    "pendingWorks": 45,
+    "unspentAmount": 105262182,
+    "totalRecommendedAmount": 75940000,
+    "name_hi": "Dr. Medha Vishram Kulkarni (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 41737818,
+      "totalEntries": 49,
+      "avgExpenditure": 851792.2040816327,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22928359,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18809459,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 41737818,
+        "transactionCount": 49,
+        "avgAmount": 851792.2040816327
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 76,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32284",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of advance science lab in at Hutatma Bhagat Singh Vidya Mandir and Anant English School, Satara Sfurti Sikshan Prasarak Mandal, Mayani, Taluka Khatav, Dist. Satara",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32285",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Classroom at Hutatma Bhagat Singh Vidya Mandir and Anant English School, Satara Sfurti Sikshan Prasarak Mandal, Mayani, Taluka Khatav, Dist. Satara",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 931443
+      },
+      {
+        "_id": "6a932bb5cd94452437a321a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Brahmin Sabha Kopargaon Distt.  Ahilyanagar, \n Installation of new paving blocks of the congregation.",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 77092
+      },
+      {
+        "_id": "6a932bb5cd94452437a321aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Brahmin Sabha Kopargaon Distt.  Ahilyanagar,  Painting the congregation area",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a321ac",
+        "workCategory": "Normal/Others",
+        "workDescription": "Brahmin Sabha Kopargaon Distt.  Ahilyanagar, \n work: Construction of congregational public toilets",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.684Z"
+}

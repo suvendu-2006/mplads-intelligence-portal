@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf63",
+    "name": "Shri Anil Firojiya",
+    "constituency": "UJJAIN",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76951399,
+    "utilizationPercentage": 52.34789047619047,
+    "completedWorksCount": 152,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 42096894,
+    "inProgressPayments": 34854505,
+    "paymentGapPercentage": 45.29417977183235,
+    "completionRate": 61.29032258064516,
+    "pendingWorks": -56,
+    "unspentAmount": 70048601,
+    "totalRecommendedAmount": 57864841,
+    "name_hi": "Shri Anil Firojiya",
+    "constituency_hi": "UJJAIN",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76951399,
+      "totalEntries": 288,
+      "avgExpenditure": 267192.3576388889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 47468648,
+        "transactionCount": 198
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29482751,
+        "transactionCount": 90
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76951399,
+        "transactionCount": 288,
+        "avgAmount": 267192.3576388889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 152,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a077",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram tankariya kazi me shed for workers",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c51c",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram chintaman jawasiya me santosh choukse ke ghar se chakki wale kuna tak ki aur cement concrit road nirman",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c3f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Bholdiya sc basti me puliya nirman",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c519",
+        "workCategory": "Normal/Others",
+        "workDescription": "gram tankariyapanth bhoi mohalla me cement concrit road nirman",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb4b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram cheekali me cement concrit road manglik bhawan se babulalji ke ghar ki aur",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.699Z"
+}

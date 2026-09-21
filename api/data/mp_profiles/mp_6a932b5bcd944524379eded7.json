@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded7",
+    "name": "Mukesh Rajput",
+    "constituency": "FARRUKHABAD",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 108417412,
+    "utilizationPercentage": 73.75334149659864,
+    "completedWorksCount": 246,
+    "recommendedWorksCount": 49,
+    "completedWorksValue": 92642945,
+    "inProgressPayments": 15774467,
+    "paymentGapPercentage": 14.549754240582685,
+    "completionRate": 83.38983050847457,
+    "pendingWorks": -197,
+    "unspentAmount": 38582588,
+    "totalRecommendedAmount": 44494488,
+    "name_hi": "Mukesh Rajput",
+    "constituency_hi": "FARRUKHABAD",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 108417412,
+      "totalEntries": 367,
+      "avgExpenditure": 295415.2915531335,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 89439307,
+        "transactionCount": 331
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18978105,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 108417412,
+        "transactionCount": 367,
+        "avgAmount": 295415.2915531335
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 246,
+    "recommendedCount": 49,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e077",
+        "workCategory": "Normal/Others",
+        "workDescription": ". Establishment of an open-air gym near the water tank in Raisepur village using my Member of Parliament Local Area Development Fund, in consultation with Man Pratap (9569610172).",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 801387
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e076",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of an open gym in the Junior High School premises in village Gopalpur, using my Member of Parliament Local Area Development Fund, in consultation with Mahesh (8005060691).",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 799901
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of an open-air gym at the Mathiya Devi complex in Bichpuri village, funded by my Member of Parliament Local Area Development Scheme (MPLADS) fund, in consultation with Vijay Patharia (945009084).",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 800071
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e075",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of an open-air gym in the Panchayat Bhavan complex in Sikandarpur village using my Member of Parliament Local Area Development Fund, in consultation with Kunwarjeet Jeetu (9839124394).",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 802279
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ac40",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a high mast light near the house in village Nagla Balu in consultation with Anar Singh Batham from my MP Local Area Development Fund (7417145188)",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 197295
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.772Z"
+}

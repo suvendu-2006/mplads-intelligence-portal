@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edee0",
+    "name": "NARESH CHANDRA UTTAM PATEL",
+    "constituency": "FATEHPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28783210,
+    "utilizationPercentage": 19.580414965986396,
+    "completedWorksCount": 12,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 13540314,
+    "inProgressPayments": 15242896,
+    "paymentGapPercentage": 52.95759576503107,
+    "completionRate": 13.953488372093023,
+    "pendingWorks": 62,
+    "unspentAmount": 118216790,
+    "totalRecommendedAmount": 70305000,
+    "name_hi": "NARESH CHANDRA UTTAM PATEL",
+    "constituency_hi": "FATEHPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28783210,
+      "totalEntries": 49,
+      "avgExpenditure": 587412.4489795918,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 28783210,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28783210,
+        "transactionCount": 49,
+        "avgAmount": 587412.4489795918
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 12,
+    "recommendedCount": 74,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c921",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand devmai ke gram alampur  me yashpal kushwaha ke ghar se neta ki gumti tak cc road ka nirman karya (approx 250 metr.)",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 1973580
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d98d",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand  devmai  ke gram ishepur ke ajay utaam ke ghar se daya shankar kje ghar tak cc road ka nirman karya (approx 160 metre)",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 1214483
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d98e",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK DEV MAI LACHHIKHEDA DEV MAI SAMPARK MARG SE RANITAL ME HARISHCHANDRA PASWAN KE MAKAN TAK RCC DURI 130M",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1097697
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c91f",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikas khand devmai ke gram rampur bakewarme rampur pakki road se rakesh patel urf baba ji ke ghar tak cc road ka nirman karya ( approx 200 metr.)",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1313573
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c919",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK KHAJUA GRAM KHOONTA MARG SE MAJHOLWA SE JAYPAL VERMA KE DARWAJE TA CC DURI 200M",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1384603
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.231Z"
+}

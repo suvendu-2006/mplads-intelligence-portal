@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf72",
+    "name": "Shri Karti P Chidambaram ",
+    "constituency": "SIVAGANGA",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159049284.11,
+    "totalExpenditure": 98344507,
+    "utilizationPercentage": 61.83272534064598,
+    "completedWorksCount": 117,
+    "recommendedWorksCount": 67,
+    "completedWorksValue": 74356902,
+    "inProgressPayments": 23987605,
+    "paymentGapPercentage": 24.39140296874944,
+    "completionRate": 63.58695652173913,
+    "pendingWorks": -50,
+    "unspentAmount": 60704777.110000014,
+    "totalRecommendedAmount": 62232000,
+    "name_hi": "Shri Karti P Chidambaram ",
+    "constituency_hi": "SIVAGANGA",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 98344507,
+      "totalEntries": 147,
+      "avgExpenditure": 669010.2517006802,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3298234,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 55237554,
+        "transactionCount": 77
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39808719,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 98344507,
+        "transactionCount": 147,
+        "avgAmount": 669010.2517006802
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 117,
+    "recommendedCount": 67,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e470",
+        "workCategory": "Normal/Others",
+        "workDescription": "(MPLADS 2025-26) Construction of Drama Stage Near Satnthikaruppar Kovil in  Kumbankudi Village, Rarapuram Panchayat",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 698766
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "(MPLADS 2025-26) Construction of Drama Stage Near  Sri Veerammal kaliamman Kovil, Onankudi Panchayat",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 829016
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e38e",
+        "workCategory": "Normal/Others",
+        "workDescription": "(MPLADS 2025-26) Construction of  Drama Stage  in SC COLONY Annanagar in O.PUDUR Panchayat",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 936274
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e304",
+        "workCategory": "Normal/Others",
+        "workDescription": "(MPLADS 2025-26) Construction in Drama Stage in Near Sri Karpaga Vinayagar Kovil in Vandakottai Village, Vandakottai Panchayat",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 794721
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc48",
+        "workCategory": "Normal/Others",
+        "workDescription": "(MPLADS 2025-26) Construction of Drama Stage Near Punitha Arulanthar Alayam in Dhalirthalai Village, Marandai Panchayat",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 944896
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.677Z"
+}

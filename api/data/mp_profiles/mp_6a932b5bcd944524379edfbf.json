@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfbf",
+    "name": "VIJAYLAKSHMI DEVI",
+    "constituency": "SIWAN",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 134748616,
+    "utilizationPercentage": 91.66572517006803,
+    "completedWorksCount": 95,
+    "recommendedWorksCount": 87,
+    "completedWorksValue": 90543755,
+    "inProgressPayments": 44204861,
+    "paymentGapPercentage": 32.80542859156342,
+    "completionRate": 52.197802197802204,
+    "pendingWorks": -8,
+    "unspentAmount": 12251384,
+    "totalRecommendedAmount": 54742200,
+    "name_hi": "VIJAYLAKSHMI DEVI",
+    "constituency_hi": "SIWAN",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 134748616,
+      "totalEntries": 142,
+      "avgExpenditure": 948933.9154929577,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 86914136,
+        "transactionCount": 93
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 47834480,
+        "transactionCount": 49
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 134748616,
+        "transactionCount": 142,
+        "avgAmount": 948933.9154929577
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 95,
+    "recommendedCount": 87,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d1a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mask Light",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 958000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c73b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of pcc road",
+        "completedDate": "2026-01-13T00:00:00.000Z",
+        "finalAmount": 1284440
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c43d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road from ARJAL - HASANPURA Main Road to towards Naresh Bhagat House",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 1387179
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc49",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF PCC ROAD",
+        "completedDate": "2025-12-09T00:00:00.000Z",
+        "finalAmount": 984070
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a712",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road",
+        "completedDate": "2025-10-03T00:00:00.000Z",
+        "finalAmount": 997050
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.433Z"
+}

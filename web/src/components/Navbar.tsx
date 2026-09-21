@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
+import { LanguageSelector } from './LanguageSelector'
+import { useTranslation, translateState } from '../lib/i18n'
 import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
@@ -10,6 +12,7 @@ import { findAssemblyConstituencies, ASSEMBLY_CONSTITUENCIES, AssemblyItem } fro
 
 export const Navbar: React.FC = () => {
   const { theme, searchQuery, setTheme, setSearchQuery, user, setMpJurisdiction } = useStore()
+  const { t, formatNum, lang } = useTranslation()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
@@ -90,10 +93,17 @@ export const Navbar: React.FC = () => {
       return { matchingConstituencies: [], matchingMps: [] }
     }
 
+    const isStateNodal = user.role === 'state_nodal_officer' && Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
+    const nodalState = isStateNodal ? user.state!.toLowerCase() : ''
+
     const constMatches: MPSeatItem[] = []
     const mpMatches: MPSeatItem[] = []
 
     for (const seat of ALL_MP_SEATS) {
+      if (isStateNodal && seat.state.toLowerCase() !== nodalState) {
+        continue
+      }
+
       const isConst = seat.constituency.toLowerCase().includes(q)
       const isMp = seat.name.toLowerCase().includes(q)
 
@@ -125,7 +135,7 @@ export const Navbar: React.FC = () => {
       matchingConstituencies: constMatches.slice(0, 5),
       matchingMps: mpMatches.slice(0, 4),
     }
-  }, [searchQuery])
+  }, [searchQuery, user.role, user.state])
 
   // Filter matching Assembly Constituencies (e.g. Padampur, Bijepur, Rohini, Varanasi South)
   const matchingAssemblyConstituencies = React.useMemo(() => {
@@ -328,7 +338,7 @@ export const Navbar: React.FC = () => {
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') setIsDropdownOpen(false)
                 }}
-                placeholder="Search MP, Constituency, State, or District..."
+                placeholder={t('nav.search_placeholder')}
                 className="w-full pl-9 pr-8 py-1.5 text-xs rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder-[var(--text-tertiary)] focus:outline-none focus:border-[var(--brand-primary)] focus:bg-[var(--surface-primary)] transition shadow-2xs"
               />
               {searchQuery && (
@@ -355,7 +365,7 @@ export const Navbar: React.FC = () => {
                 {isDigits && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
-                      Audit Work Inspection Report
+                      {t('audit.workbench')}
                     </div>
                     <button
                       onClick={() => handleSelectWork(qClean)}
@@ -366,7 +376,7 @@ export const Navbar: React.FC = () => {
                           <FileText size={14} />
                         </div>
                         <div>
-                          <div className="font-bold text-[var(--text-primary)]">Work #{qClean}</div>
+                          <div className="font-bold text-[var(--text-primary)]">Work #{formatNum(qClean)}</div>
                           <div className="text-[10px] text-[var(--text-secondary)]">Direct Forensic Audit Investigation</div>
                         </div>
                       </div>
@@ -380,7 +390,7 @@ export const Navbar: React.FC = () => {
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
                       <span>Assembly Constituencies &amp; Local Areas</span>
-                      <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">Vidhan Sabha &bull; {matchingAssemblyConstituencies.length} matches</span>
+                      <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">Vidhan Sabha &bull; {formatNum(matchingAssemblyConstituencies.length)} matches</span>
                     </div>
                     {matchingAssemblyConstituencies.map((ac) => (
                       <button
@@ -400,7 +410,7 @@ export const Navbar: React.FC = () => {
                               </span>
                             </div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              Lok Sabha: <strong className="text-[var(--text-primary)]">{ac.pc}</strong> &bull; {ac.state} {ac.mpName && ac.mpName !== 'Vacant' ? `• MP: ${ac.mpName}` : ''}
+                              Lok Sabha: <strong className="text-[var(--text-primary)]">{ac.pc}</strong> &bull; {translateState(ac.state, lang)} {ac.mpName && ac.mpName !== 'Vacant' ? `• MP: ${ac.mpName}` : ''}
                             </div>
                           </div>
                         </div>
@@ -415,7 +425,7 @@ export const Navbar: React.FC = () => {
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
                       <span>Parliamentary Constituencies</span>
-                      <span className="text-[9px] text-[var(--brand-primary)] font-bold">Lok Sabha &bull; {matchingConstituencies.length} matches</span>
+                      <span className="text-[9px] text-[var(--brand-primary)] font-bold">Lok Sabha &bull; {formatNum(matchingConstituencies.length)} matches</span>
                     </div>
                     {matchingConstituencies.map((c) => (
                       <button
@@ -432,7 +442,7 @@ export const Navbar: React.FC = () => {
                               {c.constituency}
                             </div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              Constituency Details &bull; MP: <strong className="text-[var(--text-primary)]">{c.name}</strong> &bull; {c.state}
+                              Constituency Details &bull; MP: <strong className="text-[var(--text-primary)]">{c.name}</strong> &bull; {translateState(c.state, lang)}
                             </div>
                           </div>
                         </div>
@@ -446,7 +456,7 @@ export const Navbar: React.FC = () => {
                 {matchingMps.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
-                      Members of Parliament
+                      {t('table.members_of_parliament')}
                     </div>
                     {matchingMps.map((m) => (
                       <div
@@ -463,7 +473,7 @@ export const Navbar: React.FC = () => {
                           <div className="min-w-0">
                             <div className="font-bold text-[var(--text-primary)] truncate text-xs">{m.name}</div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.state} ({m.house})
+                              {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{translateState(m.state, lang)} ({m.house})
                             </div>
                           </div>
                         </button>
@@ -490,7 +500,7 @@ export const Navbar: React.FC = () => {
                 {matchingStates.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
-                      States &amp; UTs
+                      {t('states.title')}
                     </div>
                     {matchingStates.map((st) => (
                       <button
@@ -503,7 +513,7 @@ export const Navbar: React.FC = () => {
                             🇮🇳
                           </div>
                           <div>
-                            <div className="font-bold text-[var(--text-primary)]">{st}</div>
+                            <div className="font-bold text-[var(--text-primary)]">{translateState(st, lang)}</div>
                             <div className="text-[10px] text-[var(--text-secondary)]">Open State Command Dashboard</div>
                           </div>
                         </div>
@@ -517,7 +527,7 @@ export const Navbar: React.FC = () => {
                 {matchingDistricts.length > 0 && (
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1">
-                      Districts
+                      {t('states.districts')}
                     </div>
                     {matchingDistricts.map((d) => (
                       <button
@@ -531,7 +541,7 @@ export const Navbar: React.FC = () => {
                           </div>
                           <div>
                             <div className="font-bold text-[var(--text-primary)]">{d.district}</div>
-                            <div className="text-[10px] text-[var(--text-secondary)]">{d.state} District Dashboard</div>
+                            <div className="text-[10px] text-[var(--text-secondary)]">{translateState(d.state, lang)} District Dashboard</div>
                           </div>
                         </div>
                         <ArrowRight size={12} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition" />
@@ -591,6 +601,9 @@ export const Navbar: React.FC = () => {
               DEVICE
             </button>
           </div>
+
+          {/* Language Selector (All 22 Official Indian Languages + English) */}
+          <LanguageSelector />
 
           {/* Switch Role Dropdown */}
           <SwitchRoleDropdown />

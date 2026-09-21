@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede92",
+    "name": "Kalyan Banerjee",
+    "constituency": "SREERAMPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 76719145,
+    "utilizationPercentage": 52.18989455782312,
+    "completedWorksCount": 83,
+    "recommendedWorksCount": 37,
+    "completedWorksValue": 59028419,
+    "inProgressPayments": 17690726,
+    "paymentGapPercentage": 23.059076062435263,
+    "completionRate": 69.16666666666667,
+    "pendingWorks": -46,
+    "unspentAmount": 70280855,
+    "totalRecommendedAmount": 37369555,
+    "name_hi": "Kalyan Banerjee",
+    "constituency_hi": "SREERAMPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 76719145,
+      "totalEntries": 110,
+      "avgExpenditure": 697446.7727272727,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1244147,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 53998441,
+        "transactionCount": 86
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21476557,
+        "transactionCount": 22
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 76719145,
+        "transactionCount": 110,
+        "avgAmount": 697446.7727272727
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 83,
+    "recommendedCount": 37,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a426",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF PCC ROAD WITH PAKKA DRAIN AT A.K. DUTTA SARANI, CHATRA (MACHA GOLI) WITHIN WARD NO 2 UNDER SERAMPORE MUNICIPALITY, HOOGHLY",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 324438
+      },
+      {
+        "_id": "6a932bb5cd94452437a19631",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF COMPLEX OF EXISTING 10M AIR RANGE IN THE SERAMPORE RIFLE CLUB, RAILAND ROAD UNDER SERAMPORE MUNICIPALITY.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 499560
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf8c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road at G.T. Road Manna Para and at G.T. Road Sonar Bangla Within Ward No-20. Under Serampore Municipality.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 307257
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be92",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road at Khatir Bazar Lane Madrashi Para Old Shibmondir Goli Within Ward No - 23. Under Serampore Municipality",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 239723
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a57a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of PCC Road With UG Drain at 136, Maniktola Deybagan Within Ward No - 16. Under Serampore Municipality.",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 797343
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.419Z"
+}

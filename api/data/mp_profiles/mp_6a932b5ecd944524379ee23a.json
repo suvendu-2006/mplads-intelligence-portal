@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee23a",
+    "name": "Shri Govindbhai Laljibhai Dholakia (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Gujarat",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 27272966,
+    "utilizationPercentage": 18.553038095238094,
+    "completedWorksCount": 44,
+    "recommendedWorksCount": 78,
+    "completedWorksValue": 17582444,
+    "inProgressPayments": 9690522,
+    "paymentGapPercentage": 35.531602980035245,
+    "completionRate": 36.0655737704918,
+    "pendingWorks": 34,
+    "unspentAmount": 119727034,
+    "totalRecommendedAmount": 126686300,
+    "name_hi": "Shri Govindbhai Laljibhai Dholakia (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27272966,
+      "totalEntries": 59,
+      "avgExpenditure": 462253.66101694916,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10771730,
+        "transactionCount": 31
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16501236,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27272966,
+        "transactionCount": 59,
+        "avgAmount": 462253.66101694916
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 44,
+    "recommendedCount": 78,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Krankach gam ma alag alag vistar ma blok road nu kam",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32464",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed in the area near the Community Hall in Boriya village",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 153572
+      },
+      {
+        "_id": "6a932bb5cd94452437a323cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Chhota-Udaipur Jilla na balko ne Bon Condoction Machin",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 480000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32430",
+        "workCategory": "Normal/Others",
+        "workDescription": "Asphalt road work from crematorium to Sainik School in Nimalai village",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 1955602
+      },
+      {
+        "_id": "6a932bb5cd94452437a32372",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of C.C.Road from Babubhai Punabhai Gondaliya vadi to Chandubhai Gondaliya vadi in Station Vavdi Village",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 260000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.528Z"
+}

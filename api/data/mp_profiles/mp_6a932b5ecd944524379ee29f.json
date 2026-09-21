@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee29f",
+    "name": "Shri Sanjay Raut (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 67167846,
+    "utilizationPercentage": 34.25813035198308,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 7654065,
+    "inProgressPayments": 59513781,
+    "paymentGapPercentage": 88.60456981157323,
+    "completionRate": 8,
+    "pendingWorks": 63,
+    "unspentAmount": 128896111.11000001,
+    "totalRecommendedAmount": 176199000,
+    "name_hi": "Shri Sanjay Raut (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67167846,
+      "totalEntries": 29,
+      "avgExpenditure": 2316132.620689655,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5157940,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 62009906,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67167846,
+        "transactionCount": 29,
+        "avgAmount": 2316132.620689655
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3219f",
+        "workCategory": "Normal/Others",
+        "workDescription": "District Beed Taluka At Post Mauli University Kej Saraswati Higher Secondary School at Pisegaon",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 2496125
+      },
+      {
+        "_id": "6a932bb5cd94452437a31cec",
+        "workCategory": "Normal/Others",
+        "workDescription": "District Sindhudurg Taluka Malvan, At Post. Kandalgaon Gram Panchayat, Shemadranewadi Hanuman Ghati to Ojar Titha and Rameshwar Nagar",
+        "completedDate": "2025-11-21T00:00:00.000Z",
+        "finalAmount": 699989
+      },
+      {
+        "_id": "6a932bb5cd94452437a31bf2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal Cement Concrete Road, Ward No. 105, Sadatnagar, Banewadi, Plot No. 44, Abdul Rahman Menakshan Hall to Plot No. 35, Dr. Sartaj Pathan House, Aurangabad",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 997228
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c3c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Internal Cement Concrete Road, Ward No. 105, Sadatnagar, Banewadi, Plot No. 36, Dr. Siraj House to Plot No. 37, Sameer Chaudhary House, Aurangabad",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 998596
+      },
+      {
+        "_id": "6a932bb5cd94452437a317e2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Cocreting of internal road at Mu, Devoli Po, Rasayani in Panvel Taluka of Raigad District.",
+        "completedDate": "2025-08-05T00:00:00.000Z",
+        "finalAmount": 998668
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.745Z"
+}

@@ -1,0 +1,40 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede8d",
+    "name": "Kalaben Mohanbhai Delkar",
+    "constituency": "DADRA & NAGAR HAVELI",
+    "state": "The Dadra And Nagar Haveli And Daman And Diu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 0,
+    "utilizationPercentage": 0,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 2,
+    "completedWorksValue": 0,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 0,
+    "pendingWorks": 2,
+    "unspentAmount": 147000000,
+    "totalRecommendedAmount": 14700000,
+    "name_hi": "Kalaben Mohanbhai Delkar",
+    "constituency_hi": "DADRA & NAGAR HAVELI",
+    "state_hi": "The Dadra And Nagar Haveli And Daman And Diu"
+  },
+  "expenditure": {
+    "summary": {
+      "totalExpenditure": 0,
+      "totalEntries": 0,
+      "avgExpenditure": 0,
+      "categories": []
+    },
+    "yearlyTrend": [],
+    "categoryBreakdown": []
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 2,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.871Z"
+}

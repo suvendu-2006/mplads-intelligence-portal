@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede4e",
+    "name": "DR.MALLU RAVI",
+    "constituency": "NAGARKURNOOL",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 47000729,
+    "utilizationPercentage": 31.973285034013603,
+    "completedWorksCount": 143,
+    "recommendedWorksCount": 84,
+    "completedWorksValue": 35214808,
+    "inProgressPayments": 11785921,
+    "paymentGapPercentage": 25.076038714208025,
+    "completionRate": 62.99559471365639,
+    "pendingWorks": -59,
+    "unspentAmount": 99999271,
+    "totalRecommendedAmount": 59350000,
+    "name_hi": "DR.MALLU RAVI",
+    "constituency_hi": "NAGARKURNOOL",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 47000729,
+      "totalEntries": 156,
+      "avgExpenditure": 301286.7243589744,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 30414587,
+        "transactionCount": 104
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16586142,
+        "transactionCount": 52
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 47000729,
+        "transactionCount": 156,
+        "avgAmount": 301286.7243589744
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 143,
+    "recommendedCount": 84,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e2cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing motorized tricycle to Mirigila Nagarathnam son of Narsimha 3-93 Nizamabad V) Pangal M Wanaparthy D",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 118500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0e7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Repairs and Renovation of BC College Hostel at BD Colony, Ward No 8",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 487500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e181",
+        "workCategory": "Normal/Others",
+        "workDescription": "Repairs and Renovation of BC Girls Hostel at Bheemnagar, Ward No 16",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Repairs and Renovation of SW Girls Hostel at Nallakunta, Ward No 20",
+        "completedDate": "2026-04-09T00:00:00.000Z",
+        "finalAmount": 498818
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dea5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of new bore well at Munthali fouz in  4th ward",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 99555
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.203Z"
+}

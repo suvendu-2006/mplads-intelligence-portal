@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede8b",
+    "name": "KADIYAM KAVYA",
+    "constituency": "WARANGEL",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 27189421,
+    "utilizationPercentage": 18.49620476190476,
+    "completedWorksCount": 53,
+    "recommendedWorksCount": 161,
+    "completedWorksValue": 19492958,
+    "inProgressPayments": 7696463,
+    "paymentGapPercentage": 28.306829336306944,
+    "completionRate": 24.766355140186917,
+    "pendingWorks": 108,
+    "unspentAmount": 119810579,
+    "totalRecommendedAmount": 68758994,
+    "name_hi": "KADIYAM KAVYA",
+    "constituency_hi": "WARANGEL",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27189421,
+      "totalEntries": 73,
+      "avgExpenditure": 372457.8219178082,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13640689,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 13548732,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27189421,
+        "transactionCount": 73,
+        "avgAmount": 372457.8219178082
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 53,
+    "recommendedCount": 161,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e4da",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repairs to Drinking water pipeline, Rangaraopalle H/o Kondapur Village of Ghanpur Mulugu Mandal",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 199222
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f7c",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF COMMUNITY HALL AT BHEEMARAM, DIVISION NO. 55 GWMC, HASANPARTHY MANDAL",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 499000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2fb",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING HIGH MAST LIGHTS AT RAMARAYANI BUNGLOW VILLAGE OF RAGHUNATHPALLY MANDAL",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 119271
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca6c",
+        "workCategory": "Normal/Others",
+        "workDescription": "EXTENTION OF SUPPLY CAT-VI A GRAMPANCHYATH  AT SAMUDRALA VILLAGE OF GHANPUR STATION",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 92990
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b355",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of (10) Street Lights from Main road to KGBV School Building at Mupparam Village of Dharmasagar Mandal, Hanumakonda District.",
+        "completedDate": "2026-05-01T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.511Z"
+}

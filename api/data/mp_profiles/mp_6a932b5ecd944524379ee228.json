@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee228",
+    "name": "Shri Birendra Prasad Baishya (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Assam",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 27790330,
+    "utilizationPercentage": 28.357479591836736,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 44,
+    "completedWorksValue": 995373,
+    "inProgressPayments": 26794957,
+    "paymentGapPercentage": 96.41827570957236,
+    "completionRate": 2.2222222222222223,
+    "pendingWorks": 43,
+    "unspentAmount": 70209670,
+    "totalRecommendedAmount": 76500000,
+    "name_hi": "Shri Birendra Prasad Baishya (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27790330,
+      "totalEntries": 26,
+      "avgExpenditure": 1068858.8461538462,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2400000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25390330,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27790330,
+        "transactionCount": 26,
+        "avgAmount": 1068858.8461538462
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 44,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32235",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall Near Mahabhairab Temple",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 995373
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.882Z"
+}

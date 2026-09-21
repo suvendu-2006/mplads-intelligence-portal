@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0f",
+    "name": "C R Patil",
+    "constituency": "NAVSARI",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 158532494.36,
+    "totalExpenditure": 70355025,
+    "utilizationPercentage": 44.378930189690855,
+    "completedWorksCount": 268,
+    "recommendedWorksCount": 141,
+    "completedWorksValue": 64959144,
+    "inProgressPayments": 5395881,
+    "paymentGapPercentage": 7.669503351039958,
+    "completionRate": 65.52567237163814,
+    "pendingWorks": -127,
+    "unspentAmount": 88177469.36000001,
+    "totalRecommendedAmount": 64248500,
+    "name_hi": "C R Patil",
+    "constituency_hi": "NAVSARI",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70355025,
+      "totalEntries": 280,
+      "avgExpenditure": 251267.94642857142,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 37915405,
+        "transactionCount": 206
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32439620,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70355025,
+        "transactionCount": 280,
+        "avgAmount": 251267.94642857142
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 268,
+    "recommendedCount": 141,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d0cc",
+        "workCategory": "Normal/Others",
+        "workDescription": "To construct protection wall around pond in Utara faliya at village Chhapar",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "For drainage work in Sudamanagar halpativas at Saribujrang Village.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a191b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "For inner block paving at Khaparwada village",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a191af",
+        "workCategory": "Normal/Others",
+        "workDescription": "R.C.C. For protection wall near the creek near Bavan faliya in Pathri village",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a191a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "For block paving in front of the new Gram Panchayat building and in front of the Anganwadi building next door at Sarikhurad village",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.649Z"
+}

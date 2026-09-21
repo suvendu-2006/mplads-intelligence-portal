@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2ba",
+    "name": "Smt. Darshana Singh (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196994373.87,
+    "totalExpenditure": 174994106,
+    "utilizationPercentage": 88.83203238864154,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 16,
+    "completedWorksValue": 139851228,
+    "inProgressPayments": 35142878,
+    "paymentGapPercentage": 20.082320943997967,
+    "completionRate": 65.95744680851064,
+    "pendingWorks": -15,
+    "unspentAmount": 22000267.870000005,
+    "totalRecommendedAmount": 37012196,
+    "name_hi": "Smt. Darshana Singh (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 174994106,
+      "totalEntries": 133,
+      "avgExpenditure": 1315745.1578947369,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 11784972,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 48287363,
+        "transactionCount": 68
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 77999801,
+        "transactionCount": 41
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 36921970,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 174994106,
+        "transactionCount": 133,
+        "avgAmount": 1315745.1578947369
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 16,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324aa",
+        "workCategory": "Normal/Others",
+        "workDescription": "RCC Road Construction",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 466572
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c55",
+        "workCategory": "Normal/Others",
+        "workDescription": "Releasing remaining amount of 2,39,500 for Room Construction in District Gorakhpur, Sikaripur",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 224252
+      },
+      {
+        "_id": "6a932bb5cd94452437a31c4c",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road Construction in Village Padhera",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 992051
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e6a",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Light Installation at public places, list are attached",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 1663200
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "30 Semi High Mask LED Lights Installation as per list.",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 7128000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:11.938Z"
+}

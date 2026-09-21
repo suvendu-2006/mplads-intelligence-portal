@@ -17,79 +17,69 @@
 
 export const palette = {
   /**
-   * Okabe-Ito categorical palette (8 colors)
-   * Optimized for color vision deficiency
-   * Worst pair ΔE = 15.7, most pairs ΔE > 30
+   * Categorical palette
+   * Donut chart slices strictly use: #243B85, #5DA9E0, #C8642A, #3E9C78, #B7883F, #8E4A8F
    */
   category: {
     light: [
-      '#0072B2',  // Blue (primary series)
-      '#D55E00',  // Vermillion (secondary)
-      '#009E73',  // Bluish-green (tertiary)
-      '#B7791F',  // Gold (money/value)
-      '#AA4499',  // Purple (demographic)
-      '#56B4E9',  // Sky (light blue)
-      '#5D6C8A',  // Slate (infrastructure)
-      '#94A3B8',  // Grey ("Other" - ALWAYS LAST)
+      '#243B85',  // Brand Navy Blue
+      '#5DA9E0',  // Azure Sky Blue
+      '#C8642A',  // Warm Terracotta Orange
+      '#3E9C78',  // Emerald Mint Green
+      '#B7883F',  // Chart Gold
+      '#8E4A8F',  // Amethyst Purple
     ],
     dark: [
-      '#6DABF5',  // Brightened blue
-      '#FF9E5E',  // Brightened vermillion
-      '#2FD0A0',  // Brightened green
-      '#E3B341',  // Brightened gold
-      '#D98BD0',  // Brightened purple
-      '#8DCBFF',  // Brightened sky
-      '#A3AEC6',  // Brightened slate
-      '#7C8AA5',  // Brightened grey
+      '#8FA8F0',  // Brand Soft Navy
+      '#60BAF5',  // Sky Blue
+      '#F0A05A',  // Warm Orange
+      '#4CC38A',  // Good Green
+      '#D9AE62',  // Chart Gold
+      '#BA78BB',  // Soft Purple
     ],
   },
 
   /**
    * Fund allocation triad (hero charts)
-   * Blue = Allocated | Gold = Utilized | Grey = Pending
-   * Blue/Gold pair: ΔE 89-101 (excellent separation in ALL CVD types)
+   * Navy = Allocated | Gold = Utilized | Neutral = Pending
    */
   fund: {
-    allocated: { light: '#1E3A8A', dark: '#6DABF5' },  // Ink Navy Blue in light mode
-    utilized: { light: '#B7791F', dark: '#E3B341' },   // Gold NOT green
-    pending: { light: '#E4E7EC', dark: '#2A3247' },    // Quiet neutral
+    allocated: { light: '#1F3A8A', dark: '#8FA8F0' },  // Brand Navy
+    utilized: { light: '#B7883F', dark: '#D9AE62' },   // Chart Gold
+    pending: { light: '#E7E2D9', dark: '#2D2723' },    // Quiet neutral border
   },
 
   /**
    * Risk tier palette
-   * WARNING: High/Medium are ambiguous under CVD (ΔE 8-10)
-   * MUST pair with text label: "High", "Medium", etc.
    */
   risk: {
-    critical: { light: '#B42318', dark: '#FF8080' },   // 6.6:1 contrast
-    high: { light: '#B54708', dark: '#FFB65C' },       // 5.4:1 contrast
-    medium: { light: '#9C6B1A', dark: '#E3B341' },     // 4.6:1 contrast
-    clean: { light: '#067647', dark: '#2FD0A0' },      // 5.7:1 contrast
+    critical: { light: '#B91C1C', dark: '#F87171' },   // 6.5:1 contrast - Reserved for fraud/flags
+    high: { light: '#B45309', dark: '#F0A05A' },       // 5.0:1 contrast - Warning / Queue / Gap
+    medium: { light: '#B7883F', dark: '#D9AE62' },     // Chart Gold
+    clean: { light: '#1F7A4D', dark: '#4CC38A' },      // 5.3:1 contrast - Good
   },
 
   /**
    * Sequential choropleth ramp (maps)
-   * Lightness monotonic: L* 91 → 81 → 74 → 52 → 31
-   * Survives ALL CVD types (darker = higher value)
    */
   sequential: {
-    light: ['#F5E3C0', '#E9C57A', '#A9B4D6', '#5D7BC4', '#274690'],
-    dark: ['#3A3F55', '#5D5B77', '#7C7BA0', '#6D8FD8', '#93B4FF'],
+    light: ['#F6F4EF', '#BACAEB', '#7A9CE3', '#2B4EA8', '#1F3A8A'],
+    dark: ['#1D1916', '#26345A', '#415B9E', '#6B8EE0', '#8FA8F0'],
   },
 
   /**
    * Neutral (no data, disabled states)
    */
-  neutral: { light: '#E4E7EC', dark: '#2A3247' },
+  neutral: { light: '#E7E2D9', dark: '#2D2723' },
 
   /**
    * Status colors (semantic)
    */
   status: {
-    success: { light: '#067647', dark: '#2FD0A0' },
-    warning: { light: '#B54708', dark: '#FFB65C' },
-    danger: { light: '#B42318', dark: '#FF8080' },
-    info: { light: '#0072B2', dark: '#6DABF5' },
+    success: { light: '#1F7A4D', dark: '#4CC38A' },
+    warning: { light: '#B45309', dark: '#F0A05A' },
+    danger: { light: '#B91C1C', dark: '#F87171' },
+    info: { light: '#1F3A8A', dark: '#8FA8F0' },
   },
 } as const
 

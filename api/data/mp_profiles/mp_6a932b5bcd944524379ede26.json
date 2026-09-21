@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede26",
+    "name": "DARSHAN SINGH CHOUDHARY",
+    "constituency": "HOSHANGABAD",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30022552,
+    "utilizationPercentage": 20.423504761904763,
+    "completedWorksCount": 49,
+    "recommendedWorksCount": 348,
+    "completedWorksValue": 5286493,
+    "inProgressPayments": 24736059,
+    "paymentGapPercentage": 82.39159349278502,
+    "completionRate": 12.34256926952141,
+    "pendingWorks": 299,
+    "unspentAmount": 116977448,
+    "totalRecommendedAmount": 56555838,
+    "name_hi": "DARSHAN SINGH CHOUDHARY",
+    "constituency_hi": "HOSHANGABAD",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30022552,
+      "totalEntries": 314,
+      "avgExpenditure": 95613.22292993631,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 13591388,
+        "transactionCount": 136
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16431164,
+        "transactionCount": 178
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30022552,
+        "transactionCount": 314,
+        "avgAmount": 95613.22292993631
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 49,
+    "recommendedCount": 348,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a6ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "transformer establishment at village contact person sh. abhilash mishra mobile no 8770867316",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 120000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a6c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "transformer establishment at village. contact person sh. abhilash mishra mobile no 8770867316",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 120000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e327",
+        "workCategory": "Normal/Others",
+        "workDescription": "for Purchasing of furnitures at,govt.middle school kothiya,contr.person princepal .sh.rajesh kumar bijoriya contr.no.8718864737",
+        "completedDate": "2026-05-09T00:00:00.000Z",
+        "finalAmount": 99620
+      },
+      {
+        "_id": "6a932bb5cd94452437a181a2",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of sitting area at vyayam shala parisar contact person sh sonu maharaj mobile no 9685760911",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "beneficiary is goverment middle school jasarwani for purchesing of Furniture",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 150000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.891Z"
+}

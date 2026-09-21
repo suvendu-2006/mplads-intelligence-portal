@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf80",
+    "name": "Shri vijayakumar Vasanth",
+    "constituency": "KANNIYAKUMARI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 57305751,
+    "utilizationPercentage": 33.41443206997084,
+    "completedWorksCount": 39,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 33616805,
+    "inProgressPayments": 23688946,
+    "paymentGapPercentage": 41.33781616438462,
+    "completionRate": 38.613861386138616,
+    "pendingWorks": 23,
+    "unspentAmount": 114194249,
+    "totalRecommendedAmount": 84751957,
+    "name_hi": "Shri vijayakumar Vasanth",
+    "constituency_hi": "KANNIYAKUMARI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57305751,
+      "totalEntries": 65,
+      "avgExpenditure": 881626.9384615384,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34090415,
+        "transactionCount": 39
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23215336,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57305751,
+        "transactionCount": 65,
+        "avgAmount": 881626.9384615384
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 39,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1da56",
+        "workCategory": "Normal/Others",
+        "workDescription": "jawahrlal nehru oru sagaptham",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb92",
+        "workCategory": "Normal/Others",
+        "workDescription": "interlock stones near bava kasim mandapam",
+        "completedDate": "2026-01-31T00:00:00.000Z",
+        "finalAmount": 927899
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c6e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "kurusadi",
+        "completedDate": "2026-01-21T00:00:00.000Z",
+        "finalAmount": 369433
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c8f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "chennanvilai",
+        "completedDate": "2026-01-20T00:00:00.000Z",
+        "finalAmount": 1287207
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c79a",
+        "workCategory": "Normal/Others",
+        "workDescription": "kottaram peruratchi vilagathil samudhaya nala koodam",
+        "completedDate": "2026-01-13T00:00:00.000Z",
+        "finalAmount": 2000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.655Z"
+}

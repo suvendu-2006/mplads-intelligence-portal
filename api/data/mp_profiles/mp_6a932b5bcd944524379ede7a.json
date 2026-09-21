@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede7a",
+    "name": "Janardan Mishra",
+    "constituency": "REWA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 86935425,
+    "utilizationPercentage": 59.139744897959176,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 106,
+    "completedWorksValue": 1125327,
+    "inProgressPayments": 85810098,
+    "paymentGapPercentage": 98.70555990265188,
+    "completionRate": 0.9345794392523363,
+    "pendingWorks": 105,
+    "unspentAmount": 60064575,
+    "totalRecommendedAmount": 136081366,
+    "name_hi": "Janardan Mishra",
+    "constituency_hi": "REWA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 86935425,
+      "totalEntries": 78,
+      "avgExpenditure": 1114556.7307692308,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 48647940,
+        "transactionCount": 53
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38287485,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 86935425,
+        "transactionCount": 78,
+        "avgAmount": 1114556.7307692308
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 106,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17d79",
+        "workCategory": "Normal/Others",
+        "workDescription": "water tanker",
+        "completedDate": "2025-04-25T00:00:00.000Z",
+        "finalAmount": 1125327
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.897Z"
+}

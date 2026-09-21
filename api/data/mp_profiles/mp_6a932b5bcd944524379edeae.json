@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeae",
+    "name": "KUNDURU RAGHUVEER",
+    "constituency": "NALGONDA",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 162952022,
+    "totalExpenditure": 7766945,
+    "utilizationPercentage": 4.766399891619633,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 23,
+    "completedWorksValue": 6267418,
+    "inProgressPayments": 1499527,
+    "paymentGapPercentage": 19.306522706160532,
+    "completionRate": 20.689655172413794,
+    "pendingWorks": 17,
+    "unspentAmount": 155185077,
+    "totalRecommendedAmount": 17700000,
+    "name_hi": "KUNDURU RAGHUVEER",
+    "constituency_hi": "NALGONDA",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 7766945,
+      "totalEntries": 9,
+      "avgExpenditure": 862993.8888888889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5268401,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2498544,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 7766945,
+        "transactionCount": 9,
+        "avgAmount": 862993.8888888889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 23,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e1ed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Balance construction work of Dinning Hall",
+        "completedDate": "2026-04-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road work infront of Dinning hall",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 499017
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bda0",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Renovation and repair of R B Guest House  at Prakasham Bazar Nalgonda",
+        "completedDate": "2025-12-12T00:00:00.000Z",
+        "finalAmount": 398401
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aa4e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of Underground Drainage at Lattupalli Srinivas Reddy to  Kumbam Laxmaiah House",
+        "completedDate": "2025-10-07T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aa51",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road at  Lattupalli Srinivas Reddy to  Kumbam Laxmaiah House",
+        "completedDate": "2025-10-07T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.437Z"
+}

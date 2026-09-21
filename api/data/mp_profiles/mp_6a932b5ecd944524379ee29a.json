@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee29a",
+    "name": "Shri Samirul Islam (2023-29)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 71238651,
+    "utilizationPercentage": 41.538572011661806,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 57,
+    "completedWorksValue": 0,
+    "inProgressPayments": 71238651,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 57,
+    "unspentAmount": 100261349,
+    "totalRecommendedAmount": 121458527,
+    "name_hi": "Shri Samirul Islam (2023-29)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71238651,
+      "totalEntries": 17,
+      "avgExpenditure": 4190508.882352941,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 52799641,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18439010,
+        "transactionCount": 11
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71238651,
+        "transactionCount": 17,
+        "avgAmount": 4190508.882352941
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 57,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:48.909Z"
+}

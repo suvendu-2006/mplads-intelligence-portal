@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf32",
+    "name": "Ravindra Shyamnarayan Alias Ravi Kishan Shukla",
+    "constituency": "GORAKHPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 12572509,
+    "utilizationPercentage": 8.552727210884353,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 9,
+    "completedWorksValue": 0,
+    "inProgressPayments": 12572509,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 9,
+    "unspentAmount": 134427491,
+    "totalRecommendedAmount": 21318500,
+    "name_hi": "Ravindra Shyamnarayan Alias Ravi Kishan Shukla",
+    "constituency_hi": "GORAKHPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 12572509,
+      "totalEntries": 10,
+      "avgExpenditure": 1257250.9,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6157193,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 6415316,
+        "transactionCount": 6
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 12572509,
+        "transactionCount": 10,
+        "avgAmount": 1257250.9
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 9,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:01.500Z"
+}

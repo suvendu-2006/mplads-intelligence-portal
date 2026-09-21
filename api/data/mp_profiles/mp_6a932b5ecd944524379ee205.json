@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee205",
+    "name": "Dr. Sandeep Kumar Pathak (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 232203454.24,
+    "totalExpenditure": 159803697,
+    "utilizationPercentage": 68.82055115116017,
+    "completedWorksCount": 157,
+    "recommendedWorksCount": 121,
+    "completedWorksValue": 80659922,
+    "inProgressPayments": 79143775,
+    "paymentGapPercentage": 49.52562205115943,
+    "completionRate": 56.4748201438849,
+    "pendingWorks": -36,
+    "unspentAmount": 72399757.24000001,
+    "totalRecommendedAmount": 124695523,
+    "name_hi": "Dr. Sandeep Kumar Pathak (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 159803697,
+      "totalEntries": 1119,
+      "avgExpenditure": 142809.38069705095,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 200000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 2299523,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 27798495,
+        "transactionCount": 23
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 129505679,
+        "transactionCount": 1092
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 159803697,
+        "transactionCount": 1119,
+        "avgAmount": 142809.38069705095
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 157,
+    "recommendedCount": 121,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32461",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Community Hall at Village Gobind Nagar",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32450",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Street and Drain at Village Boote Wala",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a320d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Creation of New Pond",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a320d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of Community Center",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 401270
+      },
+      {
+        "_id": "6a932bb5cd94452437a32297",
+        "workCategory": "Normal/Others",
+        "workDescription": "Const. of New Pond at Village Tibbi Kalan",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 999799
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.349Z"
+}

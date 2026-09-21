@@ -1,0 +1,79 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f5",
+    "name": "Dr. Dinesh Sharma (2023-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57084177,
+    "utilizationPercentage": 38.83277346938775,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 89,
+    "completedWorksValue": 2002221,
+    "inProgressPayments": 55081956,
+    "paymentGapPercentage": 96.49251140118916,
+    "completionRate": 2.197802197802198,
+    "pendingWorks": 87,
+    "unspentAmount": 89915823,
+    "totalRecommendedAmount": 120975771,
+    "name_hi": "Dr. Dinesh Sharma (2023-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57084177,
+      "totalEntries": 63,
+      "avgExpenditure": 906098.0476190476,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1508273,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 34131146,
+        "transactionCount": 44
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21444758,
+        "transactionCount": 17
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57084177,
+        "transactionCount": 63,
+        "avgAmount": 906098.0476190476
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 89,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31a7b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Open gym work in front of Mehndi Park House No. 3/34 located in Special Section, Gomti Nagar, Lucknow under Chinhat Second Ward.",
+        "completedDate": "2026-04-12T00:00:00.000Z",
+        "finalAmount": 493948
+      },
+      {
+        "_id": "6a932bb5cd94452437a305b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Prakrati Bharti (Panjikrat Samajik Sanstha) Gram Bendauwa, Mohanlalganj, Raibareli Road, Lucknow Campus mai Interlocking Work (20) Twenty Lakhs Rupees.",
+        "completedDate": "2024-04-19T00:00:00.000Z",
+        "finalAmount": 1508273
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.897Z"
+}

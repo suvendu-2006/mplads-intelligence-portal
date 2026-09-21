@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf47",
+    "name": "Sanjay Uttamrao Deshmukh",
+    "constituency": "YAVATMAL-WASHIM",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 185640423,
+    "totalExpenditure": 24518118,
+    "utilizationPercentage": 13.207316382811731,
+    "completedWorksCount": 23,
+    "recommendedWorksCount": 101,
+    "completedWorksValue": 14389957,
+    "inProgressPayments": 10128161,
+    "paymentGapPercentage": 41.30888431159357,
+    "completionRate": 18.548387096774192,
+    "pendingWorks": 78,
+    "unspentAmount": 161122305,
+    "totalRecommendedAmount": 69377331.87,
+    "name_hi": "Sanjay Uttamrao Deshmukh",
+    "constituency_hi": "YAVATMAL-WASHIM",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 24518118,
+      "totalEntries": 42,
+      "avgExpenditure": 583764.7142857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5342345,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19175773,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 24518118,
+        "transactionCount": 42,
+        "avgAmount": 583764.7142857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 23,
+    "recommendedCount": 101,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e993",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of paver block at open place Near Sanajay Bavne and Uttam Bavne house in Shrikrishn nagar, Umari tq.Kalamb",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 198998
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e325",
+        "workCategory": "Normal/Others",
+        "workDescription": "Godhni Kota Yethe Pawan sut Vyayam Shalechya Bajune khulya jagevarti taar coumpound bandhne.",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 491821
+      },
+      {
+        "_id": "6a932bb5cd94452437a1deee",
+        "workCategory": "Normal/Others",
+        "workDescription": "Grampanchayt Karkheda Tal Manora Dist Yavatmal yethe Shivaji Deshmukh yanchya gharapasun te Raghvendra Rangrav Solanke yanchya Gharaparynt Paver Block Basavine",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 999400
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df37",
+        "workCategory": "Normal/Others",
+        "workDescription": "Digras Ward no 4 bapunagar yethe Takpire Guruji vachnalay bandhkaam karne",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 976951
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db1f",
+        "workCategory": "Normal/Others",
+        "workDescription": "At Yavatmal Ward No 15 Ambikanagar vit bhatti parisarat yethe solar high mast basvine",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 393551
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.881Z"
+}

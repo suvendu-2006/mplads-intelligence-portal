@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee252",
+    "name": "Shri Kartikeya Sharma (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Haryana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196000000,
+    "totalExpenditure": 1161226,
+    "utilizationPercentage": 0.5924622448979592,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 0,
+    "inProgressPayments": 1161226,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 62,
+    "unspentAmount": 194838774,
+    "totalRecommendedAmount": 61175297,
+    "name_hi": "Shri Kartikeya Sharma (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Haryana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 1161226,
+      "totalEntries": 2,
+      "avgExpenditure": 580613,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1081123,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 80103,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 1161226,
+        "transactionCount": 2,
+        "avgAmount": 580613
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 62,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.445Z"
+}

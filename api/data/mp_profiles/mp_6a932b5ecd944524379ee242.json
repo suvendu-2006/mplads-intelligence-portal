@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee242",
+    "name": "Shri I.S. Inbadurai (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 89248285.42,
+    "totalExpenditure": 15065385,
+    "utilizationPercentage": 16.880307480533332,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 8485786,
+    "inProgressPayments": 6579599,
+    "paymentGapPercentage": 43.67362002365024,
+    "completionRate": 18.072289156626507,
+    "pendingWorks": 53,
+    "unspentAmount": 74182900.42,
+    "totalRecommendedAmount": 54515000,
+    "name_hi": "Shri I.S. Inbadurai (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15065385,
+      "totalEntries": 31,
+      "avgExpenditure": 485980.1612903226,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 15065385,
+        "transactionCount": 31
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15065385,
+        "transactionCount": 31,
+        "avgAmount": 485980.1612903226
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32457",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of High Mast Electric Light near Vellandi Valasu Kaliamman Temple, Ward No.14 in Edappadi Municipality in Salem District.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 566146
+      },
+      {
+        "_id": "6a932bb5cd94452437a32458",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Highmast Electric Light near Alachampalayam Mariamman Temple, Ward No.24 in Edappaid Municipality in Salem District.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 579241
+      },
+      {
+        "_id": "6a932bb5cd94452437a32455",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of High Mast Electric Light near Old Edappaid Mariamman Temple ward No.14 in Edappadi Municipality in Salem District.",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 582902
+      },
+      {
+        "_id": "6a932bb5cd94452437a32451",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 40m Compound wall at Karattupatti Primary School, Ward No.4 Nangavalli Townpanchayat in Salem District.",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 798322
+      },
+      {
+        "_id": "6a932bb5cd94452437a32435",
+        "workCategory": "Normal/Others",
+        "workDescription": "Removal of exisiting pipeline and provision of electric motor with Sintex tank near Gopal House, Chinnamanali East Street, Ward No.28 Edappadi Muncipality in Salem District",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 449009
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.428Z"
+}

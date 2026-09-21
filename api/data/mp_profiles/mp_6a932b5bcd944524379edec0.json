@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec0",
+    "name": "MALVIKA DEVI",
+    "constituency": "KALAHANDI",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 50804998,
+    "utilizationPercentage": 34.5612231292517,
+    "completedWorksCount": 96,
+    "recommendedWorksCount": 224,
+    "completedWorksValue": 37882707,
+    "inProgressPayments": 12922291,
+    "paymentGapPercentage": 25.435078257458056,
+    "completionRate": 30,
+    "pendingWorks": 128,
+    "unspentAmount": 96195002,
+    "totalRecommendedAmount": 65391000,
+    "name_hi": "MALVIKA DEVI",
+    "constituency_hi": "KALAHANDI",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 50804998,
+      "totalEntries": 130,
+      "avgExpenditure": 390807.6769230769,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6698000,
+        "transactionCount": 14
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 21017369,
+        "transactionCount": 59
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23089629,
+        "transactionCount": 57
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 50804998,
+        "transactionCount": 130,
+        "avgAmount": 390807.6769230769
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 96,
+    "recommendedCount": 224,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e7c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF BATING STEP AT BANDHAPADA, G.P- GADIAJORE IN DHARMAGARH BLOCK.",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CC ROAD FROM RD ROAD TO DABRI PADAR BASTI, AT- DABRI PADAR VILLAGE, G.P- BODEN, WARD NO. 16 IN DHARMAGARH BLOCK.",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc69",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of additional class room building at chichiguda S S V M in Junagarh Block.",
+        "completedDate": "2026-03-29T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da93",
+        "workCategory": "Normal/Others",
+        "workDescription": "G P  high  school Tambachada E Library project",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da95",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dharamgarh womens higher secondary school E Library project",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.237Z"
+}

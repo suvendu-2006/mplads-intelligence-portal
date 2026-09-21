@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf1a",
+    "name": "RAJESH VERMA",
+    "constituency": "KHAGARIA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 74186362,
+    "utilizationPercentage": 50.46691292517007,
+    "completedWorksCount": 67,
+    "recommendedWorksCount": 9,
+    "completedWorksValue": 72871598,
+    "inProgressPayments": 1314764,
+    "paymentGapPercentage": 1.7722448770300936,
+    "completionRate": 88.1578947368421,
+    "pendingWorks": -58,
+    "unspentAmount": 72813638,
+    "totalRecommendedAmount": 8983900,
+    "name_hi": "RAJESH VERMA",
+    "constituency_hi": "KHAGARIA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74186362,
+      "totalEntries": 69,
+      "avgExpenditure": 1075164.6666666667,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 59458943,
+        "transactionCount": 56
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14727419,
+        "transactionCount": 13
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74186362,
+        "transactionCount": 69,
+        "avgAmount": 1075164.6666666667
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 67,
+    "recommendedCount": 9,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d8e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Soil, brick flooring and PCC casting work",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 799718
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db8f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Work of High Mask Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db92",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Work of High Mask Light",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da96",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation Work of High Mask Light",
+        "completedDate": "2026-03-19T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d75d",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Expansion and beautification work of Milan Mandir Library of Aura Panchayat of Hasanpur Block.",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 1433662
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.903Z"
+}

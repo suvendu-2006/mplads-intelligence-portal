@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf66",
+    "name": "Shri B Y Raghavendra ",
+    "constituency": "SHIMOGA",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 70061261,
+    "utilizationPercentage": 47.66072176870748,
+    "completedWorksCount": 49,
+    "recommendedWorksCount": 213,
+    "completedWorksValue": 21057305,
+    "inProgressPayments": 49003956,
+    "paymentGapPercentage": 69.94443905313095,
+    "completionRate": 18.702290076335878,
+    "pendingWorks": 164,
+    "unspentAmount": 76938739,
+    "totalRecommendedAmount": 82303000,
+    "name_hi": "Shri B Y Raghavendra ",
+    "constituency_hi": "SHIMOGA",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70061261,
+      "totalEntries": 297,
+      "avgExpenditure": 235896.50168350167,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 29129562,
+        "transactionCount": 101
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40931699,
+        "transactionCount": 196
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70061261,
+        "transactionCount": 297,
+        "avgAmount": 235896.50168350167
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 49,
+    "recommendedCount": 213,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a199d8",
+        "workCategory": "Trust and Society",
+        "workDescription": "CONSTRUCTION OF BUILDING AT SAVITHA SAMAJADA VIVIDODDESHA SAHAKARA SANGHA NIYAMITA",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1caa2",
+        "workCategory": "Normal/Others",
+        "workDescription": "On going cunstruction work of Samudaya Bhavana Near Kshetranatha Sri Veerabhadraswamy Temple, Kumbar Streert",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a06b",
+        "workCategory": "Trust and Society",
+        "workDescription": "Women's Multi-Purpose Co-operative Society, first floor building ongoing work, Ward no.9.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19912",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of road from Marigadige to Isakh saab house in Haranahalli village",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df63",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of the road from Pillangere Channel Bridge to Nagaraj Farm Under Pillanere Gram Panchayat limits, Shivamogga taluk.",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 374250
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.884Z"
+}

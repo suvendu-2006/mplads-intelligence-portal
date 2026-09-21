@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfbd",
+    "name": "Vijay Kumar Dubey",
+    "constituency": "KUSHI NAGAR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148900000,
+    "totalExpenditure": 80256423,
+    "utilizationPercentage": 53.89954533243788,
+    "completedWorksCount": 132,
+    "recommendedWorksCount": 90,
+    "completedWorksValue": 58294797,
+    "inProgressPayments": 21961626,
+    "paymentGapPercentage": 27.36432198080894,
+    "completionRate": 59.45945945945946,
+    "pendingWorks": -42,
+    "unspentAmount": 68643577,
+    "totalRecommendedAmount": 69251280,
+    "name_hi": "Vijay Kumar Dubey",
+    "constituency_hi": "KUSHI NAGAR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 80256423,
+      "totalEntries": 324,
+      "avgExpenditure": 247705.00925925927,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 226641,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 50204193,
+        "transactionCount": 221
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29825589,
+        "transactionCount": 102
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 80256423,
+        "transactionCount": 324,
+        "avgAmount": 247705.00925925927
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 132,
+    "recommendedCount": 90,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d4df",
+        "workCategory": "Normal/Others",
+        "workDescription": "MADAR BINDWALIYA DUSADHI PATTI ME SAMUDAYIKI BHAWAN KA NIRMAN KARRY",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1446590
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e193",
+        "workCategory": "Normal/Others",
+        "workDescription": "GP KOTAWA ME SIDHARIYA STHAN KE PAS COMMUNITY BHAWAN KA NIRAMAN KARRY",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 1347476
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bae1",
+        "workCategory": "Normal/Others",
+        "workDescription": "WARD NO-25 PARSHURAM NAGAR POLICE LINES AAWASHIYA PARISAR PARK KE PAS HIGHMAST KI STHAPANA",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 236316
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af17",
+        "workCategory": "Normal/Others",
+        "workDescription": "GP MANSA CHHAPRA ME BRIJESH MISHRA KE GHAR KE PAS HIGH MAST KI STHAPANA",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 236315
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bae4",
+        "workCategory": "Normal/Others",
+        "workDescription": "WARD NO-25 PARSHURAM NAGAR POLICE PARED GROUND SE AAWAS KE TARAF JANE WALE MARG KE KINARE HIGHMAST KI STHAPANA",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 236316
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.902Z"
+}

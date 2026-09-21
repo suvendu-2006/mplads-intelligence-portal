@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7a",
+    "name": "Shri Sarbananda Sonowal (18LS)",
+    "constituency": "DIBRUGARH",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 23919705,
+    "utilizationPercentage": 16.271908163265305,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 84,
+    "completedWorksValue": 2842773,
+    "inProgressPayments": 21076932,
+    "paymentGapPercentage": 88.11535092092481,
+    "completionRate": 3.4482758620689653,
+    "pendingWorks": 81,
+    "unspentAmount": 123080295,
+    "totalRecommendedAmount": 91200000,
+    "name_hi": "Shri Sarbananda Sonowal (18LS)",
+    "constituency_hi": "DIBRUGARH",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23919705,
+      "totalEntries": 63,
+      "avgExpenditure": 379677.85714285716,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5651150,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18268555,
+        "transactionCount": 47
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23919705,
+        "transactionCount": 63,
+        "avgAmount": 379677.85714285716
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 84,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b422",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cultural Centre Nalani Tea Estate, Nalani TE",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 951277
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b424",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Gellapukhuri Tea Estate 14 no. Line, Gellapukhuri Gaon",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 940219
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b423",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Loonpuria Bongali Gaon Hatiduba Ground Field, Ukanimoria, Hatiduba Line",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 951277
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.214Z"
+}

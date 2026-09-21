@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede4b",
+    "name": "DR. S P SINGH",
+    "constituency": "PRATAPGARH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 42783929,
+    "utilizationPercentage": 29.10471360544218,
+    "completedWorksCount": 106,
+    "recommendedWorksCount": 533,
+    "completedWorksValue": 34071121,
+    "inProgressPayments": 8712808,
+    "paymentGapPercentage": 20.36467478243992,
+    "completionRate": 16.588419405320813,
+    "pendingWorks": 427,
+    "unspentAmount": 104216071,
+    "totalRecommendedAmount": 88697950,
+    "name_hi": "DR. S P SINGH",
+    "constituency_hi": "PRATAPGARH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 42783929,
+      "totalEntries": 128,
+      "avgExpenditure": 334249.4453125,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12997025,
+        "transactionCount": 37
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29786904,
+        "transactionCount": 91
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 42783929,
+        "transactionCount": 128,
+        "avgAmount": 334249.4453125
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 106,
+    "recommendedCount": 533,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e5d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand Lakshamanpur ke gram Tilauri me Saeed putra Rahmat Ali ke ghar se Masjid tak Interlocking road.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 305000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e38b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand Shivgarh ke gram Babupatti me Babu Patti Interlocking se Ramsajivan Saroj (Saroj Basti) ke ghar se aage basti tak Interlocking road.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5d7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand Lakshamanpur ke gram Phoolpur me Buddhu ke ghar se Masjid tak Interlocking road.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 310000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand Lakshmanpur ke gram Sariyapur me Lalta Gupta ke ghar se Surendra Singh ke ghar se aage basti tak Interlocking road.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 307801
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e378",
+        "workCategory": "Normal/Others",
+        "workDescription": "Vikas Khand Sadar ke Gram Bhilampur me Harijan Basti ke pass se Om Prakash Vaishya ke ghar se hote hue aage basti tak Interlocking road.",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 299947
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.663Z"
+}

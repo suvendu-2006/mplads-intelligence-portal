@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede81",
+    "name": "JOBA MAJHI",
+    "constituency": "SINGHBHUM",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 59054467,
+    "utilizationPercentage": 40.17310680272109,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 118,
+    "completedWorksValue": 0,
+    "inProgressPayments": 59054467,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 118,
+    "unspentAmount": 87945533,
+    "totalRecommendedAmount": 78210610,
+    "name_hi": "JOBA MAJHI",
+    "constituency_hi": "SINGHBHUM",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 59054467,
+      "totalEntries": 127,
+      "avgExpenditure": 464995.8031496063,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 26689652,
+        "transactionCount": 52
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32364815,
+        "transactionCount": 75
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 59054467,
+        "transactionCount": 127,
+        "avgAmount": 464995.8031496063
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 118,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:49.315Z"
+}

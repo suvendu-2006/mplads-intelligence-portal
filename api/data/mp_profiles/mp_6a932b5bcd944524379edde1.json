@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde1",
+    "name": "Arvind Ganpat Sawant",
+    "constituency": "MUMBAI SOUTH",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28859509,
+    "utilizationPercentage": 19.63231904761905,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 46,
+    "completedWorksValue": 20872843,
+    "inProgressPayments": 7986666,
+    "paymentGapPercentage": 27.674296191248438,
+    "completionRate": 23.333333333333332,
+    "pendingWorks": 32,
+    "unspentAmount": 118140491,
+    "totalRecommendedAmount": 89300000,
+    "name_hi": "Arvind Ganpat Sawant",
+    "constituency_hi": "MUMBAI SOUTH",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28859509,
+      "totalEntries": 18,
+      "avgExpenditure": 1603306.0555555555,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18374739,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10484770,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28859509,
+        "transactionCount": 18,
+        "avgAmount": 1603306.0555555555
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 46,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1deeb",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of public tiolet at budhani house khotachiwadi girgaon",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 2498104
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2f6",
+        "workCategory": "Normal/Others",
+        "workDescription": "janta rahiwasi seva sangh worlikoliwada worli community hall",
+        "completedDate": "2025-09-17T00:00:00.000Z",
+        "finalAmount": 2094646
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "hasma jetha chwal zakeria bunder sewri water pipeline",
+        "completedDate": "2025-09-17T00:00:00.000Z",
+        "finalAmount": 1196940
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "shivshankar seva mandal wadia road bhoiwada sewri community hall",
+        "completedDate": "2025-09-17T00:00:00.000Z",
+        "finalAmount": 1246813
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a2e4",
+        "workCategory": "Normal/Others",
+        "workDescription": "vikrant sadan gas pipeline lane sewri community hall",
+        "completedDate": "2025-09-17T00:00:00.000Z",
+        "finalAmount": 1496175
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.231Z"
+}

@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee28a",
+    "name": "Shri Ramji (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 174518577.11,
+    "totalExpenditure": 141923083,
+    "utilizationPercentage": 81.32262212437425,
+    "completedWorksCount": 154,
+    "recommendedWorksCount": 91,
+    "completedWorksValue": 133996851,
+    "inProgressPayments": 7926232,
+    "paymentGapPercentage": 5.5848786768534335,
+    "completionRate": 62.857142857142854,
+    "pendingWorks": -63,
+    "unspentAmount": 32595494.110000014,
+    "totalRecommendedAmount": 22403084,
+    "name_hi": "Shri Ramji (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 141923083,
+      "totalEntries": 258,
+      "avgExpenditure": 550089.4689922481,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 41035000,
+        "transactionCount": 145
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 18394984,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 70038876,
+        "transactionCount": 19
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 12454223,
+        "transactionCount": 87
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 141923083,
+        "transactionCount": 258,
+        "avgAmount": 550089.4689922481
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 154,
+    "recommendedCount": 91,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3163d",
+        "workCategory": "Normal/Others",
+        "workDescription": "PER LIGHT COST 283000 AND 60 DIFFERENT PLACE OF COST 16980000.00 (AS PER LIST)",
+        "completedDate": "2026-03-27T00:00:00.000Z",
+        "finalAmount": 16979964
+      },
+      {
+        "_id": "6a932bb5cd94452437a3163e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PER LIGHT COST 283000 AND 60 DIFFERENT PLACE OF COST 16980000.00 (AS PER LIST)",
+        "completedDate": "2026-02-14T00:00:00.000Z",
+        "finalAmount": 16979964
+      },
+      {
+        "_id": "6a932bb5cd94452437a308b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "VILLAGE HARIPUR KISHANPUR ME SURAJ GOTAM DWARA AMBEDKAR PARK PAR L.E.D SEMI HIGH MAST LIGHT KARYDAYI SANSTHA PROVINCIAL CO-OPERATIVE NIRMAN AND VIKASH LTD (P.C.C.D) BAREILY",
+        "completedDate": "2026-02-14T00:00:00.000Z",
+        "finalAmount": 283000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31076",
+        "workCategory": "Normal/Others",
+        "workDescription": "PER LIGHT COST 283000 AND 35 DIFFERENT PLACE OF COST 9905000.00 (AS PER LIST)",
+        "completedDate": "2026-02-14T00:00:00.000Z",
+        "finalAmount": 9904980
+      },
+      {
+        "_id": "6a932bb5cd94452437a312b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "LER LIGHT COST 244000 AND 40 DIFFERENT PLACE  OF COST 9760000.00 (AS PER LIST)",
+        "completedDate": "2025-12-02T00:00:00.000Z",
+        "finalAmount": 9759968
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.866Z"
+}

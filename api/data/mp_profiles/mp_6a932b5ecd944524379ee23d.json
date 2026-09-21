@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee23d",
+    "name": "Shri Harbhajan Singh (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Punjab",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220984094.27,
+    "totalExpenditure": 101056126.52,
+    "utilizationPercentage": 45.730045347303985,
+    "completedWorksCount": 77,
+    "recommendedWorksCount": 119,
+    "completedWorksValue": 49629975.52,
+    "inProgressPayments": 51426150.99999999,
+    "paymentGapPercentage": 50.888701923304225,
+    "completionRate": 39.285714285714285,
+    "pendingWorks": 42,
+    "unspentAmount": 119927967.75000001,
+    "totalRecommendedAmount": 120480319,
+    "name_hi": "Shri Harbhajan Singh (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 101056126.52,
+      "totalEntries": 530,
+      "avgExpenditure": 190671.93683018867,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 20897388,
+        "transactionCount": 73
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 39319707.52,
+        "transactionCount": 230
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40839031,
+        "transactionCount": 227
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 101056126.52,
+        "transactionCount": 530,
+        "avgAmount": 190671.93683018867
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 77,
+    "recommendedCount": 119,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32149",
+        "workCategory": "Normal/Others",
+        "workDescription": "for rescue motor boat in emergency at Kale Ke Hithar distt firozpur",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 577500
+      },
+      {
+        "_id": "6a932bb5cd94452437a3206b",
+        "workCategory": "Normal/Others",
+        "workDescription": "for rescue motor boat in emergency at Bandala (328)Firozpur",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 577500
+      },
+      {
+        "_id": "6a932bb5cd94452437a320c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "for rescue motor boat in emergency at habib ke block firozpur",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 577500
+      },
+      {
+        "_id": "6a932bb5cd94452437a3086e",
+        "workCategory": "Normal/Others",
+        "workDescription": "VALMIK DHARAMSHALA",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30850",
+        "workCategory": "Normal/Others",
+        "workDescription": "VALMIK DHARAMSHALA",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 300000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.226Z"
+}

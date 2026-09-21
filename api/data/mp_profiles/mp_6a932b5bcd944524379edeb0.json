@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb0",
+    "name": "Lavu Sri Krishna Devarayalu",
+    "constituency": "NARASARAOPET",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 174009663.11,
+    "totalExpenditure": 2402685,
+    "utilizationPercentage": 1.3807767666794144,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 130,
+    "completedWorksValue": 1599870,
+    "inProgressPayments": 802815,
+    "paymentGapPercentage": 33.41324393334957,
+    "completionRate": 0.7633587786259541,
+    "pendingWorks": 129,
+    "unspentAmount": 171606978.11,
+    "totalRecommendedAmount": 72020358,
+    "name_hi": "Lavu Sri Krishna Devarayalu",
+    "constituency_hi": "NARASARAOPET",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 2402685,
+      "totalEntries": 4,
+      "avgExpenditure": 600671.25,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 416758,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 1985927,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 2402685,
+        "transactionCount": 4,
+        "avgAmount": 600671.25
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 130,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d565",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road with Side Drains in Pedakondayapalem Village, Ipuru Mandal",
+        "completedDate": "2026-02-27T00:00:00.000Z",
+        "finalAmount": 1599870
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.424Z"
+}

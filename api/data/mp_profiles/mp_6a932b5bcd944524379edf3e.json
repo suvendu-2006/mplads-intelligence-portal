@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3e",
+    "name": "SAGAR ESHWAR KHANDRE",
+    "constituency": "BIDAR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 15422826,
+    "utilizationPercentage": 10.49171836734694,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 173,
+    "completedWorksValue": 1850747,
+    "inProgressPayments": 13572079,
+    "paymentGapPercentage": 87.99994890689943,
+    "completionRate": 2.8089887640449436,
+    "pendingWorks": 168,
+    "unspentAmount": 131577174,
+    "totalRecommendedAmount": 94031500,
+    "name_hi": "SAGAR ESHWAR KHANDRE",
+    "constituency_hi": "BIDAR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15422826,
+      "totalEntries": 50,
+      "avgExpenditure": 308456.52,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4418796,
+        "transactionCount": 18
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 11004030,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15422826,
+        "transactionCount": 50,
+        "avgAmount": 308456.52
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 173,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c42a",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 371250
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c42b",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road",
+        "completedDate": "2026-03-15T00:00:00.000Z",
+        "finalAmount": 371250
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c429",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation of highmast light",
+        "completedDate": "2026-03-15T00:00:00.000Z",
+        "finalAmount": 374250
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aefd",
+        "workCategory": "Normal/Others",
+        "workDescription": "installation of highmast light",
+        "completedDate": "2025-12-23T00:00:00.000Z",
+        "finalAmount": 239522
+      },
+      {
+        "_id": "6a932bb5cd94452437a1aefb",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road",
+        "completedDate": "2025-12-23T00:00:00.000Z",
+        "finalAmount": 494475
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.222Z"
+}

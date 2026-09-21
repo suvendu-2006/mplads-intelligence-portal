@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede0a",
+    "name": "BIPLAB KUMAR DEB",
+    "constituency": "TRIPURA WEST",
+    "state": "Tripura",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 51962677,
+    "utilizationPercentage": 35.34875986394558,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 24,
+    "completedWorksValue": 23922411,
+    "inProgressPayments": 28040266,
+    "paymentGapPercentage": 53.96231991665864,
+    "completionRate": 22.58064516129032,
+    "pendingWorks": 17,
+    "unspentAmount": 95037323,
+    "totalRecommendedAmount": 84284754,
+    "name_hi": "BIPLAB KUMAR DEB",
+    "constituency_hi": "TRIPURA WEST",
+    "state_hi": "Tripura"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 51962677,
+      "totalEntries": 26,
+      "avgExpenditure": 1998564.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12090901,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39871776,
+        "transactionCount": 20
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 51962677,
+        "transactionCount": 26,
+        "avgAmount": 1998564.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 24,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e70e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of Electric Tri-scooter to Sh Sidhartha Choudhuri son of Sh Manik Lal Chouduri, East Dhaleswar, Road No.2, Banamalipur, Ward No. 25, Agartala, Tripura.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 118408
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc47",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional amount for purchase of mortuary van for Blue Lotus Club. Dhaleshwar, Agartala",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 20400
+      },
+      {
+        "_id": "6a932bb5cd94452437a19243",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of mortuary van for Blue Lotus Club, Dhaleswar Road No. 1-3, Agartala West, Tripura",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 797534
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d737",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of ten number of 75 inch interactive panels for classrooms in Kendriya Vidyalaya, ONGC Agartala at the rate of Rs.2.20 lakhs each.",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 1987000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1afcb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of open market shed at Jampuijala market Takarjala sub zone under west zone within ADC area.",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 4860920
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.701Z"
+}

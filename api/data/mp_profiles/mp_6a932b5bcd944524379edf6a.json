@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf6a",
+    "name": "Shri Deepak (Dev) Adhikari ",
+    "constituency": "GHATAL",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 200747364,
+    "totalExpenditure": 87788715,
+    "utilizationPercentage": 43.73094283818342,
+    "completedWorksCount": 165,
+    "recommendedWorksCount": 40,
+    "completedWorksValue": 84774237,
+    "inProgressPayments": 3014478,
+    "paymentGapPercentage": 3.433787588757849,
+    "completionRate": 80.48780487804879,
+    "pendingWorks": -125,
+    "unspentAmount": 112958649,
+    "totalRecommendedAmount": 106535313,
+    "name_hi": "Shri Deepak (Dev) Adhikari ",
+    "constituency_hi": "GHATAL",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87788715,
+      "totalEntries": 176,
+      "avgExpenditure": 498799.51704545453,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 64729432,
+        "transactionCount": 128
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23059283,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87788715,
+        "transactionCount": 176,
+        "avgAmount": 498799.51704545453
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 165,
+    "recommendedCount": 40,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1bc99",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 319275
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc9e",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 318927
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c0df",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Light",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 347815
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c0e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Light",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 348042
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bc98",
+        "workCategory": "Normal/Others",
+        "workDescription": "HIGH MAST LIGHT",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 317771
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.276Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee23e",
+    "name": "Shri Hardeep Singh Puri (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 226801049.11,
+    "totalExpenditure": 180480217.2,
+    "utilizationPercentage": 79.57644724670823,
+    "completedWorksCount": 278,
+    "recommendedWorksCount": 137,
+    "completedWorksValue": 112016608.2,
+    "inProgressPayments": 68463608.99999999,
+    "paymentGapPercentage": 37.934134866499924,
+    "completionRate": 66.98795180722892,
+    "pendingWorks": -141,
+    "unspentAmount": 46320831.910000026,
+    "totalRecommendedAmount": 73217000,
+    "name_hi": "Shri Hardeep Singh Puri (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 180480217.2,
+      "totalEntries": 885,
+      "avgExpenditure": 203932.4488135593,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 81389911.8,
+        "transactionCount": 340
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 53801866.4,
+        "transactionCount": 307
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 45288439,
+        "transactionCount": 238
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 180480217.2,
+        "transactionCount": 885,
+        "avgAmount": 203932.4488135593
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 278,
+    "recommendedCount": 137,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321bd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of installing solar high mast light near Shiv temple near Shri Shyam Sundar Upadhyay house in village Sohadwal of development block Nagwan.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 107780
+      },
+      {
+        "_id": "6a932bb5cd94452437a32112",
+        "workCategory": "Normal/Others",
+        "workDescription": "In Village Tarawan of Development Block Robertsganj, work of installing a total of three solar high mast lights, one each near the road in front of Radha Raman and Mrityunjay and Bimalesh (Uma) house",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 323339
+      },
+      {
+        "_id": "6a932bb5cd94452437a321bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of a solar high mast light in front of Gandhi Chabutara and Shri Bajrangbali in Domaria village of Robertsganj development block.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 107780
+      },
+      {
+        "_id": "6a932bb5cd94452437a321be",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of installing solar high mast lights near Thakur Prasad house at the intersection of Kusi Dor Gram Panchayat of Development Block Robertsganj.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 107780
+      },
+      {
+        "_id": "6a932bb5cd94452437a320d0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of installing solar drinking water pump near Shyam Bihari house at Nagwan turn in village Sohadwal of development block Nagwan.",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 490515
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.179Z"
+}

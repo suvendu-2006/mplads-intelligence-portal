@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede48",
+    "name": "DR. PRASHANT YADAORAO PADOLE",
+    "constituency": "BHANDARA-GONDIYA",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159680283.39,
+    "totalExpenditure": 14961080,
+    "utilizationPercentage": 9.369397199439678,
+    "completedWorksCount": 8,
+    "recommendedWorksCount": 144,
+    "completedWorksValue": 5272033,
+    "inProgressPayments": 9689047,
+    "paymentGapPercentage": 64.76168164330383,
+    "completionRate": 5.263157894736842,
+    "pendingWorks": 136,
+    "unspentAmount": 144719203.39,
+    "totalRecommendedAmount": 129620000,
+    "name_hi": "DR. PRASHANT YADAORAO PADOLE",
+    "constituency_hi": "BHANDARA-GONDIYA",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 14961080,
+      "totalEntries": 21,
+      "avgExpenditure": 712432.380952381,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 14961080,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 14961080,
+        "transactionCount": 21,
+        "avgAmount": 712432.380952381
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 8,
+    "recommendedCount": 144,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e024",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 694967
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e025",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Paver Block (Interlocking)",
+        "completedDate": "2026-04-11T00:00:00.000Z",
+        "finalAmount": 299649
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db05",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 697398
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db06",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of compound wall and beautification",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 497428
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db07",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 687408
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.668Z"
+}

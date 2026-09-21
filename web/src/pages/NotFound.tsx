@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Navigate, useLocation } from 'react-router-dom'
 import { AlertCircle, Home, MapPin, Users } from 'lucide-react'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
+import { useTranslation } from '../lib/i18n'
 
 const INDIAN_STATES = [
   'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat',
@@ -14,6 +15,7 @@ const INDIAN_STATES = [
 
 export const NotFound: React.FC = () => {
   const location = useLocation()
+  const { t, toNativeDigits: formatNum } = useTranslation()
   const rawPath = decodeURIComponent(location.pathname).replace(/^\/+|\/+$/g, '').trim()
   const parts = rawPath.split('/').filter(Boolean)
   const prefix = (parts[0] || '').toLowerCase()
@@ -53,9 +55,11 @@ export const NotFound: React.FC = () => {
         <div className="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center mx-auto mb-4 border border-rose-500/20">
           <AlertCircle className="w-7 h-7" />
         </div>
-        <h1 className="text-2xl font-black text-[var(--text-primary)] mb-1">404 — Page Not Found</h1>
+        <h1 className="text-2xl font-black text-[var(--text-primary)] mb-1">
+          {formatNum(404)} — {t('error.404_title')}
+        </h1>
         <p className="text-xs text-[var(--text-secondary)] mb-6 leading-relaxed">
-          The requested administrative view <code className="px-1.5 py-0.5 rounded bg-[var(--surface-alt)] font-mono text-[11px] text-[var(--brand-primary)]">{location.pathname}</code> does not exist in master records.
+          {t('error.404_desc')}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-2">
@@ -63,19 +67,19 @@ export const NotFound: React.FC = () => {
             to="/"
             className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] hover:opacity-90 text-white text-xs font-bold transition inline-flex items-center gap-1.5 shadow-sm"
           >
-            <Home className="w-3.5 h-3.5" /> Return to Dashboard
+            <Home className="w-3.5 h-3.5" /> {t('error.back_home')}
           </Link>
           <Link
             to="/states"
             className="px-4 py-2 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-primary)] border border-[var(--border-primary)] text-xs font-bold transition inline-flex items-center gap-1.5"
           >
-            <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" /> Browse States &amp; UTs
+            <MapPin className="w-3.5 h-3.5 text-[var(--brand-primary)]" /> {t('states.title')}
           </Link>
           <Link
             to="/mps"
             className="px-4 py-2 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-primary)] border border-[var(--border-primary)] text-xs font-bold transition inline-flex items-center gap-1.5"
           >
-            <Users className="w-3.5 h-3.5 text-[var(--brand-primary)]" /> MPs Performance
+            <Users className="w-3.5 h-3.5 text-[var(--brand-primary)]" /> {t('mps.title')}
           </Link>
         </div>
       </div>

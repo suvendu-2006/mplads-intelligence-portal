@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7f",
+    "name": "Shri Tapir Gao",
+    "constituency": "ARUNACHAL EAST",
+    "state": "Arunachal Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 98534470,
+    "utilizationPercentage": 67.03025170068028,
+    "completedWorksCount": 106,
+    "recommendedWorksCount": 58,
+    "completedWorksValue": 94063491,
+    "inProgressPayments": 4470979,
+    "paymentGapPercentage": 4.537477087967287,
+    "completionRate": 64.63414634146342,
+    "pendingWorks": -48,
+    "unspentAmount": 48465530,
+    "totalRecommendedAmount": 39300000,
+    "name_hi": "Shri Tapir Gao",
+    "constituency_hi": "ARUNACHAL EAST",
+    "state_hi": "Arunachal Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 98534470,
+      "totalEntries": 199,
+      "avgExpenditure": 495148.0904522613,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 10496442,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 67263232,
+        "transactionCount": 115
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20774796,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 98534470,
+        "transactionCount": 199,
+        "avgAmount": 495148.0904522613
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 106,
+    "recommendedCount": 58,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e12c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RLR at Kungsung Village in Namsai District",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 499971
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9a0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement of initial equipments for the setting up the Shaurya Sainik Primary School, Niglok in East Siang District",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d997",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of transformer at Pasighat in East Siang District",
+        "completedDate": "2026-03-21T00:00:00.000Z",
+        "finalAmount": 999802
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d64d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Flood protection work at Detak River, Debing in East Siang",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d64f",
+        "workCategory": "Normal/Others",
+        "workDescription": "River training works for strengthening and protection of agricultural field area at Sille Village in East Siang District",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 1500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.669Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8a",
+    "name": "Smt Aparajita Sarangi",
+    "constituency": "BHUBANESWAR",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147420861.41,
+    "totalExpenditure": 30447444,
+    "utilizationPercentage": 20.653416150731204,
+    "completedWorksCount": 47,
+    "recommendedWorksCount": 230,
+    "completedWorksValue": 11453987,
+    "inProgressPayments": 18993457,
+    "paymentGapPercentage": 62.381121384113555,
+    "completionRate": 16.967509025270758,
+    "pendingWorks": 183,
+    "unspentAmount": 116973417.41,
+    "totalRecommendedAmount": 90050000,
+    "name_hi": "Smt Aparajita Sarangi",
+    "constituency_hi": "BHUBANESWAR",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30447444,
+      "totalEntries": 212,
+      "avgExpenditure": 143620.01886792452,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 8695501,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21751943,
+        "transactionCount": 162
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30447444,
+        "transactionCount": 212,
+        "avgAmount": 143620.01886792452
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 47,
+    "recommendedCount": 230,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e3ec",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block-Balianta, Construction of Library Hall of Village- Bhainchua, GP-Bainchua",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e408",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Library Hall in Bolgarh Block",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 853987
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3b9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block-Balipatna, Installation of Cold Drinking Water at Radhakanta Dev Temple of Village-Dewanpatna, GP-Bhapur",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e257",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ceiling over Paika Panchasakha Statue of Ward No.4, Khordha,  Block-Khordha",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1c1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block-Balianta, Installation of Cold Drinking Water at Maa Champadei Thakurani Temple Temple, Sana Bhainchua, GP-Bhainchua",
+        "completedDate": "2026-04-24T00:00:00.000Z",
+        "finalAmount": 100000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.870Z"
+}

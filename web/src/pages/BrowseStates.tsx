@@ -12,9 +12,11 @@ import {
   X
 } from 'lucide-react'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
+import { useTranslation } from '../lib/i18n'
 
 export const BrowseStates: React.FC = () => {
   const { user } = useStore()
+  const { t, toNativeDigits: formatNum } = useTranslation()
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState<string>('rank')
   const [order, setOrder] = useState<'asc' | 'desc'>('asc')
@@ -121,11 +123,11 @@ export const BrowseStates: React.FC = () => {
           <div className="flex items-center gap-2 mb-1">
             <MapPin size={20} className="text-[var(--brand-primary)]" />
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
-              State &amp; UT Overview
+              {t('states.title')}
             </h1>
           </div>
           <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
-            Comparative performance directory across 28 States &amp; 8 Union Territories showing fund allocation, expenditure velocity, and project delivery.
+            {t('states.subtitle')}
           </p>
         </div>
 
@@ -137,7 +139,7 @@ export const BrowseStates: React.FC = () => {
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search state or district..."
+              placeholder={t('states.search_placeholder')}
               className="w-full pl-9 pr-7 py-1.5 text-xs rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--brand-primary)] shadow-sm"
             />
             {search && (
@@ -153,7 +155,7 @@ export const BrowseStates: React.FC = () => {
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs shadow-sm">
               <ArrowUpDown size={13} className="text-[var(--text-tertiary)]" />
-              <span className="text-[var(--text-secondary)] text-[11px] font-medium">Sort:</span>
+              <span className="text-[var(--text-secondary)] text-[11px] font-medium">{t('common.sort_by')}:</span>
               <select
                 value={sort}
                 onChange={(e) => {
@@ -168,13 +170,13 @@ export const BrowseStates: React.FC = () => {
                 }}
                 className="bg-transparent text-xs font-bold text-[var(--text-primary)] focus:outline-none cursor-pointer"
               >
-                <option value="rank">Rank (#1 to #36)</option>
-                <option value="allocated">Allocated Budget</option>
-                <option value="expenditure">Recorded Expenditure</option>
-                <option value="rate">Expenditure Rate (%)</option>
-                <option value="completion">Completion (%)</option>
-                <option value="works">Works Completed</option>
-                <option value="name">State Name (A-Z)</option>
+                <option value="rank">{t('states.sort_rank')}</option>
+                <option value="allocated">{t('states.sort_allocated')}</option>
+                <option value="expenditure">{t('states.sort_expenditure')}</option>
+                <option value="rate">{t('states.sort_rate')}</option>
+                <option value="completion">{t('states.sort_completion')}</option>
+                <option value="works">{t('states.sort_works')}</option>
+                <option value="name">{t('states.sort_name')}</option>
               </select>
             </div>
 
@@ -183,7 +185,7 @@ export const BrowseStates: React.FC = () => {
               className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition shadow-sm cursor-pointer"
               title="Toggle Sort Order"
             >
-              {order.toUpperCase()}
+              {order === 'asc' ? t('common.asc') : t('common.desc')}
             </button>
           </div>
         </div>
@@ -199,7 +201,7 @@ export const BrowseStates: React.FC = () => {
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
           }`}
         >
-          All 36 Jurisdictions
+          {t('states.all_jurisdictions')}
         </button>
         <button
           onClick={() => setJurisdictionFilter('states')}
@@ -209,7 +211,7 @@ export const BrowseStates: React.FC = () => {
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
           }`}
         >
-          States (28)
+          {t('states.states_count')}
         </button>
         <button
           onClick={() => setJurisdictionFilter('uts')}
@@ -219,7 +221,7 @@ export const BrowseStates: React.FC = () => {
               : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
           }`}
         >
-          Union Territories (8)
+          {t('states.uts_count')}
         </button>
       </div>
 
@@ -227,14 +229,14 @@ export const BrowseStates: React.FC = () => {
         <LoadingSkeleton rows={6} height="h-44" />
       ) : filteredAndSorted.length === 0 ? (
         <EmptyState
-          title="No states match your search"
+          title={t('states.no_match_title')}
           description={`No results found for "${search}". Try checking the spelling or clear the search input.`}
           action={
             <button
               onClick={() => setSearch('')}
               className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow cursor-pointer"
             >
-              Clear Search Filter
+              {t('states.clear_filter')}
             </button>
           }
         />

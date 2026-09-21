@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf85",
+    "name": "Shyamkumar",
+    "constituency": "RAMTEK",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 5141086,
+    "utilizationPercentage": 3.4973374149659864,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 981253,
+    "inProgressPayments": 4159833,
+    "paymentGapPercentage": 80.91350737956921,
+    "completionRate": 2.857142857142857,
+    "pendingWorks": 33,
+    "unspentAmount": 141858914,
+    "totalRecommendedAmount": 37600000,
+    "name_hi": "Shyamkumar",
+    "constituency_hi": "RAMTEK",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5141086,
+      "totalEntries": 6,
+      "avgExpenditure": 856847.6666666666,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 981253,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 4159833,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5141086,
+        "transactionCount": 6,
+        "avgAmount": 856847.6666666666
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 34,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c14c",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF COMMUNITY HALL AT CHANKAPUR WARD NO. 2 OPPOSITE SHIV MANDIR, TA. SAONER",
+        "completedDate": "2025-12-23T00:00:00.000Z",
+        "finalAmount": 981253
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.239Z"
+}

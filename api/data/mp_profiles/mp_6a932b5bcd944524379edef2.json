@@ -1,0 +1,72 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef2",
+    "name": "PATHAN YUSUF",
+    "constituency": "BAHARAMPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 7860897,
+    "utilizationPercentage": 5.347548979591837,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 144,
+    "completedWorksValue": 2000000,
+    "inProgressPayments": 5860897,
+    "paymentGapPercentage": 74.55761091895747,
+    "completionRate": 0.6896551724137931,
+    "pendingWorks": 143,
+    "unspentAmount": 139139103,
+    "totalRecommendedAmount": 86677631,
+    "name_hi": "PATHAN YUSUF",
+    "constituency_hi": "BAHARAMPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 7860897,
+      "totalEntries": 6,
+      "avgExpenditure": 1310149.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 420731,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 1579269,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5860897,
+        "transactionCount": 4
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 7860897,
+        "transactionCount": 6,
+        "avgAmount": 1310149.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 144,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16a7f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of indoor badminton court adjacent to Berhampore Circuit House",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 2000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.243Z"
+}

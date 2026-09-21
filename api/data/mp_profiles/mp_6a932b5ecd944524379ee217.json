@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee217",
+    "name": "Shri Ajay Makan (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 35435523,
+    "utilizationPercentage": 24.105797959183672,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 11,
+    "completedWorksValue": 1379107,
+    "inProgressPayments": 34056416,
+    "paymentGapPercentage": 96.10812291383424,
+    "completionRate": 15.384615384615385,
+    "pendingWorks": 9,
+    "unspentAmount": 111564477,
+    "totalRecommendedAmount": 59850000,
+    "name_hi": "Shri Ajay Makan (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35435523,
+      "totalEntries": 10,
+      "avgExpenditure": 3543552.3,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16475560,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18959963,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35435523,
+        "transactionCount": 10,
+        "avgAmount": 3543552.3
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 11,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31de9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Pathway (Walking Track) around the village pond at Jaswanti Village.",
+        "completedDate": "2025-12-17T00:00:00.000Z",
+        "finalAmount": 388919
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ad9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Common Chaupal at Panchayat Land of Sher Garh Village",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 990188
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.217Z"
+}

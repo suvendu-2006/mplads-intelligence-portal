@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7c",
+    "name": "Shri Shantanu Thakur ",
+    "constituency": "BANGAON",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 5993836,
+    "utilizationPercentage": 4.077439455782312,
+    "completedWorksCount": 8,
+    "recommendedWorksCount": 50,
+    "completedWorksValue": 5993836,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 13.793103448275861,
+    "pendingWorks": 42,
+    "unspentAmount": 141006164,
+    "totalRecommendedAmount": 99425000,
+    "name_hi": "Shri Shantanu Thakur ",
+    "constituency_hi": "BANGAON",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5993836,
+      "totalEntries": 8,
+      "avgExpenditure": 749229.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5993836,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5993836,
+        "transactionCount": 8,
+        "avgAmount": 749229.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 8,
+    "recommendedCount": 50,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a197ea",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Black top Road from Pulin Bihari House to Girja More), at Thakurnagar under Gaighata Block North 24 District",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 690783
+      },
+      {
+        "_id": "6a932bb5cd94452437a19868",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Black top Road from Shila Das House to Infront of Railline (flip sir house opposite) at Thakurnagar under Gaighata Block North 24 District",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 657737
+      },
+      {
+        "_id": "6a932bb5cd94452437a197e7",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Black top Road from Sabeda tala more to Maco Resturant at Thakurnagar under Gaighata Block North 24 District",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 1610698
+      },
+      {
+        "_id": "6a932bb5cd94452437a197e9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road from Keutepara Black top road to Before Parimal pal House under Ganrapota Gram Panchayat North 24 Parganas",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 449996
+      },
+      {
+        "_id": "6a932bb5cd94452437a197e8",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of Black top Road from Thakur Bari Chowmatha to Ashit Das House at Thakurnagar under Gaighata Block North 24 District",
+        "completedDate": "2025-11-17T00:00:00.000Z",
+        "finalAmount": 778369
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.230Z"
+}

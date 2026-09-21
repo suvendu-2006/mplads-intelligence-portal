@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1ed",
+    "name": "Dr. Ajeet Madhavrao Gopchade (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 53532752,
+    "utilizationPercentage": 36.4168380952381,
+    "completedWorksCount": 44,
+    "recommendedWorksCount": 48,
+    "completedWorksValue": 47072524,
+    "inProgressPayments": 6460228,
+    "paymentGapPercentage": 12.06780477118008,
+    "completionRate": 47.82608695652174,
+    "pendingWorks": 4,
+    "unspentAmount": 93467248,
+    "totalRecommendedAmount": 64264433,
+    "name_hi": "Dr. Ajeet Madhavrao Gopchade (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53532752,
+      "totalEntries": 52,
+      "avgExpenditure": 1029476,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18170338,
+        "transactionCount": 18
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35362414,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53532752,
+        "transactionCount": 52,
+        "avgAmount": 1029476
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 44,
+    "recommendedCount": 48,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32413",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabhamandap at Narangal (Bk.), Tq. Deglur Dist. Nanded in the area of Grampachayat near Vitthal Rukhmai Temple",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 998000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32452",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Grampanchayat office to house of Prakash Maroti Thote at Kedarkuntha",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 495062
+      },
+      {
+        "_id": "6a932bb5cd94452437a32454",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from the house of Nagnath Parbata Nawade to the house of Shankar Nagnath Biradar at Kedardkunta Tq. Deglur Dist. Nanded",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 994343
+      },
+      {
+        "_id": "6a932bb5cd94452437a3241e",
+        "workCategory": "Normal/Others",
+        "workDescription": "LED Street Light in Kolheborgaon Tq. Biloli Dist. Nanded",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 2999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322fc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from the house of Hanmanat Maroti Dande to the house of Digambar Yallappa Chigale in Village Adampur Tq. Biloli",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 1488686
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.270Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eded9",
+    "name": "MURARI LAL MEENA",
+    "constituency": "DAUSA",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 19705174,
+    "utilizationPercentage": 13.404880272108844,
+    "completedWorksCount": 16,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 10249548,
+    "inProgressPayments": 9455626,
+    "paymentGapPercentage": 47.9854986309687,
+    "completionRate": 14.285714285714285,
+    "pendingWorks": 80,
+    "unspentAmount": 127294826,
+    "totalRecommendedAmount": 70020089,
+    "name_hi": "MURARI LAL MEENA",
+    "constituency_hi": "DAUSA",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 19705174,
+      "totalEntries": 72,
+      "avgExpenditure": 273682.97222222225,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1130330,
+        "transactionCount": 4
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18574844,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 19705174,
+        "transactionCount": 72,
+        "avgAmount": 273682.97222222225
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 16,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e482",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nala Nirman karya KM watika Dausa Nagar parishad Dausa",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 484308
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e319",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Library in village anantwara gram panchayat anantwara panchayat samiti Bandikui Dist dausa",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 998941
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2e0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Mahatma Gandhi Rajkiya Vidhalya Mandawari Dausa me Computer Lab me Equipments purchase and Installlation recommandation as per attachment",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 959500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e267",
+        "workCategory": "Normal/Others",
+        "workDescription": "High mask Light Establishment at Hapawas Churaha in Village Hapawas Gram Panchayat Hapawas",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 469621
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e241",
+        "workCategory": "Normal/Others",
+        "workDescription": "High mask light establishment main bazar saint mohalla gram panchayat theekariya ps sikrai",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 475236
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.726Z"
+}

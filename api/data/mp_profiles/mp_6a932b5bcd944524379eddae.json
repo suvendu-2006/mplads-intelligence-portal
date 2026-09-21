@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddae",
+    "name": "AASHTIKAR PATIL NAGESH BAPURAO",
+    "constituency": "HINGOLI",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 190289442,
+    "totalExpenditure": 67522042,
+    "utilizationPercentage": 35.483861474563575,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 78,
+    "completedWorksValue": 50208561,
+    "inProgressPayments": 17313481,
+    "paymentGapPercentage": 25.64122838583584,
+    "completionRate": 32.758620689655174,
+    "pendingWorks": 40,
+    "unspentAmount": 122767400,
+    "totalRecommendedAmount": 78585868,
+    "name_hi": "AASHTIKAR PATIL NAGESH BAPURAO",
+    "constituency_hi": "HINGOLI",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67522042,
+      "totalEntries": 68,
+      "avgExpenditure": 992971.2058823529,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14274340,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 53247702,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67522042,
+        "transactionCount": 68,
+        "avgAmount": 992971.2058823529
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 78,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e455",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road from Bhimrao Kote Home to Vitthal Kurude Home and from Shivaji Phole to Jayanta Gaikwad Home At Donwada TQ Wasmat DIST Hingoli.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1493124
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e123",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road from grampanchayat office to sawata mali temple at Dhanora tarfe Aral tq.Vasmat Dist. Hingoli",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 994661
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db8e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Road and Drainage System from Amarnath Traders Nanded - Hingoli Road to Bypass Road At. Aakhada Balapur Tq. Kalamnuri Dist. Hingoli",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 2798862
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d98f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road and Drainage System AT. Bhategaon TQ. Kalamnuri DIST. Nanded.",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 661857
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c783",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road and Drainage System from Nanded - Hingoli Road to Balaji Patil Home At. Aakhada Balapur Tq. Kalamnuri Dist. Hingoli",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 2834541
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.240Z"
+}

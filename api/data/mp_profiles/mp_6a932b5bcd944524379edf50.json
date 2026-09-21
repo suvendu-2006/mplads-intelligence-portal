@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf50",
+    "name": "SAYANI GHOSH",
+    "constituency": "JADAVPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 49785004,
+    "utilizationPercentage": 33.86734965986394,
+    "completedWorksCount": 113,
+    "recommendedWorksCount": 102,
+    "completedWorksValue": 38583188,
+    "inProgressPayments": 11201816,
+    "paymentGapPercentage": 22.500381841889578,
+    "completionRate": 52.55813953488372,
+    "pendingWorks": -11,
+    "unspentAmount": 97214996,
+    "totalRecommendedAmount": 46846051,
+    "name_hi": "SAYANI GHOSH",
+    "constituency_hi": "JADAVPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 49785004,
+      "totalEntries": 129,
+      "avgExpenditure": 385930.2635658915,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 32731164,
+        "transactionCount": 101
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17053840,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 49785004,
+        "transactionCount": 129,
+        "avgAmount": 385930.2635658915
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 113,
+    "recommendedCount": 102,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1db88",
+        "workCategory": "Normal/Others",
+        "workDescription": "BEAUTIFICATION OF PAVEMENT BY PLACING PAVER BLOCKS AND OTHER ANCILLARY WORKS AT NORTHERN FLANK OF SAFUI PARA CROSSING IN WARD NUMBER 106 UNDER JADAVPUR AC",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 599444
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d091",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF LIGHTING ARRANGEMENT AT VARIOUS AREAS IN WARD NUMBER 110 UNDER JADAVPUR AC",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 598796
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d896",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF 395 NOS OF 60 WATT LED STREET LIGHT WITH FITTINGS IN THE FOLLOWING LOCATIONS OF BELEGACHHI GP UNDER BARUIPUR BLOCK UNDER BARUIPUR PURBA AC",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 632000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d895",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF 290 NOS OF 60 WATT LED STREET LIGHT WITH FITTINGS IN THE FOLLOWING LOCATIONS OF CHAMPAHATI GP UNDER BARUIPUR BLOCK UNDER BARUIPUR PURBA AC",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 464000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d4c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF 200 NOS OF 60 WATT LED STREET LIGHT WITH FITTINGS IN THE FOLLOWING LOCATIONS OF NARAYANITALA GP UNDER JOYNAGAR-I BLOCK UNDER BARUIPUR PURBA AC",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 320000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.981Z"
+}

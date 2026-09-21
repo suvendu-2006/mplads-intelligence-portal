@@ -4,18 +4,42 @@ import { Layout } from './components/Layout'
 import { NationalDashboard } from './pages/NationalDashboard'
 import { ScrollToTop } from './components/ScrollToTop'
 
-const BrowseStates = React.lazy(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))
-const StateDetail = React.lazy(() => import('./pages/StateDetail').then(m => ({ default: m.StateDetail })))
-const BrowseMPs = React.lazy(() => import('./pages/BrowseMPs').then(m => ({ default: m.BrowseMPs })))
-const MPDetail = React.lazy(() => import('./pages/MPDetail').then(m => ({ default: m.MPDetail })))
-const ConstituencyDetail = React.lazy(() => import('./pages/ConstituencyDetail').then(m => ({ default: m.ConstituencyDetail })))
-const MyState = React.lazy(() => import('./pages/MyState').then(m => ({ default: m.MyState })))
-const DistrictDashboard = React.lazy(() => import('./pages/DistrictDashboard').then(m => ({ default: m.DistrictDashboard })))
-const MPDashboard = React.lazy(() => import('./pages/MPDashboard').then(m => ({ default: m.MPDashboard })))
-const AuditDesk = React.lazy(() => import('./pages/AuditDesk').then(m => ({ default: m.AuditDesk })))
-const GISMap = React.lazy(() => import('./pages/GISMap').then(m => ({ default: m.GISMap })))
-const Login = React.lazy(() => import('./pages/Login').then(m => ({ default: m.Login })))
-const NotFound = React.lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
+function lazyWithRetry<T extends React.ComponentType<any>>(
+  componentImport: () => Promise<{ default: T } | any>
+) {
+  return React.lazy(async () => {
+    const hasRefreshed = typeof window !== 'undefined' && sessionStorage.getItem('chunk_force_refreshed') === 'true'
+    try {
+      const component = await componentImport()
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('chunk_force_refreshed', 'false')
+      }
+      return 'default' in component ? component : { default: component }
+    } catch (error: any) {
+      if (!hasRefreshed && typeof window !== 'undefined') {
+        sessionStorage.setItem('chunk_force_refreshed', 'true')
+        window.location.reload()
+        return new Promise<{ default: T }>(() => {})
+      }
+      throw error
+    }
+  })
+}
+
+const BrowseStates = lazyWithRetry(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))
+const StateDetail = lazyWithRetry(() => import('./pages/StateDetail').then(m => ({ default: m.StateDetail })))
+const BrowseMPs = lazyWithRetry(() => import('./pages/BrowseMPs').then(m => ({ default: m.BrowseMPs })))
+const MPDetail = lazyWithRetry(() => import('./pages/MPDetail').then(m => ({ default: m.MPDetail })))
+const ConstituencyDetail = lazyWithRetry(() => import('./pages/ConstituencyDetail').then(m => ({ default: m.ConstituencyDetail })))
+const MyState = lazyWithRetry(() => import('./pages/MyState').then(m => ({ default: m.MyState })))
+const DistrictDashboard = lazyWithRetry(() => import('./pages/DistrictDashboard').then(m => ({ default: m.DistrictDashboard })))
+const MPDashboard = lazyWithRetry(() => import('./pages/MPDashboard').then(m => ({ default: m.MPDashboard })))
+const AuditDesk = lazyWithRetry(() => import('./pages/AuditDesk').then(m => ({ default: m.AuditDesk })))
+const GISMap = lazyWithRetry(() => import('./pages/GISMap').then(m => ({ default: m.GISMap })))
+const Login = lazyWithRetry(() => import('./pages/Login').then(m => ({ default: m.Login })))
+const NotFound = lazyWithRetry(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
+
+import { ProtectedRoute } from './components/ProtectedRoute'
 
 export const App: React.FC = () => {
   React.useEffect(() => {
@@ -61,19 +85,19 @@ export const App: React.FC = () => {
           <Route path="constituencies/:name" element={<ConstituencyDetail />} />
           <Route path="constituency" element={<BrowseMPs />} />
           <Route path="constituencies" element={<BrowseMPs />} />
-          <Route path="mp-dashboard" element={<MPDashboard />} />
-          <Route path="mp-dashboard/:id" element={<MPDashboard />} />
-          <Route path="mp-console" element={<MPDashboard />} />
-          <Route path="mp-console/:id" element={<MPDashboard />} />
+          <Route path="mp-dashboard" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
+          <Route path="mp-dashboard/:id" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
+          <Route path="mp-console" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
+          <Route path="mp-console/:id" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
           <Route path="district-dashboard" element={<DistrictDashboard />} />
           <Route path="district-console" element={<DistrictDashboard />} />
           <Route path="districts/:district" element={<DistrictDashboard />} />
           <Route path="districts" element={<DistrictDashboard />} />
           <Route path="district/:district" element={<DistrictDashboard />} />
           <Route path="district" element={<DistrictDashboard />} />
-          <Route path="my-state" element={<MyState />} />
-          <Route path="state-console" element={<MyState />} />
-          <Route path="audit" element={<AuditDesk />} />
+          <Route path="my-state" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
+          <Route path="state-console" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
+          <Route path="audit" element={<ProtectedRoute allowedRoles={['mospi']} roleName="MoSPI Central Authority"><AuditDesk /></ProtectedRoute>} />
           <Route path="map" element={<GISMap />} />
           <Route path="*" element={<NotFound />} />
         </Route>

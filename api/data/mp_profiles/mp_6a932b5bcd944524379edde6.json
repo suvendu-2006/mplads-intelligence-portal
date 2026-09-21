@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edde6",
+    "name": "Asit Kumar Mal ",
+    "constituency": "BOLPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 275694456.74,
+    "totalExpenditure": 167302248,
+    "utilizationPercentage": 60.68393611474685,
+    "completedWorksCount": 134,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 150323234,
+    "inProgressPayments": 16979014,
+    "paymentGapPercentage": 10.14870642981438,
+    "completionRate": 66.33663366336634,
+    "pendingWorks": -66,
+    "unspentAmount": 108392208.74000001,
+    "totalRecommendedAmount": 92539472,
+    "name_hi": "Asit Kumar Mal ",
+    "constituency_hi": "BOLPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 167302248,
+      "totalEntries": 156,
+      "avgExpenditure": 1072450.3076923077,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3508449,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 139198965,
+        "transactionCount": 130
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24594834,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 167302248,
+        "transactionCount": 156,
+        "avgAmount": 1072450.3076923077
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 134,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a175b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION CULTURAL STAGE NEAR SHIB MONDIR,UNDER JHIKADDA GP,EXECUTING AGENCY E.O.MAYURESWAR -I PANCHAYAT SAMITY.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 499353
+      },
+      {
+        "_id": "6a932bb5cd94452437a175af",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Reparing OF CC ROAD FROM RUKUNPUR KABARDANGA TO RAIL GATE ROAD VIA LUTFUL HAQUE HOUSE VIA MASJID VIAASGOR ALI HOUSE VIA JAHANARA HOUSE VIA SAMSUDDIN HOUSE VIAPIR PUKUR VIA JANAJA DANGA.EXECUTING AGENCY WILL BE E.O. MAYURESWAR -I PANCHAYAT SAMITY.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 997453
+      },
+      {
+        "_id": "6a932bb5cd94452437a175b2",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF CC ROAD FROM 1.SANJIT LET HOUSE TO KADAM KONAI HOUSE 2.UJJWAL SAHA HOUSE TO DARSHAN KONAI HOUSE .3.KADAM KONAI HOUSE TO SUNIL DOLUI HOUSE. UNDER BARATURIGRAM GP.EXECUTING AGENCY WILL BE ,E.O. MAYURESWAR-I PANCHAYET SAMITY.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 998477
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c0ea",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Waiting shed at Basapara Bus Stand .Executing Agency will be Nanoor Panchayet Samity.",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 1077575
+      },
+      {
+        "_id": "6a932bb5cd94452437a16b0e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 3 no of high mast street light at SASTINAGAR BUS STOP,THIBA GP OFFICE,CM-II GP OFFICE Excuting Agency will be E O LABHPUR PANCHYET SAMITY",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1315668
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.214Z"
+}

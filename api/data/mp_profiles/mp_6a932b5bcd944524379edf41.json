@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf41",
+    "name": "SANATAN PANDEY",
+    "constituency": "BALLIA",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 180420041.4,
+    "totalExpenditure": 74595388,
+    "utilizationPercentage": 41.34540011251765,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 293,
+    "completedWorksValue": 40158503,
+    "inProgressPayments": 34436885,
+    "paymentGapPercentage": 46.16489829103108,
+    "completionRate": 17.464788732394364,
+    "pendingWorks": 231,
+    "unspentAmount": 105824653.4,
+    "totalRecommendedAmount": 83146540,
+    "name_hi": "SANATAN PANDEY",
+    "constituency_hi": "BALLIA",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 74595388,
+      "totalEntries": 231,
+      "avgExpenditure": 322923.75757575757,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 35619914,
+        "transactionCount": 116
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38975474,
+        "transactionCount": 115
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 74595388,
+        "transactionCount": 231,
+        "avgAmount": 322923.75757575757
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 293,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c7bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Semi High Mast Lights Near Thakur Ji Mandir, Pindari, Panditpura, Ballia. Revised Letter Attached",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 204110
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c81a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Semi High Mast Lights Near Mouni Baba Hanuman Mandir in Pashchimi Khawashpur. Revised Letter Attached",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 204110
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c81c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Semi High Mast Lights, Near Shakeel Katra, Bairia. Revised Letter Attached",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 204110
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c7c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Semi High Mast Lights in Narayanpur Market, Ghorouli. Revised Letter Attached",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 204110
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c7bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Semi High Mast Lights at Pandeypur Chatti on Ballia Bairia Marg. Revised Letter Attached",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 203787
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.688Z"
+}

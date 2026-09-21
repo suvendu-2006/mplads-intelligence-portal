@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede37",
+    "name": "Dr Chandra Sekhar Pemmasani",
+    "constituency": "GUNTUR",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 159774113.11,
+    "totalExpenditure": 35682555,
+    "utilizationPercentage": 22.33312662823768,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 87,
+    "completedWorksValue": 11590846,
+    "inProgressPayments": 24091709,
+    "paymentGapPercentage": 67.51677115049637,
+    "completionRate": 9.375,
+    "pendingWorks": 78,
+    "unspentAmount": 124091558.11000001,
+    "totalRecommendedAmount": 83511000,
+    "name_hi": "Dr Chandra Sekhar Pemmasani",
+    "constituency_hi": "GUNTUR",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 35682555,
+      "totalEntries": 44,
+      "avgExpenditure": 810967.1590909091,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 6652435,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29030120,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 35682555,
+        "transactionCount": 44,
+        "avgAmount": 810967.1590909091
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 87,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b452",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of RCC outfall drain to vegetable market road from TIDCO houses to Goutham Budha road in Mangalagiri-Tadepalli Municipal Corporation",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 2748536
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cee2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of additional toilets in Govt. BC Girls Hostel (Post-Metric) in Division No.6 of GMC, Guntur East Constituency, Guntur District",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 495792
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a848",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of SKBM Municipal Corporation High School Building (1st and 2nd Floor) at AT Agraharm in Division No 24",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 4373291
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ce7d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing internal CC roads in Gollapalem (V) of Phirangipuram Mandal, Guntur District",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 458726
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b27f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing internal CC roads in Vaddamanu (V) of Thulluru Mandal, Guntur District",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 855284
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.247Z"
+}

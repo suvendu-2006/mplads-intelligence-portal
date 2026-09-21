@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee299",
+    "name": "Shri Samik Bhattacharya (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "West Bengal",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28774223,
+    "utilizationPercentage": 19.57430136054422,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 14142226,
+    "inProgressPayments": 14631997,
+    "paymentGapPercentage": 50.85105860199943,
+    "completionRate": 19.607843137254903,
+    "pendingWorks": 31,
+    "unspentAmount": 118225777,
+    "totalRecommendedAmount": 54061880,
+    "name_hi": "Shri Samik Bhattacharya (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28774223,
+      "totalEntries": 28,
+      "avgExpenditure": 1027650.8214285715,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12603476,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16170747,
+        "transactionCount": 18
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28774223,
+        "transactionCount": 28,
+        "avgAmount": 1027650.8214285715
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321b8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of  Hall rooms at Hetampur Raj Girls High School,PO- Hetampur Raj Bati, Dist-Birbhum, Pin-731124",
+        "completedDate": "2026-07-27T00:00:00.000Z",
+        "finalAmount": 1198242
+      },
+      {
+        "_id": "6a932bb5cd94452437a31707",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 4 Class room at Saria Tribal High School,PO-Saria under development block Gopiballavpur-I,Jhargram,West Bengal-721506",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 3000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3245f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Smart Class Room including Beautification Work at Rajnagar Junior Girls High School, Village- Rajnagar, P.O- Chetua Rajnagar, Rajnagar Gram Panchayat,Daspur-I Block",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 596332
+      },
+      {
+        "_id": "6a932bb5cd94452437a32460",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Smart Class Room including Beautification Work at Keshiary High School(H.S), P.O.- Keshiary, Paschim Medinipur,Keshiary-I GP, Keshiary Block.",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 596332
+      },
+      {
+        "_id": "6a932bb5cd94452437a313b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Financial Package For Classroom and Labrotary Furniture at Laudaha V.A.S.T. Vidyapith (H.S.) under development block Sankrail,PO-Laudaha,Jhargram,West Bengal-721135",
+        "completedDate": "2026-07-23T00:00:00.000Z",
+        "finalAmount": 500000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.686Z"
+}

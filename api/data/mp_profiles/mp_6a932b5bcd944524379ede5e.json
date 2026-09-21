@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede5e",
+    "name": "Ganesh Singh",
+    "constituency": "SATNA",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 44570402,
+    "utilizationPercentage": 30.320001360544218,
+    "completedWorksCount": 77,
+    "recommendedWorksCount": 241,
+    "completedWorksValue": 21445936,
+    "inProgressPayments": 23124466,
+    "paymentGapPercentage": 51.88300971573019,
+    "completionRate": 24.21383647798742,
+    "pendingWorks": 164,
+    "unspentAmount": 102429598,
+    "totalRecommendedAmount": 50103168,
+    "name_hi": "Ganesh Singh",
+    "constituency_hi": "SATNA",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44570402,
+      "totalEntries": 210,
+      "avgExpenditure": 212240.00952380954,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25187954,
+        "transactionCount": 101
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 19382448,
+        "transactionCount": 109
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44570402,
+        "transactionCount": 210,
+        "avgAmount": 212240.00952380954
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 77,
+    "recommendedCount": 241,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a867",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat PCC Road Nirman hetu",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18caf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat me pani tankers hetu",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 163424
+      },
+      {
+        "_id": "6a932bb5cd94452437a18a3a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat me Pani tankers hetu",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 163424
+      },
+      {
+        "_id": "6a932bb5cd94452437a18eed",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Panchayat me Pani tankers hetu",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 163424
+      },
+      {
+        "_id": "6a932bb5cd94452437a18ca6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram panchayat me pani tankers hetu",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 163424
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.231Z"
+}

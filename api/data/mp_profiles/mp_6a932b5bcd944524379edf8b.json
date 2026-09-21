@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf8b",
+    "name": "Smt Dimple Yadav",
+    "constituency": "MAINPURI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 192042469.11,
+    "totalExpenditure": 71677973,
+    "utilizationPercentage": 37.3240217813194,
+    "completedWorksCount": 53,
+    "recommendedWorksCount": 111,
+    "completedWorksValue": 59666421,
+    "inProgressPayments": 12011552,
+    "paymentGapPercentage": 16.75766138085406,
+    "completionRate": 32.31707317073171,
+    "pendingWorks": 58,
+    "unspentAmount": 120364496.11000001,
+    "totalRecommendedAmount": 72712796,
+    "name_hi": "Smt Dimple Yadav",
+    "constituency_hi": "MAINPURI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 71677973,
+      "totalEntries": 148,
+      "avgExpenditure": 484310.6283783784,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 15851891,
+        "transactionCount": 24
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 55826082,
+        "transactionCount": 124
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 71677973,
+        "transactionCount": 148,
+        "avgAmount": 484310.6283783784
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 53,
+    "recommendedCount": 111,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e144",
+        "workCategory": "Normal/Others",
+        "workDescription": "Assembly Mainpuri Sadar Nagar Palika Ward No  19 Mohalla Dakshini Chhapatti  CC road construction work from the house of Shri Vimal Diwakar towards the house of Shri Bacchu Srivastava distance 50 meters By Shri Vipan Yadav Mob  8218010092",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 166474
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e302",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from Mainpuri Etawah road to the agricultural farm of Shri Deepu Chauhan in village Nagla Jula of Gram Panchayat Audany Padaria of Assembly Karhal Tehsil Mainpuri Block Mainpuri, distance 160 meters Shri Deepu Chauhan 7536835764",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 1097223
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e146",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from the house of Shri Ramsevak Pal towards the house of Shri Vinod Kumar Pal  behind house no  167 G I C  College  in ward no  31 of Nagar Palika of Mainpuri Sadar assembly constituency  distance 20 meters By Shri Alok Shakya  mobile no  8650267070",
+        "completedDate": "2026-08-15T00:00:00.000Z",
+        "finalAmount": 128398
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d74a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC drain work from the house of Shri Ishwar Dayal Advocate to the house of Shri Surendra Singh Yadav in front of gate no 2 of Sansarpur Set Thomas Inter College in ward no 5 of Nagar Palika Mainpuri of district Mainpuri distance 220 meters Surendra Singh Yadav Mobile no 9411439789",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 2723027
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d746",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of CC road from cremation ground to the house of Mr Talebar Karbal in village Jaramai of Gram Panchayat Jasmai of Assembly Bhogaon Tehsil Kuravali Development Block Sultanganj distance 250 meters Mr Alok Kumar Shakya 8650267070",
+        "completedDate": "2026-07-21T00:00:00.000Z",
+        "finalAmount": 1585162
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.473Z"
+}

@@ -78,6 +78,11 @@ web/.tmp/
 
 
 .vercel
+.vercel_python_packages/
+.vercel/output/
+.vercel/python/
+.vercel/cache/
+web/scratch/
 .env*
 India_AC.dbf
 uv.lock

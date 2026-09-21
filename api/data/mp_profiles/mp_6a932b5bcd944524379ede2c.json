@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede2c",
+    "name": "Dhairyasheel Sambhajirao Mane",
+    "constituency": "HATKANANGLE",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 7519206,
+    "utilizationPercentage": 5.115106122448979,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 13,
+    "completedWorksValue": 6519206,
+    "inProgressPayments": 1000000,
+    "paymentGapPercentage": 13.299276545954452,
+    "completionRate": 23.52941176470588,
+    "pendingWorks": 9,
+    "unspentAmount": 139480794,
+    "totalRecommendedAmount": 14500000,
+    "name_hi": "Dhairyasheel Sambhajirao Mane",
+    "constituency_hi": "HATKANANGLE",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 7519206,
+      "totalEntries": 5,
+      "avgExpenditure": 1503841.2,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2000000,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5519206,
+        "transactionCount": 3
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 7519206,
+        "transactionCount": 5,
+        "avgAmount": 1503841.2
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 13,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1da59",
+        "workCategory": "Trust and Society",
+        "workDescription": "AT Rethre dharan Setting up public non-conventional energy plants",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 3086456
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d7ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Shirala at Aswalewadi Construction of rooms and halls",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 1432750
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bccf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Rukadi tal Hatkangle dist Kolhapur Construction of main village roads at Rukadi.",
+        "completedDate": "2025-12-10T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5c2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road from kisan Magdum house to Devtali at Ghunaki Tal Hatkangle Dist Kolhapur",
+        "completedDate": "2025-09-25T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:02.687Z"
+}

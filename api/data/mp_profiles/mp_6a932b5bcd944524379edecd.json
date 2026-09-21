@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edecd",
+    "name": "MIAN ALTAF AHMAD",
+    "constituency": "ANANTNAG",
+    "state": "Jammu And Kashmir",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 24523857,
+    "utilizationPercentage": 16.682895918367347,
+    "completedWorksCount": 14,
+    "recommendedWorksCount": 113,
+    "completedWorksValue": 6935236,
+    "inProgressPayments": 17588621,
+    "paymentGapPercentage": 71.72045164021303,
+    "completionRate": 11.023622047244094,
+    "pendingWorks": 99,
+    "unspentAmount": 122476143,
+    "totalRecommendedAmount": 125950430,
+    "name_hi": "MIAN ALTAF AHMAD",
+    "constituency_hi": "ANANTNAG",
+    "state_hi": "Jammu And Kashmir"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 24523857,
+      "totalEntries": 35,
+      "avgExpenditure": 700681.6285714286,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 286000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24237857,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 24523857,
+        "transactionCount": 35,
+        "avgAmount": 700681.6285714286
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 14,
+    "recommendedCount": 113,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c265",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of tractor road main road to Al morha jabri wala near house of abdul majid ward no.4 pyt. Bandichechian block NSSB Poonch",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 286000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3b1",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of F P bund at Tasspora Gadole near House of  Talib Hussain,Nazir Ahmad, Mohd Yousuf, Mohd Aslam and others at Tasipora kokernag Anantnag",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 178500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e289",
+        "workCategory": "Normal/Others",
+        "workDescription": "const. imp of irrigation channel at Devipora Anantnag",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 149595
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e22f",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of fencing and walling with gate for public park near Graveyard at Achabal.block Achabal",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 414000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de9b",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of tractor road Near Shamshhan Ghat to Mohd sheikhan Near L.O Captain Mohd yaqoob and others pyt Bhainch",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 260000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.478Z"
+}

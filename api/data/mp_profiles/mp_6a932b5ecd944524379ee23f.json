@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee23f",
+    "name": "Shri Haris Beeran (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 122500000,
+    "totalExpenditure": 17480985,
+    "utilizationPercentage": 14.270191836734694,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 207,
+    "completedWorksValue": 9042179,
+    "inProgressPayments": 8438806,
+    "paymentGapPercentage": 48.27420193999365,
+    "completionRate": 4.166666666666666,
+    "pendingWorks": 198,
+    "unspentAmount": 105019015,
+    "totalRecommendedAmount": 94793500,
+    "name_hi": "Shri Haris Beeran (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 17480985,
+      "totalEntries": 23,
+      "avgExpenditure": 760042.8260869565,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2075534,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15405451,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 17480985,
+        "transactionCount": 23,
+        "avgAmount": 760042.8260869565
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 207,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32495",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of  Perumpillichira thekkekara link road,Ward 7 Perumpillichira   of Kumaramangalam Panchayat, under Kumaramangalam  Village in the Thodupuzha Block, Idukki District.",
+        "completedDate": "2026-08-22T00:00:00.000Z",
+        "finalAmount": 382047
+      },
+      {
+        "_id": "6a932bb5cd94452437a32484",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constructi\non of new\nroad:\nNedungad\n-\nKoonampa\nra road: Panakkad - Thekkethodu road. (Pukkoya Thangal Road)",
+        "completedDate": "2026-07-29T00:00:00.000Z",
+        "finalAmount": 725857
+      },
+      {
+        "_id": "6a932bb5cd94452437a32385",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Chittoor Kundaruppan Kadu Road.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 420055
+      },
+      {
+        "_id": "6a932bb5cd94452437a32302",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Madathikandam padinjare veed  road , Ward 8  Vadakkumuri , of Thodupuzha Municipality , Idukki District.",
+        "completedDate": "2026-05-02T00:00:00.000Z",
+        "finalAmount": 439812
+      },
+      {
+        "_id": "6a932bb5cd94452437a32310",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of new road:- Muvattupuzha Taluk, Payipra Grama Panchayat, ward 17, Chakkunnam Ambalam - Ponnoppadi Juma Masjid canal bund road.",
+        "completedDate": "2026-04-29T00:00:00.000Z",
+        "finalAmount": 400062
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.468Z"
+}

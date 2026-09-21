@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee296",
+    "name": "Shri S.R. Sivalingam (2025-31)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 89248285.42,
+    "totalExpenditure": 27371677,
+    "utilizationPercentage": 30.669134842411406,
+    "completedWorksCount": 13,
+    "recommendedWorksCount": 36,
+    "completedWorksValue": 9371677,
+    "inProgressPayments": 18000000,
+    "paymentGapPercentage": 65.76140731165285,
+    "completionRate": 26.53061224489796,
+    "pendingWorks": 23,
+    "unspentAmount": 61876608.42,
+    "totalRecommendedAmount": 41895000,
+    "name_hi": "Shri S.R. Sivalingam (2025-31)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 27371677,
+      "totalEntries": 25,
+      "avgExpenditure": 1094867.08,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 27371677,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 27371677,
+        "transactionCount": 25,
+        "avgAmount": 1094867.08
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 13,
+    "recommendedCount": 36,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erection of Solar LED Light (12 meters) Pole 150W LED 6 Nos All in one Solar light Chinnaputhur mariyamman kovil",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 750000
+      },
+      {
+        "_id": "6a932bb5cd94452437a323db",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of Sports Equipments to Government Girls Hr. Sec. School at Udayapatti",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a323da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of  Lab  Equipments to Government Hr Sec  School at  Panamarathupatti",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a323dc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply of Sports Equipments to Government Girls Hr. Sec. School at Siruvachur",
+        "completedDate": "2026-08-28T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a323d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply and Erection of Solar LED Light (12 meters) Pole 150W LED 6 Nos All in one Solar light Ganapathy Nagar",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 750000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.895Z"
+}

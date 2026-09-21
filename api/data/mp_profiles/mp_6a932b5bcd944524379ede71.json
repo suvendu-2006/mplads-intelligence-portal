@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede71",
+    "name": "Indra Hang Subba",
+    "constituency": "SIKKIM",
+    "state": "Sikkim",
+    "house": "Lok Sabha",
+    "allocatedAmount": 152003923.11,
+    "totalExpenditure": 98023420,
+    "utilizationPercentage": 64.48742768899709,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 76962180,
+    "inProgressPayments": 21061240,
+    "paymentGapPercentage": 21.48592652653825,
+    "completionRate": 31.932773109243694,
+    "pendingWorks": 43,
+    "unspentAmount": 53980503.110000014,
+    "totalRecommendedAmount": 56803000,
+    "name_hi": "Indra Hang Subba",
+    "constituency_hi": "SIKKIM",
+    "state_hi": "Sikkim"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 98023420,
+      "totalEntries": 80,
+      "avgExpenditure": 1225292.75,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13477960,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 70471783,
+        "transactionCount": 40
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 14073677,
+        "transactionCount": 24
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 98023420,
+        "transactionCount": 80,
+        "avgAmount": 1225292.75
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dd5b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Playground upgradation at Takuthang",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 1498966
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd56",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of street lights at Yakten,Pakyong",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 498861
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbbc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of protective wall at Dodak",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 249810
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbbf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a protective wall at Dodak",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 249833
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbbe",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a protective wall at Dodak",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 249720
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.236Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2b4",
+    "name": "Shri V. Vijayendra Prasad (2022-28)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Andhra Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 90827947,
+    "utilizationPercentage": 46.325672672740026,
+    "completedWorksCount": 74,
+    "recommendedWorksCount": 121,
+    "completedWorksValue": 66259842,
+    "inProgressPayments": 24568105,
+    "paymentGapPercentage": 27.049059030256405,
+    "completionRate": 37.94871794871795,
+    "pendingWorks": 47,
+    "unspentAmount": 105236010.11000001,
+    "totalRecommendedAmount": 101950000,
+    "name_hi": "Shri V. Vijayendra Prasad (2022-28)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 90827947,
+      "totalEntries": 113,
+      "avgExpenditure": 803787.1415929204,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 11134038,
+        "transactionCount": 37
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 40586574,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39107335,
+        "transactionCount": 44
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 90827947,
+        "transactionCount": 113,
+        "avgAmount": 803787.1415929204
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 74,
+    "recommendedCount": 121,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32338",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall Bit 2 at Khazipur",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 494153
+      },
+      {
+        "_id": "6a932bb5cd94452437a32337",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall Bit 1 at Kazipur",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a322f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Planks to bund slope and gravel top on North side of Jaggabathula cheruvu at Rapaka",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 2302792
+      },
+      {
+        "_id": "6a932bb5cd94452437a322c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC road at ST colony Hindu Burial ground west copound wall of east gate of challapalli village",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 818442
+      },
+      {
+        "_id": "6a932bb5cd94452437a322c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of compound wall at South side of dumping yard from Tharigopula Pranganam gate to summer BIT 1-BIT6",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 2274612
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.425Z"
+}

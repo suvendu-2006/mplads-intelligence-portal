@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede31",
+    "name": "Dileshwar Kamait ",
+    "constituency": "SUPAUL",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 150450930.89,
+    "totalExpenditure": 89329681,
+    "utilizationPercentage": 59.37462830676142,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 85,
+    "completedWorksValue": 60629237,
+    "inProgressPayments": 28700444,
+    "paymentGapPercentage": 32.128676245916516,
+    "completionRate": 35.11450381679389,
+    "pendingWorks": 39,
+    "unspentAmount": 61121249.889999986,
+    "totalRecommendedAmount": 70187000,
+    "name_hi": "Dileshwar Kamait ",
+    "constituency_hi": "SUPAUL",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 89329681,
+      "totalEntries": 76,
+      "avgExpenditure": 1175390.5394736843,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 56610170,
+        "transactionCount": 43
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32719511,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 89329681,
+        "transactionCount": 76,
+        "avgAmount": 1175390.5394736843
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 85,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1cac8",
+        "workCategory": "Normal/Others",
+        "workDescription": "SADAK KI UCHAIKARAN TATHA PCC DHALAI KARYA",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 1462770
+      },
+      {
+        "_id": "6a932bb5cd94452437a1caca",
+        "workCategory": "Normal/Others",
+        "workDescription": "RCC drainage and PCC ROAD",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 1483183
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb36",
+        "workCategory": "Normal/Others",
+        "workDescription": "RCC drainage and PCC ROAD",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1073114
+      },
+      {
+        "_id": "6a932bb5cd94452437a1af40",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC DHALAI KARYA",
+        "completedDate": "2026-01-14T00:00:00.000Z",
+        "finalAmount": 1371604
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a55e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PCC DHALAI KA KARYA",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 1195952
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.237Z"
+}

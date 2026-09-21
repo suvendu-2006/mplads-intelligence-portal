@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc9",
+    "name": "Y S Avinash Reddy",
+    "constituency": "KADAPA",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 156430260.11,
+    "totalExpenditure": 40434883,
+    "utilizationPercentage": 25.848504612577283,
+    "completedWorksCount": 57,
+    "recommendedWorksCount": 243,
+    "completedWorksValue": 29441518,
+    "inProgressPayments": 10993365,
+    "paymentGapPercentage": 27.187824433670304,
+    "completionRate": 19,
+    "pendingWorks": 186,
+    "unspentAmount": 115995377.11000001,
+    "totalRecommendedAmount": 91727241,
+    "name_hi": "Y S Avinash Reddy",
+    "constituency_hi": "KADAPA",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40434883,
+      "totalEntries": 87,
+      "avgExpenditure": 464768.7701149425,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17268906,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23165977,
+        "transactionCount": 60
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40434883,
+        "transactionCount": 87,
+        "avgAmount": 464768.7701149425
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 57,
+    "recommendedCount": 243,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e37f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Road from D No 14  705 7 14 to 14 705 7 11 and Drinking water pipeline from 14  705 3 19 2 to D No 14 705 3 13 4 14  705 7 14 to 14 705 7 11  at samadula street, 27th Division of Kadapa MC",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 399172
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e379",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing CC Drain from D No  96 179 17 to 96 185 2 23 to 96 185 2 1 Utukuru 45th Division of Kadapa MC",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 199317
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e383",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of CC Drain  CC Road from D No  14 705 3 19 2 to D No  14 705 3 13 4  opp Rizwan Masjid Street, 27th Division of Kadapa MC",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 598725
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of CC Road form ST colony road to Subba Reddy house in A. A.Palem colony of Rangasamudram village  G.P. of Porumamilla Mandal",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 487763
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e142",
+        "workCategory": "Normal/Others",
+        "workDescription": "formation of Gravel road from Park  (near Back side of Fire Station) to  Reddiottala jagannana Colony in Rangasamudram Village  GP of Porumamilla Mandal",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 255748
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.250Z"
+}

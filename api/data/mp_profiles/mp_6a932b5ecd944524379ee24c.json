@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee24c",
+    "name": "Shri Jose K. Mani (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 122500000,
+    "totalExpenditure": 19384930,
+    "utilizationPercentage": 15.824432653061224,
+    "completedWorksCount": 27,
+    "recommendedWorksCount": 153,
+    "completedWorksValue": 10476923,
+    "inProgressPayments": 8908007,
+    "paymentGapPercentage": 45.95325853639915,
+    "completionRate": 15,
+    "pendingWorks": 126,
+    "unspentAmount": 103115070,
+    "totalRecommendedAmount": 81302300,
+    "name_hi": "Shri Jose K. Mani (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 19384930,
+      "totalEntries": 44,
+      "avgExpenditure": 440566.5909090909,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3630029,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15754901,
+        "transactionCount": 39
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 19384930,
+        "transactionCount": 44,
+        "avgAmount": 440566.5909090909
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 27,
+    "recommendedCount": 153,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3227e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ottapoyyil Kalambukattupady Road",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 499424
+      },
+      {
+        "_id": "6a932bb5cd94452437a3247f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ettathottu – Maliyekkal – Anikkuzhy – Thannippara Road",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 379189
+      },
+      {
+        "_id": "6a932bb5cd94452437a3249b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Pulinkala Marambu Road",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 399908
+      },
+      {
+        "_id": "6a932bb5cd94452437a3249a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Veliyath Kannala Road",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 382627
+      },
+      {
+        "_id": "6a932bb5cd94452437a323d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Pilathody Palam -Kunchayibhavanam Road",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 277131
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.756Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2b8",
+    "name": "Shri Yerram Venkata Subba Reddy (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Andhra Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 33232213,
+    "utilizationPercentage": 22.606947619047617,
+    "completedWorksCount": 38,
+    "recommendedWorksCount": 104,
+    "completedWorksValue": 18636903,
+    "inProgressPayments": 14595310,
+    "paymentGapPercentage": 43.919163613930856,
+    "completionRate": 26.76056338028169,
+    "pendingWorks": 66,
+    "unspentAmount": 113767787,
+    "totalRecommendedAmount": 87068000,
+    "name_hi": "Shri Yerram Venkata Subba Reddy (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33232213,
+      "totalEntries": 72,
+      "avgExpenditure": 461558.5138888889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7751224,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25480989,
+        "transactionCount": 51
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33232213,
+        "transactionCount": 72,
+        "avgAmount": 461558.5138888889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 38,
+    "recommendedCount": 104,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3244a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from GPY Road to near Pydithalli Ammavari temple, Mamidivada Village, Rambili Mandal",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 498605
+      },
+      {
+        "_id": "6a932bb5cd94452437a32449",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Culvert at Mamidivada Village, Rambili Mandal",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 491408
+      },
+      {
+        "_id": "6a932bb5cd94452437a3233d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Gudipatipalli Village to Narasimha swamy Temple road in Gudipatipalli GP, Veligandla Mandal, Prakasam District.",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 991784
+      },
+      {
+        "_id": "6a932bb5cd94452437a31523",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road towards East Side near Ankammathalli temple in Anamanamuru Village,Korisapadu Mandal,Bapatla District",
+        "completedDate": "2026-03-29T00:00:00.000Z",
+        "finalAmount": 480986
+      },
+      {
+        "_id": "6a932bb5cd94452437a31538",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road towards South Side near Ankammathalli temple in Anamanamuru Village,Korisapadu Mandal, Bapatla District",
+        "completedDate": "2026-03-29T00:00:00.000Z",
+        "finalAmount": 496407
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.677Z"
+}

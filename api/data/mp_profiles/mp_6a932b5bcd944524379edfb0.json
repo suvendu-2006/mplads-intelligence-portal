@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb0",
+    "name": "Thirumaa Valavan Thol",
+    "constituency": "CHIDAMBARAM",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 68203692,
+    "utilizationPercentage": 46.3970693877551,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 32,
+    "completedWorksValue": 42695846,
+    "inProgressPayments": 25507846,
+    "paymentGapPercentage": 37.399509105753395,
+    "completionRate": 58.44155844155844,
+    "pendingWorks": -13,
+    "unspentAmount": 78796308,
+    "totalRecommendedAmount": 44716000,
+    "name_hi": "Thirumaa Valavan Thol",
+    "constituency_hi": "CHIDAMBARAM",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 68203692,
+      "totalEntries": 79,
+      "avgExpenditure": 863337.8734177215,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 41288367,
+        "transactionCount": 51
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26915325,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 68203692,
+        "transactionCount": 79,
+        "avgAmount": 863337.8734177215
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 32,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1de7a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Cement Concrete Road at  Olapadi Panchayat Veppur Union (300M)",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1492881
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cc65",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ritual Shed at Pinnathur East Colony Village Pinnathur Panchayat in Parangipettai Block.",
+        "completedDate": "2026-02-28T00:00:00.000Z",
+        "finalAmount": 599407
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca4d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ritual Shed (Karumakariya Mandapam) at Ponnankoil  Paradhur Panchayat in Keerapalayam Block.",
+        "completedDate": "2026-01-27T00:00:00.000Z",
+        "finalAmount": 449645
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c337",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Drainage at Bus Stop to Alagapuram Colony, Alagapuram Panchayat in Andimadam Union",
+        "completedDate": "2025-12-31T00:00:00.000Z",
+        "finalAmount": 999025
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd85",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Ritual Shed (Karumakariya Mandapam) at  Manjakuzhi Panchayat in Parangipettai Block.",
+        "completedDate": "2025-12-15T00:00:00.000Z",
+        "finalAmount": 464927
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.419Z"
+}

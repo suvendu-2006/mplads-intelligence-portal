@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf7d",
+    "name": "Shri Sudheer Gupta ",
+    "constituency": "MANDSOUR",
+    "state": "Madhya Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148988014.83,
+    "totalExpenditure": 21420844,
+    "utilizationPercentage": 14.377561862571199,
+    "completedWorksCount": 60,
+    "recommendedWorksCount": 163,
+    "completedWorksValue": 8994846,
+    "inProgressPayments": 12425998,
+    "paymentGapPercentage": 58.0089094528675,
+    "completionRate": 26.905829596412556,
+    "pendingWorks": 103,
+    "unspentAmount": 127567170.83000001,
+    "totalRecommendedAmount": 32774246,
+    "name_hi": "Shri Sudheer Gupta ",
+    "constituency_hi": "MANDSOUR",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21420844,
+      "totalEntries": 175,
+      "avgExpenditure": 122404.82285714286,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 1800000,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 8844846,
+        "transactionCount": 72
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 10775998,
+        "transactionCount": 76
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21420844,
+        "transactionCount": 175,
+        "avgAmount": 122404.82285714286
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 60,
+    "recommendedCount": 163,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1db24",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing drains and gutters for public drainage",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a17b73",
+        "workCategory": "Normal/Others",
+        "workDescription": "sewarage pipe line work",
+        "completedDate": "2026-08-09T00:00:00.000Z",
+        "finalAmount": 750000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c9bf",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a172d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of cc road",
+        "completedDate": "2026-08-04T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b35f",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF SHED",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.471Z"
+}

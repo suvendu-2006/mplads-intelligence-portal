@@ -16,6 +16,8 @@ import {
 import { CPWDGauge } from './shared/CPWDGauge'
 import { AgencyBadge } from './shared/AgencyBadge'
 import { simplifyAuditFinding } from '../lib/auditSimplifier'
+import { useToastStore } from '../store/useToastStore'
+import { useStore } from '../store/useStore'
 
 export interface FlagDossierData {
   work_id?: number
@@ -62,10 +64,12 @@ interface Props {
 }
 
 export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
+  const { user } = useStore()
+
   const [activeActionModal, setActiveActionModal] = useState<'notice' | 'freeze' | 'do_letter' | null>(null)
-  const [actionSuccess, setActionSuccess] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
   const [checkedChecklist, setCheckedChecklist] = useState<Record<string, boolean>>({})
+  const { showToast, showActionModal } = useToastStore()
 
   React.useEffect(() => {
     if (!flag) return
@@ -88,6 +92,25 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   const implementingAgency = flag.implementingAgency || flag.implementing_agency || (district && district !== 'State General' ? `District Magistrate / Collector, ${district}` : 'District Authority')
   const detectorName = flag.detector_name || flag.detectorName || flag.detector || 'Cost Overrun Anomaly'
   const severity = flag.severity || 0.75
+
+  // STRICT JURISDICTION ENFORCEMENT:
+  // MoSPI has national authority.
+  // State Nodal Officer has authority ONLY for projects within user.state.
+  // District Authority has authority ONLY for projects within user.district.
+  const workState = (state || flag.state || '').trim().toLowerCase()
+  const workDistrict = (district || flag.district || '').trim().toLowerCase()
+  const userState = (user.state || '').trim().toLowerCase()
+  const userDistrict = (user.district || '').trim().toLowerCase()
+
+  const isStateMatch = Boolean(userState && userState !== 'all' && (workState === userState || workState.includes(userState) || userState.includes(workState)))
+  const isDistrictMatch = Boolean(userDistrict && userDistrict !== 'all' && (workDistrict === userDistrict || workDistrict.includes(userDistrict) || userDistrict.includes(workDistrict)))
+
+  const canTakeStateAction = user.role === 'mospi' || (user.role === 'state_nodal_officer' && isStateMatch)
+  const canTakeDistrictAction = user.role === 'mospi' || (user.role === 'district_authority' && isDistrictMatch) || (user.role === 'state_nodal_officer' && isStateMatch)
+  const isAuthority = canTakeStateAction || canTakeDistrictAction
+  const isMP = user.role === 'mp'
+  const isOutOfJurisdiction = (user.role === 'state_nodal_officer' && !isStateMatch) || (user.role === 'district_authority' && !isDistrictMatch)
+  const isCitizen = user.role === 'viewer' || (!isAuthority && !isMP && !isOutOfJurisdiction)
 
   const getAgencyDetails = (agency: string) => {
     const ag = (agency || '').toLowerCase()
@@ -139,12 +162,46 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const triggerAction = (actionName: string) => {
-    setActionSuccess(`✓ ${actionName} logged in sovereign audit ledger (Demo Mode: UI-only).`)
-    setTimeout(() => {
-      setActionSuccess(null)
-      setActiveActionModal(null)
-    }, 3000)
+  const handleNoticeConfirm = () => {
+    setActiveActionModal(null)
+    const refId = `SCN-GFR230-${workId}-${Math.floor(1000 + Math.random() * 9000)}`
+    showActionModal({
+      title: 'Formal Show-Cause Notice Dispatched',
+      subtitle: `Issued to District Collector & DPO (${district})`,
+      message: `Statutory Show-Cause Notice citing GFR Rule 230 and MoSPI MPLADS Guidelines has been transmitted for Work #${workId} (${description}). Action-Taken Report (ATR) required within 14 business days.`,
+      refId,
+      badgeText: 'NOTICE DISPATCHED • GFR 230',
+      type: 'notice'
+    })
+    showToast(`Show-Cause Notice dispatched to District Authority for Work #${workId}`, 'notice', 5000, 'Statutory Notice Dispatched')
+  }
+
+  const handleFreezeConfirm = () => {
+    setActiveActionModal(null)
+    const refId = `PFMS-HOLD-${workId}-${Math.floor(1000 + Math.random() * 9000)}`
+    showActionModal({
+      title: 'PFMS Treasury Disbursal Freeze Enacted',
+      subtitle: `Electronic Payment Hold Activated on PFMS SNA`,
+      message: `Statutory payment hold order transmitted to the Public Financial Management System (PFMS) for Work #${workId}. Contractor invoice clearance has been immediately paused on Single Nodal Account.`,
+      refId,
+      badgeText: 'TREASURY DISBURSAL FROZEN',
+      type: 'freeze'
+    })
+    showToast(`PFMS Payment Hold activated for Work #${workId}`, 'freeze', 5000, 'Treasury Freeze Enacted')
+  }
+
+  const handleLetterConfirm = () => {
+    setActiveActionModal(null)
+    const refId = `MP-DO-${workId}-${Math.floor(1000 + Math.random() * 9000)}`
+    showActionModal({
+      title: 'Parliamentary D.O. Letter Dispatched',
+      subtitle: `Transmitted to District Collector, ${district}`,
+      message: `Official inquiry from the Office of ${mpName} (${constituency}) dispatched to the District Collector regarding Work #${workId}. Physical site inspection and Measurement Book (MB) verification copy requested.`,
+      refId,
+      badgeText: 'PARLIAMENTARY INQUIRY TRANSMITTED',
+      type: 'letter'
+    })
+    showToast(`Parliamentary D.O. Letter dispatched for Work #${workId}`, 'letter', 5000, 'D.O. Letter Dispatched')
   }
 
   return (
@@ -192,13 +249,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           </button>
         </div>
 
-        {/* Success Toast */}
-        {actionSuccess && (
-          <div className="mb-4 p-3 rounded-xl bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-2 animate-in fade-in">
-            <CheckCircle2 size={16} />
-            <span>{actionSuccess}</span>
-          </div>
-        )}
+
 
         <div className="space-y-5 max-h-[70vh] overflow-y-auto pr-1">
           {/* Metadata Grid */}
@@ -426,68 +477,127 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
             unitRate={cpwd?.standard_rate_inr ? `₹${cpwd.standard_rate_inr}/${cpwd.standard_unit}` : undefined}
           />
 
-          {/* Statutory Administrative Actions (3 Interactive Buttons) */}
-          <div className="space-y-2">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-secondary)] flex items-center gap-1.5">
-              <span>Statutory Enforcement Actions</span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <button
-                onClick={() => setActiveActionModal('notice')}
-                className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group"
-              >
-                <div>
-                  <div className="flex items-center gap-2 mb-1 text-[var(--brand-primary)] font-bold text-xs">
-                    <FileText size={15} />
-                    <span>Show-Cause Notice</span>
-                  </div>
-                  <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
-                    Issue formal notice to District Magistrate citing GFR Rule 230.
-                  </p>
+          {/* Action Section: Out-of-Jurisdiction vs Citizen vs Authority */}
+          {isOutOfJurisdiction ? (
+            <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold shrink-0">
+                  <Lock size={18} />
                 </div>
-                <span className="text-[10px] font-extrabold text-[var(--brand-primary)] mt-3 group-hover:underline">
-                  Draft Notice →
-                </span>
-              </button>
-
-              <button
-                onClick={() => setActiveActionModal('freeze')}
-                className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group"
-              >
                 <div>
-                  <div className="flex items-center gap-2 mb-1 text-rose-600 dark:text-rose-400 font-bold text-xs">
-                    <Lock size={15} />
-                    <span>Freeze PFMS Disbursal</span>
-                  </div>
-                  <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
-                    Place statutory payment hold on treasury releases for this work.
-                  </p>
+                  <span className="text-xs font-bold text-[var(--text-primary)] block">
+                    Out-of-Jurisdiction Public Transparency Record
+                  </span>
+                  <span className="text-[10px] text-[var(--text-secondary)] leading-tight block mt-0.5">
+                    {user.role === 'state_nodal_officer'
+                      ? `You are logged in as State Nodal Officer for ${user.state}. Statutory enforcement actions (Show-Cause Notices, PFMS Disbursal Freezes) are strictly restricted to projects in ${user.state}.`
+                      : `You are logged in as District Authority for ${user.district}. Statutory enforcement actions are strictly restricted to projects in ${user.district}.`}
+                  </span>
                 </div>
-                <span className="text-[10px] font-extrabold text-rose-600 dark:text-rose-400 mt-3 group-hover:underline">
-                  Initiate Hold →
-                </span>
-              </button>
-
+              </div>
               <button
-                onClick={() => setActiveActionModal('do_letter')}
-                className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group"
+                onClick={() => {
+                  showToast(`Public audit reference copied for Work #${workId}.`, 'info', 3000, 'Audit Dossier')
+                  handleCopy(`Work #${workId}: ${description} (${district}, ${state})`)
+                }}
+                className="px-3.5 py-1.5 rounded-lg bg-[var(--surface-primary)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-primary)] transition whitespace-nowrap self-start sm:self-auto cursor-pointer shadow-xs flex items-center gap-1.5"
               >
-                <div>
-                  <div className="flex items-center gap-2 mb-1 text-[var(--brand-accent)] font-bold text-xs">
-                    <Mail size={15} />
-                    <span>MP D.O. Letter</span>
-                  </div>
-                  <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
-                    Draft Parliamentary Demi-Official inquiry letter to Collector.
-                  </p>
-                </div>
-                <span className="text-[10px] font-extrabold text-[var(--gold-text)] mt-3 group-hover:underline">
-                  Draft D.O. Letter →
-                </span>
+                <Copy size={12} />
+                <span>Copy Finding</span>
               </button>
             </div>
-          </div>
+          ) : isCitizen ? (
+            <div className="p-4 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold shrink-0">
+                  <CheckCircle2 size={18} />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-[var(--text-primary)] block">Public Audit & Social Vigilance Record</span>
+                  <span className="text-[10px] text-[var(--text-secondary)] leading-tight block mt-0.5">
+                    Published under RTI Act Section 4 for citizen transparency. Statutory inquiries, show-cause notices, and disbursal freezes are restricted to District Authorities and MoSPI.
+                  </span>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  showToast(`Public inquiry reference logged for Work #${workId}. Forwarded to District Grievance Cell.`, 'info', 4000, 'Public Inquiry Logged')
+                }}
+                className="px-3.5 py-1.5 rounded-lg bg-[var(--surface-primary)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-primary)] transition whitespace-nowrap self-start sm:self-auto cursor-pointer shadow-xs"
+              >
+                Log Citizen Query
+              </button>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-secondary)] flex items-center gap-1.5">
+                <ShieldAlert size={14} className="text-amber-500" />
+                <span>Statutory Enforcement Actions</span>
+              </div>
+
+              <div className={`grid grid-cols-1 ${isAuthority ? 'sm:grid-cols-3' : 'sm:grid-cols-1'} gap-3`}>
+                {isAuthority && (
+                  <button
+                    onClick={() => setActiveActionModal('notice')}
+                    className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group cursor-pointer"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-1 text-[var(--brand-primary)] font-bold text-xs">
+                        <FileText size={15} />
+                        <span>Show-Cause Notice</span>
+                      </div>
+                      <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
+                        Issue formal notice to District Magistrate citing GFR Rule 230.
+                      </p>
+                    </div>
+                    <span className="text-[10px] font-extrabold text-[var(--brand-primary)] mt-3 group-hover:underline">
+                      Draft Notice →
+                    </span>
+                  </button>
+                )}
+
+                {isAuthority && (
+                  <button
+                    onClick={() => setActiveActionModal('freeze')}
+                    className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group cursor-pointer"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-1 text-rose-600 dark:text-rose-400 font-bold text-xs">
+                        <Lock size={15} />
+                        <span>Freeze PFMS Disbursal</span>
+                      </div>
+                      <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
+                        Place statutory payment hold on treasury releases for this work.
+                      </p>
+                    </div>
+                    <span className="text-[10px] font-extrabold text-rose-600 dark:text-rose-400 mt-3 group-hover:underline">
+                      Initiate Hold →
+                    </span>
+                  </button>
+                )}
+
+                {(isAuthority || isMP) && (
+                  <button
+                    onClick={() => setActiveActionModal('do_letter')}
+                    className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group cursor-pointer"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-1 text-[var(--brand-accent)] font-bold text-xs">
+                        <Mail size={15} />
+                        <span>MP D.O. Letter</span>
+                      </div>
+                      <p className="text-[10px] text-[var(--text-secondary)] leading-snug">
+                        Draft Parliamentary Demi-Official inquiry letter to Collector.
+                      </p>
+                    </div>
+                    <span className="text-[10px] font-extrabold text-[var(--gold-text)] mt-3 group-hover:underline">
+                      Draft D.O. Letter →
+                    </span>
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Action Draft Preview Submodal */}
@@ -522,8 +632,8 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                       <span>{copied ? 'Copied!' : 'Copy Notice Text'}</span>
                     </button>
                     <button
-                      onClick={() => triggerAction('Show-Cause Notice dispatched to District Authority')}
-                      className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
+                      onClick={handleNoticeConfirm}
+                      className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-90 transition cursor-pointer"
                     >
                       Confirm & Dispatch Notice
                     </button>
@@ -546,13 +656,13 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   <div className="flex justify-end gap-2 pt-2">
                     <button
                       onClick={() => setActiveActionModal(null)}
-                      className="px-3 py-1.5 rounded-lg border border-[var(--border-primary)] text-xs font-bold"
+                      className="px-3 py-1.5 rounded-lg border border-[var(--border-primary)] text-xs font-bold cursor-pointer"
                     >
                       Cancel
                     </button>
                     <button
-                      onClick={() => triggerAction('PFMS Payment Hold activated for Work #' + workId)}
-                      className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-bold shadow"
+                      onClick={handleFreezeConfirm}
+                      className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-bold shadow hover:bg-rose-700 transition cursor-pointer"
                     >
                       Enact Disbursal Freeze
                     </button>
@@ -575,8 +685,14 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   </div>
                   <div className="flex justify-end gap-2 pt-2">
                     <button
-                      onClick={() => triggerAction('D.O. Letter sent from MP to District Collector')}
-                      className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
+                      onClick={() => setActiveActionModal(null)}
+                      className="px-3 py-1.5 rounded-lg border border-[var(--border-primary)] text-xs font-bold cursor-pointer"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleLetterConfirm}
+                      className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-90 transition cursor-pointer"
                     >
                       Dispatch Parliamentary D.O. Letter
                     </button>

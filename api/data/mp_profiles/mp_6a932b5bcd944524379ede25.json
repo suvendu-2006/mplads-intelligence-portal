@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede25",
+    "name": "DAROGA PRASAD SAROJ",
+    "constituency": "LALGANJ",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 82499872,
+    "utilizationPercentage": 56.12236190476191,
+    "completedWorksCount": 58,
+    "recommendedWorksCount": 236,
+    "completedWorksValue": 21279304,
+    "inProgressPayments": 61220568,
+    "paymentGapPercentage": 74.20686422398329,
+    "completionRate": 19.727891156462583,
+    "pendingWorks": 178,
+    "unspentAmount": 64500128,
+    "totalRecommendedAmount": 74388074,
+    "name_hi": "DAROGA PRASAD SAROJ",
+    "constituency_hi": "LALGANJ",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 82499872,
+      "totalEntries": 282,
+      "avgExpenditure": 292552.73758865247,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18391846,
+        "transactionCount": 59
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 64108026,
+        "transactionCount": 223
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 82499872,
+        "transactionCount": 282,
+        "avgAmount": 292552.73758865247
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 58,
+    "recommendedCount": 236,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1731b",
+        "workCategory": "Normal/Others",
+        "workDescription": "tekmalpur me nahar ke bazar me highmast light",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 284857
+      },
+      {
+        "_id": "6a932bb5cd94452437a1731d",
+        "workCategory": "Normal/Others",
+        "workDescription": "tahsil bar me solar painal ka nirmad",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 1206957
+      },
+      {
+        "_id": "6a932bb5cd94452437a1730f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram chandevara me highmast light",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 284857
+      },
+      {
+        "_id": "6a932bb5cd94452437a17306",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram khaniyara me highmast light",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 284857
+      },
+      {
+        "_id": "6a932bb5cd94452437a17311",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram dharmdaspur me highmast  light",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 284857
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.214Z"
+}

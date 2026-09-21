@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede3f",
+    "name": "Dr Sukanta Majumdar ",
+    "constituency": "BALURGHAT",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 157085364.9,
+    "totalExpenditure": 26156776,
+    "utilizationPercentage": 16.651313135791685,
+    "completedWorksCount": 33,
+    "recommendedWorksCount": 153,
+    "completedWorksValue": 16283854,
+    "inProgressPayments": 9872922,
+    "paymentGapPercentage": 37.74517929885548,
+    "completionRate": 17.741935483870968,
+    "pendingWorks": 120,
+    "unspentAmount": 130928588.9,
+    "totalRecommendedAmount": 69406747.8,
+    "name_hi": "Dr Sukanta Majumdar ",
+    "constituency_hi": "BALURGHAT",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26156776,
+      "totalEntries": 51,
+      "avgExpenditure": 512877.96078431373,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3999748,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22157028,
+        "transactionCount": 45
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26156776,
+        "transactionCount": 51,
+        "avgAmount": 512877.96078431373
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 33,
+    "recommendedCount": 153,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e6e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Crematorium with Solar light at Jhagrapara under Maheshpur Sansad",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 749046
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e3c4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Set up a Solar Drinking water system at manikor hatkhola under daul Anchal khatian no. 1556 jl no.13 dag no. 1494",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 299487
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c4d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Set up a Drinking water system at Kushmundi primary school under Kushmundi Anchal.  Jl No. 70 mouza Kushmundi contact Person Tapash Roy mobile 7001324581",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 299423
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c895",
+        "workCategory": "Normal/Others",
+        "workDescription": "Set up a Drinking water system at Malancha infront of jotika Barman's house.  Mouza jodubati jl no.240 dag 132",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 299423
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c4d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Set up a Drinking water system at Malancha near Jitendra oraw house.  Mouza hajipur jl no.253 Dag 319",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 299423
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.253Z"
+}

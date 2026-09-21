@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf0",
+    "name": "BAJRANG MANOHAR SONWANE",
+    "constituency": "BEED",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 165899107.19,
+    "totalExpenditure": 37977152,
+    "utilizationPercentage": 22.8917157200284,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 80,
+    "completedWorksValue": 19342448,
+    "inProgressPayments": 18634704,
+    "paymentGapPercentage": 49.06819763630511,
+    "completionRate": 20,
+    "pendingWorks": 60,
+    "unspentAmount": 127921955.19,
+    "totalRecommendedAmount": 80100000,
+    "name_hi": "BAJRANG MANOHAR SONWANE",
+    "constituency_hi": "BEED",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37977152,
+      "totalEntries": 39,
+      "avgExpenditure": 973773.1282051282,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9563693,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28413459,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37977152,
+        "transactionCount": 39,
+        "avgAmount": 973773.1282051282
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 80,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dcfd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabhamandap on Gram Panchayat land near Sri Kshetra Ganpati Temple.",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 995447
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcf8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabhamandap on Gram Panchayat land.",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 995204
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcf9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabhamandap on Gram Panchayat land.",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 997785
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcfb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabhamandap on Gram Panchayat land.",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 999556
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcfa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Sabha Mandap in Dalit wasti on Gram Panchayat land. (Special Component Scheme)",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 996465
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.670Z"
+}

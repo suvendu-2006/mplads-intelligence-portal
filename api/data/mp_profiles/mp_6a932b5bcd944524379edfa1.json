@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa1",
+    "name": "Sunil Dattatray Tatkare",
+    "constituency": "RAIGAD",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58660128,
+    "utilizationPercentage": 39.90484897959184,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 44,
+    "completedWorksValue": 25791356,
+    "inProgressPayments": 32868772,
+    "paymentGapPercentage": 56.032560992707005,
+    "completionRate": 29.03225806451613,
+    "pendingWorks": 26,
+    "unspentAmount": 88339872,
+    "totalRecommendedAmount": 71500000,
+    "name_hi": "Sunil Dattatray Tatkare",
+    "constituency_hi": "RAIGAD",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58660128,
+      "totalEntries": 73,
+      "avgExpenditure": 803563.3972602739,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 27226345,
+        "transactionCount": 36
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31433783,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58660128,
+        "transactionCount": 73,
+        "avgAmount": 803563.3972602739
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 44,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19f6b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a multipurpose hall  Gram Panchayat Kharavali, Ta- Mangaon, Dist-Raigad",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 2493418
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5f1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a social hall at Adnale, Tal-Tala, Dist-Raigad",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 1993457
+      },
+      {
+        "_id": "6a932bb5cd94452437a19425",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of social hall  Grampanchya Tondsure, at Tondure, Tal-Mhasala, Dist-Raigad",
+        "completedDate": "2026-04-08T00:00:00.000Z",
+        "finalAmount": 1497654
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d080",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of social hall at Kandalwada, Tal- Mhasla, Dist-Raigad",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 2499000
+      },
+      {
+        "_id": "6a932bb5cd94452437a19f41",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a social hall Gram Panchayat Vashi, at Landar, Tal-Roha, Dist-Raigad",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 699000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.556Z"
+}

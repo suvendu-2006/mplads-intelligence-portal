@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee243",
+    "name": "Shri Ilaiyaraaja (2022-28)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 44381022,
+    "utilizationPercentage": 20.12161124669441,
+    "completedWorksCount": 17,
+    "recommendedWorksCount": 10,
+    "completedWorksValue": 31948688,
+    "inProgressPayments": 12432334,
+    "paymentGapPercentage": 28.012725799779915,
+    "completionRate": 62.96296296296296,
+    "pendingWorks": -7,
+    "unspentAmount": 176182935.11,
+    "totalRecommendedAmount": 19600000,
+    "name_hi": "Shri Ilaiyaraaja (2022-28)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 44381022,
+      "totalEntries": 28,
+      "avgExpenditure": 1585036.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 14630324,
+        "transactionCount": 16
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 13077216,
+        "transactionCount": 5
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16673482,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 44381022,
+        "transactionCount": 28,
+        "avgAmount": 1585036.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 17,
+    "recommendedCount": 10,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a321ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of School Building Ground and 1st Floor 2 Classrooms with Staircase at Puliyarai Govt Higher Secondary School 1st Std to 5th Std Class premise Puliyarai Panchayat Sengottai Panchayat Union Tenkasi District",
+        "completedDate": "2026-03-14T00:00:00.000Z",
+        "finalAmount": 6700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32054",
+        "workCategory": "Normal/Others",
+        "workDescription": "27 Sets of Desks and Benches for Pulikkuthi Govt. Higher Sec. School",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 298615
+      },
+      {
+        "_id": "6a932bb5cd94452437a32033",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Stop in Bodi -  Uttamapalayam Road East Side, Theni District- 625524",
+        "completedDate": "2026-02-09T00:00:00.000Z",
+        "finalAmount": 1422910
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e99",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Library Hall in Pannaipuram Municipality, Theni District",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 3254976
+      },
+      {
+        "_id": "6a932bb5cd94452437a31e97",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Stop in Bodi - Uttamapalayam Road West Side, Theni District- 625524",
+        "completedDate": "2026-01-05T00:00:00.000Z",
+        "finalAmount": 1496981
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.893Z"
+}

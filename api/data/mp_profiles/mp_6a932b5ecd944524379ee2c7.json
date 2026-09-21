@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c7",
+    "name": "Smt. Ranjeet Ranjan (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Chhattisgarh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 246780257.87,
+    "totalExpenditure": 185739464,
+    "utilizationPercentage": 75.26512274650618,
+    "completedWorksCount": 160,
+    "recommendedWorksCount": 121,
+    "completedWorksValue": 131171025,
+    "inProgressPayments": 54568439,
+    "paymentGapPercentage": 29.379022543103712,
+    "completionRate": 56.93950177935944,
+    "pendingWorks": -39,
+    "unspentAmount": 61040793.870000005,
+    "totalRecommendedAmount": 107917287,
+    "name_hi": "Smt. Ranjeet Ranjan (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Chhattisgarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 185739464,
+      "totalEntries": 452,
+      "avgExpenditure": 410928.01769911504,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 13530544,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 119977842,
+        "transactionCount": 324
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 52231078,
+        "transactionCount": 103
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 185739464,
+        "transactionCount": 452,
+        "avgAmount": 410928.01769911504
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 160,
+    "recommendedCount": 121,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32247",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multigym equipment Pre Matric Scheduled caste Girls Hostel Village Birra Janjgir Champa district of Chhattisgarh",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32243",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multigym equipment in Pre Matric Scheduled Caste Boys Hostel Village Jharna Janjgir Champa District of Chhattisgarh",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32248",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multigym equipment Pre Matric Scheduled caste Girls Hostel Np Nawagarh Janjgir Champa district of Chhattisgarh",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32244",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multigym equipment Post Matric Scheduled caste Boys Hostel Np Pamgarh Janjgir Champa district of Chhattisgarh",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32245",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of multigym equipment Pre Matric Scheduled caste Girls Hostel Np Pamgarh Janjgir Champa district of Chhattisgarh",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.669Z"
+}

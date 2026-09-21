@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede5c",
+    "name": "GANAPATHY RAJKUMAR P",
+    "constituency": "COIMBATORE",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147370490.11,
+    "totalExpenditure": 43662823,
+    "utilizationPercentage": 29.627928201507146,
+    "completedWorksCount": 7,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 8599674,
+    "inProgressPayments": 35063149,
+    "paymentGapPercentage": 80.30435640865457,
+    "completionRate": 10.144927536231885,
+    "pendingWorks": 55,
+    "unspentAmount": 103707667.11000001,
+    "totalRecommendedAmount": 83497393,
+    "name_hi": "GANAPATHY RAJKUMAR P",
+    "constituency_hi": "COIMBATORE",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43662823,
+      "totalEntries": 45,
+      "avgExpenditure": 970284.9555555555,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 11332388,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32330435,
+        "transactionCount": 42
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43662823,
+        "transactionCount": 45,
+        "avgAmount": 970284.9555555555
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 7,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d4a5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Smart Board to the Panchayat Union Elementary School at Kondayampalayam of Sarcarsamakulam Block",
+        "completedDate": "2026-08-19T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d294",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of ICDS Cente No.412 and 413 at Avarampalayam Road (Perumal Koil Side) in Ward No.27, North Zone of Coimbatore Corporation",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 2200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf5c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Smart Class Room Facilities to the Government Higher School at Koduvai of Palladam Block",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf57",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Smart Class Room Facilities to the Government Higher School at Ganapathypalayam of Pongalur Block",
+        "completedDate": "2026-02-10T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c3ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing SS Hand Rails at Maruthmalai Adivaram Bus Stop Near (Immovable),  Somayampalayam Panchayat",
+        "completedDate": "2026-01-02T00:00:00.000Z",
+        "finalAmount": 499709
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.444Z"
+}

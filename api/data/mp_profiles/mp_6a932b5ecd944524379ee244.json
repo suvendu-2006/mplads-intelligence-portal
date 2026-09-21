@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee244",
+    "name": "Shri Imran Pratapgarhi (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Maharashtra",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196000000,
+    "totalExpenditure": 102738277,
+    "utilizationPercentage": 52.41748826530612,
+    "completedWorksCount": 53,
+    "recommendedWorksCount": 55,
+    "completedWorksValue": 49803712,
+    "inProgressPayments": 52934565,
+    "paymentGapPercentage": 51.52370328344128,
+    "completionRate": 49.074074074074076,
+    "pendingWorks": 2,
+    "unspentAmount": 93261723,
+    "totalRecommendedAmount": 90498640,
+    "name_hi": "Shri Imran Pratapgarhi (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 102738277,
+      "totalEntries": 75,
+      "avgExpenditure": 1369843.6933333334,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 57378953,
+        "transactionCount": 54
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 45359324,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 102738277,
+        "transactionCount": 75,
+        "avgAmount": 1369843.6933333334
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 53,
+    "recommendedCount": 55,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31ab4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cultural Hall near jaspura Masjid",
+        "completedDate": "2026-03-28T00:00:00.000Z",
+        "finalAmount": 1996779
+      },
+      {
+        "_id": "6a932bb5cd94452437a3224f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of solar street lights in the cemetery area at Manur",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 999774
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ff3",
+        "workCategory": "Normal/Others",
+        "workDescription": "As per letter attached",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ff1",
+        "workCategory": "Normal/Others",
+        "workDescription": "As per letter attached",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ff2",
+        "workCategory": "Normal/Others",
+        "workDescription": "As per letter attached",
+        "completedDate": "2026-02-02T00:00:00.000Z",
+        "finalAmount": 999000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.707Z"
+}

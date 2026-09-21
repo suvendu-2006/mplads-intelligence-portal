@@ -22,6 +22,8 @@ data/raw
 data/interim
 data/processed
 data/external
+*.xlsx
+!api/data/**
 artifacts
 backups
 quarantine
@@ -60,3 +62,4 @@ build
 app.egg-info
 untitled folder
 .vercel_python_packages
+web/scratch

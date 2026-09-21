@@ -3,6 +3,7 @@ import { Link, useParams, useSearchParams, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
+import { BackButton } from '../components/BackButton'
 import {
   FundCard,
   StatCard,
@@ -18,31 +19,48 @@ import {
   Coins,
   Percent,
   Layers,
-  Users,
   Search,
-  ChevronDown,
-  X
+  CheckCircle2,
+  X,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react'
 import { DEFAULT_MP_ID, DEFAULT_STATE_DISPLAY, ALL_36_STATES_AND_UTS } from '../lib/constants'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
+import { useTranslation, translateState, translateSector } from '../lib/i18n'
 
 export const MPDashboard: React.FC = () => {
   const { id: paramId } = useParams<{ id?: string }>()
+  const { t, toNativeDigits: formatNum, lang } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
   const queryId = searchParams.get('id') || searchParams.get('mpId')
   const { user, switchRole, setMpJurisdiction } = useStore()
   const navigate = useNavigate()
 
-  // Priority: URL route param -> URL query param ONLY.
-  // When user opens /mp-dashboard without an ID, always show the original MP console selection gate!
-  const activeMpId = paramId || queryId || ''
+  // Priority: URL route param -> URL query param -> logged-in MP's assigned mpId
+  const activeMpId = paramId || queryId || (user.role === 'mp' && user.mpId && user.mpId !== 'ALL' ? user.mpId : '')
   const hasSelectedMp = Boolean(activeMpId)
-  const isAuthorized = ['mp', 'admin', 'mospi', 'viewer'].includes(user.role)
+  const isAuthorized = Boolean(user.isAuthenticated && ['mp', 'admin', 'mospi'].includes(user.role))
 
   // Gate selection state
+  const isStateNodal = user.role === 'state_nodal_officer' && Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
+  const nodalState = isStateNodal ? user.state! : ''
+
   const [gateSearch, setGateSearch] = useState('')
   const [gateHouse, setGateHouse] = useState<'ALL' | 'Lok Sabha' | 'Rajya Sabha'>('ALL')
-  const [gateState, setGateState] = useState<string>('ALL')
+  const [gateState, setGateState] = useState<string>(() => isStateNodal ? nodalState : 'ALL')
+  const [gatePage, setGatePage] = useState(1)
+  const [gatePageSize, setGatePageSize] = useState<number | 'all'>(30)
+
+  useEffect(() => {
+    if (user.role === 'state_nodal_officer' && user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES') {
+      setGateState(user.state)
+    }
+  }, [user.role, user.state])
+
+  useEffect(() => {
+    setGatePage(1)
+  }, [gateSearch, gateHouse, gateState, gatePageSize])
 
   const [data, setData] = useState<any>(() => {
     try {
@@ -58,9 +76,9 @@ export const MPDashboard: React.FC = () => {
     } catch { return false }
   })
   const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags'>('works')
+  const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'in_progress'>('all')
+  const effectiveTab = (user.role === 'viewer' && activeTab === 'flags') ? 'works' : activeTab
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
-  const [showMpSelector, setShowMpSelector] = useState(false)
-  const [selectorSearch, setSelectorSearch] = useState('')
 
   useEffect(() => {
     async function loadMPDossier() {
@@ -105,25 +123,13 @@ export const MPDashboard: React.FC = () => {
     })
   }, [gateSearch, gateHouse, gateState])
 
-  const filteredSelectorMps = useMemo(() => {
-    if (!selectorSearch.trim()) return ALL_MP_SEATS.slice(0, 30)
-    const q = selectorSearch.toLowerCase().trim()
-    return ALL_MP_SEATS.filter(m =>
-      m.name.toLowerCase().includes(q) ||
-      m.constituency.toLowerCase().includes(q) ||
-      m.state.toLowerCase().includes(q)
-    ).slice(0, 50)
-  }, [selectorSearch])
-
-  const handleSwitchMP = (mp: typeof ALL_MP_SEATS[0]) => {
-    setMpJurisdiction(mp.id, mp.name, mp.state)
-    if (user.role === 'mp') {
-      switchRole('mp', mp.state, mp.constituency, mp.id, mp.name)
-    }
-    setSearchParams({ id: mp.id }, { replace: true })
-    setShowMpSelector(false)
-    setSelectorSearch('')
-  }
+  const totalGateMps = filteredGateMps.length
+  const totalGatePages = gatePageSize === 'all' ? 1 : (Math.ceil(totalGateMps / Number(gatePageSize)) || 1)
+  const pagedGateMps = useMemo(() => {
+    if (gatePageSize === 'all') return filteredGateMps
+    const start = (gatePage - 1) * Number(gatePageSize)
+    return filteredGateMps.slice(start, start + Number(gatePageSize))
+  }, [filteredGateMps, gatePage, gatePageSize])
 
   if (!isAuthorized) {
     return (
@@ -138,127 +144,240 @@ export const MPDashboard: React.FC = () => {
           The Parliamentary Constituency Command Dashboard is designed exclusively for Lok Sabha and Rajya Sabha representatives.
         </p>
         <button
-          onClick={() => switchRole('mp')}
-          className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition"
+          onClick={() => navigate('/login?role=mp')}
+          className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition cursor-pointer"
         >
-          Open MP Jurisdiction Gate
+          Log In as Member of Parliament (Autofilled)
         </button>
       </div>
     )
   }
 
-  // MP JURISDICTION GATE: User must select an MP first! No default page!
+  // If no MP is selected yet, show the full-screen selection gate
   if (!hasSelectedMp) {
     return (
-      <div className="max-w-5xl mx-auto py-8 px-4 space-y-6 animate-in fade-in duration-300">
-        <div className="rounded-3xl p-6 sm:p-8 bg-[var(--surface-primary)] border-2 border-[var(--border-primary)] shadow-xl text-center space-y-4">
-          <div className="w-14 h-14 rounded-2xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 text-[var(--gold-text)] flex items-center justify-center mx-auto shadow-sm">
-            <Landmark size={28} />
+      <div className="max-w-4xl mx-auto space-y-6 py-6 animate-in fade-in duration-300">
+        <div className="flex items-center justify-start">
+          <BackButton fallback="/mps" />
+        </div>
+        <div className="text-center space-y-2">
+          <div className="w-12 h-12 rounded-2xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 text-[var(--gold-text)] flex items-center justify-center mx-auto">
+            <Landmark size={24} />
           </div>
-          <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--brand-accent)]/10 text-[var(--gold-text)] text-xs font-bold uppercase tracking-wider">
-              <span>Parliamentary Command Console</span>
-            </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)]">
-              Select Member of Parliament
-            </h1>
-            <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-xl mx-auto">
-              Choose a Member of Parliament below to access verified constituency corpus ledgers, project recommendations, and financial utilization. No MP is loaded by default.
-            </p>
-          </div>
+          <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight">
+            {t('mp.command_console')}
+          </h1>
+          <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-xl mx-auto">
+            Select an Hon'ble Member of Parliament to access the parliamentary ledger, inspect works execution, and audit expenditures.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto pt-2 text-left">
+        {/* Filter Bar */}
+        <div className="lux-card p-4 space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {/* Search */}
             <div className="sm:col-span-1">
-              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
-                Filter by House
-              </label>
-              <select
-                value={gateHouse}
-                onChange={(e) => setGateHouse(e.target.value as any)}
-                className="w-full text-xs bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] rounded-xl px-3 py-2.5 text-[var(--text-primary)] font-bold outline-none focus:border-[var(--brand-accent)] cursor-pointer shadow-xs"
-              >
-                <option value="ALL">All Houses (Both)</option>
-                <option value="Lok Sabha">Lok Sabha</option>
-                <option value="Rajya Sabha">Rajya Sabha</option>
-              </select>
-            </div>
-
-            <div className="sm:col-span-1">
-              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
-                Filter by State
-              </label>
-              <select
-                value={gateState}
-                onChange={(e) => setGateState(e.target.value)}
-                className="w-full text-xs bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] rounded-xl px-3 py-2.5 text-[var(--text-primary)] font-bold outline-none focus:border-[var(--brand-accent)] cursor-pointer shadow-xs"
-              >
-                <option value="ALL">All 36 States &amp; UTs</option>
-                {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
-                  <option key={st} value={st}>
-                    {st}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="sm:col-span-1">
-              <label className="text-[11px] font-extrabold text-[var(--text-primary)] mb-1 block">
-                Search Seat or MP
+              <label className="block text-[11px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider mb-1">
+                Search Representative
               </label>
               <div className="relative">
                 <Search className="w-3.5 h-3.5 text-[var(--text-tertiary)] absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
-                  placeholder="Type name, seat..."
+                  placeholder="Name, constituency..."
                   value={gateSearch}
                   onChange={(e) => setGateSearch(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border-2 border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-accent)] font-medium"
+                  className="w-full text-xs pl-8 pr-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
                 />
+              </div>
+            </div>
+
+            {/* State Filter */}
+            <div>
+              <label className="block text-[11px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider mb-1">
+                State / UT
+              </label>
+              <select
+                value={gateState}
+                disabled={isStateNodal}
+                onChange={(e) => setGateState(e.target.value)}
+                className="w-full text-xs px-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] disabled:opacity-60"
+              >
+                {!isStateNodal && <option value="ALL">All States &amp; UTs</option>}
+                {ALL_36_STATES_AND_UTS.map((s) => (
+                  <option key={s} value={s}>{translateState(s, lang)}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* House Filter */}
+            <div>
+              <label className="block text-[11px] font-bold text-[var(--text-tertiary)] uppercase tracking-wider mb-1">
+                Parliamentary House
+              </label>
+              <div className="flex rounded-xl bg-[var(--surface-alt)] p-0.5 border border-[var(--border-primary)]">
+                {(['ALL', 'Lok Sabha', 'Rajya Sabha'] as const).map((h) => (
+                  <button
+                    key={h}
+                    onClick={() => setGateHouse(h)}
+                    className={`flex-1 py-1.5 text-[11px] font-bold rounded-lg transition ${
+                      gateHouse === h
+                        ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {h === 'ALL' ? 'All' : h === 'Lok Sabha' ? 'LS' : 'RS'}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
+        {/* MP Grid & Pagination */}
         <div className="space-y-3">
-          <div className="text-xs font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-1 flex items-center justify-between">
-            <span>Showing {filteredGateMps.length} Parliamentary Seats:</span>
-            <span className="text-[10px] text-[var(--text-secondary)] font-bold">Click any MP to open console</span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[var(--text-tertiary)] px-1">
+            <div className="font-semibold">
+              {gatePageSize === 'all' ? (
+                <span>Showing all {formatNum(totalGateMps)} Members of Parliament</span>
+              ) : (
+                <span>
+                  Showing {formatNum((gatePage - 1) * Number(gatePageSize) + 1)} – {formatNum(Math.min(totalGateMps, gatePage * Number(gatePageSize)))} of {formatNum(totalGateMps)} Members of Parliament
+                </span>
+              )}
+            </div>
+
+            {/* Page Size Options */}
+            <div className="flex items-center gap-1.5 self-end sm:self-auto">
+              <span className="text-[11px] font-bold text-[var(--text-secondary)]">Per page:</span>
+              {[30, 60, 90, 'all'].map((sz) => (
+                <button
+                  key={String(sz)}
+                  type="button"
+                  onClick={() => setGatePageSize(sz as any)}
+                  className={`px-2 py-0.5 rounded-lg text-xs font-bold transition cursor-pointer ${
+                    gatePageSize === sz
+                      ? 'bg-[var(--brand-primary)] !text-white shadow-xs'
+                      : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] border border-[var(--border-primary)]'
+                  }`}
+                  style={gatePageSize === sz ? { color: '#ffffff' } : undefined}
+                >
+                  {sz === 'all' ? `All (${formatNum(totalGateMps)})` : formatNum(sz)}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-h-[60vh] overflow-y-auto pr-1">
-            {filteredGateMps.map((m) => (
+          {pagedGateMps.length === 0 ? (
+            <div className="p-8 text-center bg-[var(--surface-primary)] border border-[var(--border-primary)] rounded-2xl">
+              <p className="text-sm font-bold text-[var(--text-secondary)]">No Members of Parliament found matching your filters.</p>
               <button
-                key={m.id}
-                onClick={async () => {
-                  await switchRole('mp', m.state, m.constituency, m.id, m.name)
-                  setSearchParams({ id: m.id }, { replace: true })
-                }}
-                className="p-3.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:bg-[var(--brand-accent)]/5 transition-all text-left flex flex-col justify-between gap-2 group cursor-pointer shadow-xs"
+                type="button"
+                onClick={() => { setGateSearch(''); setGateState('ALL'); setGateHouse('ALL'); }}
+                className="mt-3 px-4 py-1.5 rounded-xl bg-[var(--brand-primary)] !text-white text-xs font-bold shadow-sm cursor-pointer"
+                style={{ color: '#ffffff' }}
               >
-                <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0">
-                    <span className="text-xs font-bold text-[var(--text-primary)] block truncate group-hover:text-[var(--gold-text)]">
-                      {m.name}
-                    </span>
-                    <span className="text-[11px] text-[var(--text-secondary)] font-medium truncate block">
-                      {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} • ` : ''}{m.state}
-                    </span>
-                  </div>
-                  <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold shrink-0 ${
-                    m.house === 'Lok Sabha' ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400' : 'bg-purple-500/10 text-purple-600 dark:text-purple-400'
-                  }`}>
-                    {m.house}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between pt-1 border-t border-[var(--border-primary)]/40 text-[10px] text-[var(--text-tertiary)]">
-                  <span>Member of Parliament</span>
-                  <span className="font-bold text-[var(--brand-accent)] flex items-center gap-0.5 group-hover:translate-x-1 transition-transform">
-                    Open Console &rarr;
-                  </span>
-                </div>
+                Clear Filters
               </button>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 p-1">
+              {pagedGateMps.map((m) => (
+                <button
+                  key={m.id}
+                  onClick={() => {
+                    setMpJurisdiction(m.id, m.name, m.state)
+                    setSearchParams({ id: m.id }, { replace: true })
+                  }}
+                  className="lux-card p-3.5 text-left hover:border-[var(--brand-accent)] transition-colors duration-150 flex items-center justify-between group cursor-pointer shadow-xs hover:shadow-sm"
+                >
+                  <div className="min-w-0 pr-2">
+                    <div className="text-xs font-bold text-[var(--text-primary)] group-hover:text-[var(--brand-primary)] transition-colors duration-150 truncate">
+                      {m.name}
+                    </div>
+                    <div className="text-[11px] text-[var(--text-secondary)] truncate">
+                      {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency}, ` : ''}{translateState(m.state, lang)}
+                    </div>
+                    <div className="mt-1 flex items-center gap-1.5">
+                      <span className={`px-1.5 py-0.5 rounded text-[9px] font-extrabold uppercase ${
+                        m.house === 'Lok Sabha'
+                          ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400'
+                          : 'bg-purple-500/10 text-purple-600 dark:text-purple-400'
+                      }`}>
+                        {m.house}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="w-7 h-7 rounded-lg bg-[var(--surface-alt)] flex items-center justify-center text-[var(--text-tertiary)] group-hover:bg-[var(--brand-primary)] group-hover:text-white transition-colors duration-150 shrink-0">
+                    <CheckCircle2 size={14} />
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Bottom Pagination Controls */}
+          {totalGatePages > 1 && (
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-[var(--border-primary)] px-1">
+              <div className="text-xs text-[var(--text-secondary)] font-medium">
+                Page <strong className="text-[var(--text-primary)]">{formatNum(gatePage)}</strong> of{' '}
+                <strong className="text-[var(--text-primary)]">{formatNum(totalGatePages)}</strong> ({formatNum(totalGateMps)} total MPs)
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  disabled={gatePage <= 1}
+                  onClick={() => {
+                    setGatePage((p) => Math.max(1, p - 1))
+                    window.scrollTo({ top: 120, behavior: 'smooth' })
+                  }}
+                  className="px-3.5 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40 flex items-center gap-1 cursor-pointer hover:bg-[var(--surface-alt)] transition-colors shadow-xs"
+                >
+                  <ChevronLeft size={14} />
+                  <span>{t('common.previous')}</span>
+                </button>
+
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: Math.min(5, totalGatePages) }, (_, idx) => {
+                    let pageNum = gatePage <= 3 ? idx + 1 : gatePage >= totalGatePages - 2 ? totalGatePages - 4 + idx : gatePage - 2 + idx
+                    if (pageNum < 1 || pageNum > totalGatePages) return null
+                    return (
+                      <button
+                        key={pageNum}
+                        type="button"
+                        onClick={() => {
+                          setGatePage(pageNum)
+                          window.scrollTo({ top: 120, behavior: 'smooth' })
+                        }}
+                        className={`w-8 h-8 rounded-lg text-xs font-bold transition cursor-pointer flex items-center justify-center ${
+                          gatePage === pageNum
+                            ? 'bg-[var(--brand-primary)] !text-white shadow-xs'
+                            : 'bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)]'
+                        }`}
+                        style={gatePage === pageNum ? { color: '#ffffff' } : undefined}
+                      >
+                        {formatNum(pageNum)}
+                      </button>
+                    )
+                  })}
+                </div>
+
+                <button
+                  type="button"
+                  disabled={gatePage >= totalGatePages}
+                  onClick={() => {
+                    setGatePage((p) => Math.min(totalGatePages, p + 1))
+                    window.scrollTo({ top: 120, behavior: 'smooth' })
+                  }}
+                  className="px-3.5 py-1.5 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40 flex items-center gap-1 cursor-pointer hover:bg-[var(--surface-alt)] transition-colors shadow-xs"
+                >
+                  <span>{t('common.next')}</span>
+                  <ChevronRight size={14} />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     )
@@ -293,10 +412,10 @@ export const MPDashboard: React.FC = () => {
 
   const formatCrores = (val: number) => {
     const cr = val / 10000000
-    if (cr === 0) return '0'
-    if (cr >= 100) return Math.round(cr).toLocaleString('en-IN')
-    if (cr < 10 && cr !== Math.floor(cr) && (cr * 10) % 1 !== 0) return cr.toFixed(2)
-    return cr.toFixed(1)
+    if (cr === 0) return formatNum('0')
+    if (cr >= 100) return formatNum(Math.round(cr).toLocaleString('en-IN'))
+    if (cr < 10 && cr !== Math.floor(cr) && (cr * 10) % 1 !== 0) return formatNum(cr.toFixed(2))
+    return formatNum(cr.toFixed(1))
   }
 
   const allocCr = formatCrores(rawAlloc)
@@ -306,115 +425,47 @@ export const MPDashboard: React.FC = () => {
   const completedWorks = works.filter((w: any) => (w.status || '').toLowerCase().includes('completed')).length
   const ongoingWorks = Math.max(0, works.length - completedWorks)
 
+  const filteredWorks = workFilter === 'completed'
+    ? works.filter((w: any) => (w.status || '').toLowerCase().includes('completed'))
+    : workFilter === 'in_progress'
+    ? works.filter((w: any) => !(w.status || '').toLowerCase().includes('completed'))
+    : works
+
+  const isSittingMP = user.role === 'mp' && user.mpId === activeMpId
+
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
-      {/* Official MP Badge Header */}
-      <div className="rounded-2xl p-5 bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] flex items-center justify-center font-bold shrink-0">
-            <Landmark size={22} />
-          </div>
+      {/* Executive Page Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[var(--border-primary)]">
+        <div className="flex items-start gap-3">
+          <BackButton fallback="/mps" className="mt-1" />
           <div>
-            <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--brand-primary)] flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>PARLIAMENTARY CONSTITUENCY COMMAND</span>
-            </div>
-            <h1 className="text-xl sm:text-2xl font-black text-[var(--text-primary)] tracking-tight">
-              {summary.mpName || user.mpName}
+            <div className="flex items-center gap-2 mb-1">
+            <span className="text-xs font-black uppercase tracking-wider text-[var(--gold-text)] flex items-center gap-1.5">
+              <Landmark size={15} />
+              <span>{t('mp.command_console')}</span>
+            </span>
+            <span className={`px-2 py-0.5 rounded text-[10px] font-extrabold uppercase ${
+              summary.house === 'Lok Sabha' ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400' : 'bg-purple-500/10 text-purple-600 dark:text-purple-400'
+            }`}>
+              {summary.house || 'Lok Sabha'}
+            </span>
+          </div>
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] tracking-tight">
+              {summary.mpName || user.mpName || t('mp.member_of_parliament')}
             </h1>
-            <p className="text-xs text-[var(--text-secondary)] mt-0.5">
-              {summary.house} &bull; <strong className="text-[var(--text-primary)]">{summary.constituency}</strong>, {summary.state} &bull; {summary.party}
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5">
+              {summary.constituency ? `${summary.constituency}, ` : ''}{translateState(summary.state || user.state, lang)} &bull; {summary.party || 'Independent'}
             </p>
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Quick In-Page MP Switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setShowMpSelector(!showMpSelector)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white text-xs font-bold transition shadow-2xs cursor-pointer"
-            >
-              <Users size={14} />
-              <span>Switch MP ({summary.constituency || 'Select'})</span>
-              <ChevronDown size={13} className={`transition-transform duration-200 ${showMpSelector ? 'rotate-180' : ''}`} />
-            </button>
-
-            {showMpSelector && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setShowMpSelector(false)} />
-                <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-[var(--border-primary)]">
-                    <span className="text-xs font-extrabold text-[var(--text-primary)]">
-                      Select Member of Parliament ({ALL_MP_SEATS.length} Seats)
-                    </span>
-                    <button
-                      onClick={() => setShowMpSelector(false)}
-                      className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] p-1"
-                    >
-                      <X size={14} />
-                    </button>
-                  </div>
-                  <div className="relative mb-2">
-                    <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]" />
-                    <input
-                      type="text"
-                      value={selectorSearch}
-                      onChange={(e) => setSelectorSearch(e.target.value)}
-                      placeholder="Search MP name, constituency, or state..."
-                      autoFocus
-                      className="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
-                    />
-                  </div>
-                  <div className="max-h-64 overflow-y-auto space-y-1 divide-y divide-[var(--border-primary)]/40">
-                    {filteredSelectorMps.map((m) => (
-                      <button
-                        key={m.id}
-                        onClick={() => handleSwitchMP(m)}
-                        className={`w-full text-left p-2 rounded-lg text-xs transition flex items-center justify-between gap-2 cursor-pointer ${
-                          m.id === activeMpId
-                            ? 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold'
-                            : 'hover:bg-[var(--surface-alt)] text-[var(--text-primary)]'
-                        }`}
-                      >
-                        <div className="min-w-0">
-                          <div className="font-bold truncate">{m.name}</div>
-                          <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                            {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{m.state} ({m.house})
-                          </div>
-                        </div>
-                        {m.id === activeMpId && (
-                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-[var(--brand-primary)] text-white shrink-0">
-                            Active
-                          </span>
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-
-          <button
-            onClick={async () => {
-              setMpJurisdiction('', '', '')
-              if (user.role === 'mp') {
-                await switchRole('mp', undefined, undefined, undefined, undefined)
-              }
-              setSearchParams({}, { replace: true })
-              navigate('/mp-dashboard', { replace: true })
-            }}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition cursor-pointer"
-          >
-            <span>Change MP</span>
-          </button>
-
+        <div className="flex items-center gap-2 flex-wrap">
           <Link
             to={`/mps/${activeMpId}`}
             className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-[var(--text-primary)] font-bold transition"
           >
-            Public Report
+            {t('btn.public_report')}
           </Link>
         </div>
       </div>
@@ -436,39 +487,39 @@ export const MPDashboard: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           icon={Landmark}
-          label="5-Year Entitlement Corpus"
-          value={allocCr}
+          label="mps.fund_allocated"
+          value={Number(allocCr)}
           prefix="₹"
           unit="Cr"
           theme="gold"
-          description="Total central sanction"
+          description="kpi.total_central_sanction"
         />
         <StatCard
           icon={Coins}
-          label="Disbursed to Works"
-          value={expCr}
+          label="mps.disbursed"
+          value={Number(expCr)}
           prefix="₹"
           unit="Cr"
           theme="gold"
-          description="Liquid funds cleared"
+          description="kpi.verified_expenditure"
         />
         <StatCard
           icon={Percent}
-          label="Absorption Velocity"
-          value={util}
+          label="kpi.utilization"
+          value={Number(util)}
           unit="%"
           theme="emerald"
-          gaugeValue={util}
-          description="Delivery percentage"
+          gaugeValue={Number(util)}
+          description="kpi.expenditure_ratio"
         />
         <StatCard
           icon={Clock}
-          label="Liquid Balance Available"
-          value={unspentCr}
+          label="kpi.payment_gap"
+          value={Number(unspentCr)}
           prefix="₹"
           unit="Cr"
           theme="amber"
-          description="Ready for new recommendations"
+          description="kpi.pending_disbursement"
         />
       </div>
 
@@ -477,96 +528,153 @@ export const MPDashboard: React.FC = () => {
         <button
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'works'
+            effectiveTab === 'works'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
         >
           <FileCheck2 size={14} />
-          <span>Projects ({works.length})</span>
+          <span>{t('mp.tab_works')} ({formatNum(works.length)})</span>
         </button>
 
         <button
           onClick={() => setActiveTab('spending')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'spending'
+            effectiveTab === 'spending'
               ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
           }`}
         >
           <Layers size={14} />
-          <span>Sector Spending Allocation</span>
+          <span>{t('mps.sector_spending')}</span>
         </button>
 
-        <button
-          onClick={() => setActiveTab('flags')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
-            activeTab === 'flags'
-              ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
-              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          <AlertTriangle size={14} className="text-amber-500" />
-          <span>Compliance Alerts ({flags.length})</span>
-        </button>
+        {user.role !== 'viewer' && (
+          <button
+            onClick={() => setActiveTab('flags')}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
+              effectiveTab === 'flags'
+                ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm border border-[var(--border-primary)]'
+                : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+            }`}
+          >
+            <AlertTriangle size={14} className="text-amber-500" />
+            <span>{t('audit.tab_all_flags')} ({formatNum(flags.length)})</span>
+          </button>
+        )}
       </div>
 
       {/* TAB 1: PROJECTS */}
-      {activeTab === 'works' && (
+      {effectiveTab === 'works' && (
         <div className="space-y-4">
           {works.length === 0 ? (
             <EmptyState
-              title="No Projects Recommended Yet"
-              description="You have not registered project recommendations in this tenure ledger yet."
+              title={t('mp.no_projects_recommended')}
+              description={t('mp.no_projects_desc')}
             />
           ) : (
-            <div className="lux-card overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
-                  <thead>
-                    <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                      <th className="p-3 font-bold whitespace-nowrap">District</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">Amount</th>
-                      <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[var(--border-primary)]">
-                    {works.map((w: any) => {
-                      const isDone = (w.status || '').toLowerCase().includes('completed')
-                      return (
-                        <tr key={w.workId || w.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                          <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                            #{w.workId || w.work_id}
-                          </td>
-                          <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
-                            {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
-                          </td>
-                          <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
-                            {w.district || summary.constituency}
-                          </td>
-                          <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
-                            ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
-                          </td>
-                          <td className="p-3 text-center whitespace-nowrap">
-                            <span
-                              className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
-                                isDone
-                                  ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
-                                  : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
-                              }`}
-                            >
-                              {w.status || 'In Progress'}
-                            </span>
-                          </td>
-                        </tr>
-                      )
-                    })}
-                  </tbody>
-                </table>
+            <>
+              {/* Work Status Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  onClick={() => setWorkFilter('all')}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+                    workFilter === 'all'
+                      ? 'bg-[var(--brand-primary)] text-white shadow-sm'
+                      : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                  }`}
+                >
+                  {t('filter.all')} ({formatNum(works.length)})
+                </button>
+                <button
+                  onClick={() => setWorkFilter('completed')}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                    workFilter === 'completed'
+                      ? 'bg-emerald-600 text-white shadow-sm'
+                      : 'bg-[var(--surface-alt)] text-emerald-700 dark:text-emerald-400 hover:bg-[var(--surface-hover)]'
+                  }`}
+                >
+                  <CheckCircle2 size={13} />
+                  <span>{t('status.completed')} ({formatNum(completedWorks)})</span>
+                </button>
+                <button
+                  onClick={() => setWorkFilter('in_progress')}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                    workFilter === 'in_progress'
+                      ? 'bg-amber-600 text-white shadow-sm'
+                      : 'bg-[var(--surface-alt)] text-amber-700 dark:text-amber-400 hover:bg-[var(--surface-hover)]'
+                  }`}
+                >
+                  <Clock size={13} />
+                  <span>{t('status.in_progress')} ({formatNum(ongoingWorks)})</span>
+                </button>
               </div>
-            </div>
+
+              {(() => {
+                const displayedWorks = works.filter((w: any) => {
+                  const isDone = (w.status || '').toLowerCase().includes('completed')
+                  if (workFilter === 'completed') return isDone
+                  if (workFilter === 'in_progress') return !isDone
+                  return true
+                })
+
+                return displayedWorks.length === 0 ? (
+                  <div className="lux-card p-8 text-center text-xs text-[var(--text-secondary)]">
+                    {workFilter === 'completed'
+                      ? 'No completed works recorded in this portfolio yet.'
+                      : 'No ongoing works currently in progress.'}
+                  </div>
+                ) : (
+                  <div className="lux-card overflow-hidden">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left text-xs border-collapse">
+                        <thead>
+                          <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
+                            <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
+                            <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
+                            <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
+                            <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.amount')}</th>
+                            <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.status')}</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-[var(--border-primary)]">
+                          {displayedWorks.map((w: any) => {
+                            const isDone = (w.status || '').toLowerCase().includes('completed')
+                            return (
+                              <tr key={w.workId || w.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
+                                <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                                  #{formatNum(w.workId || w.work_id)}
+                                </td>
+                                <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
+                                  {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                </td>
+                                <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
+                                  {w.district || summary.constituency}
+                                </td>
+                                <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
+                                  ₹{formatNum(((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
+                                </td>
+                                <td className="p-3 text-center whitespace-nowrap">
+                                  <span
+                                    className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
+                                      isDone
+                                        ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
+                                        : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
+                                    }`}
+                                  >
+                                    {isDone ? t('status.completed') : t('status.in_progress')}
+                                  </span>
+                                </td>
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )
+              })()}
+            </>
           )}
         </div>
       )}
@@ -577,41 +685,41 @@ export const MPDashboard: React.FC = () => {
           <div className="lux-card p-5 space-y-4">
             <div className="flex items-center justify-between border-b border-[var(--border-primary)] pb-2">
               <h3 className="font-bold text-sm text-[var(--text-primary)]">
-                Delivery Completion Metrics
+                {t('mp.delivery_metrics')}
               </h3>
               {(() => {
                 const tot = completedWorks + ongoingWorks
                 const compPct = tot > 0 ? ((completedWorks / tot) * 100).toFixed(1) : '0.0'
                 return (
                   <span className="px-2 py-0.5 rounded-full text-xs font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 tabular-nums">
-                    {compPct}% Delivered
+                    {formatNum(compPct)}% {t('chart.delivered')}
                   </span>
                 )
               })()}
             </div>
             <div className="grid grid-cols-2 gap-3 text-center">
               <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
-                <span className="text-xs text-[var(--text-secondary)] block font-medium">Completed Projects</span>
-                <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">{completedWorks}</span>
+                <span className="text-xs text-[var(--text-secondary)] block font-medium">{t('chart.completed_certified')}</span>
+                <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">{formatNum(completedWorks)}</span>
                 {(() => {
                   const tot = completedWorks + ongoingWorks
                   const compPct = tot > 0 ? ((completedWorks / tot) * 100).toFixed(1) : '0.0'
                   return (
                     <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">
-                      {compPct}% of total
+                      {formatNum(compPct)}% {t('mp.of_total')}
                     </span>
                   )
                 })()}
               </div>
               <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)]">
-                <span className="text-xs text-[var(--text-secondary)] block font-medium">Active in Execution</span>
-                <span className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tabular-nums">{ongoingWorks}</span>
+                <span className="text-xs text-[var(--text-secondary)] block font-medium">{t('chart.active_in_queue')}</span>
+                <span className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tabular-nums">{formatNum(ongoingWorks)}</span>
                 {(() => {
                   const tot = completedWorks + ongoingWorks
                   const pendPct = tot > 0 ? ((ongoingWorks / tot) * 100).toFixed(1) : '0.0'
                   return (
                     <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold block mt-0.5">
-                      {pendPct}% of total
+                      {formatNum(pendPct)}% {t('mp.of_total')}
                     </span>
                   )
                 })()}
@@ -629,17 +737,17 @@ export const MPDashboard: React.FC = () => {
                     <div
                       className="h-full bg-emerald-500 transition-all duration-500"
                       style={{ width: `${compPct}%` }}
-                      title={`Completed: ${completedWorks} (${compPct}%)`}
+                      title={`${t('chart.completed_certified')}: ${formatNum(completedWorks)} (${formatNum(compPct)}%)`}
                     />
                     <div
                       className="h-full bg-indigo-500 transition-all duration-500"
                       style={{ width: `${pendPct}%` }}
-                      title={`In Progress: ${ongoingWorks} (${pendPct}%)`}
+                      title={`${t('chart.active_in_queue')}: ${formatNum(ongoingWorks)} (${formatNum(pendPct)}%)`}
                     />
                   </div>
                   <div className="flex justify-between items-center text-[9px] text-[var(--text-tertiary)] font-semibold">
-                    <span>{tot} Total Projects</span>
-                    <span>Target: 100% Delivery</span>
+                    <span>{formatNum(tot)} {t('table.total_works')}</span>
+                    <span>{t('mp.target_delivery')}</span>
                   </div>
                 </div>
               )
@@ -648,24 +756,24 @@ export const MPDashboard: React.FC = () => {
 
           <div className="lux-card p-5 space-y-4">
             <h3 className="font-bold text-sm text-[var(--text-primary)] border-b border-[var(--border-primary)] pb-2">
-              Primary Sectors Funded
+              {t('mp.primary_sectors')}
             </h3>
             <div className="space-y-2 text-xs">
               <div className="flex justify-between p-2 rounded bg-[var(--surface-alt)]">
-                <span>Roads & Pathways</span>
-                <strong className="text-[var(--text-primary)]">42% of Allocation</strong>
+                <span>{translateSector('Roads & Pathways', lang)}</span>
+                <strong className="text-[var(--text-primary)]">{formatNum(42)}% {t('mp.of_allocation')}</strong>
               </div>
               <div className="flex justify-between p-2 rounded bg-[var(--surface-alt)]">
-                <span>Public Lighting & Energy</span>
-                <strong className="text-[var(--text-primary)]">24% of Allocation</strong>
+                <span>{translateSector('Public Lighting & Energy', lang)}</span>
+                <strong className="text-[var(--text-primary)]">{formatNum(24)}% {t('mp.of_allocation')}</strong>
               </div>
               <div className="flex justify-between p-2 rounded bg-[var(--surface-alt)]">
-                <span>School & College Classrooms</span>
-                <strong className="text-[var(--text-primary)]">18% of Allocation</strong>
+                <span>{translateSector('School & College Classrooms', lang)}</span>
+                <strong className="text-[var(--text-primary)]">{formatNum(18)}% {t('mp.of_allocation')}</strong>
               </div>
               <div className="flex justify-between p-2 rounded bg-[var(--surface-alt)]">
-                <span>Community Halls & Others</span>
-                <strong className="text-[var(--text-primary)]">16% of Allocation</strong>
+                <span>{translateSector('Community Centers & Halls', lang)}</span>
+                <strong className="text-[var(--text-primary)]">{formatNum(16)}% {t('mp.of_allocation')}</strong>
               </div>
             </div>
           </div>
@@ -673,12 +781,12 @@ export const MPDashboard: React.FC = () => {
       )}
 
       {/* TAB 3: FLAGS */}
-      {activeTab === 'flags' && (
+      {effectiveTab === 'flags' && user.role !== 'viewer' && (
         <div className="space-y-4">
           {flags.length === 0 ? (
             <EmptyState
-              title="Zero Compliance Alerts"
-              description="All works recommended by your office are compliant with CPWD benchmark tolerances."
+              title={t('mp.zero_compliance_alerts')}
+              description={t('mp.compliant_cpwd')}
             />
           ) : (
             <div className="lux-card overflow-hidden">
@@ -686,24 +794,26 @@ export const MPDashboard: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
-                      <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
-                      <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
+                      <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.amount')}</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">
+                        {user.role === 'viewer' ? 'Public Dossier' : t('table.action')}
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
                     {flags.map((f: any) => (
                       <tr key={f.workId || f.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                          #{f.workId || f.work_id}
+                          #{formatNum(f.workId || f.work_id)}
                         </td>
                         <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={f.work_description || f.workDescription || f.description}>
                           {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
                         </td>
                         <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right">
-                          ₹{((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2)} L
+                          ₹{formatNum(((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge tier={f.severity >= 0.7 ? 'critical' : 'high'} count={Number(f.severity?.toFixed(2) || 0)} size="sm" />
@@ -711,9 +821,9 @@ export const MPDashboard: React.FC = () => {
                         <td className="p-3 text-right whitespace-nowrap">
                           <button
                             onClick={() => setSelectedFlag(f)}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap"
+                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap cursor-pointer"
                           >
-                            Inspect Report
+                            {user.role === 'viewer' ? 'View Findings' : t('btn.inspect_report')}
                           </button>
                         </td>
                       </tr>

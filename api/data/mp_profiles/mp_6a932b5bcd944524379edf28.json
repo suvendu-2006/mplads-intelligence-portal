@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf28",
+    "name": "RAMBHUAL NISHAD",
+    "constituency": "SULTANPUR",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 151231957.11,
+    "totalExpenditure": 87473694,
+    "utilizationPercentage": 57.84074720158199,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 46,
+    "completedWorksValue": 54336205,
+    "inProgressPayments": 33137489,
+    "paymentGapPercentage": 37.88280508652121,
+    "completionRate": 11.538461538461538,
+    "pendingWorks": 40,
+    "unspentAmount": 63758263.110000014,
+    "totalRecommendedAmount": 89961016.57,
+    "name_hi": "RAMBHUAL NISHAD",
+    "constituency_hi": "SULTANPUR",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 87473694,
+      "totalEntries": 26,
+      "avgExpenditure": 3364372.846153846,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 5900000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 65271061,
+        "transactionCount": 21
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16302633,
+        "transactionCount": 4
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 87473694,
+        "transactionCount": 26,
+        "avgAmount": 3364372.846153846
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 46,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a16cbc",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Light 9.5 Mtr pole at different locations of 45by Agency Kshetriya PRabandhak Laghu Udyog Nigam Prayagraj",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 10074960
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a596",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Street Light 95 mTr, 10 Way LED at different places as per list ( 19 Lights) Agency UPSIC Prayagraj , Uttar Pradesh",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 4520176
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdd1",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mask Light as per attached list",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 9992262
+      },
+      {
+        "_id": "6a932bb5cd94452437a166c0",
+        "workCategory": "Normal/Others",
+        "workDescription": "As per list attached of 44 places of installation of high mast led light - 6 LED for different blocks and villages.",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 9852234
+      },
+      {
+        "_id": "6a932bb5cd94452437a16cbd",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast Light 9.5 Mtr pole at different locations of 44 by Agency Kshetriya PRabandhak Laghu Udyog Nigam Prayagraj",
+        "completedDate": "2026-08-21T00:00:00.000Z",
+        "finalAmount": 9851072
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:44.677Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee1f3",
+    "name": "Dr. Dharmasthala Veerendra Heggade (2022-28)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Karnataka",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 56879514,
+    "utilizationPercentage": 29.010693672824438,
+    "completedWorksCount": 301,
+    "recommendedWorksCount": 173,
+    "completedWorksValue": 28999430,
+    "inProgressPayments": 27880084,
+    "paymentGapPercentage": 49.016037654611466,
+    "completionRate": 63.50210970464135,
+    "pendingWorks": -128,
+    "unspentAmount": 139184443.11,
+    "totalRecommendedAmount": 104292000,
+    "name_hi": "Dr. Dharmasthala Veerendra Heggade (2022-28)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 56879514,
+      "totalEntries": 641,
+      "avgExpenditure": 88735.59126365055,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 4708813,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 30711324,
+        "transactionCount": 511
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21459377,
+        "transactionCount": 119
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 56879514,
+        "transactionCount": 641,
+        "avgAmount": 88735.59126365055
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 301,
+    "recommendedCount": 173,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31d5e",
+        "workCategory": "Normal/Others",
+        "workDescription": "For the construction of basic amenities of Anjaneya Swamy Community Hall",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32383",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING SMART CLASS UNIT (1 Nos) to  GOVT. HIGHER PRIMARY SCHOOL PERLA BAIPADY (29240200706)",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 125657
+      },
+      {
+        "_id": "6a932bb5cd94452437a32382",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING SMART CLASS UNIT (1 Nos) to DKZP GOVT. UPGRADED PRIMARY SCHOOL PERIYOTTU (29240200803)",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 125657
+      },
+      {
+        "_id": "6a932bb5cd94452437a3237f",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING SMART CLASS UNIT (1 Nos) to  GOVT. HIGHER PRIMARY SCHOOL BARYA (29240200801)",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 125657
+      },
+      {
+        "_id": "6a932bb5cd94452437a3237e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PROVIDING SMART CLASS UNIT (1 Nos) to  GOVT. HIGHER PRIMARY SCHOOL BENGILA (29240200802)",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 125657
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.229Z"
+}

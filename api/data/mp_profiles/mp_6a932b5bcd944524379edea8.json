@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edea8",
+    "name": "Kripanath Mallah",
+    "constituency": "KARIMGANJ",
+    "state": "Assam",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66488500,
+    "utilizationPercentage": 45.230272108843536,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 74,
+    "completedWorksValue": 0,
+    "inProgressPayments": 66488500,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 74,
+    "unspentAmount": 80511500,
+    "totalRecommendedAmount": 118380003,
+    "name_hi": "Kripanath Mallah",
+    "constituency_hi": "KARIMGANJ",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66488500,
+      "totalEntries": 116,
+      "avgExpenditure": 573176.724137931,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 35122500,
+        "transactionCount": 56
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31366000,
+        "transactionCount": 60
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66488500,
+        "transactionCount": 116,
+        "avgAmount": 573176.724137931
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 74,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:47.870Z"
+}

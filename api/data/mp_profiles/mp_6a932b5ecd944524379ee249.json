@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee249",
+    "name": "Shri Javed Ali Khan (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 160977854.28,
+    "utilizationPercentage": 82.10476655313283,
+    "completedWorksCount": 125,
+    "recommendedWorksCount": 68,
+    "completedWorksValue": 101806791,
+    "inProgressPayments": 59171063.28,
+    "paymentGapPercentage": 36.75726921858434,
+    "completionRate": 64.76683937823834,
+    "pendingWorks": -57,
+    "unspentAmount": 35086102.83000001,
+    "totalRecommendedAmount": 91786508,
+    "name_hi": "Shri Javed Ali Khan (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 160977854.28,
+      "totalEntries": 260,
+      "avgExpenditure": 619145.5933846154,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 37244095,
+        "transactionCount": 114
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 28288074.15,
+        "transactionCount": 45
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 67010499.13,
+        "transactionCount": 65
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28435186,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 160977854.28,
+        "transactionCount": 260,
+        "avgAmount": 619145.5933846154
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 125,
+    "recommendedCount": 68,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a320cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "MADRASA DAWATE ISLAM NISWAN NEWARI MANJHANPUR MEIN BHAWAN NIRMAN HETU CONTACT KALEEM AHMAD 9450079646",
+        "completedDate": "2026-08-05T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a30d22",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF INTERLOCKING  ROAD  FROM  HOUSE OF YASHPAL SINGH TO SAYED KALE KHAN MAHARAJ JAHARVIR MANDIR",
+        "completedDate": "2026-07-17T00:00:00.000Z",
+        "finalAmount": 686298
+      },
+      {
+        "_id": "6a932bb5cd94452437a3199a",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK BANKEGANJ GRAM PANCHAYAT RAMPUR GRANT NO 18 KE MAJRA GRAM SARKARGARH MEIN CHHEDDAN   KE KHET SE SARTAZ KE KHET TAK MITTI AND KHADANJA NIRMAN LENGTH 240 MTR",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 485323
+      },
+      {
+        "_id": "6a932bb5cd94452437a31996",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK BANKEGANJ. GRAM PANCHAYAT RAMPUR GRANT NO 18 KE MAJRA GRAM SARKARGARH MEIN IDREESH KE GHAR SE HEMPUR TIRAHE TAK MITTI AND KHADANJA NIRMAN LENGTH 620 MTR",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 1498562
+      },
+      {
+        "_id": "6a932bb5cd94452437a31947",
+        "workCategory": "Normal/Others",
+        "workDescription": "BLOCK AND GRAM SEMERIAWAN MEIN JAMAL KE GHAR SE SABIH AHMAD KE KHET HOTE HUE PURBA GORHAWA LINK ROAD KI OR LENGTH 200 MTR INTERLOCKING WORK CONTACT PERSON ABDUL AZIM 9919575877",
+        "completedDate": "2026-01-16T00:00:00.000Z",
+        "finalAmount": 987924
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.785Z"
+}

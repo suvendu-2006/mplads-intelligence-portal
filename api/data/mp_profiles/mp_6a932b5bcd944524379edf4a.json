@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4a",
+    "name": "Saptagiri Sankar Ulaka",
+    "constituency": "KORAPUT",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 269500000,
+    "totalExpenditure": 67850166,
+    "utilizationPercentage": 25.176313914656774,
+    "completedWorksCount": 159,
+    "recommendedWorksCount": 416,
+    "completedWorksValue": 46662417,
+    "inProgressPayments": 21187749,
+    "paymentGapPercentage": 31.22726184634537,
+    "completionRate": 27.652173913043477,
+    "pendingWorks": 257,
+    "unspentAmount": 201649834,
+    "totalRecommendedAmount": 137630000,
+    "name_hi": "Saptagiri Sankar Ulaka",
+    "constituency_hi": "KORAPUT",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67850166,
+      "totalEntries": 235,
+      "avgExpenditure": 288724.11063829786,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14717636,
+        "transactionCount": 48
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 53132530,
+        "transactionCount": 187
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67850166,
+        "transactionCount": 235,
+        "avgAmount": 288724.11063829786
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 159,
+    "recommendedCount": 416,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e259",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Field Channel at Barigaon Village, Pipalpadar GP, Laxmipur Block",
+        "completedDate": "2026-04-30T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of drain and culvert near Petrol Pump of Beheraguda Village, Lunguri Mouza, GP - Pakojhola, Block Similiguda",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc88",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Protection wall at Adivasi Sahi of Diasili Village, Toyaput GP, Laxmipur Block",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc87",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road at Sutiguda Village, Pipalpadar GP, Laxmipur Block",
+        "completedDate": "2026-03-26T00:00:00.000Z",
+        "finalAmount": 250000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbc5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Culvert at Muliaguda of Hanumantpur GP under Chandrapur Block",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 200000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.884Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec5",
+    "name": "MANISH TEWARI",
+    "constituency": "CHANDIGARH",
+    "state": "Chandigarh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 178351443.75,
+    "totalExpenditure": 31091008,
+    "utilizationPercentage": 17.43243976403191,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 15427535,
+    "inProgressPayments": 15663473,
+    "paymentGapPercentage": 50.37943124906082,
+    "completionRate": 27.67857142857143,
+    "pendingWorks": 50,
+    "unspentAmount": 147260435.75,
+    "totalRecommendedAmount": 62442222,
+    "name_hi": "MANISH TEWARI",
+    "constituency_hi": "CHANDIGARH",
+    "state_hi": "Chandigarh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 31091008,
+      "totalEntries": 127,
+      "avgExpenditure": 244811.08661417323,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10561302,
+        "transactionCount": 69
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 20529706,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 31091008,
+        "transactionCount": 127,
+        "avgAmount": 244811.08661417323
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e911",
+        "workCategory": "Normal/Others",
+        "workDescription": "For purchase of computers for computer labs in Dev Samaj College for Women, Sector 45-B, Ward No. 34, Chandigarh",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 999000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e4ab",
+        "workCategory": "Normal/Others",
+        "workDescription": "For purchase of stainless steel body tanker (trolly) for Notified Area Committee of Ward No. 6, Manimajra, Chandigarh.",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 269986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d6d1",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Construction of Information Centre cum Library with Computer Hardware and Software at Post Graduate Government College (PGGC), Sector 11, Chandigarh.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 999614
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd73",
+        "workCategory": "Normal/Others",
+        "workDescription": "For installation of CCTV cameras in Sector 32-C, Ward No. 22, Chandigarh.",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 474544
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a86b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of CCTV cameras at Maloya Colony, Village Maloya, Gwala Colony and New Flats Complex, Ward No. 28, Chandigarh.",
+        "completedDate": "2026-04-01T00:00:00.000Z",
+        "finalAmount": 734823
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:58.243Z"
+}

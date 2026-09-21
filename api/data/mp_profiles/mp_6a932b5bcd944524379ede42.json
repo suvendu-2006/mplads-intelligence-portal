@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede42",
+    "name": "DR. KIRSAN NAMDEO",
+    "constituency": "GADCHIROLI-CHIMUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 22599453,
+    "utilizationPercentage": 15.37377755102041,
+    "completedWorksCount": 18,
+    "recommendedWorksCount": 148,
+    "completedWorksValue": 16072206,
+    "inProgressPayments": 6527247,
+    "paymentGapPercentage": 28.88232294825897,
+    "completionRate": 10.843373493975903,
+    "pendingWorks": 130,
+    "unspentAmount": 124400547,
+    "totalRecommendedAmount": 119450000,
+    "name_hi": "DR. KIRSAN NAMDEO",
+    "constituency_hi": "GADCHIROLI-CHIMUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 22599453,
+      "totalEntries": 26,
+      "avgExpenditure": 869209.7307692308,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 22599453,
+        "transactionCount": 26
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 22599453,
+        "transactionCount": 26,
+        "avgAmount": 869209.7307692308
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 18,
+    "recommendedCount": 148,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e511",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Toilets and Room at the cemetery in gokulnagar under Nagar Panchayat gadchiroli Ta Gadchiroli Dist Gadchiroli",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 992595
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e45a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Library at Kurul under Grampanchayt Kurul Ta chamorshi Dist Gadchiroli",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 995416
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e2ce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Reading Room at grampanchayat Mulla Ta Deori Dist  Gondiya",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 796440
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e13e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Library at Rani Durgavati School under nagarparishd Gadchiroli Dist Gadchiroli",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 692973
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dbda",
+        "workCategory": "Normal/Others",
+        "workDescription": "onstruction of an meeting hall on the hill in ward no.8 under nagarpanchayat armori  Ta armori Dist Gadchiroli",
+        "completedDate": "2026-03-25T00:00:00.000Z",
+        "finalAmount": 991750
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.242Z"
+}

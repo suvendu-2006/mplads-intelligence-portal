@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfad",
+    "name": "THANGA TAMILSELVAN",
+    "constituency": "THENI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 49328291,
+    "utilizationPercentage": 33.556660544217685,
+    "completedWorksCount": 24,
+    "recommendedWorksCount": 72,
+    "completedWorksValue": 22558505,
+    "inProgressPayments": 26769786,
+    "paymentGapPercentage": 54.26862649670957,
+    "completionRate": 25,
+    "pendingWorks": 48,
+    "unspentAmount": 97671709,
+    "totalRecommendedAmount": 93425000,
+    "name_hi": "THANGA TAMILSELVAN",
+    "constituency_hi": "THENI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 49328291,
+      "totalEntries": 56,
+      "avgExpenditure": 880862.3392857143,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 16948325,
+        "transactionCount": 19
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 32379966,
+        "transactionCount": 37
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 49328291,
+        "transactionCount": 56,
+        "avgAmount": 880862.3392857143
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 24,
+    "recommendedCount": 72,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e0ad",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of new Bus Shed",
+        "completedDate": "2026-05-04T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfd6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of new Community hall in Perungamanallur Village",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 398746
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dc57",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of ration shop in melathirumanickam village",
+        "completedDate": "2026-04-02T00:00:00.000Z",
+        "finalAmount": 1199097
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cecf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up new high voltage light lamp post",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 348550
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cecd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting up new high voltage light lamp post",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 348550
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.650Z"
+}

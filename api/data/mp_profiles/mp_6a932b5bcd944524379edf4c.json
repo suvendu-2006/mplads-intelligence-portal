@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf4c",
+    "name": "Sasikanth Senthil",
+    "constituency": "TIRUVALLUR",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 171500000,
+    "totalExpenditure": 89433784,
+    "utilizationPercentage": 52.14797900874636,
+    "completedWorksCount": 87,
+    "recommendedWorksCount": 95,
+    "completedWorksValue": 52351176,
+    "inProgressPayments": 37082608,
+    "paymentGapPercentage": 41.46375825940676,
+    "completionRate": 47.8021978021978,
+    "pendingWorks": 8,
+    "unspentAmount": 82066216,
+    "totalRecommendedAmount": 66955655,
+    "name_hi": "Sasikanth Senthil",
+    "constituency_hi": "TIRUVALLUR",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 89433784,
+      "totalEntries": 133,
+      "avgExpenditure": 672434.4661654135,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 38019784,
+        "transactionCount": 63
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 51414000,
+        "transactionCount": 70
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 89433784,
+        "transactionCount": 133,
+        "avgAmount": 672434.4661654135
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 87,
+    "recommendedCount": 95,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e474",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Solar light  at Nerkundram Panchayat in  Sholavaram Block.",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e475",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Solar light at mavoor village, Koolur Panchayat, Tiruvalangadu Block",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 299642
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e431",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Solar light  at  Kuppam kandigai panchayat  in Tiruvalangadu Block.",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 299642
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e402",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Table desk to Summanbukulam, Government higher Secondary School, Gummidipoondi Block",
+        "completedDate": "2026-05-13T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d9b3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of cement road in Baby Amma Nagar, Chinnamma Pettai, Thiruvalangadu Panchayat Union.",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1499125
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:45.431Z"
+}

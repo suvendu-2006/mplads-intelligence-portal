@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee275",
+    "name": "Shri Pabitra Margherita (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Assam",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 63642733.44,
+    "utilizationPercentage": 28.854548256159546,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 205,
+    "completedWorksValue": 5848086.4399999995,
+    "inProgressPayments": 57794647,
+    "paymentGapPercentage": 90.81106966357227,
+    "completionRate": 2.380952380952381,
+    "pendingWorks": 200,
+    "unspentAmount": 156921223.67000002,
+    "totalRecommendedAmount": 164202949.1,
+    "name_hi": "Shri Pabitra Margherita (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Assam"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 63642733.44,
+      "totalEntries": 112,
+      "avgExpenditure": 568238.6914285714,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 36417031.44,
+        "transactionCount": 38
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27225702,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 63642733.44,
+        "transactionCount": 112,
+        "avgAmount": 568238.6914285714
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 205,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a30f77",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Rangamancha at Bengabari Gaon, Baralimara, Behali",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1499999.44
+      },
+      {
+        "_id": "6a932bb5cd94452437a3215b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Smart Classroom at Majuli Auniati Hemchandra Higher Secondary School, Kamalabari, Majuli",
+        "completedDate": "2026-03-07T00:00:00.000Z",
+        "finalAmount": 2000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a320d6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Meleng Gayan Gaon Bhakat Chuk Path, Meteli",
+        "completedDate": "2026-02-20T00:00:00.000Z",
+        "finalAmount": 1150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31d84",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Charigaon Surjoday Sangha Prekhyagriha, Charigaon",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 700000
+      },
+      {
+        "_id": "6a932bb5cd94452437a31640",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Journalist Association Building, Bajatoli, Tinsukia (Phase II)",
+        "completedDate": "2026-01-08T00:00:00.000Z",
+        "finalAmount": 498087
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.218Z"
+}

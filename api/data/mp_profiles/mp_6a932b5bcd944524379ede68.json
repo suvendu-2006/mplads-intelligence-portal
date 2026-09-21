@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede68",
+    "name": "GURMEET SINGH MEET HAYER",
+    "constituency": "SANGRUR",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57080005,
+    "utilizationPercentage": 38.82993537414966,
+    "completedWorksCount": 151,
+    "recommendedWorksCount": 237,
+    "completedWorksValue": 37203469,
+    "inProgressPayments": 19876536,
+    "paymentGapPercentage": 34.8222394164121,
+    "completionRate": 38.91752577319588,
+    "pendingWorks": 86,
+    "unspentAmount": 89919995,
+    "totalRecommendedAmount": 64655000,
+    "name_hi": "GURMEET SINGH MEET HAYER",
+    "constituency_hi": "SANGRUR",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57080005,
+      "totalEntries": 660,
+      "avgExpenditure": 86484.85606060606,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 17403182,
+        "transactionCount": 142
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39676823,
+        "transactionCount": 518
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57080005,
+        "transactionCount": 660,
+        "avgAmount": 86484.85606060606
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 151,
+    "recommendedCount": 237,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1ddcc",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Repair Development Work of Balmik Dharmshala Ward no. 2 Near Dana Mandi MC Dhanaula",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 284250
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e757",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of common sheds in common covered sitting area Snatam Dharm Sabha Dhanaula",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 327280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e58f",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of community center and other Work Maharaja Aggarsain Community Hall Evergreen Nanaksar Road Barnala",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 484855
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5c8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Submersible Motors for Drinking Water W.No-13, Near B.R Ambadkar Chowk Barnala",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 63098
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e5c6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Number of 2 Submersible Motors for Drinking Water W.No-30, Barnala Khuddi Road Back Side K.K Rice Mill",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 126196
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.898Z"
+}

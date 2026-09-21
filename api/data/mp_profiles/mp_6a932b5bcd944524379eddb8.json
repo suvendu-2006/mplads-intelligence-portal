@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb8",
+    "name": "ADV K FRANCIS GEORGE",
+    "constituency": "KOTTAYAM",
+    "state": "Kerala",
+    "house": "Lok Sabha",
+    "allocatedAmount": 188722256.11,
+    "totalExpenditure": 37467974,
+    "utilizationPercentage": 19.853500467989925,
+    "completedWorksCount": 53,
+    "recommendedWorksCount": 298,
+    "completedWorksValue": 28048193,
+    "inProgressPayments": 9419781,
+    "paymentGapPercentage": 25.140886987911333,
+    "completionRate": 15.0997150997151,
+    "pendingWorks": 245,
+    "unspentAmount": 151254282.11,
+    "totalRecommendedAmount": 149313380,
+    "name_hi": "ADV K FRANCIS GEORGE",
+    "constituency_hi": "KOTTAYAM",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 37467974,
+      "totalEntries": 82,
+      "avgExpenditure": 456926.51219512196,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 2947924,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34520050,
+        "transactionCount": 74
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 37467974,
+        "transactionCount": 82,
+        "avgAmount": 456926.51219512196
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 53,
+    "recommendedCount": 298,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e670",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Pump set in Mattathil  Drinking Water Project karoor gramapanchayat",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 199996
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "KFG/MPLADS/53/24\nConcreating Kalaripparambu, Muttumpuram Road, Thiruvarppu",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 357203
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e907",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concreating Karadipadam Murigottu Thazhe Road, Neendoor",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 255280
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e7da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of SBI Channacheri Road ,Kumarakom grama panchayat ward -13",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 266025
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e798",
+        "workCategory": "Normal/Others",
+        "workDescription": "KFG/MPLADS/48/24\nConcreating Govt. High School Kochidavattam (Varapathra Road) Kumarakom",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 234011
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.668Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede7c",
+    "name": "Jaswantsinh Sumanbhai Bhabhor",
+    "constituency": "DAHOD",
+    "state": "Gujarat",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 26431145,
+    "utilizationPercentage": 17.980370748299322,
+    "completedWorksCount": 68,
+    "recommendedWorksCount": 327,
+    "completedWorksValue": 20262293,
+    "inProgressPayments": 6168852,
+    "paymentGapPercentage": 23.33932941611118,
+    "completionRate": 17.21518987341772,
+    "pendingWorks": 259,
+    "unspentAmount": 120568855,
+    "totalRecommendedAmount": 103594513,
+    "name_hi": "Jaswantsinh Sumanbhai Bhabhor",
+    "constituency_hi": "DAHOD",
+    "state_hi": "Gujarat"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 26431145,
+      "totalEntries": 90,
+      "avgExpenditure": 293679.3888888889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7431697,
+        "transactionCount": 25
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18999448,
+        "transactionCount": 65
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 26431145,
+        "transactionCount": 90,
+        "avgAmount": 293679.3888888889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 68,
+    "recommendedCount": 327,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e62d",
+        "workCategory": "Normal/Others",
+        "workDescription": "antarsuba game damor faliya ane nishal faliyane jodta rasta par c.c.road nu kam",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 294000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e57e",
+        "workCategory": "Normal/Others",
+        "workDescription": "jetpur du game pithaya jesingbhai mansukhbhaina ghar thi pranami mandir sudhi c.c.road nu kam",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 230000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "patwan game mavi  faliya sarvajanik kuva nu kam",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 489000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e63a",
+        "workCategory": "Normal/Others",
+        "workDescription": "moti bandibar game aamli faliya thi kumbharvada sudhi 300 meter c.c.road nu kam",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 499000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e629",
+        "workCategory": "Normal/Others",
+        "workDescription": "patwan game sarkari dukan thi ved faliya sudhi   gatar line nu kam",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 478000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.784Z"
+}

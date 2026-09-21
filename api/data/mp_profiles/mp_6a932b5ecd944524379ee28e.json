@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee28e",
+    "name": "Shri Ratanjit Pratap Narain Singh (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 89673432,
+    "utilizationPercentage": 61.00233469387754,
+    "completedWorksCount": 83,
+    "recommendedWorksCount": 42,
+    "completedWorksValue": 76802551,
+    "inProgressPayments": 12870881,
+    "paymentGapPercentage": 14.353059443514999,
+    "completionRate": 66.4,
+    "pendingWorks": -41,
+    "unspentAmount": 57326568,
+    "totalRecommendedAmount": 20909847,
+    "name_hi": "Shri Ratanjit Pratap Narain Singh (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 89673432,
+      "totalEntries": 213,
+      "avgExpenditure": 421002.0281690141,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 51388997,
+        "transactionCount": 117
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38284435,
+        "transactionCount": 96
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 89673432,
+        "transactionCount": 213,
+        "avgAmount": 421002.0281690141
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 83,
+    "recommendedCount": 42,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32311",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Roari mein Dharma Mall ke darwaje se Prathmik Vidyalaya Roari tak 100M C.C. sadak ka nirman karya.",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 897957
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Motichak ke Gram Sabha Pakdi Madrahan mein Chhedi Singh ke ghar se Rama Chaurasiya ke khet tak 100M  C.C. sadak ka nirman karya.",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 897722
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Parsauni (Block Hata) me Deeh Raja ke sthan se Rakesh Gupta ke dukaan tak 100M C.C. sadak ka nirman karya.",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 898075
+      },
+      {
+        "_id": "6a932bb5cd94452437a32313",
+        "workCategory": "Normal/Others",
+        "workDescription": "Gram Sabha Fakira Chapra chauraha se gaon ke mukhya marg par 100M C.C. sadak ka nirman karya.",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 897971
+      },
+      {
+        "_id": "6a932bb5cd94452437a322a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Nagar Panchayat Sukrauli ke Ward Number 14 Maharana Pratap Nagar mein Mewa Singh ke ghar se hote hue Shrikant Singh ke ghar ki taraf 100 mi. C.C. sadak ka nirman karya.",
+        "completedDate": "2026-07-10T00:00:00.000Z",
+        "finalAmount": 898103
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.462Z"
+}

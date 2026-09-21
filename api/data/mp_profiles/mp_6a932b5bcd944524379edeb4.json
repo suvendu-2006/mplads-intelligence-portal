@@ -1,0 +1,81 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeb4",
+    "name": "M. MALLESH BABU",
+    "constituency": "KOLAR",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147065957.11,
+    "totalExpenditure": 40766132,
+    "utilizationPercentage": 27.71962512677792,
+    "completedWorksCount": 3,
+    "recommendedWorksCount": 73,
+    "completedWorksValue": 3493016,
+    "inProgressPayments": 37273116,
+    "paymentGapPercentage": 91.43157364058969,
+    "completionRate": 3.9473684210526314,
+    "pendingWorks": 70,
+    "unspentAmount": 106299825.11000001,
+    "totalRecommendedAmount": 46594000,
+    "name_hi": "M. MALLESH BABU",
+    "constituency_hi": "KOLAR",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40766132,
+      "totalEntries": 122,
+      "avgExpenditure": 334148.62295081967,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22353426,
+        "transactionCount": 54
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 18412706,
+        "transactionCount": 68
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40766132,
+        "transactionCount": 122,
+        "avgAmount": 334148.62295081967
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 3,
+    "recommendedCount": 73,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a19123",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Bennanguru road to road connecting Eshwara Reddy and Vijayamma house",
+        "completedDate": "2025-12-15T00:00:00.000Z",
+        "finalAmount": 495000
+      },
+      {
+        "_id": "6a932bb5cd94452437a185f0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road from NH75 to Vadagur GP Building.",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18e74",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road from Y.Kurupalli Majara Dinnamindhahalli Village main road to Shankarreddy house.",
+        "completedDate": "2025-10-30T00:00:00.000Z",
+        "finalAmount": 498016
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:54.652Z"
+}

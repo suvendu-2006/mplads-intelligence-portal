@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede7e",
+    "name": "JITENDRA KUMAR DOHARE",
+    "constituency": "ETAWAH",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 188747306.26,
+    "totalExpenditure": 119571988,
+    "utilizationPercentage": 63.350301717837084,
+    "completedWorksCount": 192,
+    "recommendedWorksCount": 322,
+    "completedWorksValue": 59111265,
+    "inProgressPayments": 60460723,
+    "paymentGapPercentage": 50.56428684618006,
+    "completionRate": 37.35408560311284,
+    "pendingWorks": 130,
+    "unspentAmount": 69175318.25999999,
+    "totalRecommendedAmount": 114627477.45,
+    "name_hi": "JITENDRA KUMAR DOHARE",
+    "constituency_hi": "ETAWAH",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 119571988,
+      "totalEntries": 518,
+      "avgExpenditure": 230833.95366795367,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 88186417,
+        "transactionCount": 362
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 31385571,
+        "transactionCount": 156
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 119571988,
+        "transactionCount": 518,
+        "avgAmount": 230833.95366795367
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 192,
+    "recommendedCount": 322,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17861",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dist Auraiya Samajwadi Party karyalay  Kakor Ke pass High Mast Light",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 698837
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e04b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Dist etawah kashiram park bangali colony m ek kamra baramda ka nav nirman kaary",
+        "completedDate": "2026-04-13T00:00:00.000Z",
+        "finalAmount": 1297211
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5f8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Bhagynagar Vill Phaphund Dehat Majra Ujitipur Ambedkar Park ke Pass High Mast Light",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 270000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Bhagynagar Vill Dharmpur Ambedkar Park Ke pass High Mast Light - 9520928854",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 270000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a5f5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Block Bhagynagar Vill Dadhi Mandir Par High Mast Light - 9412284129",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 270000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.243Z"
+}

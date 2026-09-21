@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee221",
+    "name": "Shri B.L. Verma (2020-26)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Uttar Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 168937264.09,
+    "utilizationPercentage": 86.16436523068806,
+    "completedWorksCount": 350,
+    "recommendedWorksCount": 64,
+    "completedWorksValue": 116682306.09,
+    "inProgressPayments": 52254958,
+    "paymentGapPercentage": 30.93157586129818,
+    "completionRate": 84.54106280193237,
+    "pendingWorks": -286,
+    "unspentAmount": 27126693.02000001,
+    "totalRecommendedAmount": 68770238,
+    "name_hi": "Shri B.L. Verma (2020-26)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 168937264.09,
+      "totalEntries": 804,
+      "avgExpenditure": 210120.97523631842,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 62058991.09,
+        "transactionCount": 516
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 30353474,
+        "transactionCount": 176
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 76524799,
+        "transactionCount": 112
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 168937264.09,
+        "transactionCount": 804,
+        "avgAmount": 210120.97523631842
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 350,
+    "recommendedCount": 64,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31a86",
+        "workCategory": "Normal/Others",
+        "workDescription": "Modernization of public library in Moth",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 499425
+      },
+      {
+        "_id": "6a932bb5cd94452437a31ed3",
+        "workCategory": "Normal/Others",
+        "workDescription": "SUPPLY AND INSTALLATION OF LED SEMI HIGH MASK LIGHT AT 217 DIFFRENT PLACES IN DISTRICT BUDAUN AS PER LIST ENCLOSED.",
+        "completedDate": "2026-04-04T00:00:00.000Z",
+        "finalAmount": 36803188
+      },
+      {
+        "_id": "6a932bb5cd94452437a320ca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Veranda and approach road for building constructed for public cultural program",
+        "completedDate": "2026-03-09T00:00:00.000Z",
+        "finalAmount": 807185
+      },
+      {
+        "_id": "6a932bb5cd94452437a31a0c",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast LED Light (16 mtrs MS Pole with 12 LED Light 200 W)",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 941994
+      },
+      {
+        "_id": "6a932bb5cd94452437a31a0a",
+        "workCategory": "Normal/Others",
+        "workDescription": "High Mast LED Light (16 mtrs MS Pole with 12 LED Light 200 W)",
+        "completedDate": "2026-02-04T00:00:00.000Z",
+        "finalAmount": 941994
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:12.124Z"
+}

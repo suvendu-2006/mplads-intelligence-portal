@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf9c",
+    "name": "Sudip Bandyopadhyay",
+    "constituency": "KOLKATA UTTAR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 46311063,
+    "utilizationPercentage": 31.50412448979592,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 29,
+    "completedWorksValue": 12739754,
+    "inProgressPayments": 33571309,
+    "paymentGapPercentage": 72.49090568273071,
+    "completionRate": 23.684210526315788,
+    "pendingWorks": 20,
+    "unspentAmount": 100688937,
+    "totalRecommendedAmount": 69236094,
+    "name_hi": "Sudip Bandyopadhyay",
+    "constituency_hi": "KOLKATA UTTAR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 46311063,
+      "totalEntries": 31,
+      "avgExpenditure": 1493905.2580645161,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20688800,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 25622263,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 46311063,
+        "transactionCount": 31,
+        "avgAmount": 1493905.2580645161
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 29,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a17f28",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF PASSAGE BY CEMENT CONCRETE AT 12 CHAMRU SINGH LANE TO 15 BY 2 CHAMRU SINGH LANE IN FRONT OF 47 CANAL EAST ROAD IN WARD No 29 UNDER BR III OF KMC",
+        "completedDate": "2026-03-24T00:00:00.000Z",
+        "finalAmount": 499004
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdc7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CONSTRUCTION OF  NEW DINING HALL CUM KITCHEN BUILDING OF RAMKRISHNA MATH COSSIPORE UDYAN BATI",
+        "completedDate": "2026-02-16T00:00:00.000Z",
+        "finalAmount": 5000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c336",
+        "workCategory": "Normal/Others",
+        "workDescription": "SUPPLY, INSTALLATION, TESTING, COMMISSIONING OF 6 PASSENGER MRL STAINLESS STEEL LIFT (G Plus 3) WITH ARD AND ELECTRICAL POWER SUPPLY TO LIFT ANCILLARY WORKS AT  SWAPNA PURON THE COMMUNITY HALL IN KMC WARD NO. 51",
+        "completedDate": "2026-02-12T00:00:00.000Z",
+        "finalAmount": 1847790
+      },
+      {
+        "_id": "6a932bb5cd94452437a17ed2",
+        "workCategory": "Normal/Others",
+        "workDescription": "DEVELOPMENT OF DRAINAGE AND SEWERAGE SYSTEM IN DHAPA AREA UNDER KMC WARD-58",
+        "completedDate": "2026-02-07T00:00:00.000Z",
+        "finalAmount": 2498863
+      },
+      {
+        "_id": "6a932bb5cd94452437a18670",
+        "workCategory": "Normal/Others",
+        "workDescription": "REPAIRING OF ENTALLY ACADEMY, (GOVT. SPONSORED HIGH SCHOOL) 23, GIRISH CHANDRA BOSE ROAD, KOLKATA-700014.",
+        "completedDate": "2026-02-03T00:00:00.000Z",
+        "finalAmount": 1199369
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.218Z"
+}

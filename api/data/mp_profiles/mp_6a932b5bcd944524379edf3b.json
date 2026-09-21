@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3b",
+    "name": "S Venkatesan",
+    "constituency": "MADURAI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 48171006,
+    "utilizationPercentage": 32.7693918367347,
+    "completedWorksCount": 46,
+    "recommendedWorksCount": 81,
+    "completedWorksValue": 25963841,
+    "inProgressPayments": 22207165,
+    "paymentGapPercentage": 46.10068762109722,
+    "completionRate": 36.22047244094488,
+    "pendingWorks": 35,
+    "unspentAmount": 98828994,
+    "totalRecommendedAmount": 60650000,
+    "name_hi": "S Venkatesan",
+    "constituency_hi": "MADURAI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 48171006,
+      "totalEntries": 71,
+      "avgExpenditure": 678464.8732394367,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 2500000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 4483439,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 41187567,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 48171006,
+        "transactionCount": 71,
+        "avgAmount": 678464.8732394367
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 46,
+    "recommendedCount": 81,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e471",
+        "workCategory": "Normal/Others",
+        "workDescription": "New construction of PDS Ward No 56, Near Manalmedu Hospital, Madurai(2024-2025)",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 699648
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e25c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Stand at Kamarajapuram, Melamathur. (2025-2026)",
+        "completedDate": "2026-05-05T00:00:00.000Z",
+        "finalAmount": 998783
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e055",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installing New R.O. Water plants, Ward No 46, St Marys rc Priary School, Madurai 2024 - 2025",
+        "completedDate": "2026-04-17T00:00:00.000Z",
+        "finalAmount": 261754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1defd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Ward No 31, Doctor Thangaraj Road, Study Centre, Installation of CCTV, Study Shed and Way for Differently Abled Persons, Compound wall North Side and Grill Work (N to S) and Additional Study Shed (South west Corner) (2024-2025)",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 2499460
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db33",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Refresner Room for Transport Employees at Madurai City Branch (MCB) (Old SETC Panimanai) Madurai",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 999902
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.683Z"
+}

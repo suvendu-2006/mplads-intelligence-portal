@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edef8",
+    "name": "Pradeep Kumar Singh",
+    "constituency": "ARARIA",
+    "state": "Bihar",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 118278146,
+    "utilizationPercentage": 80.4613238095238,
+    "completedWorksCount": 39,
+    "recommendedWorksCount": 47,
+    "completedWorksValue": 94498127,
+    "inProgressPayments": 23780019,
+    "paymentGapPercentage": 20.10516718785903,
+    "completionRate": 45.348837209302324,
+    "pendingWorks": 8,
+    "unspentAmount": 28721854,
+    "totalRecommendedAmount": 38113300,
+    "name_hi": "Pradeep Kumar Singh",
+    "constituency_hi": "ARARIA",
+    "state_hi": "Bihar"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 118278146,
+      "totalEntries": 68,
+      "avgExpenditure": 1739384.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 27673127,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 66825000,
+        "transactionCount": 27
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 23780019,
+        "transactionCount": 29
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 118278146,
+        "transactionCount": 68,
+        "avgAmount": 1739384.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 39,
+    "recommendedCount": 47,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a0d5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of  Equipment and furniture accessories for setting up Laboratories as per enclosed list in following schools institutions UCHCH MADHYAMIK VIDYALAYA GAIYARI ARARIA",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2475000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0d2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of  Equipment and furniture accessories for setting up Laboratories as per enclosed list in following schools institutions UCHCH MADHYAMIK VIDYALAYA BANSWADI ARARIA",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2475000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0dd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of  Equipment and furniture accessories for setting up Laboratories as per enclosed list in following schools institutions UPGRADED HIGH SCHOOL BASANTPUR ARARIA",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2475000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0d9",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of  Equipment and furniture accessories for setting up Laboratories as per enclosed list in following schools institutions UHS MADANPUR WEST",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2475000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a0cf",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of  Equipment and furniture accessories for setting up Laboratories as per enclosed list in following schools institutions HIGH SCHOOL MADHUBANI KHAIR KHAN FORBISGANJ ARARIA",
+        "completedDate": "2025-12-01T00:00:00.000Z",
+        "finalAmount": 2475000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.008Z"
+}

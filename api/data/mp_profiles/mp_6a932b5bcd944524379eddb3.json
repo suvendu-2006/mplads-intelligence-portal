@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddb3",
+    "name": "ADHIKARI SOUMENDU",
+    "constituency": "KANTHI",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 38304241,
+    "utilizationPercentage": 26.057306802721087,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 41,
+    "completedWorksValue": 36121123,
+    "inProgressPayments": 2183118,
+    "paymentGapPercentage": 5.6994158949657825,
+    "completionRate": 41.42857142857143,
+    "pendingWorks": 12,
+    "unspentAmount": 108695759,
+    "totalRecommendedAmount": 59813259,
+    "name_hi": "ADHIKARI SOUMENDU",
+    "constituency_hi": "KANTHI",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 38304241,
+      "totalEntries": 31,
+      "avgExpenditure": 1235620.677419355,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9142343,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 29161898,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 38304241,
+        "transactionCount": 31,
+        "avgAmount": 1235620.677419355
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 41,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e208",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 1347251
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcca",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of (02) nos. Solar high mast street light at different place of Patashpur- II Block",
+        "completedDate": "2026-04-28T00:00:00.000Z",
+        "finalAmount": 539889
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dccc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 497616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dcce",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 577616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dccb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Concrete Road",
+        "completedDate": "2026-04-20T00:00:00.000Z",
+        "finalAmount": 147617
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.256Z"
+}

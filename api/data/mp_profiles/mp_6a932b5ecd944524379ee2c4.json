@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2c4",
+    "name": "Smt. P. T. Usha (2022-28)",
+    "constituency": "Nominated Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 55206130,
+    "utilizationPercentage": 28.157204829354264,
+    "completedWorksCount": 39,
+    "recommendedWorksCount": 82,
+    "completedWorksValue": 40172739,
+    "inProgressPayments": 15033391,
+    "paymentGapPercentage": 27.231379921034133,
+    "completionRate": 32.231404958677686,
+    "pendingWorks": 43,
+    "unspentAmount": 140857827.11,
+    "totalRecommendedAmount": 97750000,
+    "name_hi": "Smt. P. T. Usha (2022-28)",
+    "constituency_hi": "Nominated Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55206130,
+      "totalEntries": 77,
+      "avgExpenditure": 716962.7272727273,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 6282440,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 24277586,
+        "transactionCount": 31
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24646104,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55206130,
+        "transactionCount": 77,
+        "avgAmount": 716962.7272727273
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 39,
+    "recommendedCount": 82,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a324ab",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Thekkumuri Thamizthara Road (Concrete) in ward no 15th, Marutharoad Gramapanchayath, Malampuzha Block panchayath",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 423582
+      },
+      {
+        "_id": "6a932bb5cd94452437a32496",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of battery operated Buggy For Transportation of Divyang Students inside Mar Ivanios College Campus",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 574000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3242f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Alsheri-Cholakkal  Road",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 599385
+      },
+      {
+        "_id": "6a932bb5cd94452437a321cb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Karalam Poyil Mukku Maruthulla Poyil Road (Tharing)",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 978608
+      },
+      {
+        "_id": "6a932bb5cd94452437a31afa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Culvert And Side Protection of Moothedam SC Unnathi Road in Ward No 11 Moothedam Mundoor Gramapanchayath",
+        "completedDate": "2026-03-17T00:00:00.000Z",
+        "finalAmount": 1241115
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.887Z"
+}

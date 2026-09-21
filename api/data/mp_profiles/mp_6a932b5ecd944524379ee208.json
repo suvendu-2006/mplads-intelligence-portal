@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee208",
+    "name": "Dr. Sarfraz Ahmad (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Jharkhand",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 178564551.09,
+    "totalExpenditure": 82543604,
+    "utilizationPercentage": 46.22619859100501,
+    "completedWorksCount": 20,
+    "recommendedWorksCount": 344,
+    "completedWorksValue": 20339442,
+    "inProgressPayments": 62204162,
+    "paymentGapPercentage": 75.35915441734286,
+    "completionRate": 5.4945054945054945,
+    "pendingWorks": 324,
+    "unspentAmount": 96020947.09,
+    "totalRecommendedAmount": 135505528,
+    "name_hi": "Dr. Sarfraz Ahmad (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 82543604,
+      "totalEntries": 186,
+      "avgExpenditure": 443782.81720430107,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 31692145,
+        "transactionCount": 56
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 50851459,
+        "transactionCount": 130
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 82543604,
+        "transactionCount": 186,
+        "avgAmount": 443782.81720430107
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 20,
+    "recommendedCount": 344,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31d82",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of electric powered high mast light near Fitkoria main road turn of Panchayat Bengabad Block.",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 299745
+      },
+      {
+        "_id": "6a932bb5cd94452437a32308",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of drain on the side of the road from Razak house to Idgah in Panchayat Gandero, Village Gandero, Block Bangabad.",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 497614
+      },
+      {
+        "_id": "6a932bb5cd94452437a32305",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of an electric powered high mast light near the Vishanpur turn in Chapuwadih village of Bengabad block.",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 299745
+      },
+      {
+        "_id": "6a932bb5cd94452437a31398",
+        "workCategory": "Normal/Others",
+        "workDescription": "Panchayat Chapwadiha, Village Nawadih, Roadside pond - Construction of a bathing ghat.",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 999479
+      },
+      {
+        "_id": "6a932bb5cd94452437a322d3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of an electric powered high mast light near Maheshmunda Station turn in Madhwadih village of Bengabad block.",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 299745
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.438Z"
+}

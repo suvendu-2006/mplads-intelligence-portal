@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf11",
+    "name": "Rahul Kaswan",
+    "constituency": "CHURU",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 57725218,
+    "utilizationPercentage": 39.268855782312926,
+    "completedWorksCount": 37,
+    "recommendedWorksCount": 206,
+    "completedWorksValue": 28138021,
+    "inProgressPayments": 29587197,
+    "paymentGapPercentage": 51.25523648953565,
+    "completionRate": 15.22633744855967,
+    "pendingWorks": 169,
+    "unspentAmount": 89274782,
+    "totalRecommendedAmount": 95202814,
+    "name_hi": "Rahul Kaswan",
+    "constituency_hi": "CHURU",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 57725218,
+      "totalEntries": 540,
+      "avgExpenditure": 106898.55185185185,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 19069819,
+        "transactionCount": 140
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38655399,
+        "transactionCount": 400
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 57725218,
+        "transactionCount": 540,
+        "avgAmount": 106898.55185185185
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 37,
+    "recommendedCount": 206,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18a32",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development work of Playground of Govt Sen Sec school, Melusar, Ratangarh",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 691928
+      },
+      {
+        "_id": "6a932bb5cd94452437a18f8e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Constrcution work of 20 x 25 hall with Baramada in Shamshan Bhumi, towrads South Side of Village, Vill Badariya",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 707932
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb45",
+        "workCategory": "Normal/Others",
+        "workDescription": "Fencing work of Chak Dabla Tal, Village Baghsara East, GP Sobhasar, PS Sujangarh",
+        "completedDate": "2026-07-24T00:00:00.000Z",
+        "finalAmount": 1424235
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de7f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of interlocking Work in the shamshan Bhumi Vill and GP Ratanpura PS Nohar",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 598545
+      },
+      {
+        "_id": "6a932bb5cd94452437a1de80",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction Work Of Tin shed In Samshan Bhumi Vill and GP Ratanpura PS Nohar",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 597221
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.246Z"
+}

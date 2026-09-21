@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf6",
+    "name": "Bansuri Swaraj",
+    "constituency": "NEW DELHI",
+    "state": "Delhi",
+    "house": "Lok Sabha",
+    "allocatedAmount": 154306950,
+    "totalExpenditure": 21775293,
+    "utilizationPercentage": 14.111673518269916,
+    "completedWorksCount": 41,
+    "recommendedWorksCount": 69,
+    "completedWorksValue": 19856755,
+    "inProgressPayments": 1918538,
+    "paymentGapPercentage": 8.810618529909103,
+    "completionRate": 37.27272727272727,
+    "pendingWorks": 28,
+    "unspentAmount": 132531657,
+    "totalRecommendedAmount": 60944086,
+    "name_hi": "Bansuri Swaraj",
+    "constituency_hi": "NEW DELHI",
+    "state_hi": "Delhi"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 21775293,
+      "totalEntries": 46,
+      "avgExpenditure": 473375.9347826087,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5913294,
+        "transactionCount": 11
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15861999,
+        "transactionCount": 35
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 21775293,
+        "transactionCount": 46,
+        "avgAmount": 473375.9347826087
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 41,
+    "recommendedCount": 69,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e9b4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 3 Boom barrier",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 591569
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e9b5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Boom Barrier",
+        "completedDate": "2026-08-18T00:00:00.000Z",
+        "finalAmount": 182728
+      },
+      {
+        "_id": "6a932bb5cd94452437a1953c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 2 High Mast Light Poles with fittings",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 441685
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e487",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 346212
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e964",
+        "workCategory": "Normal/Others",
+        "workDescription": "Provision of lighting arrangement (G.I Octagonal Poles with LED Fitting)",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 664421
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.659Z"
+}

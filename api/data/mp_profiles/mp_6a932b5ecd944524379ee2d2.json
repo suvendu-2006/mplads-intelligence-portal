@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee2d2",
+    "name": "Smt. Sumitra Balmik (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Madhya Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 196063957.11,
+    "totalExpenditure": 163767349,
+    "utilizationPercentage": 83.52751388574684,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 116,
+    "completedWorksValue": 76039991,
+    "inProgressPayments": 87727358,
+    "paymentGapPercentage": 53.568283626548784,
+    "completionRate": 34.831460674157306,
+    "pendingWorks": 54,
+    "unspentAmount": 32296608.110000014,
+    "totalRecommendedAmount": 110531498,
+    "name_hi": "Smt. Sumitra Balmik (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Madhya Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 163767349,
+      "totalEntries": 419,
+      "avgExpenditure": 390852.861575179,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 45457195,
+        "transactionCount": 169
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 83097201,
+        "transactionCount": 192
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 35212953,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 163767349,
+        "transactionCount": 419,
+        "avgAmount": 390852.861575179
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 116,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3078f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 229000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3078d",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road construction",
+        "completedDate": "2026-04-15T00:00:00.000Z",
+        "finalAmount": 222000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3078b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 229000
+      },
+      {
+        "_id": "6a932bb5cd94452437a306a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC Road",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3078c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road",
+        "completedDate": "2026-04-14T00:00:00.000Z",
+        "finalAmount": 192000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.529Z"
+}

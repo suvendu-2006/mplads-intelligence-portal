@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee28f",
+    "name": "Shri Ravi Chandra Vaddiraju (2024-30)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Telangana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 152732534.11,
+    "totalExpenditure": 73672123,
+    "utilizationPercentage": 48.23603787451097,
+    "completedWorksCount": 107,
+    "recommendedWorksCount": 169,
+    "completedWorksValue": 45607361,
+    "inProgressPayments": 28064762,
+    "paymentGapPercentage": 38.0941404389826,
+    "completionRate": 38.768115942028984,
+    "pendingWorks": 62,
+    "unspentAmount": 79060411.11000001,
+    "totalRecommendedAmount": 84841000,
+    "name_hi": "Shri Ravi Chandra Vaddiraju (2024-30)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 73672123,
+      "totalEntries": 163,
+      "avgExpenditure": 451976.2147239264,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 3586568,
+        "transactionCount": 8
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 35834888,
+        "transactionCount": 96
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34250667,
+        "transactionCount": 59
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 73672123,
+        "transactionCount": 163,
+        "avgAmount": 451976.2147239264
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 107,
+    "recommendedCount": 169,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a323af",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road at Laxmipuram(V), Inugurthy(M), Mahabubabad District",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 497575
+      },
+      {
+        "_id": "6a932bb5cd94452437a32379",
+        "workCategory": "Normal/Others",
+        "workDescription": "Additional Structure to Community Hall",
+        "completedDate": "2026-05-12T00:00:00.000Z",
+        "finalAmount": 497650
+      },
+      {
+        "_id": "6a932bb5cd94452437a32343",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road from Madaraboina Kalamma H to Bellam Markaiah and Poliju Jayamma H at Lenin Nagar, Thallapusalapalli Main Road to Indhira Nagar Govt. School in Ward No.24, Mahabubabad Municipality, Mahabubabad District.",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 491846
+      },
+      {
+        "_id": "6a932bb5cd94452437a322f0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of CC Road",
+        "completedDate": "2026-05-06T00:00:00.000Z",
+        "finalAmount": 490932
+      },
+      {
+        "_id": "6a932bb5cd94452437a322c5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Drilling of  Bore well and Fix Hand Pump Nearby 24 hours Tap at  Division No.51 in Khammam Municipal Corporation",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 119711
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.237Z"
+}

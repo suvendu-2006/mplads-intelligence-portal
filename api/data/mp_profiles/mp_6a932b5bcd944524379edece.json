@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edece",
+    "name": "Midhun Reddy",
+    "constituency": "RAJAMPET",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 178951477.11,
+    "totalExpenditure": 55215327,
+    "utilizationPercentage": 30.854915473013723,
+    "completedWorksCount": 178,
+    "recommendedWorksCount": 317,
+    "completedWorksValue": 40614344,
+    "inProgressPayments": 14600983,
+    "paymentGapPercentage": 26.44371371738865,
+    "completionRate": 35.95959595959596,
+    "pendingWorks": 139,
+    "unspentAmount": 123736150.11000001,
+    "totalRecommendedAmount": 120350934,
+    "name_hi": "Midhun Reddy",
+    "constituency_hi": "RAJAMPET",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55215327,
+      "totalEntries": 229,
+      "avgExpenditure": 241114.96506550218,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 20232290,
+        "transactionCount": 106
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 34983037,
+        "transactionCount": 123
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55215327,
+        "transactionCount": 229,
+        "avgAmount": 241114.96506550218
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 178,
+    "recommendedCount": 317,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e729",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Pipe Line from Sivalayam to Prem Nagar, Peddamandyam GP",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 199321
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e980",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Toilets and Bathrooms Near Madrasa in PRC Colony",
+        "completedDate": "2026-08-24T00:00:00.000Z",
+        "finalAmount": 199846
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e779",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of additional Room (East) to Panchayath Complex in Gurramkonda Village and GP",
+        "completedDate": "2026-07-14T00:00:00.000Z",
+        "finalAmount": 499961
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e687",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Additional Room (North) to Panchayath Complex in Gurramkonda Viilage and GP",
+        "completedDate": "2026-07-13T00:00:00.000Z",
+        "finalAmount": 499969
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e326",
+        "workCategory": "Normal/Others",
+        "workDescription": "Internal CC Road from Sub Station to Reddivaripalli Road in Nagavaram G.P",
+        "completedDate": "2026-05-07T00:00:00.000Z",
+        "finalAmount": 499560
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:52.706Z"
+}

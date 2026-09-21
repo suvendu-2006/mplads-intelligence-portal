@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd8",
+    "name": "Anurag Sharma ",
+    "constituency": "JHANSI",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 67201462,
+    "utilizationPercentage": 45.71528027210884,
+    "completedWorksCount": 85,
+    "recommendedWorksCount": 83,
+    "completedWorksValue": 43132735,
+    "inProgressPayments": 24068727,
+    "paymentGapPercentage": 35.815778829335585,
+    "completionRate": 50.595238095238095,
+    "pendingWorks": -2,
+    "unspentAmount": 79798538,
+    "totalRecommendedAmount": 52685882,
+    "name_hi": "Anurag Sharma ",
+    "constituency_hi": "JHANSI",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 67201462,
+      "totalEntries": 242,
+      "avgExpenditure": 277691.9917355372,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 33354806,
+        "transactionCount": 125
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33846656,
+        "transactionCount": 117
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 67201462,
+        "transactionCount": 242,
+        "avgAmount": 277691.9917355372
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 85,
+    "recommendedCount": 83,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e106",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of 100 mtr CC or Apex and Nali from Premchand house towards temple at Jamauramafi Block Jakhaura.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 492429
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e107",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of 100 mtr CC or Apex and Nali from Rampal Lodhi house towards Jayram house at Talgaon Block Birdha.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 498663
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e108",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of 200 mtr CC or Apex and Nali from Mandir Take towards Harishankar Viswkarma house at Village Kotra Block Talbehat.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 985859
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e0e3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 100mtr Apex road and Nali from Durg Singh house towards Bade Mahaveer Tample at village Bhonta Block Mehrauni.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 497024
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e103",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 100mtr CC or Apex road and Nali from Manoj house towards Laxmi house at village Bhainsai Block Mahroni.",
+        "completedDate": "2026-08-27T00:00:00.000Z",
+        "finalAmount": 495931
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:48.227Z"
+}

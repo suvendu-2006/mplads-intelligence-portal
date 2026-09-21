@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfa8",
+    "name": "T Sumathy (A) Thamizhachi Thangapandian ",
+    "constituency": "CHENNAI SOUTH",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 28530278,
+    "utilizationPercentage": 19.408352380952383,
+    "completedWorksCount": 5,
+    "recommendedWorksCount": 25,
+    "completedWorksValue": 18246848,
+    "inProgressPayments": 10283430,
+    "paymentGapPercentage": 36.04391797374004,
+    "completionRate": 16.666666666666664,
+    "pendingWorks": 20,
+    "unspentAmount": 118469722,
+    "totalRecommendedAmount": 89587000,
+    "name_hi": "T Sumathy (A) Thamizhachi Thangapandian ",
+    "constituency_hi": "CHENNAI SOUTH",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 28530278,
+      "totalEntries": 25,
+      "avgExpenditure": 1141211.12,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 10991633,
+        "transactionCount": 6
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 17538645,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 28530278,
+        "transactionCount": 25,
+        "avgAmount": 1141211.12
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 5,
+    "recommendedCount": 25,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d277",
+        "workCategory": "Normal/Others",
+        "workDescription": "Setting Smart Board for 7 Class Rooms in Chennai Middle School, NS Garden",
+        "completedDate": "2026-03-02T00:00:00.000Z",
+        "finalAmount": 1295616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad5a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of First Floor in UPHC, Radhakrishnan Salai.\nZone - 10, Ward - 133",
+        "completedDate": "2026-02-17T00:00:00.000Z",
+        "finalAmount": 10478968
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb30",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Toilet, Fixing Wall Tiles",
+        "completedDate": "2026-01-29T00:00:00.000Z",
+        "finalAmount": 1587249
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad0c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Kaveri Rengan Street, Thasarathapuram\nDiwakar Nagar & Streets\nZ-10, Ward 129",
+        "completedDate": "2025-10-14T00:00:00.000Z",
+        "finalAmount": 3138374
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ad0b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Road in NSK Street, Shanmugam Street, Z-10, Ward 129",
+        "completedDate": "2025-10-14T00:00:00.000Z",
+        "finalAmount": 1746641
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.684Z"
+}

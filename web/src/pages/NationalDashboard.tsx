@@ -39,7 +39,7 @@ import {
   AreaChart,
   Area
 } from 'recharts'
-import { t } from '../lib/i18n'
+import { useTranslation, toNativeDigits, translateState, translateSector } from '../lib/i18n'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -53,6 +53,7 @@ const UNION_TERRITORIES = [
 ]
 
 export const NationalDashboard: React.FC = () => {
+  const { t, lang } = useTranslation()
   const [national, setNational] = useState<any>(() => {
     try {
       const saved = sessionStorage.getItem('cached_nat_data')
@@ -132,14 +133,16 @@ export const NationalDashboard: React.FC = () => {
   const sectorColors = chartTheme.category
   const sectorData = analytics?.topSectors?.map((sec: any, idx: number) => {
     const crValue = Math.round(sec.amount / 10000000)
+    const translatedName = translateSector(sec.name, lang)
     return {
-      name: sec.name,
-      fullName: sec.fullName,
+      name: translatedName,
+      fullName: translateSector(sec.fullName || sec.name, lang),
+      rawName: sec.name,
       value: sec.sharePct,
       amount: sec.amount,
       crValue,
       count: sec.count,
-      crores: `₹${crValue.toLocaleString('en-IN')} Cr`,
+      crores: `₹${toNativeDigits(crValue.toLocaleString('en-IN'), lang)} ${t('unit.cr')}`,
       color: sectorColors[idx % sectorColors.length]
     }
   }) || []
@@ -158,8 +161,8 @@ export const NationalDashboard: React.FC = () => {
     .sort((a, b) => (b.totalAllocated || 0) - (a.totalAllocated || 0))
     .slice(0, 10)
     .map((s) => ({
-      name: s.state.length > 13 ? s.state.slice(0, 11) + '..' : s.state,
-      fullName: s.state,
+      state: s.state,
+      name: translateState(s.state, lang),
       allocated: Math.round((s.totalAllocated || 0) / 10000000),
       utilized: Math.round((s.totalExpenditure || 0) / 10000000)
     }))
@@ -184,37 +187,37 @@ export const NationalDashboard: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
           icon={Users}
-          label={t('kpi.total_mps')}
+          label="kpi.total_mps"
           value={totalMps}
-          description="Both Houses: Lok Sabha (2024-29) & Rajya Sabha"
-          tooltip="774 Members of Parliament monitored across both Lok Sabha (543 seats) and Rajya Sabha (231 seats) in the 18th Parliamentary term."
+          description="stat.both_houses"
+          tooltip="tooltip.total_mps"
           theme="espresso"
         />
         <StatCard
           icon={CheckCircle2}
-          label={t('kpi.completed')}
+          label="kpi.completed"
           value={completedWorks}
           theme="emerald"
-          description="Verified civil projects"
-          tooltip="Total developmental civil projects completed, certified in measurement books, and physically verified with asset geotagging."
+          description="stat.verified_projects"
+          tooltip="tooltip.completed"
         />
         <StatCard
           icon={Clock}
-          label={t('kpi.pending')}
+          label="kpi.pending"
           value={pendingWorks}
           theme="amber"
-          description="Active in queue"
-          tooltip="Sanctioned projects currently undergoing contractor execution, physical inspection, or measurement book certification."
+          description="stat.active_queue"
+          tooltip="tooltip.pending"
         />
         <StatCard
           icon={Receipt}
-          label={t('kpi.ongoing')}
+          label="kpi.ongoing"
           value={activePayments}
           prefix="₹"
           unit="Cr"
           theme="espresso"
-          description="Active treasury liabilities"
-          tooltip="Total funds committed and earmarked in treasury accounts for active ongoing developmental works."
+          description="stat.active_liabilities"
+          tooltip="tooltip.ongoing"
         />
       </div>
 
@@ -222,38 +225,38 @@ export const NationalDashboard: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <StatCard
             icon={Landmark}
-            label={t('kpi.allocated')}
+            label="kpi.allocated"
             value={totalAllocCr}
             prefix="₹"
             unit="Cr"
             theme="espresso"
-            tooltip={t('tooltip.corpus')}
+            tooltip="tooltip.corpus"
           />
           <StatCard
             icon={Coins}
-            label={t('kpi.used')}
+            label="kpi.used"
             value={totalUsedCr}
             prefix="₹"
             unit="Cr"
             theme="espresso"
-            tooltip={t('tooltip.utilization')}
+            tooltip="tooltip.utilization"
           />
           <StatCard
             icon={Percent}
-            label={t('kpi.utilization')}
+            label="kpi.utilization"
             value={utilRate}
             unit="%"
-            theme="emerald"
+            theme={utilRate < 35 ? 'amber' : 'espresso'}
             gaugeValue={utilRate}
-            tooltip="National fund utilization percentage: ratio of liquid treasury releases disbursed against total statutory allocated budget."
+            tooltip="tooltip.utilization_desc"
           />
           <StatCard
             icon={AlertCircle}
-            label={t('kpi.payment_gap')}
+            label="kpi.payment_gap"
             value={paymentGap}
             unit="%"
             theme="amber"
-            tooltip={t('tooltip.payment_gap')}
+            tooltip="tooltip.payment_gap"
           />
         </div>
 
@@ -263,7 +266,7 @@ export const NationalDashboard: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <SectionCard
             title={t('chart.top_states')}
-            subtitle="Top 10 States & UTs by Outlay (₹ Crores)"
+            subtitle={t('chart.top_states_sub')}
             className="lg:col-span-2"
           >
             <div className="h-80 w-full chart-container">
@@ -288,22 +291,23 @@ export const NationalDashboard: React.FC = () => {
                     interval={0}
                     angle={-20}
                     textAnchor="end"
+                    tickFormatter={(name) => (name.length > 13 ? name.slice(0, 11) + '..' : name)}
                   />
-                  <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} />
+                  <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
                   <Tooltip
                     content={<ChartTooltip formatter="crore" />}
                     cursor={{ fill: 'var(--surface-hover)', opacity: 0.5 }}
                   />
                   <Bar
                     dataKey="allocated"
-                    name="Allocated Budget"
+                    name={t('chart.allocated_budget')}
                     fill="url(#barAllocatedGrad)"
                     radius={[6, 6, 0, 0]}
                     {...ANIMATION_CONFIG.getChartProps('bar')}
                   />
                   <Bar
                     dataKey="utilized"
-                    name="Utilized Disbursal"
+                    name={t('chart.utilized_disbursal')}
                     fill="url(#barUtilizedGrad)"
                     radius={[6, 6, 0, 0]}
                     {...ANIMATION_CONFIG.getChartProps('bar')}
@@ -315,31 +319,31 @@ export const NationalDashboard: React.FC = () => {
             <div className="flex items-center justify-center gap-6 pt-3 text-xs">
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.allocated.hex }} />
-                <span className="text-[var(--text-primary)] font-bold">Allocated Budget (₹ Cr)</span>
+                <span className="text-[var(--text-primary)] font-bold">{t('chart.allocated_budget')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.utilized.hex }} />
-                <span className="text-[var(--text-primary)] font-bold">Utilized Disbursal (₹ Cr)</span>
+                <span className="text-[var(--text-primary)] font-bold">{t('chart.utilized_disbursal')}</span>
               </div>
             </div>
           </SectionCard>
 
           {/* Chart 2: Where the Money is Spent • Sectoral Expenditure */}
           <SectionCard
-            title="Where the Money is Spent • Sectoral Expenditure"
-            subtitle="Audited liquid expenditure and works breakdown by developmental field"
+            title={t('chart.where_money_spent')}
+            subtitle={t('chart.where_money_spent_sub')}
           >
             {sectorData.length > 0 ? (
               <div>
-                <div className="h-56 relative flex items-center justify-center chart-container">
+                <div className="h-60 relative flex items-center justify-center chart-container">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={sectorData}
                         cx="50%"
                         cy="50%"
-                        innerRadius={55}
-                        outerRadius={85}
+                        innerRadius={68}
+                        outerRadius={96}
                         paddingAngle={2}
                         dataKey="value"
                         animationDuration={ANIMATION_CONFIG.duration.pie}
@@ -354,13 +358,18 @@ export const NationalDashboard: React.FC = () => {
                       <Tooltip content={<ChartTooltip formatter="percent" />} />
                     </PieChart>
                   </ResponsiveContainer>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                    <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                      ₹{totalSectorCr.toLocaleString('en-IN')} Cr
-                    </span>
-                    <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
-                      Total Disbursed
-                    </span>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
+                    <div className="max-w-[132px] flex flex-col items-center justify-center">
+                      <span className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-tight tracking-tight">
+                        ₹{toNativeDigits(totalSectorCr.toLocaleString('en-IN'), lang)}
+                        <span className="text-[11px] font-bold text-[var(--text-secondary)] ml-1">
+                          {t('unit.cr')}
+                        </span>
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] text-[var(--text-tertiary)] font-bold tracking-normal leading-tight mt-0.5 max-w-[120px] text-center line-clamp-2">
+                        {t('chart.total_disbursed')}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -374,13 +383,13 @@ export const NationalDashboard: React.FC = () => {
                             {sec.name}
                           </div>
                           <div className="text-[9px] text-[var(--text-secondary)] font-semibold">
-                            {sec.count?.toLocaleString('en-IN')} civil works
+                            {toNativeDigits(sec.count?.toLocaleString('en-IN'), lang)} {t('chart.civil_works')}
                           </div>
                         </div>
                       </div>
                       <div className="text-right shrink-0">
-                        <div className="font-extrabold text-[11px] text-[var(--text-primary)] tabular-nums">{sec.crores}</div>
-                        <div className="text-[10px] font-bold text-[var(--brand-primary)] tabular-nums">{sec.value}% spend</div>
+                        <div className="font-extrabold text-[11px] text-[var(--text-primary)] tabular-nums">₹{toNativeDigits(sec.crValue.toLocaleString('en-IN'), lang)} {t('unit.cr')}</div>
+                        <div className="text-[10px] font-bold text-[var(--brand-primary)] tabular-nums">{toNativeDigits(sec.value, lang)}% {t('chart.spend')}</div>
                       </div>
                     </div>
                   ))}
@@ -396,11 +405,11 @@ export const NationalDashboard: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Chart 3: Works Delivery Status (with By Field / Works Status toggle) */}
           <SectionCard
-            title={pieMode === 'sectors' ? 'Where the Money is Spent' : 'Works Delivery Status'}
+            title={pieMode === 'sectors' ? t('chart.where_money_spent') : t('chart.works_delivery_status')}
             subtitle={
               pieMode === 'sectors'
-                ? 'Audited spend breakdown by developmental field'
-                : '83,968 Total Sanctioned Civil Works'
+                ? t('chart.where_money_spent_sub')
+                : `${toNativeDigits('83,968', lang)} ${t('chart.sanctioned_works_sub')}`
             }
             action={
               <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-0.5 rounded-lg border border-[var(--border-primary)] text-[11px]">
@@ -413,7 +422,7 @@ export const NationalDashboard: React.FC = () => {
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
-                  By Field
+                  {t('chart.by_field')}
                 </button>
                 <button
                   type="button"
@@ -424,7 +433,7 @@ export const NationalDashboard: React.FC = () => {
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
-                  Works Status
+                  {t('chart.works_status')}
                 </button>
               </div>
             }
@@ -440,8 +449,8 @@ export const NationalDashboard: React.FC = () => {
                           data={sectorData}
                           cx="50%"
                           cy="50%"
-                          innerRadius={55}
-                          outerRadius={88}
+                          innerRadius={72}
+                          outerRadius={102}
                           paddingAngle={2}
                           dataKey="value"
                           animationDuration={ANIMATION_CONFIG.duration.pie}
@@ -456,13 +465,18 @@ export const NationalDashboard: React.FC = () => {
                         <Tooltip content={<ChartTooltip formatter="percent" />} />
                       </PieChart>
                     </ResponsiveContainer>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                      <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                        ₹{totalSectorCr.toLocaleString('en-IN')} Cr
-                      </span>
-                      <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-extrabold tracking-wider">
-                        Total Disbursed
-                      </span>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
+                      <div className="max-w-[138px] flex flex-col items-center justify-center">
+                        <span className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-tight tracking-tight">
+                          ₹{toNativeDigits(totalSectorCr.toLocaleString('en-IN'), lang)}
+                          <span className="text-[11px] font-bold text-[var(--text-secondary)] ml-1">
+                            {t('unit.cr')}
+                          </span>
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] text-[var(--text-tertiary)] font-bold tracking-normal leading-tight mt-0.5 max-w-[126px] text-center line-clamp-2">
+                          {t('chart.total_disbursed')}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -476,13 +490,13 @@ export const NationalDashboard: React.FC = () => {
                               {sec.name}
                             </div>
                             <div className="text-[10px] text-[var(--text-secondary)] font-semibold">
-                              {sec.count?.toLocaleString('en-IN')} civil works
+                              {toNativeDigits(sec.count?.toLocaleString('en-IN'), lang)} {t('chart.civil_works')}
                             </div>
                           </div>
                         </div>
                         <div className="text-right shrink-0">
-                          <div className="font-extrabold text-xs text-[var(--text-primary)] tabular-nums">{sec.crores}</div>
-                          <div className="text-[11px] font-bold text-[var(--brand-primary)] tabular-nums">{sec.value}% spend</div>
+                          <div className="font-extrabold text-xs text-[var(--text-primary)] tabular-nums">₹{toNativeDigits(sec.crValue.toLocaleString('en-IN'), lang)} {t('unit.cr')}</div>
+                          <div className="text-[11px] font-bold text-[var(--brand-primary)] tabular-nums">{toNativeDigits(sec.value, lang)}% {t('chart.spend')}</div>
                         </div>
                       </div>
                     ))}
@@ -494,34 +508,34 @@ export const NationalDashboard: React.FC = () => {
             ) : (
               /* Works Delivery Status (2-col layout) */
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                <div className="h-52 relative flex items-center justify-center chart-container">
+                <div className="h-56 relative flex items-center justify-center chart-container">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={[
                           {
-                            name: 'Completed & Certified',
+                            name: t('chart.completed_certified'),
                             value: completedWorks,
-                            amountCr: '₹2,387 Cr',
-                            desc: '43,735 civil projects certified complete (52.1%)'
+                            amountCr: `₹${toNativeDigits('2,387', lang)} ${t('unit.cr')}`,
+                            desc: `${toNativeDigits('43,735', lang)} ${t('chart.civil_works')} (52.1%)`
                           },
                           {
-                            name: 'Active in Progress Queue',
+                            name: t('chart.active_in_queue'),
                             value: pendingWorks,
-                            amountCr: '₹1,577 Cr',
-                            desc: '40,233 civil projects in execution pipeline (47.9%)'
+                            amountCr: `₹${toNativeDigits('1,577', lang)} ${t('unit.cr')}`,
+                            desc: `${toNativeDigits('40,233', lang)} ${t('chart.civil_works')} (47.9%)`
                           }
                         ]}
                         cx="50%"
                         cy="50%"
-                        innerRadius={52}
-                        outerRadius={78}
+                        innerRadius={64}
+                        outerRadius={90}
                         paddingAngle={3}
                         dataKey="value"
                         {...ANIMATION_CONFIG.getChartProps('pie')}
                       >
-                        <Cell fill="#10B981" stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        <Cell fill="#6366F1" stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                        <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
+                        <Cell fill={chartTheme.high.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
                       </Pie>
                       <Tooltip content={<ChartTooltip formatter="number" />} />
                     </PieChart>
@@ -530,13 +544,15 @@ export const NationalDashboard: React.FC = () => {
                     const totalWorksCalc = completedWorks + pendingWorks
                     const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
                     return (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                        <span className="text-xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
-                          {compPct}%
-                        </span>
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
-                          Delivered
-                        </span>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
+                        <div className="max-w-[124px] flex flex-col items-center justify-center">
+                          <span className="text-lg sm:text-xl font-black text-[var(--good)] tabular-nums leading-tight">
+                            {toNativeDigits(compPct, lang)}%
+                          </span>
+                          <span className="text-[9px] sm:text-[10px] font-bold tracking-normal text-[var(--text-tertiary)] mt-0.5 max-w-[110px] text-center leading-tight line-clamp-2">
+                            {t('chart.delivered')}
+                          </span>
+                        </div>
                       </div>
                     )
                   })()}
@@ -551,36 +567,36 @@ export const NationalDashboard: React.FC = () => {
                       <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
                         <div className="flex items-center justify-between text-xs mb-1">
                           <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-emerald-500 shadow-sm" />
-                            <span className="font-bold text-[var(--text-primary)]">Completed & Certified</span>
+                            <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: chartTheme.clean.hex }} />
+                            <span className="font-bold text-[var(--text-primary)]">{t('chart.completed_certified')}</span>
                           </div>
-                          <span className="text-xs font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
-                            {compPct}%
+                          <span className="text-xs font-black text-[var(--good)] tabular-nums">
+                            {toNativeDigits(compPct, lang)}%
                           </span>
                         </div>
                         <div className="flex items-baseline justify-between pt-0.5">
                           <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {completedWorks.toLocaleString('en-IN')} works
+                            {toNativeDigits(completedWorks.toLocaleString('en-IN'), lang)} {t('chart.works')}
                           </span>
-                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹2,387 Cr</span>
+                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹{toNativeDigits('2,387', lang)} {t('unit.cr')}</span>
                         </div>
                       </div>
 
                       <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
                         <div className="flex items-center justify-between text-xs mb-1">
                           <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-indigo-500 shadow-sm" />
-                            <span className="font-bold text-[var(--text-primary)]">Active in Progress Queue</span>
+                            <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: chartTheme.high.hex }} />
+                            <span className="font-bold text-[var(--text-primary)]">{t('chart.active_in_queue')}</span>
                           </div>
-                          <span className="text-xs font-black text-indigo-600 dark:text-indigo-400 tabular-nums">
-                            {pendPct}%
+                          <span className="text-xs font-black text-[var(--warn)] tabular-nums">
+                            {toNativeDigits(pendPct, lang)}%
                           </span>
                         </div>
                         <div className="flex items-baseline justify-between pt-0.5">
                           <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {pendingWorks.toLocaleString('en-IN')} works
+                            {toNativeDigits(pendingWorks.toLocaleString('en-IN'), lang)} {t('chart.works')}
                           </span>
-                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹1,577 Cr</span>
+                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹{toNativeDigits('1,577', lang)} {t('unit.cr')}</span>
                         </div>
                       </div>
 
@@ -609,10 +625,10 @@ export const NationalDashboard: React.FC = () => {
           {/* Chart 4: Multi-Year Allocation vs Spend Trend */}
           <SectionCard
             title={t('chart.trend')}
-            subtitle="Fiscal Outlay vs Expenditure Trajectory"
+            subtitle={t('chart.fiscal_trajectory_sub')}
             action={
               <span className="px-2.5 py-1 rounded-md text-[11px] font-bold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)]">
-                Annual Audited Ledger
+                {t('chart.annual_audited_ledger')}
               </span>
             }
           >
@@ -628,13 +644,13 @@ export const NationalDashboard: React.FC = () => {
                         </linearGradient>
                       </defs>
                       <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} />
-                      <XAxis dataKey="period" stroke={chartTheme.textColor} fontSize={11} tickLine={false} />
-                      <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} />
+                      <XAxis dataKey="period" stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
+                      <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
                       <Tooltip content={<ChartTooltip formatter="crore" />} />
                       <Area
                         type="monotone"
                         dataKey="disbursed"
-                        name="Audited Disbursal"
+                        name={t('chart.audited_disbursal')}
                         stroke={chartTheme.utilized.hex}
                         strokeWidth={2.5}
                         fillOpacity={1}
@@ -654,7 +670,7 @@ export const NationalDashboard: React.FC = () => {
                 <div className="flex items-center justify-center gap-6 pt-2 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: chartTheme.utilized.hex }} />
-                    <span className="text-[var(--text-secondary)] font-medium">Liquid Treasury Disbursal (₹ Crores)</span>
+                    <span className="text-[var(--text-secondary)] font-medium">{t('chart.liquid_treasury_disbursal')}</span>
                   </div>
                 </div>
               </>
@@ -666,8 +682,8 @@ export const NationalDashboard: React.FC = () => {
 
         {/* Row 3: State & UT Performance League Table */}
         <SectionCard
-          title="State & UT Performance League Table"
-          subtitle="Comparative Fund Absorption & Expenditure Velocity across 36 Jurisdictions"
+          title={t('chart.league_table')}
+          subtitle={t('chart.league_table_sub')}
           action={
             <div className="flex flex-wrap items-center gap-3">
               {/* Jurisdiction Filter Tabs */}
@@ -681,7 +697,7 @@ export const NationalDashboard: React.FC = () => {
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
-                  All (36)
+                  {t('filter.all')} ({toNativeDigits(36, lang)})
                 </button>
                 <button
                   type="button"
@@ -692,7 +708,7 @@ export const NationalDashboard: React.FC = () => {
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
-                  States (28)
+                  {t('filter.states')} ({toNativeDigits(28, lang)})
                 </button>
                 <button
                   type="button"
@@ -703,7 +719,7 @@ export const NationalDashboard: React.FC = () => {
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
-                  Union Territories (8)
+                  {t('filter.uts')} ({toNativeDigits(8, lang)})
                 </button>
               </div>
 
@@ -711,7 +727,7 @@ export const NationalDashboard: React.FC = () => {
                 to="/states"
                 className="text-xs font-bold text-[var(--brand-primary)] hover:underline inline-flex items-center gap-1"
               >
-                <span>Full Directory</span>
+                <span>{t('btn.full_directory')}</span>
                 <ArrowRight size={13} />
               </Link>
             </div>
@@ -721,10 +737,10 @@ export const NationalDashboard: React.FC = () => {
             {/* Column Headers */}
             <div className="grid grid-cols-[40px_1fr_100px_120px_80px] sm:grid-cols-[40px_1fr_120px_minmax(180px,1fr)_100px] gap-3 px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-[var(--text-tertiary)]">
               <span>#</span>
-              <span>State / UT</span>
-              <span className="text-right">Allocated</span>
-              <span className="text-center">Expenditure Rate</span>
-              <span className="text-right">Completion</span>
+              <span>{t('states.table_header_state_ut')}</span>
+              <span className="text-right">{t('states.sort_allocated')}</span>
+              <span className="text-center">{t('states.table_header_expenditure_rate')}</span>
+              <span className="text-right">{t('states.table_header_completion')}</span>
             </div>
 
             {ALL_36_STATES_OVERVIEW
@@ -736,28 +752,29 @@ export const NationalDashboard: React.FC = () => {
               .slice(0, 10)
               .map((st, idx) => {
                 const formatCr = (val: number) => {
-                  if (val >= 1000) return `₹${val.toLocaleString('en-IN', { maximumFractionDigits: 1 })} Cr`
-                  const isWhole = Math.abs(val - Math.round(val)) < 0.05
-                  return `₹${isWhole ? Math.round(val) : val.toFixed(1)} Cr`
+                  const numStr = val >= 1000
+                    ? val.toLocaleString('en-IN', { maximumFractionDigits: 1 })
+                    : (Math.abs(val - Math.round(val)) < 0.05 ? String(Math.round(val)) : val.toFixed(1))
+                  return `₹${toNativeDigits(numStr, lang)} ${t('unit.cr')}`
                 }
                 return (
                   <Link
                     key={st.state}
                     to={`/states/${encodeURIComponent(st.state)}`}
-                    className="grid grid-cols-[40px_1fr_100px_120px_80px] sm:grid-cols-[40px_1fr_120px_minmax(180px,1fr)_100px] gap-3 items-center px-3 py-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:shadow-sm transition-all group"
+                    className="grid grid-cols-[40px_1fr_100px_120px_80px] sm:grid-cols-[40px_1fr_120px_minmax(180px,1fr)_100px] gap-3 items-center px-3 py-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-accent)] hover:shadow-sm transition-colors duration-100 group"
                   >
                     {/* Rank Number */}
                     <span className="text-sm font-black text-[var(--brand-primary)] tabular-nums">
-                      {st.rank}
+                      {toNativeDigits(st.rank, lang)}
                     </span>
 
                     {/* State Name + MPs */}
                     <div className="min-w-0">
-                      <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--brand-primary)] transition">
-                        {st.state}
+                      <div className="text-sm font-bold text-[var(--text-primary)] truncate group-hover:text-[var(--brand-primary)] transition-colors">
+                        {translateState(st.state, lang)}
                       </div>
                       <div className="text-[10px] text-[var(--text-tertiary)] font-medium">
-                        {st.mps} MPs
+                        {toNativeDigits(st.mps, lang)} {t('unit.mps')}
                       </div>
                     </div>
 
@@ -777,14 +794,14 @@ export const NationalDashboard: React.FC = () => {
                         />
                       </div>
                       <span className="text-[11px] font-bold text-[var(--text-primary)] tabular-nums w-10 text-right shrink-0">
-                        {st.expenditureRate.toFixed(1)}%
+                        {toNativeDigits(st.expenditureRate.toFixed(1), lang)}%
                       </span>
                     </div>
 
                     {/* Completion Rate */}
                     <div className="text-right">
                       <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 tabular-nums">
-                        {st.completionRate.toFixed(1)}%
+                        {toNativeDigits(st.completionRate.toFixed(1), lang)}%
                       </span>
                     </div>
                   </Link>
@@ -798,7 +815,7 @@ export const NationalDashboard: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
         <Link
           to="/states"
-          className="group lux-card p-6 sm:p-8 relative overflow-hidden transition-all hover:scale-[1.008] hover:border-[var(--brand-accent)] hover:shadow-lg"
+          className="group lux-card p-6 sm:p-8 relative overflow-hidden transition-colors duration-150 hover:border-[var(--brand-accent)] hover:shadow-md"
         >
           <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-[var(--brand-accent)]/10 blur-3xl pointer-events-none group-hover:bg-[var(--brand-accent)]/20 transition-colors" />
           <div className="relative z-10 flex items-start justify-between gap-4">
@@ -807,24 +824,24 @@ export const NationalDashboard: React.FC = () => {
                 <Landmark size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-black text-[var(--text-primary)] tracking-tight mb-1 group-hover:text-[var(--brand-primary)] transition">
-                  Browse by State & UT
+                <h3 className="text-xl font-black text-[var(--text-primary)] tracking-tight mb-1 group-hover:text-[var(--brand-primary)] transition-colors">
+                  {t('cta.browse_states_title')}
                 </h3>
                 <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-sm leading-relaxed">
-                  Census directory across 28 States & 8 Union Territories with interactive district drill-downs, Nodal Authority oversight, and financial ledgers.
+                  {t('cta.browse_states_desc')}
                 </p>
               </div>
               <div className="flex items-center gap-2 pt-1">
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  36 Jurisdictions
+                  {toNativeDigits(36, lang)} {t('cta.jurisdictions')}
                 </span>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  740+ Districts
+                  {toNativeDigits('740+', lang)} {t('cta.districts')}
                 </span>
               </div>
               <div className="pt-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] group-hover:bg-[var(--brand-primary)] group-hover:text-white text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] transition-all">
-                  <span>Explore State & UT Directory</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] group-hover:bg-[var(--brand-primary)] group-hover:text-white text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] transition-colors duration-150">
+                  <span>{t('cta.explore_states_dir')}</span>
                   <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
@@ -834,7 +851,7 @@ export const NationalDashboard: React.FC = () => {
 
         <Link
           to="/mps"
-          className="group lux-card p-6 sm:p-8 relative overflow-hidden transition-all hover:scale-[1.008] hover:border-[var(--brand-accent)] hover:shadow-lg"
+          className="group lux-card p-6 sm:p-8 relative overflow-hidden transition-colors duration-150 hover:border-[var(--brand-accent)] hover:shadow-md"
         >
           <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-[var(--brand-primary)]/10 blur-3xl pointer-events-none group-hover:bg-[var(--brand-primary)]/20 transition-colors" />
           <div className="relative z-10 flex items-start justify-between gap-4">
@@ -843,24 +860,24 @@ export const NationalDashboard: React.FC = () => {
                 <Users size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-black text-[var(--text-primary)] tracking-tight mb-1 group-hover:text-[var(--brand-primary)] transition">
-                  Browse by Member of Parliament
+                <h3 className="text-xl font-black text-[var(--text-primary)] tracking-tight mb-1 group-hover:text-[var(--brand-primary)] transition-colors">
+                  {t('cta.browse_mps_title')}
                 </h3>
                 <p className="text-xs sm:text-sm text-[var(--text-secondary)] max-w-sm leading-relaxed">
-                  Explore all 774 Members of Parliament across Lok Sabha (543 seats) and Rajya Sabha (231 seats). Inspect individual recommendations and ledger cards.
+                  {t('cta.browse_mps_desc')}
                 </p>
               </div>
               <div className="flex items-center gap-2 pt-1">
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  543 Lok Sabha
+                  {toNativeDigits(543, lang)} {t('cta.lok_sabha')}
                 </span>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  231 Rajya Sabha
+                  {toNativeDigits(231, lang)} {t('cta.rajya_sabha')}
                 </span>
               </div>
               <div className="pt-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] group-hover:bg-[var(--brand-primary)] group-hover:text-white text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] transition-all">
-                  <span>Inspect Parliamentary Seats</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] group-hover:bg-[var(--brand-primary)] group-hover:text-white text-xs font-bold text-[var(--brand-primary)] border border-[var(--border-primary)] transition-colors duration-150">
+                  <span>{t('cta.inspect_parliamentary_seats')}</span>
                   <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

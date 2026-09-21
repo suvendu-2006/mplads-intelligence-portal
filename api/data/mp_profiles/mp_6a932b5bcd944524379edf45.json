@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf45",
+    "name": "Sanjay Kumar Bandi",
+    "constituency": "KARIMNAGAR",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 172775317.11,
+    "totalExpenditure": 65663959,
+    "utilizationPercentage": 38.00540499554925,
+    "completedWorksCount": 171,
+    "recommendedWorksCount": 468,
+    "completedWorksValue": 40365265,
+    "inProgressPayments": 25298694,
+    "paymentGapPercentage": 38.52751857377348,
+    "completionRate": 26.76056338028169,
+    "pendingWorks": 297,
+    "unspentAmount": 107111358.11000001,
+    "totalRecommendedAmount": 125196552,
+    "name_hi": "Sanjay Kumar Bandi",
+    "constituency_hi": "KARIMNAGAR",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65663959,
+      "totalEntries": 307,
+      "avgExpenditure": 213889.11726384365,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 26096158,
+        "transactionCount": 135
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 39567801,
+        "transactionCount": 172
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65663959,
+        "transactionCount": 307,
+        "avgAmount": 213889.11726384365
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 171,
+    "recommendedCount": 468,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dff2",
+        "workCategory": "Normal/Others",
+        "workDescription": "C by o Community Hall in Sy.No. 441 by E at Thatipalli of Mallial Mandal",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 447034
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c611",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall in H.No.2-6-388, 2-6-391 situated at Market Road, in Division No.51 of Karimnagar Municipal Corporation",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 996406
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b811",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at H.No.4-69 by 26 by 1 by 6, Thigalaguttapalli in Division No.01 of Karimnagar Municipal Corporation",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 440607
+      },
+      {
+        "_id": "6a932bb5cd94452437a1ca02",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Computers and modification of Digital Library at District Court Complex in Division No.58 of Karimnagar Municipal Corporation",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 1304726
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c613",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at H.No.2-7-127, back side Swetha Hotel in Division No.51 of Karimnagar Municipal Corporation",
+        "completedDate": "2026-04-07T00:00:00.000Z",
+        "finalAmount": 392713
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.729Z"
+}

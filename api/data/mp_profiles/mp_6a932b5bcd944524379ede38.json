@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede38",
+    "name": "DR DHARAMVIRA GANDHI",
+    "constituency": "PATIALA",
+    "state": "Punjab",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 52978687,
+    "utilizationPercentage": 36.0399231292517,
+    "completedWorksCount": 57,
+    "recommendedWorksCount": 275,
+    "completedWorksValue": 16488497,
+    "inProgressPayments": 36490190,
+    "paymentGapPercentage": 68.87711279065863,
+    "completionRate": 17.16867469879518,
+    "pendingWorks": 218,
+    "unspentAmount": 94021313,
+    "totalRecommendedAmount": 76795000,
+    "name_hi": "DR DHARAMVIRA GANDHI",
+    "constituency_hi": "PATIALA",
+    "state_hi": "Punjab"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 52978687,
+      "totalEntries": 1190,
+      "avgExpenditure": 44519.905042016806,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 19484211,
+        "transactionCount": 537
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33494476,
+        "transactionCount": 653
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 52978687,
+        "transactionCount": 1190,
+        "avgAmount": 44519.905042016806
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 57,
+    "recommendedCount": 275,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b6bb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed in SC Community Dharamshala in village Ranbirpura(Kaurjiwala)",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 398446
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7fd",
+        "workCategory": "Repair and Renovation",
+        "workDescription": "Repair of shed  in village dharamshala in village Bishanpur Channa Block Patiala Tehsil Patiala",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b691",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Shed in crematorium in village kheri Musalmani",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 200000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b835",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall for SC Community in village Roshanpur",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b818",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlock Tiles in crematorium in village Mehtabgarh     Block Bhunerheri",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.941Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede9a",
+    "name": "Kanimozhi Karunanidhi",
+    "constituency": "THOOTHUKKUDI",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 58344698,
+    "utilizationPercentage": 39.69027074829932,
+    "completedWorksCount": 12,
+    "recommendedWorksCount": 39,
+    "completedWorksValue": 23778691,
+    "inProgressPayments": 34566007,
+    "paymentGapPercentage": 59.24446982311915,
+    "completionRate": 23.52941176470588,
+    "pendingWorks": 27,
+    "unspentAmount": 88655302,
+    "totalRecommendedAmount": 102600000,
+    "name_hi": "Kanimozhi Karunanidhi",
+    "constituency_hi": "THOOTHUKKUDI",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58344698,
+      "totalEntries": 34,
+      "avgExpenditure": 1716020.5294117648,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18069236,
+        "transactionCount": 13
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40275462,
+        "transactionCount": 21
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58344698,
+        "transactionCount": 34,
+        "avgAmount": 1716020.5294117648
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 12,
+    "recommendedCount": 39,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1baba",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 2 Class Rooms at  St. Joseph Primary School Pothakalanvilai Village Sasthavinallur Panchayat Sathankulam Panchayat Union",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 3596664
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8da",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus shelter at Manthithoppu Village in Manthithoppu Panchayat in Kovilpatti Panchayat Union",
+        "completedDate": "2026-03-13T00:00:00.000Z",
+        "finalAmount": 695085
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d53e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Pommaiahpuram Village in Sakkammalpuram Panchayat Vilathikulam Panchayat Union",
+        "completedDate": "2026-03-10T00:00:00.000Z",
+        "finalAmount": 3999840
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d0e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Arunthathiyar street in Sivagnanapuram Village and Panchayat in Vilathikulam Panchayat Union",
+        "completedDate": "2026-02-13T00:00:00.000Z",
+        "finalAmount": 1998754
+      },
+      {
+        "_id": "6a932bb5cd94452437a1a3d8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Bus Shelter at near Vattakovil ECR Road Ward No. 5 in Thoothukudi Corporation",
+        "completedDate": "2025-09-23T00:00:00.000Z",
+        "finalAmount": 400000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:50.237Z"
+}

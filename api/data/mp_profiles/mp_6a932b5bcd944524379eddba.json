@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddba",
+    "name": "AGA SYED RUHULLAH MEHDI",
+    "constituency": "SRINAGAR",
+    "state": "Jammu And Kashmir",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 20822671,
+    "utilizationPercentage": 14.16508231292517,
+    "completedWorksCount": 62,
+    "recommendedWorksCount": 136,
+    "completedWorksValue": 19392971,
+    "inProgressPayments": 1429700,
+    "paymentGapPercentage": 6.866074001745501,
+    "completionRate": 31.313131313131315,
+    "pendingWorks": 74,
+    "unspentAmount": 126177329,
+    "totalRecommendedAmount": 64868830.1,
+    "name_hi": "AGA SYED RUHULLAH MEHDI",
+    "constituency_hi": "SRINAGAR",
+    "state_hi": "Jammu And Kashmir"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 20822671,
+      "totalEntries": 80,
+      "avgExpenditure": 260283.3875,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 4114463,
+        "transactionCount": 22
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 16708208,
+        "transactionCount": 58
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 20822671,
+        "transactionCount": 80,
+        "avgAmount": 260283.3875
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 62,
+    "recommendedCount": 136,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1dbc2",
+        "workCategory": "Trust and Society",
+        "workDescription": "procurement of equipements for drug deaddiction center at budgam",
+        "completedDate": "2026-08-08T00:00:00.000Z",
+        "finalAmount": 299149
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e74a",
+        "workCategory": "Normal/Others",
+        "workDescription": "development of astan sharief shallpora panchayat halqa amirabad tral",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 229101
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e6de",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of gate and Installation of kota stone tiles at ziyarat sharief mohanbal amirabad tral",
+        "completedDate": "2026-07-31T00:00:00.000Z",
+        "finalAmount": 840500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e852",
+        "workCategory": "Normal/Others",
+        "workDescription": "improvement of public park near imambada hanji khaloo pulwama",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 223600
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e853",
+        "workCategory": "Normal/Others",
+        "workDescription": "improvement of lane from link road to house of mohd yaseen and others by way of tiles at gangoo",
+        "completedDate": "2026-07-28T00:00:00.000Z",
+        "finalAmount": 120515
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.479Z"
+}

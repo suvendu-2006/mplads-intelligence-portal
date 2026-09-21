@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf70",
+    "name": "Shri Jugal Kishore Sharma",
+    "constituency": "JAMMU",
+    "state": "Jammu And Kashmir",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 30369749,
+    "utilizationPercentage": 20.659693197278912,
+    "completedWorksCount": 45,
+    "recommendedWorksCount": 169,
+    "completedWorksValue": 14956356,
+    "inProgressPayments": 15413393,
+    "paymentGapPercentage": 50.75245435844729,
+    "completionRate": 21.02803738317757,
+    "pendingWorks": 124,
+    "unspentAmount": 116630251,
+    "totalRecommendedAmount": 95139010,
+    "name_hi": "Shri Jugal Kishore Sharma",
+    "constituency_hi": "JAMMU",
+    "state_hi": "Jammu And Kashmir"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 30369749,
+      "totalEntries": 96,
+      "avgExpenditure": 316351.5520833333,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 3456649,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26913100,
+        "transactionCount": 86
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 30369749,
+        "transactionCount": 96,
+        "avgAmount": 316351.5520833333
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 45,
+    "recommendedCount": 169,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e86b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P Work near house of Isher Singh Ward No 06 pyt Jagti Block Nagrota",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 100500
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e064",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community Hall at Ward No 06 near Bawa Ballo Ji Dev Sathan village and Pyt Jagti",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 777000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e08b",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Lane with Laying and fixing of tiles & aliied works at Jagtyal baradri Dev Sathan village & Pyt. jagti",
+        "completedDate": "2026-08-29T00:00:00.000Z",
+        "finalAmount": 317000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e81f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P work MOhalla Sham Lal and Jhanda Ram at Ward No 06 village thandi Choi Pyt Serh Block Khada Balli",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 122000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e81e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of P work Mohalla Yashpal and Subash Chander Ward No 3 village Sariyan Pyt Serh Block Khada Balli",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 123000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.248Z"
+}

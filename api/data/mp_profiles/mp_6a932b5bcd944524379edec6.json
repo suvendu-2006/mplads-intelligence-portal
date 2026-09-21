@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edec6",
+    "name": "MANJU SHARMA",
+    "constituency": "JAIPUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 167082901.11,
+    "totalExpenditure": 23994861,
+    "utilizationPercentage": 14.36105121505093,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 54,
+    "completedWorksValue": 14282689,
+    "inProgressPayments": 9712172,
+    "paymentGapPercentage": 40.47605026759688,
+    "completionRate": 21.73913043478261,
+    "pendingWorks": 39,
+    "unspentAmount": 143088040.11,
+    "totalRecommendedAmount": 93561248,
+    "name_hi": "MANJU SHARMA",
+    "constituency_hi": "JAIPUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 23994861,
+      "totalEntries": 31,
+      "avgExpenditure": 774027.7741935484,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 683030,
+        "transactionCount": 2
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 7661881,
+        "transactionCount": 10
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15649950,
+        "transactionCount": 19
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 23994861,
+        "transactionCount": 31,
+        "avgAmount": 774027.7741935484
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 54,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e690",
+        "workCategory": "Normal/Others",
+        "workDescription": "For installing solar system in Pt. Deen Dayal Upadhyay Government Higher Secondary School, Brahmapuri, Jaipur, Ward No. 09 of Hawamahal Vidya Sabha.",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d867",
+        "workCategory": "Normal/Others",
+        "workDescription": "For Solar Power Plant and Tin Shed in Shri Chitragupt Gyan Mandir Samiti, Bapu Nagar, Jaipur in Ward No. 138 of Malviya Nagar Assembly Constituency.",
+        "completedDate": "2026-07-25T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da07",
+        "workCategory": "Normal/Others",
+        "workDescription": "Public crematorium boundary wall and tin shed construction work, Degado ki Dhani, Gram Panchayat Ajayrajpura",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 1492000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dfcc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking tile construction work in public Mokshadham main population in Dahmikala of Bagru Vidyasabha",
+        "completedDate": "2026-04-10T00:00:00.000Z",
+        "finalAmount": 798318
+      },
+      {
+        "_id": "6a932bb5cd94452437a16f10",
+        "workCategory": "Normal/Others",
+        "workDescription": "bagru vidhansabha ka ward no. 104 ka rameshwar colony tonk road ma civir line nirman",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 612876
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.476Z"
+}

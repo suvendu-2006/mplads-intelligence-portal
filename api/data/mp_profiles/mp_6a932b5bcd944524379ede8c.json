@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede8c",
+    "name": "Kakoli Ghosh Dastidar ",
+    "constituency": "BARASAT",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 61929956,
+    "utilizationPercentage": 42.12922176870748,
+    "completedWorksCount": 76,
+    "recommendedWorksCount": 107,
+    "completedWorksValue": 39381741,
+    "inProgressPayments": 22548215,
+    "paymentGapPercentage": 36.409221734309,
+    "completionRate": 41.53005464480874,
+    "pendingWorks": 31,
+    "unspentAmount": 85070044,
+    "totalRecommendedAmount": 78724614,
+    "name_hi": "Kakoli Ghosh Dastidar ",
+    "constituency_hi": "BARASAT",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 61929956,
+      "totalEntries": 100,
+      "avgExpenditure": 619299.56,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 39181204,
+        "transactionCount": 66
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22748752,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 61929956,
+        "transactionCount": 100,
+        "avgAmount": 619299.56
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 76,
+    "recommendedCount": 107,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c5cd",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of open gym with Children park with solar light and boundary",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 988121
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bd9e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Solar light 100 pcs",
+        "completedDate": "2026-08-12T00:00:00.000Z",
+        "finalAmount": 3401993
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e856",
+        "workCategory": "Normal/Others",
+        "workDescription": "Highmust light at balisha chowrasta",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 376567
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e855",
+        "workCategory": "Normal/Others",
+        "workDescription": "High mast light at bora markas",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 376680
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e857",
+        "workCategory": "Normal/Others",
+        "workDescription": "High must light",
+        "completedDate": "2026-08-11T00:00:00.000Z",
+        "finalAmount": 376604
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.240Z"
+}

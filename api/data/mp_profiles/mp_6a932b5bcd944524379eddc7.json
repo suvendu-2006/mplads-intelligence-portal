@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddc7",
+    "name": "Amol Ramsing Kolhe",
+    "constituency": "SHIRUR",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 20561770,
+    "utilizationPercentage": 13.987598639455781,
+    "completedWorksCount": 15,
+    "recommendedWorksCount": 96,
+    "completedWorksValue": 14981153,
+    "inProgressPayments": 5580617,
+    "paymentGapPercentage": 27.140742261001847,
+    "completionRate": 13.513513513513514,
+    "pendingWorks": 81,
+    "unspentAmount": 126438230,
+    "totalRecommendedAmount": 91000000,
+    "name_hi": "Amol Ramsing Kolhe",
+    "constituency_hi": "SHIRUR",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 20561770,
+      "totalEntries": 25,
+      "avgExpenditure": 822470.8,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14981153,
+        "transactionCount": 15
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 5580617,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 20561770,
+        "transactionCount": 25,
+        "avgAmount": 822470.8
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 15,
+    "recommendedCount": 96,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b869",
+        "workCategory": "Normal/Others",
+        "workDescription": "Concretization of Galli No. 04 in Mauli Kripa Housing Society, Talwade, Tal. Haveli, Dist. Pune.",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b6e1",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a road near Kadams house in Mauli Krupa Housing Society Talwade",
+        "completedDate": "2025-11-24T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b40b",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of road From the fire station in Wagholi to Rohan Abhila Corner At. wagholi, tq. haveli, Dist. Pune",
+        "completedDate": "2025-11-10T00:00:00.000Z",
+        "finalAmount": 1000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b14a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of community hall at Khairenagar Tq. Ambegaon, Dist. Pune",
+        "completedDate": "2025-10-28T00:00:00.000Z",
+        "finalAmount": 999694
+      },
+      {
+        "_id": "6a932bb5cd94452437a19a73",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of road At. Borhade Mala Water Ank To Ajay Poly Company",
+        "completedDate": "2025-08-22T00:00:00.000Z",
+        "finalAmount": 1000000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:59.712Z"
+}

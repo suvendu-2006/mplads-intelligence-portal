@@ -1,0 +1,59 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfcc",
+    "name": "ZIA UR REHMAN",
+    "constituency": "SAMBHAL",
+    "state": "Uttar Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 53111753,
+    "utilizationPercentage": 36.13044421768707,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 325,
+    "completedWorksValue": 0,
+    "inProgressPayments": 53111753,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 325,
+    "unspentAmount": 93888247,
+    "totalRecommendedAmount": 92403610.85,
+    "name_hi": "ZIA UR REHMAN",
+    "constituency_hi": "SAMBHAL",
+    "state_hi": "Uttar Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 53111753,
+      "totalEntries": 332,
+      "avgExpenditure": 159975.1596385542,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22560098,
+        "transactionCount": 106
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 30551655,
+        "transactionCount": 226
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 53111753,
+        "transactionCount": 332,
+        "avgAmount": 159975.1596385542
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 325,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:25:50.804Z"
+}

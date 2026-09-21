@@ -1,0 +1,90 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee220",
+    "name": "Shri B. Parthasaradhi Reddy (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Telangana",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 244365104,
+    "totalExpenditure": 5945528,
+    "utilizationPercentage": 2.4330511610201104,
+    "completedWorksCount": 6,
+    "recommendedWorksCount": 19,
+    "completedWorksValue": 2649720,
+    "inProgressPayments": 3295808,
+    "paymentGapPercentage": 55.43339464552181,
+    "completionRate": 24,
+    "pendingWorks": 13,
+    "unspentAmount": 238419576,
+    "totalRecommendedAmount": 42981636,
+    "name_hi": "Shri B. Parthasaradhi Reddy (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 5945528,
+      "totalEntries": 7,
+      "avgExpenditure": 849361.1428571428,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 5945528,
+        "transactionCount": 7
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 5945528,
+        "transactionCount": 7,
+        "avgAmount": 849361.1428571428
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 6,
+    "recommendedCount": 19,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a31623",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road from Gudipadu R and B to Panthangi Ramakrishna House",
+        "completedDate": "2025-07-14T00:00:00.000Z",
+        "finalAmount": 499935
+      },
+      {
+        "_id": "6a932bb5cd94452437a31624",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road from Venkatapuram R and B Road to Edulla Ramesh House",
+        "completedDate": "2025-07-14T00:00:00.000Z",
+        "finalAmount": 399991
+      },
+      {
+        "_id": "6a932bb5cd94452437a3161e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road From Bandi Ramesh babu Reddy House to Desireddy Rami Reddy House",
+        "completedDate": "2025-07-14T00:00:00.000Z",
+        "finalAmount": 349973
+      },
+      {
+        "_id": "6a932bb5cd94452437a31607",
+        "workCategory": "Normal/Others",
+        "workDescription": "construction of Cement Concrete Road from Ramala Kondiah house to Church",
+        "completedDate": "2025-07-14T00:00:00.000Z",
+        "finalAmount": 499945
+      },
+      {
+        "_id": "6a932bb5cd94452437a31620",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Cement Concrete Road from Padmavathi House to Maturi Rama Rao House",
+        "completedDate": "2025-07-14T00:00:00.000Z",
+        "finalAmount": 399941
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:03.662Z"
+}

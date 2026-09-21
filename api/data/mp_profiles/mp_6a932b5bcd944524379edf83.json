@@ -1,0 +1,67 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf83",
+    "name": "Shripad Yesso Naik",
+    "constituency": "NORTH GOA",
+    "state": "Goa",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 15476370,
+    "utilizationPercentage": 10.528142857142857,
+    "completedWorksCount": 1,
+    "recommendedWorksCount": 110,
+    "completedWorksValue": 3108723,
+    "inProgressPayments": 12367647,
+    "paymentGapPercentage": 79.91309977727336,
+    "completionRate": 0.9009009009009009,
+    "pendingWorks": 109,
+    "unspentAmount": 131523630,
+    "totalRecommendedAmount": 132375767.3,
+    "name_hi": "Shripad Yesso Naik",
+    "constituency_hi": "NORTH GOA",
+    "state_hi": "Goa"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 15476370,
+      "totalEntries": 25,
+      "avgExpenditure": 619054.8,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12941321,
+        "transactionCount": 20
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 2535049,
+        "transactionCount": 5
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 15476370,
+        "transactionCount": 25,
+        "avgAmount": 619054.8
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 1,
+    "recommendedCount": 110,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1a227",
+        "workCategory": "Normal/Others",
+        "workDescription": "Development of open sapce and children park Ella Crast colony VP se old goa",
+        "completedDate": "2025-09-15T00:00:00.000Z",
+        "finalAmount": 3108723
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:01.224Z"
+}

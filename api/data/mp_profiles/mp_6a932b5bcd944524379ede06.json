@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede06",
+    "name": "BHUPENDER YADAV",
+    "constituency": "ALWAR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 59638968,
+    "utilizationPercentage": 40.57072653061225,
+    "completedWorksCount": 31,
+    "recommendedWorksCount": 43,
+    "completedWorksValue": 37258086,
+    "inProgressPayments": 22380882,
+    "paymentGapPercentage": 37.52727914406567,
+    "completionRate": 41.891891891891895,
+    "pendingWorks": 12,
+    "unspentAmount": 87361032,
+    "totalRecommendedAmount": 70355249,
+    "name_hi": "BHUPENDER YADAV",
+    "constituency_hi": "ALWAR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 59638968,
+      "totalEntries": 68,
+      "avgExpenditure": 877043.6470588235,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25743869,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 33895099,
+        "transactionCount": 36
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 59638968,
+        "transactionCount": 68,
+        "avgAmount": 877043.6470588235
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 31,
+    "recommendedCount": 43,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1745e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of library room with verandah in Government Higher Secondary School, Village Pali. G.P. Nangal Tappa P.S. Ramgarh (Alwar)",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 996345
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e44d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Work of setting up E-Library in Shri Sarvjanik Pustkaraly Laxmangarh District Alwar",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 1464218
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e104",
+        "workCategory": "Normal/Others",
+        "workDescription": "Interlocking tiles work in Sainik Vishram Grah Complex Mundawar District Khairthal Tijara",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 413050
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e110",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of one room with veranda in Sainik Vishram Grah, Mundawar District Khairthal Tijara",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 759429
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be75",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction work of C.C. tiles from Mohan Singh house towards Hanuman temple, village Toda Gyan Singh",
+        "completedDate": "2026-03-31T00:00:00.000Z",
+        "finalAmount": 999415
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.689Z"
+}

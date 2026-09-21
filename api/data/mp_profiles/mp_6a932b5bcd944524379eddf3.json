@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddf3",
+    "name": "BALRAM NAIK PORIKA",
+    "constituency": "MAHABUBABAD",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 72320239,
+    "utilizationPercentage": 49.197441496598636,
+    "completedWorksCount": 238,
+    "recommendedWorksCount": 121,
+    "completedWorksValue": 58126519,
+    "inProgressPayments": 14193720,
+    "paymentGapPercentage": 19.626207264055086,
+    "completionRate": 66.29526462395543,
+    "pendingWorks": -117,
+    "unspentAmount": 74679761,
+    "totalRecommendedAmount": 39701222,
+    "name_hi": "BALRAM NAIK PORIKA",
+    "constituency_hi": "MAHABUBABAD",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 72320239,
+      "totalEntries": 292,
+      "avgExpenditure": 247672.051369863,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 34388502,
+        "transactionCount": 143
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 37931737,
+        "transactionCount": 149
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 72320239,
+        "transactionCount": 292,
+        "avgAmount": 247672.051369863
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 238,
+    "recommendedCount": 121,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e466",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 6 arm High Mast Flood light at Hanuman Temple in Parvathammagudem GP",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 174367
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e45f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 6 arm High Mast Flood light at Gugulothu Laxman House Center in Jamla ThandaGP",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 174367
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e469",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 6 arm High Mast Flood light at Azmera Panthulu Center in Hanuman  Nagar Thanda GP",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 174367
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e468",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of High Mast Flood lights near Hanuman Temple at Banjarapalli (V), Nekkonda (M), Warangal Dist",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 165971
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e462",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of 6 Arm High Mast Flood Lights (2 Nos) at Sainaik School Kitchen and Main Block, Ashok Nagar (V), Khanapur (M)",
+        "completedDate": "2026-05-15T00:00:00.000Z",
+        "finalAmount": 349861
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.263Z"
+}

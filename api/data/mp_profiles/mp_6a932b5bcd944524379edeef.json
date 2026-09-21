@@ -1,0 +1,88 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edeef",
+    "name": "PARTHA BHOWMICK",
+    "constituency": "BARRACKPUR",
+    "state": "West Bengal",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 31114929,
+    "utilizationPercentage": 21.16661836734694,
+    "completedWorksCount": 4,
+    "recommendedWorksCount": 28,
+    "completedWorksValue": 6564023,
+    "inProgressPayments": 24550906,
+    "paymentGapPercentage": 78.90394350570429,
+    "completionRate": 12.5,
+    "pendingWorks": 24,
+    "unspentAmount": 115885071,
+    "totalRecommendedAmount": 134720236,
+    "name_hi": "PARTHA BHOWMICK",
+    "constituency_hi": "BARRACKPUR",
+    "state_hi": "West Bengal"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 31114929,
+      "totalEntries": 11,
+      "avgExpenditure": 2828629.909090909,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 9010090,
+        "transactionCount": 3
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 22104839,
+        "transactionCount": 8
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 31114929,
+        "transactionCount": 11,
+        "avgAmount": 2828629.909090909
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 4,
+    "recommendedCount": 28,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e62c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Hospital Equipments for Dr. B.N Bose Sub Divisional Hospital Barrackpore (IA - Rogi Kalyan Samity Dr. B.N Bose Sub Divisional Hospital Barrackpore)",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d8b0",
+        "workCategory": "Normal/Others",
+        "workDescription": "SITC of CCTV Cameras for Jagaddal Police Station areas under Bhatpara Municipality, (scope of work under ward no 18 -35)",
+        "completedDate": "2026-03-12T00:00:00.000Z",
+        "finalAmount": 4150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d475",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Tin shade for Auditorium of \"Unity Malancha\"\n(IA- E.O Barrackpore -I Panchyat Samity)",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 699023
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c101",
+        "workCategory": "Normal/Others",
+        "workDescription": "Procurement of Operation Table of Matrisadan under Naihati Municipality (IA - Naihati Municipality)",
+        "completedDate": "2025-12-26T00:00:00.000Z",
+        "finalAmount": 915000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:57.214Z"
+}

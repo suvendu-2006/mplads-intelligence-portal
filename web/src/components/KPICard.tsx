@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { LucideIcon } from 'lucide-react'
+import { useTranslation, toNativeDigits } from '../lib/i18n'
 
 interface KPICardProps {
   label: string
@@ -23,6 +24,7 @@ function AnimatedNumber({
   suffix?: string
   decimals?: number
 }) {
+  const { lang, t } = useTranslation()
   const [display, setDisplay] = useState(0)
 
   useEffect(() => {
@@ -48,14 +50,18 @@ function AnimatedNumber({
     return () => cancelAnimationFrame(handle)
   }, [value])
 
+  const formatted = display.toLocaleString(undefined, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  })
+  const localizedNum = toNativeDigits(formatted, lang)
+  const localizedSuffix = suffix === 'Cr' ? ` ${t('unit.cr')}` : suffix
+
   return (
     <span>
       {prefix}
-      {display.toLocaleString(undefined, {
-        minimumFractionDigits: decimals,
-        maximumFractionDigits: decimals,
-      })}
-      {suffix}
+      {localizedNum}
+      {localizedSuffix}
     </span>
   )
 }
@@ -70,10 +76,14 @@ export const KPICard: React.FC<KPICardProps> = ({
   icon: Icon,
   accentColor = 'var(--brand-accent)',
 }) => {
+  const { t, lang } = useTranslation()
+  const localizedLabel = t(label)
+  const localizedDesc = description ? toNativeDigits(t(description), lang) : ''
+
   return (
     <div className="lux-card relative overflow-hidden group flex flex-col justify-between">
       <div
-        className="h-1 rounded-t-xl transition-all duration-500 group-hover:h-1.5"
+        className="h-1 rounded-t-xl transition-opacity duration-200 opacity-85 group-hover:opacity-100"
         style={{
           backgroundColor: accentColor,
           transform: 'scaleX(1)',
@@ -84,7 +94,7 @@ export const KPICard: React.FC<KPICardProps> = ({
       <div className="p-5">
         <div className="flex items-start justify-between gap-2 mb-2">
           <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-secondary)]">
-            {label}
+            {localizedLabel}
           </span>
           {Icon && (
             <div
@@ -105,9 +115,9 @@ export const KPICard: React.FC<KPICardProps> = ({
           />
         </div>
 
-        {description && (
+        {localizedDesc && (
           <p className="text-xs text-[var(--text-tertiary)] mt-1.5 font-medium leading-relaxed">
-            {description}
+            {localizedDesc}
           </p>
         )}
       </div>

@@ -1,0 +1,74 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede08",
+    "name": "Bidyut Baran Mahato",
+    "constituency": "JAMSHEDPUR",
+    "state": "Jharkhand",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 75745972,
+    "utilizationPercentage": 51.52787210884354,
+    "completedWorksCount": 2,
+    "recommendedWorksCount": 176,
+    "completedWorksValue": 1141000,
+    "inProgressPayments": 74604972,
+    "paymentGapPercentage": 98.49364927286166,
+    "completionRate": 1.1235955056179776,
+    "pendingWorks": 174,
+    "unspentAmount": 71254028,
+    "totalRecommendedAmount": 99209597,
+    "name_hi": "Bidyut Baran Mahato",
+    "constituency_hi": "JAMSHEDPUR",
+    "state_hi": "Jharkhand"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 75745972,
+      "totalEntries": 189,
+      "avgExpenditure": 400772.3386243386,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 65750717,
+        "transactionCount": 157
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9995255,
+        "transactionCount": 32
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 75745972,
+        "transactionCount": 189,
+        "avgAmount": 400772.3386243386
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 2,
+    "recommendedCount": 176,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18dfa",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed in front of Laldih Durga Temple under Ghatsila Block",
+        "completedDate": "2025-11-25T00:00:00.000Z",
+        "finalAmount": 570500
+      },
+      {
+        "_id": "6a932bb5cd94452437a19b44",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of shed in Panchayat Kashmar village under Patmada block.",
+        "completedDate": "2025-09-18T00:00:00.000Z",
+        "finalAmount": 570500
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:46.260Z"
+}

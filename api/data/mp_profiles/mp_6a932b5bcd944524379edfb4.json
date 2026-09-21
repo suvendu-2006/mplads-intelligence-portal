@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb4",
+    "name": "UMMEDA RAM BENIWAL",
+    "constituency": "BARMER",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 65781402,
+    "utilizationPercentage": 44.74925306122449,
+    "completedWorksCount": 96,
+    "recommendedWorksCount": 88,
+    "completedWorksValue": 37382842,
+    "inProgressPayments": 28398560,
+    "paymentGapPercentage": 43.17110784595318,
+    "completionRate": 52.17391304347826,
+    "pendingWorks": -8,
+    "unspentAmount": 81218598,
+    "totalRecommendedAmount": 71767660,
+    "name_hi": "UMMEDA RAM BENIWAL",
+    "constituency_hi": "BARMER",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 65781402,
+      "totalEntries": 187,
+      "avgExpenditure": 351772.20320855617,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25625968,
+        "transactionCount": 65
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 40155434,
+        "transactionCount": 122
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 65781402,
+        "transactionCount": 187,
+        "avgAmount": 351772.20320855617
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 96,
+    "recommendedCount": 88,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1c387",
+        "workCategory": "Normal/Others",
+        "workDescription": "As Per Attechment",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 677565
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e90e",
+        "workCategory": "Normal/Others",
+        "workDescription": "As Per Attechment",
+        "completedDate": "2026-08-13T00:00:00.000Z",
+        "finalAmount": 738785
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e32a",
+        "workCategory": "Normal/Others",
+        "workDescription": "As Per Attechment",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 444000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e32b",
+        "workCategory": "Normal/Others",
+        "workDescription": "As Per Attechment",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 592000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b9ff",
+        "workCategory": "Normal/Others",
+        "workDescription": "CLASS ROOM AND SMART CLASS BOARD WITH INVERTER GSSS RORWA KALAN",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 996905
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:47.879Z"
+}

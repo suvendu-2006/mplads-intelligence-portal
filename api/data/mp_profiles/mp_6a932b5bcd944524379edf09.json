@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf09",
+    "name": "Putta Mahesh Kumar",
+    "constituency": "ELURU",
+    "state": "Andhra Pradesh",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 43504398,
+    "utilizationPercentage": 29.59482857142857,
+    "completedWorksCount": 54,
+    "recommendedWorksCount": 60,
+    "completedWorksValue": 26239750,
+    "inProgressPayments": 17264648,
+    "paymentGapPercentage": 39.68483370347982,
+    "completionRate": 47.368421052631575,
+    "pendingWorks": 6,
+    "unspentAmount": 103495602,
+    "totalRecommendedAmount": 90928800,
+    "name_hi": "Putta Mahesh Kumar",
+    "constituency_hi": "ELURU",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 43504398,
+      "totalEntries": 69,
+      "avgExpenditure": 630498.5217391305,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 22269717,
+        "transactionCount": 46
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 21234681,
+        "transactionCount": 23
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 43504398,
+        "transactionCount": 69,
+        "avgAmount": 630498.5217391305
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 54,
+    "recommendedCount": 60,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e8e8",
+        "workCategory": "Normal/Others",
+        "workDescription": "providing Street Lights",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 489659
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e73f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Street Lights",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 489659
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e72a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing Street Lights",
+        "completedDate": "2026-08-17T00:00:00.000Z",
+        "finalAmount": 489659
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dd4e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of 1st Floor on existing Multipurpose Hall in 26th Division located at Janmabhoomi Park near Yadava area at Ameenapeta of Eluru",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1863616
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d64c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing one (1) BLS Ambulance Equipped with Basic Life Support facilities to the Govt General Hospital Eluru",
+        "completedDate": "2026-03-16T00:00:00.000Z",
+        "finalAmount": 2276065
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.440Z"
+}

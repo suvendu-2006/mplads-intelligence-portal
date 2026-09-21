@@ -3,6 +3,7 @@ import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
+import { BackButton } from '../components/BackButton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
 import {
   FundCard,
@@ -29,8 +30,7 @@ import {
   ShieldCheck,
   CheckCircle2,
   Coins,
-  Percent,
-  Star
+  Percent
 } from 'lucide-react'
 import {
   BarChart,
@@ -44,9 +44,11 @@ import {
   Pie,
   Cell
 } from 'recharts'
+import { useTranslation } from '../lib/i18n'
 
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
+  const { t, toNativeDigits: formatNum } = useTranslation()
   const [searchParams] = useSearchParams()
   const [acFilter, setAcFilter] = useState<string>(() => searchParams.get('ac') || '')
   const { user, switchRole, setMpJurisdiction } = useStore()
@@ -70,33 +72,10 @@ export const MPDetail: React.FC = () => {
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'pending'>('all')
   const [agencyFilter, setAgencyFilter] = useState<string>('')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
+  const [worksPage, setWorksPage] = useState(1)
+  const [worksPageSize, setWorksPageSize] = useState<number | 'all'>(30)
 
-  const [followed, setFollowed] = useState<boolean>(() => {
-    try {
-      const saved = localStorage.getItem('followed_mps')
-      const list = saved ? JSON.parse(saved) : []
-      return id ? list.includes(id) : false
-    } catch {
-      return false
-    }
-  })
 
-  const toggleFollow = () => {
-    try {
-      const saved = localStorage.getItem('followed_mps')
-      const list: string[] = saved ? JSON.parse(saved) : []
-      let updated: string[]
-      if (followed) {
-        updated = list.filter((x: string) => x !== id)
-      } else {
-        updated = [...list, id!]
-      }
-      localStorage.setItem('followed_mps', JSON.stringify(updated))
-      setFollowed(!followed)
-    } catch (e) {
-      console.error(e)
-    }
-  }
 
   useEffect(() => {
     async function loadMP() {
@@ -261,21 +240,24 @@ export const MPDetail: React.FC = () => {
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* Breadcrumb Navigation & Follow MP Action */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)]">
-          <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
-          <ChevronRight size={12} />
-          <Link to="/mps" className="hover:text-[var(--text-primary)] transition">MPs</Link>
-          {summary.state && (
-            <>
-              <ChevronRight size={12} />
-              <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
-                {summary.state}
-              </Link>
-            </>
-          )}
-          <ChevronRight size={12} />
-          <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <BackButton fallback="/mps" />
+          <div className="flex items-center gap-2 text-xs text-[var(--text-tertiary)] flex-wrap">
+            <Link to="/" className="hover:text-[var(--text-primary)] transition">Home</Link>
+            <ChevronRight size={12} />
+            <Link to="/mps" className="hover:text-[var(--text-primary)] transition">MPs</Link>
+            {summary.state && (
+              <>
+                <ChevronRight size={12} />
+                <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
+                  {summary.state}
+                </Link>
+              </>
+            )}
+            <ChevronRight size={12} />
+            <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
+          </div>
         </div>
         <div className="flex items-center gap-2">
           <Link
@@ -293,17 +275,6 @@ export const MPDetail: React.FC = () => {
             <Landmark size={13} />
             <span>Open in MP Console</span>
           </Link>
-          <button
-            onClick={toggleFollow}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
-              followed
-                ? 'bg-amber-500/15 border-amber-500/30 text-amber-700 dark:text-amber-400'
-                : 'bg-[var(--surface-primary)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-            }`}
-          >
-            <Star size={13} className={followed ? 'fill-amber-500 text-amber-500' : ''} />
-            <span>{followed ? 'Following MP' : 'Follow this MP'}</span>
-          </button>
         </div>
       </div>
 
@@ -374,7 +345,7 @@ export const MPDetail: React.FC = () => {
           }`}
         >
           <FileCheck2 size={14} />
-          <span>Projects ({works.length})</span>
+          <span>Projects ({formatNum(works.length)})</span>
         </button>
 
         {isAuditorOrAdmin && (
@@ -392,7 +363,7 @@ export const MPDetail: React.FC = () => {
               ) : (
                 <ShieldCheck size={14} className="text-emerald-500" />
               )}
-              <span>Forensic Flags ({flags.length})</span>
+              <span>Forensic Flags ({formatNum(flags.length)})</span>
             </button>
 
             <button
@@ -421,39 +392,39 @@ export const MPDetail: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <StatCard
               icon={Landmark}
-              label="Allocated Fund"
-              value={allocCr}
+              label="mps.fund_allocated"
+              value={Number(allocCr)}
               prefix="₹"
               unit="Cr"
               theme="espresso"
-              description="5-year tenure corpus"
+              description="kpi.total_central_sanction"
             />
             <StatCard
               icon={Coins}
-              label="Disbursed"
-              value={expCr}
+              label="mps.disbursed"
+              value={Number(expCr)}
               prefix="₹"
               unit="Cr"
               theme="espresso"
-              description="Released by treasury"
+              description="kpi.verified_expenditure"
             />
             <StatCard
               icon={Percent}
-              label="Utilization Rate"
-              value={util}
+              label="kpi.utilization"
+              value={Number(util)}
               unit="%"
               theme="emerald"
-              gaugeValue={util}
-              description="Absorption percentage"
+              gaugeValue={Number(util)}
+              description="kpi.expenditure_ratio"
             />
             <StatCard
               icon={Clock}
-              label="Liquid Balance"
-              value={unspentCr}
+              label="kpi.payment_gap"
+              value={Number(unspentCr)}
               prefix="₹"
               unit="Cr"
               theme="amber"
-              description="Available for new works"
+              description="kpi.pending_disbursement"
             />
           </div>
 
@@ -503,30 +474,32 @@ export const MPDetail: React.FC = () => {
                       <PieChart>
                         <Pie
                           data={[
-                            { name: 'Completed Works', value: completedWorks, color: '#10B981', pct: completionPct },
-                            { name: 'Active in Progress', value: ongoingWorks, color: '#6366F1', pct: ongoingPct }
+                            { name: 'Completed Works', value: completedWorks, color: chartTheme.clean.hex, pct: completionPct },
+                            { name: 'Active in Progress', value: ongoingWorks, color: chartTheme.high.hex, pct: ongoingPct }
                           ]}
                           cx="50%"
                           cy="50%"
-                          innerRadius={52}
-                          outerRadius={78}
+                          innerRadius={64}
+                          outerRadius={90}
                           paddingAngle={3}
                           dataKey="value"
                           {...ANIMATION_CONFIG.getChartProps('pie')}
                         >
-                          <Cell fill="#10B981" stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
-                          <Cell fill="#6366F1" stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
+                          <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
+                          <Cell fill={chartTheme.high.hex} stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
                         </Pie>
                         <Tooltip content={<ChartTooltip formatter="number" />} />
                       </PieChart>
                     </ResponsiveContainer>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
-                      <span className="text-xl font-black text-emerald-600 dark:text-emerald-400 tabular-nums">
-                        {completionPct}%
-                      </span>
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
-                        Delivered
-                      </span>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
+                      <div className="max-w-[124px] flex flex-col items-center justify-center">
+                        <span className="text-lg sm:text-xl font-black text-[var(--good)] tabular-nums leading-tight">
+                          {formatNum(completionPct)}%
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] font-bold tracking-normal text-[var(--text-tertiary)] mt-0.5 max-w-[110px] text-center leading-tight line-clamp-2">
+                          {t('chart.delivered')}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -534,7 +507,7 @@ export const MPDetail: React.FC = () => {
                   <div className="w-full sm:w-1/2 space-y-2">
                     <div className="p-2.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                        <div className="w-6 h-6 rounded-lg bg-[var(--tint-good)] text-[var(--good)] flex items-center justify-center shrink-0">
                           <CheckCircle2 size={13} />
                         </div>
                         <div>
@@ -546,7 +519,7 @@ export const MPDetail: React.FC = () => {
                         <span className="text-xs font-black text-[var(--text-primary)] tabular-nums block">
                           {completedWorks.toLocaleString()}
                         </span>
-                        <span className="text-[10px] font-extrabold text-emerald-600 dark:text-emerald-400 tabular-nums">
+                        <span className="text-[10px] font-extrabold text-[var(--good)] tabular-nums">
                           {completionPct}%
                         </span>
                       </div>
@@ -554,7 +527,7 @@ export const MPDetail: React.FC = () => {
 
                     <div className="p-2.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                        <div className="w-6 h-6 rounded-lg bg-[var(--tint-warn)] text-[var(--warn)] flex items-center justify-center shrink-0">
                           <Clock size={13} />
                         </div>
                         <div>
@@ -566,7 +539,7 @@ export const MPDetail: React.FC = () => {
                         <span className="text-xs font-black text-[var(--text-primary)] tabular-nums block">
                           {ongoingWorks.toLocaleString()}
                         </span>
-                        <span className="text-[10px] font-extrabold text-indigo-600 dark:text-indigo-400 tabular-nums">
+                        <span className="text-[10px] font-extrabold text-[var(--warn)] tabular-nums">
                           {ongoingPct}%
                         </span>
                       </div>
@@ -669,8 +642,8 @@ export const MPDetail: React.FC = () => {
                             data={pieData}
                             cx="50%"
                             cy="50%"
-                            innerRadius={52}
-                            outerRadius={78}
+                            innerRadius={64}
+                            outerRadius={90}
                             paddingAngle={3}
                             dataKey="value"
                             {...ANIMATION_CONFIG.getChartProps('pie')}
@@ -684,13 +657,15 @@ export const MPDetail: React.FC = () => {
                           />
                         </PieChart>
                       </ResponsiveContainer>
-                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                        <span className="text-xl font-black text-[var(--text-primary)] tabular-nums">
-                          {totalWorksCount}
-                        </span>
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
-                          Total Works
-                        </span>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
+                        <div className="max-w-[124px] flex flex-col items-center justify-center">
+                          <span className="text-lg sm:text-xl font-black text-[var(--text-primary)] tabular-nums leading-tight">
+                            {formatNum(totalWorksCount)}
+                          </span>
+                          <span className="text-[9px] sm:text-[10px] font-bold tracking-normal text-[var(--text-tertiary)] mt-0.5 max-w-[110px] text-center leading-tight line-clamp-2">
+                            {t('chart.civil_works')}
+                          </span>
+                        </div>
                       </div>
                     </div>
 
@@ -844,7 +819,10 @@ export const MPDetail: React.FC = () => {
           {/* Work Status Filter Pills */}
           <div className="flex flex-wrap items-center gap-2">
             <button
-              onClick={() => setWorkFilter('all')}
+              onClick={() => {
+                setWorkFilter('all')
+                setWorksPage(1)
+              }}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
                 workFilter === 'all'
                   ? 'bg-[var(--brand-primary)] text-white shadow-sm'
@@ -854,7 +832,10 @@ export const MPDetail: React.FC = () => {
               All Projects ({works.length})
             </button>
             <button
-              onClick={() => setWorkFilter('completed')}
+              onClick={() => {
+                setWorkFilter('completed')
+                setWorksPage(1)
+              }}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
                 workFilter === 'completed'
                   ? 'bg-emerald-600 text-white shadow-sm'
@@ -865,7 +846,10 @@ export const MPDetail: React.FC = () => {
               <span>Completed Projects ({completedWorks})</span>
             </button>
             <button
-              onClick={() => setWorkFilter('pending')}
+              onClick={() => {
+                setWorkFilter('pending')
+                setWorksPage(1)
+              }}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
                 workFilter === 'pending'
                   ? 'bg-amber-600 text-white shadow-sm'
@@ -875,6 +859,27 @@ export const MPDetail: React.FC = () => {
               <Clock size={13} />
               <span>Pending Queue ({ongoingWorks})</span>
             </button>
+
+            {/* Page Size Selector */}
+            <div className="flex items-center gap-1 bg-[var(--surface-alt)] px-2 py-1 rounded-xl border border-[var(--border-primary)] text-xs ml-auto">
+              <span className="text-[10px] text-[var(--text-tertiary)] font-bold uppercase mr-1">{t('common.per_page')}:</span>
+              {[30, 50, 100, 'all'].map((sz) => (
+                <button
+                  key={sz}
+                  onClick={() => {
+                    setWorksPageSize(sz as any)
+                    setWorksPage(1)
+                  }}
+                  className={`px-2 py-0.5 rounded text-xs font-bold transition ${
+                    worksPageSize === sz
+                      ? 'bg-[var(--brand-primary)] text-white shadow-xs'
+                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                  }`}
+                >
+                  {sz === 'all' ? t('common.all') : formatNum(sz)}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Agency Filter Dropdown */}
@@ -967,99 +972,129 @@ export const MPDetail: React.FC = () => {
                     </button>
                   </div>
                 )}
-                <div className="lux-card overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs border-collapse">
-                    <thead>
-                      <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                        <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                        <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                        <th className="p-3 font-bold whitespace-nowrap">District</th>
-                        <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                        <th className="p-3 font-bold text-center whitespace-nowrap">Status</th>
-                        <th className="p-3 font-bold text-center whitespace-nowrap">Progress</th>
-                        <th className="p-3 font-bold whitespace-nowrap">Timeline / Delay</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-[var(--border-primary)]">
-                      {filteredWorks.map((w: any) => {
-                        const isDone = (w.status || '').toLowerCase().includes('completed')
-                        const prog = w.progressPct ?? w.progress_pct ?? (isDone ? 100 : 60)
-                        const del = w.delayDays ?? w.delay_days ?? (isDone ? 0 : 45)
+                {(() => {
+                  const paginatedWorks = worksPageSize === 'all'
+                    ? filteredWorks
+                    : filteredWorks.slice((worksPage - 1) * Number(worksPageSize), worksPage * Number(worksPageSize))
+                  const totalWorksPages = worksPageSize === 'all' ? 1 : Math.ceil(filteredWorks.length / Number(worksPageSize)) || 1
 
-                        return (
-                          <tr
-                            key={w.workId || w.work_id}
-                            className="hover:bg-[var(--surface-alt)]/50 transition cursor-pointer"
-                            onClick={() => {
-                              const matchFlag = flags.find((f: any) => f.workId === (w.workId || w.work_id))
-                              if (matchFlag) {
-                                setSelectedFlag(matchFlag)
-                              }
-                            }}
-                          >
-                            <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                              #{w.workId || w.work_id}
-                            </td>
-                            <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
-                              {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
-                            </td>
-                            <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
-                              {w.district || summary.constituency}
-                            </td>
-                            <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
-                              ₹{((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2)} L
-                            </td>
-                            <td className="p-3 text-center whitespace-nowrap">
-                              <span
-                                className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
-                                  isDone
-                                    ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
-                                    : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
-                                }`}
-                              >
-                                {w.status || (isDone ? 'Completed' : 'In Progress')}
-                              </span>
-                            </td>
-                            <td className="p-3">
-                              <div className="flex items-center gap-2">
-                                <div className="w-14 h-1.5 rounded-full bg-[var(--surface-alt)] overflow-hidden">
-                                  <div
-                                    className={`h-full ${isDone ? 'bg-emerald-500' : 'bg-amber-500'}`}
-                                    style={{ width: `${Math.min(100, prog)}%` }}
-                                  />
-                                </div>
-                                <span className="font-extrabold tabular-nums text-[11px] text-[var(--text-primary)]">
-                                  {prog}%
-                                </span>
-                              </div>
-                            </td>
-                            <td className="p-3">
-                              {isDone ? (
-                                <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1 text-[11px]">
-                                  <CheckCircle2 size={12} />
-                                  <span>On Schedule</span>
-                                </span>
-                              ) : (
-                                <span className="text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1 text-[11px]">
-                                  <Clock size={12} />
-                                  <span>{del}d delay</span>
-                                </span>
-                              )}
-                            </td>
-                          </tr>
-                        )
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-                <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex justify-between items-center">
-                  <span>Showing {filteredWorks.length} of {summary.recommendedWorksCount || summary.totalWorks || works.length} sanctioned projects ({workFilter === 'completed' ? 'Completed only' : workFilter === 'pending' ? 'Pending queue only' : 'All projects'})</span>
-                  <span className="text-[11px] font-medium text-[var(--text-tertiary)]">Audited Parliamentary Ledger</span>
-                </div>
+                  return (
+                    <div className="lux-card overflow-hidden">
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left text-xs border-collapse">
+                          <thead>
+                            <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
+                              <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
+                              <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
+                              <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
+                              <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
+                              <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.status')}</th>
+                              <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.progress')}</th>
+                              <th className="p-3 font-bold whitespace-nowrap">{t('table.delay')}</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-[var(--border-primary)]">
+                            {paginatedWorks.map((w: any) => {
+                              const isDone = (w.status || '').toLowerCase().includes('completed')
+                              const prog = w.progressPct ?? w.progress_pct ?? (isDone ? 100 : 60)
+                              const del = w.delayDays ?? w.delay_days ?? (isDone ? 0 : 45)
+
+                              return (
+                                <tr
+                                  key={w.workId || w.work_id}
+                                  className="hover:bg-[var(--surface-alt)]/50 transition-colors duration-100 cursor-pointer"
+                                  onClick={() => {
+                                    const matchFlag = flags.find((f: any) => f.workId === (w.workId || w.work_id))
+                                    if (matchFlag) {
+                                      setSelectedFlag(matchFlag)
+                                    }
+                                  }}
+                                >
+                                  <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                                    #{formatNum(w.workId || w.work_id)}
+                                  </td>
+                                  <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
+                                    {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                  </td>
+                                  <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
+                                    {w.district || summary.constituency}
+                                  </td>
+                                  <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
+                                    ₹{formatNum(((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
+                                  </td>
+                                  <td className="p-3 text-center whitespace-nowrap">
+                                    <span
+                                      className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
+                                        isDone
+                                          ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
+                                          : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
+                                      }`}
+                                    >
+                                      {isDone ? t('status.completed') : t('status.in_progress')}
+                                    </span>
+                                  </td>
+                                  <td className="p-3 text-center">
+                                    <div className="flex items-center justify-center gap-1.5">
+                                      <div className="w-12 h-1.5 rounded-full bg-[var(--surface-alt)] overflow-hidden">
+                                        <div
+                                          className={`h-full ${isDone ? 'bg-emerald-500' : 'bg-amber-500'}`}
+                                          style={{ width: `${Math.min(100, prog)}%` }}
+                                        />
+                                      </div>
+                                      <span className="font-extrabold tabular-nums text-[11px] text-[var(--text-primary)]">
+                                        {formatNum(prog)}%
+                                      </span>
+                                    </div>
+                                  </td>
+                                  <td className="p-3 whitespace-nowrap">
+                                    {isDone ? (
+                                      <span className="text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1 text-[11px]">
+                                        <CheckCircle2 size={12} />
+                                        <span>{t('status.on_schedule')}</span>
+                                      </span>
+                                    ) : (
+                                      <span className="text-amber-600 dark:text-amber-400 font-bold flex items-center gap-1 text-[11px]">
+                                        <Clock size={12} />
+                                        <span>{formatNum(del)} {t('unit.days_delay')}</span>
+                                      </span>
+                                    )}
+                                  </td>
+                                </tr>
+                              )
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                      <div className="p-3 bg-[var(--surface-alt)] border-t border-[var(--border-primary)] text-xs text-[var(--text-secondary)] flex flex-wrap justify-between items-center gap-2">
+                        <span>Showing {paginatedWorks.length} of {filteredWorks.length} projects in view ({summary.recommendedWorksCount || summary.totalWorks || works.length} statutory total)</span>
+                        {totalWorksPages > 1 && (
+                          <div className="flex items-center gap-2">
+                            <button
+                              disabled={worksPage === 1}
+                              onClick={() => setWorksPage((p) => Math.max(1, p - 1))}
+                              className="px-2.5 py-1 rounded-lg border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40"
+                            >
+                              {t('common.previous')}
+                            </button>
+                            <span className="text-xs font-semibold text-[var(--text-secondary)] px-1">
+                              {t('common.page')} {formatNum(worksPage)} {t('common.of')} {formatNum(totalWorksPages)}
+                            </span>
+                            <button
+                              disabled={worksPage === totalWorksPages}
+                              onClick={() => setWorksPage((p) => Math.min(totalWorksPages, p + 1))}
+                              className="px-2.5 py-1 rounded-lg border border-[var(--border-primary)] bg-[var(--surface-primary)] text-xs font-bold disabled:opacity-40"
+                            >
+                              {t('common.next')}
+                            </button>
+                          </div>
+                        )}
+                        <span className="text-[11px] font-medium text-[var(--text-tertiary)]">Audited Parliamentary Ledger</span>
+                      </div>
+                    </div>
+                  )
+                })()}
               </div>
-            </div>
-          )
+            )
         })()}
       </div>
       )}
@@ -1120,12 +1155,12 @@ export const MPDetail: React.FC = () => {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                      <th className="p-3 font-bold whitespace-nowrap">Implementing Agency</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">Cost</th>
-                      <th className="p-3 font-bold text-center whitespace-nowrap">Severity</th>
-                      <th className="p-3 font-bold text-right whitespace-nowrap">Action</th>
+                      <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
+                      <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
+                      <th className="p-3 font-bold whitespace-nowrap">{t('table.agency')}</th>
+                      <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
+                      <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
+                      <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : t('table.action')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -1136,7 +1171,7 @@ export const MPDetail: React.FC = () => {
                         onClick={() => setSelectedFlag(flag)}
                       >
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                          #{flag.workId || flag.work_id}
+                          #{formatNum(flag.workId || flag.work_id)}
                         </td>
                         <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
                           {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
@@ -1145,7 +1180,7 @@ export const MPDetail: React.FC = () => {
                           <AgencyBadge agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'} size="sm" />
                         </td>
                         <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
-                          ₹{((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2)} L
+                          ₹{formatNum(((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
                           <TierBadge
@@ -1163,7 +1198,7 @@ export const MPDetail: React.FC = () => {
                             }}
                             className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition whitespace-nowrap"
                           >
-                            Report
+                            {user.role === 'viewer' ? 'View Findings' : t('table.report')}
                           </button>
                         </td>
                       </tr>

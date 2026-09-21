@@ -1,0 +1,105 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee294",
+    "name": "Shri S. Kalyanasundaram (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Tamil Nadu",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 239763792.52,
+    "totalExpenditure": 179863534,
+    "utilizationPercentage": 75.01697070669942,
+    "completedWorksCount": 141,
+    "recommendedWorksCount": 44,
+    "completedWorksValue": 164924211,
+    "inProgressPayments": 14939323,
+    "paymentGapPercentage": 8.305920976733393,
+    "completionRate": 76.21621621621621,
+    "pendingWorks": -97,
+    "unspentAmount": 59900258.52000001,
+    "totalRecommendedAmount": 72108664,
+    "name_hi": "Shri S. Kalyanasundaram (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 179863534,
+      "totalEntries": 181,
+      "avgExpenditure": 993721.1823204419,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2023,
+        "totalAmount": 7818847,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2024,
+        "totalAmount": 60097709,
+        "transactionCount": 33
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 60575184,
+        "transactionCount": 69
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 51371794,
+        "transactionCount": 78
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 179863534,
+        "transactionCount": 181,
+        "avgAmount": 993721.1823204419
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 141,
+    "recommendedCount": 44,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32486",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  of   School   Lab  Equipments   to  Government High School, Alankuppam, Marakkanam Block, Villupuram Dist.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3244e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Boxtype Drainage (2nd Reach) in Pambapadayur Vaikkal at Ariyapadaiveedu panchayat in Kumbakonam Union Office",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 1522537
+      },
+      {
+        "_id": "6a932bb5cd94452437a3248a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  of   School   Lab  Equipments   to  Government High School, Thiruvakkarai, Vanur Block, Villupuram Dist.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32487",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  of   School   Lab  Equipments   to  Government High School, Nagar, Marakkanam Block, Villupuram Dist.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 625000
+      },
+      {
+        "_id": "6a932bb5cd94452437a3248c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Supply  of   School   Lab  Equipments   to  Government High School, Pudukaruvatchi, Kanai Block, Villupuram Dist.",
+        "completedDate": "2026-08-07T00:00:00.000Z",
+        "finalAmount": 625000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:41.696Z"
+}

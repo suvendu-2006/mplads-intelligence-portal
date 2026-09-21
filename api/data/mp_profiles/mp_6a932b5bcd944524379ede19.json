@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede19",
+    "name": "CHAVAN VASANTRAO BALWANTRAO",
+    "constituency": "NANDED",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 39838293,
+    "utilizationPercentage": 27.100879591836737,
+    "completedWorksCount": 26,
+    "recommendedWorksCount": 115,
+    "completedWorksValue": 19985533,
+    "inProgressPayments": 19852760,
+    "paymentGapPercentage": 49.8333600789572,
+    "completionRate": 18.439716312056735,
+    "pendingWorks": 89,
+    "unspentAmount": 107161707,
+    "totalRecommendedAmount": 93373915,
+    "name_hi": "CHAVAN VASANTRAO BALWANTRAO",
+    "constituency_hi": "NANDED",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 39838293,
+      "totalEntries": 49,
+      "avgExpenditure": 813026.387755102,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 995623,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 38842670,
+        "transactionCount": 48
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 39838293,
+        "transactionCount": 49,
+        "avgAmount": 813026.387755102
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 26,
+    "recommendedCount": 115,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e494",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a Sabha Mandap in a public place in front of Shri Datta Mandir, Golegaon Taluka, Naigaon (kh) District, Nanded",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 696912
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e8f4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Heritage Light Poles (Street Lights) at Village Kolambi Tehsil Naigaon (Kh.) Dist. Nanded",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 499000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e909",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of Heritage light poles (Street Lights) on Gram panchayat owned land at Village Talbid (Ganganbid) Tehsil Naigaon (Kh.) Dist. Nanded",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 499000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e976",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of street lights with poles as required in the vegetable market area of Manjaram Taluka Naigaon Dist. Nanded",
+        "completedDate": "2026-08-14T00:00:00.000Z",
+        "finalAmount": 998848
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e963",
+        "workCategory": "Normal/Others",
+        "workDescription": "Street lighting and electrification in public places at Ijjatgaon (Bk) taluka, Naigaon (Kh) district, Nanded",
+        "completedDate": "2026-08-10T00:00:00.000Z",
+        "finalAmount": 499947
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:04.210Z"
+}

@@ -1,0 +1,100 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee29c",
+    "name": "Shri Sandosh Kumar P (2022-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Kerala",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 220563957.11,
+    "totalExpenditure": 55957933,
+    "utilizationPercentage": 25.370388586242388,
+    "completedWorksCount": 29,
+    "recommendedWorksCount": 75,
+    "completedWorksValue": 29703001,
+    "inProgressPayments": 26254932,
+    "paymentGapPercentage": 46.919052567577864,
+    "completionRate": 27.884615384615387,
+    "pendingWorks": 46,
+    "unspentAmount": 164606024.11,
+    "totalRecommendedAmount": 119178072,
+    "name_hi": "Shri Sandosh Kumar P (2022-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Kerala"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 55957933,
+      "totalEntries": 72,
+      "avgExpenditure": 777193.5138888889,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2024,
+        "totalAmount": 9613207,
+        "transactionCount": 7
+      },
+      {
+        "_id": 2025,
+        "totalAmount": 22120421,
+        "transactionCount": 32
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 24224305,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 55957933,
+        "transactionCount": 72,
+        "avgAmount": 777193.5138888889
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 29,
+    "recommendedCount": 75,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a3239c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Kathuva Parambu- Pothankundu Kavu Road",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 989632
+      },
+      {
+        "_id": "6a932bb5cd94452437a3239d",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF MINI HIGHMAST  LIGHT NEAR TRANSFORMER AT PAZHASSI TEMPLE ROAD JUNCTION",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 199998
+      },
+      {
+        "_id": "6a932bb5cd94452437a3239b",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF MINI HIGH MAST LIGHT NEAR KAYILOOR ALP SCHOOL",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 199998
+      },
+      {
+        "_id": "6a932bb5cd94452437a3184e",
+        "workCategory": "Normal/Others",
+        "workDescription": "PURCHASE FOR SCHOOL BUS BHARATHEEYA VIDYA MANDIRAM AIDED  U.P .SCHOOL kIDANGOOR SOUTH",
+        "completedDate": "2026-05-11T00:00:00.000Z",
+        "finalAmount": 2498107
+      },
+      {
+        "_id": "6a932bb5cd94452437a32146",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase and Supply of 10  Laptops & 10 Printer for SES College, Sreekandapuram  in Sreekandapuram  Municipality",
+        "completedDate": "2026-03-03T00:00:00.000Z",
+        "finalAmount": 694430
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.656Z"
+}

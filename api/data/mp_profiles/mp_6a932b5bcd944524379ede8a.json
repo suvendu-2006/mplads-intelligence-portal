@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede8a",
+    "name": "K. RAJASHEKAR BASAVARAJ HITNAL",
+    "constituency": "KOPPAL",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 66577182,
+    "utilizationPercentage": 45.2906,
+    "completedWorksCount": 67,
+    "recommendedWorksCount": 126,
+    "completedWorksValue": 38153800,
+    "inProgressPayments": 28423382,
+    "paymentGapPercentage": 42.69237769781245,
+    "completionRate": 34.715025906735754,
+    "pendingWorks": 59,
+    "unspentAmount": 80422818,
+    "totalRecommendedAmount": 67570000,
+    "name_hi": "K. RAJASHEKAR BASAVARAJ HITNAL",
+    "constituency_hi": "KOPPAL",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 66577182,
+      "totalEntries": 200,
+      "avgExpenditure": 332885.91,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 39180191,
+        "transactionCount": 111
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 27396991,
+        "transactionCount": 89
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 66577182,
+        "transactionCount": 200,
+        "avgAmount": 332885.91
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 67,
+    "recommendedCount": 126,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e1a8",
+        "workCategory": "Normal/Others",
+        "workDescription": "Laying of pipeline from bevinahalli road of hitnal village to chilamar tayamma temple of koppal taluk under koppal parliamentary constituency.",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 150000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e1a4",
+        "workCategory": "Normal/Others",
+        "workDescription": "Installation of RO plant at Vijayanagar Composite Pre-University collage Munirabad. uder kopapl parliamentary constituency.",
+        "completedDate": "2026-04-23T00:00:00.000Z",
+        "finalAmount": 495259
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d5bc",
+        "workCategory": "Normal/Others",
+        "workDescription": "Leveling the playground of the Government Senior Primary School in Hanumanahalli village, Koppal Lok Sabha constituency.",
+        "completedDate": "2026-04-21T00:00:00.000Z",
+        "finalAmount": 497175
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cb1f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community hall in site of Veerasanagameshwar Kshemabhivrddhi trust at Ward No 15 of Bhagyanagar town under koppal parlimentary constituency.",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 497331
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be42",
+        "workCategory": "Trust and Society",
+        "workDescription": "Construction of continued  shankaracharya community hall in Bhagyanaga town at ward no 06 under koppal parlimentaryconstituency.",
+        "completedDate": "2026-03-05T00:00:00.000Z",
+        "finalAmount": 397871
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:49.251Z"
+}

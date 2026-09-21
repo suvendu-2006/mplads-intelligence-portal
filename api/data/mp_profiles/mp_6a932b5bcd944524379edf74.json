@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf74",
+    "name": "Shri LS Tejasvi Surya ",
+    "constituency": "BANGALORE SOUTH",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 40913804,
+    "utilizationPercentage": 27.83251972789116,
+    "completedWorksCount": 25,
+    "recommendedWorksCount": 112,
+    "completedWorksValue": 25236528,
+    "inProgressPayments": 15677276,
+    "paymentGapPercentage": 38.317815669254315,
+    "completionRate": 18.248175182481752,
+    "pendingWorks": 87,
+    "unspentAmount": 106086196,
+    "totalRecommendedAmount": 100996984,
+    "name_hi": "Shri LS Tejasvi Surya ",
+    "constituency_hi": "BANGALORE SOUTH",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 40913804,
+      "totalEntries": 51,
+      "avgExpenditure": 802231.4509803922,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 12145615,
+        "transactionCount": 17
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 28768189,
+        "transactionCount": 34
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 40913804,
+        "transactionCount": 51,
+        "avgAmount": 802231.4509803922
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 25,
+    "recommendedCount": 112,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1e428",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of essential furniture and carrying out other development works at Karnataka Public Primary School, Agara, Bengaluru - 560102",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 499675
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e426",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Unique Science Park (inclusive of Electrical & Civil Works) under the Science City project that aims to enhance Bengaluru’s safety awareness, education, cleanliness, and economic vitality at Dhanvanthari Park, 2nd Phase, JP Nagar, Bengaluru - 560078",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 5490893
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e427",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of chairs and tables and other development works at KPS High School located in Agara Village, 1st Sector, HSR Layout, Bengaluru.",
+        "completedDate": "2026-05-14T00:00:00.000Z",
+        "finalAmount": 499675
+      },
+      {
+        "_id": "6a932bb5cd94452437a1e334",
+        "workCategory": "Normal/Others",
+        "workDescription": "Purchase of Multi Para Monitor Equipment and carrying out other development works for H Siddaiah Referral Hospital, Bengaluru - 560002",
+        "completedDate": "2026-05-08T00:00:00.000Z",
+        "finalAmount": 498864
+      },
+      {
+        "_id": "6a932bb5cd94452437a1cf75",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of classroom at the Government Higher Primary School in Lakya Village, Chikkamagaluru District, Karnataka.",
+        "completedDate": "2026-04-18T00:00:00.000Z",
+        "finalAmount": 496984
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:53.902Z"
+}

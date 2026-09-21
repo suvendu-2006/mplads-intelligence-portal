@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfb9",
+    "name": "VAMSI KRISHNA GADDAM",
+    "constituency": "PEDDAPALLE",
+    "state": "Telangana",
+    "house": "Lok Sabha",
+    "allocatedAmount": 148451721.11,
+    "totalExpenditure": 16373473,
+    "utilizationPercentage": 11.029493546839754,
+    "completedWorksCount": 9,
+    "recommendedWorksCount": 62,
+    "completedWorksValue": 7049840,
+    "inProgressPayments": 9323633,
+    "paymentGapPercentage": 56.943526886446136,
+    "completionRate": 12.676056338028168,
+    "pendingWorks": 53,
+    "unspentAmount": 132078248.11000001,
+    "totalRecommendedAmount": 38839779,
+    "name_hi": "VAMSI KRISHNA GADDAM",
+    "constituency_hi": "PEDDAPALLE",
+    "state_hi": "Telangana"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 16373473,
+      "totalEntries": 22,
+      "avgExpenditure": 744248.7727272727,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7151068,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 9222405,
+        "transactionCount": 10
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 16373473,
+        "transactionCount": 22,
+        "avgAmount": 744248.7727272727
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 9,
+    "recommendedCount": 62,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1b62c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Extention of work(2nd Floor) for existing community hall for cultural activities at Chunnambatti wada in Mancherial Town",
+        "completedDate": "2026-04-22T00:00:00.000Z",
+        "finalAmount": 4989891
+      },
+      {
+        "_id": "6a932bb5cd94452437a1be03",
+        "workCategory": "Normal/Others",
+        "workDescription": "DRILLING OF BOREWELL at Kapulapally (V) Peddapalli Mandal",
+        "completedDate": "2025-12-15T00:00:00.000Z",
+        "finalAmount": 199986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bdfe",
+        "workCategory": "Normal/Others",
+        "workDescription": "DRILLING OF BOREWELL at Kanagarti(V) Peddapalli Mandal",
+        "completedDate": "2025-12-15T00:00:00.000Z",
+        "finalAmount": 199986
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7a7",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road From Old AIMS School to NH363 Service road",
+        "completedDate": "2025-11-20T00:00:00.000Z",
+        "finalAmount": 297000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1b7a6",
+        "workCategory": "Normal/Others",
+        "workDescription": "CC Road from Banampalli Lingaiah (H) to AIMS School",
+        "completedDate": "2025-11-20T00:00:00.000Z",
+        "finalAmount": 344068
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:00.487Z"
+}

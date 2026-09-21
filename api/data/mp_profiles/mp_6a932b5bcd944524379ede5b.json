@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede5b",
+    "name": "Gajendra Singh Shekhawat",
+    "constituency": "JODHPUR",
+    "state": "Rajasthan",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 491827,
+    "utilizationPercentage": 0.33457619047619047,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 33,
+    "completedWorksValue": 0,
+    "inProgressPayments": 491827,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 33,
+    "unspentAmount": 146508173,
+    "totalRecommendedAmount": 31164000,
+    "name_hi": "Gajendra Singh Shekhawat",
+    "constituency_hi": "JODHPUR",
+    "state_hi": "Rajasthan"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 491827,
+      "totalEntries": 1,
+      "avgExpenditure": 491827,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 491827,
+        "transactionCount": 1
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 491827,
+        "transactionCount": 1,
+        "avgAmount": 491827
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 33,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.442Z"
+}

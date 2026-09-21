@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddce",
+    "name": "ANDREW J. SYNGKON",
+    "constituency": "SHILLONG",
+    "state": "Meghalaya",
+    "house": "Lok Sabha",
+    "allocatedAmount": 98000000,
+    "totalExpenditure": 70505000,
+    "utilizationPercentage": 71.9438775510204,
+    "completedWorksCount": 98,
+    "recommendedWorksCount": 146,
+    "completedWorksValue": 36350000,
+    "inProgressPayments": 34155000,
+    "paymentGapPercentage": 48.44337281043898,
+    "completionRate": 40.16393442622951,
+    "pendingWorks": 48,
+    "unspentAmount": 27495000,
+    "totalRecommendedAmount": 62550000,
+    "name_hi": "ANDREW J. SYNGKON",
+    "constituency_hi": "SHILLONG",
+    "state_hi": "Meghalaya"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 70505000,
+      "totalEntries": 321,
+      "avgExpenditure": 219641.7445482866,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 25605000,
+        "transactionCount": 115
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44900000,
+        "transactionCount": 206
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 70505000,
+        "transactionCount": 321,
+        "avgAmount": 219641.7445482866
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 98,
+    "recommendedCount": 146,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a18be2",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of Community water Storage Tank by Dorbar Shnong Kreit",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 300000
+      },
+      {
+        "_id": "6a932bb5cd94452437a193e5",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of additional Classrooms for Unitarian Higher Secondary School Puriang",
+        "completedDate": "2026-08-26T00:00:00.000Z",
+        "finalAmount": 500000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1dba6",
+        "workCategory": "Normal/Others",
+        "workDescription": "Financial aid to St. Marys Higher Secondary School for the construction of an additional classroom for 11 and 12.",
+        "completedDate": "2026-08-25T00:00:00.000Z",
+        "finalAmount": 100000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c587",
+        "workCategory": "Normal/Others",
+        "workDescription": "Financial assistance to the Roba sing syiem seng khasi secondary school for construction of school building",
+        "completedDate": "2026-08-06T00:00:00.000Z",
+        "finalAmount": 400000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1bde0",
+        "workCategory": "Normal/Others",
+        "workDescription": "Financial assistance for construction of classroom for Markasa Secondary School",
+        "completedDate": "2026-07-30T00:00:00.000Z",
+        "finalAmount": 250000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:42.786Z"
+}

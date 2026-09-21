@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5ecd944524379ee291",
+    "name": "Shri Ryaga Krishnaiah (2024-28)",
+    "constituency": "Sitting Rajya Sabha",
+    "state": "Andhra Pradesh",
+    "house": "Rajya Sabha",
+    "allocatedAmount": 170413583.79,
+    "totalExpenditure": 58500678,
+    "utilizationPercentage": 34.32864722338693,
+    "completedWorksCount": 30,
+    "recommendedWorksCount": 39,
+    "completedWorksValue": 44936173,
+    "inProgressPayments": 13564505,
+    "paymentGapPercentage": 23.18691930373867,
+    "completionRate": 43.47826086956522,
+    "pendingWorks": 9,
+    "unspentAmount": 111912905.78999999,
+    "totalRecommendedAmount": 103050000,
+    "name_hi": "Shri Ryaga Krishnaiah (2024-28)",
+    "constituency_hi": "Sitting Rajya Sabha",
+    "state_hi": "Andhra Pradesh"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 58500678,
+      "totalEntries": 37,
+      "avgExpenditure": 1581099.4054054054,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 14084779,
+        "transactionCount": 12
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44415899,
+        "transactionCount": 25
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 58500678,
+        "transactionCount": 37,
+        "avgAmount": 1581099.4054054054
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 30,
+    "recommendedCount": 39,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a32423",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of CC road from Bevinahalli to to Pochanapalli 200 to 250  meters of Bevinahalli (V), Hindupur Mandal, Satyasai Dist",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32424",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of CC road from Bevinahalli to to Pochanapalli   150 to 200 meters of Bevinahalli (V), Hindupur Mandal, Satyasai Dist",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 498000
+      },
+      {
+        "_id": "6a932bb5cd94452437a32421",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of CC road from Bevinahalli to to Pochanapall 100 to 150 meters  of Bevinahalli (V), Hindupur Mandal, Satyasai Dist",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 497955
+      },
+      {
+        "_id": "6a932bb5cd94452437a32420",
+        "workCategory": "Normal/Others",
+        "workDescription": "Contruction of CC road from Bevinahalli to Pochanapalli 50 to 100 meters Bevinahalli (V), Hindupur Mandal, Satyasai Dist",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 497145
+      },
+      {
+        "_id": "6a932bb5cd94452437a3241f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing of fencing with burial ground yerrayapalli village Bathhala palli mandal sathya sai District",
+        "completedDate": "2026-08-20T00:00:00.000Z",
+        "finalAmount": 499078
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:51.742Z"
+}

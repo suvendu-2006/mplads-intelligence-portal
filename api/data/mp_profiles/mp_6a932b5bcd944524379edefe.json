@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edefe",
+    "name": "Pratap Chandra Sarangi",
+    "constituency": "BALASORE",
+    "state": "Odisha",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147064254.11,
+    "totalExpenditure": 2525000,
+    "utilizationPercentage": 1.7169365970546246,
+    "completedWorksCount": 10,
+    "recommendedWorksCount": 117,
+    "completedWorksValue": 2525000,
+    "inProgressPayments": 0,
+    "paymentGapPercentage": 0,
+    "completionRate": 7.874015748031496,
+    "pendingWorks": 107,
+    "unspentAmount": 144539254.11,
+    "totalRecommendedAmount": 33881000,
+    "name_hi": "Pratap Chandra Sarangi",
+    "constituency_hi": "BALASORE",
+    "state_hi": "Odisha"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 2525000,
+      "totalEntries": 10,
+      "avgExpenditure": 252500,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 1000000,
+        "transactionCount": 1
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 1525000,
+        "transactionCount": 9
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 2525000,
+        "transactionCount": 10,
+        "avgAmount": 252500
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 10,
+    "recommendedCount": 117,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d26d",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SOLAR LED LIGHT  HIGH MAST NEAR JIRTAL MALLIK SAHI, VILLAGE JIRTAL,KASABA JAYPUR GP",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 125000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d267",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SOLAR LED LIGHT HIGH MAST NEAR KHANTA PADA SHISU MANDIR.",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 125000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d268",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SOLAR LED LIGHT HIGH MAST NEAR GUSANI PATNA ,NAHARA PATNA VILLAGE.",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 125000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d26a",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SOLAR LED LIGHT  HIGH MAST NEAR SAKHA BADI, VILLAGE JIRTAL,KASBA JAYPUR GP",
+        "completedDate": "2026-02-19T00:00:00.000Z",
+        "finalAmount": 125000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d236",
+        "workCategory": "Normal/Others",
+        "workDescription": "INSTALLATION OF SOLAR LED LIGHT HIGH MAST NEAR KATHAPAL UP SCHOOL KATHAPAL GP NILGIRI BLOCK",
+        "completedDate": "2026-02-18T00:00:00.000Z",
+        "finalAmount": 125000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:26:04.237Z"
+}

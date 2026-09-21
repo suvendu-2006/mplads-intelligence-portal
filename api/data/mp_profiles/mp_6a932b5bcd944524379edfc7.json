@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edfc7",
+    "name": "VISHWESHWAR HEGDE KAGERI",
+    "constituency": "UTTARA KANNADA",
+    "state": "Karnataka",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 33350000,
+    "utilizationPercentage": 22.687074829931973,
+    "completedWorksCount": 30,
+    "recommendedWorksCount": 113,
+    "completedWorksValue": 20900000,
+    "inProgressPayments": 12450000,
+    "paymentGapPercentage": 37.331334332833585,
+    "completionRate": 20.97902097902098,
+    "pendingWorks": 83,
+    "unspentAmount": 113650000,
+    "totalRecommendedAmount": 75700000,
+    "name_hi": "VISHWESHWAR HEGDE KAGERI",
+    "constituency_hi": "UTTARA KANNADA",
+    "state_hi": "Karnataka"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 33350000,
+      "totalEntries": 83,
+      "avgExpenditure": 401807.2289156627,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 18206250,
+        "transactionCount": 50
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 15143750,
+        "transactionCount": 33
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 33350000,
+        "transactionCount": 83,
+        "avgAmount": 401807.2289156627
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 30,
+    "recommendedCount": 113,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1d4c3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Improvements of Road and Construction of Steps to bhutarajeshwara Temple, Ganesh Nagara, Sirsi",
+        "completedDate": "2026-02-26T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a186f3",
+        "workCategory": "Normal/Others",
+        "workDescription": "Improvements of Road from Khanapur-Talaguppa Road to Milk Producers Co-Operative Society.",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1835a",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of CC road Umesh harijan house to Yasida bajantri house CC road in Ramnagara grama panchayata",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a17e14",
+        "workCategory": "Normal/Others",
+        "workDescription": "Roofing to Shedi kuli SC Colony Samudaya bavana in Babruvada Panchayata",
+        "completedDate": "2026-02-25T00:00:00.000Z",
+        "finalAmount": 600000
+      },
+      {
+        "_id": "6a932bb5cd94452437a18441",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing roofing to Shri Nandikeshwara sabhabavana in Kallabbe gram panchayata Kumta Taluka",
+        "completedDate": "2026-02-24T00:00:00.000Z",
+        "finalAmount": 600000
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:56.686Z"
+}

@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379ede00",
+    "name": "BHASKAR MURLIDHAR BHAGARE",
+    "constituency": "DINDORI",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 34081627,
+    "utilizationPercentage": 23.184780272108842,
+    "completedWorksCount": 19,
+    "recommendedWorksCount": 100,
+    "completedWorksValue": 19056745,
+    "inProgressPayments": 15024882,
+    "paymentGapPercentage": 44.08499042607326,
+    "completionRate": 15.966386554621847,
+    "pendingWorks": 81,
+    "unspentAmount": 112918373,
+    "totalRecommendedAmount": 79799800,
+    "name_hi": "BHASKAR MURLIDHAR BHAGARE",
+    "constituency_hi": "DINDORI",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 34081627,
+      "totalEntries": 37,
+      "avgExpenditure": 921125.0540540541,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 7237507,
+        "transactionCount": 9
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 26844120,
+        "transactionCount": 28
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 34081627,
+        "transactionCount": 37,
+        "avgAmount": 921125.0540540541
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 19,
+    "recommendedCount": 100,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1db93",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a pavilion at the Senior Citizens Building in Vadner Bhairav Chandwad, Village Property No. 208 1A",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 800000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db96",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community hall in open space under Pimpalgaon Baswant Municipal Council, Tal. Niphad (Survey No. and Subdivision 530-1-1-Plot-19)",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 963785
+      },
+      {
+        "_id": "6a932bb5cd94452437a1db91",
+        "workCategory": "Normal/Others",
+        "workDescription": "Improvement of open space area in NDCC Colony area under Pimpalgaon Baswant Municipal Council, Taluka Niphad (Survey No. and Subdivision 530-1-1-Plot-19)",
+        "completedDate": "2026-03-23T00:00:00.000Z",
+        "finalAmount": 936103
+      },
+      {
+        "_id": "6a932bb5cd94452437a1da6f",
+        "workCategory": "Normal/Others",
+        "workDescription": "Providing 50 schools, junior and senior colleges, ashram schools with other teaching materials in Nashik district, including 1 ASL-3000R PA Lectern System-Podium 5 Years Warranty with Additional neck band with Speaker, a total of 50 Podiums.",
+        "completedDate": "2026-03-18T00:00:00.000Z",
+        "finalAmount": 3000000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1d620",
+        "workCategory": "Normal/Others",
+        "workDescription": "Construction of a community hall near the cemetery at Gram Panchayat Dhulgaon,  Tal. Yeola (Property No. 857)",
+        "completedDate": "2026-03-04T00:00:00.000Z",
+        "finalAmount": 999197
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:55.871Z"
+}

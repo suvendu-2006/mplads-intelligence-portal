@@ -1,0 +1,54 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379eddd1",
+    "name": "ANIL YESHWANT DESAI",
+    "constituency": "MUMBAI SOUTH CENTRAL",
+    "state": "Maharashtra",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 7792570,
+    "utilizationPercentage": 5.301068027210885,
+    "completedWorksCount": 0,
+    "recommendedWorksCount": 34,
+    "completedWorksValue": 0,
+    "inProgressPayments": 7792570,
+    "paymentGapPercentage": 100,
+    "completionRate": 0,
+    "pendingWorks": 34,
+    "unspentAmount": 139207430,
+    "totalRecommendedAmount": 82800000,
+    "name_hi": "ANIL YESHWANT DESAI",
+    "constituency_hi": "MUMBAI SOUTH CENTRAL",
+    "state_hi": "Maharashtra"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 7792570,
+      "totalEntries": 4,
+      "avgExpenditure": 1948142.5,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2026,
+        "totalAmount": 7792570,
+        "transactionCount": 4
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 7792570,
+        "transactionCount": 4,
+        "avgAmount": 1948142.5
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 0,
+    "recommendedCount": 34,
+    "recentCompleted": []
+  },
+  "lastUpdated": "2026-08-31T17:26:03.225Z"
+}

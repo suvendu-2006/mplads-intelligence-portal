@@ -1,0 +1,95 @@
+{
+  "mp": {
+    "id": "6a932b5bcd944524379edf3d",
+    "name": "SACHITHANANTHAM R",
+    "constituency": "DINDIGUL",
+    "state": "Tamil Nadu",
+    "house": "Lok Sabha",
+    "allocatedAmount": 147000000,
+    "totalExpenditure": 91226196,
+    "utilizationPercentage": 62.05863673469387,
+    "completedWorksCount": 50,
+    "recommendedWorksCount": 84,
+    "completedWorksValue": 59427935,
+    "inProgressPayments": 31798261,
+    "paymentGapPercentage": 34.85650218277215,
+    "completionRate": 37.3134328358209,
+    "pendingWorks": 34,
+    "unspentAmount": 55773804,
+    "totalRecommendedAmount": 87536000,
+    "name_hi": "SACHITHANANTHAM R",
+    "constituency_hi": "DINDIGUL",
+    "state_hi": "Tamil Nadu"
+  },
+  "expenditure": {
+    "summary": {
+      "_id": null,
+      "totalExpenditure": 91226196,
+      "totalEntries": 87,
+      "avgExpenditure": 1048576.9655172413,
+      "categories": []
+    },
+    "yearlyTrend": [
+      {
+        "_id": 2025,
+        "totalAmount": 46893550,
+        "transactionCount": 47
+      },
+      {
+        "_id": 2026,
+        "totalAmount": 44332646,
+        "transactionCount": 40
+      }
+    ],
+    "categoryBreakdown": [
+      {
+        "_id": null,
+        "totalAmount": 91226196,
+        "transactionCount": 87,
+        "avgAmount": 1048576.9655172413
+      }
+    ]
+  },
+  "works": {
+    "completedCount": 50,
+    "recommendedCount": 84,
+    "recentCompleted": [
+      {
+        "_id": "6a932bb5cd94452437a1df2c",
+        "workCategory": "Normal/Others",
+        "workDescription": "Palani Union Karadikoottam Village Akkamanayakanoor near Bus Stop Solar System Light",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 578000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df2d",
+        "workCategory": "Normal/Others",
+        "workDescription": "Palani Union Karadikootrtam Village Karadikoottam Near Bus Stop Solar System Light",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 578000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1df2e",
+        "workCategory": "Normal/Others",
+        "workDescription": "Palani Union Pappampatty Village Pappampatty Near Market Solar System Light",
+        "completedDate": "2026-04-16T00:00:00.000Z",
+        "finalAmount": 578000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1decb",
+        "workCategory": "Normal/Others",
+        "workDescription": "Veeralapatti Village Bus Stop",
+        "completedDate": "2026-04-06T00:00:00.000Z",
+        "finalAmount": 900000
+      },
+      {
+        "_id": "6a932bb5cd94452437a1c137",
+        "workCategory": "Normal/Others",
+        "workDescription": "senthurai Panchayat Palanipatty Anganwadie Building",
+        "completedDate": "2026-03-30T00:00:00.000Z",
+        "finalAmount": 1689572
+      }
+    ]
+  },
+  "lastUpdated": "2026-08-31T17:25:43.265Z"
+}
