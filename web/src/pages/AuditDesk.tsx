@@ -348,16 +348,16 @@ export const AuditDesk: React.FC = () => {
       ) : (
         <div className="lux-card overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
+            <table className="w-full text-left text-xs border-collapse min-w-[1000px]">
               <thead>
                 <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  <th className="p-3 font-bold w-20 whitespace-nowrap">{t('table.work_id')}</th>
-                  <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
-                  <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
-                  <th className="p-3 font-bold whitespace-nowrap">{t('table.agency')}</th>
-                  <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
-                  <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
-                  <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : t('table.action')}</th>
+                  <th className="p-3 font-bold w-20 shrink-0">{t('table.work_id')}</th>
+                  <th className="p-3 font-bold min-w-[180px]">{t('table.description')}</th>
+                  <th className="p-3 font-bold min-w-[140px] w-40">{t('table.district')}</th>
+                  <th className="p-3 font-bold min-w-[220px] w-64">{t('table.agency')}</th>
+                  <th className="p-3 font-bold w-28 text-right shrink-0 whitespace-nowrap">{t('table.sanctioned_amount')}</th>
+                  <th className="p-3 font-bold w-24 text-center shrink-0">{t('table.severity')}</th>
+                  <th className="p-3 font-bold w-32 sm:w-36 text-right shrink-0">{user.role === 'viewer' ? 'Public Dossier' : t('table.action')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border-primary)]">
@@ -367,27 +367,34 @@ export const AuditDesk: React.FC = () => {
                     className="hover:bg-[var(--surface-alt)]/50 transition-colors duration-100 cursor-pointer"
                     onClick={() => setSelectedFlag(flag)}
                   >
-                    <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                    <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                       #{toNativeDigits(flag.workId || flag.work_id)}
                     </td>
-                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
-                      {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
+                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={flag.work_description || flag.workDescription || flag.description}>
+                      <div className="font-medium text-[var(--text-primary)] line-clamp-2">
+                        {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
+                      </div>
                     </td>
-                    <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
-                      {flag.district ? `${flag.district}, ` : ''}
-                      <span className="text-[var(--text-tertiary)]">{translateState(flag.state, lang)}</span>
+                    <td className="p-3">
+                      <div className="font-bold text-[var(--text-primary)] break-words leading-snug" title={flag.district || 'Statewide'}>
+                        {flag.district || 'Statewide'}
+                      </div>
+                      <div className="text-[11px] text-[var(--text-tertiary)] break-words leading-snug" title={translateState(flag.state, lang)}>
+                        {translateState(flag.state, lang)}
+                      </div>
                     </td>
-                    <td className="p-3 whitespace-nowrap">
+                    <td className="p-3">
                       <AgencyBadge
                         agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'}
                         variant={flag.severity >= 0.7 ? 'critical' : flag.severity >= 0.4 ? 'warning' : 'default'}
                         size="sm"
+                        className="max-w-full"
                       />
                     </td>
-                    <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
+                    <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] text-right">
                       ₹{formatNum(((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                     </td>
-                    <td className="p-3 text-center whitespace-nowrap">
+                    <td className="p-3 text-center">
                       <TierBadge
                         tier={flag.severity >= 0.7 ? 'critical' : flag.severity >= 0.4 ? 'high' : 'medium'}
                         count={Number(flag.severity?.toFixed(2) || 0)}
@@ -395,15 +402,15 @@ export const AuditDesk: React.FC = () => {
                         size="sm"
                       />
                     </td>
-                    <td className="p-3 text-right whitespace-nowrap">
+                    <td className="p-3 text-right">
                       <button
                         onClick={(e) => {
                           e.stopPropagation()
                           setSelectedFlag(flag)
                         }}
-                        className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition shadow-sm whitespace-nowrap"
+                        className="px-2.5 py-1.5 rounded-lg bg-[var(--brand-primary)] text-white font-bold hover:opacity-90 transition shadow-sm text-xs whitespace-nowrap cursor-pointer"
                       >
-                        {user.role === 'viewer' ? 'View Findings' : t('audit.inspect_report')}
+                        {user.role === 'viewer' ? 'View Findings' : t('btn.inspect_report')}
                       </button>
                     </td>
                   </tr>
@@ -513,7 +520,7 @@ export const AuditDesk: React.FC = () => {
               return (
               <div
                 key={entity.entity_id || entity.entity_key || entity.entity_name || entity.name}
-                className="lux-card p-4 flex flex-col justify-between border-l-4"
+                className="lux-card card-content-opt p-4 flex flex-col justify-between border-l-4"
                 style={{
                   borderLeftColor: score >= 15 ? 'var(--danger)' : score >= 10 ? 'var(--warning)' : 'var(--success)'
                 }}

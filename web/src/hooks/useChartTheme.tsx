@@ -9,55 +9,51 @@ export interface ColorPair {
 }
 
 /**
- * Enhanced chart theme hook with Okabe-Ito palette
- * Returns BOTH CSS vars (for HTML) and computed hex (for SVG)
+ * Enhanced chart theme hook with Royal Navy & Cobalt Palette
  *
- * Why dual format?
- * - SVG fill attributes have inconsistent CSS var() support
- * - Safari < 16.4 and Firefox < 115 need actual hex values
- * - HTML elements can use CSS vars for theme reactivity
+ * Designed for institutional clarity and crisp white presentation:
+ * - Allocated = Royal Blue (#2563EB)
+ * - Utilized = Sky Blue (#0284C7)
+ * - Clean white slice dividers (#FFFFFF)
+ * - Dark high-contrast tooltips
  */
 export const useChartTheme = () => {
   const [activeTheme, setActiveTheme] = useState<'light' | 'dark'>(() => {
     if (typeof document !== 'undefined') {
-      return (document.documentElement.getAttribute('data-theme') as 'light' | 'dark') || 'light'
+      const dt = document.documentElement.getAttribute('data-theme')
+      if (dt === 'dark' || dt === 'light') return dt
+      if (document.documentElement.classList.contains('dark')) return 'dark'
     }
-    return 'light'
+    return 'dark'
   })
   const userTheme = useStore((s) => s.theme)
 
   useEffect(() => {
-    const updateTheme = () => {
-      const current =
-        (document.documentElement.getAttribute('data-theme') as 'light' | 'dark') || 'light'
-      setActiveTheme(current)
-    }
-
-    updateTheme()
-
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-          updateTheme()
+    const checkTheme = () => {
+      if (typeof document !== 'undefined') {
+        const dt = document.documentElement.getAttribute('data-theme')
+        if (dt === 'dark' || document.documentElement.classList.contains('dark')) {
+          setActiveTheme('dark')
+        } else {
+          setActiveTheme('light')
         }
+      }
+    }
+    checkTheme()
+
+    if (typeof MutationObserver !== 'undefined' && typeof document !== 'undefined') {
+      const observer = new MutationObserver(() => checkTheme())
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme', 'class'],
       })
-    })
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['data-theme'],
-    })
-
-    return () => observer.disconnect()
+      return () => observer.disconnect()
+    }
   }, [userTheme])
 
   const isDark = activeTheme === 'dark'
   const isLight = !isDark
 
-  /**
-   * Compute actual hex value from CSS custom property
-   * Fallback to hardcoded value if computation fails
-   */
   const getComputedColor = (varName: string, fallback: string): string => {
     if (typeof window === 'undefined' || typeof document === 'undefined') {
       return fallback
@@ -78,79 +74,79 @@ export const useChartTheme = () => {
   return useMemo(() => {
     const categoryColors = getCategoryPalette(isDark)
 
-    // Color pairs
     const allocatedPair: ColorPair = {
-      css: 'var(--brand-primary)',
-      hex: getComputedColor('--brand-primary', palette.fund.allocated[isDark ? 'dark' : 'light']),
+      css: isDark ? 'var(--chart-navy, #5DA1F3)' : 'var(--indigo-700, #4338CA)',
+      hex: isDark ? getComputedColor('--chart-navy', '#5DA1F3') : getComputedColor('--indigo-700', '#4338CA'),
     }
 
     const utilizedPair: ColorPair = {
-      css: 'var(--brand-accent)',
-      hex: getComputedColor('--brand-accent', palette.fund.utilized[isDark ? 'dark' : 'light']),
+      css: isDark ? 'var(--chart-amber, #FF9E5E)' : 'var(--amber-600, #D97706)',
+      hex: isDark ? getComputedColor('--chart-amber', '#FF9E5E') : getComputedColor('--amber-600', '#D97706'),
     }
 
     const pendingPair: ColorPair = {
       css: 'var(--border-primary)',
-      hex: getThemeColor(palette.fund.pending, isDark),
+      hex: isDark ? '#1B2335' : '#E2E8F0',
     }
 
     const criticalPair: ColorPair = {
       css: 'var(--danger)',
-      hex: getComputedColor('--danger', palette.risk.critical[isDark ? 'dark' : 'light']),
+      hex: isDark ? '#FF6B6B' : '#DC2626',
     }
 
     const highPair: ColorPair = {
       css: 'var(--warning)',
-      hex: getComputedColor('--warning', palette.risk.high[isDark ? 'dark' : 'light']),
+      hex: isDark ? '#FF9E3B' : '#D97706',
     }
 
     const mediumPair: ColorPair = {
-      css: 'var(--gold-text)',
-      hex: getComputedColor('--gold-text', palette.risk.medium[isDark ? 'dark' : 'light']),
+      css: 'var(--risk-medium-text)',
+      hex: isDark ? '#FACC15' : '#B45309',
     }
 
     const cleanPair: ColorPair = {
       css: 'var(--success)',
-      hex: getComputedColor('--success', palette.risk.clean[isDark ? 'dark' : 'light']),
+      hex: isDark ? '#2FD0A0' : '#2563EB',
     }
 
-    const gridColor = getComputedColor('--border-primary', isDark ? '#2D2723' : '#E7E2D9')
-    const textColor = getComputedColor('--text-secondary', isDark ? '#C8C0B6' : '#4A443D')
-    const mutedTextColor = getComputedColor('--text-tertiary', isDark ? '#A39A90' : '#6B645C')
+    const gridColor = isDark ? '#1B2335' : '#E2E8F0'
+    const textColor = isDark ? '#94A3B8' : '#334155'
+    const mutedTextColor = isDark ? '#64748B' : '#64748B'
 
+    // Tooltip styling
     const tooltip = {
-      bg: getComputedColor('--surface-primary', isDark ? '#1D1916' : '#FFFFFF'),
-      border: getComputedColor('--border-primary', isDark ? '#2D2723' : '#E7E2D9'),
-      text: getComputedColor('--text-primary', isDark ? '#F3EEE8' : '#1F1A17'),
+      bg: isDark ? '#0D121D' : '#0F172A',
+      border: isDark ? '#1B2335' : '#1E293B',
+      text: '#FFFFFF',
     }
 
     // Chart color pairs array for category
     const chartColors: ColorPair[] = categoryColors.map((hex, idx) => ({
-      css: `var(--category-${idx}, ${hex})`,
+      css: `var(--chart-${idx + 1}, ${hex})`,
       hex,
     }))
 
     // Gradients JSX for SVG defs
     const gradients = (
       <defs>
+        <linearGradient id="barAllocatedGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={isDark ? '#5DA1F3' : '#4F46E5'} stopOpacity={1} />
+          <stop offset="100%" stopColor={isDark ? '#3B82F6' : '#3730A3'} stopOpacity={0.95} />
+        </linearGradient>
+
+        <linearGradient id="barUtilizedGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor={isDark ? '#FF9E5E' : '#F59E0B'} stopOpacity={1} />
+          <stop offset="100%" stopColor={isDark ? '#E58F39' : '#D97706'} stopOpacity={0.95} />
+        </linearGradient>
+
         <linearGradient id="gradientAllocated" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={categoryColors[0]} stopOpacity={0.6} />
-          <stop offset="95%" stopColor={categoryColors[0]} stopOpacity={0.02} />
+          <stop offset="0%" stopColor={isDark ? '#5DA1F3' : '#2563EB'} stopOpacity={0.6} />
+          <stop offset="95%" stopColor={isDark ? '#5DA1F3' : '#2563EB'} stopOpacity={0.02} />
         </linearGradient>
 
         <linearGradient id="gradientUtilized" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={palette.fund.utilized[isDark ? 'dark' : 'light']} stopOpacity={0.8} />
-          <stop offset="95%" stopColor={palette.fund.utilized[isDark ? 'dark' : 'light']} stopOpacity={0.05} />
-        </linearGradient>
-
-        <linearGradient id="gradientNavy" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={allocatedPair.hex} stopOpacity={0.5} />
-          <stop offset="95%" stopColor={allocatedPair.hex} stopOpacity={0.02} />
-        </linearGradient>
-
-        <linearGradient id="gradientGold" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={utilizedPair.hex} stopOpacity={0.7} />
-          <stop offset="95%" stopColor={utilizedPair.hex} stopOpacity={0.05} />
+          <stop offset="0%" stopColor={isDark ? '#FF9E5E' : '#0284C7'} stopOpacity={0.8} />
+          <stop offset="95%" stopColor={isDark ? '#FF9E5E' : '#0284C7'} stopOpacity={0.05} />
         </linearGradient>
       </defs>
     )
@@ -160,64 +156,40 @@ export const useChartTheme = () => {
       isLight,
       isDark,
 
-      /**
-       * Categorical palette (Okabe-Ito 8 colors)
-       * Use for data series in charts
-       */
       category: categoryColors,
 
-      /**
-       * Fund allocation colors (hero charts)
-       * Blue = Allocated | Gold = Utilized | Grey = Pending
-       */
       allocated: allocatedPair,
       utilized: utilizedPair,
       pending: pendingPair,
 
-      /**
-       * Risk tier colors
-       * ALWAYS pair with text labels
-       */
       critical: criticalPair,
       high: highPair,
       medium: mediumPair,
       clean: cleanPair,
 
-      /**
-       * Sequential ramp (maps)
-       */
       sequential: palette.sequential[isDark ? 'dark' : 'light'],
 
-      /**
-       * Chart element colors
-       */
       gridColor,
       textColor,
       mutedTextColor,
 
-      /**
-       * Tooltip styling
-       */
       tooltip,
       tooltipBg: tooltip.bg,
       tooltipBorder: tooltip.border,
       tooltipText: tooltip.text,
 
-      /**
-       * Gradients definition for Recharts SVG
-       */
+      // Slice border for pie / donut charts: pure crisp dark card or white
+      sliceBorder: isDark ? '#0D121D' : '#FFFFFF',
+
       gradients,
 
-      /**
-       * Backward compatibility pairs
-       */
       navy: allocatedPair,
       emerald: cleanPair,
-      sky: { css: 'var(--info)', hex: categoryColors[5] },
+      sky: utilizedPair,
       amber: highPair,
       rose: criticalPair,
-      violet: { css: 'var(--category-4)', hex: categoryColors[4] },
-      slate: { css: 'var(--category-6)', hex: categoryColors[6] },
+      violet: { css: 'var(--chart-6)', hex: categoryColors[5] },
+      slate: { css: 'var(--chart-8)', hex: categoryColors[7] },
       gold: utilizedPair,
 
       chartColors,

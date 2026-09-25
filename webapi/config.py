@@ -38,7 +38,10 @@ def get_database_url() -> str:
         return env_url
     
     db_file = find_database_path()
-    return f"sqlite:///file:{db_file.resolve()}?mode=ro&immutable=1&uri=true"
+    if os.environ.get("VERCEL"):
+        return f"sqlite:///file:{db_file.resolve()}?mode=ro&immutable=1&uri=true"
+    return f"sqlite:///{db_file.resolve()}"
+
 
 DB_PATH = find_database_path()
 DB_URL = get_database_url()

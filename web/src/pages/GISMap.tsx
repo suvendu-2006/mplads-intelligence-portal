@@ -1,15 +1,19 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
 import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
-import { useTranslation, t, toNativeDigits, translateState } from '../lib/i18n'
+import { useTranslation, t, toNativeDigits, translateState, translateConstituency, translateMP } from '../lib/i18n'
 
 const INDIA_CENTER: [number, number] = [22.0, 82.5]
 const INDIA_BOUNDS: [[number, number], [number, number]] = [
   [6.0, 67.5],
   [37.5, 97.5]
+]
+const PADDED_INDIA_BOUNDS: [[number, number], [number, number]] = [
+  [3.0, 64.0],
+  [39.0, 101.0]
 ]
 
 const TERRITORIES = [
@@ -40,8 +44,20 @@ function ResetViewControl() {
 
 function InitialFitBounds() {
   const map = useMap()
+  const initialized = useRef(false)
+
   useEffect(() => {
-    map.fitBounds(INDIA_BOUNDS, { padding: [15, 15] })
+    if (!initialized.current) {
+      initialized.current = true
+      const timer = setTimeout(() => {
+        map.flyToBounds(INDIA_BOUNDS, {
+          duration: 1.5,
+          easeLinearity: 0.25,
+          padding: [15, 15],
+        })
+      }, 60)
+      return () => clearTimeout(timer)
+    }
   }, [map])
   return null
 }
@@ -82,25 +98,15 @@ const GEO_CACHE: Record<string, any> = {}
 export const GISMap: React.FC = () => {
   const { t, lang } = useTranslation()
   const [layerType, setLayerType] = useState<'pcs' | 'districts'>('pcs')
-  const [geoData, setGeoData] = useState<any>(() => {
-    if (GEO_CACHE['pcs']) return GEO_CACHE['pcs']
-    try {
-      const saved = sessionStorage.getItem('cached_map_pcs')
-      if (saved) {
-        const parsed = JSON.parse(saved)
-        GEO_CACHE['pcs'] = parsed
-        return parsed
-      }
-    } catch {}
-    return null
-  })
-  const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'] && typeof window !== 'undefined' && !sessionStorage.getItem('cached_map_pcs'))
+  const [geoData, setGeoData] = useState<any>(() => GEO_CACHE['pcs'] || null)
+  const [loading, setLoading] = useState(() => !GEO_CACHE['pcs'])
   const [metric, setMetric] = useState<'utilization' | 'works'>('utilization')
   const [selectedFeature, setSelectedFeature] = useState<any>(null)
   const [mapSearch, setMapSearch] = useState('')
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [flyToBounds, setFlyToBounds] = useState<[[number, number], [number, number]] | null>(null)
   const searchContainerRef = useRef<HTMLDivElement>(null)
+  const geoJsonRef = useRef<any>(null)
   const [searchParams] = useSearchParams()
   const queryParam = searchParams.get('pc') || searchParams.get('q') || searchParams.get('district')
 
@@ -138,21 +144,6 @@ export const GISMap: React.FC = () => {
         return
       }
 
-      try {
-        sessionStorage.removeItem('cached_map_pcs')
-        sessionStorage.removeItem('cached_map_districts')
-        sessionStorage.removeItem('cached_map_v2_pcs')
-        sessionStorage.removeItem('cached_map_v2_districts')
-        const saved = sessionStorage.getItem(`cached_map_v3_${layerType}`)
-        if (saved) {
-          const parsed = JSON.parse(saved)
-          GEO_CACHE[layerType] = parsed
-          setGeoData(parsed)
-          setLoading(false)
-          return
-        }
-      } catch {}
-
       setLoading(true)
       try {
         const staticUrl = `/data/${layerType === 'pcs' ? 'pcs_enriched' : 'districts_enriched'}.geojson`
@@ -167,12 +158,6 @@ export const GISMap: React.FC = () => {
           const featData = (json.data && json.data.type === 'FeatureCollection') ? json.data : json
           GEO_CACHE[layerType] = featData
           setGeoData(featData)
-          try {
-            const serialized = JSON.stringify(featData)
-            if (serialized.length < 3 * 1024 * 1024) {
-              sessionStorage.setItem(`cached_map_v3_${layerType}`, serialized)
-            }
-          } catch {}
         }
       } catch (err) {
         console.error('Failed to load GeoJSON:', err)
@@ -259,7 +244,7 @@ export const GISMap: React.FC = () => {
     }
   }
 
-  const styleFeature = (feature: any) => {
+  const styleFeature = useCallback((feature: any) => {
     const props = feature.properties || {}
     let val = 0
     let isPct = true
@@ -292,27 +277,21 @@ export const GISMap: React.FC = () => {
       color: isDark ? 'rgba(255, 255, 255, 0.4)' : 'rgba(30, 41, 59, 0.5)',
       fillOpacity: isIsland ? 0.95 : 0.85,
     }
-  }
+  }, [layerType, metric, isDark, ramp])
 
-  const onEachFeature = (feature: any, layer: any) => {
+  useEffect(() => {
+    if (geoJsonRef.current) {
+      geoJsonRef.current.setStyle(styleFeature)
+    }
+  }, [metric, isDark, styleFeature])
+
+  const onEachFeature = useCallback((feature: any, layer: any) => {
     layer.on({
       click: () => {
         setSelectedFeature(feature.properties)
       },
-      mouseover: (e: any) => {
-        const l = e.target
-        l.setStyle({
-          weight: 2.5,
-          color: isDark ? palette.fund.utilized.dark : palette.fund.utilized.light,
-          fillOpacity: 0.9,
-        })
-      },
-      mouseout: (e: any) => {
-        const l = e.target
-        l.setStyle(styleFeature(feature))
-      },
     })
-  }
+  }, [])
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
@@ -408,12 +387,12 @@ export const GISMap: React.FC = () => {
                       className="w-full text-left px-2.5 py-1.5 rounded-lg text-xs hover:bg-[var(--surface-alt)] flex items-center justify-between group transition"
                     >
                       <div className="min-w-0">
-                        <div className="font-bold text-[var(--text-primary)] truncate">{s.name}</div>
+                        <div className="font-bold text-[var(--text-primary)] truncate">{translateConstituency(s.name, lang)}</div>
                         <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                          {s.subtext || `${s.state} ${s.mp ? `• MP: ${s.mp}` : ''}`}
+                          {s.subtext || `${translateState(s.state, lang)} ${s.mp ? `• ${t('geo.mp')}: ${translateMP(s.mp, lang)}` : ''}`}
                         </div>
                       </div>
-                      <span className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded shrink-0 ml-1.5 ${s.type === 'Assembly' ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' : 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'}`}>
+                      <span className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded shrink-0 ml-1.5 ${s.type === 'Assembly' ? 'bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]' : 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'}`}>
                         {s.type}
                       </span>
                     </button>
@@ -484,16 +463,17 @@ export const GISMap: React.FC = () => {
       {/* Map + Detail Sidebar Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Map Container */}
-        <div className="lg:col-span-3 lux-card p-2 overflow-hidden h-[680px] lg:h-[720px] relative">
+        <div className="lg:col-span-3 lux-card p-2 overflow-hidden h-[680px] lg:h-[720px] relative animate-in fade-in zoom-in-95 duration-500">
           <MapContainer
+            preferCanvas={true}
             center={INDIA_CENTER}
-            zoom={4.3}
+            zoom={3.7}
             zoomSnap={0.1}
             zoomDelta={0.25}
-            minZoom={3.5}
+            minZoom={3.2}
             maxZoom={9}
-            maxBounds={INDIA_BOUNDS}
-            maxBoundsViscosity={1.0}
+            maxBounds={PADDED_INDIA_BOUNDS}
+            maxBoundsViscosity={0.7}
             style={{ height: '100%', width: '100%', borderRadius: '12px' }}
             className="z-0"
           >
@@ -502,7 +482,8 @@ export const GISMap: React.FC = () => {
             <MapFocusController bounds={flyToBounds} />
             {geoData && (
               <GeoJSON
-                key={`${layerType}-${metric}`}
+                ref={geoJsonRef}
+                key={layerType}
                 data={geoData}
                 style={styleFeature}
                 onEachFeature={onEachFeature}
@@ -547,17 +528,19 @@ export const GISMap: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-extrabold text-[var(--text-primary)] tracking-tight">
-                    {selectedFeature.pc_name ||
+                    {translateConstituency(
+                      selectedFeature.pc_name ||
                       selectedFeature.NAME_2 ||
-                      selectedFeature.district ||
-                      t('geo.geospatial_zone')}
+                      selectedFeature.district,
+                      lang
+                    ) || t('geo.geospatial_zone')}
                   </h3>
                   <div className="text-xs text-[var(--text-secondary)] font-medium">
                     {t('geo.state')}: <strong className="text-[var(--text-primary)]">{translateState(selectedFeature.state || selectedFeature.NAME_1, lang) || 'India'}</strong>
                   </div>
                   {selectedFeature.mp_name && (
                     <div className="text-xs text-[var(--text-secondary)] mt-0.5">
-                      {t('geo.mp')}: <strong className="text-[var(--text-primary)]">{selectedFeature.mp_name}</strong>
+                      {t('geo.mp')}: <strong className="text-[var(--text-primary)]">{translateMP(selectedFeature.mp_name, lang)}</strong>
                     </div>
                   )}
                 </div>
@@ -581,18 +564,18 @@ export const GISMap: React.FC = () => {
                       <div className="p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] space-y-2.5 text-xs">
                         <div className="font-bold text-[var(--text-secondary)] text-[11px] uppercase tracking-wider flex items-center justify-between">
                           <span>{t('geo.works_progress')}</span>
-                          <span className="text-emerald-600 dark:text-emerald-400 font-extrabold">{toNativeDigits(completionRate, lang)}% {t('status.completed')}</span>
+                          <span className="text-[var(--brand-primary)] font-extrabold">{toNativeDigits(completionRate, lang)}% {t('status.completed')}</span>
                         </div>
 
                         {/* Dual-tone Progress Bar */}
                         <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] overflow-hidden flex">
                           <div
-                            className="h-full bg-emerald-500 transition-all duration-500"
+                            className="h-full bg-[var(--brand-primary)] transition-[width] duration-500 ease-out"
                             style={{ width: `${Math.min(100, Number(completionRate))}%` }}
                             title={`Completed: ${completedWorks} works`}
                           />
                           <div
-                            className="h-full bg-amber-500 transition-all duration-500"
+                            className="h-full bg-amber-500 transition-[width] duration-500 ease-out"
                             style={{ width: `${Math.max(0, 100 - Number(completionRate))}%` }}
                             title={`Remained: ${remainedWorks} works`}
                           />
@@ -611,10 +594,10 @@ export const GISMap: React.FC = () => {
 
                           <div className="flex justify-between items-center">
                             <span className="text-[var(--text-tertiary)] flex items-center gap-1.5">
-                              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                              <span className="w-2 h-2 rounded-full bg-[var(--brand-primary)]" />
                               {t('kpi.completed')}:
                             </span>
-                            <span className="font-extrabold text-emerald-600 dark:text-emerald-400 tabular-nums">
+                            <span className="font-extrabold text-[var(--brand-primary)] tabular-nums">
                               {toNativeDigits(completedWorks.toLocaleString(), lang)}
                             </span>
                           </div>
@@ -656,7 +639,7 @@ export const GISMap: React.FC = () => {
                           {utilRate && (
                             <div className="flex justify-between">
                               <span className="text-[var(--text-tertiary)]">{t('kpi.utilization')}:</span>
-                              <span className="font-extrabold text-emerald-600 dark:text-emerald-400 tabular-nums">
+                              <span className="font-extrabold text-[var(--text-primary)] tabular-nums">
                                 {toNativeDigits(Number(utilRate).toFixed(1), lang)}%
                               </span>
                             </div>
@@ -681,11 +664,13 @@ export const GISMap: React.FC = () => {
 
                 {selectedFeature.state && (
                   <Link
-                    to={`/states/${encodeURIComponent(selectedFeature.state)}`}
-                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer"
+                    to={selectedFeature.pc_name ? `/constituencies/${encodeURIComponent(selectedFeature.pc_name)}` : `/states/${encodeURIComponent(selectedFeature.state)}`}
+                    className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-extrabold text-xs flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-colors cursor-pointer"
                     style={{ color: '#ffffff', textDecoration: 'none' }}
                   >
-                    <span style={{ color: '#ffffff' }} className="font-bold text-white">{t('geo.view_state_report')}</span>
+                    <span style={{ color: '#ffffff' }} className="font-bold text-white">
+                      {selectedFeature.pc_name ? `${translateConstituency(selectedFeature.pc_name, lang)}` : t('geo.view_state_report')}
+                    </span>
                     <ArrowRight size={14} style={{ color: '#ffffff' }} className="text-white" />
                   </Link>
                 )}

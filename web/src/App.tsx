@@ -1,31 +1,48 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
-import { NationalDashboard } from './pages/NationalDashboard'
 import { ScrollToTop } from './components/ScrollToTop'
+
+import { RouteErrorBoundary } from './components/RouteErrorBoundary'
 
 function lazyWithRetry<T extends React.ComponentType<any>>(
   componentImport: () => Promise<{ default: T } | any>
 ) {
   return React.lazy(async () => {
-    const hasRefreshed = typeof window !== 'undefined' && sessionStorage.getItem('chunk_force_refreshed') === 'true'
+    let hasRefreshed = false
+    try {
+      hasRefreshed = typeof window !== 'undefined' && sessionStorage.getItem('chunk_force_refreshed') === 'true'
+    } catch {}
+
     try {
       const component = await componentImport()
       if (typeof window !== 'undefined') {
-        sessionStorage.setItem('chunk_force_refreshed', 'false')
+        try {
+          sessionStorage.setItem('chunk_force_refreshed', 'false')
+        } catch {}
       }
       return 'default' in component ? component : { default: component }
     } catch (error: any) {
       if (!hasRefreshed && typeof window !== 'undefined') {
-        sessionStorage.setItem('chunk_force_refreshed', 'true')
+        try {
+          sessionStorage.setItem('chunk_force_refreshed', 'true')
+        } catch {}
         window.location.reload()
-        return new Promise<{ default: T }>(() => {})
+        return new Promise<{ default: T }>((_, reject) => {
+          setTimeout(() => reject(new Error('Chunk reload initiated')), 1500)
+        })
+      }
+      if (typeof window !== 'undefined') {
+        try {
+          sessionStorage.removeItem('chunk_force_refreshed')
+        } catch {}
       }
       throw error
     }
   })
 }
 
+const NationalDashboard = lazyWithRetry(() => import('./pages/NationalDashboard').then(m => ({ default: m.NationalDashboard })))
 const BrowseStates = lazyWithRetry(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))
 const StateDetail = lazyWithRetry(() => import('./pages/StateDetail').then(m => ({ default: m.StateDetail })))
 const BrowseMPs = lazyWithRetry(() => import('./pages/BrowseMPs').then(m => ({ default: m.BrowseMPs })))
@@ -69,39 +86,41 @@ export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<NationalDashboard />} />
-          <Route path="login" element={<Login />} />
-          <Route path="states" element={<BrowseStates />} />
-          <Route path="states/:state" element={<StateDetail />} />
-          <Route path="state/:state" element={<StateDetail />} />
-          <Route path="state" element={<BrowseStates />} />
-          <Route path="mps" element={<BrowseMPs />} />
-          <Route path="mps/:id" element={<MPDetail />} />
-          <Route path="mp/:id" element={<MPDetail />} />
-          <Route path="mp" element={<BrowseMPs />} />
-          <Route path="constituency/:name" element={<ConstituencyDetail />} />
-          <Route path="constituencies/:name" element={<ConstituencyDetail />} />
-          <Route path="constituency" element={<BrowseMPs />} />
-          <Route path="constituencies" element={<BrowseMPs />} />
-          <Route path="mp-dashboard" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
-          <Route path="mp-dashboard/:id" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
-          <Route path="mp-console" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
-          <Route path="mp-console/:id" element={<ProtectedRoute allowedRoles={['mp', 'mospi']} roleName="Member of Parliament"><MPDashboard /></ProtectedRoute>} />
-          <Route path="district-dashboard" element={<DistrictDashboard />} />
-          <Route path="district-console" element={<DistrictDashboard />} />
-          <Route path="districts/:district" element={<DistrictDashboard />} />
-          <Route path="districts" element={<DistrictDashboard />} />
-          <Route path="district/:district" element={<DistrictDashboard />} />
-          <Route path="district" element={<DistrictDashboard />} />
-          <Route path="my-state" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
-          <Route path="state-console" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
-          <Route path="audit" element={<ProtectedRoute allowedRoles={['mospi']} roleName="MoSPI Central Authority"><AuditDesk /></ProtectedRoute>} />
-          <Route path="map" element={<GISMap />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <RouteErrorBoundary>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<NationalDashboard />} />
+            <Route path="login" element={<Login />} />
+            <Route path="states" element={<BrowseStates />} />
+            <Route path="states/:state" element={<StateDetail />} />
+            <Route path="state/:state" element={<StateDetail />} />
+            <Route path="state" element={<BrowseStates />} />
+            <Route path="mps" element={<BrowseMPs />} />
+            <Route path="mps/:id" element={<MPDetail />} />
+            <Route path="mp/:id" element={<MPDetail />} />
+            <Route path="mp" element={<BrowseMPs />} />
+            <Route path="constituency/:name" element={<ConstituencyDetail />} />
+            <Route path="constituencies/:name" element={<ConstituencyDetail />} />
+            <Route path="constituency" element={<BrowseMPs />} />
+            <Route path="constituencies" element={<BrowseMPs />} />
+            <Route path="mp-dashboard" element={<MPDashboard />} />
+            <Route path="mp-dashboard/:id" element={<MPDashboard />} />
+            <Route path="mp-console" element={<MPDashboard />} />
+            <Route path="mp-console/:id" element={<MPDashboard />} />
+            <Route path="district-dashboard" element={<DistrictDashboard />} />
+            <Route path="district-console" element={<DistrictDashboard />} />
+            <Route path="districts/:district" element={<DistrictDashboard />} />
+            <Route path="districts" element={<DistrictDashboard />} />
+            <Route path="district/:district" element={<DistrictDashboard />} />
+            <Route path="district" element={<DistrictDashboard />} />
+            <Route path="my-state" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
+            <Route path="state-console" element={<ProtectedRoute allowedRoles={['state_nodal_officer', 'mospi']} roleName="State Nodal Officer"><MyState /></ProtectedRoute>} />
+            <Route path="audit" element={<ProtectedRoute allowedRoles={['mospi']} roleName="MoSPI Central Authority"><AuditDesk /></ProtectedRoute>} />
+            <Route path="map" element={<GISMap />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </RouteErrorBoundary>
     </BrowserRouter>
   )
 }

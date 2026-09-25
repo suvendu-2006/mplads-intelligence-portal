@@ -77,12 +77,27 @@ interface AppStore {
   ) => Promise<void>
 }
 
+export const ROLE_PERMISSIONS: Record<string, string[]> = {
+  viewer: ['read:national', 'read:states', 'read:mps', 'read:map'],
+  mp: ['read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter'],
+  district_authority: ['read:district_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:sanction_work', 'action:review_mb'],
+  analyst: ['read:*', 'filter:advanced'],
+  auditor: ['read:*', 'filter:*', 'export:flags'],
+  state_nodal_officer: ['read:my_state', 'read:entity_risks', 'read:national', 'read:states', 'read:mps', 'read:map'],
+  admin: ['*'],
+  mospi: ['*']
+}
+
+export function getRoleDefaultPermissions(role: string): string[] {
+  return ROLE_PERMISSIONS[role] || ROLE_PERMISSIONS.viewer
+}
+
 export const useStore = create<AppStore>()(
   persist(
     (set) => ({
       user: {
         role: 'viewer',
-        permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+        permissions: getRoleDefaultPermissions('viewer'),
         sessionToken: 'default_viewer',
         isAuthenticated: false,
         email: 'citizen@satark.gov.in'
@@ -117,27 +132,15 @@ export const useStore = create<AppStore>()(
         mpId?: string,
         mpName?: string
       ) => {
-        const defaultPermissions = role === 'mospi'
-          ? ['read:all', 'write:all', 'audit:execute', 'admin:access']
-          : role === 'state_nodal_officer'
-          ? ['read:state', 'write:state', 'audit:inspect', 'read:my_state', 'read:entity_risks', 'read:national', 'read:states', 'read:mps', 'read:map']
-          : role === 'district_authority'
-          ? ['read:district', 'write:district', 'audit:inspect', 'read:district_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:sanction_work', 'action:review_mb']
-          : role === 'mp'
-          ? ['read:mp', 'write:mp', 'read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter']
-          : ['read:national', 'read:states', 'read:mps', 'read:map']
+        const defaultPermissions = getRoleDefaultPermissions(role)
 
         const newState = state ? state : (
-          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
+          role === 'viewer' || role === 'mospi' ? undefined : undefined
         )
-        const newDistrict = district ? district : (
-          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
-        )
-        const newMpId = mpId ? mpId : (
-          role === 'viewer' || role === 'mospi' ? 'ALL' : undefined
-        )
+        const newDistrict = district ? district : undefined
+        const newMpId = mpId ? mpId : undefined
         const newMpName = mpName ? mpName : (
-          role === 'viewer' || role === 'mospi' ? 'All Members of Parliament' : undefined
+          role === 'viewer' || role === 'mospi' ? undefined : undefined
         )
 
         set({
@@ -162,31 +165,48 @@ export const useStore = create<AppStore>()(
           clearApiCache()
         }
 
-        fetch('/api/switch-role', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            role,
-            state: newState,
-            district: newDistrict,
-            mp_id: newMpId,
-            mp_name: newMpName
-          }),
-        }).catch(() => {})
+        try {
+          const res = await fetch('/api/switch-role', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              role,
+              state: newState,
+              district: newDistrict,
+              mp_id: newMpId,
+              mp_name: newMpName
+            }),
+          })
+          if (res.ok) {
+            const json = await res.json()
+            if (json?.data) {
+              set((prev) => ({
+                user: {
+                  ...prev.user,
+                  role: json.data.role || prev.user.role,
+                  sessionToken: json.data.session_token || prev.user.sessionToken,
+                  permissions: json.data.permissions || prev.user.permissions
+                }
+              }))
+            }
+          }
+        } catch (err) {
+          console.warn('[SATARK-LOGIN] Role session sync note (offline/demo fallback):', err)
+        }
       },
       logout: () => {
         set({
           searchQuery: '',
           user: {
             role: 'viewer',
-            permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+            permissions: getRoleDefaultPermissions('viewer'),
             sessionToken: 'default_viewer',
             isAuthenticated: false,
             email: 'citizen@satark.gov.in',
-            state: 'ALL',
-            district: 'ALL',
-            mpId: 'ALL',
-            mpName: 'All Members of Parliament'
+            state: undefined,
+            district: undefined,
+            mpId: undefined,
+            mpName: undefined
           }
         })
         if (typeof window !== 'undefined') {
@@ -204,27 +224,19 @@ export const useStore = create<AppStore>()(
         mpName?: string
       ) => {
         const isOfficial = role !== 'viewer'
-        const defaultPermissions = role === 'mospi'
-          ? ['read:all', 'write:all', 'audit:execute', 'admin:access']
-          : role === 'state_nodal_officer'
-          ? ['read:state', 'write:state', 'audit:inspect', 'read:my_state', 'read:entity_risks', 'read:national', 'read:states', 'read:mps', 'read:map']
-          : role === 'district_authority'
-          ? ['read:district', 'write:district', 'audit:inspect', 'read:district_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:sanction_work', 'action:review_mb']
-          : role === 'mp'
-          ? ['read:mp', 'write:mp', 'read:mp_dashboard', 'read:national', 'read:states', 'read:mps', 'read:map', 'action:do_letter']
-          : ['read:national', 'read:states', 'read:mps', 'read:map']
+        const defaultPermissions = getRoleDefaultPermissions(role)
 
         const newState = state ? state : (
-          role === 'state_nodal_officer' || role === 'district_authority' || role === 'mp' ? 'Odisha' : 'ALL'
+          role === 'state_nodal_officer' || role === 'district_authority' || role === 'mp' ? 'Odisha' : undefined
         )
         const newDistrict = district ? district : (
-          role === 'district_authority' ? 'Sambalpur' : (role === 'viewer' || role === 'mospi' ? 'ALL' : undefined)
+          role === 'district_authority' ? 'Sambalpur' : undefined
         )
         const newMpId = mpId ? mpId : (
-          role === 'mp' ? 'MP-OD-03' : (role === 'viewer' || role === 'mospi' ? 'ALL' : undefined)
+          role === 'mp' ? 'MP-OD-03' : undefined
         )
         const newMpName = mpName ? mpName : (
-          role === 'mp' ? 'Dharmendra Pradhan' : (role === 'viewer' || role === 'mospi' ? 'All Members of Parliament' : undefined)
+          role === 'mp' ? 'Dharmendra Pradhan' : undefined
         )
 
         const defaultEmail = role === 'viewer'
@@ -238,7 +250,7 @@ export const useStore = create<AppStore>()(
           : `mp.${(newMpId || 'sambalpur').toLowerCase()}@sansad.nic.in`
 
         // 1. Instantaneous local update: reset search query & set clean role state
-        set((prev) => ({
+        set(() => ({
           searchQuery: '',
           user: {
             role,
@@ -261,18 +273,19 @@ export const useStore = create<AppStore>()(
           clearApiCache()
         }
 
-        // 3. Asynchronously synchronize with backend in background (never block navigation)
-        fetch('/api/switch-role', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            role,
-            state: newState,
-            district: newDistrict,
-            mp_id: newMpId,
-            mp_name: newMpName
-          }),
-        }).then(async (res) => {
+        // 3. Synchronize with backend and await resolution to keep state & permissions unified
+        try {
+          const res = await fetch('/api/switch-role', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              role,
+              state: newState,
+              district: newDistrict,
+              mp_id: newMpId,
+              mp_name: newMpName
+            }),
+          })
           if (res.ok) {
             const json = await res.json()
             if (json?.data) {
@@ -286,14 +299,14 @@ export const useStore = create<AppStore>()(
               }))
             }
           }
-        }).catch((err) => {
-          console.log('[SATARK-ROLE] Background sync note:', err)
-        })
+        } catch (err) {
+          console.warn('[SATARK-ROLE] Role switch sync note (offline/demo fallback):', err)
+        }
       },
     }),
     {
       name: 'mplads-user-session',
-      version: 6,
+      version: 7,
       partialize: (state) => ({
         theme: state.theme,
         lang: state.lang,
@@ -311,10 +324,10 @@ export const useStore = create<AppStore>()(
         }
       }),
       migrate: (persistedState: any, version: number) => {
-        if (version < 6) {
+        if (version < 7) {
           return {
             ...persistedState,
-            theme: persistedState?.theme === 'dark' ? 'dark' : 'light',
+            theme: 'light', // User explicitly requests website to open in light mode by default
             user: {
               role: persistedState?.user?.role || 'viewer',
               permissions: persistedState?.user?.permissions || ['read:national', 'read:states', 'read:mps', 'read:map'],

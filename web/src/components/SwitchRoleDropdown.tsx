@@ -194,7 +194,7 @@ export const SwitchRoleDropdown: React.FC = () => {
               <div className="p-2.5 mb-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-[10px] text-amber-700 dark:text-amber-400 font-bold block uppercase tracking-wider">
-                    🔒 Logged In Session
+                    Logged In Session
                   </span>
                   <span className="font-mono text-[11px] font-bold text-[var(--text-primary)]">
                     {user.email || user.role}

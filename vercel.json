@@ -5,7 +5,8 @@
   "outputDirectory": "web/dist",
   "functions": {
     "api/index.py": {
-      "includeFiles": "api/**"
+      "includeFiles": "{api/**,webapi/**,mplads_fraud_detection/**}",
+      "excludeFiles": "{artifacts/**,01_*/**,02_*/**,03_*/**,04_*/**,05_*/**,06_*/**,07_*/**,08_*/**,09_*/**,10_*/**,backups/**,data/**,quarantine/**,logs/**,docs/**,tests/**,web/**,models/**,mplads_dev.db*,*.xlsx,*.pkl,_uv/**}"
     }
   },
   "headers": [

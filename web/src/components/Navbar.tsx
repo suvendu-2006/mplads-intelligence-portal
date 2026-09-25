@@ -3,19 +3,39 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
 import { LanguageSelector } from './LanguageSelector'
-import { useTranslation, translateState } from '../lib/i18n'
+import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
-import { ALL_MP_SEATS, MPSeatItem } from '../lib/allMpsData'
-import { findAssemblyConstituencies, ASSEMBLY_CONSTITUENCIES, AssemblyItem } from '../lib/assemblyConstituencies'
+import {
+  loadSearchData,
+  getLoadedSearchData,
+  preloadSearchData,
+  type MPSeatItem,
+  type AssemblyItem
+} from '../lib/searchDataLoader'
 
 export const Navbar: React.FC = () => {
   const { theme, searchQuery, setTheme, setSearchQuery, user, setMpJurisdiction } = useStore()
   const { t, formatNum, lang } = useTranslation()
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false)
+  const [searchData, setSearchData] = React.useState(getLoadedSearchData)
   const searchContainerRef = React.useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
+
+  const ensureSearchData = React.useCallback(() => {
+    if (!searchData) {
+      loadSearchData()
+        .then(setSearchData)
+        .catch((err) => {
+          console.warn('[SATARK-NAV] Search data load warning:', err)
+        })
+    }
+  }, [searchData])
+
+  React.useEffect(() => {
+    preloadSearchData()
+  }, [])
 
   // Close dropdown on click outside
   React.useEffect(() => {
@@ -89,7 +109,7 @@ export const Navbar: React.FC = () => {
   // Instant matching of Parliamentary Constituencies & MPs across all 774 seats
   const { matchingConstituencies, matchingMps } = React.useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
-    if (q.length < 1 || /^\d+$/.test(q)) {
+    if (!searchData || q.length < 1 || /^\d+$/.test(q)) {
       return { matchingConstituencies: [], matchingMps: [] }
     }
 
@@ -99,7 +119,7 @@ export const Navbar: React.FC = () => {
     const constMatches: MPSeatItem[] = []
     const mpMatches: MPSeatItem[] = []
 
-    for (const seat of ALL_MP_SEATS) {
+    for (const seat of searchData.allMps) {
       if (isStateNodal && seat.state.toLowerCase() !== nodalState) {
         continue
       }
@@ -135,13 +155,13 @@ export const Navbar: React.FC = () => {
       matchingConstituencies: constMatches.slice(0, 5),
       matchingMps: mpMatches.slice(0, 4),
     }
-  }, [searchQuery, user.role, user.state])
+  }, [searchQuery, searchData, user.role, user.state])
 
   // Filter matching Assembly Constituencies (e.g. Padampur, Bijepur, Rohini, Varanasi South)
   const matchingAssemblyConstituencies = React.useMemo(() => {
-    if (qClean.length < 2 || isDigits) return []
-    return findAssemblyConstituencies(qClean, 5)
-  }, [qClean, isDigits])
+    if (!searchData || qClean.length < 2 || isDigits) return []
+    return searchData.findAcs(qClean, 5)
+  }, [searchData, qClean, isDigits])
 
   // Filter matching states (including acronyms)
   const acronymState = STATE_ACRONYMS[qClean]
@@ -191,9 +211,18 @@ export const Navbar: React.FC = () => {
     navigate(`/districts/${encodeURIComponent(distName)}`)
   }
 
-  const handleSelectMp = (mpId: string) => {
+  const handleSelectMp = async (mpId: string) => {
     setIsDropdownOpen(false)
-    const found = ALL_MP_SEATS.find(m => m.id === mpId)
+    let bundle = searchData
+    if (!bundle) {
+      try {
+        bundle = await loadSearchData()
+        setSearchData(bundle)
+      } catch (err) {
+        console.warn('[SATARK-NAV] MP search bundle failed:', err)
+      }
+    }
+    const found = bundle?.allMps?.find(m => m.id === mpId)
     if (found) {
       setMpJurisdiction(found.id, found.name, found.state)
     }
@@ -225,7 +254,7 @@ export const Navbar: React.FC = () => {
     navigate(`/audit?q=${encodeURIComponent(workId)}`)
   }
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
+  const handleSearchSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const q = searchQuery.trim()
     if (!q) return
@@ -245,11 +274,27 @@ export const Navbar: React.FC = () => {
       return
     }
 
+    // Ensure search bundle is available for PC / AC / MP lookup
+    let bundle = searchData
+    if (!bundle) {
+      try {
+        bundle = await loadSearchData()
+        setSearchData(bundle)
+      } catch (err) {
+        console.warn('[SATARK-NAV] Submit search bundle failed:', err)
+      }
+    }
+
+    if (!bundle) {
+      navigate(`/mps?q=${encodeURIComponent(q)}`)
+      return
+    }
+
     // 3. Exact or prefix Constituency match -> Direct to Constituency Detail page!
-    const matchedConst = ALL_MP_SEATS.find(
+    const matchedConst = bundle.allMps.find(
       m => m.constituency.toLowerCase() === qLower ||
            m.constituency.toLowerCase().startsWith(qLower)
-    ) || ALL_MP_SEATS.find(m => m.constituency.toLowerCase().includes(qLower))
+    ) || bundle.allMps.find(m => m.constituency.toLowerCase().includes(qLower))
 
     if (matchedConst && q.length >= 2) {
       navigate(`/constituency/${encodeURIComponent(matchedConst.constituency)}`)
@@ -257,9 +302,9 @@ export const Navbar: React.FC = () => {
     }
 
     // 3b. Assembly Constituency match -> Direct to Constituency Detail page with segment filter!
-    const matchedAc = ASSEMBLY_CONSTITUENCIES.find(
+    const matchedAc = bundle.acs.find(
       a => a.ac.toLowerCase() === qLower || a.ac.toLowerCase().startsWith(qLower)
-    ) || ASSEMBLY_CONSTITUENCIES.find(a => a.ac.toLowerCase().includes(qLower))
+    ) || bundle.acs.find(a => a.ac.toLowerCase().includes(qLower))
 
     if (matchedAc && q.length >= 2) {
       if (matchedAc.pc) {
@@ -272,10 +317,10 @@ export const Navbar: React.FC = () => {
     }
 
     // 4. Exact or prefix MP Name match -> Direct to MP page!
-    const matchedMp = ALL_MP_SEATS.find(
+    const matchedMp = bundle.allMps.find(
       m => m.name.toLowerCase() === qLower ||
            m.name.toLowerCase().startsWith(qLower)
-    ) || ALL_MP_SEATS.find(m => m.name.toLowerCase().includes(qLower))
+    ) || bundle.allMps.find(m => m.name.toLowerCase().includes(qLower))
 
     if (matchedMp && q.length >= 3) {
       navigate(`/mps/${encodeURIComponent(matchedMp.id)}`)
@@ -330,10 +375,14 @@ export const Navbar: React.FC = () => {
               <input
                 type="text"
                 value={searchQuery}
-                onFocus={() => setIsDropdownOpen(true)}
+                onFocus={() => {
+                  setIsDropdownOpen(true)
+                  ensureSearchData()
+                }}
                 onChange={(e) => {
                   setSearchQuery(e.target.value)
                   setIsDropdownOpen(true)
+                  ensureSearchData()
                 }}
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') setIsDropdownOpen(false)
@@ -390,7 +439,7 @@ export const Navbar: React.FC = () => {
                   <div>
                     <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)] px-2.5 py-1 flex items-center justify-between">
                       <span>Assembly Constituencies &amp; Local Areas</span>
-                      <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">Vidhan Sabha &bull; {formatNum(matchingAssemblyConstituencies.length)} matches</span>
+                      <span className="text-[9px] text-[var(--text-tertiary)] font-bold">Vidhan Sabha &bull; {formatNum(matchingAssemblyConstituencies.length)} matches</span>
                     </div>
                     {matchingAssemblyConstituencies.map((ac) => (
                       <button
@@ -399,7 +448,7 @@ export const Navbar: React.FC = () => {
                         className="w-full flex items-center justify-between px-2.5 py-2 rounded-xl text-left text-xs hover:bg-[var(--surface-alt)] transition group"
                       >
                         <div className="flex items-center gap-2.5 min-w-0">
-                          <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">
+                          <div className="p-1.5 rounded-lg bg-[var(--surface-alt)] text-[var(--brand-primary)] border border-[var(--border-primary)] shrink-0">
                             <Landmark size={14} />
                           </div>
                           <div className="min-w-0">
@@ -439,10 +488,10 @@ export const Navbar: React.FC = () => {
                           </div>
                           <div className="min-w-0">
                             <div className="font-bold text-[var(--text-primary)] truncate">
-                              {c.constituency}
+                              {translateConstituency(c.constituency, lang)}
                             </div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              Constituency Details &bull; MP: <strong className="text-[var(--text-primary)]">{c.name}</strong> &bull; {translateState(c.state, lang)}
+                              Constituency Details &bull; MP: <strong className="text-[var(--text-primary)]">{translateMP(c.name, lang)}</strong> &bull; {translateState(c.state, lang)}
                             </div>
                           </div>
                         </div>
@@ -467,13 +516,13 @@ export const Navbar: React.FC = () => {
                           onClick={() => handleSelectMp(m.id)}
                           className="flex items-center gap-2.5 min-w-0 flex-1 text-left cursor-pointer"
                         >
-                          <div className="p-1.5 rounded-lg bg-[var(--brand-accent)]/15 text-[var(--gold-text)] shrink-0">
+                          <div className="p-1.5 rounded-lg bg-[var(--primary-100)] text-[var(--primary-700)] shrink-0">
                             <Users size={14} />
                           </div>
                           <div className="min-w-0">
-                            <div className="font-bold text-[var(--text-primary)] truncate text-xs">{m.name}</div>
+                            <div className="font-bold text-[var(--text-primary)] truncate text-xs">{translateMP(m.name, lang)}</div>
                             <div className="text-[10px] text-[var(--text-secondary)] truncate">
-                              {m.constituency !== 'Sitting Rajya Sabha' ? `${m.constituency} — ` : ''}{translateState(m.state, lang)} ({m.house})
+                              {m.constituency !== 'Sitting Rajya Sabha' ? `${translateConstituency(m.constituency, lang)} — ` : ''}{translateState(m.state, lang)} ({m.house})
                             </div>
                           </div>
                         </button>
@@ -485,7 +534,7 @@ export const Navbar: React.FC = () => {
                             setMpJurisdiction(m.id, m.name, m.state)
                             navigate(`/mp-dashboard?id=${encodeURIComponent(m.id)}`)
                           }}
-                          className="px-2 py-1 rounded-lg text-[10px] font-bold bg-[var(--brand-accent)]/15 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white transition shrink-0 ml-2 cursor-pointer flex items-center gap-1"
+                          className="px-2 py-1 rounded-lg text-[10px] font-bold bg-[var(--primary-100)] hover:bg-[var(--primary-700)] text-[var(--primary-700)] hover:text-white transition shrink-0 ml-2 cursor-pointer flex items-center gap-1"
                           title="Open directly in MP Console"
                         >
                           <span>Console</span>
@@ -559,46 +608,63 @@ export const Navbar: React.FC = () => {
           )}
         </div>
 
-        {/* Controls: Theme + Role Switcher */}
+        {/* Controls: Theme + Language + Role Switcher */}
         <div className="flex items-center gap-2 sm:gap-3">
-
-          {/* Theme Selector: [🌙 | ☀️ | Auto] */}
-          <div className="flex items-center rounded-xl bg-[var(--surface-alt)] p-0.5 border border-[var(--border-primary)] text-xs">
+          {/* Segmented Theme Switcher: Light / Dark / Device */}
+          <div
+            role="radiogroup"
+            aria-label="Color theme selector"
+            className="inline-flex items-center p-1 rounded-full bg-[#EAE6DF] dark:bg-[#1E2636] border border-[#DDD8CF] dark:border-[#2C384E] shadow-xs"
+          >
+            {/* Light Mode Button */}
             <button
+              type="button"
+              role="radio"
+              aria-checked={theme === 'light'}
               onClick={() => setTheme('light')}
-              aria-label="Switch theme to Light Lux mode"
-              className={`p-1.5 rounded-lg transition ${
+              title="Light mode"
+              aria-label="Light mode"
+              className={`px-2.5 py-1 rounded-xl flex items-center justify-center transition-colors duration-150 cursor-pointer ${
                 theme === 'light'
-                  ? 'bg-[var(--surface-primary)] text-amber-500 shadow-sm'
-                  : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
+                  ? 'bg-white dark:bg-[#252E3E] shadow-[0_1px_3px_rgba(0,0,0,0.1)] text-[#EA8C00]'
+                  : 'text-[#615549] dark:text-[#94A3B8] hover:text-[#EA8C00]'
               }`}
-              title="Light Lux Mode"
             >
-              <Sun size={14} />
+              <Sun size={16} className="stroke-[2.2]" />
             </button>
+
+            {/* Dark Mode Button */}
             <button
+              type="button"
+              role="radio"
+              aria-checked={theme === 'dark'}
               onClick={() => setTheme('dark')}
-              aria-label="Switch theme to Dark Command mode"
-              className={`p-1.5 rounded-lg transition ${
+              title="Dark mode"
+              aria-label="Dark mode"
+              className={`px-2.5 py-1 rounded-xl flex items-center justify-center transition-colors duration-150 cursor-pointer ${
                 theme === 'dark'
-                  ? 'bg-[var(--surface-primary)] text-sky-400 shadow-sm'
-                  : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
+                  ? 'bg-white dark:bg-[#252E3E] shadow-[0_1px_3px_rgba(0,0,0,0.1)] text-[#2563EB] dark:text-[#60A5FA]'
+                  : 'text-[#615549] dark:text-[#94A3B8] hover:text-[#2563EB] dark:hover:text-[#60A5FA]'
               }`}
-              title="Dark Command Mode"
             >
-              <Moon size={14} />
+              <Moon size={16} className="stroke-[2.2]" />
             </button>
+
+            {/* Device Mode Button */}
             <button
+              type="button"
+              role="radio"
+              aria-checked={theme === 'device' || theme === 'auto'}
               onClick={() => setTheme('device')}
-              aria-label="Switch theme to Device mode"
-              className={`px-2 py-1 rounded-lg font-bold text-[10px] tracking-wider transition ${
+              title="Match system/device mode"
+              aria-label="System device mode"
+              className={`px-3 py-1 rounded-xl flex items-center justify-center transition-colors duration-150 cursor-pointer ${
                 theme === 'device' || theme === 'auto'
-                  ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm'
-                  : 'text-[var(--text-tertiary)] hover:text-[var(--text-primary)]'
+                  ? 'bg-white dark:bg-[#252E3E] shadow-[0_1px_3px_rgba(0,0,0,0.1)] text-[#1E293B] dark:text-white font-extrabold text-[11px] tracking-wider'
+                  : 'text-[#615549] dark:text-[#94A3B8] hover:text-[#1E293B] dark:hover:text-white font-bold text-[11px] tracking-wider'
               }`}
-              title="Device Mode: Automatically shifts according to your device theme"
             >
-              DEVICE
+              <span>DEVICE</span>
             </button>
           </div>
 
@@ -607,8 +673,6 @@ export const Navbar: React.FC = () => {
 
           {/* Switch Role Dropdown */}
           <SwitchRoleDropdown />
-
-
         </div>
       </div>
     </header>

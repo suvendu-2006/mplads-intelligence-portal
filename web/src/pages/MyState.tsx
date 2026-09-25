@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
@@ -72,7 +73,11 @@ export const MyState: React.FC = () => {
         setLoading(false)
         return
       }
-      if (!sessionStorage.getItem(`cached_my_state_${targetState}`)) {
+      let hasCached = false
+      try {
+        hasCached = Boolean(targetState && sessionStorage.getItem(`cached_my_state_${targetState}`))
+      } catch {}
+      if (!hasCached) {
         setLoading(true)
       }
       try {
@@ -298,7 +303,7 @@ export const MyState: React.FC = () => {
             value={Number(allocCr)}
             prefix="₹"
             unit="Cr"
-            theme="gold"
+            theme="slate"
             description="kpi.total_central_sanction"
           />
           <StatCard
@@ -307,7 +312,7 @@ export const MyState: React.FC = () => {
             value={Number(expCr)}
             prefix="₹"
             unit="Cr"
-            theme="gold"
+            theme="slate"
             description="kpi.verified_expenditure"
           />
           <StatCard
@@ -432,7 +437,7 @@ export const MyState: React.FC = () => {
                         <div className="mb-4">
                           <div className="flex items-center justify-between text-xs font-semibold">
                             <span className="text-[var(--text-secondary)]">{t('kpi.utilization')}</span>
-                            <span className="font-bold flex items-center gap-0.5 tabular-nums text-rose-500 dark:text-rose-400">
+                            <span className="font-bold flex items-center gap-0.5 tabular-nums text-rose-600 dark:text-rose-400">
                               <TrendingUp size={14} className="shrink-0" />
                               <span>{formatNum(expenditureRate.toFixed(1))}%</span>
                             </span>
@@ -440,7 +445,7 @@ export const MyState: React.FC = () => {
 
                           <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
                             <div
-                              className="h-full rounded-full transition-all duration-700 bg-[#B7791F] dark:bg-[#FF9E3B]"
+                              className="h-full rounded-full transition-[width] duration-500 ease-out bg-emerald-500"
                               style={{ width: `${Math.min(100, Math.max(3, expenditureRate))}%` }}
                             />
                           </div>
@@ -547,31 +552,33 @@ export const MyState: React.FC = () => {
           />
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border-collapse">
+            <table className="w-full text-left text-xs border-collapse min-w-[700px]">
               <thead>
                 <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                  <th className="p-3 font-bold whitespace-nowrap">Work ID</th>
-                  <th className="p-3 font-bold min-w-[260px] max-w-sm">Description</th>
-                  <th className="p-3 font-bold whitespace-nowrap text-right">Cost (₹)</th>
-                  <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : 'Administrative Action'}</th>
+                  <th className="p-3 font-bold w-20 shrink-0 whitespace-nowrap">Work ID</th>
+                  <th className="p-3 font-bold min-w-[200px]">Description</th>
+                  <th className="p-3 font-bold w-28 text-right shrink-0 whitespace-nowrap">Cost (₹)</th>
+                  <th className="p-3 font-bold w-36 sm:w-44 text-right shrink-0 whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : 'Administrative Action'}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[var(--border-primary)]">
                 {flags.slice(0, 6).map((f: any) => (
                   <tr key={f.workId || f.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                    <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                    <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                       #{f.workId || f.work_id}
                     </td>
-                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={f.work_description || f.workDescription || f.description}>
-                      {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
+                    <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={f.work_description || f.workDescription || f.description}>
+                      <div className="font-medium text-[var(--text-primary)] line-clamp-2">
+                        {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
+                      </div>
                     </td>
                     <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                       ₹{((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2)} L
                     </td>
-                    <td className="p-3 text-right whitespace-nowrap">
+                    <td className="p-3 text-right">
                       <button
                         onClick={() => setSelectedFlag(f)}
-                        className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap"
+                        className="px-2.5 py-1.5 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap cursor-pointer"
                       >
                         {user.role === 'viewer' ? 'View Findings' : 'Action Report'}
                       </button>
@@ -585,9 +592,12 @@ export const MyState: React.FC = () => {
       </SectionCard>
 
       {/* Action Notice Alert Modal */}
-      {actionNotice && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
-          <div className="lux-card max-w-md w-full p-6 relative shadow-2xl">
+      {actionNotice && typeof document !== 'undefined' && createPortal(
+        <div
+          onClick={(e) => { if (e.target === e.currentTarget) setActionNotice(null) }}
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in"
+        >
+          <div className="lux-card max-w-md w-full p-5 sm:p-6 relative shadow-2xl max-h-[90vh] overflow-y-auto">
             <div className="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center mb-3">
               <CheckCircle2 size={22} />
             </div>
@@ -600,13 +610,14 @@ export const MyState: React.FC = () => {
             <div className="flex justify-end">
               <button
                 onClick={() => setActionNotice(null)}
-                className="px-4 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
+                className="px-4 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow cursor-pointer"
               >
                 {t('btn.close')}
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Flag Diagnostic Dossier Drawer */}

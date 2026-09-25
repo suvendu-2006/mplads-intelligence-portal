@@ -12,7 +12,7 @@
     "test:all": ".venv/bin/pytest tests/ -m 'not slow'",
     "test:all:full": ".venv/bin/pytest tests/",
     "test:web": "cd web && npm run build",
-    "deploy:prod": "npx vercel deploy --prod --yes && npx vercel rm mplads-intelligence-portal --safe --yes",
+    "deploy:prod": "npx vercel deploy --prod --yes",
     "prune:vercel": "npx vercel rm mplads-intelligence-portal --safe --yes"
   },
   "devDependencies": {

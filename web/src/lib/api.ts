@@ -11,36 +11,65 @@ interface CacheRecord {
   timestamp: number
 }
 
-// In-memory instant RAM cache for sub-millisecond responses
+// In-memory instant RAM cache for sub-millisecond responses (bounded to prevent leaks)
+const MAX_MEMORY_CACHE_ENTRIES = 150
 const memoryCache = new Map<string, CacheRecord>()
+
+function setMemoryCache(key: string, record: CacheRecord) {
+  if (memoryCache.size >= MAX_MEMORY_CACHE_ENTRIES) {
+    const oldestKey = memoryCache.keys().next().value
+    if (oldestKey) memoryCache.delete(oldestKey)
+  }
+  memoryCache.set(key, record)
+}
+
 // In-flight promise map to deduplicate identical concurrent GET requests safely
 const inFlightRequests = new Map<string, Promise<CacheRecord | Response>>()
+// Shared promise for token re-synchronization across concurrent 401/403 responses
+let activeTokenSyncPromise: Promise<string | null> | null = null
+
 const STALE_TTL_MS = 300000 // 5 minutes high-speed stale-while-revalidate window
 const CACHE_VERSION = 'v3_fast_20260919'
 const SESSION_CACHE_PREFIX = `satark_swr_${CACHE_VERSION}_`
 
+function isValidCacheRecord(obj: any): obj is CacheRecord {
+  return (
+    obj !== null &&
+    typeof obj === 'object' &&
+    typeof obj.body === 'string' &&
+    typeof obj.status === 'number' &&
+    typeof obj.statusText === 'string' &&
+    Array.isArray(obj.headers) &&
+    typeof obj.timestamp === 'number'
+  )
+}
+
 /**
- * Clears the SWR API cache in RAM, sessionStorage, and synchronizes backend cache reset.
+ * Clears the SWR API cache in RAM, sessionStorage, and synchronizes backend cache reset safely.
  */
 export function clearApiCache(pattern?: string) {
   if (pattern) {
-    for (const key of memoryCache.keys()) {
+    for (const key of Array.from(memoryCache.keys())) {
       if (key.includes(pattern)) {
         memoryCache.delete(key)
       }
     }
-    for (const key of inFlightRequests.keys()) {
+    for (const key of Array.from(inFlightRequests.keys())) {
       if (key.includes(pattern)) {
         inFlightRequests.delete(key)
       }
     }
     if (typeof window !== 'undefined' && window.sessionStorage) {
       try {
-        for (let i = sessionStorage.length - 1; i >= 0; i--) {
+        const keysToRemove: string[] = []
+        for (let i = 0; i < sessionStorage.length; i++) {
           const k = sessionStorage.key(i)
           if (k && (k.startsWith(SESSION_CACHE_PREFIX) || k.startsWith('satark_swr_') || k.startsWith('cached_')) && k.includes(pattern)) {
-            sessionStorage.removeItem(k)
+            keysToRemove.push(k)
           }
+        }
+        for (const k of keysToRemove) {
+          sessionStorage.removeItem(k)
         }
       } catch {}
     }
@@ -49,11 +78,15 @@ export function clearApiCache(pattern?: string) {
     inFlightRequests.clear()
     if (typeof window !== 'undefined' && window.sessionStorage) {
       try {
-        for (let i = sessionStorage.length - 1; i >= 0; i--) {
+        const keysToRemove: string[] = []
+        for (let i = 0; i < sessionStorage.length; i++) {
           const k = sessionStorage.key(i)
           if (k && (k.startsWith('satark_') || k.startsWith('cached_'))) {
-            sessionStorage.removeItem(k)
+            keysToRemove.push(k)
           }
+        }
+        for (const k of keysToRemove) {
+          sessionStorage.removeItem(k)
         }
       } catch {}
     }
@@ -85,7 +118,7 @@ async function fetchAndCache(
         timestamp: Date.now(),
       }
 
-      memoryCache.set(cacheKey, record)
+      setMemoryCache(cacheKey, record)
 
       try {
         sessionStorage.setItem(SESSION_CACHE_PREFIX + cacheKey, JSON.stringify(record))
@@ -176,17 +209,25 @@ export function initApiSync() {
       // Check In-Memory RAM Cache first (0.01ms access)
       let cachedRecord = memoryCache.get(cacheKey)
 
-      // Fallback to SessionStorage if not in RAM
+      // Fallback to SessionStorage if not in RAM with strict schema validation
       if (!cachedRecord && typeof window !== 'undefined' && window.sessionStorage) {
         try {
           const raw = sessionStorage.getItem(SESSION_CACHE_PREFIX + cacheKey)
           if (raw) {
-            cachedRecord = JSON.parse(raw) as CacheRecord
-            if (cachedRecord) {
-              memoryCache.set(cacheKey, cachedRecord)
+            const parsed = JSON.parse(raw)
+            if (isValidCacheRecord(parsed)) {
+              cachedRecord = parsed
+              setMemoryCache(cacheKey, cachedRecord)
+            } else {
+              // Discard corrupted or incompatible record from previous deploys
+              sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
             }
           }
-        } catch {}
+        } catch {
+          try {
+            sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
+          } catch {}
+        }
       }
 
       // If cached entry exists:
@@ -225,11 +266,21 @@ export function initApiSync() {
         }
       }
 
+      // Setup defensive network timeout if none provided (prevents hanging indefinitely)
+      let timeoutId: any = null
+      let execInit = modifiedInit
+      if (!modifiedInit.signal && typeof AbortController !== 'undefined') {
+        const controller = new AbortController()
+        timeoutId = setTimeout(() => controller.abort(new Error('Network request timed out')), 25000)
+        execInit = { ...modifiedInit, signal: controller.signal }
+      }
+
       // Not cached: execute network request with safe in-flight deduplication
       const fetchPromise = (async () => {
         try {
-          return await fetchAndCache(input, modifiedInit, cacheKey, originalFetch)
+          return await fetchAndCache(input, execInit, cacheKey, originalFetch)
         } finally {
+          if (timeoutId) clearTimeout(timeoutId)
           inFlightRequests.delete(cacheKey)
         }
       })()
@@ -252,33 +303,50 @@ export function initApiSync() {
           })
         : (result as Response)
 
-      // Transparent Session Auto-Healing
+      // Transparent Session Auto-Healing with Mutex Deduplication
       // If the backend restarted or session expired (HTTP 403 / 401), re-sync with /api/switch-role and retry
       if ((response.status === 403 || response.status === 401) && user?.role && user.role !== 'viewer') {
         console.log(`[SATARK-SYNC] Session invalid or server restarted. Auto-reconnecting role '${user.role}'...`)
         try {
-          const syncRes = await originalFetch('/api/switch-role', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              role: user.role,
-              state: user.state,
-              district: user.district,
-              mp_id: user.mpId,
-              mp_name: user.mpName,
-            }),
-          })
+          if (!activeTokenSyncPromise) {
+            activeTokenSyncPromise = (async () => {
+              try {
+                const syncRes = await originalFetch('/api/switch-role', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    role: user.role,
+                    state: user.state,
+                    district: user.district,
+                    mp_id: user.mpId,
+                    mp_name: user.mpName,
+                  }),
+                })
 
-          if (syncRes.ok) {
-            const syncJson = await syncRes.json()
-            const newToken = syncJson.data.session_token
-            setUser({
-              ...user,
-              sessionToken: newToken,
-              permissions: syncJson.data.permissions || user.permissions,
-            })
+                if (syncRes.ok) {
+                  const syncJson = await syncRes.json()
+                  const newToken = syncJson?.data?.session_token
+                  if (newToken) {
+                    setUser({
+                      ...user,
+                      sessionToken: newToken,
+                      permissions: syncJson.data.permissions || user.permissions,
+                    })
+                    return newToken
+                  }
+                }
+                return null
+              } catch (reconnectErr) {
+                console.error('[SATARK-SYNC] Auto-reconnect failed:', reconnectErr)
+                return null
+              } finally {
+                activeTokenSyncPromise = null
+              }
+            })()
+          }
 
-            // Retry original request with freshly minted token
+          const newToken = await activeTokenSyncPromise
+          if (newToken) {
             headers.set('X-Session-Token', newToken)
             const retryRes = await fetchAndCache(input, { ...init, headers }, cacheKey, originalFetch)
             response = (retryRes && 'body' in retryRes && typeof retryRes.body === 'string')

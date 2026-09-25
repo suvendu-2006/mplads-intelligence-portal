@@ -42,15 +42,9 @@ export const Layout: React.FC = () => {
   }, [])
 
   useEffect(() => {
-    let resolved: 'light' | 'dark' = 'light'
-    if (theme === 'light' || theme === 'dark') {
-      resolved = theme
-    } else {
-      // 'device' (or legacy 'auto') automatically matches device theme
-      resolved = deviceTheme
-    }
-    document.documentElement.setAttribute('data-theme', resolved)
-    if (resolved === 'dark') {
+    const effectiveTheme = (theme === 'auto' || theme === 'device') ? deviceTheme : (theme === 'dark' ? 'dark' : 'light')
+    document.documentElement.setAttribute('data-theme', effectiveTheme)
+    if (effectiveTheme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
@@ -73,8 +67,8 @@ export const Layout: React.FC = () => {
     const active = isActive(path)
     return `relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-150 whitespace-nowrap ${
       active
-        ? 'bg-[var(--surface-alt)] text-[var(--brand-primary)] shadow-2xs'
-        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)]/60'
+        ? 'bg-[var(--primary-100)] text-[var(--primary-700)] shadow-2xs'
+        : 'text-[var(--neutral-700)] hover:text-[var(--neutral-950)] hover:bg-[var(--surface-alt)]/60'
     }`
   }
 
@@ -149,18 +143,22 @@ export const Layout: React.FC = () => {
               </Link>
             )}
 
-            {/* Contextual Role Console tabs - Strictly visible ONLY when authenticated in that role */}
-            {user.isAuthenticated && user.role === 'mospi' && (
+            {(isActive('/mp-dashboard') || isActive('/mp-console') || (user.isAuthenticated && (user.role === 'mp' || user.role === 'mospi'))) && (
               <Link
                 to={user.mpId && user.mpId !== 'ALL' ? `/mp-dashboard?id=${encodeURIComponent(user.mpId)}` : '/mp-dashboard'}
                 onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
-                className={navLinkClasses('/mp-dashboard')}
+                className={isActive('/mp-dashboard') || isActive('/mp-console')
+                  ? 'relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-150 whitespace-nowrap bg-blue-500/15 text-blue-600 dark:text-blue-400 shadow-2xs border border-blue-500/30'
+                  : navLinkClasses('/mp-dashboard')
+                }
               >
-                <Users size={14} className="text-[var(--brand-accent)]" />
-                <span className="font-extrabold text-[var(--gold-text)]">
-                  {t('nav.mp_console')} {user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
+                <Users size={14} className={(isActive('/mp-dashboard') || isActive('/mp-console')) ? 'text-blue-600 dark:text-blue-400' : 'text-[var(--primary-700)]'} />
+                <span className="font-extrabold">
+                  {t('nav.mp_console')} {user.role === 'mp' && user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
                 </span>
-                {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
+                {(isActive('/mp-dashboard') || isActive('/mp-console')) && (
+                  <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-blue-600 rounded-full" />
+                )}
               </Link>
             )}
 
@@ -169,16 +167,16 @@ export const Layout: React.FC = () => {
                 to="/my-state"
                 onMouseEnter={() => import('../pages/MyState').catch(() => {})}
                 className={location.pathname === '/my-state' || (Boolean(user.state) && location.pathname.toLowerCase() === `/states/${encodeURIComponent(user.state || '').toLowerCase()}`)
-                  ? 'relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-150 whitespace-nowrap bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 shadow-2xs border border-emerald-500/30'
+                  ? 'relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-150 whitespace-nowrap bg-[#EFF6FF] text-[#1D4ED8] shadow-2xs border border-[#BFDBFE]'
                   : 'relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-colors duration-150 whitespace-nowrap text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-alt)]/60'
                 }
               >
-                <MapPin size={14} className="text-emerald-500" />
-                <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
+                <MapPin size={14} className="text-[#2563EB]" />
+                <span className="font-extrabold text-[#1D4ED8]">
                   {t('nav.state_console')} {user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES' ? `(${translateState(user.state, lang)})` : ''}
                 </span>
                 {(location.pathname === '/my-state' || (Boolean(user.state) && location.pathname.toLowerCase() === `/states/${encodeURIComponent(user.state || '').toLowerCase()}`)) && (
-                  <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />
+                  <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[#2563EB] rounded-full" />
                 )}
               </Link>
             )}
@@ -201,20 +199,6 @@ export const Layout: React.FC = () => {
                 )}
               </Link>
             )}
-
-            {user.isAuthenticated && user.role === 'mp' && (
-              <Link
-                to={user.mpId && user.mpId !== 'ALL' ? `/mp-dashboard?id=${encodeURIComponent(user.mpId)}` : '/mp-dashboard'}
-                onMouseEnter={() => import('../pages/MPDashboard').catch(() => {})}
-                className={navLinkClasses('/mp-dashboard')}
-              >
-                <Users size={14} className="text-[var(--brand-accent)]" />
-                <span className="font-extrabold text-[var(--gold-text)]">
-                  {t('nav.mp_console')} {user.mpName && !user.mpName.includes('All') ? `(${user.mpName.split(' ').slice(-1)[0]})` : ''}
-                </span>
-                {isActive('/mp-dashboard') && <div className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--brand-accent)] rounded-full" />}
-              </Link>
-            )}
           </nav>
 
           {/* Right Status / Persona Indicator */}
@@ -222,7 +206,7 @@ export const Layout: React.FC = () => {
             {user.isAuthenticated && user.role !== 'viewer' ? (
               <div className="flex items-center gap-1.5">
                 <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
                   <span>
                     {t('label.active_role')}:{' '}
                     <strong className={user.role === 'mospi' ? 'text-amber-600 dark:text-amber-400' : 'text-[var(--text-primary)]'}>
@@ -243,10 +227,10 @@ export const Layout: React.FC = () => {
                     navigate('/')
                   }}
                   className="px-2 py-1 rounded-full text-[10px] font-bold bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 transition flex items-center gap-1 cursor-pointer"
-                  title="Sign Out of Session"
+                  title={t('nav.sign_out')}
                 >
                   <LogOut size={11} />
-                  <span>Sign Out</span>
+                  <span>{t('nav.sign_out')}</span>
                 </button>
               </div>
             ) : (
@@ -256,7 +240,7 @@ export const Layout: React.FC = () => {
                 style={{ color: '#ffffff' }}
               >
                 <UserCheck size={13} style={{ color: '#ffffff' }} />
-                <span style={{ color: '#ffffff' }}>Profile Login (Autofilled)</span>
+                <span style={{ color: '#ffffff' }}>{t('nav.login_profile')}</span>
               </Link>
             )}
           </div>
@@ -349,7 +333,7 @@ export const Layout: React.FC = () => {
         <div className="max-w-[1600px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span>🇮🇳 <strong>SATARK-MPLADS</strong> &bull; {t('footer.ministry')}</span>
-            <span className="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+            <span className="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#EFF6FF] text-[#1D4ED8] border border-[#BFDBFE]">
               ● {t('footer.audited_data')}
             </span>
           </div>

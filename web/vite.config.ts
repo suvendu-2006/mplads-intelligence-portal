@@ -14,6 +14,11 @@ export default defineConfig({
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
     chunkSizeWarningLimit: 1200,
+    modulePreload: {
+      resolveDependencies(_filename, deps) {
+        return deps.filter(dep => !dep.includes('charts') && !dep.includes('maps') && !dep.includes('assemblyConstituencies'))
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks(id: string) {

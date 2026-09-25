@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react'
 import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
+import { RecommendWorkModal } from '../components/RecommendWorkModal'
 import { BackButton } from '../components/BackButton'
 import {
   FundCard,
@@ -11,6 +12,7 @@ import {
   SectionCard,
   AgencyBadge
 } from '../components/shared'
+import { ANIMATION_CONFIG } from '../lib/animationConfig'
 import { useChartTheme } from '../hooks/useChartTheme'
 import {
   ChevronRight,
@@ -27,7 +29,8 @@ import {
   Building2,
   User,
   ArrowUpRight,
-  Filter
+  Filter,
+  PlusCircle
 } from 'lucide-react'
 import {
   BarChart,
@@ -43,13 +46,13 @@ import {
 } from 'recharts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
-import { useTranslation } from '../lib/i18n'
+import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { useStore } from '../store/useStore'
 
 export const ConstituencyDetail: React.FC = () => {
   const { user } = useStore()
   const { name } = useParams<{ name: string }>()
-  const { t, toNativeDigits: formatNum } = useTranslation()
+  const { t, toNativeDigits: formatNum, lang } = useTranslation()
   const [searchParams, setSearchParams] = useSearchParams()
   const acParam = searchParams.get('ac') || ''
   const [selectedAc, setSelectedAc] = useState<string>(acParam)
@@ -59,12 +62,19 @@ export const ConstituencyDetail: React.FC = () => {
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags'>('overview')
   const effectiveTab = (user?.role === 'viewer' && activeTab === 'flags') ? 'overview' : activeTab
-  const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'remained'>('all')
+  const [workFilter, setWorkFilter] = useState<'all' | 'recommended' | 'completed' | 'remained'>('all')
+  const [isRecommendModalOpen, setIsRecommendModalOpen] = useState(false)
   const [workSearch, setWorkSearch] = useState<string>('')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [workPage, setWorkPage] = useState(1)
   const [workPageSize, setWorkPageSize] = useState<number | 'all'>(30)
+  const [chartKey, setChartKey] = useState(0)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setChartKey(1), 50)
+    return () => clearTimeout(timer)
+  }, [])
 
   // Sync acParam to selectedAc
   useEffect(() => {
@@ -211,11 +221,19 @@ export const ConstituencyDetail: React.FC = () => {
 
   const assembliesList: any[] = summary.assemblies || []
 
+  const worksRecCount = works.filter((w: any) => (w.status || '').toLowerCase().includes('recommended')).length
+  const worksCompCount = works.filter((w: any) => (w.status || '').toLowerCase().includes('completed')).length
+
   // Works filtering logic
   const filteredWorks = works.filter((w: any) => {
+    const st = (w.status || '').toLowerCase()
+    const isComp = st.includes('completed')
+    const isRec = st.includes('recommended')
+
     // Status filter
-    if (workFilter === 'completed' && !(w.status || '').toLowerCase().includes('completed')) return false
-    if (workFilter === 'remained' && (w.status || '').toLowerCase().includes('completed')) return false
+    if (workFilter === 'completed' && !isComp) return false
+    if (workFilter === 'recommended' && !isRec) return false
+    if (workFilter === 'remained' && isComp) return false
 
     // Category filter
     if (categoryFilter !== 'all' && (w.category || '').toLowerCase() !== categoryFilter.toLowerCase()) return false
@@ -240,9 +258,9 @@ export const ConstituencyDetail: React.FC = () => {
     return true
   })
 
-  // Chart data formatting
+  // Chart data formatting - show full text without truncation or ellipsis
   const chartSectors = sectorBreakdown.slice(0, 6).map((s: any) => ({
-    name: s.category.length > 18 ? s.category.slice(0, 16) + '...' : s.category,
+    name: s.category,
     fullName: s.category,
     amountCr: Number((s.amount / 10000000).toFixed(2)),
     count: s.count
@@ -275,23 +293,20 @@ export const ConstituencyDetail: React.FC = () => {
       {/* Official Constituency Header */}
       <div className="rounded-2xl p-6 sm:p-7 bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-5">
         <div className="flex items-start sm:items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] flex items-center justify-center shrink-0 shadow-inner">
-            <Landmark size={28} />
-          </div>
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-1">
               <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20">
                 PARLIAMENTARY CONSTITUENCY
               </span>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]">
-                {summary.state}
+                {translateState(summary.state, lang)}
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]">
                 {summary.house || 'Lok Sabha'}
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight">
-              {summary.name}
+              {translateConstituency(summary.name, lang)}
             </h1>
             <p className="text-xs text-[var(--text-secondary)] mt-0.5 flex items-center gap-1.5">
               <span>Constituency Territorial Profile &bull; Statutory 5-Year Development Envelope</span>
@@ -301,6 +316,16 @@ export const ConstituencyDetail: React.FC = () => {
 
         {/* Quick Action Badges */}
         <div className="flex flex-wrap items-center gap-3">
+          {/* Recommend Work Action */}
+          <button
+            type="button"
+            onClick={() => setIsRecommendModalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[var(--brand-primary)] hover:opacity-90 text-white text-xs font-bold shadow-md shadow-[var(--brand-primary)]/20 transition cursor-pointer"
+          >
+            <PlusCircle size={15} />
+            <span>{t('btn.recommend_work')}</span>
+          </button>
+
           {/* Deep-link to GIS Map */}
           <Link
             to={`/map?pc=${encodeURIComponent(summary.name)}`}
@@ -322,7 +347,7 @@ export const ConstituencyDetail: React.FC = () => {
               </div>
               <div className="text-left">
                 <div className="text-[9px] uppercase font-bold text-[var(--text-tertiary)]">Incumbent MP</div>
-                <div className="font-extrabold truncate max-w-[150px]">{summary.mp.name}</div>
+                <div className="font-extrabold truncate max-w-[150px]">{translateMP(summary.mp.name, lang)}</div>
               </div>
               <ChevronRight size={14} className="text-[var(--text-tertiary)] group-hover:translate-x-0.5 transition" />
             </Link>
@@ -332,15 +357,12 @@ export const ConstituencyDetail: React.FC = () => {
 
       {/* Assembly Segment Alert Banner (if user searched or filtered by AC) */}
       {selectedAc && (
-        <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
+        <div className="p-4 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 shrink-0">
-              <Building2 size={18} />
-            </div>
             <div>
               <div className="text-xs font-bold text-[var(--text-primary)] flex items-center gap-1.5">
                 <span>Assembly Segment (Vidhan Sabha): <strong>{selectedAc}</strong></span>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-200 border border-emerald-500/30">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]">
                   Part of {summary.name} Lok Sabha
                 </span>
               </div>
@@ -377,11 +399,11 @@ export const ConstituencyDetail: React.FC = () => {
       {/* Key Works & Governance Metrics */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard
-          label="status.sanctioned"
+          label="table.total_works"
           value={totalWorks}
           icon={FileCheck2}
           theme="navy"
-          tooltip="Total developmental civil projects sanctioned and executed in this constituency."
+          tooltip="Total developmental civil projects recommended by the MP in this constituency."
         />
 
         <StatCard
@@ -393,11 +415,11 @@ export const ConstituencyDetail: React.FC = () => {
         />
 
         <StatCard
-          label="status.in_progress"
+          label="status.recommended"
           value={remainedWorks}
           icon={Clock}
           theme="amber"
-          tooltip="Projects actively under physical construction or administrative progress."
+          tooltip="Projects recommended by the MP actively pending sanction or under physical progress."
         />
 
         <StatCard
@@ -414,7 +436,6 @@ export const ConstituencyDetail: React.FC = () => {
         <div className="p-4 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm space-y-2.5">
           <div className="flex items-center justify-between">
             <div className="text-xs font-black uppercase tracking-wider text-[var(--text-tertiary)] flex items-center gap-1.5">
-              <Building2 size={14} className="text-[var(--brand-primary)]" />
               <span>Vidhan Sabha Assembly Segments ({assembliesList.length})</span>
             </div>
             <span className="text-[10px] text-[var(--text-tertiary)]">Click any segment to filter works</span>
@@ -464,7 +485,6 @@ export const ConstituencyDetail: React.FC = () => {
               : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
           }`}
         >
-          <Landmark size={14} />
           <span>Sectoral & Agency Overview</span>
         </button>
 
@@ -476,7 +496,6 @@ export const ConstituencyDetail: React.FC = () => {
               : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
           }`}
         >
-          <FileCheck2 size={14} />
           <span>Developmental Works ({works.length > 0 ? filteredWorks.length : totalWorks})</span>
         </button>
 
@@ -489,7 +508,6 @@ export const ConstituencyDetail: React.FC = () => {
                 : 'text-[var(--text-secondary)] hover:bg-[var(--surface-alt)]'
             }`}
           >
-            <ShieldAlert size={14} />
             <span>Forensic Alerts ({flags.length || summary.redFlagCount || 0})</span>
           </button>
         )}
@@ -504,31 +522,48 @@ export const ConstituencyDetail: React.FC = () => {
             subtitle="Allocation breakdown across public asset categories"
           >
             {chartSectors.length > 0 ? (
-              <div className="h-64 w-full">
+              <div className="h-80 w-full pt-2">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={chartSectors} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="var(--border-primary)" opacity={0.5} />
+                  <BarChart
+                    key={`bar-chart-${chartKey}`}
+                    data={chartSectors}
+                    margin={{ top: 15, right: 15, left: 15, bottom: 85 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" stroke="var(--border-primary)" opacity={0.5} vertical={false} />
                     <XAxis
                       dataKey="name"
-                      tick={{ fill: 'var(--text-tertiary)', fontSize: 10 }}
+                      tick={{ fill: 'var(--text-secondary)', fontSize: 10, fontWeight: 500 }}
                       interval={0}
-                      angle={-15}
+                      angle={-25}
                       textAnchor="end"
+                      height={85}
                     />
                     <YAxis
-                      tick={{ fill: 'var(--text-tertiary)', fontSize: 10 }}
-                      unit=" Cr"
+                      width={65}
+                      tick={{ fill: 'var(--text-secondary)', fontSize: 10 }}
+                      tickFormatter={(val) => `₹${val} Cr`}
                     />
                     <Tooltip
+                      cursor={{ fill: 'rgba(59, 130, 246, 0.05)' }}
+                      wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                       contentStyle={{
                         backgroundColor: 'var(--surface-primary)',
                         borderColor: 'var(--border-primary)',
                         borderRadius: '12px',
-                        fontSize: '12px'
+                        fontSize: '12px',
+                        boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                        zIndex: 999999
                       }}
                       formatter={(val: any) => [`₹${val} Cr`, 'Allocated']}
                     />
-                    <Bar dataKey="amountCr" fill="#3B82F6" radius={[6, 6, 0, 0]} />
+                    <Bar
+                      dataKey="amountCr"
+                      fill="#3B82F6"
+                      radius={[6, 6, 0, 0]}
+                      isAnimationActive={true}
+                      animationDuration={800}
+                      animationEasing="ease-out"
+                    />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -552,11 +587,11 @@ export const ConstituencyDetail: React.FC = () => {
                     className="p-3 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-between gap-3 text-xs"
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <div className="w-7 h-7 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] flex items-center justify-center font-bold text-xs shrink-0">
-                        {idx + 1}
-                      </div>
+                      <span className="font-bold text-xs text-[var(--text-tertiary)] w-5 shrink-0">
+                        {idx + 1}.
+                      </span>
                       <div className="min-w-0">
-                        <div className="font-bold text-[var(--text-primary)] truncate">
+                        <div className="font-bold text-[var(--text-primary)] break-words">
                           {ag.agency}
                         </div>
                         <div className="text-[10px] text-[var(--text-secondary)]">
@@ -600,23 +635,36 @@ export const ConstituencyDetail: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-1 rounded-xl border border-[var(--border-primary)]">
-                {(['all', 'completed', 'remained'] as const).map((status) => (
+                {[
+                  { id: 'all', label: `All (${works.length})` },
+                  { id: 'recommended', label: `${t('status.recommended')} (${worksRecCount})` },
+                  { id: 'completed', label: `${t('status.completed')} (${worksCompCount})` },
+                ].map((tab) => (
                   <button
-                    key={status}
+                    key={tab.id}
                     onClick={() => {
-                      setWorkFilter(status)
+                      setWorkFilter(tab.id as any)
                       setWorkPage(1)
                     }}
-                    className={`px-3 py-1 rounded-lg text-xs font-bold capitalize transition ${
-                      workFilter === status
-                        ? 'bg-[var(--surface-primary)] text-[var(--text-primary)] shadow-sm'
+                    className={`px-3 py-1 rounded-lg text-xs font-bold transition ${
+                      workFilter === tab.id
+                        ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-sm'
                         : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                     }`}
                   >
-                    {status === 'remained' ? 'Ongoing / Remained' : status}
+                    {tab.label}
                   </button>
                 ))}
               </div>
+
+              <button
+                type="button"
+                onClick={() => setIsRecommendModalOpen(true)}
+                className="px-3.5 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm hover:opacity-90 cursor-pointer shrink-0"
+              >
+                <PlusCircle size={14} />
+                <span>{t('btn.recommend_work')}</span>
+              </button>
 
               {/* Page Size Selector */}
               <div className="flex items-center gap-1 bg-[var(--surface-alt)] px-2 py-1 rounded-xl border border-[var(--border-primary)] text-xs">
@@ -655,16 +703,16 @@ export const ConstituencyDetail: React.FC = () => {
             return (
               <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden shadow-sm">
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs">
+                  <table className="w-full text-left text-xs border-collapse min-w-[1000px]">
                     <thead>
                       <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-tertiary)] font-bold uppercase text-[10px] tracking-wider">
-                        <th className="p-3.5">Work ID</th>
-                        <th className="p-3.5">Description</th>
-                        <th className="p-3.5">Category</th>
-                        <th className="p-3.5">Location</th>
-                        <th className="p-3.5">Cost</th>
-                        <th className="p-3.5">Status</th>
-                        <th className="p-3.5">Implementing Agency</th>
+                        <th className="p-3.5 w-20">Work ID</th>
+                        <th className="p-3.5 min-w-[200px]">Description</th>
+                        <th className="p-3.5 min-w-[140px] w-36">Category</th>
+                        <th className="p-3.5 min-w-[140px] w-36">Location</th>
+                        <th className="p-3.5 w-28 text-right whitespace-nowrap">Cost</th>
+                        <th className="p-3.5 w-28 text-center">Status</th>
+                        <th className="p-3.5 min-w-[220px] w-64">Implementing Agency</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-[var(--border-primary)]">
@@ -674,33 +722,51 @@ export const ConstituencyDetail: React.FC = () => {
                           return (
                             <tr key={w.work_id} className="hover:bg-[var(--surface-alt)]/60 transition-colors duration-100">
                               <td className="p-3.5 font-bold font-mono text-[var(--brand-primary)]">
-                                #{formatNum(w.work_id)}
+                                <div className="flex items-center gap-1.5">
+                                  <span>#{formatNum(w.work_id)}</span>
+                                  {w.isNew && (
+                                    <span className="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-white animate-pulse">
+                                      NEW
+                                    </span>
+                                  )}
+                                </div>
                               </td>
-                              <td className="p-3.5 max-w-xs font-medium text-[var(--text-primary)] truncate" title={w.description}>
-                                {w.description}
+                              <td className="p-3.5 font-medium text-[var(--text-primary)]" title={w.description}>
+                                <div className="line-clamp-2 break-words text-xs leading-relaxed">
+                                  {w.description}
+                                </div>
                               </td>
                               <td className="p-3.5 text-[var(--text-secondary)]">
-                                <span className="px-2 py-0.5 rounded-md bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[10px]">
+                                <span className="px-2.5 py-1 rounded-md bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[11px] font-semibold inline-block break-words leading-snug">
                                   {w.category}
                                 </span>
                               </td>
-                              <td className="p-3.5 text-[var(--text-secondary)]">
+                              <td className="p-3.5 text-[var(--text-secondary)] break-words leading-snug" title={w.location}>
                                 {w.location}
                               </td>
-                              <td className="p-3.5 font-bold text-[var(--text-primary)] tabular-nums">
+                              <td className="p-3.5 font-bold text-[var(--text-primary)] tabular-nums text-right whitespace-nowrap">
                                 ₹{formatNum(Number(w.cost || 0).toLocaleString('en-IN'))}
                               </td>
-                              <td className="p-3.5">
-                                <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold border ${
-                                  isComp
-                                    ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
-                                    : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
-                                }`}>
-                                  {isComp ? <CheckCircle2 size={10} /> : <Clock size={10} />}
-                                  <span>{isComp ? t('status.completed') : t('status.in_progress')}</span>
-                                </span>
+                              <td className="p-3.5 text-center whitespace-nowrap">
+                                {(() => {
+                                  const st = (w.status || '').toLowerCase()
+                                  const isComp = st.includes('completed')
+                                  const isRec = st.includes('recommended')
+                                  return (
+                                    <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${
+                                      isComp
+                                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
+                                        : isRec
+                                        ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20'
+                                        : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
+                                    }`}>
+                                      {isComp ? <CheckCircle2 size={10} /> : isRec ? <FileCheck2 size={10} /> : <Clock size={10} />}
+                                      <span>{isComp ? t('status.completed') : isRec ? t('status.recommended') : t('status.in_progress')}</span>
+                                    </span>
+                                  )
+                                })()}
                               </td>
-                              <td className="p-3.5 text-[var(--text-secondary)] truncate max-w-[140px]" title={w.implementing_agency}>
+                              <td className="p-3.5 text-[var(--text-secondary)] break-words leading-snug font-medium" title={w.implementing_agency}>
                                 {w.implementing_agency || 'State Agency'}
                               </td>
                             </tr>
@@ -813,6 +879,45 @@ export const ConstituencyDetail: React.FC = () => {
           onClose={() => setSelectedFlag(null)}
         />
       )}
+
+      {/* Official Form 1A Recommend Work Modal */}
+      <RecommendWorkModal
+        isOpen={isRecommendModalOpen}
+        onClose={() => setIsRecommendModalOpen(false)}
+        mpId={summary.mp?.id || ''}
+        mpName={summary.mp?.name || 'Sitting Representative'}
+        state={summary.state || ''}
+        constituency={summary.name || ''}
+        house={summary.house || 'Lok Sabha'}
+        unspentBalance={rawUnspent}
+        onWorkRecommended={(newWork: any) => {
+          setData((prev: any) => {
+            if (!prev) return prev
+            const updatedWorks = [
+              {
+                ...newWork,
+                isNew: true,
+                implementing_agency: newWork.implementing_agency || 'District Collectorate / RES Wing',
+                location: newWork.location || summary.name,
+                category: newWork.category || 'General Civil Works'
+              },
+              ...(prev.works || [])
+            ]
+            return {
+              ...prev,
+              summary: {
+                ...prev.summary,
+                totalWorks: (prev.summary.totalWorks || 0) + 1,
+                recommendedWorksCount: (prev.summary.recommendedWorksCount || 0) + 1,
+                remainedWorksCount: (prev.summary.remainedWorksCount || 0) + 1
+              },
+              works: updatedWorks
+            }
+          })
+          setActiveTab('works')
+          setWorkFilter('recommended')
+        }}
+      />
     </div>
   )
 }

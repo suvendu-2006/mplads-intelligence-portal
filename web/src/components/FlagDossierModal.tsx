@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import {
   X,
   AlertTriangle,
@@ -71,16 +72,21 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
   const [checkedChecklist, setCheckedChecklist] = useState<Record<string, boolean>>({})
   const { showToast, showActionModal } = useToastStore()
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!flag) return
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
+    const origOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = origOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
   }, [flag, onClose])
 
-  if (!flag) return null
+  if (!flag || typeof document === 'undefined') return null
 
   const workId = flag.work_id || flag.workId || 0
   const description = flag.work_description || flag.workDescription || (flag as any).description || 'Civil Works Project'
@@ -204,20 +210,27 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
     showToast(`Parliamentary D.O. Letter dispatched for Work #${workId}`, 'letter', 5000, 'D.O. Letter Dispatched')
   }
 
-  return (
-    <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose()
+      }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
+    >
       <div
-        className="relative w-full max-w-3xl rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl p-6 sm:p-8 my-8 text-[var(--text-primary)]"
-        style={{ borderTop: '4px solid var(--brand-accent)' }}
+        className="relative w-full max-w-4xl max-h-[88vh] sm:max-h-[86vh] rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-2xl flex flex-col text-[var(--text-primary)] overflow-hidden"
+        style={{ borderTop: '4px solid var(--primary-700)' }}
       >
-        {/* Header with Gold accent line */}
-        <div className="flex items-start justify-between border-b border-[var(--border-primary)] pb-4 mb-5">
-          <div className="flex items-center gap-3">
+        {/* Pinned Sticky Header: ALWAYS visible with title and Close button */}
+        <div className="flex items-start justify-between border-b border-[var(--border-primary)] p-4 sm:p-5 shrink-0 bg-[var(--surface-primary)]">
+          <div className="flex items-center gap-3 min-w-0 pr-3">
             <div className="w-10 h-10 rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/30 flex items-center justify-center font-bold shrink-0">
               <ShieldAlert size={22} />
             </div>
-            <div>
-              <div className="flex items-center gap-2 flex-wrap">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 flex-wrap mb-1">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--brand-primary)]">
                   Official Audit Dossier
                 </span>
@@ -234,7 +247,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                   {severity >= 0.70 ? 'Immediate Action Required' : severity >= 0.40 ? 'Priority Review' : 'Standard Check'}
                 </span>
               </div>
-              <h2 className="text-base sm:text-lg font-bold text-[var(--text-primary)] tracking-tight leading-snug whitespace-normal mt-1">
+              <h2 className="text-sm sm:text-base font-bold text-[var(--text-primary)] tracking-tight leading-snug break-words">
                 {description}
               </h2>
             </div>
@@ -243,20 +256,19 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="p-1.5 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] transition shrink-0"
+            className="p-1.5 rounded-lg bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition shrink-0 cursor-pointer border border-[var(--border-primary)]"
           >
             <X size={18} />
           </button>
         </div>
 
-
-
-        <div className="space-y-5 max-h-[70vh] overflow-y-auto pr-1">
+        {/* Scrollable Content Body: Smooth vertical scroll for all sections */}
+        <div className="space-y-5 p-4 sm:p-6 overflow-y-auto flex-1 min-h-0">
           {/* Metadata Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-xs">
             <div>
-              <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-bold block">Sanctioned Outlay</span>
-              <span className="text-sm sm:text-base font-extrabold tabular-nums numeral-gold">
+              <span className="text-[10px] text-[var(--text-tertiary)] uppercase font-semibold block">Sanctioned Cost</span>
+              <span className="text-sm sm:text-base font-extrabold tabular-nums text-[var(--neutral-950)]">
                 ₹{(cost / 100000).toFixed(2)} Lakhs
               </span>
             </div>
@@ -582,7 +594,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                     className="p-3.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-left flex flex-col justify-between transition group cursor-pointer"
                   >
                     <div>
-                      <div className="flex items-center gap-2 mb-1 text-[var(--brand-accent)] font-bold text-xs">
+                      <div className="flex items-center gap-2 mb-1 text-[var(--primary-700)] font-bold text-xs">
                         <Mail size={15} />
                         <span>MP D.O. Letter</span>
                       </div>
@@ -590,7 +602,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
                         Draft Parliamentary Demi-Official inquiry letter to Collector.
                       </p>
                     </div>
-                    <span className="text-[10px] font-extrabold text-[var(--gold-text)] mt-3 group-hover:underline">
+                    <span className="text-[10px] font-extrabold text-[var(--primary-700)] mt-3 group-hover:underline">
                       Draft D.O. Letter →
                     </span>
                   </button>
@@ -602,8 +614,13 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
 
         {/* Action Draft Preview Submodal */}
         {activeActionModal && (
-          <div className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/65 backdrop-blur-sm animate-in fade-in">
-            <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] max-w-xl w-full p-6 shadow-2xl relative">
+          <div
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setActiveActionModal(null)
+            }}
+            className="fixed inset-0 z-[10000] flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in"
+          >
+            <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] max-w-xl w-full p-5 sm:p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setActiveActionModal(null)}
                 className="absolute top-4 right-4 p-1 rounded-lg text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
@@ -672,7 +689,7 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
 
               {activeActionModal === 'do_letter' && (
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-[var(--gold-text)] font-bold text-sm">
+                  <div className="flex items-center gap-2 text-[var(--primary-700)] font-bold text-sm">
                     <Mail size={18} />
                     <span>PARLIAMENTARY DEMI-OFFICIAL (D.O.) LETTER</span>
                   </div>
@@ -702,7 +719,21 @@ export const FlagDossierModal: React.FC<Props> = ({ flag, onClose }) => {
             </div>
           </div>
         )}
+
+        {/* Pinned Sticky Footer: Always visible at bottom so user can immediately close */}
+        <div className="flex items-center justify-between border-t border-[var(--border-primary)] p-3 sm:px-6 bg-[var(--surface-primary)] shrink-0">
+          <div className="text-[11px] text-[var(--text-tertiary)] flex items-center gap-1.5 font-medium">
+            <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[10px] font-mono">ESC</kbd> or click outside to dismiss</span>
+          </div>
+          <button
+            onClick={onClose}
+            className="px-4 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-xs font-bold text-[var(--text-primary)] transition cursor-pointer shadow-2xs"
+          >
+            Close Dossier
+          </button>
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }

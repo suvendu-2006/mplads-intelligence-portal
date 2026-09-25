@@ -25,48 +25,73 @@ function AnimatedNumber({
   decimals?: number
 }) {
   const { lang, t } = useTranslation()
-  const [display, setDisplay] = useState(0)
+  const spanRef = React.useRef<HTMLSpanElement>(null)
+
+  const format = (v: number) => {
+    const formatted = v.toLocaleString(undefined, {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    })
+    return toNativeDigits(formatted, lang)
+  }
+
+  const localizedSuffix = suffix === 'Cr' ? ` ${t('unit.cr')}` : suffix
+
+  const prevValRef = React.useRef<number | null>(null)
 
   useEffect(() => {
-    let start = 0
-    const duration = 800
+    if (!spanRef.current) return
+
+    const finalStr = format(value)
+    if (prevValRef.current === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const start = prevValRef.current ?? 0
+    prevValRef.current = value
+
+    if (typeof window === 'undefined' || !window.requestAnimationFrame || value === 0 || start === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const duration = 750
     const startTime = performance.now()
+    let handle: number
 
     function step(now: number) {
       const elapsed = now - startTime
       const progress = Math.min(elapsed / duration, 1)
-      const ease = 1 - Math.pow(1 - progress, 3)
+      // Quartic ease-out: rapid initial roll with an ultra-smooth, silky glide to rest
+      const ease = 1 - Math.pow(1 - progress, 4)
       const current = start + (value - start) * ease
-      setDisplay(current)
+
+      if (spanRef.current) {
+        spanRef.current.textContent = format(current)
+      }
 
       if (progress < 1) {
-        requestAnimationFrame(step)
-      } else {
-        setDisplay(value)
+        handle = requestAnimationFrame(step)
+      } else if (spanRef.current) {
+        spanRef.current.textContent = finalStr
       }
     }
 
-    const handle = requestAnimationFrame(step)
+    handle = requestAnimationFrame(step)
     return () => cancelAnimationFrame(handle)
-  }, [value])
-
-  const formatted = display.toLocaleString(undefined, {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  })
-  const localizedNum = toNativeDigits(formatted, lang)
-  const localizedSuffix = suffix === 'Cr' ? ` ${t('unit.cr')}` : suffix
+  }, [value, decimals, lang])
 
   return (
     <span>
       {prefix}
-      {localizedNum}
+      <span ref={spanRef}>{format(value)}</span>
       {localizedSuffix}
     </span>
   )
 }
 
-export const KPICard: React.FC<KPICardProps> = ({
+export const KPICard: React.FC<KPICardProps> = React.memo(({
   label,
   value,
   prefix = '',
@@ -123,4 +148,4 @@ export const KPICard: React.FC<KPICardProps> = ({
       </div>
     </div>
   )
-}
+})

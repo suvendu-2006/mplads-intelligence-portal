@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   BarChart,
   Bar,
@@ -44,10 +44,11 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
 }) => {
   const theme = useChartTheme()
   const { t, formatNum } = useTranslation()
+
   const barAnimation = ANIMATION_CONFIG.getChartProps('bar')
 
   return (
-    <div className="w-full">
+    <div className="w-full chart-container">
       <ResponsiveContainer width="100%" height={height}>
         <BarChart
           data={data}
@@ -95,6 +96,8 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
           <Tooltip
             content={<ChartTooltip formatter={formatter} />}
             cursor={{ fill: 'var(--surface-hover)', opacity: 0.5 }}
+            isAnimationActive={false}
+            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
           />
 
           {series.map((s, idx) => {
@@ -114,6 +117,7 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
                 fill={fill}
                 radius={[6, 6, 0, 0]}
                 {...barAnimation}
+                animationBegin={idx * 80}
               />
             )
           })}

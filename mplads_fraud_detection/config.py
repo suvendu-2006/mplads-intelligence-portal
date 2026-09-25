@@ -10,7 +10,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
-MODELS_DIR = BASE_DIR / "models"
+MODELS_DIR = ARTIFACTS_DIR / "models"
 
 os.makedirs(ARTIFACTS_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)

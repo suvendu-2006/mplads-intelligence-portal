@@ -24,7 +24,8 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA cache_size = -64000;")       # 64MB memory cache
         cursor.execute("PRAGMA temp_store = MEMORY;")
         cursor.execute("PRAGMA mmap_size = 268435456;")     # 256MB memory mapping
-        cursor.execute("PRAGMA query_only = 1;")            # read-only lock-free concurrent queries
+        if os.environ.get("VERCEL"):
+            cursor.execute("PRAGMA query_only = 1;")        # read-only for serverless lambda
         cursor.close()
     except Exception:
         pass

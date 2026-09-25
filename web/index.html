@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&display=swap" />
 
     <!-- Open Graph / Meta Preview for URL Links -->
     <meta property="og:type" content="website" />
@@ -22,27 +23,24 @@
     <meta name="twitter:title" content="SATARK-MPLADS | National Intelligence &amp; Forensic Command Center" />
     <meta name="twitter:description" content="AI-driven forensic surveillance, multi-tiered anomaly detection (D1–D15), and transparent analytics for MPLADS funds across 543 Constituencies and 732+ Districts." />
 
-    <!-- Instant theme sync preventing unwanted auto-dark switch and white flash -->
+    <!-- Default strictly to Light Mode unless explicitly set to dark in session v7 -->
     <script>
       (function() {
         try {
           var raw = localStorage.getItem('mplads-user-session');
           if (raw) {
             var parsed = JSON.parse(raw);
-            var savedTheme = parsed && parsed.state && parsed.state.theme;
-            if (savedTheme === 'dark') {
+            if (parsed && parsed.version >= 7 && parsed.state && parsed.state.theme === 'dark') {
               document.documentElement.setAttribute('data-theme', 'dark');
               document.documentElement.classList.add('dark');
-            } else {
-              document.documentElement.setAttribute('data-theme', 'light');
-              document.documentElement.classList.remove('dark');
+              return;
             }
-          } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            document.documentElement.classList.remove('dark');
           }
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.classList.remove('dark');
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.classList.remove('dark');
         }
       })();
     </script>

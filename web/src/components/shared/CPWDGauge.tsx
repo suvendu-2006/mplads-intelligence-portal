@@ -85,7 +85,7 @@ export const CPWDGauge: React.FC<CPWDGaugeProps> = ({
           </div>
           <div className="h-4 w-full rounded-lg bg-[var(--surface-alt)] overflow-hidden border border-[var(--border-primary)]">
             <div
-              className="h-full bg-emerald-500 transition-all duration-500 rounded-md"
+              className="h-full bg-emerald-500 transition-[width] duration-500 ease-out rounded-md"
               style={{ width: `${ceilingBarPct}%` }}
               title={`Permissible Limit: ${formatLakhs(ceilingCost)}`}
             />
@@ -117,14 +117,14 @@ export const CPWDGauge: React.FC<CPWDGaugeProps> = ({
           <div className="h-4 w-full rounded-lg bg-[var(--surface-alt)] overflow-hidden border border-[var(--border-primary)] flex">
             {/* Allowed portion */}
             <div
-              className={`h-full ${isOverTolerance ? 'bg-slate-400 dark:bg-slate-600' : 'bg-emerald-500'} transition-all duration-500`}
+              className={`h-full ${isOverTolerance ? 'bg-slate-400 dark:bg-slate-600' : 'bg-emerald-500'} transition-[width] duration-500 ease-out`}
               style={{ width: `${allowedPortionPct}%` }}
               title={`Approved Portions: ${formatLakhs(Math.min(billedCost, ceilingCost))}`}
             />
             {/* Excess portion */}
             {isOverTolerance && (
               <div
-                className="h-full bg-rose-500 transition-all duration-500 rounded-r-md"
+                className="h-full bg-rose-500 transition-[width] duration-500 ease-out rounded-r-md"
                 style={{ width: `${excessPortionPct}%` }}
                 title={`Excess Billed Over Ceiling: +${formatLakhs(excess)}`}
               />

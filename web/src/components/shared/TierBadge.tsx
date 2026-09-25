@@ -1,61 +1,103 @@
 import React from 'react'
+import {
+  OctagonAlert,
+  AlertTriangle,
+  AlertCircle,
+  Info,
+  CheckCircle
+} from 'lucide-react'
 
-export type RiskTier = 'critical' | 'high' | 'medium' | 'low' | 'red' | 'orange' | 'yellow' | 'green'
+export type RiskTier =
+  | 'critical'
+  | 'high'
+  | 'medium'
+  | 'low'
+  | 'clear'
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'clean'
 
 interface TierBadgeProps {
   tier: RiskTier | string
   count?: number | string
   showLabel?: boolean
+  showIcon?: boolean
   size?: 'sm' | 'md'
+  className?: string
 }
 
-export const TierBadge: React.FC<TierBadgeProps> = ({
+export const TierBadge: React.FC<TierBadgeProps> = React.memo(({
   tier,
   count,
   showLabel = true,
-  size = 'md'
+  showIcon = true,
+  size = 'md',
+  className = ''
 }) => {
   const normalized = (tier || '').toLowerCase().trim()
 
   const config = {
     critical: {
-      label: 'Priority Audit',
-      bg: 'bg-[var(--surface-alt)] text-rose-600 dark:text-rose-400 border-[var(--border-primary)]'
+      label: 'CRITICAL',
+      bg: 'bg-[#FEE2E2] text-[#991B1B] border-[#FECACA]',
+      Icon: OctagonAlert,
     },
     red: {
-      label: 'Priority Audit',
-      bg: 'bg-[var(--surface-alt)] text-rose-600 dark:text-rose-400 border-[var(--border-primary)]'
+      label: 'CRITICAL',
+      bg: 'bg-[#FEE2E2] text-[#991B1B] border-[#FECACA]',
+      Icon: OctagonAlert,
     },
     high: {
-      label: 'Elevated Review',
-      bg: 'bg-[var(--surface-alt)] text-amber-600 dark:text-amber-400 border-[var(--border-primary)]'
+      label: 'HIGH',
+      bg: 'bg-[#FFEDD5] text-[#9A3412] border-[#FED7AA]',
+      Icon: AlertTriangle,
     },
     orange: {
-      label: 'Elevated Review',
-      bg: 'bg-[var(--surface-alt)] text-amber-600 dark:text-amber-400 border-[var(--border-primary)]'
+      label: 'HIGH',
+      bg: 'bg-[#FFEDD5] text-[#9A3412] border-[#FED7AA]',
+      Icon: AlertTriangle,
     },
     medium: {
-      label: 'Routine Check',
-      bg: 'bg-[var(--surface-alt)] text-[var(--text-secondary)] border-[var(--border-primary)]'
+      label: 'MEDIUM',
+      bg: 'bg-[#FEF3C7] text-[#92400E] border-[#FDE68A]',
+      Icon: AlertCircle,
     },
     yellow: {
-      label: 'Routine Check',
-      bg: 'bg-[var(--surface-alt)] text-[var(--text-secondary)] border-[var(--border-primary)]'
+      label: 'MEDIUM',
+      bg: 'bg-[#FEF3C7] text-[#92400E] border-[#FDE68A]',
+      Icon: AlertCircle,
     },
     low: {
-      label: 'Compliant',
-      bg: 'bg-[var(--surface-alt)] text-emerald-600 dark:text-emerald-400 border-[var(--border-primary)]'
+      label: 'LOW',
+      bg: 'bg-[#E0F2FE] text-[#075985] border-[#BAE6FD]',
+      Icon: Info,
+    },
+    clear: {
+      label: 'CLEAR',
+      bg: 'bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]',
+      Icon: CheckCircle,
+    },
+    clean: {
+      label: 'CLEAR',
+      bg: 'bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]',
+      Icon: CheckCircle,
     },
     green: {
-      label: 'Compliant',
-      bg: 'bg-[var(--surface-alt)] text-emerald-600 dark:text-emerald-400 border-[var(--border-primary)]'
-    }
+      label: 'CLEAR',
+      bg: 'bg-[#EFF6FF] text-[#1D4ED8] border-[#BFDBFE]',
+      Icon: CheckCircle,
+    },
   }[normalized] || {
-    label: tier || 'Standard',
-    bg: 'bg-[var(--surface-alt)] text-[var(--text-secondary)] border-[var(--border-primary)]'
+    label: (tier || 'CLEAR').toUpperCase(),
+    bg: 'bg-[#F1F5F9] text-[#334155] border-[#CBD5E1]',
+    Icon: Info,
   }
 
+  const { Icon } = config
   const paddingClass = size === 'sm' ? 'px-2 py-0.5 text-[11px]' : 'px-2.5 py-1 text-xs'
+  const iconSize = size === 'sm' ? 12 : 13
 
   const formattedCount =
     typeof count === 'number'
@@ -66,14 +108,15 @@ export const TierBadge: React.FC<TierBadgeProps> = ({
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-lg font-bold border ${config.bg} ${paddingClass} tabular-nums shadow-2xs`}
+      className={`inline-flex items-center gap-1.5 rounded-md font-bold border ${config.bg} ${paddingClass} tabular-nums shadow-2xs whitespace-nowrap shrink-0 ${className}`}
     >
+      {showIcon && <Icon size={iconSize} className="shrink-0" />}
       {showLabel && <span>{config.label}</span>}
       {formattedCount !== undefined && (
-        <span className={showLabel ? 'opacity-80 font-mono text-[10px]' : ''}>
+        <span className={showLabel ? 'opacity-85 font-mono text-[10px]' : ''}>
           {showLabel ? `(${formattedCount})` : `Score: ${formattedCount}`}
         </span>
       )}
     </span>
   )
-}
+})

@@ -12,9 +12,14 @@ import {
   ChevronLeft,
   ChevronRight,
   Landmark,
-  MapPin
+  MapPin,
+  TrendingUp,
+  FileCheck2,
+  CheckCircle2,
+  X,
+  ArrowUpDown
 } from 'lucide-react'
-import { useTranslation, translateState } from '../lib/i18n'
+import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 
 export const BrowseMPs: React.FC = () => {
@@ -208,8 +213,8 @@ export const BrowseMPs: React.FC = () => {
     return `₹${formatNum(cr.toFixed(1))} ${t('unit.cr')}`
   }
 
-  const totalRecords = meta?.total_records || meta?.total || 774
-  const totalPages = meta?.total_pages || Math.ceil(totalRecords / 48)
+  const totalRecords = meta?.total_records ?? meta?.total ?? (mps ? mps.length : 0)
+  const totalPages = meta?.total_pages ?? Math.max(1, Math.ceil(totalRecords / 48))
 
   const suggestedAcs = React.useMemo(() => {
     if (!search || search.trim().length < 2) return []
@@ -217,23 +222,23 @@ export const BrowseMPs: React.FC = () => {
   }, [search])
 
   return (
-    <div className="space-y-6">
-      {/* Top Header & Search Bar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <div className="space-y-6 pt-1">
+      {/* Top Header */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-3 flex-wrap">
             <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight flex items-center gap-2.5">
-              <Users className="w-6 h-6 text-[var(--brand-primary)] shrink-0" />
+              <Users className="w-7 h-7 text-[var(--brand-primary)] shrink-0" />
               {t('mps.title')}
             </h1>
             {isStateNodal && (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs font-black uppercase tracking-wider">
-                <MapPin size={12} className="text-emerald-500" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] dark:bg-blue-950/60 border border-[#BFDBFE] dark:border-blue-800/70 text-[#1D4ED8] dark:text-blue-300 text-xs font-black uppercase tracking-wider">
+                <MapPin size={12} className="text-[#2563EB]" />
                 <span>{translateState(nodalState, lang)} Jurisdiction Scope</span>
               </span>
             )}
           </div>
-          <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">
+          <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1.5 max-w-3xl">
             {isStateNodal ? (
               <span>
                 Showing Lok Sabha and Rajya Sabha representatives exclusively for <strong>{translateState(nodalState, lang)}</strong>.
@@ -244,10 +249,31 @@ export const BrowseMPs: React.FC = () => {
           </p>
         </div>
 
-        {/* Global Controls */}
-        <div className="flex flex-wrap items-center gap-2.5">
-          <div className="relative flex-1 sm:w-64">
-            <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]" />
+        {/* Global Summary Badges */}
+        <div className="flex items-center gap-2 flex-wrap text-xs shrink-0">
+          <div className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] dark:bg-[#0D121D] border border-slate-200 dark:border-[#1E293B] flex items-center gap-2 shadow-2xs">
+            <span className="text-[var(--text-tertiary)] font-bold">Total MPs:</span>
+            <span className="font-black text-[var(--text-primary)] tabular-nums">{formatNum(totalRecords)}</span>
+          </div>
+          <div className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] dark:bg-[#0D121D] border border-slate-200 dark:border-[#1E293B] flex items-center gap-2 shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-blue-500" />
+            <span className="text-[var(--text-tertiary)] font-bold">Lok Sabha:</span>
+            <span className="font-black text-[var(--text-primary)] tabular-nums">{formatNum(543)}</span>
+          </div>
+          <div className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] dark:bg-[#0D121D] border border-slate-200 dark:border-[#1E293B] flex items-center gap-2 shadow-2xs">
+            <span className="w-2 h-2 rounded-full bg-indigo-500" />
+            <span className="text-[var(--text-tertiary)] font-bold">Rajya Sabha:</span>
+            <span className="font-black text-[var(--text-primary)] tabular-nums">{formatNum(245)}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Global Controls & Filter Toolbar */}
+      <div className="p-3 sm:p-4 rounded-2xl bg-[var(--surface-primary)] dark:bg-[#0D121D] border border-slate-200 dark:border-[#1E293B] shadow-xs">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+          {/* Left: Search input */}
+          <div className="relative flex-1 min-w-[240px]">
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]" />
             <input
               type="text"
               value={search}
@@ -256,62 +282,101 @@ export const BrowseMPs: React.FC = () => {
                 setPage(1)
               }}
               placeholder={isStateNodal ? `Search ${nodalState} MPs...` : t('mps.search_placeholder')}
-              className="w-full pl-8 pr-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-primary)]"
+              className="w-full pl-10 pr-9 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] dark:border-[#222F43] text-xs sm:text-sm text-[var(--text-primary)] placeholder-[var(--text-tertiary)] outline-none focus:border-[var(--brand-primary)] focus:bg-[var(--surface-primary)] transition"
             />
+            {search && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearch('')
+                  setPage(1)
+                }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition cursor-pointer"
+                title="Clear search"
+              >
+                <X size={14} />
+              </button>
+            )}
           </div>
 
-          {/* State / Jurisdiction Selector */}
-          <select
-            value={effectiveStateFilter}
-            onChange={(e) => {
-              setStateFilter(e.target.value)
-              setPage(1)
-            }}
-            disabled={isStateNodal}
-            className={`px-3 py-2 rounded-xl bg-[var(--surface-primary)] border text-xs font-semibold outline-none transition cursor-pointer ${
-              isStateNodal
-                ? 'border-emerald-500/50 bg-emerald-500/5 text-emerald-700 dark:text-emerald-400 font-bold opacity-90 cursor-not-allowed'
-                : 'border-[var(--border-primary)] text-[var(--text-primary)] focus:border-[var(--brand-primary)]'
-            }`}
-            title={isStateNodal ? `Locked to ${nodalState} (State Nodal Officer)` : 'Filter by State / UT'}
-          >
-            {!isStateNodal && <option value="ALL">All States &amp; UTs (36)</option>}
-            {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
-              <option key={st} value={st}>
-                {translateState(st, lang)}
-              </option>
-            ))}
-          </select>
+          {/* Right: State, House, Sort, Order Controls */}
+          <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+            {/* State / Jurisdiction Selector */}
+            <select
+              value={effectiveStateFilter}
+              onChange={(e) => {
+                setStateFilter(e.target.value)
+                setPage(1)
+              }}
+              disabled={isStateNodal}
+              className={`px-3 py-2 rounded-xl bg-[var(--surface-alt)] border text-xs font-semibold outline-none transition cursor-pointer min-w-[150px] ${
+                isStateNodal
+                  ? 'border-[#BFDBFE] bg-[#EFF6FF] text-[#1D4ED8] font-bold opacity-90 cursor-not-allowed'
+                  : 'border-[var(--border-primary)] dark:border-[#222F43] text-[var(--text-primary)] focus:border-[var(--brand-primary)]'
+              }`}
+              title={isStateNodal ? `Locked to ${nodalState} (State Nodal Officer)` : 'Filter by State / UT'}
+            >
+              {!isStateNodal && <option value="ALL">All States &amp; UTs (36)</option>}
+              {ALL_36_STATES_AND_UTS.filter(s => s !== 'ALL STATES & UNION TERRITORIES').map((st) => (
+                <option key={st} value={st}>
+                  {translateState(st, lang)}
+                </option>
+              ))}
+            </select>
 
-          <select
-            value={house}
-            onChange={(e) => {
-              setHouse(e.target.value)
-              setPage(1)
-            }}
-            className="px-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
-          >
-            <option value="all">{t('mps.all_houses')}</option>
-            <option value="Lok Sabha">{t('mps.lok_sabha_count')}</option>
-            <option value="Rajya Sabha">{t('mps.rajya_sabha_count')}</option>
-          </select>
+            {/* House Selector */}
+            <select
+              value={house}
+              onChange={(e) => {
+                setHouse(e.target.value)
+                setPage(1)
+              }}
+              className="px-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] dark:border-[#222F43] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] min-w-[125px]"
+            >
+              <option value="all">{t('mps.all_houses')}</option>
+              <option value="Lok Sabha">{t('mps.lok_sabha_count')}</option>
+              <option value="Rajya Sabha">{t('mps.rajya_sabha_count')}</option>
+            </select>
 
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="px-3 py-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)]"
-          >
-            <option value="allocated">{t('mps.sort_allocated')}</option>
-            <option value="utilization">{t('mps.sort_utilization')}</option>
-            <option value="red_pct">{t('mps.sort_red_pct')}</option>
-          </select>
+            {/* Sort Selector */}
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              className="px-3 py-2 rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] dark:border-[#222F43] text-xs font-semibold text-[var(--text-primary)] outline-none focus:border-[var(--brand-primary)] min-w-[130px]"
+            >
+              <option value="allocated">{t('mps.sort_allocated')}</option>
+              <option value="utilization">{t('mps.sort_utilization')}</option>
+              <option value="red_pct">{t('mps.sort_red_pct')}</option>
+            </select>
 
-          <button
-            onClick={() => setOrder(order === 'desc' ? 'asc' : 'desc')}
-            className="px-3 py-2 text-xs font-bold rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-primary)] hover:border-[var(--brand-primary)]"
-          >
-            {order === 'asc' ? t('common.asc') : t('common.desc')}
-          </button>
+            {/* Order Toggle */}
+            <button
+              type="button"
+              onClick={() => setOrder(order === 'desc' ? 'asc' : 'desc')}
+              className="px-3 py-2 text-xs font-bold rounded-xl bg-[var(--surface-alt)] border border-[var(--border-primary)] dark:border-[#222F43] text-[var(--text-primary)] hover:border-[var(--brand-primary)] flex items-center gap-1.5 transition shrink-0 cursor-pointer"
+              title={`Order: ${order.toUpperCase()}`}
+            >
+              <ArrowUpDown size={13} className="text-[var(--text-tertiary)]" />
+              <span>{order === 'asc' ? t('common.asc') : t('common.desc')}</span>
+            </button>
+
+            {/* Clear Filters (if active) */}
+            {(search || house !== 'all' || (effectiveStateFilter && effectiveStateFilter !== 'ALL' && !isStateNodal)) && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearch('')
+                  setHouse('all')
+                  if (!isStateNodal) setStateFilter('ALL')
+                  setPage(1)
+                }}
+                className="px-3 py-2 text-xs font-bold rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 transition shrink-0 cursor-pointer"
+                title="Clear all filters"
+              >
+                {t('common.clear_filters')}
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
@@ -365,31 +430,31 @@ export const BrowseMPs: React.FC = () => {
             return (
               <div
                 key={mp.id}
-                className="lux-card p-5 flex flex-col justify-between hover:border-[var(--brand-accent)] transition-colors duration-150"
+                className="lux-card card-content-opt p-5 flex flex-col justify-between rounded-2xl border border-blue-300 dark:border-[#222F43] hover:!border-blue-500 dark:hover:!border-blue-400 hover:shadow-md transition-colors duration-150 bg-[var(--surface-primary)] dark:bg-[#0D121D]"
               >
                 <div>
                   {/* Top row: Avatar + House badge */}
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-full bg-[var(--surface-alt)] border border-[var(--border-primary)] flex items-center justify-center font-extrabold text-xs text-[var(--brand-primary)] shadow-sm shrink-0">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#EFF6FF] to-[#DBEAFE] dark:from-[#1E293B] dark:to-[#0F172A] border border-[#BFDBFE] dark:border-[#334155] flex items-center justify-center font-black text-xs text-[#1E40AF] dark:text-[#60A5FA] shadow-xs shrink-0">
                         {initials}
                       </div>
-                      <div>
-                        <h3 className="text-sm font-extrabold text-[var(--text-primary)] tracking-tight line-clamp-1">
-                          {mp.mpName}
+                      <div className="min-w-0">
+                        <h3 className="text-sm font-extrabold text-[var(--text-primary)] tracking-tight truncate" title={mp.mpName}>
+                          {translateMP(mp.mpName, lang)}
                         </h3>
-                        <div className="flex items-center gap-1.5 mt-0.5">
+                        <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
                           <span
-                            className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                            className={`px-2 py-0.5 rounded-md text-[10px] font-extrabold tracking-wide ${
                               isLokSabha
-                                ? 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'
-                                : 'bg-[var(--success)]/10 text-[var(--success)]'
+                                ? 'bg-[#EFF6FF] text-[#1D4ED8] border border-[#BFDBFE] dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-800/60'
+                                : 'bg-[#EEF2FF] text-[#4338CA] border border-[#C7D2FE] dark:bg-indigo-950/50 dark:text-indigo-300 dark:border-indigo-800/60'
                             }`}
                           >
                             {mp.house}
                           </span>
                           {mp.party && (
-                            <span className="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]">
+                            <span className="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)] dark:border-[#222F43]">
                               {mp.party}
                             </span>
                           )}
@@ -399,69 +464,87 @@ export const BrowseMPs: React.FC = () => {
                   </div>
 
                   {/* Constituency & State */}
-                  <div className="text-xs text-[var(--text-secondary)] mb-2 flex items-center gap-1">
-                    <span className="font-semibold text-[var(--text-primary)]">
-                      {mp.constituency || 'General'}
+                  <div className="text-xs text-[var(--text-secondary)] mb-2 flex items-center gap-1.5 truncate">
+                    <MapPin size={12} className="text-[var(--text-tertiary)] shrink-0" />
+                    <span className="font-semibold text-[var(--text-primary)] truncate">
+                      {mp.constituency ? translateConstituency(mp.constituency, lang) : 'Sitting Rajya Sabha'}
                     </span>
-                    <span>&bull;</span>
-                    <span>{translateState(mp.state, lang)}</span>
+                    <span className="text-[var(--text-tertiary)]">&bull;</span>
+                    <span className="truncate">{translateState(mp.state, lang)}</span>
                   </div>
 
                   {/* Assembly Constituency Badge if matched via AC */}
                   {mp.assembly_name && (
-                    <div className="mb-3 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">
-                      <span>🏛️ Assembly: {mp.assembly_name}</span>
+                    <div className="mb-3 inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-[10px] font-bold bg-[#F0F9FF] dark:bg-sky-950/50 text-[#0369A1] dark:text-sky-300 border border-[#BAE6FD] dark:border-sky-800/60">
+                      <span>🏛️ Assembly: {translateConstituency(mp.assembly_name, lang)}</span>
                     </div>
                   )}
 
                   {/* Dual Financial Outlay: Fund Allocated vs Utilization */}
-                  <div className="grid grid-cols-2 gap-2.5 my-2.5">
+                  <div className="grid grid-cols-2 gap-2.5 my-3 p-2.5 rounded-xl bg-slate-50/70 dark:bg-[#070B12]/80 border border-slate-100 dark:border-[#1E293B]">
                     <div>
-                      <span className="text-[10px] uppercase font-extrabold text-[var(--text-secondary)] block tracking-wider">
+                      <span className="text-[10px] uppercase font-extrabold text-[var(--text-tertiary)] block tracking-wider">
                         {t('mps.fund_allocated')}
                       </span>
-                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--color-espresso)] dark:text-blue-400 mt-0.5">
+                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--text-primary)] mt-0.5">
                         {formatCrores(mp.allocatedAmount ?? mp.totalAllocated ?? mp.allocated ?? 0)}
                       </div>
-                      <span className="text-[11px] font-bold text-[var(--text-secondary)] block mt-0.5">
-                        {t('mps.disbursed')}: <span className="text-[var(--gold-text)] font-extrabold">{formatCrores(mp.totalExpenditure ?? mp.expenditure ?? 0)}</span>
+                      <span className="text-[11px] font-medium text-[var(--text-secondary)] block mt-0.5 truncate">
+                        {t('mps.disbursed')}: <span className="text-black dark:text-[#FE9F3B] font-extrabold">{formatCrores(mp.totalExpenditure ?? mp.expenditure ?? 0)}</span>
                       </span>
                     </div>
 
                     <div className="text-right flex flex-col justify-between items-end">
                       <div className="flex items-center justify-end gap-1.5 w-full">
-                        <span className="text-[10px] uppercase font-extrabold text-[var(--gold-text)] tracking-wider">
+                        <span className="text-[10px] uppercase font-extrabold text-[var(--text-tertiary)] dark:text-[#FE9F3B] tracking-wider">
                           {t('mps.utilization')}
                         </span>
                       </div>
-                      <div className="text-base sm:text-lg font-black tabular-nums text-[var(--gold-text)] mt-0.5">
-                        {formatNum(util.toFixed(1))}%
+                      
+                      {/* Red Percentage in light mode, Orange in dark mode */}
+                      <div className="flex items-center justify-end gap-1 font-black text-base sm:text-lg tabular-nums text-rose-600 dark:text-[#FE9F3B] mt-0.5">
+                        <TrendingUp size={15} className="shrink-0 stroke-[2.5] text-rose-600 dark:text-[#FE9F3B]" />
+                        <span>{formatNum(util.toFixed(1))}%</span>
                       </div>
-                      <div className="w-full h-1.5 rounded-full bg-[var(--border-primary)] mt-1 overflow-hidden">
+
+                      {/* Green Progress Bar in light mode, Orange in dark mode */}
+                      <div className="w-full h-2 rounded-full bg-slate-200/80 dark:bg-slate-800/90 mt-1.5 overflow-hidden border border-slate-300/40 dark:border-slate-700/60">
                         <div
-                          className="h-full rounded-full bg-[var(--brand-accent)] transition-all duration-500"
-                          style={{ width: `${Math.min(100, Math.max(4, util))}%` }}
+                          className="h-full rounded-full bg-emerald-500 dark:bg-[#FE9F3B] transition-[width] duration-500 ease-out shadow-xs"
+                          style={{ width: `${Math.min(100, Math.max(3, util))}%` }}
                         />
                       </div>
                     </div>
                   </div>
+
+                  {/* Recommended Works vs Completed Summary */}
+                  <div className="flex items-center justify-between text-xs px-1 py-1 text-[var(--text-secondary)]">
+                    <span className="font-bold flex items-center gap-1.5 text-[var(--text-primary)]">
+                      <FileCheck2 size={13} className="text-blue-500 shrink-0" />
+                      <span>{t('kpi.recommended')}: <strong>{formatNum(mp.recommendedWorksCount || mp.totalWorks || 0)}</strong></span>
+                    </span>
+                    <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-extrabold flex items-center gap-1 shrink-0">
+                      <CheckCircle2 size={12} className="shrink-0" />
+                      <span>{formatNum(mp.completedWorksCount || 0)} {t('status.completed')}</span>
+                    </span>
+                  </div>
                 </div>
 
-                {/* View Details Action */}
-                <div className="pt-3 border-t border-[var(--border-primary)] mt-3 grid grid-cols-2 gap-2">
+                {/* View Details Action with Blue Button for MP Console and Blue Hover on Public Report */}
+                <div className="pt-2.5 border-t border-[var(--border-primary)] dark:border-[#1E293B] mt-2 grid grid-cols-2 gap-2">
                   <Link
                     to={`/mps/${mp.id}`}
-                    className="py-2 px-2.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] text-[var(--brand-primary)] text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--border-primary)] truncate"
+                    className="py-2 px-2.5 rounded-xl bg-[var(--surface-primary)] dark:bg-[#121926] hover:bg-blue-50 dark:hover:bg-blue-950/40 text-[var(--text-secondary)] hover:text-blue-600 dark:hover:text-blue-400 text-xs font-bold flex items-center justify-center gap-1 transition-colors duration-150 border border-[var(--border-primary)] dark:border-[#222F43] hover:border-blue-400 dark:hover:border-blue-500 shadow-xs truncate group cursor-pointer"
                   >
-                    <span>{t('btn.public_report')}</span>
+                    <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{t('btn.public_report')}</span>
                   </Link>
                   <Link
                     to={`/mp-dashboard?id=${encodeURIComponent(mp.id)}`}
                     onClick={() => setMpJurisdiction(mp.id, mp.mpName, mp.state)}
-                    className="py-2 px-2.5 rounded-xl bg-[var(--brand-accent)]/15 hover:bg-[var(--brand-accent)] text-[var(--gold-text)] hover:text-white text-xs font-bold flex items-center justify-center gap-1 transition border border-[var(--brand-accent)]/30 truncate"
+                    className="py-2 px-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-600 dark:hover:bg-blue-600 text-blue-700 dark:text-blue-300 hover:text-white dark:hover:text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-colors duration-150 border border-blue-200 dark:border-blue-800 hover:border-blue-600 shadow-xs truncate group cursor-pointer"
                   >
-                    <Landmark size={12} />
-                    <span>{t('nav.mp_console')}</span>
+                    <Landmark size={12} className="text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors" />
+                    <span className="text-blue-700 dark:text-blue-300 group-hover:text-white transition-colors font-black">{t('nav.mp_console')}</span>
                   </Link>
                 </div>
               </div>

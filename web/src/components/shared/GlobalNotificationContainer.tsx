@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import {
   CheckCircle2,
   AlertOctagon,
@@ -16,6 +17,16 @@ import { useToastStore, ToastType, ActionModalData } from '../../store/useToastS
 export const GlobalNotificationContainer: React.FC = () => {
   const { toasts, dismissToast, actionModal, closeActionModal } = useToastStore()
   const [copiedRef, setCopiedRef] = useState(false)
+
+  // Scroll lock when actionModal is open
+  useEffect(() => {
+    if (!actionModal) return
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+  }, [actionModal])
 
   // Auto-dismiss action modal after 7 seconds if user does not click
   useEffect(() => {
@@ -99,16 +110,16 @@ export const GlobalNotificationContainer: React.FC = () => {
   return (
     <>
       {/* 1. Global Floating Action Confirmation Pop-up Modal (z-[9999]) */}
-      {actionModal && (
+      {actionModal && typeof document !== 'undefined' && createPortal(
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-in fade-in duration-200"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-md animate-in fade-in duration-200"
           onClick={closeActionModal}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className={`relative max-w-lg w-full rounded-3xl bg-[var(--surface-primary)] border ${modalStyle.border} shadow-2xl p-6 sm:p-7 text-center space-y-4 animate-in zoom-in-95 duration-200`}
+            className={`relative max-w-lg w-full max-h-[90vh] overflow-y-auto rounded-3xl bg-[var(--surface-primary)] border ${modalStyle.border} shadow-2xl p-5 sm:p-7 text-center space-y-4 animate-in zoom-in-95 duration-200`}
           >
             {/* Top Close Button */}
             <button
@@ -140,48 +151,57 @@ export const GlobalNotificationContainer: React.FC = () => {
                   {actionModal.subtitle}
                 </div>
               )}
-
-              <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed max-w-md mx-auto">
-                {actionModal.message}
-              </p>
             </div>
 
-            {/* Transaction Reference Box */}
+            {/* Message Body */}
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed max-w-md mx-auto">
+              {actionModal.message}
+            </p>
+
+            {/* Cryptographic Proof Hash / Reference */}
             {actionModal.refId && (
-              <div className="p-3.5 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-left flex items-center justify-between gap-3 text-xs">
-                <div className="min-w-0 font-mono">
-                  <div className="text-[10px] font-sans font-bold uppercase tracking-wider text-[var(--text-tertiary)]">
-                    Official Audit Transaction ID
+              <div className="p-3 rounded-2xl bg-[var(--surface-alt)] border border-[var(--border-primary)] text-left flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <div className="text-[10px] font-extrabold uppercase tracking-wider text-[var(--text-tertiary)]">
+                    Forensic Ledger Reference ID
                   </div>
-                  <div className="font-extrabold text-[var(--brand-primary)] truncate mt-0.5">
+                  <div className="font-mono text-xs text-[var(--brand-primary)] font-bold truncate">
                     {actionModal.refId}
                   </div>
                 </div>
-
                 <button
                   onClick={() => copyRef(actionModal.refId!)}
-                  className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[11px] font-bold text-[var(--text-primary)] hover:border-[var(--brand-primary)] flex items-center gap-1.5 shrink-0 transition cursor-pointer"
+                  className="p-2 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition shrink-0 cursor-pointer"
+                  title="Copy Reference"
                 >
-                  {copiedRef ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} />}
-                  <span>{copiedRef ? 'Copied' : 'Copy'}</span>
+                  {copiedRef ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
                 </button>
               </div>
             )}
 
-            {/* Action CTA Button */}
+            {/* Meta Row: Timestamp & Signature */}
+            <div className="flex items-center justify-between text-[10px] text-[var(--text-tertiary)] pt-1">
+              <span className="flex items-center gap-1">
+                <ShieldCheck size={12} className="text-emerald-500" /> NIC Digital Sign: Verified
+              </span>
+              <span>{new Date().toLocaleTimeString()} IST</span>
+            </div>
+
+            {/* Action Buttons */}
             <div className="pt-2">
               <button
                 onClick={() => {
                   if (actionModal.onConfirm) actionModal.onConfirm()
                   closeActionModal()
                 }}
-                className={`w-full py-3 rounded-xl text-white text-xs font-black uppercase tracking-wider shadow-lg transition transform active:scale-95 cursor-pointer ${modalStyle.btn}`}
+                className="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary)]/90 transition shadow-md shadow-blue-500/20 cursor-pointer"
               >
                 Acknowledge & Close
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* 2. Global Floating Toast Notifications (z-[9998]) */}

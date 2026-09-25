@@ -66,6 +66,8 @@ artifacts/metrics_*.json
 # Operational logs & audit evidence uploads
 logs/
 *.log
+*.pid
+data/supervisor/
 data/evidence/*
 !data/evidence/.gitkeep
 

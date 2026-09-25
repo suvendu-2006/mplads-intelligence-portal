@@ -8,7 +8,7 @@ interface StateOverviewCardProps {
   item: StateOverviewItem
 }
 
-export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) => {
+export const StateOverviewCard: React.FC<StateOverviewCardProps> = React.memo(({ item }) => {
   const { t, lang } = useTranslation()
   // Format Crore amounts cleanly with native numerals
   const formatCr = (val: number) => {
@@ -20,7 +20,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
   }
 
   return (
-    <div className="rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] p-5 sm:p-6 shadow-xs hover:border-[var(--brand-accent)] hover:shadow-md transition-colors duration-150 flex flex-col justify-between group">
+    <div className="lux-card card-content-opt p-5 sm:p-6 flex flex-col justify-between group">
       <div>
         {/* Header: State Name + MPs + Rank Badge */}
         <div className="flex items-start justify-between gap-3">
@@ -77,7 +77,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
 
           <div className="w-full h-1.5 sm:h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden mt-1.5">
             <div
-              className="h-full rounded-full transition-all duration-700 bg-[#B7791F] dark:bg-[#FF9E3B]"
+              className="h-full rounded-full transition-[width] duration-500 ease-out bg-gradient-to-r from-[#2563EB] to-[#0284C7]"
               style={{ width: `${Math.min(100, Math.max(3, item.expenditureRate))}%` }}
             />
           </div>
@@ -86,7 +86,7 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
         {/* Works Completed & Completion Rate */}
         <div className="flex items-center justify-between py-3 border-t border-slate-100 dark:border-slate-800/80">
           <div className="flex items-center gap-2">
-            <div className="w-5 h-5 rounded-full border border-emerald-500 text-emerald-500 flex items-center justify-center shrink-0">
+            <div className="w-5 h-5 rounded-full border border-[#2563EB] text-[#2563EB] bg-[#EFF6FF] flex items-center justify-center shrink-0">
               <Check size={11} strokeWidth={3} />
             </div>
             <div>
@@ -122,4 +122,4 @@ export const StateOverviewCard: React.FC<StateOverviewCardProps> = ({ item }) =>
       </div>
     </div>
   )
-}
+})

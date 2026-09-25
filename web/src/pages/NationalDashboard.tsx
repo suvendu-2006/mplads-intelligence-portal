@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import {
   StatCard,
@@ -8,9 +9,9 @@ import {
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
 import { useChartTheme } from '../hooks/useChartTheme'
+import { useInView } from '../hooks/useInView'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
 import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS, DEFAULT_TOP_STATES } from '../lib/defaultData'
-import { StateOverviewCard } from '../components/StateOverviewCard'
 import { ALL_36_STATES_OVERVIEW } from '../lib/allStatesData'
 import {
   Landmark,
@@ -32,14 +33,15 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  CartesianGrid,
+  AreaChart,
+  Area,
   PieChart,
   Pie,
   Cell,
-  CartesianGrid,
-  AreaChart,
-  Area
+  Sector
 } from 'recharts'
-import { useTranslation, toNativeDigits, translateState, translateSector } from '../lib/i18n'
+import { useTranslation, toNativeDigits, translateState, translateSector, LangMode } from '../lib/i18n'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -51,6 +53,658 @@ const UNION_TERRITORIES = [
   'Lakshadweep',
   'Puducherry'
 ]
+
+const SECTOR_PIE_COLORS_LIGHT = [
+  '#7C3AED', // 1. Roads & Pathways: Royal Deep Violet (32.6%)
+  '#F59E0B', // 2. Public Space Lighting: Luminous Amber Gold (11.9%)
+  '#E11D48', // 3. Community Centers & Halls: Vivid Crimson Rose (7.9%)
+  '#C026D3', // 4. Solar & Municipal Street Lights: Electric Orchid Magenta (4.3%)
+  '#EA580C', // 5. School & College Classrooms: Vibrant Coral Tangerine (3.8%)
+  '#64748B', // 6. Other Socio-Economic Sectors: Executive Slate Charcoal (39.5%)
+]
+
+const SECTOR_PIE_COLORS_DARK = [
+  '#38BDF8', // 1. Sky Blue
+  '#FB923C', // 2. Warm Orange
+  '#2FD0A0', // 3. Mint Emerald
+  '#FACC15', // 4. Amber Yellow
+  '#F472B6', // 5. Rose Pink
+  '#818CF8', // 6. Indigo Violet
+]
+
+interface SectorExpenditureCardProps {
+  sectorData: any[]
+  totalSectorCr: number
+}
+
+/**
+ * 60 FPS Animated Value for Donut Center Labels
+ * Smoothly animates from 0 to target on mount/refresh
+ */
+function AnimatedDonutValue({ value, prefix = '', suffix = '' }: { value: number; prefix?: string; suffix?: string }) {
+  const { lang } = useTranslation()
+  const spanRef = React.useRef<HTMLSpanElement>(null)
+  const prevValRef = React.useRef<number | null>(null)
+
+  useEffect(() => {
+    if (!spanRef.current) return
+    const finalStr = toNativeDigits(value.toLocaleString('en-IN'), lang)
+    if (prevValRef.current === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const startVal = prevValRef.current ?? 0
+    prevValRef.current = value
+
+    if (typeof window === 'undefined' || !window.requestAnimationFrame || value === 0 || startVal === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const duration = 750
+    const startTime = performance.now()
+    let frameId: number
+
+    const step = (now: number) => {
+      const elapsed = now - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      // Quartic ease-out: rapid initial roll with an ultra-smooth, silky glide to rest
+      const easeOut = 1 - Math.pow(1 - progress, 4)
+      const current = Math.round(startVal + (value - startVal) * easeOut)
+
+      if (spanRef.current) {
+        spanRef.current.textContent = toNativeDigits(current.toLocaleString('en-IN'), lang)
+      }
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step)
+      } else if (spanRef.current) {
+        spanRef.current.textContent = finalStr
+      }
+    }
+
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
+  }, [value, lang])
+
+  return (
+    <span>
+      {prefix}
+      <span ref={spanRef}>{toNativeDigits(value.toLocaleString('en-IN'), lang)}</span>
+      {suffix}
+    </span>
+  )
+}
+
+/**
+ * 60 FPS Animated Percentage for Donut Center Labels
+ */
+function AnimatedDonutPercent({ value }: { value: number }) {
+  const { lang } = useTranslation()
+  const spanRef = React.useRef<HTMLSpanElement>(null)
+  const prevValRef = React.useRef<number | null>(null)
+
+  useEffect(() => {
+    if (!spanRef.current) return
+    const finalStr = `${toNativeDigits(value.toFixed(1), lang)}%`
+    if (prevValRef.current === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const startVal = prevValRef.current ?? 0
+    prevValRef.current = value
+
+    if (typeof window === 'undefined' || !window.requestAnimationFrame || value === 0 || startVal === value) {
+      spanRef.current.textContent = finalStr
+      return
+    }
+
+    const duration = 750
+    const startTime = performance.now()
+    let frameId: number
+
+    const step = (now: number) => {
+      const elapsed = now - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      // Quartic ease-out: rapid initial roll with an ultra-smooth, silky glide to rest
+      const easeOut = 1 - Math.pow(1 - progress, 4)
+      const current = (startVal + (value - startVal) * easeOut).toFixed(1)
+
+      if (spanRef.current) {
+        spanRef.current.textContent = `${toNativeDigits(current, lang)}%`
+      }
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step)
+      } else if (spanRef.current) {
+        spanRef.current.textContent = finalStr
+      }
+    }
+
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
+  }, [value, lang])
+
+  return <span ref={spanRef}>{toNativeDigits(value.toFixed(1), lang)}%</span>
+}
+
+/**
+ * Viewport-triggered Multi-Year Allocation vs Spend Trend Area Chart
+ * Runs a silky 1100ms sweep animation only when scrolled into view
+ */
+function TrendAreaChart({
+  yearlyTrendData,
+  chartTheme,
+  lang,
+  t
+}: {
+  yearlyTrendData: any[]
+  chartTheme: any
+  lang: LangMode
+  t: (key: string) => string
+}) {
+  const [animKey, setAnimKey] = useState(0)
+  const hasTriggeredRef = React.useRef(false)
+  const ref = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el || hasTriggeredRef.current) return
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasTriggeredRef.current) {
+          hasTriggeredRef.current = true
+          // Re-trigger the smooth sweep animation right when entering view
+          setAnimKey(prev => prev + 1)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1, rootMargin: '60px 0px 60px 0px' }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={ref} className="h-60 w-full chart-container">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          key={`trend-area-${animKey}`}
+          data={yearlyTrendData}
+          margin={{ top: 10, right: 10, left: -10, bottom: 0 }}
+        >
+          <defs>
+            <linearGradient id="spentGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#0284C7" stopOpacity={0.4} />
+              <stop offset="95%" stopColor="#0284C7" stopOpacity={0.02} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} />
+          <XAxis
+            dataKey="period"
+            stroke={chartTheme.textColor}
+            fontSize={11}
+            tickLine={false}
+            tickFormatter={(v) => toNativeDigits(v, lang)}
+          />
+          <YAxis
+            stroke={chartTheme.textColor}
+            fontSize={11}
+            tickLine={false}
+            tickFormatter={(v) => toNativeDigits(v, lang)}
+          />
+          <Tooltip
+            content={<ChartTooltip formatter="crore" />}
+            isAnimationActive={false}
+            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
+          />
+          <Area
+            type="monotone"
+            dataKey="disbursed"
+            name={t('chart.audited_disbursal')}
+            stroke="#0284C7"
+            strokeWidth={2.5}
+            fillOpacity={1}
+            fill="url(#spentGrad)"
+            isAnimationActive={true}
+            animationDuration={850}
+            animationEasing="ease-out"
+            animationBegin={0}
+            dot={{ r: 4, fill: '#0284C7' }}
+            activeDot={{
+              r: 6,
+              fill: chartTheme.tooltipBg,
+              stroke: '#0284C7',
+              strokeWidth: 3
+            }}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  )
+}
+
+/**
+ * Isolated, memoized Sectoral Expenditure Pie Chart
+ * Self-contained hover/click state guarantees zero layout shift or parent re-renders
+ */
+const SectorExpenditureCard: React.FC<SectorExpenditureCardProps> = React.memo(({
+  sectorData,
+  totalSectorCr,
+}) => {
+  const { t, toNativeDigits } = useTranslation()
+  const [selectedSectorIndex, setSelectedSectorIndex] = useState<number | null>(null)
+  const [hoveredSectorIndex, setHoveredSectorIndex] = useState<number | null>(null)
+  const activeSectorIndex = hoveredSectorIndex !== null ? hoveredSectorIndex : selectedSectorIndex
+  const activeSector = activeSectorIndex !== null ? sectorData[activeSectorIndex] : null
+
+  const handleToggleSector = (idx: number) => {
+    setSelectedSectorIndex(prev => prev === idx ? null : idx)
+  }
+
+  // Crisp native SVG geometry expansion with guaranteed fill color for all sectors
+  const renderActiveSector = React.useCallback((props: any) => {
+    const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, payload } = props
+    const sliceColor = fill || payload?.color || payload?.fill || '#64748B'
+    return (
+      <g>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius - 2}
+          outerRadius={outerRadius + 8}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={sliceColor}
+          stroke="var(--surface-primary)"
+          strokeWidth={3}
+          cursor="pointer"
+        />
+      </g>
+    )
+  }, [])
+
+  if (!sectorData || sectorData.length === 0) {
+    return <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
+  }
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      {/* Left Column: Donut Pie Chart (5 cols) */}
+      <div className="lg:col-span-5 h-80 relative flex items-center justify-center chart-container">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={sectorData}
+              cx="50%"
+              cy="50%"
+              innerRadius={78}
+              outerRadius={114}
+              paddingAngle={3}
+              cornerRadius={5}
+              dataKey="value"
+              {...({
+                activeIndex: activeSectorIndex ?? undefined,
+                activeShape: renderActiveSector
+              } as any)}
+              animationDuration={ANIMATION_CONFIG.duration.pie}
+              animationEasing="ease-out"
+              animationBegin={0}
+              isAnimationActive={true}
+              onClick={(_, idx) => handleToggleSector(idx)}
+              onMouseEnter={(_, idx) => setHoveredSectorIndex(idx)}
+              onMouseLeave={() => setHoveredSectorIndex(null)}
+            >
+              {sectorData.map((entry: any, idx: number) => {
+                const isHovered = activeSectorIndex === idx
+                return (
+                  <Cell
+                    key={`cell-sec-pie-${idx}`}
+                    fill={entry.color}
+                    stroke="var(--surface-primary)"
+                    strokeWidth={isHovered ? 3 : 2}
+                    style={{
+                      opacity: activeSectorIndex === null || isHovered ? 1 : 0.4,
+                      cursor: 'pointer',
+                      transition: 'opacity 150ms ease-out'
+                    }}
+                  />
+                )
+              })}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+
+        {/* Interactive Donut Center Label (Guaranteed Zero Overlap: fixed-dimension 3-tier layout) */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-center select-none px-2">
+          <div className="w-[144px] h-[92px] flex flex-col items-center justify-center overflow-hidden">
+            {/* Tier 1: Category Header / Context */}
+            <div className="h-[26px] flex items-center justify-center w-full px-1">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[var(--text-tertiary)] line-clamp-1 leading-tight">
+                {activeSector ? t('chart.selected_share') : t('chart.total_disbursed')}
+              </span>
+            </div>
+
+            {/* Tier 2: Big Numeral / Percentage */}
+            <div className="h-[38px] flex items-center justify-center w-full my-0.5">
+              <span className="text-2xl sm:text-[26px] font-black text-[var(--text-primary)] tabular-nums tracking-tight leading-none">
+                {activeSector ? (
+                  `${toNativeDigits(activeSector.value)}%`
+                ) : (
+                  <>
+                    <AnimatedDonutValue value={totalSectorCr} prefix="₹" />
+                    <span className="text-xs font-bold text-[var(--text-secondary)] ml-1">
+                      {t('unit.cr')}
+                    </span>
+                  </>
+                )}
+              </span>
+            </div>
+
+            {/* Tier 3: Value in Crores or Category Count */}
+            <div className="h-[24px] flex items-center justify-center w-full px-1">
+              <span className="text-[10px] sm:text-[11px] font-extrabold text-[var(--brand-primary)] tabular-nums leading-tight line-clamp-1">
+                {activeSector ? (
+                  `₹${toNativeDigits(activeSector.crValue.toLocaleString('en-IN'))} ${t('unit.cr')}`
+                ) : (
+                  t('chart.six_priority_sectors')
+                )}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Column: All 6 Sector Cards with Socio-Economic Progress Bar (7 cols) - NO SCROLL, ALL VISIBLE */}
+      <div className="lg:col-span-7 flex flex-col gap-2">
+        {sectorData.map((sec: any, idx: number) => {
+          const isHovered = activeSectorIndex === idx
+          return (
+            <div
+              key={idx}
+              onClick={() => handleToggleSector(idx)}
+              onMouseEnter={() => setHoveredSectorIndex(idx)}
+              onMouseLeave={() => setHoveredSectorIndex(null)}
+              className={`p-2.5 rounded-xl border transition-[border-color,box-shadow,background-color] duration-150 cursor-pointer ${
+                isHovered
+                  ? 'bg-[var(--surface-primary)] border-[#7C3AED] shadow-md ring-1 ring-[#7C3AED]/30'
+                  : 'bg-[var(--surface-alt)]/70 border-[var(--border-primary)] hover:bg-[var(--surface-alt)]'
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2 text-xs">
+                {/* Sector Full Name: NO TRUNCATE / NO ELLIPSIS */}
+                <div className="flex items-start gap-2.5 flex-1 min-w-0">
+                  <span
+                    className="w-3 h-3 rounded-xs shrink-0 mt-0.5 shadow-xs"
+                    style={{ backgroundColor: sec.color }}
+                  />
+                  <span
+                    className={`font-bold leading-snug break-words ${
+                      isHovered ? 'text-[#7C3AED]' : 'text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {sec.name}
+                  </span>
+                </div>
+
+                {/* Amount and Percentage */}
+                <div className="text-right shrink-0 flex items-center gap-2.5">
+                  <span className="font-extrabold text-[var(--text-primary)] tabular-nums">
+                    ₹{toNativeDigits(sec.crValue.toLocaleString('en-IN'))} {t('unit.cr')}
+                  </span>
+                  <span
+                    className="font-black tabular-nums text-xs min-w-[42px] text-right"
+                    style={{ color: sec.color }}
+                  >
+                    {toNativeDigits(sec.value)}%
+                  </span>
+                </div>
+              </div>
+
+              {/* Socio-Economic Visual Progress Bar */}
+              <div className="w-full h-1.5 bg-[var(--surface-hover)] rounded-full overflow-hidden mt-2">
+                <div
+                  className="h-full rounded-full transition-[width] duration-300"
+                  style={{
+                    width: `${Math.min(100, sec.value)}%`,
+                    backgroundColor: sec.color
+                  }}
+                />
+              </div>
+
+              {/* Sub-label */}
+              <div className="text-[10px] text-[var(--text-secondary)] font-semibold flex items-center justify-between mt-1">
+                <span>{toNativeDigits(sec.count?.toLocaleString('en-IN'))} {t('chart.works')} funded</span>
+                {isHovered && (
+                  <span className="text-[9px] font-bold text-[#7C3AED] uppercase tracking-wider">
+                    {selectedSectorIndex === idx ? 'Selected (Click to deselect)' : 'Active Hover'}
+                  </span>
+                )}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+})
+
+interface WorksDeliveryCardProps {
+  completedWorks: number
+  pendingWorks: number
+}
+
+/**
+ * Isolated, memoized Works Delivery Status Donut Chart
+ */
+const WorksDeliveryCard: React.FC<WorksDeliveryCardProps> = React.memo(({
+  completedWorks,
+  pendingWorks,
+}) => {
+  const { t, toNativeDigits } = useTranslation()
+  const [selectedStatusIndex, setSelectedStatusIndex] = useState<number | null>(null)
+  const [hoveredStatusIndex, setHoveredStatusIndex] = useState<number | null>(null)
+  const activeStatusIndex = hoveredStatusIndex !== null ? hoveredStatusIndex : selectedStatusIndex
+
+  const totalWorksCalc = completedWorks + pendingWorks
+  const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
+  const pendPct = totalWorksCalc > 0 ? ((pendingWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
+  const worksPieData = React.useMemo(() => [
+    {
+      name: t('chart.completed_certified'),
+      value: completedWorks,
+      color: '#7C3AED',
+      pct: compPct
+    },
+    {
+      name: t('chart.active_in_queue'),
+      value: pendingWorks,
+      color: '#F59E0B',
+      pct: pendPct
+    }
+  ], [completedWorks, pendingWorks, compPct, pendPct, t])
+
+  const activeStatus = activeStatusIndex !== null ? worksPieData[activeStatusIndex] : null
+
+  const handleToggleStatus = (idx: number) => {
+    setSelectedStatusIndex(prev => prev === idx ? null : idx)
+  }
+
+  const renderActiveStatus = React.useCallback((props: any) => {
+    const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, payload } = props
+    const sliceColor = fill || payload?.color || '#7C3AED'
+    return (
+      <g>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius - 2}
+          outerRadius={outerRadius + 8}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={sliceColor}
+          stroke="var(--surface-primary)"
+          strokeWidth={3}
+          cursor="pointer"
+        />
+      </g>
+    )
+  }, [])
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      <div className="lg:col-span-5 h-80 relative flex items-center justify-center chart-container">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={worksPieData}
+              cx="50%"
+              cy="50%"
+              innerRadius={78}
+              outerRadius={114}
+              paddingAngle={3}
+              cornerRadius={5}
+              dataKey="value"
+              {...({
+                activeIndex: activeStatusIndex ?? undefined,
+                activeShape: renderActiveStatus
+              } as any)}
+              animationDuration={ANIMATION_CONFIG.duration.pie}
+              animationEasing="ease-out"
+              animationBegin={0}
+              isAnimationActive={true}
+              onClick={(_, idx) => handleToggleStatus(idx)}
+              onMouseEnter={(_, idx) => setHoveredStatusIndex(idx)}
+              onMouseLeave={() => setHoveredStatusIndex(null)}
+            >
+              {worksPieData.map((entry: any, idx: number) => {
+                const isHovered = activeStatusIndex === idx
+                return (
+                  <Cell
+                    key={`cell-status-pie-${idx}`}
+                    fill={entry.color}
+                    stroke="var(--surface-primary)"
+                    strokeWidth={isHovered ? 3 : 2}
+                    style={{
+                      opacity: activeStatusIndex === null || isHovered ? 1 : 0.4,
+                      cursor: 'pointer',
+                      transition: 'opacity 150ms ease-out'
+                    }}
+                  />
+                )
+              })}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+
+        {/* Interactive Donut Center Label (Fixed 3-Tier Layout, Zero Overlap) */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-center select-none px-2">
+          <div className="w-[144px] h-[92px] flex flex-col items-center justify-center overflow-hidden">
+            {/* Tier 1 */}
+            <div className="h-[26px] flex items-center justify-center w-full px-1">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[var(--text-tertiary)] line-clamp-1 leading-tight">
+                {activeStatus ? activeStatus.name : t('chart.delivery_rate')}
+              </span>
+            </div>
+
+            {/* Tier 2 */}
+            <div className="h-[38px] flex items-center justify-center w-full my-0.5">
+              <span className="text-2xl sm:text-[26px] font-black text-[var(--text-primary)] tabular-nums tracking-tight leading-none">
+                {activeStatus ? (
+                  `${toNativeDigits(activeStatus.pct)}%`
+                ) : (
+                  <AnimatedDonutPercent value={Number(compPct)} />
+                )}
+              </span>
+            </div>
+
+            {/* Tier 3 */}
+            <div className="h-[24px] flex items-center justify-center w-full px-1">
+              <span className="text-[10px] sm:text-[11px] font-extrabold text-[var(--text-secondary)] tabular-nums leading-tight line-clamp-1">
+                {activeStatus
+                  ? `${toNativeDigits(activeStatus.value.toLocaleString('en-IN'))} ${t('chart.works')}`
+                  : `${toNativeDigits(completedWorks.toLocaleString('en-IN'))} ${t('status.completed')}`}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="lg:col-span-7 flex flex-col gap-3">
+        <div
+          onClick={() => handleToggleStatus(0)}
+          onMouseEnter={() => setHoveredStatusIndex(0)}
+          onMouseLeave={() => setHoveredStatusIndex(null)}
+          className={`p-3.5 rounded-xl border transition-[border-color,box-shadow,background-color] duration-150 cursor-pointer ${
+            activeStatusIndex === 0
+              ? 'bg-[var(--surface-primary)] border-[#7C3AED] shadow-md ring-1 ring-[#7C3AED]/30'
+              : 'bg-[var(--surface-alt)]/70 border-[var(--border-primary)] hover:bg-[var(--surface-alt)]'
+          }`}
+        >
+          <div className="flex items-center justify-between mb-1.5 text-xs">
+            <span className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+              <span className="w-3 h-3 rounded-xs shrink-0" style={{ backgroundColor: '#7C3AED' }} />
+              <span className="break-words leading-tight">{t('chart.completed_certified')}</span>
+            </span>
+            <span className="font-black text-sm text-[#7C3AED] tabular-nums">{toNativeDigits(compPct)}%</span>
+          </div>
+          <div className="w-full h-1.5 bg-[var(--surface-hover)] rounded-full overflow-hidden my-2">
+            <div
+              className="h-full rounded-full transition-[width] duration-300"
+              style={{ width: `${compPct}%`, backgroundColor: '#7C3AED' }}
+            />
+          </div>
+          <div className="flex items-center justify-between text-xs mt-1">
+            <div className="text-base font-black text-[var(--text-primary)] tabular-nums">
+              {toNativeDigits(completedWorks.toLocaleString('en-IN'))} {t('chart.works')}
+            </div>
+            <div className="text-[11px] text-[var(--text-secondary)] font-bold">
+              Disbursed: ₹{toNativeDigits('2,546')} {t('unit.cr')}
+            </div>
+          </div>
+        </div>
+
+        <div
+          onClick={() => handleToggleStatus(1)}
+          onMouseEnter={() => setHoveredStatusIndex(1)}
+          onMouseLeave={() => setHoveredStatusIndex(null)}
+          className={`p-3.5 rounded-xl border transition-[border-color,box-shadow,background-color] duration-150 cursor-pointer ${
+            activeStatusIndex === 1
+              ? 'bg-[var(--surface-primary)] border-[#F59E0B] shadow-md ring-1 ring-[#F59E0B]/30'
+              : 'bg-[var(--surface-alt)]/70 border-[var(--border-primary)] hover:bg-[var(--surface-alt)]'
+          }`}
+        >
+          <div className="flex items-center justify-between mb-1.5 text-xs">
+            <span className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+              <span className="w-3 h-3 rounded-xs shrink-0" style={{ backgroundColor: '#F59E0B' }} />
+              <span className="break-words leading-tight">{t('chart.active_in_queue')}</span>
+            </span>
+            <span className="font-black text-sm text-[#F59E0B] tabular-nums">{toNativeDigits(pendPct)}%</span>
+          </div>
+          <div className="w-full h-1.5 bg-[var(--surface-hover)] rounded-full overflow-hidden my-2">
+            <div
+              className="h-full rounded-full transition-[width] duration-300"
+              style={{ width: `${pendPct}%`, backgroundColor: '#F59E0B' }}
+            />
+          </div>
+          <div className="flex items-center justify-between text-xs mt-1">
+            <div className="text-base font-black text-[var(--text-primary)] tabular-nums">
+              {toNativeDigits(pendingWorks.toLocaleString('en-IN'))} {t('chart.works')}
+            </div>
+            <div className="text-[11px] text-[var(--text-secondary)] font-bold">
+              Committed: ₹{toNativeDigits('1,578')} {t('unit.cr')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+})
 
 export const NationalDashboard: React.FC = () => {
   const { t, lang } = useTranslation()
@@ -70,16 +724,26 @@ export const NationalDashboard: React.FC = () => {
     try {
       const saved = sessionStorage.getItem('cached_nat_states')
       const parsed = saved ? JSON.parse(saved) : null
-      return (parsed && parsed.length > 0) ? parsed : DEFAULT_TOP_STATES
-    } catch { return DEFAULT_TOP_STATES }
+      return (parsed && parsed.length >= 30) ? parsed : []
+    } catch { return [] }
   })
-  const [loading, setLoading] = useState(false)
+  // If cache already has the full 36 states, load immediately; otherwise wait 3ms for the fresh API call so Recharts mounts once
+  const [loading, setLoading] = useState<boolean>(() => {
+    try {
+      const saved = sessionStorage.getItem('cached_nat_states')
+      const parsed = saved ? JSON.parse(saved) : null
+      return !(parsed && parsed.length >= 30)
+    } catch { return true }
+  })
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [leagueFilter, setLeagueFilter] = useState<'all' | 'states' | 'uts'>('all')
+  const [stateChartFilter, setStateChartFilter] = useState<'all' | 'states' | 'uts' | 'top10'>('all')
+  const [stateChartSort, setStateChartSort] = useState<'allocated' | 'utilized' | 'rate'>('allocated')
 
   const chartTheme = useChartTheme()
 
   useEffect(() => {
+    let isMounted = true
     async function loadData() {
       try {
         const [resNat, resStates, resAnalytics] = await Promise.all([
@@ -88,35 +752,72 @@ export const NationalDashboard: React.FC = () => {
           fetch('/api/national/analytics')
         ])
 
+        if (!isMounted) return
+
         if (resNat.ok) {
           const jsonNat = await resNat.json()
-          setNational(jsonNat.data)
-          try { sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data)) } catch {}
+          if (jsonNat.data) {
+            setNational((prev: any) => {
+              if (
+                prev &&
+                Math.round(prev.totalAllocated || 0) === Math.round(jsonNat.data.totalAllocated || 0) &&
+                Math.round(prev.totalExpenditure || 0) === Math.round(jsonNat.data.totalExpenditure || 0)
+              ) {
+                return prev // Reference stability prevents Recharts animation abort
+              }
+              return jsonNat.data
+            })
+            try { sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data)) } catch {}
+          }
         }
         if (resStates.ok) {
           const jsonStates = await resStates.json()
-          setStates(jsonStates.data || [])
-          try { sessionStorage.setItem('cached_nat_states', JSON.stringify(jsonStates.data || [])) } catch {}
+          const fetchedStates = jsonStates.data || []
+          if (fetchedStates.length > 0) {
+            setStates((prev: any[]) => {
+              if (
+                prev &&
+                prev.length === fetchedStates.length &&
+                prev[0]?.state === fetchedStates[0]?.state &&
+                Math.round(prev[0]?.totalAllocated || 0) === Math.round(fetchedStates[0]?.totalAllocated || 0)
+              ) {
+                return prev // Reference stability prevents Recharts animation abort
+              }
+              return fetchedStates
+            })
+            try { sessionStorage.setItem('cached_nat_states', JSON.stringify(fetchedStates)) } catch {}
+          }
         }
         if (resAnalytics.ok) {
           const jsonAnalytics = await resAnalytics.json()
-          setAnalytics(jsonAnalytics.data)
-          try { sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data)) } catch {}
+          if (jsonAnalytics.data) {
+            setAnalytics((prev: any) => {
+              if (
+                prev &&
+                Math.round(prev.totalExpenditure || 0) === Math.round(jsonAnalytics.data.totalExpenditure || 0)
+              ) {
+                return prev // Reference stability prevents Recharts animation abort
+              }
+              return jsonAnalytics.data
+            })
+            try { sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data)) } catch {}
+          }
         }
       } catch (e) {
         console.error('Error fetching national dashboard data:', e)
       } finally {
-        setLoading(false)
+        if (isMounted) {
+          setLoading(false)
+        }
       }
     }
     loadData()
+    return () => {
+      isMounted = false
+    }
   }, [])
 
-  const [pieMode, setPieMode] = useState<'sectors' | 'status'>('status')
-
-  if (loading) {
-    return <LoadingSkeleton rows={8} height="h-28" />
-  }
+  const [pieMode, setPieMode] = useState<'sectors' | 'status'>('sectors')
 
   // Real data calculations directly from central API
   const totalAllocCr = national ? Math.round((national.totalAllocated || 0) / 10000000) : 0
@@ -129,25 +830,28 @@ export const NationalDashboard: React.FC = () => {
   const completedWorks = national?.totalWorksCompleted ?? 0
   const activePayments = national ? Math.round((national.inProgressPayments || 0) / 10000000) : 0
 
-  // Real sector distribution from expenditures.csv via /api/national/analytics
-  const sectorColors = chartTheme.category
-  const sectorData = analytics?.topSectors?.map((sec: any, idx: number) => {
-    const crValue = Math.round(sec.amount / 10000000)
-    const translatedName = translateSector(sec.name, lang)
-    return {
-      name: translatedName,
-      fullName: translateSector(sec.fullName || sec.name, lang),
-      rawName: sec.name,
-      value: sec.sharePct,
-      amount: sec.amount,
-      crValue,
-      count: sec.count,
-      crores: `₹${toNativeDigits(crValue.toLocaleString('en-IN'), lang)} ${t('unit.cr')}`,
-      color: sectorColors[idx % sectorColors.length]
-    }
-  }) || []
+  const sectorData = React.useMemo(() => {
+    const piePalette = chartTheme.isDark ? SECTOR_PIE_COLORS_DARK : SECTOR_PIE_COLORS_LIGHT
+    return analytics?.topSectors?.map((sec: any, idx: number) => {
+      const crValue = Math.round(sec.amount / 10000000)
+      const translatedName = translateSector(sec.name, lang)
+      return {
+        name: translatedName,
+        fullName: translateSector(sec.fullName || sec.name, lang),
+        rawName: sec.name,
+        value: sec.sharePct,
+        amount: sec.amount,
+        crValue,
+        count: sec.count,
+        crores: `₹${toNativeDigits(crValue.toLocaleString('en-IN'), lang)} ${t('unit.cr')}`,
+        color: piePalette[idx % piePalette.length]
+      }
+    }) || []
+  }, [analytics?.topSectors, lang, chartTheme.isDark, t])
 
-  const totalSectorCr = sectorData.reduce((sum: number, s: any) => sum + (s.crValue || 0), 0)
+  const totalSectorCr = React.useMemo(() => {
+    return sectorData.reduce((sum: number, s: any) => sum + (s.crValue || 0), 0)
+  }, [sectorData])
 
   // Real yearly multi-year trend from mplads_trends.csv via /api/national/analytics
   const yearlyTrendData = analytics?.yearlyTrends?.map((t: any) => ({
@@ -156,30 +860,60 @@ export const NationalDashboard: React.FC = () => {
     transactions: t.count
   })) || []
 
-  // Top 10 states by allocation for Chart 1
-  const top10Allocated = [...states]
-    .sort((a, b) => (b.totalAllocated || 0) - (a.totalAllocated || 0))
-    .slice(0, 10)
-    .map((s) => ({
+  // Complete dataset for All 36 States & UTs
+  const statesPool = React.useMemo(() => {
+    if (states && states.length >= 30) {
+      return states.map((s) => {
+        const isUT = UNION_TERRITORIES.includes(s.state)
+        const alloc = Math.round((s.totalAllocated || 0) / 10000000)
+        const util = Math.round((s.totalExpenditure || 0) / 10000000)
+        const rate = alloc > 0 ? Math.round((util / alloc) * 1000) / 10 : 0
+        return {
+          state: s.state,
+          name: translateState(s.state, lang),
+          isUT,
+          allocated: alloc,
+          utilized: util,
+          rate,
+          completedWorks: s.totalWorksCompleted || s.completedWorksCount || 0
+        }
+      })
+    }
+    return ALL_36_STATES_OVERVIEW.map((s) => ({
       state: s.state,
       name: translateState(s.state, lang),
-      allocated: Math.round((s.totalAllocated || 0) / 10000000),
-      utilized: Math.round((s.totalExpenditure || 0) / 10000000)
+      isUT: s.isUT,
+      allocated: Math.round(s.allocatedCr),
+      utilized: Math.round(s.expenditureCr),
+      rate: s.expenditureRate,
+      completedWorks: s.completedWorks
     }))
+  }, [states, lang])
 
-  // Best to Worst states & UTs by utilization % for League Table
-  const rankedStates = [...states]
-    .filter((s) => {
-      const isUT = UNION_TERRITORIES.includes(s.state)
-      if (leagueFilter === 'states') return !isUT
-      if (leagueFilter === 'uts') return isUT
-      return true
-    })
-    .sort((a, b) => {
-      const uA = Number(a.utilizationPercentage ?? a.utilizationRate ?? 0)
-      const uB = Number(b.utilizationPercentage ?? b.utilizationRate ?? 0)
-      return uB - uA
-    })
+  const chartStatesData = React.useMemo(() => {
+    let list = [...statesPool]
+    if (stateChartFilter === 'states') {
+      list = list.filter((s) => !s.isUT)
+    } else if (stateChartFilter === 'uts') {
+      list = list.filter((s) => s.isUT)
+    } else if (stateChartFilter === 'top10') {
+      return [...list].sort((a, b) => b.allocated - a.allocated).slice(0, 10)
+    }
+
+    if (stateChartSort === 'allocated') {
+      list.sort((a, b) => b.allocated - a.allocated)
+    } else if (stateChartSort === 'utilized') {
+      list.sort((a, b) => b.utilized - a.utilized)
+    } else if (stateChartSort === 'rate') {
+      list.sort((a, b) => b.rate - a.rate)
+    }
+    // Retain Top 20 jurisdictions to ensure clear, uncluttered visualization
+    return list.slice(0, 20)
+  }, [statesPool, stateChartFilter, stateChartSort])
+
+  if (loading) {
+    return <LoadingSkeleton rows={8} height="h-28" />
+  }
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
@@ -191,7 +925,7 @@ export const NationalDashboard: React.FC = () => {
           value={totalMps}
           description="stat.both_houses"
           tooltip="tooltip.total_mps"
-          theme="espresso"
+          theme="slate"
         />
         <StatCard
           icon={CheckCircle2}
@@ -206,6 +940,7 @@ export const NationalDashboard: React.FC = () => {
           label="kpi.pending"
           value={pendingWorks}
           theme="amber"
+          borderHighlight="amber"
           description="stat.active_queue"
           tooltip="tooltip.pending"
         />
@@ -215,7 +950,7 @@ export const NationalDashboard: React.FC = () => {
           value={activePayments}
           prefix="₹"
           unit="Cr"
-          theme="espresso"
+          theme="slate"
           description="stat.active_liabilities"
           tooltip="tooltip.ongoing"
         />
@@ -229,7 +964,7 @@ export const NationalDashboard: React.FC = () => {
             value={totalAllocCr}
             prefix="₹"
             unit="Cr"
-            theme="espresso"
+            theme="slate"
             tooltip="tooltip.corpus"
           />
           <StatCard
@@ -238,7 +973,7 @@ export const NationalDashboard: React.FC = () => {
             value={totalUsedCr}
             prefix="₹"
             unit="Cr"
-            theme="espresso"
+            theme="slate"
             tooltip="tooltip.utilization"
           />
           <StatCard
@@ -246,7 +981,7 @@ export const NationalDashboard: React.FC = () => {
             label="kpi.utilization"
             value={utilRate}
             unit="%"
-            theme={utilRate < 35 ? 'amber' : 'espresso'}
+            theme="emerald"
             gaugeValue={utilRate}
             tooltip="tooltip.utilization_desc"
           />
@@ -262,163 +997,191 @@ export const NationalDashboard: React.FC = () => {
 
       {/* 3D. Story Charts (The Most Important Visual Section) */}
       <div className="space-y-6">
-        {/* Row 1: Chart 1 (Allocated vs Utilized Top 10 States) + Chart 2 (Where the Money is Spent / Works Status) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <SectionCard
-            title={t('chart.top_states')}
-            subtitle={t('chart.top_states_sub')}
-            className="lg:col-span-2"
-          >
-            <div className="h-80 w-full chart-container">
+        {/* Row 1: Full-Width Top 20 States & Union Territories Bar Diagram */}
+        <SectionCard
+          title={
+            stateChartFilter === 'all'
+              ? t('chart.top_states')
+              : stateChartFilter === 'states'
+              ? 'Top 20 States MPLADS Outlay & Expenditure'
+              : stateChartFilter === 'uts'
+              ? '8 Union Territories MPLADS Outlay & Expenditure'
+              : 'Top 10 States & UTs by Allocation'
+          }
+          subtitle={
+            stateChartFilter === 'all'
+              ? t('chart.top_states_sub')
+              : `Statutory allocation ceiling vs audited disbursal across ${chartStatesData.length} jurisdictions (in ₹ Crores)`
+          }
+          action={
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Scope filter */}
+              <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-1 rounded-xl border border-[var(--border-subtle)] text-xs">
+                {(
+                  [
+                    { id: 'all', label: 'Top 20' },
+                    { id: 'states', label: 'States (20)' },
+                    { id: 'uts', label: 'UTs (8)' },
+                    { id: 'top10', label: 'Top 10' }
+                  ] as const
+                ).map((tab) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setStateChartFilter(tab.id)}
+                    className={`px-3 py-1 rounded-lg font-bold transition cursor-pointer ${
+                      stateChartFilter === tab.id
+                        ? 'bg-[var(--surface-primary)] text-[#4338CA] shadow-xs border border-[var(--border-subtle)]'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Sort filter */}
+              <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-1 rounded-xl border border-[var(--border-subtle)] text-xs">
+                {(
+                  [
+                    { id: 'allocated', label: 'By Budget' },
+                    { id: 'utilized', label: 'By Spend' },
+                    { id: 'rate', label: 'By Util %' }
+                  ] as const
+                ).map((tab) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => setStateChartSort(tab.id)}
+                    className={`px-2.5 py-1 rounded-lg font-semibold transition cursor-pointer ${
+                      stateChartSort === tab.id
+                        ? 'bg-[var(--surface-primary)] text-[#D97706] shadow-xs'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          }
+        >
+          <div className="w-full overflow-x-auto pb-2">
+            <div className="h-[440px] min-w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={top10Allocated} margin={{ top: 10, right: 20, left: 0, bottom: 25 }}>
+                <BarChart
+                  key={`bar-chart-${stateChartFilter}-${stateChartSort}`}
+                  data={chartStatesData}
+                  margin={{ top: 15, right: 20, left: 10, bottom: 65 }}
+                  barGap={chartStatesData.length > 20 ? 1 : 3}
+                  barCategoryGap={chartStatesData.length > 20 ? '16%' : '24%'}
+                >
                   <defs>
                     <linearGradient id="barAllocatedGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor={chartTheme.allocated.hex} stopOpacity={1} />
-                      <stop offset="100%" stopColor={chartTheme.allocated.hex} stopOpacity={0.72} />
+                      <stop offset="0%" stopColor={chartTheme.isDark ? '#5DA1F3' : '#4F46E5'} stopOpacity={1} />
+                      <stop offset="100%" stopColor={chartTheme.isDark ? '#3B82F6' : '#3730A3'} stopOpacity={0.95} />
                     </linearGradient>
                     <linearGradient id="barUtilizedGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor={chartTheme.utilized.hex} stopOpacity={1} />
-                      <stop offset="100%" stopColor={chartTheme.utilized.hex} stopOpacity={0.72} />
+                      <stop offset="0%" stopColor={chartTheme.isDark ? '#FF9E5E' : '#F59E0B'} stopOpacity={1} />
+                      <stop offset="100%" stopColor={chartTheme.isDark ? '#E58F39' : '#D97706'} stopOpacity={0.95} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} vertical={false} />
                   <XAxis
                     dataKey="name"
-                    stroke={chartTheme.textColor}
-                    fontSize={11}
+                    stroke="#64748B"
+                    fontSize={chartStatesData.length > 20 ? 10 : 11}
+                    fontWeight={600}
                     tickLine={false}
                     interval={0}
-                    angle={-20}
+                    angle={-48}
                     textAnchor="end"
-                    tickFormatter={(name) => (name.length > 13 ? name.slice(0, 11) + '..' : name)}
+                    height={84}
+                    tickFormatter={(name) => translateState(name, lang)}
                   />
-                  <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
+                  <YAxis
+                    stroke="#64748B"
+                    fontSize={11}
+                    fontWeight={600}
+                    tickLine={false}
+                    tickFormatter={(v) => `₹${toNativeDigits(v, lang)}`}
+                  />
                   <Tooltip
                     content={<ChartTooltip formatter="crore" />}
-                    cursor={{ fill: 'var(--surface-hover)', opacity: 0.5 }}
+                    cursor={{ fill: 'var(--surface-hover)', opacity: 0.35 }}
+                    isAnimationActive={false}
+                    wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                   />
                   <Bar
                     dataKey="allocated"
                     name={t('chart.allocated_budget')}
                     fill="url(#barAllocatedGrad)"
-                    radius={[6, 6, 0, 0]}
-                    {...ANIMATION_CONFIG.getChartProps('bar')}
+                    radius={[4, 4, 0, 0]}
+                    maxBarSize={22}
+                    isAnimationActive={true}
+                    animationDuration={ANIMATION_CONFIG.duration.bar}
+                    animationEasing="ease-out"
+                    animationBegin={0}
                   />
                   <Bar
                     dataKey="utilized"
                     name={t('chart.utilized_disbursal')}
                     fill="url(#barUtilizedGrad)"
-                    radius={[6, 6, 0, 0]}
-                    {...ANIMATION_CONFIG.getChartProps('bar')}
-                    animationBegin={ANIMATION_CONFIG.timeline.charts + ANIMATION_CONFIG.delay.bar}
+                    radius={[4, 4, 0, 0]}
+                    maxBarSize={22}
+                    isAnimationActive={true}
+                    animationDuration={ANIMATION_CONFIG.duration.bar}
+                    animationEasing="ease-out"
+                    animationBegin={0}
                   />
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <div className="flex items-center justify-center gap-6 pt-3 text-xs">
+          </div>
+
+          {/* Color Legend tailored for pure white background */}
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[var(--border-subtle)] text-xs">
+            <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.allocated.hex }} />
-                <span className="text-[var(--text-primary)] font-bold">{t('chart.allocated_budget')}</span>
+                <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.isDark ? '#5DA1F3' : '#4338CA' }} />
+                <span className="text-[var(--text-primary)] font-bold">
+                  {t('chart.allocated_budget')}
+                  <span className="text-[var(--text-secondary)] font-normal ml-1">(₹ Cr statutory limit)</span>
+                </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.utilized.hex }} />
-                <span className="text-[var(--text-primary)] font-bold">{t('chart.utilized_disbursal')}</span>
+                <span className="w-3.5 h-3.5 rounded-xs shadow-xs" style={{ backgroundColor: chartTheme.isDark ? '#E58F39' : '#D97706' }} />
+                <span className="text-[var(--text-primary)] font-bold">
+                  {t('chart.utilized_disbursal')}
+                  <span className="text-[var(--text-secondary)] font-normal ml-1">(₹ Cr actual spent)</span>
+                </span>
               </div>
             </div>
-          </SectionCard>
-
-          {/* Chart 2: Where the Money is Spent • Sectoral Expenditure */}
-          <SectionCard
-            title={t('chart.where_money_spent')}
-            subtitle={t('chart.where_money_spent_sub')}
-          >
-            {sectorData.length > 0 ? (
-              <div>
-                <div className="h-60 relative flex items-center justify-center chart-container">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={sectorData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={68}
-                        outerRadius={96}
-                        paddingAngle={2}
-                        dataKey="value"
-                        animationDuration={ANIMATION_CONFIG.duration.pie}
-                        animationEasing={ANIMATION_CONFIG.easing.easeInOut}
-                        animationBegin={ANIMATION_CONFIG.delay.medium}
-                        isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
-                      >
-                        {sectorData.map((entry: any, idx: number) => (
-                          <Cell key={`cell-top-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        ))}
-                      </Pie>
-                      <Tooltip content={<ChartTooltip formatter="percent" />} />
-                    </PieChart>
-                  </ResponsiveContainer>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
-                    <div className="max-w-[132px] flex flex-col items-center justify-center">
-                      <span className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-tight tracking-tight">
-                        ₹{toNativeDigits(totalSectorCr.toLocaleString('en-IN'), lang)}
-                        <span className="text-[11px] font-bold text-[var(--text-secondary)] ml-1">
-                          {t('unit.cr')}
-                        </span>
-                      </span>
-                      <span className="text-[9px] sm:text-[10px] text-[var(--text-tertiary)] font-bold tracking-normal leading-tight mt-0.5 max-w-[120px] text-center line-clamp-2">
-                        {t('chart.total_disbursed')}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-2 pt-3 border-t border-[var(--border-primary)] max-h-52 overflow-y-auto pr-1">
-                  {sectorData.map((sec: any, idx: number) => (
-                    <div key={idx} className="flex items-center justify-between p-1.5 rounded-lg bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition text-xs">
-                      <div className="flex items-center gap-2 truncate mr-2">
-                        <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-xs" style={{ backgroundColor: sec.color }} />
-                        <div className="truncate">
-                          <div className="font-bold text-[var(--text-primary)] truncate text-[11px]" title={sec.fullName || sec.name}>
-                            {sec.name}
-                          </div>
-                          <div className="text-[9px] text-[var(--text-secondary)] font-semibold">
-                            {toNativeDigits(sec.count?.toLocaleString('en-IN'), lang)} {t('chart.civil_works')}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-right shrink-0">
-                        <div className="font-extrabold text-[11px] text-[var(--text-primary)] tabular-nums">₹{toNativeDigits(sec.crValue.toLocaleString('en-IN'), lang)} {t('unit.cr')}</div>
-                        <div className="text-[10px] font-bold text-[var(--brand-primary)] tabular-nums">{toNativeDigits(sec.value, lang)}% {t('chart.spend')}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
-            )}
-          </SectionCard>
-        </div>
+            <div className="text-[11px] text-[var(--text-secondary)] font-semibold flex items-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Live MoSPI eSAKSHI Verified • Displaying Top {chartStatesData.length} Jurisdictions
+            </div>
+          </div>
+        </SectionCard>
 
         {/* Row 2: Chart 3 (Works Delivery Status with By Field / Works Status toggle) + Chart 4 (Yearly Allocation vs Spend Trend) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Chart 3: Works Delivery Status (with By Field / Works Status toggle) */}
+          {/* Chart 3: Sectoral Expenditure Pie Chart & Works Delivery */}
           <SectionCard
             title={pieMode === 'sectors' ? t('chart.where_money_spent') : t('chart.works_delivery_status')}
             subtitle={
               pieMode === 'sectors'
                 ? t('chart.where_money_spent_sub')
-                : `${toNativeDigits('83,968', lang)} ${t('chart.sanctioned_works_sub')}`
+                : `${toNativeDigits((completedWorks + pendingWorks).toLocaleString('en-IN'), lang)} ${t('chart.sanctioned_works_sub')}`
             }
             action={
               <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-0.5 rounded-lg border border-[var(--border-primary)] text-[11px]">
                 <button
                   type="button"
                   onClick={() => setPieMode('sectors')}
-                  className={`px-2 py-1 rounded-md font-extrabold transition cursor-pointer ${
+                  className={`px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
                     pieMode === 'sectors'
-                      ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
+                      ? 'bg-[var(--surface-primary)] text-[#4338CA] shadow-xs'
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
@@ -427,9 +1190,9 @@ export const NationalDashboard: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setPieMode('status')}
-                  className={`px-2 py-1 rounded-md font-extrabold transition cursor-pointer ${
+                  className={`px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
                     pieMode === 'status'
-                      ? 'bg-[var(--surface-primary)] text-[var(--brand-primary)] shadow-xs'
+                      ? 'bg-[var(--surface-primary)] text-[#4338CA] shadow-xs'
                       : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
@@ -439,186 +1202,15 @@ export const NationalDashboard: React.FC = () => {
             }
           >
             {pieMode === 'sectors' ? (
-              /* Sectoral Expenditure by Developmental Field (2-col layout) */
-              sectorData.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                  <div className="h-64 relative flex items-center justify-center chart-container">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={sectorData}
-                          cx="50%"
-                          cy="50%"
-                          innerRadius={72}
-                          outerRadius={102}
-                          paddingAngle={2}
-                          dataKey="value"
-                          animationDuration={ANIMATION_CONFIG.duration.pie}
-                          animationEasing={ANIMATION_CONFIG.easing.easeInOut}
-                          animationBegin={ANIMATION_CONFIG.delay.medium}
-                          isAnimationActive={ANIMATION_CONFIG.shouldAnimate()}
-                        >
-                          {sectorData.map((entry: any, idx: number) => (
-                            <Cell key={`cell-row2-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                          ))}
-                        </Pie>
-                        <Tooltip content={<ChartTooltip formatter="percent" />} />
-                      </PieChart>
-                    </ResponsiveContainer>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
-                      <div className="max-w-[138px] flex flex-col items-center justify-center">
-                        <span className="text-base sm:text-lg font-black text-[var(--text-primary)] tabular-nums leading-tight tracking-tight">
-                          ₹{toNativeDigits(totalSectorCr.toLocaleString('en-IN'), lang)}
-                          <span className="text-[11px] font-bold text-[var(--text-secondary)] ml-1">
-                            {t('unit.cr')}
-                          </span>
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] text-[var(--text-tertiary)] font-bold tracking-normal leading-tight mt-0.5 max-w-[126px] text-center line-clamp-2">
-                          {t('chart.total_disbursed')}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2.5 max-h-64 overflow-y-auto pr-1">
-                    {sectorData.map((sec: any, idx: number) => (
-                      <div key={idx} className="flex items-center justify-between p-2 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
-                        <div className="flex items-center gap-2.5 truncate mr-2">
-                          <span className="w-3 h-3 rounded-sm shrink-0 shadow-xs" style={{ backgroundColor: sec.color }} />
-                          <div className="truncate">
-                            <div className="text-xs font-bold text-[var(--text-primary)] truncate" title={sec.fullName || sec.name}>
-                              {sec.name}
-                            </div>
-                            <div className="text-[10px] text-[var(--text-secondary)] font-semibold">
-                              {toNativeDigits(sec.count?.toLocaleString('en-IN'), lang)} {t('chart.civil_works')}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="text-right shrink-0">
-                          <div className="font-extrabold text-xs text-[var(--text-primary)] tabular-nums">₹{toNativeDigits(sec.crValue.toLocaleString('en-IN'), lang)} {t('unit.cr')}</div>
-                          <div className="text-[11px] font-bold text-[var(--brand-primary)] tabular-nums">{toNativeDigits(sec.value, lang)}% {t('chart.spend')}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <EmptyState title="No sectoral data" description="No sector breakdown available for the selected view." />
-              )
+              <SectorExpenditureCard
+                sectorData={sectorData}
+                totalSectorCr={totalSectorCr}
+              />
             ) : (
-              /* Works Delivery Status (2-col layout) */
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                <div className="h-56 relative flex items-center justify-center chart-container">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={[
-                          {
-                            name: t('chart.completed_certified'),
-                            value: completedWorks,
-                            amountCr: `₹${toNativeDigits('2,387', lang)} ${t('unit.cr')}`,
-                            desc: `${toNativeDigits('43,735', lang)} ${t('chart.civil_works')} (52.1%)`
-                          },
-                          {
-                            name: t('chart.active_in_queue'),
-                            value: pendingWorks,
-                            amountCr: `₹${toNativeDigits('1,577', lang)} ${t('unit.cr')}`,
-                            desc: `${toNativeDigits('40,233', lang)} ${t('chart.civil_works')} (47.9%)`
-                          }
-                        ]}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={64}
-                        outerRadius={90}
-                        paddingAngle={3}
-                        dataKey="value"
-                        {...ANIMATION_CONFIG.getChartProps('pie')}
-                      >
-                        <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                        <Cell fill={chartTheme.high.hex} stroke={chartTheme.tooltipBg} strokeWidth={2} />
-                      </Pie>
-                      <Tooltip content={<ChartTooltip formatter="number" />} />
-                    </PieChart>
-                  </ResponsiveContainer>
-                  {(() => {
-                    const totalWorksCalc = completedWorks + pendingWorks
-                    const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
-                    return (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
-                        <div className="max-w-[124px] flex flex-col items-center justify-center">
-                          <span className="text-lg sm:text-xl font-black text-[var(--good)] tabular-nums leading-tight">
-                            {toNativeDigits(compPct, lang)}%
-                          </span>
-                          <span className="text-[9px] sm:text-[10px] font-bold tracking-normal text-[var(--text-tertiary)] mt-0.5 max-w-[110px] text-center leading-tight line-clamp-2">
-                            {t('chart.delivered')}
-                          </span>
-                        </div>
-                      </div>
-                    )
-                  })()}
-                </div>
-
-                {(() => {
-                  const totalWorksCalc = completedWorks + pendingWorks
-                  const compPct = totalWorksCalc > 0 ? ((completedWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
-                  const pendPct = totalWorksCalc > 0 ? ((pendingWorks / totalWorksCalc) * 100).toFixed(1) : '0.0'
-                  return (
-                    <div className="space-y-2.5">
-                      <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
-                        <div className="flex items-center justify-between text-xs mb-1">
-                          <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: chartTheme.clean.hex }} />
-                            <span className="font-bold text-[var(--text-primary)]">{t('chart.completed_certified')}</span>
-                          </div>
-                          <span className="text-xs font-black text-[var(--good)] tabular-nums">
-                            {toNativeDigits(compPct, lang)}%
-                          </span>
-                        </div>
-                        <div className="flex items-baseline justify-between pt-0.5">
-                          <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {toNativeDigits(completedWorks.toLocaleString('en-IN'), lang)} {t('chart.works')}
-                          </span>
-                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹{toNativeDigits('2,387', lang)} {t('unit.cr')}</span>
-                        </div>
-                      </div>
-
-                      <div className="p-3 rounded-xl bg-[var(--surface-alt)]/60 border border-[var(--border-subtle)] hover:bg-[var(--surface-alt)] transition">
-                        <div className="flex items-center justify-between text-xs mb-1">
-                          <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm" style={{ backgroundColor: chartTheme.high.hex }} />
-                            <span className="font-bold text-[var(--text-primary)]">{t('chart.active_in_queue')}</span>
-                          </div>
-                          <span className="text-xs font-black text-[var(--warn)] tabular-nums">
-                            {toNativeDigits(pendPct, lang)}%
-                          </span>
-                        </div>
-                        <div className="flex items-baseline justify-between pt-0.5">
-                          <span className="text-sm font-extrabold tabular-nums text-[var(--text-primary)]">
-                            {toNativeDigits(pendingWorks.toLocaleString('en-IN'), lang)} {t('chart.works')}
-                          </span>
-                          <span className="text-xs text-[var(--text-secondary)] font-extrabold tabular-nums">₹{toNativeDigits('1,577', lang)} {t('unit.cr')}</span>
-                        </div>
-                      </div>
-
-                      {/* Dual Progress Bar */}
-                      <div className="pt-0.5">
-                        <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden flex">
-                          <div
-                            className="h-full bg-emerald-500 transition-all duration-500"
-                            style={{ width: `${compPct}%` }}
-                            title={`Completed: ${completedWorks.toLocaleString()} works (${compPct}%)`}
-                          />
-                          <div
-                            className="h-full bg-indigo-500 transition-all duration-500"
-                            style={{ width: `${pendPct}%` }}
-                            title={`In Progress: ${pendingWorks.toLocaleString()} works (${pendPct}%)`}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })()}
-              </div>
+              <WorksDeliveryCard
+                completedWorks={completedWorks}
+                pendingWorks={pendingWorks}
+              />
             )}
           </SectionCard>
 
@@ -634,42 +1226,15 @@ export const NationalDashboard: React.FC = () => {
           >
             {yearlyTrendData.length > 0 ? (
               <>
-                <div className="h-60 w-full chart-container">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <AreaChart data={yearlyTrendData} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-                      <defs>
-                        <linearGradient id="spentGrad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="5%" stopColor={chartTheme.utilized.hex} stopOpacity={0.4} />
-                          <stop offset="95%" stopColor={chartTheme.utilized.hex} stopOpacity={0.02} />
-                        </linearGradient>
-                      </defs>
-                      <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} />
-                      <XAxis dataKey="period" stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
-                      <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} tickFormatter={(v) => toNativeDigits(v, lang)} />
-                      <Tooltip content={<ChartTooltip formatter="crore" />} />
-                      <Area
-                        type="monotone"
-                        dataKey="disbursed"
-                        name={t('chart.audited_disbursal')}
-                        stroke={chartTheme.utilized.hex}
-                        strokeWidth={2.5}
-                        fillOpacity={1}
-                        fill="url(#spentGrad)"
-                        {...ANIMATION_CONFIG.getChartProps('area')}
-                        dot={{ r: 4, fill: chartTheme.utilized.hex }}
-                        activeDot={{
-                          r: 6,
-                          fill: chartTheme.tooltipBg,
-                          stroke: chartTheme.utilized.hex,
-                          strokeWidth: 3
-                        }}
-                      />
-                    </AreaChart>
-                  </ResponsiveContainer>
-                </div>
+                <TrendAreaChart
+                  yearlyTrendData={yearlyTrendData}
+                  chartTheme={chartTheme}
+                  lang={lang}
+                  t={t}
+                />
                 <div className="flex items-center justify-center gap-6 pt-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: chartTheme.utilized.hex }} />
+                    <span className="w-3 h-0.5 rounded-full" style={{ backgroundColor: '#0284C7' }} />
                     <span className="text-[var(--text-secondary)] font-medium">{t('chart.liquid_treasury_disbursal')}</span>
                   </div>
                 </div>
@@ -750,7 +1315,7 @@ export const NationalDashboard: React.FC = () => {
                 return true
               })
               .slice(0, 10)
-              .map((st, idx) => {
+              .map((st) => {
                 const formatCr = (val: number) => {
                   const numStr = val >= 1000
                     ? val.toLocaleString('en-IN', { maximumFractionDigits: 1 })
@@ -789,7 +1354,7 @@ export const NationalDashboard: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <div className="flex-1 h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
                         <div
-                          className="h-full rounded-full bg-[#B7791F] dark:bg-[#FF9E3B] transition-all duration-700"
+                          className="h-full rounded-full bg-emerald-500 transition-[width] duration-700"
                           style={{ width: `${Math.min(100, Math.max(3, st.expenditureRate))}%` }}
                         />
                       </div>
@@ -887,17 +1452,20 @@ export const NationalDashboard: React.FC = () => {
       </div>
 
       {/* Explainer Modal (Video / Briefing) */}
-      {showVideoModal && (
-        <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in">
-          <div className="lux-card max-w-xl w-full p-6 relative shadow-2xl">
+      {showVideoModal && typeof document !== 'undefined' && createPortal(
+        <div
+          onClick={(e) => { if (e.target === e.currentTarget) setShowVideoModal(false) }}
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-sm animate-in fade-in"
+        >
+          <div className="lux-card max-w-xl w-full p-5 sm:p-6 relative shadow-2xl max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setShowVideoModal(false)}
-              className="absolute top-4 right-4 p-1.5 rounded-lg text-[var(--text-tertiary)] hover:text-[var(--text-primary)] bg-[var(--surface-alt)]"
+              className="absolute top-4 right-4 p-1.5 rounded-lg text-[var(--text-tertiary)] hover:text-[var(--text-primary)] bg-[var(--surface-alt)] cursor-pointer"
             >
               <X size={18} />
             </button>
             <div className="flex items-center gap-2 mb-3">
-              <Video className="text-[var(--brand-gold)]" size={20} />
+              <Video className="text-[var(--primary-700)]" size={20} />
               <h3 className="text-lg font-bold text-[var(--text-primary)]">
                 Understanding MPLADS Architecture
               </h3>
@@ -916,13 +1484,14 @@ export const NationalDashboard: React.FC = () => {
             <div className="mt-5 flex justify-end">
               <button
                 onClick={() => setShowVideoModal(false)}
-                className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow"
+                className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow cursor-pointer"
               >
-                {t('btn.close')}
+                Close Explainer
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   )

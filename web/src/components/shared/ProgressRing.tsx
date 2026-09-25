@@ -11,7 +11,7 @@ interface ProgressRingProps {
   semiCircle?: boolean
 }
 
-export const ProgressRing: React.FC<ProgressRingProps> = ({
+export const ProgressRing: React.FC<ProgressRingProps> = React.memo(({
   value,
   size = 120,
   strokeWidth = 9,
@@ -30,7 +30,7 @@ export const ProgressRing: React.FC<ProgressRingProps> = ({
 
     return (
       <div className="flex flex-col items-center justify-center">
-        <svg width={size} height={size / 2 + 10} className="overflow-visible filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.06)]">
+        <svg width={size} height={size / 2 + 10} className="overflow-visible">
           {/* Background track arc */}
           <path
             d={`M ${strokeWidth / 2} ${size / 2} A ${radius} ${radius} 0 0 1 ${size - strokeWidth / 2} ${size / 2}`}
@@ -49,8 +49,7 @@ export const ProgressRing: React.FC<ProgressRingProps> = ({
             strokeDasharray={arcLength}
             strokeDashoffset={strokeDashoffset}
             style={{
-              transition: 'stroke-dashoffset 1000ms cubic-bezier(0.4, 0, 0.2, 1)',
-              willChange: 'stroke-dashoffset',
+              transition: 'stroke-dashoffset 500ms cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           />
         </svg>
@@ -89,7 +88,7 @@ export const ProgressRing: React.FC<ProgressRingProps> = ({
 
   return (
     <div className="relative inline-flex items-center justify-center shrink-0">
-      <svg width={size} height={size} className="rotate-[-90deg] filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.06)]">
+      <svg width={size} height={size} className="rotate-[-90deg]">
         <circle
           cx={size / 2}
           cy={size / 2}
@@ -109,24 +108,24 @@ export const ProgressRing: React.FC<ProgressRingProps> = ({
           strokeLinecap="round"
           fill="none"
           style={{
-            transition: 'stroke-dashoffset 1000ms cubic-bezier(0.4, 0, 0.2, 1)',
-            willChange: 'stroke-dashoffset',
+            transition: 'stroke-dashoffset 500ms cubic-bezier(0.16, 1, 0.3, 1)',
           }}
         />
       </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-0.5 pointer-events-none">
-        <span
-          style={{ color: effectiveTextColor }}
-          className={`${fontSizeClass} tabular-nums leading-none tracking-tight font-extrabold`}
-        >
+      {/* Centered Percentage / Numeric Text */}
+      <div
+        className={`absolute inset-0 flex flex-col items-center justify-center text-center select-none ${fontSizeClass}`}
+        style={{ color: effectiveTextColor }}
+      >
+        <span className="tabular-nums leading-none tracking-tight">
           {label !== undefined ? label : `${clamped.toFixed(0)}%`}
         </span>
         {sublabel && (
-          <span className="text-[8px] uppercase font-semibold text-[var(--text-tertiary)] mt-0.5 leading-none">
+          <span className="text-[8px] font-semibold text-[var(--text-tertiary)] uppercase tracking-wider mt-0.5 leading-none">
             {sublabel}
           </span>
         )}
       </div>
     </div>
   )
-}
+})

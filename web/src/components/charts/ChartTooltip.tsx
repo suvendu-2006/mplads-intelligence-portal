@@ -13,13 +13,13 @@ export interface ChartTooltipProps {
  * Universal custom tooltip for all Recharts components
  * Replaces generic white box with branded, ₹-formatted tooltip
  */
-export const ChartTooltip: React.FC<ChartTooltipProps> = ({
+export const ChartTooltip: React.FC<ChartTooltipProps> = React.memo(({
   active,
   payload,
   label,
   formatter = 'crore',
 }) => {
-  const { t, toNativeDigits, lang } = useTranslation()
+  const { t, toNativeDigits } = useTranslation()
   if (!active || !payload || payload.length === 0) return null
 
   const formatValue = (value: number): string => {
@@ -47,11 +47,12 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
 
   return (
     <div
-      className="rounded-xl border shadow-lg backdrop-blur-sm"
+      className="rounded-xl border shadow-xl pointer-events-none relative z-50"
       style={{
         backgroundColor: 'var(--surface-primary)',
         borderColor: 'var(--border-primary)',
-        padding: '12px 16px',
+        padding: '10px 14px',
+        zIndex: 999999,
       }}
     >
       {label && (
@@ -77,5 +78,5 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = ({
       </div>
     </div>
   )
-}
+})
 

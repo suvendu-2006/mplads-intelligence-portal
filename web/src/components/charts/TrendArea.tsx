@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   AreaChart,
   Area,
@@ -32,7 +32,7 @@ export interface TrendAreaProps {
  * Reusable Trend Area Chart with:
  * - Smooth cubic interpolation & area gradients
  * - Okabe-Ito stroke and fill
- * - Systematic 1200ms sweep animation
+ * - Systematic 850ms sweep animation
  * - Custom ₹ formatted tooltip
  */
 export const TrendArea: React.FC<TrendAreaProps> = ({
@@ -44,10 +44,11 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
 }) => {
   const theme = useChartTheme()
   const { t, formatNum } = useTranslation()
+
   const areaAnimation = ANIMATION_CONFIG.getChartProps('area')
 
   return (
-    <div className="w-full">
+    <div className="w-full chart-container">
       <ResponsiveContainer width="100%" height={height}>
         <AreaChart
           data={data}
@@ -75,6 +76,8 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
 
           <Tooltip
             content={<ChartTooltip formatter={formatter} />}
+            isAnimationActive={false}
+            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
           />
 
           {series.map((s, idx) => {
@@ -100,6 +103,7 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
                 dot={false}
                 activeDot={{ r: 5, fill: strokeColor, stroke: theme.tooltip.bg, strokeWidth: 2 }}
                 {...areaAnimation}
+                animationBegin={idx * 60}
               />
             )
           })}

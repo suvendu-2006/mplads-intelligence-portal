@@ -15,6 +15,7 @@ import {
 } from '../components/shared'
 import { useChartTheme } from '../hooks/useChartTheme'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
+import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
 import {
@@ -30,8 +31,10 @@ import {
   ShieldCheck,
   CheckCircle2,
   Coins,
-  Percent
+  Percent,
+  PlusCircle
 } from 'lucide-react'
+import { RecommendWorkModal } from '../components/RecommendWorkModal'
 import {
   BarChart,
   Bar,
@@ -44,29 +47,30 @@ import {
   Pie,
   Cell
 } from 'recharts'
-import { useTranslation } from '../lib/i18n'
 
 export const MPDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
-  const { t, toNativeDigits: formatNum } = useTranslation()
+  const { t, toNativeDigits: formatNum, lang } = useTranslation()
   const [searchParams] = useSearchParams()
   const [acFilter, setAcFilter] = useState<string>(() => searchParams.get('ac') || '')
   const { user, switchRole, setMpJurisdiction } = useStore()
-  const isAuditorOrAdmin = ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role)
+  const isAuditorOrAdmin = Boolean(user?.isAuthenticated && ['state_nodal_officer', 'district_authority', 'mp', 'admin', 'mospi'].includes(user?.role))
+  const isReadOnlyPublic = !isAuditorOrAdmin
   const chartTheme = useChartTheme()
   const [deliveryChartMode, setDeliveryChartMode] = useState<'donut' | 'bar'>('donut')
 
-  const [data, setData] = useState<any>(() => {
+  const getSafeSessionMP = (mpId: string | undefined): any => {
+    if (!mpId || typeof window === 'undefined') return null
     try {
-      const saved = sessionStorage.getItem(`cached_mp_${id}`)
+      const saved = sessionStorage.getItem(`cached_mp_${mpId}`)
       return saved ? JSON.parse(saved) : null
-    } catch { return null }
-  })
-  const [loading, setLoading] = useState(() => {
-    try {
-      return !sessionStorage.getItem(`cached_mp_${id}`)
-    } catch { return true }
-  })
+    } catch {
+      return null
+    }
+  }
+
+  const [data, setData] = useState<any>(() => getSafeSessionMP(id))
+  const [loading, setLoading] = useState(() => !getSafeSessionMP(id))
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags' | 'risk'>('overview')
   const effectiveTab = (!isAuditorOrAdmin && (activeTab === 'flags' || activeTab === 'risk')) ? 'overview' : activeTab
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'pending'>('all')
@@ -74,27 +78,60 @@ export const MPDetail: React.FC = () => {
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
   const [worksPage, setWorksPage] = useState(1)
   const [worksPageSize, setWorksPageSize] = useState<number | 'all'>(30)
+  const [chartKey, setChartKey] = useState(0)
+  const [isRecommendModalOpen, setIsRecommendModalOpen] = useState(false)
+
+  const handleWorkRecommended = (newWork: any) => {
+    setData((prev: any) => {
+      if (!prev) return prev
+      const existingWorks = prev.works || []
+      const updatedWorks = [newWork, ...existingWorks]
+      const updatedSummary = {
+        ...prev.summary,
+        recommendedWorksCount: (prev.summary?.recommendedWorksCount || existingWorks.length) + 1,
+        unspentAmount: Math.max(0, (prev.summary?.unspentAmount || 0) - (newWork.cost || 0))
+      }
+      const updatedData = {
+        ...prev,
+        summary: updatedSummary,
+        works: updatedWorks
+      }
+      try {
+        sessionStorage.setItem(`cached_mp_${id}`, JSON.stringify(updatedData))
+      } catch {}
+      return updatedData
+    })
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => setChartKey(1), 50)
+    return () => clearTimeout(timer)
+  }, [])
 
 
 
   useEffect(() => {
     async function loadMP() {
-      if (!id) return
-      const cached = sessionStorage.getItem(`cached_mp_${id}`)
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached)
-          // If cached summary has 0 allocation, ignore cache to fetch fresh data
-          if (parsed?.summary?.allocatedAmount > 0) {
-            setData(parsed)
-          } else {
-            sessionStorage.removeItem(`cached_mp_${id}`)
-          }
-        } catch {
-          sessionStorage.removeItem(`cached_mp_${id}`)
-        }
+      if (!id) {
+        setLoading(false)
+        return
       }
-      if (!sessionStorage.getItem(`cached_mp_${id}`)) {
+      let cached: any = null
+      try {
+        cached = getSafeSessionMP(id)
+        if (cached) {
+          if (cached?.summary?.allocatedAmount > 0) {
+            setData(cached)
+          } else if (typeof window !== 'undefined') {
+            try { sessionStorage.removeItem(`cached_mp_${id}`) } catch {}
+            cached = null
+          }
+        }
+      } catch {
+        cached = null
+      }
+
+      if (!cached) {
         setLoading(true)
       }
       try {
@@ -224,7 +261,6 @@ export const MPDetail: React.FC = () => {
 
   const allocCr = formatCrores(rawAlloc)
   const expCr = formatCrores(rawExp)
-  const unspentCr = formatCrores(rawUnspent)
 
   // Works stats
   const completedWorks = works.length > 0
@@ -251,15 +287,23 @@ export const MPDetail: React.FC = () => {
               <>
                 <ChevronRight size={12} />
                 <Link to={`/states/${encodeURIComponent(summary.state)}`} className="hover:text-[var(--text-primary)] transition">
-                  {summary.state}
+                  {translateState(summary.state, lang)}
                 </Link>
               </>
             )}
             <ChevronRight size={12} />
-            <span className="font-bold text-[var(--text-primary)]">{summary.mpName}</span>
+            <span className="font-bold text-[var(--text-primary)]">{translateMP(summary.mpName, lang)}</span>
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setIsRecommendModalOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition bg-[var(--brand-primary)] text-white hover:opacity-90 shadow-2xs cursor-pointer"
+          >
+            <PlusCircle size={13} />
+            <span>{t('btn.recommend_work')}</span>
+          </button>
           <Link
             to={`/mp-dashboard?id=${encodeURIComponent(summary.id || id || '')}`}
             onClick={() => {
@@ -270,7 +314,7 @@ export const MPDetail: React.FC = () => {
                 }
               }
             }}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-[var(--brand-accent)]/30 bg-[var(--brand-accent)]/15 text-[var(--gold-text)] hover:bg-[var(--brand-accent)] hover:text-white shadow-2xs"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-[var(--primary-700)]/30 bg-[var(--primary-100)] text-[var(--primary-700)] hover:bg-[var(--primary-700)] hover:text-white shadow-2xs"
           >
             <Landmark size={13} />
             <span>Open in MP Console</span>
@@ -284,8 +328,8 @@ export const MPDetail: React.FC = () => {
         used={rawExp}
         balance={rawUnspent}
         utilization={util}
-        mpName={summary.mpName}
-        constituency={summary.constituency}
+        mpName={translateMP(summary.mpName, lang)}
+        constituency={translateConstituency(summary.constituency, lang)}
         house={summary.house}
         party={summary.party}
         term={summary.term || (summary.house === 'Rajya Sabha' ? 'Rajya Sabha' : '18th Lok Sabha')}
@@ -300,9 +344,9 @@ export const MPDetail: React.FC = () => {
             </div>
             <div>
               <div className="text-xs font-bold text-[var(--text-primary)] flex items-center gap-1.5">
-                <span>Assembly Segment: <strong>{acFilter || summary.matched_assembly_constituency}</strong></span>
+                <span>Assembly Segment: <strong>{translateConstituency(acFilter || summary.matched_assembly_constituency, lang)}</strong></span>
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-200 border border-emerald-500/30">
-                  {summary.constituency} Lok Sabha
+                  {translateConstituency(summary.constituency, lang)} Lok Sabha
                 </span>
               </div>
               <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">
@@ -345,7 +389,7 @@ export const MPDetail: React.FC = () => {
           }`}
         >
           <FileCheck2 size={14} />
-          <span>Projects ({formatNum(works.length)})</span>
+          <span>{t('kpi.recommended')} ({formatNum(summary.recommendedWorksCount || works.length)})</span>
         </button>
 
         {isAuditorOrAdmin && (
@@ -388,15 +432,15 @@ export const MPDetail: React.FC = () => {
       {/* TAB 1: OVERVIEW */}
       {effectiveTab === 'overview' && (
         <div className="space-y-6">
-          {/* Quick Metrics (4 KPIs) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Quick Metrics (5 KPIs) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <StatCard
               icon={Landmark}
               label="mps.fund_allocated"
               value={Number(allocCr)}
               prefix="₹"
               unit="Cr"
-              theme="espresso"
+              theme="slate"
               description="kpi.total_central_sanction"
             />
             <StatCard
@@ -405,8 +449,17 @@ export const MPDetail: React.FC = () => {
               value={Number(expCr)}
               prefix="₹"
               unit="Cr"
-              theme="espresso"
+              theme="slate"
               description="kpi.verified_expenditure"
+            />
+            <StatCard
+              icon={FileCheck2}
+              label="kpi.recommended"
+              value={summary.recommendedWorksCount || (completedWorks + ongoingWorks) || works.length || 0}
+              theme="slate"
+              borderHighlight="blue"
+              description="stat.both_houses"
+              tooltip="Total civil development projects recommended by this MP under their MPLADS allocation."
             />
             <StatCard
               icon={Percent}
@@ -420,9 +473,8 @@ export const MPDetail: React.FC = () => {
             <StatCard
               icon={Clock}
               label="kpi.payment_gap"
-              value={Number(unspentCr)}
-              prefix="₹"
-              unit="Cr"
+              value={Number((100 - Number(util)).toFixed(1))}
+              unit="%"
               theme="amber"
               description="kpi.pending_disbursement"
             />
@@ -471,11 +523,11 @@ export const MPDetail: React.FC = () => {
                   {/* Compact Donut Chart with Center Completion % */}
                   <div className="h-56 w-full sm:w-1/2 relative flex items-center justify-center chart-container">
                     <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
+                      <PieChart key={`delivery-pie-${chartKey}`}>
                         <Pie
                           data={[
-                            { name: 'Completed Works', value: completedWorks, color: chartTheme.clean.hex, pct: completionPct },
-                            { name: 'Active in Progress', value: ongoingWorks, color: chartTheme.high.hex, pct: ongoingPct }
+                            { name: 'Completed Works', value: completedWorks, color: '#2563EB', pct: completionPct },
+                            { name: 'Active in Progress', value: ongoingWorks, color: '#94A3B8', pct: ongoingPct }
                           ]}
                           cx="50%"
                           cy="50%"
@@ -483,12 +535,15 @@ export const MPDetail: React.FC = () => {
                           outerRadius={90}
                           paddingAngle={3}
                           dataKey="value"
-                          {...ANIMATION_CONFIG.getChartProps('pie')}
+                          isAnimationActive={true}
+                          animationDuration={850}
+                          animationEasing="ease-out"
+                          animationBegin={50}
                         >
-                          <Cell fill={chartTheme.clean.hex} stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
-                          <Cell fill={chartTheme.high.hex} stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
+                          <Cell fill="#2563EB" stroke="#FFFFFF" strokeWidth={3} />
+                          <Cell fill="#94A3B8" stroke="#FFFFFF" strokeWidth={3} />
                         </Pie>
-                        <Tooltip content={<ChartTooltip formatter="number" />} />
+                        <Tooltip content={<ChartTooltip formatter="number" />} wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }} />
                       </PieChart>
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
@@ -549,12 +604,12 @@ export const MPDetail: React.FC = () => {
                     <div className="pt-1">
                       <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden flex">
                         <div
-                          className="h-full bg-emerald-500 transition-all duration-500"
+                          className="h-full bg-emerald-500 transition-[width] duration-500"
                           style={{ width: `${completionPct}%` }}
                           title={`Completed: ${completedWorks} (${completionPct}%)`}
                         />
                         <div
-                          className="h-full bg-indigo-500 transition-all duration-500"
+                          className="h-full bg-indigo-500 transition-[width] duration-500"
                           style={{ width: `${ongoingPct}%` }}
                           title={`In Progress: ${ongoingWorks} (${ongoingPct}%)`}
                         />
@@ -571,6 +626,7 @@ export const MPDetail: React.FC = () => {
                   <div className="h-44 w-full chart-container">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart
+                        key={`delivery-bar-${chartKey}`}
                         data={[
                           { name: 'Completed Works', count: completedWorks, color: '#10B981', pct: completionPct },
                           { name: 'Active in Progress', count: ongoingWorks, color: '#6366F1', pct: ongoingPct }
@@ -582,7 +638,7 @@ export const MPDetail: React.FC = () => {
                         <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} vertical={false} opacity={0.4} />
                         <XAxis dataKey="name" stroke={chartTheme.textColor} fontSize={11} tickLine={false} />
                         <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} allowDecimals={false} />
-                        <Tooltip content={<ChartTooltip formatter="number" />} />
+                        <Tooltip content={<ChartTooltip formatter="number" />} wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }} />
                         <Bar dataKey="count" radius={[6, 6, 0, 0]} {...ANIMATION_CONFIG.getChartProps('bar')}>
                           <Cell fill="#10B981" />
                           <Cell fill="#6366F1" />
@@ -637,7 +693,7 @@ export const MPDetail: React.FC = () => {
                     {/* Donut Chart with Center Metric */}
                     <div className="h-56 w-full sm:w-1/2 relative flex items-center justify-center chart-container">
                       <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
+                        <PieChart key={`sector-pie-${chartKey}`}>
                           <Pie
                             data={pieData}
                             cx="50%"
@@ -646,14 +702,18 @@ export const MPDetail: React.FC = () => {
                             outerRadius={90}
                             paddingAngle={3}
                             dataKey="value"
-                            {...ANIMATION_CONFIG.getChartProps('pie')}
+                            isAnimationActive={true}
+                            animationDuration={850}
+                            animationEasing="ease-out"
+                            animationBegin={50}
                           >
                             {pieData.map((entry, idx) => (
-                              <Cell key={`cell-${idx}`} fill={entry.color} stroke={chartTheme.tooltipBg} strokeWidth={1.5} />
+                              <Cell key={`cell-${idx}`} fill={entry.color} stroke="#FFFFFF" strokeWidth={3} />
                             ))}
                           </Pie>
                           <Tooltip
                             content={<ChartTooltip formatter="percent" />}
+                            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                           />
                         </PieChart>
                       </ResponsiveContainer>
@@ -829,7 +889,7 @@ export const MPDetail: React.FC = () => {
                   : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              All Projects ({works.length})
+              All Recommended Works ({formatNum(Math.max(summary.recommendedWorksCount || 0, works.length, completedWorks + ongoingWorks))})
             </button>
             <button
               onClick={() => {
@@ -843,7 +903,7 @@ export const MPDetail: React.FC = () => {
               }`}
             >
               <CheckCircle2 size={13} />
-              <span>Completed Projects ({completedWorks})</span>
+              <span>{t('status.completed')} ({completedWorks})</span>
             </button>
             <button
               onClick={() => {
@@ -857,7 +917,16 @@ export const MPDetail: React.FC = () => {
               }`}
             >
               <Clock size={13} />
-              <span>Pending Queue ({ongoingWorks})</span>
+              <span>Recommended / Ongoing ({ongoingWorks})</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsRecommendModalOpen(true)}
+              className="px-3 py-1.5 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm hover:opacity-90 cursor-pointer"
+            >
+              <PlusCircle size={13} />
+              <span>{t('btn.recommend_work')}</span>
             </button>
 
             {/* Page Size Selector */}
@@ -981,16 +1050,16 @@ export const MPDetail: React.FC = () => {
                   return (
                     <div className="lux-card overflow-hidden">
                       <div className="overflow-x-auto">
-                        <table className="w-full text-left text-xs border-collapse">
+                        <table className="w-full text-left text-xs border-collapse min-w-[850px]">
                           <thead>
                             <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                              <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
-                              <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
-                              <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
-                              <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
-                              <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.status')}</th>
-                              <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.progress')}</th>
-                              <th className="p-3 font-bold whitespace-nowrap">{t('table.delay')}</th>
+                              <th className="p-3 font-bold w-20 shrink-0">{t('table.work_id')}</th>
+                              <th className="p-3 font-bold min-w-[180px]">{t('table.description')}</th>
+                              <th className="p-3 font-bold min-w-[140px] w-40">{t('table.district')}</th>
+                              <th className="p-3 font-bold w-28 text-right shrink-0 whitespace-nowrap">{t('table.sanctioned_amount')}</th>
+                              <th className="p-3 font-bold w-24 text-center shrink-0">{t('table.status')}</th>
+                              <th className="p-3 font-bold w-24 text-center shrink-0">{t('table.progress')}</th>
+                              <th className="p-3 font-bold w-28 shrink-0">{t('table.delay')}</th>
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-[var(--border-primary)]">
@@ -1002,22 +1071,33 @@ export const MPDetail: React.FC = () => {
                               return (
                                 <tr
                                   key={w.workId || w.work_id}
-                                  className="hover:bg-[var(--surface-alt)]/50 transition-colors duration-100 cursor-pointer"
-                                  onClick={() => {
+                                  className={`hover:bg-[var(--surface-alt)]/50 transition-colors duration-100 ${isAuditorOrAdmin ? 'cursor-pointer' : ''}`}
+                                  onClick={isAuditorOrAdmin ? () => {
                                     const matchFlag = flags.find((f: any) => f.workId === (w.workId || w.work_id))
                                     if (matchFlag) {
                                       setSelectedFlag(matchFlag)
                                     }
-                                  }}
+                                  } : undefined}
                                 >
-                                  <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                                    #{formatNum(w.workId || w.work_id)}
+                                  <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                                    <div className="flex items-center gap-1.5">
+                                      <span>#{formatNum(w.workId || w.work_id)}</span>
+                                      {w.isNew && (
+                                        <span className="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-white shadow-xs animate-pulse">
+                                          NEW
+                                        </span>
+                                      )}
+                                    </div>
                                   </td>
-                                  <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
-                                    {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                  <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={w.work_description || w.workDescription || w.description}>
+                                    <div className="font-medium text-[var(--text-primary)] line-clamp-2">
+                                      {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                    </div>
                                   </td>
-                                  <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
-                                    {w.district || summary.constituency}
+                                  <td className="p-3 font-medium text-[var(--text-primary)]">
+                                    <div className="break-words leading-snug" title={w.district || summary.constituency}>
+                                      {w.district || summary.constituency}
+                                    </div>
                                   </td>
                                   <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
                                     ₹{formatNum(((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
@@ -1027,10 +1107,10 @@ export const MPDetail: React.FC = () => {
                                       className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
                                         isDone
                                           ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
-                                          : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
+                                          : 'bg-blue-500/15 text-blue-700 dark:text-blue-400 border border-blue-500/20'
                                       }`}
                                     >
-                                      {isDone ? t('status.completed') : t('status.in_progress')}
+                                      {isDone ? t('status.completed') : t('status.recommended')}
                                     </span>
                                   </td>
                                   <td className="p-3 text-center">
@@ -1099,8 +1179,8 @@ export const MPDetail: React.FC = () => {
       </div>
       )}
 
-      {/* TAB 3: FLAGS */}
-      {effectiveTab === 'flags' && (
+      {/* TAB 3: FLAGS - Restricted to Authorized Personnel */}
+      {isAuditorOrAdmin && effectiveTab === 'flags' && (
         <div className="space-y-4">
           {flags.length === 0 ? (
             <div className="lux-card p-8 max-w-2xl mx-auto text-center space-y-5 my-4">
@@ -1152,15 +1232,15 @@ export const MPDetail: React.FC = () => {
           ) : (
             <div className="lux-card overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
+                <table className="w-full text-left text-xs border-collapse min-w-[850px]">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
-                      <th className="p-3 font-bold whitespace-nowrap">{t('table.agency')}</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.sanctioned_amount')}</th>
-                      <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
-                      <th className="p-3 font-bold text-right whitespace-nowrap">{user.role === 'viewer' ? 'Public Dossier' : t('table.action')}</th>
+                      <th className="p-3 font-bold w-20 shrink-0">{t('table.work_id')}</th>
+                      <th className="p-3 font-bold min-w-[180px]">{t('table.description')}</th>
+                      <th className="p-3 font-bold min-w-[200px] w-60">{t('table.agency')}</th>
+                      <th className="p-3 font-bold w-28 text-right shrink-0 whitespace-nowrap">{t('table.sanctioned_amount')}</th>
+                      <th className="p-3 font-bold w-24 text-center shrink-0">{t('table.severity')}</th>
+                      <th className="p-3 font-bold w-32 sm:w-36 text-right shrink-0">{isReadOnlyPublic ? 'Public Dossier' : t('table.action')}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[var(--border-primary)]">
@@ -1170,19 +1250,21 @@ export const MPDetail: React.FC = () => {
                         className="hover:bg-[var(--surface-alt)]/50 transition cursor-pointer"
                         onClick={() => setSelectedFlag(flag)}
                       >
-                        <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
+                        <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
                           #{formatNum(flag.workId || flag.work_id)}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={flag.work_description || flag.workDescription || flag.description}>
-                          {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={flag.work_description || flag.workDescription || flag.description}>
+                          <div className="font-medium text-[var(--text-primary)] line-clamp-2">
+                            {flag.work_description || flag.workDescription || flag.description || 'Civil Works Project'}
+                          </div>
                         </td>
-                        <td className="p-3 whitespace-nowrap">
-                          <AgencyBadge agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'} size="sm" />
+                        <td className="p-3">
+                          <AgencyBadge agency={flag.implementingAgency || flag.implementing_agency || 'District Authority'} size="sm" className="max-w-full" />
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] whitespace-nowrap text-right">
+                        <td className="p-3 font-extrabold tabular-nums text-[var(--text-primary)] text-right">
                           ₹{formatNum(((flag.cost || flag.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                         </td>
-                        <td className="p-3 text-center whitespace-nowrap">
+                        <td className="p-3 text-center">
                           <TierBadge
                             tier={flag.severity >= 0.7 ? 'critical' : flag.severity >= 0.4 ? 'high' : 'medium'}
                             count={Number(flag.severity?.toFixed(2) || 0)}
@@ -1190,15 +1272,15 @@ export const MPDetail: React.FC = () => {
                             size="sm"
                           />
                         </td>
-                        <td className="p-3 text-right whitespace-nowrap">
+                        <td className="p-3 text-right">
                           <button
                             onClick={(e) => {
                               e.stopPropagation()
                               setSelectedFlag(flag)
                             }}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition whitespace-nowrap"
+                            className="px-2.5 py-1.5 rounded-lg bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] font-bold hover:bg-[var(--brand-primary)] hover:text-white transition whitespace-nowrap text-xs cursor-pointer"
                           >
-                            {user.role === 'viewer' ? 'View Findings' : t('table.report')}
+                            {isReadOnlyPublic ? 'View Findings' : t('table.report')}
                           </button>
                         </td>
                       </tr>
@@ -1211,8 +1293,8 @@ export const MPDetail: React.FC = () => {
         </div>
       )}
 
-      {/* TAB 4: ENTITY RISK */}
-      {effectiveTab === 'risk' && (
+      {/* TAB 4: ENTITY RISK - Restricted to Authorized Personnel */}
+      {isAuditorOrAdmin && effectiveTab === 'risk' && (
         <div className="space-y-4">
           <div className="lux-card p-6 mb-6">
             <div className="flex items-center justify-between mb-4">
@@ -1280,7 +1362,7 @@ export const MPDetail: React.FC = () => {
                   </div>
                   <div className="w-full h-3 rounded-full bg-[var(--surface-primary)] overflow-hidden">
                     <div
-                      className="h-full bg-rose-600 transition-all duration-700"
+                      className="h-full bg-rose-600 transition-[width] duration-700"
                       style={{ width: `${Math.min(100, ((riskVal / 20) * 100))}%` }}
                     />
                   </div>
@@ -1335,13 +1417,26 @@ export const MPDetail: React.FC = () => {
         </div>
       )}
 
-      {/* Flag Diagnostic Report Modal */}
-      {selectedFlag && (
+      {/* Flag Diagnostic Report Modal - Restricted to Authorized Personnel */}
+      {isAuditorOrAdmin && selectedFlag && (
         <FlagDossierModal
           flag={selectedFlag}
           onClose={() => setSelectedFlag(null)}
         />
       )}
+
+      {/* Statutory Work Recommendation Modal */}
+      <RecommendWorkModal
+        isOpen={isRecommendModalOpen}
+        onClose={() => setIsRecommendModalOpen(false)}
+        mpId={id || summary.id || ''}
+        mpName={summary.mpName || 'MP'}
+        constituency={summary.constituency}
+        state={summary.state}
+        house={summary.house}
+        unspentBalance={rawUnspent}
+        onWorkRecommended={handleWorkRecommended}
+      />
     </div>
   )
 }

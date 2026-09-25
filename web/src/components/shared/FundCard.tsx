@@ -1,5 +1,6 @@
 import React from 'react'
 import { Landmark, ShieldCheck } from 'lucide-react'
+import { useTranslation, translateMP, translateConstituency } from '../../lib/i18n'
 
 interface FundCardProps {
   allocated: number // in Crores or Rupees
@@ -24,6 +25,7 @@ export const FundCard: React.FC<FundCardProps> = ({
   party,
   term
 }) => {
+  const { lang } = useTranslation()
   const statusBadge = (
     <span className="inline-flex items-center px-3.5 py-1 rounded-xl text-xs font-bold bg-white/10 text-white border border-white/20 backdrop-blur-md shadow-sm">
       Utilization: {utilization.toFixed(1)}%
@@ -41,9 +43,9 @@ export const FundCard: React.FC<FundCardProps> = ({
     <div
       className="relative rounded-2xl p-6 sm:p-8 text-white overflow-hidden shadow-2xl"
       style={{
-        background: 'linear-gradient(135deg, #0A192F 0%, #112240 50%, #1A365D 100%)',
+        background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #1E3A8A 100%)',
         border: '1px solid rgba(255, 255, 255, 0.15)',
-        boxShadow: '0 16px 40px rgba(10, 25, 47, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+        boxShadow: '0 16px 40px rgba(15, 23, 42, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
       }}
     >
       {/* Subtle Ashok Chakra / Watermark motif */}
@@ -51,22 +53,22 @@ export const FundCard: React.FC<FundCardProps> = ({
         <Landmark size={200} />
       </div>
 
-      {/* Top Bar of the Card: Gold Chip + Title + Status */}
+      {/* Top Bar of the Card: Microchip + Title + Status */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
-          {/* Gold Microchip visual */}
-          <div className="w-11 h-8 rounded-md bg-gradient-to-tr from-amber-500 to-amber-300 p-1 flex flex-col justify-between shadow-inner border border-amber-200/50">
-            <div className="w-full h-1 bg-amber-950/50 rounded-full" />
-            <div className="w-2/3 h-1 bg-amber-950/50 rounded-full" />
-            <div className="w-full h-1 bg-amber-950/50 rounded-full" />
+          {/* Institutional Microchip visual */}
+          <div className="w-11 h-8 rounded-md bg-gradient-to-tr from-[#1E40AF] to-[#38BDF8] p-1 flex flex-col justify-between shadow-inner border border-blue-200/40">
+            <div className="w-full h-1 bg-slate-950/60 rounded-full" />
+            <div className="w-2/3 h-1 bg-slate-950/60 rounded-full" />
+            <div className="w-full h-1 bg-slate-950/60 rounded-full" />
           </div>
           <div>
-            <div className="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">
+            <div className="text-[10px] font-extrabold uppercase tracking-widest text-sky-300">
               GOVERNMENT OF INDIA &bull; MPLADS
             </div>
             <div className="text-sm font-bold tracking-tight text-white flex items-center gap-1.5 mt-0.5">
               <span>Constituency Corpus Ledger</span>
-              <ShieldCheck size={14} className="text-emerald-400" />
+              <ShieldCheck size={14} className="text-sky-400" />
             </div>
           </div>
         </div>
@@ -86,20 +88,20 @@ export const FundCard: React.FC<FundCardProps> = ({
         </div>
 
         <div>
-          <div className="text-[11px] font-extrabold uppercase tracking-wider text-emerald-400 mb-1">
+          <div className="text-[11px] font-extrabold uppercase tracking-wider text-sky-300 mb-1">
             Used / Disbursed
           </div>
-          <div className="text-2xl sm:text-3xl font-black tabular-nums tracking-tight text-emerald-300">
+          <div className="text-2xl sm:text-3xl font-black tabular-nums tracking-tight text-sky-200">
             {formatCr(used)}
           </div>
           <div className="text-[11px] font-medium text-slate-300 mt-1">Liquid Treasury Outlay</div>
         </div>
 
         <div>
-          <div className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 mb-1">
+          <div className="text-[11px] font-extrabold uppercase tracking-wider text-sky-300 mb-1">
             Unspent Balance
           </div>
-          <div className="text-2xl sm:text-3xl font-black tabular-nums tracking-tight text-amber-200">
+          <div className="text-2xl sm:text-3xl font-black tabular-nums tracking-tight text-white">
             {formatCr(balance)}
           </div>
           <div className="text-[11px] font-medium text-slate-300 mt-1">Available for Sanction</div>
@@ -110,11 +112,11 @@ export const FundCard: React.FC<FundCardProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
         <div>
           <div className="text-lg sm:text-xl font-black text-white tracking-tight">
-            {mpName}
+            {translateMP(mpName, lang)}
           </div>
           <div className="text-xs text-slate-200 flex items-center gap-2 mt-1">
             {house && <span className="font-bold text-white">{house}</span>}
-            {constituency && <span>&bull; <strong className="text-slate-100">{constituency}</strong></span>}
+            {constituency && <span>&bull; <strong className="text-slate-100">{translateConstituency(constituency, lang)}</strong></span>}
             {party && (
               <span className="px-2 py-0.5 rounded bg-white/15 text-[11px] font-bold text-white border border-white/20">
                 {party}

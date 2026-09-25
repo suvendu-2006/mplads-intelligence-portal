@@ -23,8 +23,10 @@ import {
   CheckCircle2,
   X,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  PlusCircle
 } from 'lucide-react'
+import { RecommendWorkModal } from '../components/RecommendWorkModal'
 import { DEFAULT_MP_ID, DEFAULT_STATE_DISPLAY, ALL_36_STATES_AND_UTS } from '../lib/constants'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { useTranslation, translateState, translateSector } from '../lib/i18n'
@@ -41,6 +43,7 @@ export const MPDashboard: React.FC = () => {
   const activeMpId = paramId || queryId || (user.role === 'mp' && user.mpId && user.mpId !== 'ALL' ? user.mpId : '')
   const hasSelectedMp = Boolean(activeMpId)
   const isAuthorized = Boolean(user.isAuthenticated && ['mp', 'admin', 'mospi'].includes(user.role))
+  const isReadOnlyPublic = !isAuthorized
 
   // Gate selection state
   const isStateNodal = user.role === 'state_nodal_officer' && Boolean(user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES')
@@ -77,8 +80,31 @@ export const MPDashboard: React.FC = () => {
   })
   const [activeTab, setActiveTab] = useState<'works' | 'spending' | 'flags'>('works')
   const [workFilter, setWorkFilter] = useState<'all' | 'completed' | 'in_progress'>('all')
-  const effectiveTab = (user.role === 'viewer' && activeTab === 'flags') ? 'works' : activeTab
+  const effectiveTab = isReadOnlyPublic && activeTab === 'flags' ? 'works' : activeTab
   const [selectedFlag, setSelectedFlag] = useState<FlagDossierData | null>(null)
+  const [isRecommendModalOpen, setIsRecommendModalOpen] = useState(false)
+
+  const handleWorkRecommended = (newWork: any) => {
+    setData((prev: any) => {
+      if (!prev) return prev
+      const existingWorks = prev.works || []
+      const updatedWorks = [newWork, ...existingWorks]
+      const updatedSummary = {
+        ...prev.summary,
+        recommendedWorksCount: (prev.summary?.recommendedWorksCount || existingWorks.length) + 1,
+        unspentAmount: Math.max(0, (prev.summary?.unspentAmount || 0) - (newWork.cost || 0))
+      }
+      const updatedData = {
+        ...prev,
+        summary: updatedSummary,
+        works: updatedWorks
+      }
+      try {
+        sessionStorage.setItem(`cached_mp_${activeMpId}`, JSON.stringify(updatedData))
+      } catch {}
+      return updatedData
+    })
+  }
 
   useEffect(() => {
     async function loadMPDossier() {
@@ -131,27 +157,8 @@ export const MPDashboard: React.FC = () => {
     return filteredGateMps.slice(start, start + Number(gatePageSize))
   }, [filteredGateMps, gatePage, gatePageSize])
 
-  if (!isAuthorized) {
-    return (
-      <div className="lux-card p-10 max-w-lg mx-auto text-center my-12 space-y-4">
-        <div className="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-500 flex items-center justify-center mx-auto">
-          <Lock size={26} />
-        </div>
-        <h2 className="text-xl font-bold text-[var(--text-primary)]">
-          Member of Parliament Access Required
-        </h2>
-        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-          The Parliamentary Constituency Command Dashboard is designed exclusively for Lok Sabha and Rajya Sabha representatives.
-        </p>
-        <button
-          onClick={() => navigate('/login?role=mp')}
-          className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow hover:opacity-95 transition cursor-pointer"
-        >
-          Log In as Member of Parliament (Autofilled)
-        </button>
-      </div>
-    )
-  }
+  // Public transparency access: citizens can view the parliamentary ledger in read-only mode
+
 
   // If no MP is selected yet, show the full-screen selection gate
   if (!hasSelectedMp) {
@@ -161,7 +168,7 @@ export const MPDashboard: React.FC = () => {
           <BackButton fallback="/mps" />
         </div>
         <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-2xl bg-[var(--brand-accent)]/15 border border-[var(--brand-accent)]/30 text-[var(--gold-text)] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-2xl bg-[var(--primary-100)] border border-[var(--primary-700)]/30 text-[var(--primary-700)] flex items-center justify-center mx-auto">
             <Landmark size={24} />
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight">
@@ -435,13 +442,28 @@ export const MPDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
+      {/* Public Read-Only Transparency Banner */}
+      {isReadOnlyPublic && (
+        <div className="flex items-center justify-between gap-3 px-4 py-2.5 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse shrink-0" />
+            <span className="font-bold">
+              Public Transparency Ledger &bull; Parliamentary View
+            </span>
+          </div>
+          <span className="text-[11px] text-[var(--text-secondary)] hidden sm:inline">
+            Citizen Inspection Mode &bull; Works Execution & Sectoral Allocations
+          </span>
+        </div>
+      )}
+
       {/* Executive Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[var(--border-primary)]">
         <div className="flex items-start gap-3">
           <BackButton fallback="/mps" className="mt-1" />
           <div>
             <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs font-black uppercase tracking-wider text-[var(--gold-text)] flex items-center gap-1.5">
+            <span className="text-xs font-black uppercase tracking-wider text-[var(--primary-700)] flex items-center gap-1.5">
               <Landmark size={15} />
               <span>{t('mp.command_console')}</span>
             </span>
@@ -461,6 +483,14 @@ export const MPDashboard: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-2 flex-wrap">
+          <button
+            type="button"
+            onClick={() => setIsRecommendModalOpen(true)}
+            className="text-xs px-3.5 py-1.5 rounded-xl bg-[var(--brand-primary)] hover:opacity-95 text-white font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
+          >
+            <PlusCircle size={14} />
+            <span>{t('btn.recommend_work')}</span>
+          </button>
           <Link
             to={`/mps/${activeMpId}`}
             className="text-xs px-3 py-1.5 rounded-xl bg-[var(--surface-alt)] hover:bg-[var(--surface-hover)] border border-[var(--border-primary)] text-[var(--text-primary)] font-bold transition"
@@ -483,15 +513,15 @@ export const MPDashboard: React.FC = () => {
         term={summary.term || '17th Lok Sabha'}
       />
 
-      {/* 4-KPI Money Band */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* 5-KPI Money Band */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         <StatCard
           icon={Landmark}
           label="mps.fund_allocated"
           value={Number(allocCr)}
           prefix="₹"
           unit="Cr"
-          theme="gold"
+          theme="slate"
           description="kpi.total_central_sanction"
         />
         <StatCard
@@ -500,8 +530,17 @@ export const MPDashboard: React.FC = () => {
           value={Number(expCr)}
           prefix="₹"
           unit="Cr"
-          theme="gold"
+          theme="slate"
           description="kpi.verified_expenditure"
+        />
+        <StatCard
+          icon={FileCheck2}
+          label="kpi.recommended"
+          value={summary.recommendedWorksCount || works.length || 0}
+          theme="slate"
+          borderHighlight="blue"
+          description="stat.recommended_portfolio"
+          tooltip="Total developmental civil works recommended by this MP under their MPLADS allocation."
         />
         <StatCard
           icon={Percent}
@@ -534,7 +573,7 @@ export const MPDashboard: React.FC = () => {
           }`}
         >
           <FileCheck2 size={14} />
-          <span>{t('mp.tab_works')} ({formatNum(works.length)})</span>
+          <span>{t('kpi.recommended')} ({formatNum(works.length)})</span>
         </button>
 
         <button
@@ -549,7 +588,7 @@ export const MPDashboard: React.FC = () => {
           <span>{t('mps.sector_spending')}</span>
         </button>
 
-        {user.role !== 'viewer' && (
+        {!isReadOnlyPublic && (
           <button
             onClick={() => setActiveTab('flags')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
@@ -571,42 +610,63 @@ export const MPDashboard: React.FC = () => {
             <EmptyState
               title={t('mp.no_projects_recommended')}
               description={t('mp.no_projects_desc')}
+              action={
+                <button
+                  type="button"
+                  onClick={() => setIsRecommendModalOpen(true)}
+                  className="px-4 py-2 rounded-xl bg-[var(--brand-primary)] text-white text-xs font-bold shadow flex items-center gap-1.5 mx-auto cursor-pointer hover:opacity-90 transition"
+                >
+                  <PlusCircle size={14} />
+                  <span>{t('btn.recommend_work')}</span>
+                </button>
+              }
             />
           ) : (
             <>
               {/* Work Status Filter Pills */}
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    onClick={() => setWorkFilter('all')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+                      workFilter === 'all'
+                        ? 'bg-[var(--brand-primary)] text-white shadow-sm'
+                        : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    All Recommended Works ({formatNum(works.length)})
+                  </button>
+                  <button
+                    onClick={() => setWorkFilter('completed')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                      workFilter === 'completed'
+                        ? 'bg-emerald-600 text-white shadow-sm'
+                        : 'bg-[var(--surface-alt)] text-emerald-700 dark:text-emerald-400 hover:bg-[var(--surface-hover)]'
+                    }`}
+                  >
+                    <CheckCircle2 size={13} />
+                    <span>{t('status.completed')} ({formatNum(completedWorks)})</span>
+                  </button>
+                  <button
+                    onClick={() => setWorkFilter('in_progress')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                      workFilter === 'in_progress'
+                        ? 'bg-amber-600 text-white shadow-sm'
+                        : 'bg-[var(--surface-alt)] text-amber-700 dark:text-amber-400 hover:bg-[var(--surface-hover)]'
+                    }`}
+                  >
+                    <Clock size={13} />
+                    <span>Recommended / In Progress ({formatNum(ongoingWorks)})</span>
+                  </button>
+                </div>
+
                 <button
-                  onClick={() => setWorkFilter('all')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
-                    workFilter === 'all'
-                      ? 'bg-[var(--brand-primary)] text-white shadow-sm'
-                      : 'bg-[var(--surface-alt)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                  type="button"
+                  onClick={() => setIsRecommendModalOpen(true)}
+                  className="px-3.5 py-1.5 rounded-xl bg-[var(--brand-primary)] hover:opacity-95 text-white font-bold text-xs transition flex items-center gap-1.5 shadow-sm cursor-pointer ml-auto"
                 >
-                  {t('filter.all')} ({formatNum(works.length)})
-                </button>
-                <button
-                  onClick={() => setWorkFilter('completed')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
-                    workFilter === 'completed'
-                      ? 'bg-emerald-600 text-white shadow-sm'
-                      : 'bg-[var(--surface-alt)] text-emerald-700 dark:text-emerald-400 hover:bg-[var(--surface-hover)]'
-                  }`}
-                >
-                  <CheckCircle2 size={13} />
-                  <span>{t('status.completed')} ({formatNum(completedWorks)})</span>
-                </button>
-                <button
-                  onClick={() => setWorkFilter('in_progress')}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
-                    workFilter === 'in_progress'
-                      ? 'bg-amber-600 text-white shadow-sm'
-                      : 'bg-[var(--surface-alt)] text-amber-700 dark:text-amber-400 hover:bg-[var(--surface-hover)]'
-                  }`}
-                >
-                  <Clock size={13} />
-                  <span>{t('status.in_progress')} ({formatNum(ongoingWorks)})</span>
+                  <PlusCircle size={13} />
+                  <span>{t('btn.recommend_work')}</span>
                 </button>
               </div>
 
@@ -627,14 +687,14 @@ export const MPDashboard: React.FC = () => {
                 ) : (
                   <div className="lux-card overflow-hidden">
                     <div className="overflow-x-auto">
-                      <table className="w-full text-left text-xs border-collapse">
+                      <table className="w-full text-left text-xs border-collapse min-w-[780px]">
                         <thead>
                           <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                            <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
-                            <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
-                            <th className="p-3 font-bold whitespace-nowrap">{t('table.district')}</th>
-                            <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.amount')}</th>
-                            <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.status')}</th>
+                            <th className="p-3 font-bold w-24 shrink-0 whitespace-nowrap">{t('table.work_id')}</th>
+                            <th className="p-3 font-bold min-w-[200px]">{t('table.description')}</th>
+                            <th className="p-3 font-bold w-36 sm:w-44 shrink-0">{t('table.district')}</th>
+                            <th className="p-3 font-bold w-28 text-right shrink-0 whitespace-nowrap">{t('table.amount')}</th>
+                            <th className="p-3 font-bold w-28 text-center shrink-0 whitespace-nowrap">{t('table.status')}</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-[var(--border-primary)]">
@@ -642,27 +702,36 @@ export const MPDashboard: React.FC = () => {
                             const isDone = (w.status || '').toLowerCase().includes('completed')
                             return (
                               <tr key={w.workId || w.work_id} className="hover:bg-[var(--surface-alt)]/50 transition">
-                                <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
-                                  #{formatNum(w.workId || w.work_id)}
+                                <td className="p-3 font-mono font-bold text-[var(--text-primary)]">
+                                  <div className="flex items-center gap-1.5">
+                                    <span>#{formatNum(w.workId || w.work_id)}</span>
+                                    {w.isNew && (
+                                      <span className="px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-emerald-500 text-white shadow-xs animate-pulse">
+                                        NEW
+                                      </span>
+                                    )}
+                                  </div>
                                 </td>
-                                <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={w.work_description || w.workDescription || w.description}>
-                                  {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={w.work_description || w.workDescription || w.description}>
+                                  <div className="line-clamp-2 break-words text-xs">
+                                    {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
+                                  </div>
                                 </td>
-                                <td className="p-3 font-medium text-[var(--text-primary)] whitespace-nowrap">
+                                <td className="p-3 font-medium text-[var(--text-primary)] truncate" title={w.district || summary.constituency}>
                                   {w.district || summary.constituency}
                                 </td>
-                                <td className="p-3 font-extrabold tabular-nums numeral-gold whitespace-nowrap text-right">
+                                <td className="p-3 font-extrabold tabular-nums text-[var(--neutral-950)] text-right">
                                   ₹{formatNum(((w.sanctionedCost || w.cost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                                 </td>
-                                <td className="p-3 text-center whitespace-nowrap">
+                                <td className="p-3 text-center">
                                   <span
-                                    className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block whitespace-nowrap ${
+                                    className={`px-2 py-0.5 rounded text-[11px] font-bold inline-block ${
                                       isDone
                                         ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
-                                        : 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
+                                        : 'bg-blue-500/15 text-blue-700 dark:text-blue-400 border border-blue-500/20'
                                     }`}
                                   >
-                                    {isDone ? t('status.completed') : t('status.in_progress')}
+                                    {isDone ? t('status.completed') : t('status.recommended')}
                                   </span>
                                 </td>
                               </tr>
@@ -735,12 +804,12 @@ export const MPDashboard: React.FC = () => {
                 <div className="pt-1 space-y-1">
                   <div className="w-full h-2 rounded-full bg-[var(--surface-primary)] border border-[var(--border-primary)] overflow-hidden flex">
                     <div
-                      className="h-full bg-emerald-500 transition-all duration-500"
+                      className="h-full bg-emerald-500 transition-[width] duration-500 ease-out"
                       style={{ width: `${compPct}%` }}
                       title={`${t('chart.completed_certified')}: ${formatNum(completedWorks)} (${formatNum(compPct)}%)`}
                     />
                     <div
-                      className="h-full bg-indigo-500 transition-all duration-500"
+                      className="h-full bg-indigo-500 transition-[width] duration-500 ease-out"
                       style={{ width: `${pendPct}%` }}
                       title={`${t('chart.active_in_queue')}: ${formatNum(ongoingWorks)} (${formatNum(pendPct)}%)`}
                     />
@@ -780,8 +849,8 @@ export const MPDashboard: React.FC = () => {
         </div>
       )}
 
-      {/* TAB 3: FLAGS */}
-      {effectiveTab === 'flags' && user.role !== 'viewer' && (
+      {/* TAB 3: FLAGS - Restricted to Authorized Personnel */}
+      {!isReadOnlyPublic && effectiveTab === 'flags' && (
         <div className="space-y-4">
           {flags.length === 0 ? (
             <EmptyState
@@ -791,15 +860,15 @@ export const MPDashboard: React.FC = () => {
           ) : (
             <div className="lux-card overflow-hidden">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
+                <table className="w-full text-left text-xs border-collapse min-w-[820px]">
                   <thead>
                     <tr className="bg-[var(--surface-alt)] border-b border-[var(--border-primary)] text-[var(--text-secondary)]">
-                      <th className="p-3 font-bold whitespace-nowrap">{t('table.work_id')}</th>
-                      <th className="p-3 font-bold min-w-[260px] max-w-sm">{t('table.description')}</th>
-                      <th className="p-3 font-bold whitespace-nowrap text-right">{t('table.amount')}</th>
-                      <th className="p-3 font-bold text-center whitespace-nowrap">{t('table.severity')}</th>
-                      <th className="p-3 font-bold text-right whitespace-nowrap">
-                        {user.role === 'viewer' ? 'Public Dossier' : t('table.action')}
+                      <th className="p-3 font-bold w-24 shrink-0 whitespace-nowrap">{t('table.work_id')}</th>
+                      <th className="p-3 font-bold min-w-[220px]">{t('table.description')}</th>
+                      <th className="p-3 font-bold w-32 text-right shrink-0 whitespace-nowrap">{t('table.amount')}</th>
+                      <th className="p-3 font-bold w-44 text-center shrink-0 whitespace-nowrap">{t('table.severity')}</th>
+                      <th className="p-3 font-bold w-36 text-right shrink-0 whitespace-nowrap">
+                        {t('table.action')}
                       </th>
                     </tr>
                   </thead>
@@ -809,10 +878,12 @@ export const MPDashboard: React.FC = () => {
                         <td className="p-3 font-mono font-bold text-[var(--text-primary)] whitespace-nowrap">
                           #{formatNum(f.workId || f.work_id)}
                         </td>
-                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed min-w-[260px] max-w-sm break-words whitespace-normal" title={f.work_description || f.workDescription || f.description}>
-                          {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
+                        <td className="p-3 text-[var(--text-secondary)] leading-relaxed" title={f.work_description || f.workDescription || f.description}>
+                          <div className="font-medium text-[var(--text-primary)] line-clamp-2">
+                            {f.work_description || f.workDescription || f.description || 'Civil Works Project'}
+                          </div>
                         </td>
-                        <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right">
+                        <td className="p-3 font-extrabold tabular-nums whitespace-nowrap text-right text-[var(--text-primary)]">
                           ₹{formatNum(((f.cost || f.sanctionedCost || 0) / 100000).toFixed(2))} {t('unit.lakh')}
                         </td>
                         <td className="p-3 text-center whitespace-nowrap">
@@ -821,9 +892,9 @@ export const MPDashboard: React.FC = () => {
                         <td className="p-3 text-right whitespace-nowrap">
                           <button
                             onClick={() => setSelectedFlag(f)}
-                            className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap cursor-pointer"
+                            className="px-3 py-1.5 rounded-lg bg-[var(--brand-primary)] text-white text-xs font-bold hover:opacity-90 transition whitespace-nowrap cursor-pointer shadow-xs inline-flex items-center justify-center"
                           >
-                            {user.role === 'viewer' ? 'View Findings' : t('btn.inspect_report')}
+                            {t('btn.inspect_report')}
                           </button>
                         </td>
                       </tr>
@@ -836,13 +907,26 @@ export const MPDashboard: React.FC = () => {
         </div>
       )}
 
-      {/* Flag Dossier Modal */}
-      {selectedFlag && (
+      {/* Flag Dossier Modal - Strictly for Authorized Personnel */}
+      {!isReadOnlyPublic && selectedFlag && (
         <FlagDossierModal
           flag={selectedFlag}
           onClose={() => setSelectedFlag(null)}
         />
       )}
+
+      {/* Statutory Work Recommendation Modal */}
+      <RecommendWorkModal
+        isOpen={isRecommendModalOpen}
+        onClose={() => setIsRecommendModalOpen(false)}
+        mpId={activeMpId}
+        mpName={summary.mpName || user.mpName || 'MP'}
+        constituency={summary.constituency}
+        state={summary.state}
+        house={summary.house}
+        unspentBalance={rawUnspent}
+        onWorkRecommended={handleWorkRecommended}
+      />
     </div>
   )
 }

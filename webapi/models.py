@@ -266,3 +266,30 @@ class DetectorMetaItem(BaseModel):
     regulatory_source: str
     assumptions: str
     limitations: str
+
+class RecommendWorkRequest(BaseModel):
+    work_title: str
+    category: str
+    cost: float
+    district: Optional[str] = None
+    location: Optional[str] = None
+    implementing_agency: Optional[str] = None
+    priority: Optional[str] = "Normal"
+    sc_st_focus: Optional[bool] = False
+    justification: Optional[str] = None
+
+class RecommendWorkResponse(BaseModel):
+    reference_id: str
+    work_id: int
+    work_title: str
+    category: str
+    cost: float
+    status: str
+    recommended_date: str
+    mp_name: str
+    mp_constituency: str
+    district: str
+    state: str
+    implementing_agency: str
+    statutory_acknowledgment: str
+

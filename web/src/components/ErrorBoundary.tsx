@@ -31,10 +31,14 @@ export class ErrorBoundary extends Component<Props, State> {
       error?.name === 'ChunkLoadError'
 
     if (isChunkError && typeof window !== 'undefined') {
-      const lastReload = sessionStorage.getItem('last_chunk_reload')
-      const now = Date.now()
-      if (!lastReload || now - parseInt(lastReload, 10) > 8000) {
-        sessionStorage.setItem('last_chunk_reload', now.toString())
+      try {
+        const lastReload = sessionStorage.getItem('last_chunk_reload')
+        const now = Date.now()
+        if (!lastReload || now - parseInt(lastReload, 10) > 8000) {
+          sessionStorage.setItem('last_chunk_reload', now.toString())
+          window.location.reload()
+        }
+      } catch {
         window.location.reload()
       }
     }

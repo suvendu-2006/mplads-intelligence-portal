@@ -15,7 +15,7 @@ export const DeltaChip: React.FC<DeltaChipProps> = ({ value, suffix = '%', inver
     <span
       className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold tabular-nums ${
         isGood
-          ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+          ? 'bg-[#EFF6FF] text-[#1D4ED8] border border-[#BFDBFE]'
           : 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20'
       }`}
     >
