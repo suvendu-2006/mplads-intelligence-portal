@@ -3,11 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { initApiSync, warmupApiCache } from './lib/api'
+import { initGlobalLinkPrefetcher } from './lib/speedPrefetch'
 
-// Initialize 100% synchronized API interceptor and pre-warm core caches safely
+// Initialize 100% synchronized API interceptor, global prefetcher, and pre-warm core caches safely
 try {
   initApiSync()
   warmupApiCache()
+  initGlobalLinkPrefetcher()
 } catch (syncErr) {
   console.log('[SATARK-INIT] Cache warmup warning:', syncErr)
 }

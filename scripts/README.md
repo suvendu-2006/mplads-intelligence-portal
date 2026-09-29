@@ -23,12 +23,9 @@ Scripts for processing TopoJSON/GeoJSON polygons for parliamentary constituencie
 * [`simplify_geojson.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/simplify_geojson.py) — Optimizes and compresses high-resolution spatial boundaries for edge CDN serving.
 
 ### 3. Report & Documentation Generators
-Generators for producing professional PDFs and Word specifications:
-* [`build_full_pdf.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/build_full_pdf.py) — Builds the exact 20-page comprehensive backend architecture guide with running headers and footers.
-* [`generate_detectors_pdf.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/generate_detectors_pdf.py) — Generates the 15-detector forensic specification manual in PDF format.
+Generators for producing professional specifications:
 * [`generate_detectors_docx.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/generate_detectors_docx.py) — Generates the editable Word (.docx) version of the 15-detector specification.
-* [`generate_ultra_concise_docs.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/generate_ultra_concise_docs.py) — Builds executive 2-page brief sheets.
-* [`generate_simple_5page_pdf.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/generate_simple_5page_pdf.py) — Builds the 5-page executive summary PDF.
+* [`create_simple_word_document.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/create_simple_word_document.py) — Generates formatted Word report documentation.
 
 ### 4. End-to-End Verification & Browser Auditing
 Automated browser and API verification scripts:

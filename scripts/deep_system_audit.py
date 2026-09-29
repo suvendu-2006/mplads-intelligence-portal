@@ -24,7 +24,7 @@ def audit_national():
     assert 30 <= data["utilizationPercentage"] <= 40, f"utilizationPercentage should be ~33.9%, got {data['utilizationPercentage']}"
     assert data["pendingWorks"] >= 0, "pendingWorks cannot be negative"
     assert data["totalWorksCompleted"] > 0, "totalWorksCompleted must be positive"
-    assert data["totalMPs"] == 774, f"Expected 774 MPs, got {data['totalMPs']}"
+    assert data["totalMPs"] == 788, f"Expected 788 MPs, got {data['totalMPs']}"
     print(f"✓ National KPI: Allocated=₹{data['totalAllocated']/1e7:.0f} Cr, Used=₹{data['totalExpenditure']/1e7:.0f} Cr, Utilization={data['utilizationPercentage']:.1f}%")
 
     analytics = get("/api/national/analytics")["data"]
@@ -76,7 +76,7 @@ def audit_mps():
     print("\n--- 3. Auditing MPs Section ---")
     mps_resp = get("/api/mps?page=1&page_size=10")
     total_mps = mps_resp["meta"]["total"]
-    assert total_mps == 774, f"Expected 774 total MPs, got {total_mps}"
+    assert total_mps == 788, f"Expected 788 total MPs, got {total_mps}"
     
     sample_mp_ids = [
         ("6a932b5bcd944524379eddd9", "Anurag Singh Thakur"),

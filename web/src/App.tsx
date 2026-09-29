@@ -60,27 +60,22 @@ import { ProtectedRoute } from './components/ProtectedRoute'
 
 export const App: React.FC = () => {
   React.useEffect(() => {
-    // Quietly preload primary lightweight route JS chunks during idle time (without downloading heavy GeoJSON)
-    const scheduleIdle = typeof window !== 'undefined' && 'requestIdleCallback' in window
-      ? (cb: () => void) => (window as any).requestIdleCallback(cb, { timeout: 3000 })
-      : (cb: () => void) => setTimeout(cb, 2500)
-
-    const idleId = scheduleIdle(() => {
+    // Eagerly pre-warm all primary route JS chunks immediately for 0ms light-speed tab switches
+    const timer = setTimeout(() => {
       import('./pages/BrowseStates').catch(() => {})
       import('./pages/BrowseMPs').catch(() => {})
+      import('./pages/StateDetail').catch(() => {})
+      import('./pages/MPDetail').catch(() => {})
       import('./pages/DistrictDashboard').catch(() => {})
-      import('./pages/AuditDesk').catch(() => {})
       import('./pages/MyState').catch(() => {})
       import('./pages/MPDashboard').catch(() => {})
-    })
+      import('./pages/ConstituencyDetail').catch(() => {})
+      import('./pages/AuditDesk').catch(() => {})
+      import('./pages/GISMap').catch(() => {})
+      import('./pages/Login').catch(() => {})
+    }, 50)
 
-    return () => {
-      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof idleId === 'number') {
-        (window as any).cancelIdleCallback(idleId)
-      } else {
-        clearTimeout(idleId as any)
-      }
-    }
+    return () => clearTimeout(timer)
   }, [])
 
   return (

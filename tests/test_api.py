@@ -9,7 +9,7 @@ def test_get_national():
     assert response.status_code == 200
     json_data = response.json()
     assert "data" in json_data
-    assert json_data["data"]["totalMPs"] in [774, 788]
+    assert json_data["data"]["totalMPs"] == 788
     assert json_data["data"]["totalAllocated"] > 0
 
 def test_list_states():
@@ -36,7 +36,7 @@ def test_list_mps():
     assert response.status_code == 200
     json_data = response.json()
     assert len(json_data["data"]) == 10
-    assert json_data["meta"]["total"] == 774
+    assert json_data["meta"]["total"] == 788
     assert json_data["meta"]["has_next"] is True
 
 def test_list_flags():

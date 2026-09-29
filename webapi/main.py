@@ -81,7 +81,10 @@ async def add_performance_cache_headers(request: Request, call_next):
                 response.headers["Vary"] = "x-role, x-state, x-district, x-mp-id, Authorization, Cookie"
             else:
                 if not response.headers.get("Cache-Control"):
-                    response.headers["Cache-Control"] = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+                    if path.startswith("/api/map/") or path.startswith("/api/meta"):
+                        response.headers["Cache-Control"] = "public, max-age=7200, s-maxage=86400, stale-while-revalidate=604800"
+                    else:
+                        response.headers["Cache-Control"] = "public, max-age=1800, s-maxage=86400, stale-while-revalidate=86400"
                 # Retain edge caching while isolating per-role variants and content encoding
                 existing_vary = response.headers.get("Vary")
                 role_vary = "x-role, x-state, x-district, x-mp-id, Accept-Encoding"

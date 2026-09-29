@@ -1,4 +1,4 @@
-﻿id,mpName,house,state,constituency,allocatedAmount,totalExpenditure,utilizationPercentage,completedWorksCount,recommendedWorksCount,completionRate,pendingWorks,unspentAmount,completedWorksValue,totalCompletedAmount,inProgressPayments,paymentGapPercentage
+id,mpName,house,state,constituency,allocatedAmount,totalExpenditure,utilizationPercentage,completedWorksCount,recommendedWorksCount,completionRate,pendingWorks,unspentAmount,completedWorksValue,totalCompletedAmount,inProgressPayments,paymentGapPercentage
 6a932b5ecd944524379ee2ca,Smt. S. Phangnon Konyak (2022-28),Rajya Sabha,Nagaland,Sitting Rajya Sabha,206563957.11,196418200.0,95.0883216743388,57,20,74.02597402597402,0,10145757.110000014,144763000.0,144763000.0,51655200.0,26.298581292364965
 6a932b5bcd944524379edf65,Shri Arun Kumar Sagar ,Lok Sabha,Uttar Pradesh,SHAHJAHANPUR,147000000.0,138723000.0,94.36938775510204,4,3,57.14285714285714,0,8277000.0,97143000.0,97143000.0,41580000.0,29.9734002292338
 6a932b5bcd944524379edf3a,S SUPONGMEREN JAMIR,Lok Sabha,Nagaland,NAGALAND,147000000.0,138150000.0,93.9795918367347,38,18,67.85714285714286,0,8850000.0,88600000.0,88600000.0,49550000.0,35.86681143684401
@@ -773,3 +773,17 @@
 6a932b5ecd944524379ee2a2,Shri Sanjay Yadav (2024-30),Rajya Sabha,Bihar,Sitting Rajya Sabha,186200000.0,0.0,0.0,0,54,0.0,54,186200000.0,0.0,0.0,0.0,0.0
 6a932b5ecd944524379ee2a4,Shri Sat Paul Sharma (2025-31),Rajya Sabha,Jammu And Kashmir,Sitting Rajya Sabha,73500000.0,0.0,0.0,0,16,0.0,16,73500000.0,0.0,0.0,0.0,0.0
 6a932b5ecd944524379ee2ab,Shri Sujeet Kumar (2026-32),Rajya Sabha,Odisha,Sitting Rajya Sabha,49000000.0,0.0,0.0,0,35,0.0,35,49000000.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379eb129,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Bihar,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e2fea,Rajya Sabha Seat 1 (Vacant / Pending),Rajya Sabha,Gujarat,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379ece7c,Rajya Sabha Seat 2 (Vacant / Pending),Rajya Sabha,Gujarat,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e3560,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Jharkhand,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e81c1,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Maharashtra,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379ef993,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Telangana,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e6c0d,Rajya Sabha Seat 1 (Vacant / Pending),Rajya Sabha,West Bengal,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379efe51,Rajya Sabha Seat 2 (Vacant / Pending),Rajya Sabha,West Bengal,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379eba85,Rajya Sabha Seat 3 (Vacant / Pending),Rajya Sabha,West Bengal,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e43b5,Rajya Sabha Seat 4 (Vacant / Pending),Rajya Sabha,West Bengal,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379ec757,Rajya Sabha Seat 5 (Vacant / Pending),Rajya Sabha,West Bengal,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379ebba2,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Assam,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e966d,Rajya Sabha Seat (Vacant / Pending),Rajya Sabha,Punjab,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0
+6a932b5ecd944524379e2544,Presidential Nominated Seat (Vacant / Pending),Rajya Sabha,Delhi,RAJYA SABHA,0.0,0.0,0.0,0,0,0.0,0,0.0,0.0,0.0,0.0,0.0

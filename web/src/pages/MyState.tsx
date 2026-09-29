@@ -285,7 +285,7 @@ export const MyState: React.FC = () => {
           <div className="p-3 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)]">
             <span className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] block">{t('macro.monitored_mps')}</span>
             <span className="text-base font-extrabold tabular-nums text-[var(--text-primary)]">
-              {formatNum(nationalMeta?.totalMPs ?? 774)}
+              {formatNum(nationalMeta?.totalMPs ?? 788)}
             </span>
           </div>
         </div>

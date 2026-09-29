@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
   const qClean = searchQuery.trim().toLowerCase()
   const isDigits = /^\d+$/.test(qClean)
 
-  // Instant matching of Parliamentary Constituencies & MPs across all 774 seats
+  // Instant matching of Parliamentary Constituencies & MPs across all 788 seats
   const { matchingConstituencies, matchingMps } = React.useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
     if (!searchData || q.length < 1 || /^\d+$/.test(q)) {
