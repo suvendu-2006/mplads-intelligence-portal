@@ -131,7 +131,16 @@ def extract_ida_from_csv(csv_path: Optional[Union[str, Path]] = None) -> Dict[in
     """
     if csv_path is None:
         base_dir = Path(__file__).resolve().parent.parent.parent
-        csv_path = base_dir / "06_Works" / "all_mplads_works.csv"
+        for candidate in [
+            base_dir / "data" / "06_Works" / "all_mplads_works.csv",
+            base_dir / "06_Works" / "all_mplads_works.csv",
+            base_dir / "data" / "works_completed.csv",
+        ]:
+            if candidate.exists():
+                csv_path = candidate
+                break
+        if csv_path is None or not Path(csv_path).exists():
+            return {}
     else:
         csv_path = Path(csv_path)
 

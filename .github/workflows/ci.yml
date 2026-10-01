@@ -35,7 +35,9 @@ jobs:
 
     - name: Prepare database and web assets for testing
       run: |
-        if [ -f "api/mplads_dev.db" ] && [ ! -f "mplads_dev.db" ]; then
+        if [ -f "api/mplads_dev.db.gz" ] && [ ! -f "mplads_dev.db" ]; then
+          gzip -dc api/mplads_dev.db.gz > mplads_dev.db
+        elif [ -f "api/mplads_dev.db" ] && [ ! -f "mplads_dev.db" ]; then
           cp api/mplads_dev.db mplads_dev.db
         fi
         mkdir -p web/dist

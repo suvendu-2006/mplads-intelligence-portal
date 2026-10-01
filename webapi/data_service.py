@@ -43,6 +43,7 @@ def _resolve_file(primary: Path, *alternatives: Path) -> Optional[Path]:
     candidates = [
         primary,
         *alternatives,
+        DATA_DIR / primary.name,
         BASE_DIR / "api" / "data" / primary.name,
         Path("/var/task/api/data") / primary.name,
     ]
@@ -218,6 +219,8 @@ def load_mp_profile(mp_id: str) -> Optional[Dict[str, Any]]:
         BASE_DIR / "api" / "data" / "mp_profiles" / f"{mp_id}.json",
         Path(f"/var/task/api/data/mp_profiles/mp_{mp_id}.json"),
         Path(f"/var/task/api/data/mp_profiles/{mp_id}.json"),
+        DATA_DIR / "03_MPs_Data" / "mp_profiles" / f"mp_{mp_id}.json",
+        DATA_DIR / "03_MPs_Data" / "mp_profiles" / f"{mp_id}.json",
         MPS_DIR / "mp_profiles" / f"mp_{mp_id}.json",
         MPS_DIR / "mp_profiles" / f"{mp_id}.json",
         Path(f"/var/task/03_MPs_Data/mp_profiles/mp_{mp_id}.json"),

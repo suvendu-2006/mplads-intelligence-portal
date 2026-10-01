@@ -4,8 +4,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_FILE = BASE_DIR / "mplads_dev.db"
-CSV_FILE = BASE_DIR / "06_Works" / "all_mplads_works.csv"
-COMPLETED_CSV = BASE_DIR / "06_Works" / "works_completed.csv"
+CSV_FILE = (BASE_DIR / "data" / "06_Works" / "all_mplads_works.csv") if (BASE_DIR / "data" / "06_Works" / "all_mplads_works.csv").exists() else (BASE_DIR / "06_Works" / "all_mplads_works.csv")
+COMPLETED_CSV = (BASE_DIR / "data" / "works_completed.csv") if (BASE_DIR / "data" / "works_completed.csv").exists() else (BASE_DIR / "06_Works" / "works_completed.csv")
 
 def categorize(desc):
     d = str(desc).lower()

@@ -5,7 +5,7 @@
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
-[![License](https://img.shields.io/badge/License-Proprietary-blue?style=for-the-badge)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Auditing_Engine-Production_Ready-success?style=for-the-badge)]()
 
 > **Project SATARK** is an enterprise-grade national surveillance, forensic anomaly detection, and decision-intelligence platform engineered for India's **Member of Parliament Local Area Development Scheme (MPLADS)**. 
@@ -95,7 +95,7 @@ SIH-DATA/
 │   └── README.md               # Master documentation index
 │
 ├── scripts/                    # Automation, Seeding & Report Generation Utilities
-│   ├── build_full_pdf.py       # Compiles the exact 20-page backend architecture guide
+│   ├── generate_detectors_docx.py # Compiles the 15-detector statutory forensic manual
 │   ├── seed_all_detectors.py   # Populates 100% anomaly coverage across D1-D15
 │   ├── backfill_implementing_agencies.py  # Backfills IDA names from MoSPI datasets
 │   ├── sync_all_official_data.py # Syncs local data with e-SAKSHI portal exports
@@ -107,19 +107,39 @@ SIH-DATA/
 │   ├── test_api.py             # 100% contract validation for all REST endpoints
 │   └── test_rbac.py            # Security boundary & role-authorization tests
 │
-├── data/                       # Authoritative Master Datasets
+├── data/                       # Authoritative Master & Archival Datasets
+│   ├── 01_Overview_and_National_Summary/ # Expenditure & sector national totals
+│   ├── 02_States_and_UTs/      # All 36 State & UT aggregated summaries
+│   ├── 03_MPs_Data/            # 788 MP profiles & Lok Sabha/Rajya Sabha dossiers
+│   ├── 04_Constituencies/      # Parliamentary Constituency metrics & allocations
+│   ├── 05_Analytics_and_Trends/# Historical trends, year-over-year analytics
+│   ├── 06_Works/               # Master works datasets & CPWD benchmark rates
+│   ├── 07_Expenditures/        # Financial breakdown & treasury disbursements
+│   ├── 08_Spatial_Boundaries/  # GeoJSON spatial boundaries (Districts & PCs)
+│   ├── 09_MP_Demographics_ADR/ # ADR Myneta affidavits, assets & disclosures
+│   ├── 10_District_Level_Data/ # 730+ Nodal District administrative ledgers
 │   ├── MPLADS_Master_Summary.xlsx # Comprehensive analytical workbook (10+ sheets)
-│   ├── all_districts_mplads_summary.csv # 732 Nodal District metrics
-│   └── spatial/                # GIS boundaries for Parliamentary Constituencies
+│   ├── all_districts_mplads_summary.csv # Nodal District metrics
+│   ├── all_mps_summary.csv     # Canonical MP summary
+│   ├── works_completed.csv     # Official completed works
+│   └── expenditures.csv        # Detailed expenditure records
 │
-├── 01_ to 10_ Data Directories/ # Archival State, MP, District & Work Datasets
+├── api/                        # Production Serverless Functions & Edge Bundle
+│   ├── index.py                # ASGI Edge entrypoint with on-demand DB hydration
+│   ├── mplads_dev.db.gz        # High-compression SQLite database image
+│   └── data/                   # Bundled edge data assets (<10MB)
+│
 ├── app.py                      # Streamlit Forensic Auditor Workbench & Live Console
 ├── Dockerfile                  # Hardened multi-stage container configuration
 ├── docker-compose.yml          # Production stack orchestration
 ├── docker-entrypoint.sh        # Container initialization & migration hook
 ├── check_env.sh                # Production environment validation script
 ├── vercel.json                 # Serverless edge deployment configuration
-└── requirements.txt            # Python production dependencies
+├── requirements.txt            # Python web dependencies
+├── requirements-full.txt       # Full ML & forensic audit dependencies
+├── requirements.lock           # Cryptographically pinned lockfile
+├── LICENSE                     # MIT Open Source License
+└── alembic.ini                 # Alembic database migration configuration
 ```
 
 ---

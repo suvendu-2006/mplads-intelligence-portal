@@ -28,19 +28,24 @@ EXPENDITURES_CSV = DATA_DIR / "expenditures.csv"
 
 # Fallback paths (if data/ subfolder is accessed relative to parent)
 if not WORKS_COMPLETED_DETAILED_CSV.exists():
-    WORKS_COMPLETED_DETAILED_CSV = BASE_DIR / "06_Works" / "works_completed_detailed.csv"
-    WORKS_COMPLETED_CSV = BASE_DIR / "06_Works" / "works_completed.csv"
-    WORKS_RECOMMENDED_CSV = BASE_DIR / "06_Works" / "works_recommended.csv"
-    CPWD_BENCHMARK_RATES_CSV = BASE_DIR / "06_Works" / "cpwd_benchmark_rates.csv"
-    UNIT_PRICES_MASTER_CSV = BASE_DIR / "06_Works" / "unit_prices_master.csv"
-    ALL_MPS_FINANCIAL_BREAKDOWN_CSV = BASE_DIR / "07_Expenditures" / "all_mps_financial_breakdown.csv"
-    ALL_MPS_SUMMARY_CSV = BASE_DIR / "03_MPs_Data" / "all_mps_summary.csv"
-    ALL_DISTRICTS_MPLADS_SUMMARY_CSV = BASE_DIR / "10_District_Level_Data" / "all_districts_mplads_summary.csv"
+    for base in [DATA_DIR, BASE_DIR]:
+        if (base / "06_Works" / "works_completed_detailed.csv").exists():
+            WORKS_COMPLETED_DETAILED_CSV = base / "06_Works" / "works_completed_detailed.csv"
+            WORKS_COMPLETED_CSV = base / "06_Works" / "works_completed.csv"
+            WORKS_RECOMMENDED_CSV = base / "06_Works" / "works_recommended.csv"
+            CPWD_BENCHMARK_RATES_CSV = base / "06_Works" / "cpwd_benchmark_rates.csv"
+            UNIT_PRICES_MASTER_CSV = base / "06_Works" / "unit_prices_master.csv"
+            ALL_MPS_FINANCIAL_BREAKDOWN_CSV = base / "07_Expenditures" / "all_mps_financial_breakdown.csv"
+            ALL_MPS_SUMMARY_CSV = base / "03_MPs_Data" / "all_mps_summary.csv"
+            ALL_DISTRICTS_MPLADS_SUMMARY_CSV = base / "10_District_Level_Data" / "all_districts_mplads_summary.csv"
+            break
 
 if not EXPENDITURES_CSV.exists():
-    fallback_exp = BASE_DIR / "07_Expenditures" / "expenditures.csv"
-    if fallback_exp.exists():
-        EXPENDITURES_CSV = fallback_exp
+    for base in [DATA_DIR, BASE_DIR]:
+        fallback_exp = base / "07_Expenditures" / "expenditures.csv"
+        if fallback_exp.exists():
+            EXPENDITURES_CSV = fallback_exp
+            break
 
 
 def get_absolute_db_path(url: str) -> str:

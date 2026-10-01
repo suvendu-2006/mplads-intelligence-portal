@@ -18,8 +18,8 @@ sys.path.insert(0, str(BASE_DIR))
 from mplads_fraud_detection.foundation.ida_extractor import extract_and_normalize_agency
 
 DB_PATH = BASE_DIR / "mplads_dev.db"
-ALL_WORKS_CSV = BASE_DIR / "06_Works" / "all_mplads_works.csv"
-COMPLETED_WORKS_CSV = BASE_DIR / "06_Works" / "works_completed.csv"
+ALL_WORKS_CSV = (BASE_DIR / "data" / "06_Works" / "all_mplads_works.csv") if (BASE_DIR / "data" / "06_Works" / "all_mplads_works.csv").exists() else (BASE_DIR / "06_Works" / "all_mplads_works.csv")
+COMPLETED_WORKS_CSV = (BASE_DIR / "data" / "works_completed.csv") if (BASE_DIR / "data" / "works_completed.csv").exists() else (BASE_DIR / "06_Works" / "works_completed.csv")
 
 
 def migrate_database():

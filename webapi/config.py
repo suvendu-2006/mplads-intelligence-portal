@@ -47,12 +47,12 @@ DB_PATH = find_database_path()
 DB_URL = get_database_url()
 
 DATA_DIR = BASE_DIR / "data"
-OVERVIEW_DIR = BASE_DIR / "01_Overview_and_National_Summary"
-STATES_DIR = BASE_DIR / "02_States_and_UTs"
-MPS_DIR = BASE_DIR / "03_MPs_Data"
-ANALYTICS_DIR = BASE_DIR / "05_Analytics_and_Trends"
-BOUNDARIES_DIR = BASE_DIR / "08_Spatial_Boundaries"
-DEMOGRAPHICS_DIR = BASE_DIR / "09_MP_Demographics_ADR"
+OVERVIEW_DIR = (DATA_DIR / "01_Overview_and_National_Summary") if (DATA_DIR / "01_Overview_and_National_Summary").exists() else (BASE_DIR / "01_Overview_and_National_Summary")
+STATES_DIR = (DATA_DIR / "02_States_and_UTs") if (DATA_DIR / "02_States_and_UTs").exists() else (BASE_DIR / "02_States_and_UTs")
+MPS_DIR = (DATA_DIR / "03_MPs_Data") if (DATA_DIR / "03_MPs_Data").exists() else (BASE_DIR / "03_MPs_Data")
+ANALYTICS_DIR = (DATA_DIR / "05_Analytics_and_Trends") if (DATA_DIR / "05_Analytics_and_Trends").exists() else (BASE_DIR / "05_Analytics_and_Trends")
+BOUNDARIES_DIR = (DATA_DIR / "08_Spatial_Boundaries") if (DATA_DIR / "08_Spatial_Boundaries").exists() else (BASE_DIR / "08_Spatial_Boundaries")
+DEMOGRAPHICS_DIR = (DATA_DIR / "09_MP_Demographics_ADR") if (DATA_DIR / "09_MP_Demographics_ADR").exists() else (BASE_DIR / "09_MP_Demographics_ADR")
 
 # 15 Detector Friendly Names Map (Administrative Vigilance Terminology)
 DETECTOR_NAMES: Dict[str, str] = {
