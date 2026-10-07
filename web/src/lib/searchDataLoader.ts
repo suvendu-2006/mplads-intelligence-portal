@@ -1,4 +1,4 @@
-import type { MPSeatItem } from './allMpsData'
+import { ALL_MP_SEATS, type MPSeatItem } from './allMpsData'
 import type { AssemblyItem } from './assemblyConstituencies'
 
 export type { MPSeatItem, AssemblyItem }
@@ -13,18 +13,14 @@ let searchBundlePromise: Promise<SearchDataBundle> | null = null
 let loadedBundle: SearchDataBundle | null = null
 
 /**
- * Loads search datasets asynchronously in a separate code-split chunk.
- * Completely isolates 768 KB of AC data and 135 KB of MP seat records from the initial page bundle.
+ * Loads heavy assembly constituency dataset asynchronously in a separate code-split chunk.
  */
 export function loadSearchData(): Promise<SearchDataBundle> {
   if (loadedBundle) return Promise.resolve(loadedBundle)
   if (!searchBundlePromise) {
-    searchBundlePromise = Promise.all([
-      import('./allMpsData'),
-      import('./assemblyConstituencies')
-    ]).then(([mpsModule, acModule]) => {
+    searchBundlePromise = import('./assemblyConstituencies').then((acModule) => {
       loadedBundle = {
-        allMps: mpsModule.ALL_MP_SEATS,
+        allMps: ALL_MP_SEATS,
         acs: acModule.ASSEMBLY_CONSTITUENCIES,
         findAcs: acModule.findAssemblyConstituencies
       }

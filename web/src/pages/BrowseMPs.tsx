@@ -82,14 +82,17 @@ export const BrowseMPs: React.FC = () => {
       constituency: s.constituency,
       state: s.state,
       house: s.house,
-      allocated: 150000000,
-      expenditure: 50000000,
-      utilizationPercentage: 33.3,
+      party: s.party,
+      allocated: s.allocated,
+      expenditure: s.expenditure,
+      utilizationPercentage: s.utilizationPercentage,
       redFlagCount: 0,
       redFlagPct: 0.0,
-      completedWorksCount: 50,
-      recommendedWorksCount: 100,
-      completionRate: 50.0
+      completedWorksCount: s.completedWorks,
+      recommendedWorksCount: s.recommendedWorks,
+      completionRate: s.completionRate,
+      pendingWorks: s.pendingWorks,
+      unspentAmount: s.unspentAmount
     }))
   })
   const [meta, setMeta] = useState<any>(null)
@@ -135,14 +138,17 @@ export const BrowseMPs: React.FC = () => {
           house: s.house,
           matched_via: matchedAc ? 'assembly_constituency' : undefined,
           assembly_name: matchedAc,
-          allocated: 150000000,
-          expenditure: 50000000,
-          utilizationPercentage: 33.3,
+          party: s.party,
+          allocated: s.allocated,
+          expenditure: s.expenditure,
+          utilizationPercentage: s.utilizationPercentage,
           redFlagCount: 0,
           redFlagPct: 0.0,
-          completedWorksCount: 50,
-          recommendedWorksCount: 100,
-          completionRate: 50.0
+          completedWorksCount: s.completedWorks,
+          recommendedWorksCount: s.recommendedWorks,
+          completionRate: s.completionRate,
+          pendingWorks: s.pendingWorks,
+          unspentAmount: s.unspentAmount
         }
       })
       setMps(localPage)

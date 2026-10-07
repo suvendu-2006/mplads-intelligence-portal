@@ -104,6 +104,15 @@ function prefetchApiForPath(path: string) {
     if (distMatch) {
       apiUrl = `/api/districts/${distMatch[1]}`
     }
+
+    const constMatch = path.match(/^\/constituenc(?:y|ies)\/([^/]+)/)
+    if (constMatch) {
+      apiUrl = `/api/constituencies/${constMatch[1]}`
+    }
+
+    if (path === '/my-state') {
+      apiUrl = '/api/national'
+    }
   }
 
   if (apiUrl && !PREFETCHED_APIS.has(apiUrl)) {

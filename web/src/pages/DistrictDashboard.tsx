@@ -29,6 +29,7 @@ import {
 } from 'lucide-react'
 import { ALL_36_STATES_AND_UTS } from '../lib/constants'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
+import { getDistrictSummary } from '../lib/allDistrictsData'
 import { useTranslation, translateState, toNativeDigits, translateConstituency, translateMP, translateDistrict } from '../lib/i18n'
 import { useToastStore } from '../store/useToastStore'
 
@@ -77,15 +78,70 @@ export const DistrictDashboard: React.FC = () => {
   const [data, setData] = useState<any>(() => {
     try {
       if (!districtName) return null
-      const saved = sessionStorage.getItem(`cached_district_${districtName}`)
-      return saved ? JSON.parse(saved) : null
-    } catch { return null }
+      const saved = sessionStorage.getItem(`cached_district_v2_${districtName}`)
+      if (saved) return JSON.parse(saved)
+    } catch {}
+
+    const distSum = getDistrictSummary(districtName)
+    if (distSum) {
+      return {
+        summary: {
+          district: distSum.district,
+          state: distSum.state,
+          totalWorks: distSum.totalWorks,
+          completedWorks: distSum.completedWorks,
+          recommendedWorks: distSum.recommendedWorks,
+          pendingWorks: Math.max(0, distSum.recommendedWorks - distSum.completedWorks),
+          completionRate: distSum.completionRatePct,
+          portfolioValue: distSum.portfolioValue,
+          expenditure: distSum.expenditure,
+          balance: distSum.balance,
+          inProgressPayments: distSum.inProgressPayments,
+          is_estimated: false,
+          isEstimated: false,
+          mpCount: distSum.mpCount,
+          activeMps: distSum.mpsActive,
+          constituencies: distSum.constituenciesCovered,
+          primarySector: distSum.primarySector,
+          worksCount: distSum.totalWorks,
+          sampleWorksCount: 0,
+          anomalyCount: 0,
+          sampleAnomaliesCount: 0,
+          idaCount: 1,
+          implementingAgency: distSum.implementingAgency,
+          scope: 'District Master Ledger'
+        },
+        works: [],
+        anomalies: [],
+        idas: [
+          {
+            entityId: `${distSum.district}_DRDA`,
+            entity_key: distSum.district,
+            name: distSum.implementingAgency,
+            compositeRiskScore: 1.8,
+            composite_risk: 1.8,
+            riskTier: 'Clean',
+            risk_tier: 'Clean',
+            riskRank: 1,
+            breakdown: { total_works: distSum.totalWorks, flagged_works: 0 },
+            concentrationScore: 0.3,
+            velocityScore: 0.4,
+            patternScore: 0.2,
+            totalWorks: distSum.totalWorks,
+            flaggedWorks: 0
+          }
+        ],
+        mps: []
+      }
+    }
+    return null
   })
   const [loading, setLoading] = useState(() => {
+    if (!districtName) return false
     try {
-      if (!districtName) return false
-      return !sessionStorage.getItem(`cached_district_${districtName}`)
-    } catch { return false }
+      if (sessionStorage.getItem(`cached_district_v2_${districtName}`)) return false
+    } catch {}
+    return !getDistrictSummary(districtName)
   })
 
   // JURISDICTION ENFORCEMENT:
@@ -208,31 +264,32 @@ export const DistrictDashboard: React.FC = () => {
 
       // Resilient fallback if backend is unreachable
       const cleanDist = districtName.trim().toLowerCase()
+      const distSum = getDistrictSummary(districtName)
       const matchedStateEntry = Object.entries(STATE_DISTRICTS_MAP).find(([, dists]) =>
         dists.some((d: string) => d.toLowerCase() === cleanDist || d.toLowerCase().includes(cleanDist) || cleanDist.includes(d.toLowerCase()))
       )
-      const stName = matchedStateEntry ? matchedStateEntry[0] : (user.state && user.state !== 'ALL' ? user.state : 'State Jurisdiction')
+      const stName = distSum?.state || (matchedStateEntry ? matchedStateEntry[0] : (user.state && user.state !== 'ALL' ? user.state : 'State Jurisdiction'))
       
       const fallbackPayload = {
         summary: {
-          district: districtName.toUpperCase(),
+          district: distSum ? distSum.district : districtName.toUpperCase(),
           state: stName,
-          totalWorks: 53,
-          completedWorks: 31,
-          recommendedWorks: 22,
-          pendingWorks: 22,
-          completionRate: 58.5,
-          portfolioValue: 125000000.0,
-          expenditure: 73125000.0,
-          is_estimated: true,
-          isEstimated: true,
-          mpCount: 1,
-          activeMps: 'District Representative',
-          constituencies: districtName,
-          primarySector: 'Civil Infrastructure & Rural Roads',
-          worksCount: 53,
+          totalWorks: distSum ? distSum.totalWorks : 0,
+          completedWorks: distSum ? distSum.completedWorks : 0,
+          recommendedWorks: distSum ? distSum.recommendedWorks : 0,
+          pendingWorks: distSum ? Math.max(0, distSum.recommendedWorks - distSum.completedWorks) : 0,
+          completionRate: distSum ? distSum.completionRatePct : 0.0,
+          portfolioValue: distSum ? distSum.portfolioValue : 0.0,
+          expenditure: distSum ? distSum.expenditure : 0.0,
+          is_estimated: false,
+          isEstimated: false,
+          mpCount: distSum ? distSum.mpCount : 1,
+          activeMps: distSum ? distSum.mpsActive : 'District Representative',
+          constituencies: distSum ? distSum.constituenciesCovered : districtName,
+          primarySector: distSum ? distSum.primarySector : 'Civil Infrastructure & Rural Roads',
+          worksCount: distSum ? distSum.totalWorks : 0,
           sampleWorksCount: 0,
-          anomalyCount: 1,
+          anomalyCount: 0,
           sampleAnomaliesCount: 0,
           idaCount: 1,
           scope: 'District Master Ledger'

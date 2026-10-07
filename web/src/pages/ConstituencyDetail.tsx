@@ -45,9 +45,83 @@ import {
   Cell
 } from 'recharts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
+import { getConstituencySummary } from '../lib/allConstituenciesData'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
 import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { useStore } from '../store/useStore'
+
+function getSafeSessionConstituency(name: string | undefined): any {
+  if (!name || typeof window === 'undefined') return null
+  const clean = name.trim()
+  try {
+    const saved = sessionStorage.getItem(`cached_constituency_${clean}`)
+    if (saved) return JSON.parse(saved)
+  } catch {}
+
+  const pcSum = getConstituencySummary(clean)
+  const qLower = clean.toLowerCase()
+  const matchedSeat = ALL_MP_SEATS.find(
+    m => m.constituency.toLowerCase() === qLower ||
+         m.constituency.toLowerCase().startsWith(qLower)
+  ) || ALL_MP_SEATS.find(m => m.constituency.toLowerCase().includes(qLower))
+
+  if (pcSum || matchedSeat) {
+    const constName = pcSum?.name || matchedSeat?.constituency || clean
+    const stateName = pcSum?.state || matchedSeat?.state || ''
+    const alloc = pcSum ? pcSum.allocatedAmount : (matchedSeat ? matchedSeat.allocated : 0)
+    const exp = pcSum ? pcSum.totalExpenditure : (matchedSeat ? matchedSeat.expenditure : 0)
+    const comp = pcSum ? pcSum.completedWorksCount : (matchedSeat ? matchedSeat.completedWorks : 0)
+    const rec = pcSum ? pcSum.recommendedWorksCount : (matchedSeat ? matchedSeat.recommendedWorks : 0)
+    const rem = pcSum ? pcSum.remainedWorksCount : Math.max(0, rec - comp)
+    const tot = Math.max(rec, comp)
+    const compRate = pcSum ? pcSum.completionRate : (matchedSeat ? matchedSeat.completionRate : 0.0)
+    const util = pcSum ? pcSum.utilizationPercentage : (matchedSeat ? matchedSeat.utilizationPercentage : 0.0)
+
+    const assemblies = findAssemblyConstituencies(constName, 20).map(a => ({
+      ac_name: a.ac,
+      ac_no: '',
+      district: a.district || '',
+      state: a.state
+    }))
+
+    return {
+      summary: {
+        name: constName,
+        state: stateName,
+        house: (matchedSeat ? matchedSeat.house : 'Lok Sabha'),
+        allocatedAmount: alloc,
+        totalExpenditure: exp,
+        utilizationPercentage: util,
+        unspentAmount: Math.max(0, alloc - exp),
+        totalWorks: tot,
+        completedWorksCount: comp,
+        recommendedWorksCount: rec,
+        remainedWorksCount: rem,
+        completionRate: compRate,
+        redFlagCount: 0,
+        redFlagPct: 0.0,
+        matched_assembly_constituency: undefined,
+        mp: matchedSeat ? {
+          id: matchedSeat.id,
+          name: matchedSeat.name,
+          party: matchedSeat.party,
+          house: matchedSeat.house
+        } : (pcSum ? {
+          id: '',
+          name: pcSum.mpName,
+          party: '',
+          house: pcSum.house
+        } : null),
+        assemblies
+      },
+      sectorBreakdown: [],
+      agencyBreakdown: [],
+      works: [],
+      flags: []
+    }
+  }
+  return null
+}
 
 export const ConstituencyDetail: React.FC = () => {
   const { user } = useStore()
@@ -58,8 +132,8 @@ export const ConstituencyDetail: React.FC = () => {
   const [selectedAc, setSelectedAc] = useState<string>(acParam)
   const chartTheme = useChartTheme()
 
-  const [data, setData] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<any>(() => getSafeSessionConstituency(name))
+  const [loading, setLoading] = useState(() => !getSafeSessionConstituency(name))
   const [activeTab, setActiveTab] = useState<'overview' | 'works' | 'flags'>('overview')
   const effectiveTab = (user?.role === 'viewer' && activeTab === 'flags') ? 'overview' : activeTab
   const [workFilter, setWorkFilter] = useState<'all' | 'recommended' | 'completed' | 'remained'>('all')
@@ -86,104 +160,37 @@ export const ConstituencyDetail: React.FC = () => {
   useEffect(() => {
     async function loadConstituency() {
       if (!name) return
-      setLoading(true)
       const cleanName = (name || '').trim()
+      const cached = getSafeSessionConstituency(cleanName)
+      if (!cached) {
+        setLoading(true)
+      }
 
       try {
         const res = await fetch(`/api/constituencies/${encodeURIComponent(cleanName)}`)
         if (res.ok) {
           const json = await res.json()
-          setData(json.data)
-          if (json.data?.summary?.matched_assembly_constituency && !acParam) {
-            setSelectedAc(json.data.summary.matched_assembly_constituency)
+          if (json?.data) {
+            setData(json.data)
+            try { sessionStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data)) } catch {}
+            if (json.data?.summary?.matched_assembly_constituency && !acParam) {
+              setSelectedAc(json.data.summary.matched_assembly_constituency)
+            }
+            setLoading(false)
+            return
           }
-          setLoading(false)
-          return
         }
       } catch (err) {
         console.log('API fetch failed, trying fallback:', err)
       }
 
-      // Resilient Fallback using ALL_MP_SEATS & assembly data
-      const qLower = cleanName.toLowerCase()
-      let matchedSeat = ALL_MP_SEATS.find(
-        m => m.constituency.toLowerCase() === qLower ||
-             m.constituency.toLowerCase().startsWith(qLower)
-      ) || ALL_MP_SEATS.find(m => m.constituency.toLowerCase().includes(qLower))
-
-      let matchedAcName: string | null = null
-      if (!matchedSeat) {
-        const acMatches = findAssemblyConstituencies(qLower, 1)
-        if (acMatches.length > 0) {
-          const first = acMatches[0]
-          matchedAcName = first.ac
-          matchedSeat = ALL_MP_SEATS.find(m => m.constituency.toLowerCase() === first.pc.toLowerCase())
-        }
-      }
-
-      if (matchedSeat) {
-        const assemblies = findAssemblyConstituencies(matchedSeat.constituency, 20).map(a => ({
-          ac_name: a.ac,
-          ac_no: '',
-          district: a.district || '',
-          state: a.state
-        }))
-
-        // Mock synthesized data for offline/zero-error guarantee
-        const alloc = 175000000
-        const exp = 92000000
-        const completed = 180
-        const remained = 120
-        const total = completed + remained
-        const completionRate = Number(((completed / total) * 100).toFixed(1))
-
-        setData({
-          summary: {
-            name: matchedSeat.constituency,
-            state: matchedSeat.state,
-            house: matchedSeat.house || 'Lok Sabha',
-            allocatedAmount: alloc,
-            totalExpenditure: exp,
-            utilizationPercentage: Number(((exp / alloc) * 100).toFixed(1)),
-            unspentAmount: alloc - exp,
-            totalWorks: total,
-            completedWorksCount: completed,
-            recommendedWorksCount: remained,
-            remainedWorksCount: remained,
-            completionRate: completionRate,
-            redFlagCount: 12,
-            redFlagPct: 4.0,
-            matched_assembly_constituency: matchedAcName,
-            mp: {
-              id: matchedSeat.id,
-              name: matchedSeat.name,
-              party: '',
-              house: matchedSeat.house || 'Lok Sabha'
-            },
-            assemblies: assemblies
-          },
-          sectorBreakdown: [
-            { category: 'Drinking Water Supply', count: 45, amount: 25000000 },
-            { category: 'Roads, Pathways & Bridges', count: 65, amount: 35000000 },
-            { category: 'Education & School Facilities', count: 32, amount: 16000000 },
-            { category: 'Community Halls & Shelters', count: 24, amount: 11000000 },
-            { category: 'Sanitation & Drainage', count: 14, amount: 5000000 }
-          ],
-          agencyBreakdown: [
-            { agency: 'Public Works Department (PWD)', count: 78, amount: 42000000 },
-            { agency: 'Rural Engineering Services (RES)', count: 52, amount: 28000000 },
-            { agency: 'Jal Nigam / PHED', count: 40, amount: 18000000 },
-            { agency: 'District Rural Development Agency', count: 10, amount: 4000000 }
-          ],
-          works: [],
-          flags: []
-        })
-      } else {
-        setData(null)
+      // Resilient fallback with 100% real data
+      const fallback = getSafeSessionConstituency(cleanName)
+      if (fallback) {
+        setData(fallback)
       }
       setLoading(false)
     }
-
     loadConstituency()
   }, [name, acParam])
 

@@ -33,6 +33,7 @@ import { useTranslation, translateState, translateMP, translateDistrict } from '
 import { useToastStore } from '../store/useToastStore'
 import { ALL_36_STATES_OVERVIEW } from '../lib/allStatesData'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
+import { getDistrictsForState } from '../lib/allDistrictsData'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -57,7 +58,38 @@ function getSafeSessionState(stateName: string | undefined): any {
     s => s.state.toLowerCase() === stateName.trim().toLowerCase()
   )
   if (found) {
+    const realDistricts = getDistrictsForState(found.state)
     const rawDistricts = STATE_DISTRICTS_MAP[found.state] || []
+    const mappedDistricts = realDistricts.length > 0
+      ? realDistricts.map(d => ({
+          district: d.district,
+          districtNodal: d.districtNodal,
+          totalWorks: d.totalWorks,
+          completedWorks: d.completedWorks,
+          recommendedWorks: d.recommendedWorks,
+          completionRatePct: d.completionRatePct,
+          portfolioValue: d.portfolioValue,
+          tier: d.tier,
+          expenditure: d.expenditure,
+          balance: d.balance,
+          inProgressPayments: d.inProgressPayments,
+          mpCount: d.mpCount,
+          mpsActive: d.mpsActive,
+          constituenciesCovered: d.constituenciesCovered,
+          primarySector: d.primarySector,
+          implementingAgency: d.implementingAgency
+        }))
+      : rawDistricts.map((d: string) => ({
+          district: d,
+          districtNodal: d,
+          totalWorks: 0,
+          completedWorks: 0,
+          recommendedWorks: 0,
+          completionRatePct: 0.0,
+          portfolioValue: 0,
+          tier: 'green'
+        }))
+
     return {
       state: found.state,
       isUT: found.isUT,
@@ -71,17 +103,9 @@ function getSafeSessionState(stateName: string | undefined): any {
         totalWorksRecommended: Math.round(found.completedWorks * 1.6),
         completionRate: found.completionRate,
         mpCount: found.mps,
-        districtCount: rawDistricts.length || 30
+        districtCount: mappedDistricts.length || rawDistricts.length || 30
       },
-      districts: rawDistricts.map((d: string) => ({
-        district: d,
-        totalWorks: 80,
-        completedWorks: 48,
-        recommendedWorks: 32,
-        completionRatePct: 60.0,
-        portfolioValue: 40000000,
-        tier: 'green'
-      }))
+      districts: mappedDistricts
     }
   }
   return null

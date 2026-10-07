@@ -79,27 +79,27 @@ export const MPDetail: React.FC = () => {
           constituency: seat.constituency,
           state: seat.state,
           house: seat.house,
-          allocatedAmount: 150000000,
-          totalAllocated: 150000000,
-          totalExpenditure: 50000000,
-          utilizationPercentage: 33.3,
-          completedWorksCount: 30,
-          recommendedWorksCount: 60,
-          completionRate: 50.0,
-          pendingWorks: 30,
-          unspentAmount: 100000000,
-          completedWorksValue: 40000000,
-          totalCompletedAmount: 40000000,
-          inProgressPayments: 10000000,
-          paymentGapPercentage: 20.0
+          allocatedAmount: seat.allocated,
+          totalAllocated: seat.allocated,
+          totalExpenditure: seat.expenditure,
+          utilizationPercentage: seat.utilizationPercentage,
+          completedWorksCount: seat.completedWorks,
+          recommendedWorksCount: seat.recommendedWorks,
+          completionRate: seat.completionRate,
+          pendingWorks: seat.pendingWorks,
+          unspentAmount: seat.unspentAmount,
+          completedWorksValue: seat.completedWorksValue,
+          totalCompletedAmount: seat.completedWorksValue,
+          inProgressPayments: seat.inProgressPayments,
+          paymentGapPercentage: seat.paymentGapPercentage
         },
         works: [],
         anomalies: [],
         dossier: {
-          education: 'Graduate Professional',
-          total_assets: '₹5,20,00,000',
-          criminal_cases: 0,
-          party: 'Parliamentary Representative'
+          education: seat.education || 'Graduate Professional',
+          total_assets: seat.assets > 0 ? `₹${(seat.assets / 10000000).toFixed(2)} Cr` : 'Affidavit on Record',
+          criminal_cases: seat.criminalCases,
+          party: seat.party || 'Parliamentary Representative'
         }
       }
     }
@@ -195,46 +195,34 @@ export const MPDetail: React.FC = () => {
       ) || ALL_MP_SEATS[0]
 
       if (matchedSeat) {
-        const alloc = 150000000
-        const exp = 125000000
-        const completed = 42
-        const remained = 8
-        const total = completed + remained
-        const completionRate = Number(((completed / total) * 100).toFixed(1))
-
         setData({
           summary: {
+            id: matchedSeat.id,
             name: matchedSeat.name,
+            mpName: matchedSeat.name,
             constituency: matchedSeat.constituency,
             state: matchedSeat.state,
             house: matchedSeat.house || 'Lok Sabha',
-            party: 'Bharatiya Janata Party',
-            tenure: '18th Lok Sabha',
-            allocatedAmount: alloc,
-            totalExpenditure: exp,
-            unspentAmount: alloc - exp,
-            utilizationPercentage: Number(((exp / alloc) * 100).toFixed(1)),
-            totalWorks: total,
-            completedWorksCount: completed,
-            recommendedWorksCount: total,
-            completionRate: completionRate,
+            party: matchedSeat.party,
+            tenure: matchedSeat.house === 'Rajya Sabha' ? 'Rajya Sabha' : '18th Lok Sabha',
+            allocatedAmount: matchedSeat.allocated,
+            totalExpenditure: matchedSeat.expenditure,
+            unspentAmount: matchedSeat.unspentAmount,
+            utilizationPercentage: matchedSeat.utilizationPercentage,
+            totalWorks: Math.max(matchedSeat.recommendedWorks, matchedSeat.completedWorks),
+            completedWorksCount: matchedSeat.completedWorks,
+            recommendedWorksCount: matchedSeat.recommendedWorks,
+            completionRate: matchedSeat.completionRate,
             redFlagCount: 0,
             assemblies: findAssemblyConstituencies(matchedSeat.constituency, 10).map(a => a.ac),
             profile: {
-              education: 'Post Graduate',
-              criminalCases: 0,
-              assets: 35000000,
-              liabilities: 2500000
+              education: matchedSeat.education,
+              criminalCases: matchedSeat.criminalCases,
+              assets: matchedSeat.assets,
+              liabilities: matchedSeat.liabilities
             }
           },
-          works: [
-            { work_id: 101, description: 'Installation of Solar Street Lights in Gram Panchayat', category: 'Solar & Public Lighting', location: matchedSeat.constituency, cost: 1200000, status: 'Completed', implementing_agency: 'DRDA' },
-            { work_id: 102, description: 'Construction of Concrete CC Road & Drainage Channel', category: 'Roads & Pathways', location: matchedSeat.constituency, cost: 2400000, status: 'Completed', implementing_agency: 'PWD' },
-            { work_id: 103, description: 'Upgradation of Science Lab in Government Inter College', category: 'Education & School Infrastructure', location: matchedSeat.constituency, cost: 1800000, status: 'Completed', implementing_agency: 'CPWD' },
-            { work_id: 104, description: 'Community Hall Construction with Rainwater Harvesting', category: 'Community Centers & Halls', location: matchedSeat.constituency, cost: 3500000, status: 'Completed', implementing_agency: 'Rural Engineering Wing' },
-            { work_id: 105, description: 'High-Mast LED Tower at Main Market Chowk', category: 'Solar & Public Lighting', location: matchedSeat.constituency, cost: 850000, status: 'Active in Progress', implementing_agency: 'Municipal Corporation' },
-            { work_id: 106, description: 'Primary Health Center Solar Cold Chain Installation', category: 'Other Civil Development', location: matchedSeat.constituency, cost: 1500000, status: 'Active in Progress', implementing_agency: 'Health Dept' },
-          ],
+          works: [],
           redFlags: []
         })
       }
