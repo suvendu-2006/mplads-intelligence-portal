@@ -1,4 +1,4 @@
-# 🛡️ SATARK — MPLADS National Forensic Intelligence & Surveillance Platform
+# SATARK — MPLADS National Forensic Intelligence & Surveillance Platform
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -14,7 +14,7 @@
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 SATARK is built on an asynchronous, decoupled 5-tier architecture that bridges raw administrative datasets with high-speed forensic surveillance and decision intelligence:
 
