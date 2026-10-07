@@ -39,8 +39,8 @@ def get_last_updated():
                 inner = data.get("data", {})
                 return EnvelopeResponse(
                     data={
-                        "last_updated": inner.get("lastUpdated", "8/29/2026"),
-                        "as_of_label": "August 2026",
+                        "last_updated": inner.get("lastUpdated", "10/07/2026"),
+                        "as_of_label": "October 2026",
                         "source": inner.get("source", "Official MPLADS Portal API"),
                         "data_quality": inner.get("dataQuality", 98),
                         "total_records": inner.get("totalRecords", 294155)
@@ -52,8 +52,8 @@ def get_last_updated():
             pass
     return EnvelopeResponse(
         data={
-            "last_updated": "8/29/2026",
-            "as_of_label": "August 2026",
+            "last_updated": "10/07/2026",
+            "as_of_label": "October 2026",
             "source": "Official MPLADS Portal API",
             "schema_version": "2.1.0"
         },
