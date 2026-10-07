@@ -62,6 +62,9 @@ artifacts/*.log
 artifacts/*test*
 artifacts/audit_ground_truth_sample.csv
 artifacts/metrics_*.json
+!artifacts/metrics_master_snapshot_v1.json
+!artifacts/raw_data_manifest.json
+
 
 # IDE & OS files
 .DS_Store

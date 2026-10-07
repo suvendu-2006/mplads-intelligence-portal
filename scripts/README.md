@@ -8,6 +8,7 @@ This directory contains automation, data migration, forensic report generation, 
 
 ### 1. Data Ingestion, Migration & Seeding
 Scripts for populating the database, backfilling schema attributes, and running snapshot synchronization:
+* [`generate_frontend_real_data.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/generate_frontend_real_data.py) — Ingests official MoSPI records and ADR demographics to generate canonical frontend datasets (`allMpsData.ts`, `allDistrictsData.ts`, `allConstituenciesData.ts`).
 * [`backfill_implementing_agencies.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/backfill_implementing_agencies.py) — Backfills Implementing District Authority (IDA) names from official MoSPI sources.
 * [`seed_all_detectors.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/seed_all_detectors.py) — Ensures 100% anomaly coverage across all 15 detectors (D1–D15) for testing and evaluation.
 * [`seed_anomalies_for_all_states.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/seed_anomalies_for_all_states.py) — Populates realistic forensic anomaly distributions across all 36 States/UTs.
@@ -33,7 +34,10 @@ Automated browser and API verification scripts:
 * [`comprehensive_browser_audit.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/comprehensive_browser_audit.py) — Headless browser testing of the React frontend and Streamlit app.
 * [`verify_all_pages.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_all_pages.py) — E2E verification of all navigation routes, tabs, and interactive charts.
 * [`verify_authorized_consoles.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_authorized_consoles.py) — Role-based authorization tests for State Nodal, District Collector, and Admin views.
+* [`verify_search_and_login.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_search_and_login.py) — Verifies unified search bar indexing and auditor role switching workflows.
+* [`verify_round1.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_round1.py) — Initial smoke and regression tests for core API endpoints and UI renders.
 * [`verify_round2_e2e.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_round2_e2e.py) — Full regression suite validating user interaction flows and data visualizers.
+* [`verify_remaining_flows.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/verify_remaining_flows.py) — Edge-case verification for remaining user navigation pathways.
 
 ### 5. Machine Learning Operations
 * [`train_model.py`](file:///Users/suvendu/Downloads/SIH-DATA/scripts/train_model.py) — Trains and calibrates the tabular `HistGradientBoostingClassifier` model.

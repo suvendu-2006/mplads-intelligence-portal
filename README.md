@@ -61,14 +61,14 @@ The repository is organized following clean architectural separation of concerns
 ```
 SIH-DATA/
 │
-├── webapi/                     # High-Performance FastAPI REST Backend
+├── webapi/                     # High-Performance FastAPI REST Backend ([webapi/README.md](webapi/README.md))
 │   ├── routers/                # Endpoint routers (national, states, mps, districts, flags, map, roles)
 │   ├── services/               # Assembly & GIS data services
 │   ├── aggregators.py          # In-memory TTL aggregation caches (<50ms latency)
 │   ├── data_service.py         # SQLite WAL connection tuning & CSV loaders
 │   └── main.py                 # ASGI application entrypoint & startup warmup
 │
-├── mplads_fraud_detection/     # Core Forensic Fraud Engine
+├── mplads_fraud_detection/     # Core Forensic Fraud Engine ([mplads_fraud_detection/README.md](mplads_fraud_detection/README.md))
 │   ├── detectors/              # 15 Statutory Forensic Screening Detectors (D1 to D15)
 │   ├── foundation/             # Canonical SQLAlchemy models, DB sessions & ETL pipeline
 │   ├── features/               # 53 Tabular feature extraction pipeline
@@ -78,13 +78,13 @@ SIH-DATA/
 │   ├── monitoring/             # Feature drift detection & model health monitors
 │   └── pipeline.py             # Master orchestrator executing D1-D15 end-to-end
 │
-├── web/                        # React 18 + Vite Interactive Frontend
+├── web/                        # React 18 + Vite Interactive Frontend ([web/README.md](web/README.md))
 │   ├── src/components/         # Reusable surveillance UI components & charts
 │   ├── src/pages/              # National Dashboard, GIS Map, MP Dossier, State & District consoles
 │   ├── src/lib/                # API client, internationalization (i18n), design palette
 │   └── package.json            # Node.js dependencies
 │
-├── docs/                       # Operational, Technical & Legal Documentation
+├── docs/                       # Operational, Technical & Legal Documentation ([docs/README.md](docs/README.md))
 │   ├── SATARK_MPLADS_15_Detectors_Guide.pdf          # Official 15-detector forensic manual
 │   ├── SATARK_MPLADS_15_Detectors_Specification.docx  # Editable Word specification
 │   ├── QUICK_START_GUIDE.md    # 5-minute onboarding & local execution guide
@@ -94,20 +94,23 @@ SIH-DATA/
 │   ├── ETHICS.md               # Constitutional non-discrimination & fairness policy
 │   └── README.md               # Master documentation index
 │
-├── scripts/                    # Automation, Seeding & Report Generation Utilities
+├── scripts/                    # Automation, Seeding & Utilities ([scripts/README.md](scripts/README.md))
+│   ├── generate_frontend_real_data.py # Ingests MoSPI & ADR records to populate canonical frontend data
 │   ├── generate_detectors_docx.py # Compiles the 15-detector statutory forensic manual
 │   ├── seed_all_detectors.py   # Populates 100% anomaly coverage across D1-D15
 │   ├── backfill_implementing_agencies.py  # Backfills IDA names from MoSPI datasets
 │   ├── sync_all_official_data.py # Syncs local data with e-SAKSHI portal exports
 │   └── README.md               # Master script catalogue
 │
-├── tests/                      # Automated Testing Pyramid
-│   ├── test_pipeline.py        # End-to-end verification of all 15 detectors
-│   ├── test_idempotency.py     # Mathematical proof of zero duplicate counting
+├── tests/                      # Automated Testing Pyramid ([tests/README.md](tests/README.md))
+│   ├── acceptance_tests.sh     # Master 16-gate production acceptance test suite
+│   ├── test_data_contract.py   # Reconciles national, state, MP, and district data contracts
 │   ├── test_api.py             # 100% contract validation for all REST endpoints
-│   └── test_rbac.py            # Security boundary & role-authorization tests
+│   ├── test_idempotency.py     # Mathematical proof of zero duplicate counting
+│   ├── test_rbac_server_side.py# Security boundary & role-authorization tests
+│   └── test_label_approval_workflow.py # Dual-review & cryptographic evidence verification
 │
-├── data/                       # Authoritative Master & Archival Datasets
+├── data/                       # Authoritative Master & Archival Datasets ([data/README.md](data/README.md))
 │   ├── 01_Overview_and_National_Summary/ # Expenditure & sector national totals
 │   ├── 02_States_and_UTs/      # All 36 State & UT aggregated summaries
 │   ├── 03_MPs_Data/            # 788 MP profiles & Lok Sabha/Rajya Sabha dossiers
