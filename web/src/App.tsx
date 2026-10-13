@@ -117,7 +117,7 @@ export const App: React.FC = () => {
           </Route>
         </Routes>
       </RouteErrorBoundary>
-      <Analytics />
+      <Analytics mode="production" />
     </BrowserRouter>
   )
 }
