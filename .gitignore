@@ -94,3 +94,5 @@ web/scratch/
 # Vercel Deployment & Caches
 .vercel/
 .vercel_python_packages/
+.vercel
+.env*
