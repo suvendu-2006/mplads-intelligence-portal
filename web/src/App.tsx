@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { ScrollToTop } from './components/ScrollToTop'
+import { Analytics } from '@vercel/analytics/react'
 
 import { RouteErrorBoundary } from './components/RouteErrorBoundary'
 
@@ -116,6 +117,7 @@ export const App: React.FC = () => {
           </Route>
         </Routes>
       </RouteErrorBoundary>
+      <Analytics />
     </BrowserRouter>
   )
 }
