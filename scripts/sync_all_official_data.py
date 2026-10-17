@@ -179,18 +179,29 @@ def main():
     with open('web/src/lib/allStatesData.ts', 'w') as f:
         f.write(all_states_ts)
 
-    # 4. Update api/data/national_overview.csv
-    print("4. Writing updated api/data/national_overview.csv...")
+    # 4. Update api/data/national_overview.csv and data/01_Overview_and_National_Summary/national_overview.csv
+    print("4. Writing updated national_overview.csv...")
+    nat_csv_content = (
+        "totalAllocated,totalExpenditure,utilizationPercentage,totalMPs,totalWorksCompleted,totalWorksRecommended,completionRate,totalTransactions,avgAllocation,pendingWorks,paymentGap,completedWorksValue,inProgressPayments\n"
+        f"{nat_total_alloc:.2f},{nat_total_exp:.2f},{nat_util_pct:.6f},788,{nat_total_comp},{nat_total_rec},{nat_comp_rate:.6f},107683,{nat_total_alloc/788:.2f},{nat_pending},39.789221,25457840329.94,15779044992.20\n"
+    )
     with open('api/data/national_overview.csv', 'w') as f:
-        f.write("totalAllocated,totalExpenditure,utilizationPercentage,totalMPs,totalWorksCompleted,totalWorksRecommended,completionRate,totalTransactions,avgAllocation,pendingWorks,paymentGap,completedWorksValue,inProgressPayments\n")
-        f.write(f"{nat_total_alloc:.2f},{nat_total_exp:.2f},{nat_util_pct:.6f},788,{nat_total_comp},{nat_total_rec},{nat_comp_rate:.6f},107683,{nat_total_alloc/788:.2f},{nat_pending},39.789221,25457840329.94,15779044992.20\n")
+        f.write(nat_csv_content)
+    if os.path.exists('data/01_Overview_and_National_Summary'):
+        with open('data/01_Overview_and_National_Summary/national_overview.csv', 'w') as f:
+            f.write(nat_csv_content)
 
-    # 5. Update api/data/all_states_summary.csv
-    print("5. Writing updated api/data/all_states_summary.csv...")
+    # 5. Update api/data/all_states_summary.csv and data/02_States_and_UTs/all_states_summary.csv
+    print("5. Writing updated all_states_summary.csv...")
+    states_csv_lines = ["state,totalAllocated,totalExpenditure,utilizationPercentage,mpCount,totalMPs,totalWorksCompleted,completedWorksCount,recommendedWorksCount\n"]
+    for st in state_records:
+        states_csv_lines.append(f"{st['state']},{st['totalAllocated']:.2f},{st['totalExpenditure']:.2f},{st['expenditureRate']:.2f},{st['mps']},{st['mps']},{st['completedWorks']},{st['completedWorks']},{st['recommendedWorks']}\n")
+    states_csv_content = "".join(states_csv_lines)
     with open('api/data/all_states_summary.csv', 'w') as f:
-        f.write("state,totalAllocated,totalExpenditure,utilizationPercentage,mpCount,totalMPs,totalWorksCompleted,completedWorksCount,recommendedWorksCount\n")
-        for st in state_records:
-            f.write(f"{st['state']},{st['totalAllocated']:.2f},{st['totalExpenditure']:.2f},{st['expenditureRate']:.2f},{st['mps']},{st['mps']},{st['completedWorks']},{st['completedWorks']},{st['recommendedWorks']}\n")
+        f.write(states_csv_content)
+    if os.path.exists('data/02_States_and_UTs'):
+        with open('data/02_States_and_UTs/all_states_summary.csv', 'w') as f:
+            f.write(states_csv_content)
 
     # 6. Update web/src/lib/defaultData.ts
     print("6. Updating web/src/lib/defaultData.ts...")
