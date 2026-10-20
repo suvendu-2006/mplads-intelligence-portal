@@ -9,9 +9,8 @@ import {
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { ChartTooltip } from '../components/charts'
 import { useChartTheme } from '../hooks/useChartTheme'
-import { useInView } from '../hooks/useInView'
 import { ANIMATION_CONFIG } from '../lib/animationConfig'
-import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS, DEFAULT_TOP_STATES } from '../lib/defaultData'
+import { DEFAULT_NATIONAL, DEFAULT_ANALYTICS } from '../lib/defaultData'
 import { ALL_36_STATES_OVERVIEW } from '../lib/allStatesData'
 import {
   Landmark,
@@ -724,17 +723,12 @@ export const NationalDashboard: React.FC = () => {
     try {
       const saved = sessionStorage.getItem('cached_nat_states')
       const parsed = saved ? JSON.parse(saved) : null
-      return (parsed && parsed.length >= 30) ? parsed : []
-    } catch { return [] }
+      if (parsed && parsed.length >= 30) return parsed
+    } catch {}
+    return ALL_36_STATES_OVERVIEW
   })
-  // If cache already has the full 36 states, load immediately; otherwise wait 3ms for the fresh API call so Recharts mounts once
-  const [loading, setLoading] = useState<boolean>(() => {
-    try {
-      const saved = sessionStorage.getItem('cached_nat_states')
-      const parsed = saved ? JSON.parse(saved) : null
-      return !(parsed && parsed.length >= 30)
-    } catch { return true }
-  })
+  // Immediate 0ms First Paint with official data; seamlessly revalidates via background SWR
+  const [loading, setLoading] = useState<boolean>(false)
   const [showVideoModal, setShowVideoModal] = useState(false)
   const [leagueFilter, setLeagueFilter] = useState<'all' | 'states' | 'uts'>('all')
   const [stateChartFilter, setStateChartFilter] = useState<'all' | 'states' | 'uts' | 'top10'>('all')

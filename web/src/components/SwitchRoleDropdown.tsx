@@ -14,7 +14,6 @@ import {
   LogOut
 } from 'lucide-react'
 import { useTranslation } from '../lib/i18n'
-import { ALL_MP_SEATS } from '../lib/allMpsData'
 
 // Exactly 5 Governance Roles:
 // 1. User (Public Citizen)
@@ -123,12 +122,10 @@ export const SwitchRoleDropdown: React.FC = () => {
       return dist ? `${t('table.district')} (${dist})` : `${t('table.district')}`
     }
     if (user.role === 'mp') {
-      if (user.mpId && user.mpId !== 'ALL') {
-        const found = ALL_MP_SEATS.find(m => m.id === user.mpId)
-        if (found) {
-          const label = found.constituency !== 'Sitting Rajya Sabha' ? found.constituency : found.name.split(' ').slice(-1)[0]
-          return `${t('geo.mp')} (${label})`
-        }
+      if (user.mpName && user.mpName !== 'ALL') {
+        const cleanName = user.mpName.replace(/^(?:Shri|Smt\.|Dr\.)\s+/i, '').trim()
+        const shortName = cleanName.split(' ')[0]
+        return `${t('geo.mp')} (${shortName})`
       }
       return `${t('geo.mp')}`
     }

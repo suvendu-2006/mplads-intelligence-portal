@@ -150,18 +150,19 @@ export function initGlobalLinkPrefetcher() {
   document.addEventListener('touchstart', handlePointerInteraction, { passive: true })
   document.addEventListener('focusin', handlePointerInteraction as any, { passive: true })
 
-  // Eagerly pre-warm all core route components immediately on startup (zero idle delay)
-  setTimeout(() => {
-    import('../pages/BrowseStates').catch(() => {})
-    import('../pages/BrowseMPs').catch(() => {})
-    import('../pages/StateDetail').catch(() => {})
-    import('../pages/MPDetail').catch(() => {})
-    import('../pages/DistrictDashboard').catch(() => {})
-    import('../pages/MyState').catch(() => {})
-    import('../pages/MPDashboard').catch(() => {})
-    import('../pages/ConstituencyDetail').catch(() => {})
-    import('../pages/AuditDesk').catch(() => {})
-    import('../pages/GISMap').catch(() => {})
-    import('../pages/Login').catch(() => {})
-  }, 100)
+  // Gently pre-warm common navigation routes during deep browser idle (after initial page load is fully finished)
+  const scheduleIdleWarmup = () => {
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(() => {
+        import('../pages/BrowseStates').catch(() => {})
+        import('../pages/BrowseMPs').catch(() => {})
+      }, { timeout: 4000 })
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(scheduleIdleWarmup, 3000)
+  } else {
+    window.addEventListener('load', () => setTimeout(scheduleIdleWarmup, 3000), { once: true })
+  }
 }

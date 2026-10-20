@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { MapContainer, GeoJSON, useMap } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
 import { Globe2, MapPin, Info, ArrowRight, Search, X } from 'lucide-react'
 import { palette } from '../lib/palette'
 import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'

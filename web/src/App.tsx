@@ -60,24 +60,6 @@ const NotFound = lazyWithRetry(() => import('./pages/NotFound').then(m => ({ def
 import { ProtectedRoute } from './components/ProtectedRoute'
 
 export const App: React.FC = () => {
-  React.useEffect(() => {
-    // Eagerly pre-warm all primary route JS chunks immediately for 0ms light-speed tab switches
-    const timer = setTimeout(() => {
-      import('./pages/BrowseStates').catch(() => {})
-      import('./pages/BrowseMPs').catch(() => {})
-      import('./pages/StateDetail').catch(() => {})
-      import('./pages/MPDetail').catch(() => {})
-      import('./pages/DistrictDashboard').catch(() => {})
-      import('./pages/MyState').catch(() => {})
-      import('./pages/MPDashboard').catch(() => {})
-      import('./pages/ConstituencyDetail').catch(() => {})
-      import('./pages/AuditDesk').catch(() => {})
-      import('./pages/GISMap').catch(() => {})
-      import('./pages/Login').catch(() => {})
-    }, 50)
-
-    return () => clearTimeout(timer)
-  }, [])
 
   return (
     <BrowserRouter>

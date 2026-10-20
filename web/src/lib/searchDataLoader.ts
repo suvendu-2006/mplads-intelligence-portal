@@ -1,4 +1,4 @@
-import { ALL_MP_SEATS, type MPSeatItem } from './allMpsData'
+import type { MPSeatItem } from './allMpsData'
 import type { AssemblyItem } from './assemblyConstituencies'
 
 export type { MPSeatItem, AssemblyItem }
@@ -13,14 +13,17 @@ let searchBundlePromise: Promise<SearchDataBundle> | null = null
 let loadedBundle: SearchDataBundle | null = null
 
 /**
- * Loads heavy assembly constituency dataset asynchronously in a separate code-split chunk.
+ * Loads heavy assembly constituency and MP datasets asynchronously in separate code-split chunks.
  */
 export function loadSearchData(): Promise<SearchDataBundle> {
   if (loadedBundle) return Promise.resolve(loadedBundle)
   if (!searchBundlePromise) {
-    searchBundlePromise = import('./assemblyConstituencies').then((acModule) => {
+    searchBundlePromise = Promise.all([
+      import('./assemblyConstituencies'),
+      import('./allMpsData')
+    ]).then(([acModule, mpModule]) => {
       loadedBundle = {
-        allMps: ALL_MP_SEATS,
+        allMps: mpModule.ALL_MP_SEATS,
         acs: acModule.ASSEMBLY_CONSTITUENCIES,
         findAcs: acModule.findAssemblyConstituencies
       }
@@ -38,14 +41,14 @@ export function getLoadedSearchData(): SearchDataBundle | null {
 }
 
 /**
- * Background preloader to warm the search chunk during browser idle or on input focus.
+ * Background preloader to warm the search chunk during browser deep idle or on input focus.
  */
 export function preloadSearchData(): void {
   if (!loadedBundle && !searchBundlePromise) {
     if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(() => loadSearchData(), { timeout: 3000 })
+      (window as any).requestIdleCallback(() => loadSearchData(), { timeout: 6000 })
     } else {
-      setTimeout(() => loadSearchData(), 1500)
+      setTimeout(() => loadSearchData(), 5000)
     }
   }
 }

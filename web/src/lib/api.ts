@@ -379,26 +379,26 @@ export function warmupApiCache() {
   if (typeof window === 'undefined') return
 
   const runWarmup = () => {
-    // Quietly prefetch core routes during idle time so all tabs open instantly (0ms)
+    // Only gently pre-warm secondary pages (MPs, Districts) after the initial dashboard is fully settled
     const endpoints = [
-      '/api/national',
-      '/api/national/analytics',
-      '/api/states?sort=red_pct&order=desc',
       '/api/mps?page=1&page_size=50&sort=allocated&order=desc',
       '/api/districts?page=1&page_size=50&sort=total_works&order=desc',
     ]
-    // Stagger warmup requests by 120ms to ensure 0 network contention
     endpoints.forEach((url, idx) => {
       setTimeout(() => {
-        fetch(url).catch(() => {})
-      }, idx * 120)
+        if ('requestIdleCallback' in window) {
+          (window as any).requestIdleCallback(() => fetch(url).catch(() => {}))
+        } else {
+          fetch(url).catch(() => {})
+        }
+      }, idx * 1000)
     })
   }
 
-  if ('requestIdleCallback' in window) {
-    (window as any).requestIdleCallback(runWarmup, { timeout: 2000 })
+  if (document.readyState === 'complete') {
+    setTimeout(runWarmup, 3500)
   } else {
-    setTimeout(runWarmup, 600)
+    window.addEventListener('load', () => setTimeout(runWarmup, 3500), { once: true })
   }
 }
 

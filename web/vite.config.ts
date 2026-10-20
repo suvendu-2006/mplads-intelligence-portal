@@ -16,7 +16,15 @@ export default defineConfig({
     chunkSizeWarningLimit: 1200,
     modulePreload: {
       resolveDependencies(_filename, deps) {
-        return deps.filter(dep => !dep.includes('charts') && !dep.includes('maps') && !dep.includes('assemblyConstituencies'))
+        return deps.filter(
+          dep =>
+            !dep.includes('charts') &&
+            !dep.includes('maps') &&
+            !dep.includes('motion') &&
+            !dep.includes('allMpsData') &&
+            !dep.includes('allDistrictsData') &&
+            !dep.includes('assemblyConstituencies')
+        )
       },
     },
     rollupOptions: {
@@ -25,6 +33,9 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'react-vendor'
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion'
             }
             if (id.includes('recharts') || id.includes('d3-')) {
               return 'charts'
@@ -35,6 +46,15 @@ export default defineConfig({
             if (id.includes('lucide-react')) {
               return 'icons'
             }
+          }
+          if (id.includes('/lib/allMpsData')) {
+            return 'allMpsData'
+          }
+          if (id.includes('/lib/allDistrictsData')) {
+            return 'allDistrictsData'
+          }
+          if (id.includes('/lib/assemblyConstituencies')) {
+            return 'assemblyConstituencies'
           }
         },
       },
