@@ -57,6 +57,16 @@ export const Layout: React.FC = () => {
     document.documentElement.dir = isRtl ? 'rtl' : 'ltr'
   }, [lang])
 
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search)
+      const roleParam = (params.get('role') || params.get('profile'))?.toLowerCase()
+      if (roleParam === 'user' || roleParam === 'viewer' || roleParam === 'citizen') {
+        logout()
+      }
+    } catch {}
+  }, [location.search])
+
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true
     if (path !== '/' && location.pathname.startsWith(path)) return true
@@ -234,14 +244,20 @@ export const Layout: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <Link
-                to="/login"
-                className="px-3.5 py-1 rounded-full text-[11px] font-black bg-[var(--brand-primary)] !text-white shadow-sm hover:opacity-95 transition flex items-center gap-1.5 cursor-pointer"
-                style={{ color: '#ffffff' }}
-              >
-                <UserCheck size={13} style={{ color: '#ffffff' }} />
-                <span style={{ color: '#ffffff' }}>{t('nav.login_profile')}</span>
-              </Link>
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5 shadow-2xs">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                  <span>Active Profile: <strong>User</strong></span>
+                </span>
+                <Link
+                  to="/login"
+                  className="px-3.5 py-1 rounded-full text-[11px] font-black bg-[var(--brand-primary)] !text-white shadow-sm hover:opacity-95 transition flex items-center gap-1.5 cursor-pointer"
+                  style={{ color: '#ffffff' }}
+                >
+                  <UserCheck size={13} style={{ color: '#ffffff' }} />
+                  <span style={{ color: '#ffffff' }}>{t('nav.login_profile')}</span>
+                </Link>
+              </div>
             )}
           </div>
         </div>

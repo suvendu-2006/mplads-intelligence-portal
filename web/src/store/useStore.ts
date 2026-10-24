@@ -92,16 +92,61 @@ export function getRoleDefaultPermissions(role: string): string[] {
   return ROLE_PERMISSIONS[role] || ROLE_PERMISSIONS.viewer
 }
 
+export const DEFAULT_USER_STATE: UserState = {
+  role: 'viewer',
+  permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+  sessionToken: 'default_viewer',
+  isAuthenticated: false,
+  email: 'citizen@satark.gov.in',
+  state: undefined,
+  district: undefined,
+  mpId: undefined,
+  mpName: undefined
+}
+
+// Purge legacy user state from localStorage so clicking links always defaults to 'User'
+if (typeof window !== 'undefined') {
+  try {
+    const raw = localStorage.getItem('mplads-user-session')
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      if (parsed?.state?.user) {
+        delete parsed.state.user
+        localStorage.setItem('mplads-user-session', JSON.stringify(parsed))
+      }
+    }
+  } catch {}
+}
+
+export function getInitialUserState(): UserState {
+  if (typeof window !== 'undefined') {
+    try {
+      // 1. Explicit role/profile query parameters in the URL
+      const params = new URLSearchParams(window.location.search)
+      const roleParam = (params.get('role') || params.get('profile'))?.toLowerCase()
+      if (roleParam === 'user' || roleParam === 'viewer' || roleParam === 'citizen') {
+        try { sessionStorage.removeItem('satark_active_session') } catch {}
+        return { ...DEFAULT_USER_STATE }
+      }
+
+      // 2. Tab-scoped active login session
+      const raw = sessionStorage.getItem('satark_active_session')
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (parsed && parsed.role && parsed.role !== 'viewer' && parsed.isAuthenticated) {
+          return parsed
+        }
+      }
+    } catch {}
+  }
+  // 3. Default profile is ALWAYS User (Public Citizen)
+  return { ...DEFAULT_USER_STATE }
+}
+
 export const useStore = create<AppStore>()(
   persist(
     (set) => ({
-      user: {
-        role: 'viewer',
-        permissions: getRoleDefaultPermissions('viewer'),
-        sessionToken: 'default_viewer',
-        isAuthenticated: false,
-        email: 'citizen@satark.gov.in'
-      },
+      user: getInitialUserState(),
       theme: 'light',
       lang: 'en',
       searchQuery: '',
@@ -132,38 +177,41 @@ export const useStore = create<AppStore>()(
         mpId?: string,
         mpName?: string
       ) => {
+        const isOfficial = role !== 'viewer'
         const defaultPermissions = getRoleDefaultPermissions(role)
 
-        const newState = state ? state : (
-          role === 'viewer' || role === 'mospi' ? undefined : undefined
-        )
+        const newState = state ? state : undefined
         const newDistrict = district ? district : undefined
         const newMpId = mpId ? mpId : undefined
-        const newMpName = mpName ? mpName : (
-          role === 'viewer' || role === 'mospi' ? undefined : undefined
-        )
+        const newMpName = mpName ? mpName : undefined
 
-        set({
-          searchQuery: '',
-          user: {
-            role,
-            state: newState,
-            district: newDistrict,
-            mpId: newMpId,
-            mpName: newMpName,
-            sessionToken: `auth_session_${role}_${Date.now()}`,
-            permissions: defaultPermissions,
-            isAuthenticated: true,
-            email: email || `${role}@satark.gov.in`
-          }
-        })
+        const newUser: UserState = {
+          role,
+          state: newState,
+          district: newDistrict,
+          mpId: newMpId,
+          mpName: newMpName,
+          sessionToken: isOfficial ? `auth_session_${role}_${Date.now()}` : 'default_viewer',
+          permissions: defaultPermissions,
+          isAuthenticated: isOfficial,
+          email: email || (isOfficial ? `${role}@satark.gov.in` : 'citizen@satark.gov.in')
+        }
 
         if (typeof window !== 'undefined') {
           try {
-            sessionStorage.clear()
+            if (isOfficial) {
+              sessionStorage.setItem('satark_active_session', JSON.stringify(newUser))
+            } else {
+              sessionStorage.removeItem('satark_active_session')
+            }
           } catch {}
           clearApiCache()
         }
+
+        set({
+          searchQuery: '',
+          user: newUser
+        })
 
         try {
           const res = await fetch('/api/switch-role', {
@@ -180,14 +228,20 @@ export const useStore = create<AppStore>()(
           if (res.ok) {
             const json = await res.json()
             if (json?.data) {
-              set((prev) => ({
-                user: {
+              set((prev) => {
+                const updatedUser = {
                   ...prev.user,
                   role: json.data.role || prev.user.role,
                   sessionToken: json.data.session_token || prev.user.sessionToken,
                   permissions: json.data.permissions || prev.user.permissions
                 }
-              }))
+                if (typeof window !== 'undefined' && isOfficial) {
+                  try {
+                    sessionStorage.setItem('satark_active_session', JSON.stringify(updatedUser))
+                  } catch {}
+                }
+                return { user: updatedUser }
+              })
             }
           }
         } catch (err) {
@@ -195,26 +249,16 @@ export const useStore = create<AppStore>()(
         }
       },
       logout: () => {
-        set({
-          searchQuery: '',
-          user: {
-            role: 'viewer',
-            permissions: getRoleDefaultPermissions('viewer'),
-            sessionToken: 'default_viewer',
-            isAuthenticated: false,
-            email: 'citizen@satark.gov.in',
-            state: undefined,
-            district: undefined,
-            mpId: undefined,
-            mpName: undefined
-          }
-        })
         if (typeof window !== 'undefined') {
           try {
-            sessionStorage.clear()
+            sessionStorage.removeItem('satark_active_session')
           } catch {}
           clearApiCache()
         }
+        set({
+          searchQuery: '',
+          user: { ...DEFAULT_USER_STATE }
+        })
       },
       switchRole: async (
         role: string,
@@ -249,26 +293,32 @@ export const useStore = create<AppStore>()(
           ? `collector.${(newDistrict || 'sambalpur').toLowerCase().replace(/\s+/g, '')}@gov.in`
           : `mp.${(newMpId || 'sambalpur').toLowerCase()}@sansad.nic.in`
 
+        const newUser: UserState = {
+          role,
+          state: newState,
+          district: newDistrict,
+          mpId: newMpId,
+          mpName: newMpName,
+          sessionToken: isOfficial ? `session_${role}_${Date.now()}` : 'default_viewer',
+          permissions: defaultPermissions,
+          isAuthenticated: isOfficial,
+          email: defaultEmail
+        }
+
         // 1. Instantaneous local update: reset search query & set clean role state
         set(() => ({
           searchQuery: '',
-          user: {
-            role,
-            state: newState,
-            district: newDistrict,
-            mpId: newMpId,
-            mpName: newMpName,
-            sessionToken: `session_${role}_${Date.now()}`,
-            permissions: defaultPermissions,
-            isAuthenticated: isOfficial,
-            email: defaultEmail
-          }
+          user: newUser
         }))
 
-        // 2. Clear ALL role-specific, searched and cached data from session storage and RAM
+        // 2. Tab-scoped session synchronization
         if (typeof window !== 'undefined') {
           try {
-            sessionStorage.clear()
+            if (isOfficial) {
+              sessionStorage.setItem('satark_active_session', JSON.stringify(newUser))
+            } else {
+              sessionStorage.removeItem('satark_active_session')
+            }
           } catch {}
           clearApiCache()
         }
@@ -289,14 +339,20 @@ export const useStore = create<AppStore>()(
           if (res.ok) {
             const json = await res.json()
             if (json?.data) {
-              set((prev) => ({
-                user: {
+              set((prev) => {
+                const updatedUser = {
                   ...prev.user,
                   role: json.data.role || prev.user.role,
                   sessionToken: json.data.session_token || prev.user.sessionToken,
                   permissions: json.data.permissions || prev.user.permissions
                 }
-              }))
+                if (typeof window !== 'undefined' && isOfficial) {
+                  try {
+                    sessionStorage.setItem('satark_active_session', JSON.stringify(updatedUser))
+                  } catch {}
+                }
+                return { user: updatedUser }
+              })
             }
           }
         } catch (err) {
@@ -306,42 +362,21 @@ export const useStore = create<AppStore>()(
     }),
     {
       name: 'mplads-user-session',
-      version: 7,
+      version: 8,
       partialize: (state) => ({
         theme: state.theme,
         lang: state.lang,
         bannerDismissed: state.bannerDismissed,
-        user: {
-          role: state.user.role,
-          state: state.user.state,
-          district: state.user.district,
-          mpId: state.user.mpId,
-          mpName: state.user.mpName,
-          permissions: state.user.permissions,
-          sessionToken: state.user.sessionToken,
-          isAuthenticated: state.user.isAuthenticated,
-          email: state.user.email
-        }
       }),
-      migrate: (persistedState: any, version: number) => {
-        if (version < 7) {
-          return {
-            ...persistedState,
-            theme: 'light', // User explicitly requests website to open in light mode by default
-            user: {
-              role: persistedState?.user?.role || 'viewer',
-              permissions: persistedState?.user?.permissions || ['read:national', 'read:states', 'read:mps', 'read:map'],
-              sessionToken: persistedState?.user?.sessionToken || 'default_viewer',
-              isAuthenticated: Boolean(persistedState?.user?.isAuthenticated && persistedState?.user?.role !== 'viewer'),
-              email: persistedState?.user?.email || 'citizen@satark.gov.in',
-              state: persistedState?.user?.state || 'ALL',
-              district: persistedState?.user?.district || 'ALL',
-              mpId: persistedState?.user?.mpId || 'ALL',
-              mpName: persistedState?.user?.mpName || 'All Members of Parliament'
-            }
-          }
+      migrate: (persistedState: any) => {
+        const cleanState = { ...persistedState }
+        delete cleanState.user
+        return {
+          ...cleanState,
+          theme: persistedState?.theme || 'light',
+          lang: persistedState?.lang || 'en',
+          bannerDismissed: persistedState?.bannerDismissed || false
         }
-        return persistedState
       }
     }
   )

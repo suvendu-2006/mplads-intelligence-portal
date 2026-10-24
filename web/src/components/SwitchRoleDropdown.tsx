@@ -104,7 +104,7 @@ export const SwitchRoleDropdown: React.FC = () => {
 
   const getRoleDisplayTitle = () => {
     if (!user.isAuthenticated || user.role === 'viewer') {
-      return t('role.citizen')
+      return 'User (Citizen)'
     }
     if (user.role === 'mospi') {
       return `${t('role.mospi')} (Verified)`
@@ -129,11 +129,11 @@ export const SwitchRoleDropdown: React.FC = () => {
       }
       return `${t('geo.mp')}`
     }
-    return t('role.citizen')
+    return 'User (Citizen)'
   }
 
   const getActiveDotColor = () => {
-    if (!user.isAuthenticated || user.role === 'viewer') return 'bg-slate-400'
+    if (!user.isAuthenticated || user.role === 'viewer') return 'bg-emerald-500 ring-2 ring-emerald-500/20'
     if (user.role === 'mospi') return 'bg-amber-500 ring-2 ring-amber-500/20'
     if (user.role === 'state_nodal_officer') return 'bg-emerald-500 ring-2 ring-emerald-500/20'
     if (user.role === 'district_authority') return 'bg-sky-500 ring-2 ring-sky-500/20'
@@ -152,7 +152,7 @@ export const SwitchRoleDropdown: React.FC = () => {
           <span className={`w-2 h-2 rounded-full shrink-0 ${getActiveDotColor()}`} />
           <div>
             <div className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] tracking-wider leading-tight flex items-center gap-1">
-              <span>{user.isAuthenticated && user.role !== 'viewer' ? 'Active Profile' : t('btn.switch_role')}</span>
+              <span>Active Profile</span>
             </div>
             <div className="text-xs font-bold text-[var(--text-primary)] truncate max-w-[150px]">
               {getRoleDisplayTitle()}
