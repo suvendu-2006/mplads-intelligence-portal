@@ -12,8 +12,8 @@
     "test:all": ".venv/bin/pytest tests/ -m 'not slow'",
     "test:all:full": ".venv/bin/pytest tests/",
     "test:web": "cd web && npm run build",
-    "deploy:prod": "npx vercel deploy --prod --yes",
-    "prune:vercel": "npx vercel rm mplads-intelligence-portal --safe --yes"
+    "deploy:prod": "npx -y vercel deploy --prod --yes",
+    "prune:vercel": "npx -y vercel rm mplads-intelligence-portal --safe --yes"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
