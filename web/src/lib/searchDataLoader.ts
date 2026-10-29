@@ -46,9 +46,9 @@ export function getLoadedSearchData(): SearchDataBundle | null {
 export function preloadSearchData(): void {
   if (!loadedBundle && !searchBundlePromise) {
     if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(() => loadSearchData(), { timeout: 6000 })
+      (window as any).requestIdleCallback(() => loadSearchData(), { timeout: 2000 })
     } else {
-      setTimeout(() => loadSearchData(), 5000)
+      setTimeout(() => loadSearchData(), 1200)
     }
   }
 }

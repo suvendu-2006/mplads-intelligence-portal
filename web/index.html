@@ -13,6 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- Early API dispatch: Initiates parallel network fetch while HTML and JS bundles download -->
+    <script>
+      (function() {
+        try {
+          window.__EARLY_DATA__ = {
+            national: fetch('/api/national').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+            states: fetch('/api/states?sort=red_pct&order=desc').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }),
+            analytics: fetch('/api/national/analytics').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; })
+          };
+        } catch (e) {}
+      })();
+    </script>
     <!-- Non-render-blocking regional Indic web fonts loaded asynchronously -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>

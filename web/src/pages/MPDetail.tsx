@@ -62,7 +62,7 @@ export const MPDetail: React.FC = () => {
   const getSafeSessionMP = (mpId: string | undefined): any => {
     if (!mpId || typeof window === 'undefined') return null
     try {
-      const saved = sessionStorage.getItem(`cached_mp_${mpId}`)
+      const saved = localStorage.getItem(`cached_mp_${mpId}`) || sessionStorage.getItem(`cached_mp_${mpId}`)
       if (saved) return JSON.parse(saved)
     } catch {}
 
@@ -180,7 +180,10 @@ export const MPDetail: React.FC = () => {
             if (json.data?.summary?.matched_assembly_constituency && !searchParams.get('ac')) {
               setAcFilter(json.data.summary.matched_assembly_constituency)
             }
-            try { sessionStorage.setItem(`cached_mp_${id}`, JSON.stringify(json.data)) } catch {}
+            try {
+              localStorage.setItem(`cached_mp_${id}`, JSON.stringify(json.data))
+              sessionStorage.setItem(`cached_mp_${id}`, JSON.stringify(json.data))
+            } catch {}
             setLoading(false)
             return
           }

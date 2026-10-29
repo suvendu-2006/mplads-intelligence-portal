@@ -54,7 +54,7 @@ function getSafeSessionConstituency(name: string | undefined): any {
   if (!name || typeof window === 'undefined') return null
   const clean = name.trim()
   try {
-    const saved = sessionStorage.getItem(`cached_constituency_${clean}`)
+    const saved = localStorage.getItem(`cached_constituency_${clean}`) || sessionStorage.getItem(`cached_constituency_${clean}`)
     if (saved) return JSON.parse(saved)
   } catch {}
 
@@ -172,7 +172,10 @@ export const ConstituencyDetail: React.FC = () => {
           const json = await res.json()
           if (json?.data) {
             setData(json.data)
-            try { sessionStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data)) } catch {}
+            try {
+              localStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data))
+              sessionStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data))
+            } catch {}
             if (json.data?.summary?.matched_assembly_constituency && !acParam) {
               setSelectedAc(json.data.summary.matched_assembly_constituency)
             }

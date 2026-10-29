@@ -24,7 +24,8 @@ export const BrowseStates: React.FC = () => {
 
   const [statesData, setStatesData] = useState<StateOverviewItem[]>(() => {
     try {
-      const saved = sessionStorage.getItem('cached_all_36_states')
+      const saved = (typeof window !== 'undefined' && localStorage.getItem('cached_all_36_states')) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem('cached_all_36_states'))
       if (saved) {
         const parsed = JSON.parse(saved)
         if (Array.isArray(parsed) && parsed.length > 0) return parsed
@@ -60,7 +61,10 @@ export const BrowseStates: React.FC = () => {
               return orig
             })
             setStatesData(merged)
-            try { sessionStorage.setItem('cached_all_36_states', JSON.stringify(merged)) } catch {}
+            try {
+              localStorage.setItem('cached_all_36_states', JSON.stringify(merged))
+              sessionStorage.setItem('cached_all_36_states', JSON.stringify(merged))
+            } catch {}
           }
         }
       } catch (err) {

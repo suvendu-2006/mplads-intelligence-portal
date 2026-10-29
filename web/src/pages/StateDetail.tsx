@@ -49,7 +49,7 @@ const UNION_TERRITORIES = [
 function getSafeSessionState(stateName: string | undefined): any {
   if (!stateName || typeof window === 'undefined') return null
   try {
-    const saved = sessionStorage.getItem(`cached_state_${stateName}`)
+    const saved = localStorage.getItem(`cached_state_${stateName}`) || sessionStorage.getItem(`cached_state_${stateName}`)
     if (saved) return JSON.parse(saved)
   } catch {}
 
@@ -219,7 +219,10 @@ export const StateDetail: React.FC = () => {
           if (jsonState.data) {
             setData(jsonState.data)
             if (typeof window !== 'undefined') {
-              try { sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data)) } catch {}
+              try {
+                localStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
+                sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
+              } catch {}
             }
             setLoading(false)
             return

@@ -59,36 +59,44 @@ export function clearApiCache(pattern?: string) {
         inFlightRequests.delete(key)
       }
     }
-    if (typeof window !== 'undefined' && window.sessionStorage) {
+    const cleanStorage = (storage: Storage) => {
       try {
         const keysToRemove: string[] = []
-        for (let i = 0; i < sessionStorage.length; i++) {
-          const k = sessionStorage.key(i)
+        for (let i = 0; i < storage.length; i++) {
+          const k = storage.key(i)
           if (k && (k.startsWith(SESSION_CACHE_PREFIX) || k.startsWith('satark_swr_') || k.startsWith('cached_')) && k.includes(pattern)) {
             keysToRemove.push(k)
           }
         }
         for (const k of keysToRemove) {
-          sessionStorage.removeItem(k)
+          storage.removeItem(k)
         }
       } catch {}
+    }
+    if (typeof window !== 'undefined') {
+      if (window.sessionStorage) cleanStorage(sessionStorage)
+      if (window.localStorage) cleanStorage(localStorage)
     }
   } else {
     memoryCache.clear()
     inFlightRequests.clear()
-    if (typeof window !== 'undefined' && window.sessionStorage) {
+    const cleanAll = (storage: Storage) => {
       try {
         const keysToRemove: string[] = []
-        for (let i = 0; i < sessionStorage.length; i++) {
-          const k = sessionStorage.key(i)
+        for (let i = 0; i < storage.length; i++) {
+          const k = storage.key(i)
           if (k && (k.startsWith('satark_') || k.startsWith('cached_'))) {
             keysToRemove.push(k)
           }
         }
         for (const k of keysToRemove) {
-          sessionStorage.removeItem(k)
+          storage.removeItem(k)
         }
       } catch {}
+    }
+    if (typeof window !== 'undefined') {
+      if (window.sessionStorage) cleanAll(sessionStorage)
+      if (window.localStorage) cleanAll(localStorage)
     }
   }
 }
@@ -122,6 +130,10 @@ async function fetchAndCache(
 
       try {
         sessionStorage.setItem(SESSION_CACHE_PREFIX + cacheKey, JSON.stringify(record))
+        // Persist public GET payloads in localStorage so subsequent link clicks render in 0ms from disk
+        if (cacheKey.startsWith('public:') || cacheKey.startsWith('user:')) {
+          localStorage.setItem(SESSION_CACHE_PREFIX + cacheKey, JSON.stringify(record))
+        }
       } catch {
         // Ignore quota limits
       }
@@ -209,10 +221,11 @@ export function initApiSync() {
       // Check In-Memory RAM Cache first (0.01ms access)
       let cachedRecord = memoryCache.get(cacheKey)
 
-      // Fallback to SessionStorage if not in RAM with strict schema validation
-      if (!cachedRecord && typeof window !== 'undefined' && window.sessionStorage) {
+      // Fallback to SessionStorage or LocalStorage if not in RAM
+      if (!cachedRecord && typeof window !== 'undefined') {
         try {
-          const raw = sessionStorage.getItem(SESSION_CACHE_PREFIX + cacheKey)
+          const raw = (window.sessionStorage && sessionStorage.getItem(SESSION_CACHE_PREFIX + cacheKey)) ||
+                      (window.localStorage && localStorage.getItem(SESSION_CACHE_PREFIX + cacheKey))
           if (raw) {
             const parsed = JSON.parse(raw)
             if (isValidCacheRecord(parsed)) {
@@ -220,12 +233,14 @@ export function initApiSync() {
               setMemoryCache(cacheKey, cachedRecord)
             } else {
               // Discard corrupted or incompatible record from previous deploys
-              sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
+              if (window.sessionStorage) sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
+              if (window.localStorage) localStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
             }
           }
         } catch {
           try {
-            sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
+            if (window.sessionStorage) sessionStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
+            if (window.localStorage) localStorage.removeItem(SESSION_CACHE_PREFIX + cacheKey)
           } catch {}
         }
       }
@@ -379,26 +394,28 @@ export function warmupApiCache() {
   if (typeof window === 'undefined') return
 
   const runWarmup = () => {
-    // Only gently pre-warm secondary pages (MPs, Districts) after the initial dashboard is fully settled
+    // Proactively pre-warm core endpoints in rapid staged idle steps so link clicks render in <1ms
     const endpoints = [
+      '/api/states?sort=red_pct&order=desc',
+      '/api/national/analytics',
       '/api/mps?page=1&page_size=50&sort=allocated&order=desc',
       '/api/districts?page=1&page_size=50&sort=total_works&order=desc',
     ]
     endpoints.forEach((url, idx) => {
       setTimeout(() => {
         if ('requestIdleCallback' in window) {
-          (window as any).requestIdleCallback(() => fetch(url).catch(() => {}))
+          (window as any).requestIdleCallback(() => fetch(url).catch(() => {}), { timeout: 2000 })
         } else {
           fetch(url).catch(() => {})
         }
-      }, idx * 1000)
+      }, 300 + idx * 350)
     })
   }
 
   if (document.readyState === 'complete') {
-    setTimeout(runWarmup, 3500)
+    setTimeout(runWarmup, 400)
   } else {
-    window.addEventListener('load', () => setTimeout(runWarmup, 3500), { once: true })
+    window.addEventListener('load', () => setTimeout(runWarmup, 400), { once: true })
   }
 }
 

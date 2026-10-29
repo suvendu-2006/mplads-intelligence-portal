@@ -709,19 +709,22 @@ export const NationalDashboard: React.FC = () => {
   const { t, lang } = useTranslation()
   const [national, setNational] = useState<any>(() => {
     try {
-      const saved = sessionStorage.getItem('cached_nat_data')
+      const saved = (typeof window !== 'undefined' && localStorage.getItem('cached_nat_data')) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem('cached_nat_data'))
       return saved ? JSON.parse(saved) : DEFAULT_NATIONAL
     } catch { return DEFAULT_NATIONAL }
   })
   const [analytics, setAnalytics] = useState<any>(() => {
     try {
-      const saved = sessionStorage.getItem('cached_nat_analytics')
+      const saved = (typeof window !== 'undefined' && localStorage.getItem('cached_nat_analytics')) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem('cached_nat_analytics'))
       return saved ? JSON.parse(saved) : DEFAULT_ANALYTICS
     } catch { return DEFAULT_ANALYTICS }
   })
   const [states, setStates] = useState<any[]>(() => {
     try {
-      const saved = sessionStorage.getItem('cached_nat_states')
+      const saved = (typeof window !== 'undefined' && localStorage.getItem('cached_nat_states')) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem('cached_nat_states'))
       const parsed = saved ? JSON.parse(saved) : null
       if (parsed && parsed.length >= 30) return parsed
     } catch {}
@@ -740,10 +743,11 @@ export const NationalDashboard: React.FC = () => {
     let isMounted = true
     async function loadData() {
       try {
+        const early = typeof window !== 'undefined' ? (window as any).__EARLY_DATA__ : null
         const [resNat, resStates, resAnalytics] = await Promise.all([
-          fetch('/api/national'),
-          fetch('/api/states?sort=red_pct&order=desc'),
-          fetch('/api/national/analytics')
+          early?.national ? early.national.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national')) : fetch('/api/national'),
+          early?.states ? early.states.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/states?sort=red_pct&order=desc')) : fetch('/api/states?sort=red_pct&order=desc'),
+          early?.analytics ? early.analytics.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national/analytics')) : fetch('/api/national/analytics')
         ])
 
         if (!isMounted) return
@@ -761,7 +765,10 @@ export const NationalDashboard: React.FC = () => {
               }
               return jsonNat.data
             })
-            try { sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data)) } catch {}
+            try {
+              localStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data))
+              sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data))
+            } catch {}
           }
         }
         if (resStates.ok) {
@@ -779,7 +786,10 @@ export const NationalDashboard: React.FC = () => {
               }
               return fetchedStates
             })
-            try { sessionStorage.setItem('cached_nat_states', JSON.stringify(fetchedStates)) } catch {}
+            try {
+              localStorage.setItem('cached_nat_states', JSON.stringify(fetchedStates))
+              sessionStorage.setItem('cached_nat_states', JSON.stringify(fetchedStates))
+            } catch {}
           }
         }
         if (resAnalytics.ok) {
@@ -794,7 +804,10 @@ export const NationalDashboard: React.FC = () => {
               }
               return jsonAnalytics.data
             })
-            try { sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data)) } catch {}
+            try {
+              localStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data))
+              sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data))
+            } catch {}
           }
         }
       } catch (e) {

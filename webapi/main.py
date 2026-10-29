@@ -82,13 +82,11 @@ async def add_performance_cache_headers(request: Request, call_next):
             else:
                 if not response.headers.get("Cache-Control"):
                     if path.startswith("/api/map/") or path.startswith("/api/meta"):
-                        response.headers["Cache-Control"] = "public, max-age=7200, s-maxage=86400, stale-while-revalidate=604800"
+                        response.headers["Cache-Control"] = "public, max-age=7200, s-maxage=604800, stale-while-revalidate=2592000"
                     else:
-                        response.headers["Cache-Control"] = "public, max-age=1800, s-maxage=86400, stale-while-revalidate=86400"
-                # Retain edge caching while isolating per-role variants and content encoding
-                existing_vary = response.headers.get("Vary")
-                role_vary = "x-role, x-state, x-district, x-mp-id, Accept-Encoding"
-                response.headers["Vary"] = f"{existing_vary}, {role_vary}" if existing_vary else role_vary
+                        response.headers["Cache-Control"] = "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+                # Public endpoints vary only on Accept-Encoding so Vercel Edge CDN caches globally for all users
+                response.headers["Vary"] = "Accept-Encoding"
     elif request.method in ["POST", "PUT", "DELETE", "PATCH"]:
         response.headers["Cache-Control"] = "private, no-store, no-cache, must-revalidate"
         response.headers["Vary"] = "x-role, x-state, x-district, x-mp-id, Authorization, Cookie"

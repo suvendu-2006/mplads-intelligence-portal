@@ -78,7 +78,8 @@ export const DistrictDashboard: React.FC = () => {
   const [data, setData] = useState<any>(() => {
     try {
       if (!districtName) return null
-      const saved = sessionStorage.getItem(`cached_district_v2_${districtName}`)
+      const saved = (typeof window !== 'undefined' && localStorage.getItem(`cached_district_v2_${districtName}`)) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem(`cached_district_v2_${districtName}`))
       if (saved) return JSON.parse(saved)
     } catch {}
 
@@ -253,7 +254,10 @@ export const DistrictDashboard: React.FC = () => {
           const json = await res.json()
           if (json.data) {
             setData(json.data)
-            try { sessionStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data)) } catch {}
+            try {
+              localStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data))
+              sessionStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data))
+            } catch {}
             setLoading(false)
             return
           }
