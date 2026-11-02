@@ -132,15 +132,6 @@ export const SwitchRoleDropdown: React.FC = () => {
     return 'User (Citizen)'
   }
 
-  const getActiveDotColor = () => {
-    if (!user.isAuthenticated || user.role === 'viewer') return 'bg-emerald-500 ring-2 ring-emerald-500/20'
-    if (user.role === 'mospi') return 'bg-amber-500 ring-2 ring-amber-500/20'
-    if (user.role === 'state_nodal_officer') return 'bg-emerald-500 ring-2 ring-emerald-500/20'
-    if (user.role === 'district_authority') return 'bg-sky-500 ring-2 ring-sky-500/20'
-    if (user.role === 'mp') return 'bg-purple-500 ring-2 ring-purple-500/20'
-    return 'bg-emerald-500'
-  }
-
   return (
     <div className="relative">
       <button
@@ -148,15 +139,12 @@ export const SwitchRoleDropdown: React.FC = () => {
         aria-label="Switch User Role"
         className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] hover:border-[var(--brand-primary)] text-xs font-medium transition shadow-2xs hover:shadow-xs cursor-pointer select-none"
       >
-        <div className="text-left flex items-center gap-2">
-          <span className={`w-2 h-2 rounded-full shrink-0 ${getActiveDotColor()}`} />
-          <div>
-            <div className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] tracking-wider leading-tight flex items-center gap-1">
-              <span>Active Profile</span>
-            </div>
-            <div className="text-xs font-bold text-[var(--text-primary)] truncate max-w-[150px]">
-              {getRoleDisplayTitle()}
-            </div>
+        <div className="text-left">
+          <div className="text-[10px] uppercase font-bold text-[var(--text-tertiary)] tracking-wider leading-tight flex items-center gap-1">
+            <span>Active Profile</span>
+          </div>
+          <div className="text-xs font-bold text-[var(--text-primary)] truncate max-w-[150px]">
+            {getRoleDisplayTitle()}
           </div>
         </div>
         <ChevronDown className="w-3.5 h-3.5 text-[var(--text-tertiary)] ml-0.5" />
@@ -242,9 +230,6 @@ export const SwitchRoleDropdown: React.FC = () => {
                         <div className="min-w-0">
                           <div className="font-bold text-[var(--text-primary)] truncate text-xs flex items-center gap-1.5">
                             <span>{t(r.labelKey)}</span>
-                            {isActive && (
-                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                            )}
                           </div>
                           <div className="text-[11px] text-[var(--text-secondary)] truncate">
                             {r.sublabel}

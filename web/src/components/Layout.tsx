@@ -216,7 +216,6 @@ export const Layout: React.FC = () => {
             {user.isAuthenticated && user.role !== 'viewer' ? (
               <div className="flex items-center gap-1.5">
                 <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[var(--surface-alt)] border border-[var(--border-primary)] text-[var(--text-secondary)] flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
                   <span>
                     {t('label.active_role')}:{' '}
                     <strong className={user.role === 'mospi' ? 'text-amber-600 dark:text-amber-400' : 'text-[var(--text-primary)]'}>
@@ -246,7 +245,6 @@ export const Layout: React.FC = () => {
             ) : (
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5 shadow-2xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
                   <span>Active Profile: <strong>User</strong></span>
                 </span>
                 <Link
