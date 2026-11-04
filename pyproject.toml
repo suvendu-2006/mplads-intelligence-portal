@@ -8,6 +8,8 @@ requires-python = ">=3.12,<3.13"
 include = ["mplads_fraud_detection*", "webapi*"]
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [".*", "archive", "quarantine", "node_modules", "web", ".venv"]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')"
 ]

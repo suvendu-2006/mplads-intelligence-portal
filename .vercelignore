@@ -27,6 +27,7 @@ data/external
 artifacts
 backups
 quarantine
+archive
 tests
 logs
 docs

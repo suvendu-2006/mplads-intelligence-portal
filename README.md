@@ -1,4 +1,11 @@
-# SATARK — MPLADS National Forensic Intelligence & Surveillance Platform
+<div align="center">
+  <img src="web/public/satark-emblem.svg" alt="SATARK Sovereign Emblem" width="120" height="120" />
+  <h1>SATARK &bull; MPLADS</h1>
+  <p><strong>National Forensic Intelligence, Sovereign Surveillance &amp; Decision-Intelligence Platform</strong></p>
+  <p><em>Autonomous Multi-Tiered Anomaly Detection (D1&ndash;D15) &bull; Real-Time Fund Reconciliation &bull; Public Integrity Command Center</em></p>
+</div>
+
+<br />
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)

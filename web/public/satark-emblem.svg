@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="shieldNavyLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="shieldNavyRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="beveledBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Beveled Shield Shadow/Backing -->
+  <path d="M 60 7 L 99 17 C 99 56 89 90 60 114 C 31 90 21 56 21 17 Z" fill="#0A0F1D" />
+
+  <!-- Outer Dual Micro-Beveled Rim -->
+  <path d="M 60 8 L 98 18 C 98 55 88 88 60 112 C 32 88 22 55 22 18 Z" fill="none" stroke="url(#beveledBorder)" stroke-width="2.2" stroke-linejoin="round" />
+  
+  <!-- Faceted Sovereign Shield Bodies -->
+  <!-- Left Facet (Darker Navy / Slate) -->
+  <path d="M 60 14 L 27 23 C 27 54 36 84 60 105 Z" fill="url(#shieldNavyLeft)" />
+  <!-- Right Facet (Deep Sovereign Blue) -->
+  <path d="M 60 14 L 93 23 C 93 54 84 84 60 105 Z" fill="url(#shieldNavyRight)" />
+
+  <!-- Inner Micro-Beveled Emerald Inset Rim -->
+  <path d="M 60 14 L 93 23 C 93 54 84 84 60 105 C 36 84 27 54 27 23 Z" fill="none" stroke="#10B981" stroke-width="0.8" opacity="0.6" stroke-linejoin="round" />
+
+  <!-- Center Facet Spine Seam -->
+  <line x1="60" y1="14" x2="60" y2="105" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.85" />
+
+  <!-- 15-Node Forensic Surveillance Lattice (D1-D15 Anomaly Detection Network) -->
+  <g id="forensic-lattice">
+    <line x1="60.0" y1="26.5" x2="71.19" y2="28.88" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="60.0" y1="26.5" x2="83.82" y2="67.75" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="71.19" y1="28.88" x2="80.44" y2="35.6" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="71.19" y1="28.88" x2="76.16" y2="76.25" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="80.44" y1="35.6" x2="86.15" y2="45.5" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="80.44" y1="35.6" x2="65.72" y2="80.9" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="86.15" y1="45.5" x2="87.35" y2="56.87" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="86.15" y1="45.5" x2="54.28" y2="80.9" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="87.35" y1="56.87" x2="83.82" y2="67.75" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="87.35" y1="56.87" x2="43.84" y2="76.25" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="83.82" y1="67.75" x2="76.16" y2="76.25" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="83.82" y1="67.75" x2="36.18" y2="67.75" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="76.16" y1="76.25" x2="65.72" y2="80.9" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="76.16" y1="76.25" x2="32.65" y2="56.87" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="65.72" y1="80.9" x2="54.28" y2="80.9" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="65.72" y1="80.9" x2="33.85" y2="45.5" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="54.28" y1="80.9" x2="43.84" y2="76.25" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="54.28" y1="80.9" x2="39.56" y2="35.6" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="43.84" y1="76.25" x2="36.18" y2="67.75" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="43.84" y1="76.25" x2="48.81" y2="28.88" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="36.18" y1="67.75" x2="32.65" y2="56.87" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="36.18" y1="67.75" x2="60.0" y2="26.5" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="32.65" y1="56.87" x2="33.85" y2="45.5" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="32.65" y1="56.87" x2="71.19" y2="28.88" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="33.85" y1="45.5" x2="39.56" y2="35.6" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="33.85" y1="45.5" x2="80.44" y2="35.6" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="39.56" y1="35.6" x2="48.81" y2="28.88" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="39.56" y1="35.6" x2="86.15" y2="45.5" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+    <line x1="48.81" y1="28.88" x2="60.0" y2="26.5" stroke="#10B981" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.65" />
+    <line x1="48.81" y1="28.88" x2="87.35" y2="56.87" stroke="#64748B" stroke-width="0.4" opacity="0.35" />
+  </g>
+
+  <!-- 24-Spoke Sovereign Ashoka Chakra Geometry radiating outward -->
+  <g id="ashoka-chakra">
+    <!-- Outer concentric calibration ring -->
+    <circle cx="60" cy="54" r="20" fill="none" stroke="url(#goldGrad)" stroke-width="1.4" opacity="0.9" />
+    <!-- Secondary dashed radar ring -->
+    <circle cx="60" cy="54" r="14" fill="none" stroke="#94A3B8" stroke-width="0.7" stroke-dasharray="2,2" opacity="0.5" />
+    <!-- 24 Radiating Spokes -->
+    <line x1="66.0" y1="54.0" x2="79.5" y2="54.0" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="65.8" y1="55.55" x2="78.84" y2="59.05" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="65.2" y1="57.0" x2="76.89" y2="63.75" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="64.24" y1="58.24" x2="73.79" y2="67.79" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="63.0" y1="59.2" x2="69.75" y2="70.89" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="61.55" y1="59.8" x2="65.05" y2="72.84" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="60.0" y1="60.0" x2="60.0" y2="73.5" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="58.45" y1="59.8" x2="54.95" y2="72.84" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="57.0" y1="59.2" x2="50.25" y2="70.89" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="55.76" y1="58.24" x2="46.21" y2="67.79" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="54.8" y1="57.0" x2="43.11" y2="63.75" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="54.2" y1="55.55" x2="41.16" y2="59.05" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="54.0" y1="54.0" x2="40.5" y2="54.0" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="54.2" y1="52.45" x2="41.16" y2="48.95" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="54.8" y1="51.0" x2="43.11" y2="44.25" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="55.76" y1="49.76" x2="46.21" y2="40.21" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="57.0" y1="48.8" x2="50.25" y2="37.11" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="58.45" y1="48.2" x2="54.95" y2="35.16" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="60.0" y1="48.0" x2="60.0" y2="34.5" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="61.55" y1="48.2" x2="65.05" y2="35.16" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="63.0" y1="48.8" x2="69.75" y2="37.11" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="64.24" y1="49.76" x2="73.79" y2="40.21" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="65.2" y1="51.0" x2="76.89" y2="44.25" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <line x1="65.8" y1="52.45" x2="78.84" y2="48.95" stroke="url(#goldGrad)" stroke-width="0.9" opacity="0.75" />
+    <!-- Hub circle ring -->
+    <circle cx="60" cy="54" r="6" fill="#0F172A" stroke="url(#goldGrad)" stroke-width="1.2" />
+  </g>
+
+  <!-- D1-D15 Lattice Emerald Micro-Nodes -->
+  <g id="forensic-nodes" filter="url(#glow)">
+    <circle cx="60.0" cy="26.5" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="60.0" cy="26.5" r="0.7" fill="#FFFFFF" />
+    <circle cx="71.19" cy="28.88" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="71.19" cy="28.88" r="0.7" fill="#FFFFFF" />
+    <circle cx="80.44" cy="35.6" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="80.44" cy="35.6" r="0.7" fill="#FFFFFF" />
+    <circle cx="86.15" cy="45.5" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="86.15" cy="45.5" r="0.7" fill="#FFFFFF" />
+    <circle cx="87.35" cy="56.87" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="87.35" cy="56.87" r="0.7" fill="#FFFFFF" />
+    <circle cx="83.82" cy="67.75" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="83.82" cy="67.75" r="0.7" fill="#FFFFFF" />
+    <circle cx="76.16" cy="76.25" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="76.16" cy="76.25" r="0.7" fill="#FFFFFF" />
+    <circle cx="65.72" cy="80.9" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="65.72" cy="80.9" r="0.7" fill="#FFFFFF" />
+    <circle cx="54.28" cy="80.9" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="54.28" cy="80.9" r="0.7" fill="#FFFFFF" />
+    <circle cx="43.84" cy="76.25" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="43.84" cy="76.25" r="0.7" fill="#FFFFFF" />
+    <circle cx="36.18" cy="67.75" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="36.18" cy="67.75" r="0.7" fill="#FFFFFF" />
+    <circle cx="32.65" cy="56.87" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="32.65" cy="56.87" r="0.7" fill="#FFFFFF" />
+    <circle cx="33.85" cy="45.5" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="33.85" cy="45.5" r="0.7" fill="#FFFFFF" />
+    <circle cx="39.56" cy="35.6" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="39.56" cy="35.6" r="0.7" fill="#FFFFFF" />
+    <circle cx="48.81" cy="28.88" r="2.0" fill="#10B981" stroke="#ECFDF5" stroke-width="0.8" />
+    <circle cx="48.81" cy="28.88" r="0.7" fill="#FFFFFF" />
+  </g>
+
+  <!-- Central Vigilance Motif (All-Seeing Sovereign Audit Eye) -->
+  <g id="vigilance-motif">
+    <!-- Outer Eye Contours -->
+    <path d="M 47 54 Q 60 43 73 54 Q 60 65 47 54 Z" fill="#0A0F1D" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linejoin="round" />
+    <!-- Forensic Emerald Iris -->
+    <circle cx="60" cy="54" r="4.5" fill="url(#emeraldGrad)" stroke="#ECFDF5" stroke-width="0.6" />
+    <!-- Core Vigilance Pupil & Glint -->
+    <circle cx="60" cy="54" r="2.0" fill="#0F172A" />
+    <circle cx="59" cy="53" r="0.75" fill="#FFFFFF" />
+  </g>
+
+  <!-- Bottom Apex Forensic Accent -->
+  <polygon points="60,103 62.5,98 60,99 57.5,98" fill="url(#goldGrad)" />
+</svg>

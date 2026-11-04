@@ -105,6 +105,7 @@ def clear_backend_caches():
         map_router._pcs_geojson_cache = None
         cleared.append("pcs_geojson")
     if hasattr(national, "_cached_analytics"):
+        national._cached_analytics = None
         cleared.append("national_analytics")
 
     gc.collect()

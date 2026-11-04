@@ -31,7 +31,7 @@ setup_logging(log_level=settings.LOG_LEVEL, log_file="logs/mplads_app.log")
 
 st.set_page_config(
     page_title="MPLADS Forensic Fraud Detection System",
-    page_icon="🛡️",
+    page_icon="web/public/satark-emblem.svg",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -197,7 +197,10 @@ def check_authentication():
 
     col_a, col_b, col_c = st.columns([1, 2, 1])
     with col_b:
-        st.markdown("<div style='text-align: center; margin-top: 3rem;'><h2>🛡️ MPLADS Audit Triage Hub</h2><p style='color: #64748B;'>Restricted Forensic Access & Audit Verification Platform</p></div>", unsafe_allow_html=True)
+        col_logo_a, col_logo_b, col_logo_c = st.columns([1, 1, 1])
+        with col_logo_b:
+            st.image("web/public/satark-emblem.svg", width=72)
+        st.markdown("<div style='text-align: center; margin-top: 0.5rem;'><h2>SATARK • MPLADS Audit Triage Hub</h2><p style='color: #64748B;'>Restricted Forensic Access & Audit Verification Platform</p></div>", unsafe_allow_html=True)
         with st.form("login_form"):
             user_input = st.text_input("Username", key="login_username")
             pass_input = st.text_input("Password", type="password", key="login_password")
@@ -236,7 +239,7 @@ if not check_authentication():
 
 
 # Sidebar Controls
-st.sidebar.image("https://img.icons8.com/fluency/96/shield.png", width=64)
+st.sidebar.image("web/public/satark-emblem.svg", width=64)
 st.sidebar.title("MPLADS Forensic Hub")
 st.sidebar.markdown(f"👤 **{st.session_state.get('username', 'User')}** (`{st.session_state.get('role', 'Viewer')}`)")
 if st.sidebar.button("🚪 Logout", use_container_width=True):

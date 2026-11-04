@@ -54,6 +54,7 @@ artifacts/*.pkl
 artifacts/*.h5
 artifacts/*.joblib
 quarantine/
+archive/
 
 # Python build artifacts
 __pycache__/

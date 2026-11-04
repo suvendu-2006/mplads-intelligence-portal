@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { SwitchRoleDropdown } from './SwitchRoleDropdown'
 import { LanguageSelector } from './LanguageSelector'
+import { SatarkLogo } from './SatarkLogo'
 import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { Search, Moon, Sun, X, Building2, Users, FileText, ArrowRight, Landmark } from 'lucide-react'
 
@@ -356,9 +357,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-6">
         {/* Brand */}
         <Link to="/" className="flex items-center shrink-0 group">
-          <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[var(--text-primary)] hover:text-[var(--brand-primary)] transition">
-            SATARK&bull;MPLADS
-          </span>
+          <SatarkLogo size="md" showText={true} />
         </Link>
 
         {/* Global Search Bar with Live Suggestions Dropdown (Responsive: visible on all screen sizes) */}

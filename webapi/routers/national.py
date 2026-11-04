@@ -25,53 +25,53 @@ def get_national_overview():
     return EnvelopeResponse(data=overview, meta=None, warnings=[])
 
 _cached_analytics = {
-    "totalExpenditure": 39642944289.14,
+    "totalExpenditure": 44511217920.14,
     "totalTransactions": 29000,
     "yearlyTrends": [
-        {"year": 2024, "amount": 1924798603.23, "count": 3749, "label": "2024"},
-        {"year": 2025, "amount": 18532704106.67, "count": 46729, "label": "2025"},
-        {"year": 2026, "amount": 19185441579.24, "count": 49522, "label": "2026"}
+        {"year": 2024, "amount": 2161169701.62, "count": 3749, "label": "2024"},
+        {"year": 2025, "amount": 20808576303.64, "count": 46729, "label": "2025"},
+        {"year": 2026, "amount": 21541471914.88, "count": 49522, "label": "2026"}
     ],
     "topSectors": [
         {
             "fullName": "Construction of roads, link roads, pathways or any other road with or without drainage system",
             "name": "Roads, Pathways & Drainage",
-            "amount": 12925182307.0,
+            "amount": 14512367006.13,
             "count": 10439,
             "sharePct": 32.6
         },
         {
             "fullName": "Lighting of public spaces",
             "name": "Public Space Lighting",
-            "amount": 4728548937.0,
+            "amount": 5309207639.69,
             "count": 2995,
             "sharePct": 11.9
         },
         {
             "fullName": "Construction of community centers and community halls",
             "name": "Community Centers & Halls",
-            "amount": 3121070178.63,
+            "amount": 3504330683.03,
             "count": 2301,
             "sharePct": 7.9
         },
         {
             "fullName": "Street lights",
             "name": "Solar & Municipal Street Lights",
-            "amount": 1696747371.76,
+            "amount": 1905104773.08,
             "count": 1437,
             "sharePct": 4.3
         },
         {
             "fullName": "Construction of rooms and halls in school and colleges",
             "name": "School & College Classrooms",
-            "amount": 1510845528.47,
+            "amount": 1696373634.34,
             "count": 1051,
             "sharePct": 3.8
         },
         {
             "fullName": "All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)",
             "name": "Other Socio-Economic Sectors",
-            "amount": 15660549966.28,
+            "amount": 17583834183.87,
             "count": 10777,
             "sharePct": 39.5
         }
@@ -81,14 +81,20 @@ _cached_analytics = {
 @router.get("/national/analytics")
 def get_national_analytics():
     global _cached_analytics
-    if _cached_analytics is not None:
-        return EnvelopeResponse(data=_cached_analytics, meta=None, warnings=[])
+    from webapi.data_service import load_national_csv
+    nat = load_national_csv()
+    official_exp = float(nat.get("totalExpenditure", 44511217920.14))
 
-    from webapi.data_service import load_expenditures_csv, load_mplads_trends_csv, load_national_csv
+    if _cached_analytics is not None:
+        cached_exp = _cached_analytics.get("totalExpenditure")
+        if cached_exp is not None and abs(cached_exp - official_exp) < 0.01:
+            return EnvelopeResponse(data=_cached_analytics, meta=None, warnings=[])
+        # Invalidate cache if official expenditure has drifted or changed
+        _cached_analytics = None
+
+    from webapi.data_service import load_expenditures_csv, load_mplads_trends_csv
     df = load_expenditures_csv()
     df_trends = load_mplads_trends_csv()
-    nat = load_national_csv()
-    official_exp = float(nat.get("totalExpenditure", 39642944289.14))
 
     if not df_trends.empty:
         raw_trends = [
