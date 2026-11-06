@@ -67,8 +67,11 @@ def get_absolute_db_path(url: str) -> str:
     return url
 
 
-from dotenv import load_dotenv
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Application Environment: development | staging | production
 APP_ENV = os.environ.get("APP_ENV", "development")
