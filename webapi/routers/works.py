@@ -59,11 +59,27 @@ def _execute_work_update(work_id: int, payload: WorkUpdatePayload, user: dict, d
 
     # Re-audit within transaction
     audit_result = auditor.audit_work(db, work, commit=False)
+
+    work_snapshot = {
+        "work_id": work.work_id,
+        "cost": float(work.cost or 0.0),
+        "status": work.status,
+        "work_description": work.work_description,
+        "district": work.district,
+        "state": work.state,
+        "category": work.category,
+        "total_paid": float(work.total_paid or 0.0),
+        "last_audited_at": work.last_audited_at.isoformat() if work.last_audited_at else None,
+        "audit_status": work.audit_status,
+        "lifecycle_audit_version": work.lifecycle_audit_version
+    }
+
     try:
-        db.commit()
+        import os
+        if not os.getenv("VERCEL"):
+            db.commit()
     except Exception as e:
         db.rollback()
-        import os
         if os.getenv("VERCEL"):
             import logging
             logging.getLogger(__name__).warning("Database commit skipped in read-only serverless environment: %s", e)
@@ -74,19 +90,7 @@ def _execute_work_update(work_id: int, payload: WorkUpdatePayload, user: dict, d
     invalidate_all_aggregates()
 
     return {
-        "work": {
-            "work_id": work.work_id,
-            "cost": float(work.cost or 0.0),
-            "status": work.status,
-            "work_description": work.work_description,
-            "district": work.district,
-            "state": work.state,
-            "category": work.category,
-            "total_paid": float(work.total_paid or 0.0),
-            "last_audited_at": work.last_audited_at.isoformat() if work.last_audited_at else None,
-            "audit_status": work.audit_status,
-            "lifecycle_audit_version": work.lifecycle_audit_version
-        },
+        "work": work_snapshot,
         "audit": audit_result
     }
 

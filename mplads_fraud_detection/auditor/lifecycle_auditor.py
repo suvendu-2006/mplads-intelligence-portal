@@ -162,6 +162,8 @@ class WorkLifecycleAuditor:
         if not work:
             raise ValueError(f"Work {work_or_id} not found")
 
+        work_id = work.work_id
+        is_serverless = bool(os.getenv("VERCEL"))
         stream_run_id = get_or_create_realtime_run(session)
         self.current_stream_run_id = stream_run_id
         evaluations = {}
@@ -169,26 +171,31 @@ class WorkLifecycleAuditor:
 
         for det_name, eval_fn in self.get_evaluators().items():
             try:
-                with session.begin_nested():
+                if is_serverless:
                     evaluations[det_name] = eval_fn(session, work)
+                else:
+                    with session.begin_nested():
+                        evaluations[det_name] = eval_fn(session, work)
             except Exception as err:
-                logger.error(f"Detector {det_name} failed on work {work.work_id}: {err}", exc_info=True)
+                logger.error(f"Detector {det_name} failed on work {work_id}: {err}", exc_info=True)
                 failed_detectors.append(det_name)
                 evaluations[det_name] = None
 
-        sync_summary = self._sync_anomalies(session, work.work_id, stream_run_id, evaluations)
+        sync_summary = self._sync_anomalies(session, work_id, stream_run_id, evaluations)
 
-        work.last_audited_at = datetime.now(timezone.utc)
+        last_audited_at = datetime.now(timezone.utc)
+        audit_status = "PARTIALLY_AUDITED" if failed_detectors else "AUDITED"
+        work.last_audited_at = last_audited_at
         work.lifecycle_audit_version = "v3.0"
-        work.audit_status = "PARTIALLY_AUDITED" if failed_detectors else "AUDITED"
+        work.audit_status = audit_status
 
-        if commit:
+        if commit and not is_serverless:
             session.commit()
 
         return {
-            "work_id": work.work_id,
-            "audit_status": work.audit_status,
-            "last_audited_at": work.last_audited_at.isoformat(),
+            "work_id": work_id,
+            "audit_status": audit_status,
+            "last_audited_at": last_audited_at.isoformat(),
             "active_anomalies": sync_summary["active_count"],
             "resolved_anomalies": sync_summary["resolved_count"],
             "newly_flagged": sync_summary["new_count"],
@@ -320,7 +327,11 @@ class WorkLifecycleAuditor:
                         resolved_count += 1
                         details.append({"detector": det_type, "status": "SOFT_RESOLVED", "reason": other_active.resolution_reason})
 
-        session.flush()
+        try:
+            if not os.getenv("VERCEL"):
+                session.flush()
+        except Exception as e:
+            logger.warning("Session flush skipped in read-only environment: %s", e)
         return {
             "active_count": active_count,
             "resolved_count": resolved_count,
