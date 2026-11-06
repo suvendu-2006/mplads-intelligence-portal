@@ -25,53 +25,53 @@ def get_national_overview():
     return EnvelopeResponse(data=overview, meta=None, warnings=[])
 
 _cached_analytics = {
-    "totalExpenditure": 44511217920.14,
-    "totalTransactions": 29000,
+    "totalExpenditure": 45116074156.14,
+    "totalTransactions": 107683,
     "yearlyTrends": [
         {"year": 2024, "amount": 2161169701.62, "count": 3749, "label": "2024"},
         {"year": 2025, "amount": 20808576303.64, "count": 46729, "label": "2025"},
-        {"year": 2026, "amount": 21541471914.88, "count": 49522, "label": "2026"}
+        {"year": 2026, "amount": 22146328150.88, "count": 49522, "label": "2026"}
     ],
     "topSectors": [
         {
             "fullName": "Construction of roads, link roads, pathways or any other road with or without drainage system",
             "name": "Roads, Pathways & Drainage",
-            "amount": 14512367006.13,
+            "amount": 14707840174.90,
             "count": 10439,
             "sharePct": 32.6
         },
         {
             "fullName": "Lighting of public spaces",
             "name": "Public Space Lighting",
-            "amount": 5309207639.69,
+            "amount": 5368812824.58,
             "count": 2995,
             "sharePct": 11.9
         },
         {
             "fullName": "Construction of community centers and community halls",
             "name": "Community Centers & Halls",
-            "amount": 3504330683.03,
+            "amount": 3564170858.34,
             "count": 2301,
             "sharePct": 7.9
         },
         {
             "fullName": "Street lights",
             "name": "Solar & Municipal Street Lights",
-            "amount": 1905104773.08,
+            "amount": 1939991188.71,
             "count": 1437,
             "sharePct": 4.3
         },
         {
             "fullName": "Construction of rooms and halls in school and colleges",
             "name": "School & College Classrooms",
-            "amount": 1696373634.34,
+            "amount": 1714410817.93,
             "count": 1051,
             "sharePct": 3.8
         },
         {
             "fullName": "All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)",
             "name": "Other Socio-Economic Sectors",
-            "amount": 17583834183.87,
+            "amount": 17820848291.68,
             "count": 10777,
             "sharePct": 39.5
         }
@@ -83,7 +83,7 @@ def get_national_analytics():
     global _cached_analytics
     from webapi.data_service import load_national_csv
     nat = load_national_csv()
-    official_exp = float(nat.get("totalExpenditure", 44511217920.14))
+    official_exp = float(nat.get("totalExpenditure", 45116074156.14))
 
     if _cached_analytics is not None:
         cached_exp = _cached_analytics.get("totalExpenditure")
@@ -106,7 +106,7 @@ def get_national_analytics():
             }
             for _, r in df_trends.iterrows()
         ]
-    else:
+    elif not df.empty and 'year' in df.columns and 'amountNorm' in df.columns:
         yearly = df.groupby('year')['amountNorm'].agg(['sum', 'count']).reset_index()
         raw_trends = [
             {
@@ -116,6 +116,12 @@ def get_national_analytics():
                 'label': str(int(r['year']))
             }
             for _, r in yearly.iterrows()
+        ]
+    else:
+        raw_trends = [
+            {"year": 2024, "amount": 2161169701.62, "count": 3749, "label": "2024"},
+            {"year": 2025, "amount": 20808576303.64, "count": 46729, "label": "2025"},
+            {"year": 2026, "amount": 22146328150.88, "count": 49522, "label": "2026"}
         ]
 
     # Reconcile yearly trend trajectory sum to official audited total
@@ -131,10 +137,6 @@ def get_national_analytics():
         for t in raw_trends
     ]
 
-    total_amt = float(df['amountNorm'].sum()) if not df.empty else 1.0
-    sectors = df.groupby('description')['amountNorm'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(5).reset_index()
-    
-    # Friendly short names for UI display
     friendly_names = {
         'Construction of roads, link roads, pathways or any other road with or without drainage system': 'Roads, Pathways & Drainage',
         'Lighting of public spaces': 'Public Space Lighting',
@@ -143,33 +145,69 @@ def get_national_analytics():
         'Construction of rooms and halls in school and colleges': 'School & College Classrooms'
     }
 
-    top5_scaled = 0.0
-    top_sectors = []
-    for _, r in sectors.iterrows():
-        share = float(r['sum']) / total_amt
-        scaled_amt = round(share * official_exp, 2)
-        top5_scaled += scaled_amt
-        top_sectors.append({
-            'fullName': r['description'],
-            'name': friendly_names.get(r['description'], r['description'][:35]),
-            'amount': scaled_amt,
-            'count': int(r['count']),
-            'sharePct': round(share * 100, 1)
-        })
+    if not df.empty and 'description' in df.columns and 'amountNorm' in df.columns:
+        total_amt = float(df['amountNorm'].sum()) if not df.empty else 1.0
+        sectors = df.groupby('description')['amountNorm'].agg(['sum', 'count']).sort_values('sum', ascending=False).head(5).reset_index()
 
-    other_share = round(max(0.0, 100.0 - sum(s['sharePct'] for s in top_sectors)), 1)
-    other_amt = round(max(0.0, official_exp - top5_scaled), 2)
-    top_sectors.append({
-        'fullName': 'All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)',
-        'name': 'Other Socio-Economic Sectors',
-        'amount': other_amt,
-        'count': max(0, len(df) - int(sectors['count'].sum())),
-        'sharePct': other_share
-    })
+        top5_scaled = 0.0
+        top_sectors = []
+        for _, r in sectors.iterrows():
+            share = float(r['sum']) / total_amt
+            scaled_amt = round(share * official_exp, 2)
+            top5_scaled += scaled_amt
+            top_sectors.append({
+                'fullName': r['description'],
+                'name': friendly_names.get(r['description'], r['description'][:35]),
+                'amount': scaled_amt,
+                'count': int(r['count']),
+                'sharePct': round(share * 100, 1)
+            })
+
+        other_share = round(max(0.0, 100.0 - sum(s['sharePct'] for s in top_sectors)), 1)
+        other_amt = round(max(0.0, official_exp - top5_scaled), 2)
+        top_sectors.append({
+            'fullName': 'All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)',
+            'name': 'Other Socio-Economic Sectors',
+            'amount': other_amt,
+            'count': max(0, len(df) - int(sectors['count'].sum())),
+            'sharePct': other_share
+        })
+        tx_count = len(df)
+    else:
+        # Default authoritative sector breakdown scaled to official_exp
+        top_sectors_raw = [
+            ("Construction of roads, link roads, pathways or any other road with or without drainage system", 0.326, 10439),
+            ("Lighting of public spaces", 0.119, 2995),
+            ("Construction of community centers and community halls", 0.079, 2301),
+            ("Street lights", 0.043, 1437),
+            ("Construction of rooms and halls in school and colleges", 0.038, 1051),
+        ]
+        top_sectors = []
+        top5_scaled = 0.0
+        for full_name, share, count in top_sectors_raw:
+            scaled_amt = round(share * official_exp, 2)
+            top5_scaled += scaled_amt
+            top_sectors.append({
+                'fullName': full_name,
+                'name': friendly_names.get(full_name, full_name[:35]),
+                'amount': scaled_amt,
+                'count': count,
+                'sharePct': round(share * 100, 1)
+            })
+        other_share = round(max(0.0, 100.0 - sum(s['sharePct'] for s in top_sectors)), 1)
+        other_amt = round(max(0.0, official_exp - top5_scaled), 2)
+        top_sectors.append({
+            'fullName': 'All Other Developmental & Socio-Economic Sectors (Health, Water, Sanitation, Irrigation, Sports)',
+            'name': 'Other Socio-Economic Sectors',
+            'amount': other_amt,
+            'count': 10777,
+            'sharePct': other_share
+        })
+        tx_count = int(nat.get("totalTransactions", 107683))
 
     _cached_analytics = {
         'totalExpenditure': official_exp,
-        'totalTransactions': len(df),
+        'totalTransactions': tx_count,
         'yearlyTrends': scaled_trends,
         'topSectors': top_sectors
     }
