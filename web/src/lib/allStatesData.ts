@@ -369,12 +369,12 @@ export const ALL_36_STATES_OVERVIEW: StateOverviewItem[] = [
     "isUT": false,
     "mps": 15,
     "allocatedCr": 211.7,
-    "expenditureCr": 53.3,
+    "expenditureCr": 53.4,
     "expenditureRate": 25.2,
     "completedWorks": 522,
     "completionRate": 21.5,
     "totalAllocated": 2117454264.0,
-    "totalExpenditure": 533449521.0,
+    "totalExpenditure": 534099112.0,
     "rank": 28
   },
   {

@@ -1,7 +1,7 @@
 export const DEFAULT_NATIONAL = {
   "totalAllocated": 117836345792.64,
-  "totalExpenditure": 45115424565.14,
-  "utilizationPercentage": 38.286510,
+  "totalExpenditure": 45116074156.14,
+  "utilizationPercentage": 38.287061,
   "totalMPs": 788,
   "totalWorksCompleted": 49139,
   "totalWorksRecommended": 143770,
