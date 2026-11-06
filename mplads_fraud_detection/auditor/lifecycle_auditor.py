@@ -10,13 +10,22 @@ import json
 import re
 from datetime import datetime, timezone, date, timedelta
 from typing import Dict, List, Any, Optional, Union, Tuple
-import joblib
 import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 from sqlalchemy.orm import Session
 from sqlalchemy import func
+
+try:
+    import joblib
+except ImportError:
+    joblib = None
+
+try:
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+except ImportError:
+    TfidfVectorizer = None
+    cosine_similarity = None
 
 from mplads_fraud_detection.foundation.schema import Work, Anomaly
 from mplads_fraud_detection.foundation.db import get_or_create_realtime_run
@@ -69,7 +78,7 @@ class WorkLifecycleAuditor:
         med_path = medians_path or D1_MEDIANS_PATH
 
         # 1. Isolation Forest Model
-        if m_path and os.path.exists(m_path):
+        if joblib is not None and m_path and os.path.exists(m_path):
             try:
                 self.d1_model = joblib.load(m_path)
                 logger.info(f"Loaded D1 Isolation Forest model from {m_path}")
@@ -77,7 +86,10 @@ class WorkLifecycleAuditor:
                 logger.warning(f"Failed to load D1 model from {m_path}: {e}. Entering cold-start fallback.")
                 self.d1_model = None
         else:
-            logger.warning(f"D1 model artifact not found at {m_path}. Entering cold-start fallback.")
+            if joblib is None:
+                logger.info("joblib not installed in runtime environment. Entering cold-start fallback.")
+            else:
+                logger.warning(f"D1 model artifact not found at {m_path}. Entering cold-start fallback.")
             self.d1_model = None
 
         # 2. Precomputed Medians
@@ -440,14 +452,32 @@ class WorkLifecycleAuditor:
         cand_descs = [c.work_description.strip() for c in valid_candidates]
         all_texts = cand_descs + [desc]
 
-        tfidf = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), max_features=384)
-        tfidf_mat = tfidf.fit_transform(all_texts)
-        target_vec = tfidf_mat[-1:]
-        cand_vecs = tfidf_mat[:-1]
-        sims = cosine_similarity(target_vec, cand_vecs)[0]
+        if TfidfVectorizer is not None and cosine_similarity is not None:
+            tfidf = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), max_features=384)
+            tfidf_mat = tfidf.fit_transform(all_texts)
+            target_vec = tfidf_mat[-1:]
+            cand_vecs = tfidf_mat[:-1]
+            sims = cosine_similarity(target_vec, cand_vecs)[0]
+            max_idx = int(np.argmax(sims))
+            max_sim = float(sims[max_idx])
+        else:
+            # High-performance pure-Python character 3-gram Jaccard fallback
+            def get_ngrams(s: str, n: int = 3) -> set:
+                cleaned = re.sub(r"\s+", " ", s.lower().strip())
+                return set(cleaned[i:i+n] for i in range(max(1, len(cleaned) - n + 1)))
 
-        max_idx = int(np.argmax(sims))
-        max_sim = float(sims[max_idx])
+            target_ng = get_ngrams(desc)
+            best_sim = 0.0
+            best_i = 0
+            for i, cand_t in enumerate(cand_descs):
+                cand_ng = get_ngrams(cand_t)
+                union_len = len(target_ng | cand_ng)
+                sim = (len(target_ng & cand_ng) / union_len) if union_len > 0 else 0.0
+                if sim > best_sim:
+                    best_sim = sim
+                    best_i = i
+            max_sim = best_sim
+            max_idx = best_i
 
         if max_sim >= 0.85:
             best_cand = valid_candidates[max_idx]
