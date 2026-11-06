@@ -12,8 +12,12 @@ DATA_DIR = BASE_DIR / "data"
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 MODELS_DIR = ARTIFACTS_DIR / "models"
 
-os.makedirs(ARTIFACTS_DIR, exist_ok=True)
-os.makedirs(MODELS_DIR, exist_ok=True)
+if not os.getenv("VERCEL"):
+    try:
+        os.makedirs(ARTIFACTS_DIR, exist_ok=True)
+        os.makedirs(MODELS_DIR, exist_ok=True)
+    except OSError:
+        pass
 
 # Real-Time Lifecycle Model & Median Artifacts
 D1_MODEL_PATH = MODELS_DIR / "detector_01_isolation_forest.joblib"
