@@ -4,10 +4,14 @@ Provides connection pooling, SQLite foreign key enforcement, and atomic snapshot
 """
 
 from contextlib import contextmanager
+from datetime import datetime, timezone
+import uuid
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, Session
 from mplads_fraud_detection.config import DATABASE_URL
 from mplads_fraud_detection.foundation.schema import Base, PipelineRun, Anomaly, ReviewQueueItem, EntityRisk
+
+REALTIME_RUN_KEY = "realtime_lifecycle_stream"
 
 # Create Engine with connection arguments
 connect_args = {}
@@ -84,11 +88,34 @@ def get_db():
         session.close()
 
 
+def get_or_create_realtime_run(session: Session) -> str:
+    """
+    Retrieves or atomically creates the permanent singleton PipelineRun record
+    for real-time lifecycle re-auditing events.
+    """
+    run = session.query(PipelineRun).filter(PipelineRun.run_key == REALTIME_RUN_KEY).first()
+    if run:
+        return run.run_id
+    new_id = str(uuid.uuid4())
+    run = PipelineRun(
+        run_id=new_id,
+        run_key=REALTIME_RUN_KEY,
+        started_at=datetime.now(timezone.utc),
+        status="ACTIVE"
+    )
+    session.add(run)
+    session.flush()
+    return new_id
+
+
 def purge_prior_snapshot_runs(session: Session, run_key: str, current_run_id: str):
     """
     Purge previous runs sharing the same run_key to guarantee strict idempotency.
     Deletes related anomalies, review queue items, and entity risks before re-running.
     """
+    if run_key == REALTIME_RUN_KEY:
+        return
+
     stale_runs = session.query(PipelineRun).filter(
         PipelineRun.run_key == run_key,
         PipelineRun.run_id != current_run_id

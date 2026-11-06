@@ -39,9 +39,9 @@ def compute_all_states_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
         SELECT 
             LOWER(w.state) AS state_lower,
             COUNT(DISTINCT w.work_id) AS total_works,
-            COUNT(DISTINCT CASE WHEN a.severity >= 0.70 THEN a.work_id END) AS red_works
+            COUNT(DISTINCT CASE WHEN a.severity >= 0.70 AND (a.is_active = 1 OR a.is_active IS TRUE) THEN a.work_id END) AS red_works
         FROM works w
-        LEFT JOIN anomalies a ON w.work_id = a.work_id
+        LEFT JOIN anomalies a ON w.work_id = a.work_id AND (a.is_active = 1 OR a.is_active IS TRUE)
         GROUP BY LOWER(w.state);
     """)
     try:
@@ -101,7 +101,7 @@ def compute_all_districts_tier_counts_for_state(state: str, db: Session) -> Dict
         SELECT a.work_id, MAX(a.severity)
         FROM anomalies a
         JOIN works w ON a.work_id = w.work_id
-        WHERE LOWER(w.state) = :state
+        WHERE LOWER(w.state) = :state AND (a.is_active = 1 OR a.is_active IS TRUE)
         GROUP BY a.work_id
     """)
     try:
@@ -168,7 +168,8 @@ def compute_district_tier_counts(state: str, district: str, db: Session) -> Dict
             Anomaly.work_id,
             func.max(Anomaly.severity).label("max_sev")
         ).filter(
-            Anomaly.work_id.in_(work_ids)
+            Anomaly.work_id.in_(work_ids),
+            Anomaly.is_active == True
         ).group_by(Anomaly.work_id).all()
 
         flagged_work_ids = set()
@@ -214,9 +215,9 @@ def compute_all_mps_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
         SELECT 
             LOWER(w.mp_name) AS mp_lower,
             COUNT(DISTINCT w.work_id) AS total_works,
-            COUNT(DISTINCT CASE WHEN a.severity >= 0.70 THEN a.work_id END) AS red_works
+            COUNT(DISTINCT CASE WHEN a.severity >= 0.70 AND (a.is_active = 1 OR a.is_active IS TRUE) THEN a.work_id END) AS red_works
         FROM works w
-        LEFT JOIN anomalies a ON w.work_id = a.work_id
+        LEFT JOIN anomalies a ON w.work_id = a.work_id AND (a.is_active = 1 OR a.is_active IS TRUE)
         GROUP BY LOWER(w.mp_name);
     """)
     try:

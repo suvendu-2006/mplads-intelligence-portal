@@ -56,6 +56,7 @@ api/mplads_dev.db
 # Caches & Model Artifacts
 *.pkl
 *.joblib
+!artifacts/models/*.joblib
 *.h5
 artifacts/*.pkl
 artifacts/*.log

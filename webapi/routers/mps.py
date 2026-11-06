@@ -338,7 +338,8 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     flag_counts = {}
     if work_ids:
         anom_counts = db.query(Anomaly.work_id, func.count(Anomaly.anomaly_id)).filter(
-            Anomaly.work_id.in_(work_ids)
+            Anomaly.work_id.in_(work_ids),
+            Anomaly.is_active == True
         ).group_by(Anomaly.work_id).all()
         flag_counts = {wid: cnt for wid, cnt in anom_counts}
 
@@ -373,7 +374,8 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     flag_items = []
     try:
         db_flags = db.query(Anomaly, Work).join(Work, Anomaly.work_id == Work.work_id).filter(
-            work_query_filter
+            work_query_filter,
+            Anomaly.is_active == True
         ).order_by(Anomaly.severity.desc()).limit(50).all()
 
         for anom, w in db_flags:
@@ -404,7 +406,10 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
                 explanation=anom.explanation or "",
                 evidence=anom.evidence or {},
                 detected_at=anom.detected_at.isoformat() if anom.detected_at else "",
-                cpwd_comparison=cpwd
+                cpwd_comparison=cpwd,
+                is_active=bool(anom.is_active) if hasattr(anom, "is_active") else True,
+                resolved_at=anom.resolved_at.isoformat() if getattr(anom, "resolved_at", None) else None,
+                resolution_reason=getattr(anom, "resolution_reason", None)
             ))
     except Exception as e:
         import logging
@@ -527,6 +532,9 @@ def recommend_work(
     
     try:
         db.add(new_work)
+        from mplads_fraud_detection.auditor.lifecycle_auditor import WorkLifecycleAuditor
+        auditor = WorkLifecycleAuditor()
+        auditor.audit_work(db, new_work, commit=False)
         db.commit()
     except Exception as e:
         db.rollback()
@@ -535,18 +543,8 @@ def recommend_work(
         logging.getLogger(__name__).warning("Database commit skipped in read-only environment: %s", e)
     
     # Invalidate caches
-    _mp_detail_cache.clear()
-    _mps_cache.clear()
-    try:
-        from webapi.routers.constituencies import _constituency_cache
-        _constituency_cache.clear()
-    except Exception:
-        pass
-    try:
-        from webapi.routers.districts import _districts_cache
-        _districts_cache.clear()
-    except Exception:
-        pass
+    from webapi.cache_manager import invalidate_all_aggregates
+    invalidate_all_aggregates()
     
     ref_id = f"REC-2026-MPLADS-{new_work_id}"
     

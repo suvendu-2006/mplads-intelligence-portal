@@ -110,6 +110,7 @@ class StateDetailData(BaseModel):
     districts: List[DistrictSummaryItem]
 
 class FlagItem(BaseModel):
+    anomaly_id: Optional[int] = None
     work_id: int
     work_description: str
     cost: float
@@ -127,6 +128,9 @@ class FlagItem(BaseModel):
     evidence: Dict[str, Any]
     detected_at: str
     cpwd_comparison: Optional[Dict[str, Any]] = None
+    is_active: bool = True
+    resolved_at: Optional[str] = None
+    resolution_reason: Optional[str] = None
 
     # camelCase convenience aliases for React components
     workDescription: Optional[str] = None
@@ -135,6 +139,9 @@ class FlagItem(BaseModel):
     workId: Optional[int] = None
     mpName: Optional[str] = None
     implementingAgency: Optional[str] = None
+    isActive: Optional[bool] = None
+    resolvedAt: Optional[str] = None
+    resolutionReason: Optional[str] = None
 
     @model_validator(mode="before")
     @classmethod
@@ -148,6 +155,12 @@ class FlagItem(BaseModel):
                 data["sanctionedCost"] = data["cost"]
             if "work_id" in data and not data.get("workId"):
                 data["workId"] = data["work_id"]
+            if "is_active" in data and data.get("isActive") is None:
+                data["isActive"] = data["is_active"]
+            if "resolved_at" in data and not data.get("resolvedAt"):
+                data["resolvedAt"] = data["resolved_at"]
+            if "resolution_reason" in data and not data.get("resolutionReason"):
+                data["resolutionReason"] = data["resolution_reason"]
             if "mp_name" in data and not data.get("mpName"):
                 data["mpName"] = data["mp_name"]
             if "implementing_agency" in data and not data.get("implementingAgency"):

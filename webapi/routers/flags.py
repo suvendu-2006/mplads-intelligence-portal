@@ -23,16 +23,20 @@ def list_all_flags(
     detector: Optional[str] = None,
     agency: Optional[str] = None,
     q: Optional[str] = None,
+    include_resolved: bool = Query(False),
     page: int = Query(1, ge=1),
     page_size: int = Query(50, ge=1, le=200),
     db: Session = Depends(get_db)
 ):
     resolved_detector = resolve_detector_type(detector)
-    cache_key = f"{state}_{district}_{tier}_{resolved_detector}_{agency}_{q}_{page}_{page_size}".lower()
+    cache_key = f"{state}_{district}_{tier}_{resolved_detector}_{agency}_{q}_{include_resolved}_{page}_{page_size}".lower()
     if cache_key in _flags_cache:
         return _flags_cache[cache_key]
 
     query = db.query(Anomaly, Work).join(Work, Anomaly.work_id == Work.work_id)
+
+    if not include_resolved:
+        query = query.filter(Anomaly.is_active == True)
 
     if state:
         query = query.filter(func.lower(Work.state) == state.lower())
@@ -111,7 +115,10 @@ def list_all_flags(
             explanation=anom.explanation or "",
             evidence=anom.evidence or {},
             detected_at=anom.detected_at.isoformat() if anom.detected_at else "",
-            cpwd_comparison=cpwd
+            cpwd_comparison=cpwd,
+            is_active=bool(anom.is_active) if hasattr(anom, "is_active") else True,
+            resolved_at=anom.resolved_at.isoformat() if getattr(anom, "resolved_at", None) else None,
+            resolution_reason=getattr(anom, "resolution_reason", None)
         ))
 
     meta = MetaPagination(
@@ -134,6 +141,7 @@ def export_flags(
     tier: Optional[str] = None,
     detector: Optional[str] = None,
     agency: Optional[str] = None,
+    include_resolved: bool = Query(False),
     db: Session = Depends(get_db)
 ):
     resolved_detector = resolve_detector_type(detector)
@@ -143,5 +151,6 @@ def export_flags(
         district=district,
         tier=tier,
         detector=resolved_detector,
-        agency=agency
+        agency=agency,
+        include_resolved=include_resolved
     )

@@ -15,7 +15,8 @@ def stream_flags_csv(
     district: Optional[str] = None,
     tier: Optional[str] = None,
     detector: Optional[str] = None,
-    agency: Optional[str] = None
+    agency: Optional[str] = None,
+    include_resolved: bool = False
 ) -> StreamingResponse:
     def generate() -> Generator[str, None, None]:
         yield "\ufeff"
@@ -23,7 +24,8 @@ def stream_flags_csv(
         fieldnames = [
             "work_id", "work_description", "cost_inr", "district", "state",
             "mp_name", "constituency", "implementing_agency", "detector_type", "detector_name",
-            "severity", "tier", "explanation", "evidence_json", "detected_at"
+            "severity", "tier", "explanation", "evidence_json", "detected_at",
+            "is_active", "resolved_at", "resolution_reason"
         ]
         writer = csv.DictWriter(output, fieldnames=fieldnames)
         writer.writeheader()
@@ -32,6 +34,9 @@ def stream_flags_csv(
         output.truncate(0)
 
         query = db.query(Anomaly, Work).join(Work, Anomaly.work_id == Work.work_id)
+
+        if not include_resolved:
+            query = query.filter(Anomaly.is_active == True)
 
         if state:
             query = query.filter(func.lower(Work.state) == state.lower())
@@ -79,7 +84,10 @@ def stream_flags_csv(
                     "tier": get_tier(sev).upper(),
                     "explanation": anomaly.explanation or "",
                     "evidence_json": json.dumps(anomaly.evidence or {}),
-                    "detected_at": anomaly.detected_at.isoformat() if anomaly.detected_at else ""
+                    "detected_at": anomaly.detected_at.isoformat() if anomaly.detected_at else "",
+                    "is_active": bool(anomaly.is_active) if hasattr(anomaly, "is_active") else True,
+                    "resolved_at": anomaly.resolved_at.isoformat() if getattr(anomaly, "resolved_at", None) else "",
+                    "resolution_reason": anomaly.resolution_reason or ""
                 }
                 writer.writerow(row_data)
             yield output.getvalue()

@@ -321,6 +321,7 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
     # 4. Deterministic Idempotent Upsert with Complete Per-Record Lineage
     existing_works = {w.work_id: w for w in session.query(Work).all()}
     records_upserted = 0
+    mutated_work_ids = []
     now_utc = datetime.now(timezone.utc)
 
     for _, row in df_valid.iterrows():
@@ -348,13 +349,42 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
         source_ds_id = dataset_id_map.get(source_file_name, ds_comp_detailed.dataset_id)
         source_link = str(row.get("source_url", "https://www.mplads.gov.in"))
 
+        row_cost = float(row["cost"])
+        row_status = str(row["status"])
+        row_desc = str(row.get("work_description", "Not specified"))
+        row_paid = float(row["total_paid"]) if pd.notna(row.get("total_paid")) else 0.0
+        row_cat = str(row.get("category", "Normal/Others"))
+        row_dist = str(row["district"]).upper()
+
         if wid in existing_works:
             w = existing_works[wid]
-            w.cost = float(row["cost"])
-            w.status = str(row["status"])
+            # Diff detection
+            if (
+                abs(float(w.cost or 0.0) - row_cost) > 1e-2 or
+                str(w.status or "") != row_status or
+                str(w.work_description or "") != row_desc or
+                w.completion_date != c_date or
+                w.recommended_date != r_date or
+                abs(float(w.total_paid or 0.0) - row_paid) > 1e-2 or
+                str(w.category or "") != row_cat or
+                str(w.district or "").upper() != row_dist or
+                str(w.mp_name or "") != str(row["mp_name"]) or
+                abs(float(w.payment_gap_percentage or 0.0) - float(row.get("payment_gap_percentage", 0.0))) > 1e-2
+            ):
+                mutated_work_ids.append(wid)
+                w.updated_at = now_utc
+
+            w.cost = row_cost
+            w.status = row_status
+            w.work_description = row_desc
+            w.category = row_cat
+            w.location = str(row.get("location", ""))
+            w.district = row_dist
+            w.mp_name = str(row["mp_name"])
             w.completion_date = c_date
             w.recommended_date = r_date
-            w.total_paid = float(row["total_paid"]) if pd.notna(row.get("total_paid")) else 0.0
+            w.total_paid = row_paid
+            w.payment_gap_percentage = float(row.get("payment_gap_percentage", 0.0))
             w.has_payments = bool(row["has_payments"])
             w.payment_record_exists = bool(row["payment_record_exists"])
             w.data_completeness_score = completeness_score
@@ -370,22 +400,23 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
             w.source_dataset_id = source_ds_id
             w.ingestion_run_id = ingestion_run.run_id
         else:
+            mutated_work_ids.append(wid)
             w = Work(
                 work_id=wid,
-                work_description=str(row.get("work_description", "Not specified")),
-                cost=float(row["cost"]),
-                category=str(row.get("category", "Normal/Others")),
+                work_description=row_desc,
+                cost=row_cost,
+                category=row_cat,
                 location=str(row.get("location", "")),
-                district=str(row["district"]),
+                district=row_dist,
                 mp_name=str(row["mp_name"]),
                 mp_constituency=str(row.get("mp_constituency", "")),
                 implementing_agency=str(row.get("implementing_agency", "District Implementing Authority")),
                 implementing_agency_raw=str(row.get("implementing_agency_raw", "DEFAULT")),
                 completion_date=c_date,
                 recommended_date=r_date,
-                status=str(row["status"]),
+                status=row_status,
                 has_payments=bool(row["has_payments"]),
-                total_paid=float(row.get("total_paid", 0.0)),
+                total_paid=row_paid,
                 payment_gap_percentage=float(row.get("payment_gap_percentage", 0.0)),
                 payment_record_exists=bool(row["payment_record_exists"]),
                 house=str(row.get("house", "Lok Sabha")),
@@ -399,12 +430,21 @@ def load_works_into_db(session: Session, df_unified: Optional[pd.DataFrame] = No
                 source_file_checksum=source_chk,
                 source_url=source_link,
                 retrieved_at=now_utc,
+                updated_at=now_utc,
                 etl_version="v3.4-lineage-verified",
                 source_dataset_id=source_ds_id,
                 ingestion_run_id=ingestion_run.run_id
             )
             session.add(w)
         records_upserted += 1
+
+    session.flush()
+
+    if mutated_work_ids:
+        logger.info(f"Selectively re-auditing {len(mutated_work_ids)} mutated works...")
+        from mplads_fraud_detection.auditor.lifecycle_auditor import WorkLifecycleAuditor
+        auditor = WorkLifecycleAuditor()
+        auditor.audit_works_batch(session, mutated_work_ids, commit=False)
 
     # 5. Complete Ingestion Run Record
     ingestion_run.completed_at = datetime.now(timezone.utc)

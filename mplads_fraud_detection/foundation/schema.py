@@ -110,6 +110,12 @@ class Work(Base):
     source_dataset_id = Column(String(36), ForeignKey("datasets.dataset_id"), nullable=True)
     ingestion_run_id = Column(String(36), ForeignKey("ingestion_runs.run_id"), nullable=True)
 
+    # Phase 3 Real-Time Lifecycle Re-Auditing
+    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=True)
+    last_audited_at = Column(DateTime, nullable=True)
+    lifecycle_audit_version = Column(String(50), default="v3.0", nullable=True)
+    audit_status = Column(String(30), default="PENDING", nullable=True)
+
     dataset = relationship("Dataset", back_populates="works")
     ingestion_run = relationship("IngestionRun", back_populates="works")
 
@@ -128,6 +134,7 @@ class Work(Base):
         CheckConstraint("cost > 0", name="chk_positive_cost"),
         Index("idx_works_district_date", "district", "completion_date"),
         Index("idx_works_mp_date", "mp_name", "recommended_date"),
+        Index("idx_works_district_rec_date", "district", "recommended_date"),
     )
 
 
@@ -143,6 +150,9 @@ class Anomaly(Base):
     evidence = Column(JSON, nullable=False)
     run_id = Column(String(36), ForeignKey("pipeline_runs.run_id", ondelete="CASCADE"), nullable=False, index=True)
     detected_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    is_active = Column(Boolean, default=True, server_default="1", nullable=False, index=True)
+    resolved_at = Column(DateTime, nullable=True)
+    resolution_reason = Column(Text, nullable=True)
 
     work = relationship("Work", back_populates="anomalies")
     pipeline_run = relationship("PipelineRun", back_populates="anomalies")
@@ -151,6 +161,7 @@ class Anomaly(Base):
         UniqueConstraint("work_id", "detector_type", "run_id", name="uq_work_detector_run"),
         CheckConstraint("severity >= 0.50 AND severity <= 1.00", name="chk_valid_anomaly_severity"),
         Index("idx_anomalies_composite", "detector_type", "severity"),
+        Index("idx_anomalies_work_active_detector", "work_id", "is_active", "detector_type"),
     )
 
 

@@ -15,6 +15,10 @@ MODELS_DIR = ARTIFACTS_DIR / "models"
 os.makedirs(ARTIFACTS_DIR, exist_ok=True)
 os.makedirs(MODELS_DIR, exist_ok=True)
 
+# Real-Time Lifecycle Model & Median Artifacts
+D1_MODEL_PATH = MODELS_DIR / "detector_01_isolation_forest.joblib"
+D1_MEDIANS_PATH = MODELS_DIR / "detector_01_medians.json"
+
 # Dataset Paths
 WORKS_COMPLETED_DETAILED_CSV = DATA_DIR / "works_completed_detailed.csv"
 WORKS_COMPLETED_CSV = DATA_DIR / "works_completed.csv"
