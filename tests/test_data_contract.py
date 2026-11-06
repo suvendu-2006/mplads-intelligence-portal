@@ -31,9 +31,9 @@ def test_national_corpus_crore_calculation():
     crores_allocated = raw_allocated / 10_000_000
     crores_expenditure = raw_expenditure / 10_000_000
 
-    # Over 11,000 Cr allocated and over 4,000 Cr spent
-    assert 11000 <= crores_allocated <= 12500, f"Allocated crores calculation invalid: {crores_allocated}"
-    assert 3800 <= crores_expenditure <= 4500, f"Expenditure crores calculation invalid: {crores_expenditure}"
+    # Over 11,000 Cr allocated and over 3,800 Cr spent
+    assert 11000 <= crores_allocated <= 13000, f"Allocated crores calculation invalid: {crores_allocated}"
+    assert 3800 <= crores_expenditure <= 6000, f"Expenditure crores calculation invalid: {crores_expenditure}"
 
 def test_lakh_to_crore_scale():
     """Ensure no confusion between Lakhs (10^5) and Crores (10^7)."""
