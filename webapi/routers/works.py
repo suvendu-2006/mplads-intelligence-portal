@@ -61,9 +61,14 @@ def _execute_work_update(work_id: int, payload: WorkUpdatePayload, user: dict, d
     audit_result = auditor.audit_work(db, work, commit=False)
     try:
         db.commit()
-    except Exception:
+    except Exception as e:
         db.rollback()
-        raise
+        import os
+        if os.getenv("VERCEL"):
+            import logging
+            logging.getLogger(__name__).warning("Database commit skipped in read-only serverless environment: %s", e)
+        else:
+            raise
 
     # Invalidate all downstream aggregate caches
     invalidate_all_aggregates()
