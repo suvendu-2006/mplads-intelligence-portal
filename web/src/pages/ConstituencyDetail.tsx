@@ -555,14 +555,12 @@ export const ConstituencyDetail: React.FC = () => {
                     />
                     <Tooltip
                       cursor={{ fill: 'rgba(59, 130, 246, 0.05)' }}
-                      wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                       contentStyle={{
                         backgroundColor: 'var(--surface-primary)',
                         borderColor: 'var(--border-primary)',
                         borderRadius: '12px',
                         fontSize: '12px',
                         boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
-                        zIndex: 999999
                       }}
                       formatter={(val: any) => [`₹${val} Cr`, 'Allocated']}
                     />

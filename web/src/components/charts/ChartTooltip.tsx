@@ -47,12 +47,12 @@ export const ChartTooltip: React.FC<ChartTooltipProps> = React.memo(({
 
   return (
     <div
-      className="rounded-xl border shadow-xl pointer-events-none relative z-50"
+      className="rounded-xl border shadow-lg backdrop-blur-sm pointer-events-none relative z-50"
       style={{
         backgroundColor: 'var(--surface-primary)',
         borderColor: 'var(--border-primary)',
         padding: '10px 14px',
-        zIndex: 999999,
+        boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -4px rgba(0, 0, 0, 0.08)',
       }}
     >
       {label && (

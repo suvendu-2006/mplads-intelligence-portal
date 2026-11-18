@@ -20,7 +20,7 @@ def get_from_cache(key: str) -> Optional[Any]:
 def set_in_cache(key: str, value: Any):
     _CACHE[key] = (datetime.now(), value)
 
-def compute_all_states_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
+def compute_all_states_red_flag_pct(db: Optional[Session] = None) -> Dict[str, Dict[str, Any]]:
     cache_key = "all_states_rf_batch"
     cached = get_from_cache(cache_key)
     if cached:
@@ -33,6 +33,9 @@ def compute_all_states_red_flag_pct(db: Session) -> Dict[str, Dict[str, Any]]:
             return PRECOMPUTED_STATES_RF
     except ImportError:
         pass
+
+    if db is None:
+        return {}
 
     from sqlalchemy import text
     query = text("""

@@ -479,18 +479,26 @@ span.text-white {
   overflow: visible !important;
 }
 
-/* Tooltip tracking - ensure tooltip is ALWAYS on the topmost layer above all SVG bars, lines, and areas */
+/* Tooltip smooth appearance & clean cross-browser stacking (Zero GPU ghosting) */
+@keyframes tooltipSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .recharts-tooltip-wrapper {
   pointer-events: none !important;
   z-index: 999999 !important;
-  position: absolute !important;
-  isolation: isolate;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.12));
+  will-change: transform;
 }
 
 .recharts-default-tooltip {
   z-index: 999999 !important;
-  position: relative !important;
 }
 
 /* === ACCESSIBILITY === */

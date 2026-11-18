@@ -24,8 +24,7 @@ _states_cache = {}
 @router.get("/states", response_model=EnvelopeResponse[List[StateSummaryItem]])
 def list_states(
     sort: str = Query("allocated", pattern="^(allocated|utilization|red_pct)$"),
-    order: str = Query("desc", pattern="^(asc|desc)$"),
-    db: Session = Depends(get_db)
+    order: str = Query("desc", pattern="^(asc|desc)$")
 ):
     cache_key = f"{sort}_{order}"
     if cache_key in _states_cache:
@@ -41,7 +40,7 @@ def list_states(
             dist_counts[s] = len(grp)
 
     results = []
-    all_rf = compute_all_states_red_flag_pct(db)
+    all_rf = compute_all_states_red_flag_pct()
 
     for _, row in df_states.iterrows():
         st_name = str(row["state"])

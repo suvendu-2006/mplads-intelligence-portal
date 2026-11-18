@@ -571,7 +571,7 @@ export const MPDetail: React.FC = () => {
                           <Cell fill="#2563EB" stroke="#FFFFFF" strokeWidth={3} />
                           <Cell fill="#94A3B8" stroke="#FFFFFF" strokeWidth={3} />
                         </Pie>
-                        <Tooltip content={<ChartTooltip formatter="number" />} wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }} />
+                        <Tooltip content={<ChartTooltip formatter="number" />} />
                       </PieChart>
                     </ResponsiveContainer>
                     <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center px-2">
@@ -666,7 +666,7 @@ export const MPDetail: React.FC = () => {
                         <CartesianGrid strokeDasharray="3 3" stroke={chartTheme.gridColor} vertical={false} opacity={0.4} />
                         <XAxis dataKey="name" stroke={chartTheme.textColor} fontSize={11} tickLine={false} />
                         <YAxis stroke={chartTheme.textColor} fontSize={11} tickLine={false} allowDecimals={false} />
-                        <Tooltip content={<ChartTooltip formatter="number" />} wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }} />
+                        <Tooltip content={<ChartTooltip formatter="number" />} />
                         <Bar dataKey="count" radius={[6, 6, 0, 0]} {...ANIMATION_CONFIG.getChartProps('bar')}>
                           <Cell fill="#10B981" />
                           <Cell fill="#6366F1" />
@@ -741,7 +741,6 @@ export const MPDetail: React.FC = () => {
                           </Pie>
                           <Tooltip
                             content={<ChartTooltip formatter="percent" />}
-                            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                           />
                         </PieChart>
                       </ResponsiveContainer>

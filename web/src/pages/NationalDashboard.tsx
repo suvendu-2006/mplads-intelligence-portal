@@ -259,8 +259,6 @@ function TrendAreaChart({
           />
           <Tooltip
             content={<ChartTooltip formatter="crore" />}
-            isAnimationActive={false}
-            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
           />
           <Area
             type="monotone"
@@ -1135,8 +1133,6 @@ export const NationalDashboard: React.FC = () => {
                   <Tooltip
                     content={<ChartTooltip formatter="crore" />}
                     cursor={{ fill: 'var(--surface-hover)', opacity: 0.35 }}
-                    isAnimationActive={false}
-                    wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
                   />
                   <Bar
                     dataKey="allocated"

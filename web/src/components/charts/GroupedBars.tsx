@@ -96,8 +96,6 @@ export const GroupedBars: React.FC<GroupedBarsProps> = ({
           <Tooltip
             content={<ChartTooltip formatter={formatter} />}
             cursor={{ fill: 'var(--surface-hover)', opacity: 0.5 }}
-            isAnimationActive={false}
-            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
           />
 
           {series.map((s, idx) => {

@@ -76,8 +76,6 @@ export const TrendArea: React.FC<TrendAreaProps> = ({
 
           <Tooltip
             content={<ChartTooltip formatter={formatter} />}
-            isAnimationActive={false}
-            wrapperStyle={{ zIndex: 999999, pointerEvents: 'none' }}
           />
 
           {series.map((s, idx) => {

@@ -15,6 +15,9 @@ jobs:
         run: |
           echo "Sending automated keep-alive pings to Vercel production..."
           curl -s -o /dev/null -w "GET /api/national: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/national
-          curl -s -o /dev/null -w "GET /api/states: %{http_code} (%{time_total}s)\n" "https://mplads-intelligence-portal.vercel.app/api/states?sort=allocated&order=desc"
           curl -s -o /dev/null -w "GET /api/national/analytics: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/national/analytics
+          curl -s -o /dev/null -w "GET /api/states?sort=red_pct&order=desc: %{http_code} (%{time_total}s)\n" "https://mplads-intelligence-portal.vercel.app/api/states?sort=red_pct&order=desc"
+          curl -s -o /dev/null -w "GET /api/states: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/states
+          curl -s -o /dev/null -w "GET /api/states?sort=allocated&order=desc: %{http_code} (%{time_total}s)\n" "https://mplads-intelligence-portal.vercel.app/api/states?sort=allocated&order=desc"
+          curl -s -o /dev/null -w "GET /api/meta/last-updated: %{http_code} (%{time_total}s)\n" https://mplads-intelligence-portal.vercel.app/api/meta/last-updated
           echo "Warmup complete. Edge CDN cache primed, zero cold-starts guaranteed!"
