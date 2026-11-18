@@ -1,6 +1,6 @@
+# SATARK • MPLADS (सतर्क)
+
 <div align="center">
-  <img src="web/public/satark-emblem.svg" alt="SATARK Sovereign Emblem" width="120" height="120" />
-  <h1>SATARK &bull; MPLADS</h1>
   <p><strong>National Forensic Intelligence, Sovereign Surveillance &amp; Decision-Intelligence Platform</strong></p>
   <p><em>Autonomous Multi-Tiered Anomaly Detection (D1&ndash;D15) &bull; Real-Time Fund Reconciliation &bull; Public Integrity Command Center</em></p>
 </div>

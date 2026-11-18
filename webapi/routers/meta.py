@@ -26,20 +26,26 @@ def list_cpwd_benchmarks():
     records = df.to_dict(orient="records")
     return EnvelopeResponse(data=records, meta=None, warnings=[])
 
-from webapi.config import OVERVIEW_DIR
+from pathlib import Path
+from webapi.config import OVERVIEW_DIR, BASE_DIR
 
 @router.get("/meta/last-updated")
 def get_last_updated():
     import json
-    meta_path = OVERVIEW_DIR / "sync_metadata.json"
-    if meta_path.exists():
+    candidates = [
+        OVERVIEW_DIR / "sync_metadata.json",
+        BASE_DIR / "api" / "data" / "sync_metadata.json",
+        Path("/var/task/api/data/sync_metadata.json"),
+    ]
+    meta_path = next((p for p in candidates if p.exists() and p.is_file()), None)
+    if meta_path:
         try:
             with open(meta_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 inner = data.get("data", {})
                 return EnvelopeResponse(
                     data={
-                        "last_updated": inner.get("lastUpdated", "06/11/2026"),
+                        "last_updated": inner.get("lastUpdated", "18/11/2026"),
                         "as_of_label": "November 2026",
                         "source": inner.get("source", "Official MPLADS Portal API"),
                         "data_quality": inner.get("dataQuality", 98),
@@ -52,7 +58,7 @@ def get_last_updated():
             pass
     return EnvelopeResponse(
         data={
-            "last_updated": "06/11/2026",
+            "last_updated": "18/11/2026",
             "as_of_label": "November 2026",
             "source": "Official MPLADS Portal API",
             "schema_version": "2.1.0"

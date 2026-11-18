@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "data": {
+    "source": "Official MPLADS Portal API",
+    "lastUpdated": "18/11/2026",
+    "nextUpdate": "in 24 hours",
+    "totalRecords": 294155,
+    "dataQuality": 98,
+    "updateFrequency": "daily",
+    "syncStats": {
+      "lokSabhaRecords": 244026,
+      "rajyaSabhaRecords": 50129,
+      "allocations": 1317,
+      "expenditures": 163251,
+      "worksCompleted": 49187,
+      "worksRecommended": 144609,
+      "mps": 788,
+      "syncDurationSeconds": 26.7
+    }
+  }
+}

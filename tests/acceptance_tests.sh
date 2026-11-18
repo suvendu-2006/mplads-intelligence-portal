@@ -7,11 +7,11 @@ echo "================================================================="
 
 # [1/16] Security: No hardcoded credentials
 echo "[1/16] Security: Checking for hardcoded credentials..."
-if git grep -i "ChangeMe123" --quiet 2>/dev/null; then
+if git grep --quiet -i "ChangeMe123" -- ":!tests/acceptance_tests.sh"; then
     echo "  ✗ FAIL: Hardcoded credentials found"
     exit 1
 fi
-if git grep "9f8e7d6c5b4a3f2e1d0c" --quiet 2>/dev/null; then
+if git grep --quiet "9f8e7d6c5b4a3f2e1d0c" -- ":!tests/acceptance_tests.sh"; then
     echo "  ✗ FAIL: Default SECRET_KEY found"
     exit 1
 fi

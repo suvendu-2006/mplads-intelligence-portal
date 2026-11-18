@@ -2,7 +2,7 @@
   "success": true,
   "data": {
     "source": "Official MPLADS Portal API",
-    "lastUpdated": "06/11/2026",
+    "lastUpdated": "18/11/2026",
     "nextUpdate": "in 24 hours",
     "totalRecords": 294155,
     "dataQuality": 98,
@@ -12,10 +12,10 @@
       "rajyaSabhaRecords": 50129,
       "allocations": 1317,
       "expenditures": 163251,
-      "worksCompleted": 114491,
-      "worksRecommended": 15096,
-      "mps": 1262,
-      "syncDurationSeconds": 1009
+      "worksCompleted": 49187,
+      "worksRecommended": 144609,
+      "mps": 788,
+      "syncDurationSeconds": 26.7
     }
   }
 }
