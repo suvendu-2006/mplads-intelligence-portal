@@ -4,6 +4,7 @@ import { Layout } from './components/Layout'
 import { ScrollToTop } from './components/ScrollToTop'
 import { Analytics } from '@vercel/analytics/react'
 
+import { NationalDashboard } from './pages/NationalDashboard'
 import { RouteErrorBoundary } from './components/RouteErrorBoundary'
 
 function lazyWithRetry<T extends React.ComponentType<any>>(
@@ -43,7 +44,6 @@ function lazyWithRetry<T extends React.ComponentType<any>>(
   })
 }
 
-const NationalDashboard = lazyWithRetry(() => import('./pages/NationalDashboard').then(m => ({ default: m.NationalDashboard })))
 const BrowseStates = lazyWithRetry(() => import('./pages/BrowseStates').then(m => ({ default: m.BrowseStates })))
 const StateDetail = lazyWithRetry(() => import('./pages/StateDetail').then(m => ({ default: m.StateDetail })))
 const BrowseMPs = lazyWithRetry(() => import('./pages/BrowseMPs').then(m => ({ default: m.BrowseMPs })))

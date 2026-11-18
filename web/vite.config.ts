@@ -18,7 +18,6 @@ export default defineConfig({
       resolveDependencies(_filename, deps) {
         return deps.filter(
           dep =>
-            !dep.includes('charts') &&
             !dep.includes('maps') &&
             !dep.includes('motion') &&
             !dep.includes('allMpsData') &&

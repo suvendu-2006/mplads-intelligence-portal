@@ -742,19 +742,16 @@ export const NationalDashboard: React.FC = () => {
   useEffect(() => {
     let isMounted = true
     async function loadData() {
-      try {
-        const early = typeof window !== 'undefined' ? (window as any).__EARLY_DATA__ : null
-        const [resNat, resStates, resAnalytics] = await Promise.all([
-          early?.national ? early.national.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national')) : fetch('/api/national'),
-          early?.states ? early.states.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/states?sort=red_pct&order=desc')) : fetch('/api/states?sort=red_pct&order=desc'),
-          early?.analytics ? early.analytics.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national/analytics')) : fetch('/api/national/analytics')
-        ])
+      const early = typeof window !== 'undefined' ? (window as any).__EARLY_DATA__ : null
 
-        if (!isMounted) return
-
-        if (resNat.ok) {
+      const fetchNat = async () => {
+        try {
+          const resNat = await (early?.national
+            ? early.national.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national'))
+            : fetch('/api/national'))
+          if (!isMounted || !resNat.ok) return
           const jsonNat = await resNat.json()
-          if (jsonNat.data) {
+          if (jsonNat.data && isMounted) {
             setNational((prev: any) => {
               if (
                 prev &&
@@ -770,11 +767,20 @@ export const NationalDashboard: React.FC = () => {
               sessionStorage.setItem('cached_nat_data', JSON.stringify(jsonNat.data))
             } catch {}
           }
+        } catch (e) {
+          console.error('Error fetching national data:', e)
         }
-        if (resStates.ok) {
+      }
+
+      const fetchStates = async () => {
+        try {
+          const resStates = await (early?.states
+            ? early.states.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/states?sort=red_pct&order=desc'))
+            : fetch('/api/states?sort=red_pct&order=desc'))
+          if (!isMounted || !resStates.ok) return
           const jsonStates = await resStates.json()
           const fetchedStates = jsonStates.data || []
-          if (fetchedStates.length > 0) {
+          if (fetchedStates.length > 0 && isMounted) {
             setStates((prev: any[]) => {
               if (
                 prev &&
@@ -791,10 +797,19 @@ export const NationalDashboard: React.FC = () => {
               sessionStorage.setItem('cached_nat_states', JSON.stringify(fetchedStates))
             } catch {}
           }
+        } catch (e) {
+          console.error('Error fetching states data:', e)
         }
-        if (resAnalytics.ok) {
+      }
+
+      const fetchAnalytics = async () => {
+        try {
+          const resAnalytics = await (early?.analytics
+            ? early.analytics.then((data: any) => data ? { ok: true, json: async () => data } : fetch('/api/national/analytics'))
+            : fetch('/api/national/analytics'))
+          if (!isMounted || !resAnalytics.ok) return
           const jsonAnalytics = await resAnalytics.json()
-          if (jsonAnalytics.data) {
+          if (jsonAnalytics.data && isMounted) {
             setAnalytics((prev: any) => {
               if (
                 prev &&
@@ -809,9 +824,13 @@ export const NationalDashboard: React.FC = () => {
               sessionStorage.setItem('cached_nat_analytics', JSON.stringify(jsonAnalytics.data))
             } catch {}
           }
+        } catch (e) {
+          console.error('Error fetching analytics data:', e)
         }
-      } catch (e) {
-        console.error('Error fetching national dashboard data:', e)
+      }
+
+      try {
+        await Promise.allSettled([fetchNat(), fetchStates(), fetchAnalytics()])
       } finally {
         if (isMounted) {
           setLoading(false)

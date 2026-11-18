@@ -47,7 +47,7 @@
       ]
     },
     {
-      "source": "/api/national",
+      "source": "/api/national/analytics(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "source": "/api/states",
+      "source": "/api/national(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "source": "/api/national/analytics",
+      "source": "/api/states(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "source": "/api/mps",
+      "source": "/api/mps(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -83,7 +83,16 @@
       ]
     },
     {
-      "source": "/api/districts",
+      "source": "/api/districts(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/api/meta(.*)",
       "headers": [
         {
           "key": "Cache-Control",
