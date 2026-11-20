@@ -93,24 +93,24 @@ export function getRoleDefaultPermissions(role: string): string[] {
 }
 
 export const DEFAULT_USER_STATE: UserState = {
-  role: 'viewer',
-  permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
-  sessionToken: 'default_viewer',
-  isAuthenticated: false,
-  email: 'citizen@satark.gov.in',
+  role: 'mospi',
+  permissions: ['*'],
+  sessionToken: 'session_mospi_default',
+  isAuthenticated: true,
+  email: 'officer.mospi@gov.in',
   state: undefined,
   district: undefined,
   mpId: undefined,
   mpName: undefined
 }
 
-// Purge legacy user state from localStorage so clicking links always defaults to 'User'
+// Purge legacy user state from localStorage so loading defaults to 'MoSPI'
 if (typeof window !== 'undefined') {
   try {
     const raw = localStorage.getItem('mplads-user-session')
     if (raw) {
       const parsed = JSON.parse(raw)
-      if (parsed?.state?.user) {
+      if (parsed?.state?.user && (parsed.state.user.role === 'viewer' || !parsed.state.user.isAuthenticated)) {
         delete parsed.state.user
         localStorage.setItem('mplads-user-session', JSON.stringify(parsed))
       }
@@ -126,20 +126,30 @@ export function getInitialUserState(): UserState {
       const roleParam = (params.get('role') || params.get('profile'))?.toLowerCase()
       if (roleParam === 'user' || roleParam === 'viewer' || roleParam === 'citizen') {
         try { sessionStorage.removeItem('satark_active_session') } catch {}
-        return { ...DEFAULT_USER_STATE }
+        return {
+          role: 'viewer',
+          permissions: ['read:national', 'read:states', 'read:mps', 'read:map'],
+          sessionToken: 'default_viewer',
+          isAuthenticated: false,
+          email: 'citizen@satark.gov.in',
+          state: undefined,
+          district: undefined,
+          mpId: undefined,
+          mpName: undefined
+        }
       }
 
       // 2. Tab-scoped active login session
       const raw = sessionStorage.getItem('satark_active_session')
       if (raw) {
         const parsed = JSON.parse(raw)
-        if (parsed && parsed.role && parsed.role !== 'viewer' && parsed.isAuthenticated) {
+        if (parsed && parsed.role && parsed.isAuthenticated) {
           return parsed
         }
       }
     } catch {}
   }
-  // 3. Default profile is ALWAYS User (Public Citizen)
+  // 3. Default profile is MoSPI (Apex Central Authority)
   return { ...DEFAULT_USER_STATE }
 }
 

@@ -121,7 +121,7 @@ export const Login: React.FC = () => {
   const [searchParams] = useSearchParams()
   const initialRole = searchParams.get('role') || 'viewer'
   const redirectTarget = searchParams.get('redirect') || ''
-  const { login, logout, user, setMpJurisdiction } = useStore()
+  const { login, logout, switchRole, user, setMpJurisdiction } = useStore()
   const { t, lang } = useTranslation()
 
   const [selectedRole, setSelectedRole] = useState<string>(() => {
@@ -370,7 +370,7 @@ export const Login: React.FC = () => {
 
   const handleSelectRole = (role: string) => {
     if (role === 'viewer') {
-      logout()
+      switchRole('viewer')
       navigate('/')
       return
     }

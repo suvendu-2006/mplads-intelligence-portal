@@ -11,7 +11,7 @@ import {
   MapPin,
   ChevronRight,
   X,
-  LogOut
+  ArrowRightLeft
 } from 'lucide-react'
 import { useTranslation } from '../lib/i18n'
 
@@ -23,20 +23,20 @@ import { useTranslation } from '../lib/i18n'
 // 5. MP (Member of Parliament)
 const ROLES = [
   {
-    id: 'viewer',
-    labelKey: 'role.citizen',
-    label: 'User',
-    sublabel: 'Public Citizen & National Transparency Overview',
-    icon: User,
-    targetPage: 'National Overview'
-  },
-  {
     id: 'mospi',
     labelKey: 'role.mospi',
     label: 'MoSPI',
     sublabel: 'Central Authority (Full System Action & Audit Desk)',
     icon: Shield,
     targetPage: 'Audit Desk'
+  },
+  {
+    id: 'viewer',
+    labelKey: 'role.citizen',
+    label: 'User',
+    sublabel: 'Public Citizen & National Transparency Overview',
+    icon: User,
+    targetPage: 'National Overview'
   },
   {
     id: 'state_nodal_officer',
@@ -65,7 +65,7 @@ const ROLES = [
 ]
 
 export const SwitchRoleDropdown: React.FC = () => {
-  const { user, logout } = useStore()
+  const { user, logout, switchRole } = useStore()
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
@@ -80,7 +80,7 @@ export const SwitchRoleDropdown: React.FC = () => {
     setIsOpen(false)
 
     if (roleId === 'viewer') {
-      logout()
+      switchRole('viewer')
       navigate('/')
       return
     }
@@ -103,11 +103,11 @@ export const SwitchRoleDropdown: React.FC = () => {
   }
 
   const getRoleDisplayTitle = () => {
+    if (user.role === 'mospi') {
+      return `${t('role.mospi')}`
+    }
     if (!user.isAuthenticated || user.role === 'viewer') {
       return 'User (Citizen)'
-    }
-    if (user.role === 'mospi') {
-      return `${t('role.mospi')} (Verified)`
     }
     if (user.role === 'state_nodal_officer') {
       const st = user.state && user.state !== 'ALL' && user.state !== 'ALL STATES & UNION TERRITORIES'
@@ -174,12 +174,12 @@ export const SwitchRoleDropdown: React.FC = () => {
               </button>
             </div>
 
-            {/* Authenticated Session Badge & Sign Out Button */}
+            {/* Authenticated Session Badge & Change Role Button */}
             {user.isAuthenticated && user.role !== 'viewer' && (
               <div className="p-2.5 mb-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between text-xs">
                 <div>
                   <span className="text-[10px] text-amber-700 dark:text-amber-400 font-bold block uppercase tracking-wider">
-                    Logged In Session
+                    Active Profile
                   </span>
                   <span className="font-mono text-[11px] font-bold text-[var(--text-primary)]">
                     {user.email || user.role}
@@ -188,14 +188,13 @@ export const SwitchRoleDropdown: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    logout()
                     setIsOpen(false)
-                    navigate('/')
+                    navigate('/login')
                   }}
-                  className="px-2.5 py-1 rounded-lg bg-rose-500 text-white font-bold text-xs hover:bg-rose-600 transition flex items-center gap-1 cursor-pointer shadow-sm"
+                  className="px-2.5 py-1 rounded-lg bg-[var(--brand-primary)] text-white font-bold text-xs hover:opacity-95 transition flex items-center gap-1.5 cursor-pointer shadow-sm"
                 >
-                  <LogOut size={12} />
-                  <span>Sign Out</span>
+                  <ArrowRightLeft size={12} />
+                  <span>{t('nav.change_role')}</span>
                 </button>
               </div>
             )}

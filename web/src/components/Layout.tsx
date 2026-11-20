@@ -11,7 +11,7 @@ import {
   Globe2,
   Building2,
   ShieldAlert,
-  LogOut,
+  ArrowRightLeft,
   UserCheck,
   KeyRound
 } from 'lucide-react'
@@ -25,7 +25,7 @@ function getDeviceTheme(): 'light' | 'dark' {
 }
 
 export const Layout: React.FC = () => {
-  const { theme, user, logout } = useStore()
+  const { theme, user, logout, switchRole } = useStore()
   const { t, lang } = useTranslation()
   const location = useLocation()
   const navigate = useNavigate()
@@ -62,7 +62,7 @@ export const Layout: React.FC = () => {
       const params = new URLSearchParams(window.location.search)
       const roleParam = (params.get('role') || params.get('profile'))?.toLowerCase()
       if (roleParam === 'user' || roleParam === 'viewer' || roleParam === 'citizen') {
-        logout()
+        switchRole('viewer')
       }
     } catch {}
   }, [location.search])
@@ -232,14 +232,13 @@ export const Layout: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    logout()
-                    navigate('/')
+                    navigate('/login')
                   }}
-                  className="px-2 py-1 rounded-full text-[10px] font-bold bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/30 transition flex items-center gap-1 cursor-pointer"
-                  title={t('nav.sign_out')}
+                  className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-400 border border-amber-500/30 transition flex items-center gap-1 cursor-pointer"
+                  title={t('nav.change_role')}
                 >
-                  <LogOut size={11} />
-                  <span>{t('nav.sign_out')}</span>
+                  <ArrowRightLeft size={11} />
+                  <span>{t('nav.change_role')}</span>
                 </button>
               </div>
             ) : (
