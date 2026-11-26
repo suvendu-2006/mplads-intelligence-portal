@@ -1,10 +1,32 @@
 from typing import List, Dict, Any
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
 from webapi.models import EnvelopeResponse, DetectorMetaItem
-from webapi.data_service import load_cpwd_benchmarks
+from webapi.data_service import load_cpwd_benchmarks, get_db
 from mplads_fraud_detection.detectors.registry import DETECTOR_REGISTRY
+from mplads_fraud_detection.foundation.schema import Work, Anomaly
 
 router = APIRouter()
+
+@router.get("/meta/health", response_model=EnvelopeResponse[Dict[str, Any]])
+def health_check(db: Session = Depends(get_db)):
+    """Verify database connectivity and return live record counts for health probes."""
+    try:
+        works_count = db.query(Work).count()
+        anomalies_count = db.query(Anomaly).count()
+    except Exception as exc:
+        raise HTTPException(status_code=503, detail=f"Database health check failed: {exc}") from exc
+
+    return EnvelopeResponse(
+        data={
+            "status": "healthy",
+            "database": "ok",
+            "works_count": works_count,
+            "anomalies_count": anomalies_count,
+        },
+        meta=None,
+        warnings=[],
+    )
 
 @router.get("/meta/detectors", response_model=EnvelopeResponse[List[DetectorMetaItem]])
 def list_detectors_meta():
@@ -71,7 +93,7 @@ def get_last_updated():
 @router.post("/meta/clear-cache")
 def clear_backend_caches():
     import gc
-    from webapi.routers import mps, flags, states, districts, entity_risks, map as map_router, national
+    from webapi.routers import mps, flags, states, districts, constituencies, entity_risks, map as map_router, national
 
     cleared = []
     if hasattr(mps, "_mps_cache"):
@@ -98,6 +120,9 @@ def clear_backend_caches():
     if hasattr(districts, "_districts_maps_cache"):
         districts._districts_maps_cache = None
         cleared.append("district_maps")
+    if hasattr(constituencies, "_constituency_cache"):
+        constituencies._constituency_cache.clear()
+        cleared.append("constituencies")
     if hasattr(entity_risks, "_LOCATION_STATE_MAP"):
         entity_risks._LOCATION_STATE_MAP = None
         cleared.append("location_map")

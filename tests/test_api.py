@@ -196,3 +196,24 @@ def test_constituency_via_assembly():
     assert json_data["data"]["summary"]["name"] == "DAMOH"
     assert json_data["data"]["summary"]["matched_assembly_constituency"] == "Pathariya"
 
+def test_meta_health_probe():
+    response = client.get("/api/meta/health")
+    assert response.status_code == 200
+    payload = response.json()["data"]
+    assert payload["status"] == "healthy"
+    assert payload["database"] == "ok"
+    assert payload["works_count"] > 0
+    assert payload["anomalies_count"] > 0
+
+def test_clear_cache_purges_constituencies():
+    # Warm constituency cache first, then clear all caches
+    r_const = client.get("/api/constituencies/DAMOH")
+    assert r_const.status_code == 200
+
+    r_clear = client.post("/api/meta/clear-cache")
+    assert r_clear.status_code == 200
+    purged = r_clear.json()["data"]["caches_purged"]
+    assert "constituencies" in purged
+    assert "mps" in purged
+    assert "districts" in purged
+
