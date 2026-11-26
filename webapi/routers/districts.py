@@ -171,6 +171,61 @@ def list_districts(
     return resp
 
 
+_SYMMETRIC_DISTRICT_ALIAS_PAIRS = [
+    ("cuttack", "kataka"),
+    ("nayagarh", "nayagada"),
+    ("balasore", "baleshwar"),
+    ("keonjhar", "kendujhar"),
+    ("khordha", "khurda"),
+    ("gurugram", "gurgaon"),
+    ("prayagraj", "allahabad"),
+    ("ayodhya", "faizabad"),
+    ("bengaluru", "bangalore"),
+    ("bengaluru urban", "bangalore urban"),
+    ("mysuru", "mysore"),
+    ("mangaluru", "mangalore"),
+    ("kalaburagi", "gulbarga"),
+    ("belagavi", "belgaum"),
+    ("shivamogga", "shimoga"),
+    ("tumakuru", "tumkur"),
+    ("ballari", "bellary"),
+    ("vijayapura", "bijapur"),
+    ("dharashiv", "osmanabad"),
+    ("ahilyanagar", "ahmednagar"),
+    ("hoshangabad", "narmadapuram"),
+    ("cuddapah", "kadapa"),
+    ("nuh", "mewat"),
+    ("pondicherry", "puducherry"),
+    ("ahmedabad", "ahmadabad"),
+    ("purba champaran", "purbi champaran"),
+    ("west champaran", "paschim champaran"),
+]
+
+_ONE_WAY_DISTRICT_ALIASES: Dict[str, List[str]] = {
+    "bengaluru urban": ["bangalore"],
+    "chhatrapati sambhajinagar": ["aurangabad"],
+    "ysr": ["kadapa", "cuddapah"],
+    "ysr kadapa": ["kadapa", "cuddapah"],
+    "sps nellore": ["nellore"],
+    "east champaran": ["purbi champaran", "purba champaran"],
+}
+
+_DISTRICT_ALIAS_MAP: Dict[str, List[str]] = {}
+for _left, _right in _SYMMETRIC_DISTRICT_ALIAS_PAIRS:
+    _DISTRICT_ALIAS_MAP.setdefault(_left, []).append(_right)
+    _DISTRICT_ALIAS_MAP.setdefault(_right, []).append(_left)
+for _src, _targets in _ONE_WAY_DISTRICT_ALIASES.items():
+    _existing = _DISTRICT_ALIAS_MAP.setdefault(_src, [])
+    for _t in _targets:
+        if _t not in _existing:
+            _existing.append(_t)
+
+
+def _get_district_aliases(name_lower: str) -> List[str]:
+    """Return known spelling/historical aliases for a normalized lowercase district name."""
+    return _DISTRICT_ALIAS_MAP.get(name_lower.strip().lower(), [])
+
+
 @router.get("/districts/{district_name}")
 def get_district_detail(district_name: str, db: Session = Depends(get_db)):
     c_key = district_name.strip().lower()
@@ -179,44 +234,15 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
 
     df = load_districts_csv()
     dist_lower = district_name.strip().lower()
-    _DISTRICT_NODAL_ALIASES = {
-        "cuttack": "kataka",
-        "nayagarh": "nayagada",
-        "balasore": "baleshwar",
-        "keonjhar": "kendujhar",
-        "khordha": "khurda",
-        "gurugram": "gurgaon",
-        "prayagraj": "allahabad",
-        "ayodhya": "faizabad",
-        "bengaluru": "bangalore",
-        "bengaluru urban": "bangalore",
-        "mysuru": "mysore",
-        "mangaluru": "mangalore",
-        "kalaburagi": "gulbarga",
-        "belagavi": "belgaum",
-        "shivamogga": "shimoga",
-        "tumakuru": "tumkur",
-        "ballari": "bellary",
-        "vijayapura": "bijapur",
-        "chhatrapati sambhajinagar": "aurangabad",
-        "dharashiv": "osmanabad",
-        "ahilyanagar": "ahmednagar",
-        "cuddapah": "kadapa",
-        "ysr": "kadapa",
-        "ysr kadapa": "kadapa",
-        "sps nellore": "nellore",
-        "nuh": "mewat",
-        "pondicherry": "puducherry",
-        "ahmedabad": "ahmadabad",
-        "purba champaran": "purbi champaran",
-        "east champaran": "purbi champaran",
-        "west champaran": "paschim champaran",
-    }
-    alias_lower = _DISTRICT_NODAL_ALIASES.get(dist_lower)
+    alias_candidates = _get_district_aliases(dist_lower)
 
-    match = df[df["district_nodal"].astype(str).str.strip().str.lower() == dist_lower]
-    if match.empty and alias_lower:
-        match = df[df["district_nodal"].astype(str).str.strip().str.lower() == alias_lower]
+    dist_series = df["district_nodal"].astype(str).str.strip().str.lower()
+    match = df[dist_series == dist_lower]
+    if match.empty and alias_candidates:
+        for alias_lower in alias_candidates:
+            match = df[dist_series == alias_lower]
+            if not match.empty:
+                break
 
     if match.empty:
         # Check substring match in district_nodal
@@ -252,21 +278,36 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         consts = []
         row = {}
 
-    # Scoping: If direct district works exist in DB, scope directly to avoid over-joining neighboring constituencies
-    direct_cnt_row = db.execute(text("SELECT count(*) FROM works WHERE UPPER(district) = :d"), {"d": d_name.upper()}).fetchone()
+    # Scoping: Include canonical district + historical aliases scoped to st_name to prevent cross-state collisions
+    direct_name_cands = list(dict.fromkeys([d_name.upper()] + [a.upper() for a in _get_district_aliases(d_name.lower())]))
+    direct_cand_clause = " OR ".join(["UPPER(district) = :dc_" + str(i) for i in range(len(direct_name_cands))])
+    direct_params: Dict[str, Any] = {"dc_" + str(i): direct_name_cands[i] for i in range(len(direct_name_cands))}
+    state_filter_direct = ""
+    if st_name:
+        state_filter_direct = " AND UPPER(COALESCE(state, '')) = :st_upper"
+        direct_params["st_upper"] = st_name.upper()
+
+    direct_cnt_row = db.execute(
+        text(f"SELECT count(*) FROM works WHERE ({direct_cand_clause}){state_filter_direct}"),
+        direct_params,
+    ).fetchone()
     direct_cnt = direct_cnt_row[0] if direct_cnt_row else 0
 
     if direct_cnt > 0:
-        cands = [d_name.upper()]
+        cands = direct_name_cands
         scope_note = "Direct District Records"
     else:
-        cands = list(set([d_name.upper(), district_name.upper()] + consts))
+        cands = list(dict.fromkeys(direct_name_cands + [district_name.upper()] + consts))
         scope_note = f"Constituency Aggregation ({', '.join(consts)})" if consts else "Direct District Records"
 
-    # Build SQL filter for all target candidates
+    # Build SQL filter for all target candidates (state-scoped when st_name is known)
     cand_clause = " OR ".join(["UPPER(district) = :c_" + str(i) + " OR UPPER(COALESCE(mp_constituency, '')) = :c_" + str(i) for i in range(len(cands))])
     anom_clause = " OR ".join(["UPPER(w.district) = :c_" + str(i) + " OR UPPER(COALESCE(w.mp_constituency, '')) = :c_" + str(i) for i in range(len(cands))])
-    params = {"c_" + str(i): cands[i] for i in range(len(cands))}
+    params: Dict[str, Any] = {"c_" + str(i): cands[i] for i in range(len(cands))}
+    if st_name:
+        cand_clause = f"({cand_clause}) AND UPPER(COALESCE(state, '')) = :st_upper"
+        anom_clause = f"({anom_clause}) AND UPPER(COALESCE(w.state, '')) = :st_upper"
+        params["st_upper"] = st_name.upper()
 
     # True un-capped works count & portfolio cost from DB
     works_stat_row = db.execute(text(f"SELECT count(*), sum(cost) FROM works WHERE ({cand_clause})"), params).fetchone()
