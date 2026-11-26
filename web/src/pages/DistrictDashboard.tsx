@@ -654,6 +654,8 @@ export const DistrictDashboard: React.FC = () => {
               <span>Vidhan Sabha Assembly Segments ({formatNum(assemblySegments.length)})</span>
               {selectedAc && (
                 <button
+                  type="button"
+                  aria-label={`Clear assembly segment filter ${selectedAc}`}
                   onClick={() => handleSelectAc(selectedAc)}
                   className="ml-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-[10px] font-bold normal-case hover:bg-[var(--brand-primary)]/20 transition cursor-pointer"
                 >
@@ -676,6 +678,8 @@ export const DistrictDashboard: React.FC = () => {
               return (
                 <button
                   key={name}
+                  type="button"
+                  aria-pressed={isSelected}
                   onClick={() => handleSelectAc(name)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition flex items-center gap-1.5 cursor-pointer ${
                     isSelected
@@ -700,6 +704,8 @@ export const DistrictDashboard: React.FC = () => {
             })}
             {unspecifiedCount > 0 && (
               <button
+                type="button"
+                aria-pressed={selectedAc.toLowerCase() === UNSPECIFIED_SEGMENT.toLowerCase()}
                 onClick={() => handleSelectAc(UNSPECIFIED_SEGMENT)}
                 title="District-wide schemes or works without a single localized Vidhan Sabha tag"
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition flex items-center gap-1.5 cursor-pointer ${
@@ -725,8 +731,11 @@ export const DistrictDashboard: React.FC = () => {
       )}
 
       {/* Navigation Tabs */}
-      <div className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-1 overflow-x-auto">
+      <div role="tablist" aria-label="District sections" className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-1 overflow-x-auto">
         <button
+          type="button"
+          role="tab"
+          aria-selected={effectiveTab === 'works'}
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
             effectiveTab === 'works'
@@ -739,6 +748,9 @@ export const DistrictDashboard: React.FC = () => {
         </button>
 
         <button
+          type="button"
+          role="tab"
+          aria-selected={effectiveTab === 'mps'}
           onClick={() => setActiveTab('mps')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
             effectiveTab === 'mps'
@@ -751,6 +763,9 @@ export const DistrictDashboard: React.FC = () => {
         </button>
 
         <button
+          type="button"
+          role="tab"
+          aria-selected={effectiveTab === 'idas'}
           onClick={() => setActiveTab('idas')}
           className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
             effectiveTab === 'idas'
@@ -764,6 +779,9 @@ export const DistrictDashboard: React.FC = () => {
 
         {isAuthorized && (
           <button
+            type="button"
+            role="tab"
+            aria-selected={effectiveTab === 'compliance'}
             onClick={() => setActiveTab('compliance')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 shrink-0 ${
               effectiveTab === 'compliance'
