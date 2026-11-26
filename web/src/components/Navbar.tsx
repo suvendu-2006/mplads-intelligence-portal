@@ -357,11 +357,11 @@ export const Navbar: React.FC = () => {
         {/* Brand */}
         <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
           <img
-            src="/satark-mark.svg?v=5"
+            src="/satark-shield.svg?v=6"
             alt="SATARK-MPLADS emblem"
             width={28}
             height={28}
-            className="w-7 h-7 rounded-lg shadow-xs shrink-0 transition-transform duration-150 group-hover:scale-105"
+            className="w-7 h-7 object-contain shrink-0 transition-transform duration-150 group-hover:scale-105"
           />
           <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[var(--text-primary)] hover:text-[var(--brand-primary)] transition">
             SATARK&bull;MPLADS
