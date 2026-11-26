@@ -630,6 +630,7 @@ export const ConstituencyDetail: React.FC = () => {
               {selectedAc && (
                 <button
                   type="button"
+                  aria-label={`Clear assembly segment filter ${selectedAc}`}
                   onClick={() => {
                     setSelectedAc('')
                     setSearchParams({}, { replace: true })
@@ -667,6 +668,7 @@ export const ConstituencyDetail: React.FC = () => {
                       <button
                         key={ac.ac_name}
                         type="button"
+                        aria-pressed={isSelected}
                         onClick={() => handleToggleSegment(ac.ac_name)}
                         className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition border inline-flex items-center gap-1.5 cursor-pointer ${
                           isSelected
@@ -700,6 +702,7 @@ export const ConstituencyDetail: React.FC = () => {
                       <button
                         key={UNSPECIFIED_SEGMENT}
                         type="button"
+                        aria-pressed={isUnspecSelected}
                         onClick={() => handleToggleSegment(UNSPECIFIED_SEGMENT)}
                         className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition border inline-flex items-center gap-1.5 cursor-pointer ${
                           isUnspecSelected
@@ -729,8 +732,11 @@ export const ConstituencyDetail: React.FC = () => {
       )}
 
       {/* Navigation Tabs */}
-      <div className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-2">
+      <div role="tablist" aria-label="Constituency sections" className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-2">
         <button
+          type="button"
+          role="tab"
+          aria-selected={effectiveTab === 'overview'}
           onClick={() => setActiveTab('overview')}
           className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
             effectiveTab === 'overview'
@@ -742,6 +748,9 @@ export const ConstituencyDetail: React.FC = () => {
         </button>
 
         <button
+          type="button"
+          role="tab"
+          aria-selected={effectiveTab === 'works'}
           onClick={() => setActiveTab('works')}
           className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
             effectiveTab === 'works'
@@ -754,6 +763,9 @@ export const ConstituencyDetail: React.FC = () => {
 
         {user?.role !== 'viewer' && (
           <button
+            type="button"
+            role="tab"
+            aria-selected={effectiveTab === 'flags'}
             onClick={() => setActiveTab('flags')}
             className={`px-4 py-2 rounded-xl text-xs font-extrabold transition flex items-center gap-2 ${
               effectiveTab === 'flags'

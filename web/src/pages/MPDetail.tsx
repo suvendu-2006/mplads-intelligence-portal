@@ -524,6 +524,7 @@ export const MPDetail: React.FC = () => {
         {showAllButton && (
           <button
             type="button"
+            aria-pressed={!acFilter}
             onClick={() => {
               setAcFilter('')
               setWorksPage(1)
@@ -552,6 +553,7 @@ export const MPDetail: React.FC = () => {
             <button
               key={acName}
               type="button"
+              aria-pressed={isCurrent}
               onClick={() => handleToggleAcSegment(acName, switchToWorks)}
               className={`${buttonClass} text-xs font-bold transition flex items-center gap-1.5 border cursor-pointer ${
                 isCurrent
@@ -581,6 +583,7 @@ export const MPDetail: React.FC = () => {
             <button
               key={UNSPECIFIED_SEGMENT}
               type="button"
+              aria-pressed={isUnspecCurrent}
               onClick={() => handleToggleAcSegment(UNSPECIFIED_SEGMENT, switchToWorks)}
               className={`${buttonClass} text-xs font-bold transition flex items-center gap-1.5 border cursor-pointer ${
                 isUnspecCurrent

@@ -381,6 +381,10 @@ export const Navbar: React.FC = () => {
               </button>
               <input
                 type="text"
+                role="combobox"
+                aria-expanded={Boolean(hasSuggestions)}
+                aria-autocomplete="list"
+                aria-label={t('nav.search_placeholder')}
                 value={searchQuery}
                 onFocus={() => {
                   setIsDropdownOpen(true)
@@ -405,6 +409,7 @@ export const Navbar: React.FC = () => {
                     setIsDropdownOpen(false)
                   }}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 p-0.5 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] rounded-md transition cursor-pointer"
+                  aria-label="Clear search"
                   title="Clear search"
                 >
                   <X className="w-3.5 h-3.5" />
