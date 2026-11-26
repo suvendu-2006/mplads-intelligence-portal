@@ -50,8 +50,8 @@ export function fetchPrefetchedJson(url: string): Promise<any> {
 }
 
 // Route component loaders with all canonical aliases
+// Note: '/' (NationalDashboard) is statically imported in App.tsx and needs no chunk preloader
 export const ROUTE_LOADERS: Record<string, () => Promise<any>> = {
-  '/': () => import('../pages/NationalDashboard'),
   '/states': () => import('../pages/BrowseStates'),
   '/state': () => import('../pages/BrowseStates'),
   '/mps': () => import('../pages/BrowseMPs'),

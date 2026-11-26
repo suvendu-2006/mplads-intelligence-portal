@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { LoadingSkeleton } from '../components/LoadingSkeleton'
 import { FlagDossierModal, FlagDossierData } from '../components/FlagDossierModal'
@@ -9,27 +9,18 @@ import {
   StatCard,
   TierBadge,
   EmptyState,
-  SectionCard,
-  AgencyBadge
+  SectionCard
 } from '../components/shared'
-import { ANIMATION_CONFIG } from '../lib/animationConfig'
-import { useChartTheme } from '../hooks/useChartTheme'
 import {
   ChevronRight,
-  Landmark,
   FileCheck2,
   AlertTriangle,
   Globe2,
   Clock,
-  ShieldAlert,
   CheckCircle2,
-  Coins,
-  Percent,
   Search,
-  Building2,
   User,
   ArrowUpRight,
-  Filter,
   PlusCircle
 } from 'lucide-react'
 import {
@@ -39,10 +30,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  CartesianGrid,
-  PieChart,
-  Pie,
-  Cell
+  CartesianGrid
 } from 'recharts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { getConstituencySummary } from '../lib/allConstituenciesData'
@@ -200,7 +188,6 @@ export const ConstituencyDetail: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const acParam = searchParams.get('ac') || ''
   const [selectedAc, setSelectedAc] = useState<string>(acParam)
-  const chartTheme = useChartTheme()
 
   const [data, setData] = useState<any>(() => getSafeSessionConstituency(name))
   const [loading, setLoading] = useState(() => !getSafeSessionConstituency(name))
@@ -311,7 +298,6 @@ export const ConstituencyDetail: React.FC = () => {
   const totalWorks = summary.totalWorks || (summary.completedWorksCount + summary.remainedWorksCount)
   const completedWorks = summary.completedWorksCount || 0
   const remainedWorks = summary.remainedWorksCount || Math.max(0, totalWorks - completedWorks)
-  const completionRate = summary.completionRate || (totalWorks > 0 ? ((completedWorks / totalWorks) * 100).toFixed(1) : 0)
 
   const rawAssembliesList: any[] =
     Array.isArray(summary.assembly_segments) && summary.assembly_segments.length > 0
@@ -440,8 +426,6 @@ export const ConstituencyDetail: React.FC = () => {
     amountCr: Number((s.amount / 10000000).toFixed(2)),
     count: s.count
   }))
-
-  const PIE_COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#8B5CF6', '#EC4899', '#06B6D4']
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
@@ -977,7 +961,6 @@ export const ConstituencyDetail: React.FC = () => {
                     <tbody className="divide-y divide-[var(--border-primary)]">
                       {paginatedWorks.length > 0 ? (
                         paginatedWorks.map((w: any) => {
-                          const isComp = (w.status || '').toLowerCase().includes('completed')
                           return (
                             <tr key={w.work_id} className="hover:bg-[var(--surface-alt)]/60 transition-colors duration-100">
                               <td className="p-3.5 font-bold font-mono text-[var(--brand-primary)]">
