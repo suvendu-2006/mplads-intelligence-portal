@@ -68,7 +68,7 @@ export const BrowseStates: React.FC = () => {
           }
         }
       } catch (err) {
-        console.log('[SATARK] Using pre-calibrated 36 states data:', err)
+        if (import.meta.env.DEV) console.debug('[SATARK] Using pre-calibrated 36 states data:', err)
       }
     }
     syncBackendStates()
