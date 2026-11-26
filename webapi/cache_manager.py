@@ -12,17 +12,19 @@ def invalidate_all_aggregates():
     Clears all router-level and aggregator-level in-memory caches upon database mutations.
     """
     try:
-        from webapi.routers import flags, states, mps, districts, constituencies, entity_risks
+        from webapi.routers import flags, states, mps, districts, constituencies, entity_risks, national
         from webapi import aggregators
 
         flags._flags_cache.clear()
         states._states_cache.clear()
+        states._state_detail_cache.clear()
         mps._mps_cache.clear()
         mps._mp_detail_cache.clear()
         districts._districts_cache.clear()
         districts._district_detail_cache.clear()
         districts._districts_maps_cache = None
         constituencies._constituency_cache.clear()
+        national._cached_analytics = None
         entity_risks._LOCATION_STATE_MAP = None
         entity_risks._MP_STATE_MAP = None
         aggregators._CACHE.clear()

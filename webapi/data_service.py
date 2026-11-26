@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from functools import lru_cache
 from typing import Dict, Any, Optional
 from pathlib import Path
@@ -17,6 +18,8 @@ engine = create_engine(DB_URL, connect_args={"check_same_thread": False})
 
 @event.listens_for(engine, "connect")
 def set_sqlite_pragma(dbapi_connection, connection_record):
+    """Configure SQLite WAL, memory pragmas, and read-only enforcement on Vercel lambdas."""
+    cursor = None
     try:
         cursor = dbapi_connection.cursor()
         cursor.execute("PRAGMA journal_mode = WAL;")
@@ -26,9 +29,14 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA mmap_size = 268435456;")     # 256MB memory mapping
         if os.environ.get("VERCEL"):
             cursor.execute("PRAGMA query_only = 1;")        # read-only for serverless lambda
-        cursor.close()
-    except Exception:
-        pass
+    except Exception as exc:
+        logger.debug("SQLite PRAGMA initialization skipped: %s", exc)
+    finally:
+        if cursor is not None:
+            try:
+                cursor.close()
+            except Exception:
+                pass
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
