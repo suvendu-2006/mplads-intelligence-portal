@@ -268,7 +268,7 @@ export const ConstituencyDetail: React.FC = () => {
           return
         }
       } catch (err) {
-        console.log('API fetch failed, trying fallback:', err)
+        if (import.meta.env.DEV) console.debug('API fetch failed, trying fallback:', err)
       }
 
       // Resilient fallback with 100% real data

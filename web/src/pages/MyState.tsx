@@ -86,7 +86,7 @@ export const MyState: React.FC = () => {
           const json = await apiFetch(`/api/my-state?state=${encodeURIComponent(targetState)}`)
           if (json?.data) stateData = json.data
         } catch (e) {
-          console.log('apiFetch /api/my-state failed, trying direct state endpoint:', e)
+          if (import.meta.env.DEV) console.debug('apiFetch /api/my-state failed, trying direct state endpoint:', e)
         }
 
         if (!stateData) {

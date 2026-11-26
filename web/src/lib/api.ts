@@ -139,7 +139,7 @@ async function fetchAndCache(
       }
       return record
     } catch (e) {
-      console.log('[SATARK-CACHE] Failed to cache response:', e)
+      if (import.meta.env.DEV) console.debug('[SATARK-CACHE] Failed to cache response:', e)
     }
   }
   return response
@@ -203,7 +203,7 @@ export function initApiSync() {
         try {
           response = await originalFetch(input, modifiedInit)
         } catch (err) {
-          console.log('[SATARK-SYNC] Network error contacting API:', err)
+          if (import.meta.env.DEV) console.debug('[SATARK-SYNC] Network error contacting API:', err)
           throw err
         }
         return response
@@ -306,7 +306,7 @@ export function initApiSync() {
       try {
         result = await fetchPromise
       } catch (networkErr) {
-        console.log('[SATARK-SYNC] Network error contacting API:', networkErr)
+        if (import.meta.env.DEV) console.debug('[SATARK-SYNC] Network error contacting API:', networkErr)
         throw networkErr
       }
 
@@ -321,7 +321,7 @@ export function initApiSync() {
       // Transparent Session Auto-Healing with Mutex Deduplication
       // If the backend restarted or session expired (HTTP 403 / 401), re-sync with /api/switch-role and retry
       if ((response.status === 403 || response.status === 401) && user?.role && user.role !== 'viewer') {
-        console.log(`[SATARK-SYNC] Session invalid or server restarted. Auto-reconnecting role '${user.role}'...`)
+        if (import.meta.env.DEV) console.debug(`[SATARK-SYNC] Session invalid or server restarted. Auto-reconnecting role '${user.role}'...`)
         try {
           if (!activeTokenSyncPromise) {
             activeTokenSyncPromise = (async () => {
@@ -371,7 +371,7 @@ export function initApiSync() {
                   headers: new Headers(retryRes.headers),
                 })
               : (retryRes as Response)
-            console.log('[SATARK-SYNC] Session seamlessly re-synchronized with backend.')
+            if (import.meta.env.DEV) console.debug('[SATARK-SYNC] Session seamlessly re-synchronized with backend.')
           }
         } catch (reconnectErr) {
           console.error('[SATARK-SYNC] Auto-reconnect failed:', reconnectErr)
@@ -384,7 +384,7 @@ export function initApiSync() {
     return originalFetch(input, init)
   }
 
-  console.log('[SATARK-SYNC] Universal API Interceptor Active: 100% synchronized with SWR High-Speed Caching.')
+  if (import.meta.env.DEV) console.debug('[SATARK-SYNC] Universal API Interceptor Active: 100% synchronized with SWR High-Speed Caching.')
 }
 
 /**

@@ -11,7 +11,7 @@ try {
   warmupApiCache()
   initGlobalLinkPrefetcher()
 } catch (syncErr) {
-  console.log('[SATARK-INIT] Cache warmup warning:', syncErr)
+  console.warn('[SATARK-INIT] Cache warmup warning:', syncErr)
 }
 
 // Automatically reload page when a new deployment renders older cached chunk hashes obsolete
