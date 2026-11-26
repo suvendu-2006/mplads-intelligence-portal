@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091124" />
+      <stop offset="55%" stop-color="#11224D" />
+      <stop offset="100%" stop-color="#1D3B8B" />
+    </linearGradient>
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#93C5FD" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="shieldLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+    <linearGradient id="shieldRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="checkGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="goldGem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bgGrad)" />
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="none" stroke="url(#rimGrad)" stroke-width="1" />
+
+  <path d="M32 11.5 L15.5 17.5 V31.5 C15.5 41.8 22.8 49.4 32 52.8 Z" fill="url(#shieldLeft)" />
+  <path d="M32 11.5 L48.5 17.5 V31.5 C48.5 41.8 41.2 49.4 32 52.8 Z" fill="url(#shieldRight)" />
+
+  <path d="M23.5 32.5 L29.6 38.6 L41.5 25.5" fill="none" stroke="url(#checkGrad)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" />
+
+  <polygon points="32,14.8 34.4,18 32,21.2 29.6,18" fill="url(#goldGem)" />
+</svg>
