@@ -178,15 +178,58 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         return EnvelopeResponse(data=_district_detail_cache[c_key], meta=None, warnings=[])
 
     df = load_districts_csv()
-    match = df[df["district_nodal"].str.lower() == district_name.lower()]
+    dist_lower = district_name.strip().lower()
+    _DISTRICT_NODAL_ALIASES = {
+        "cuttack": "kataka",
+        "nayagarh": "nayagada",
+        "balasore": "baleshwar",
+        "keonjhar": "kendujhar",
+        "khordha": "khurda",
+        "gurugram": "gurgaon",
+        "prayagraj": "allahabad",
+        "ayodhya": "faizabad",
+        "bengaluru": "bangalore",
+        "bengaluru urban": "bangalore",
+        "mysuru": "mysore",
+        "mangaluru": "mangalore",
+        "kalaburagi": "gulbarga",
+        "belagavi": "belgaum",
+        "shivamogga": "shimoga",
+        "tumakuru": "tumkur",
+        "ballari": "bellary",
+        "vijayapura": "bijapur",
+        "chhatrapati sambhajinagar": "aurangabad",
+        "dharashiv": "osmanabad",
+        "ahilyanagar": "ahmednagar",
+        "cuddapah": "kadapa",
+        "ysr": "kadapa",
+        "ysr kadapa": "kadapa",
+        "sps nellore": "nellore",
+        "nuh": "mewat",
+        "pondicherry": "puducherry",
+        "ahmedabad": "ahmadabad",
+        "purba champaran": "purbi champaran",
+        "east champaran": "purbi champaran",
+        "west champaran": "paschim champaran",
+    }
+    alias_lower = _DISTRICT_NODAL_ALIASES.get(dist_lower)
+
+    match = df[df["district_nodal"].astype(str).str.strip().str.lower() == dist_lower]
+    if match.empty and alias_lower:
+        match = df[df["district_nodal"].astype(str).str.strip().str.lower() == alias_lower]
 
     if match.empty:
         # Check substring match in district_nodal
-        match = df[df["district_nodal"].str.contains(district_name, case=False, na=False)]
+        match = df[df["district_nodal"].astype(str).str.contains(district_name.strip(), case=False, na=False, regex=False)]
 
     if match.empty:
-        # Check if district_name is inside constituencies_covered
-        match = df[df["constituencies_covered"].str.contains(district_name, case=False, na=False)]
+        # Check SQLite direct district column before fuzzy constituency_covered fallback
+        direct_db = db.execute(
+            text("SELECT state, count(*) FROM works WHERE UPPER(district) = :d GROUP BY state"),
+            {"d": district_name.strip().upper()},
+        ).fetchone()
+        if not direct_db:
+            match = df[df["constituencies_covered"].astype(str).str.contains(district_name.strip(), case=False, na=False, regex=False)]
 
     if not match.empty:
         row = match.iloc[0]
@@ -238,16 +281,16 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
     anom_stat_row = db.execute(text(f"SELECT count(a.anomaly_id) FROM anomalies a JOIN works w ON a.work_id = w.work_id WHERE ({anom_clause})"), params).fetchone()
     true_anom_count = int(anom_stat_row[0] or 0)
 
-    # Sample works list from SQLite for display (capped at 250 for responsive UI)
+    # Works list from SQLite for display & complete assembly segment partitioning
     works_query = text(f"""
-        SELECT work_id, work_description, cost, category, mp_name, mp_constituency, status, completion_date, implementing_agency
+        SELECT work_id, work_description, cost, category, mp_name, mp_constituency, status, completion_date, implementing_agency, location
         FROM works
         WHERE ({cand_clause})
         ORDER BY cost DESC
-        LIMIT 250
+        LIMIT 1000
     """)
     works_rows = db.execute(works_query, params).fetchall()
-    
+
     works_list = [
         {
             "workId": r[0],
@@ -256,6 +299,8 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
             "category": r[3] or "Civil Works",
             "mpName": r[4] or "Constituency MP",
             "constituency": r[5] or d_name,
+            "district": d_name,
+            "location": r[9] or d_name,
             "status": "Completed" if "completed" in str(r[6] or "").lower() else "Recommended",
             "completionDate": str(r[7]) if r[7] else None,
             "implementingAgency": r[8] or f"District Magistrate / Collector, {d_name.title()}",
@@ -263,6 +308,13 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         }
         for r in works_rows
     ]
+
+    from webapi.services.assembly_service import get_assemblies_by_district
+    from webapi.services.assembly_segment_resolver import assign_segments_for_pc
+    dist_assemblies = get_assemblies_by_district(d_name, state=st_name, fallback_pcs=consts)
+    works_list, assembly_segments, unspecified_count = assign_segments_for_pc(
+        d_name, dist_assemblies, works_list, pc_state=st_name
+    )
 
     # Sample anomalies from SQLite (capped at 50 for display)
     anom_query = text(f"""
@@ -404,7 +456,10 @@ def get_district_detail(district_name: str, db: Session = Depends(get_db)):
         "anomalyCount": true_anom_count,
         "sampleAnomaliesCount": len(anomalies_list),
         "idaCount": len(idas_list),
-        "scope": scope_note
+        "scope": scope_note,
+        "assemblies": assembly_segments,
+        "assembly_segments": [dict(s) for s in assembly_segments],
+        "unspecifiedWorksCount": unspecified_count,
     }
 
     # Resolve linked MPs with their real database IDs and profiles

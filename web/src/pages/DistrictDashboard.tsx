@@ -32,14 +32,16 @@ import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { getDistrictSummary } from '../lib/allDistrictsData'
 import { useTranslation, translateState, toNativeDigits, translateConstituency, translateMP, translateDistrict } from '../lib/i18n'
 import { useToastStore } from '../store/useToastStore'
+import { fetchPrefetchedJson } from '../lib/speedPrefetch'
 
 export const DistrictDashboard: React.FC = () => {
   const { user, switchRole } = useStore()
   const { t, toNativeDigits: formatNum, lang } = useTranslation()
   const navigate = useNavigate()
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const { district } = useParams<{ district?: string }>()
   const stateParam = searchParams.get('state')
+  const acParam = searchParams.get('ac') || ''
 
   // Priority: URL route param OR user's assigned district if district_authority!
   const districtName = district || (user.role === 'district_authority' && user.district && user.district !== 'ALL' ? user.district : '')
@@ -78,8 +80,8 @@ export const DistrictDashboard: React.FC = () => {
   const [data, setData] = useState<any>(() => {
     try {
       if (!districtName) return null
-      const saved = (typeof window !== 'undefined' && localStorage.getItem(`cached_district_v2_${districtName}`)) ||
-                    (typeof window !== 'undefined' && sessionStorage.getItem(`cached_district_v2_${districtName}`))
+      const saved = (typeof window !== 'undefined' && localStorage.getItem(`cached_district_v3_${districtName}`)) ||
+                    (typeof window !== 'undefined' && sessionStorage.getItem(`cached_district_v3_${districtName}`))
       if (saved) return JSON.parse(saved)
     } catch {}
 
@@ -140,7 +142,7 @@ export const DistrictDashboard: React.FC = () => {
   const [loading, setLoading] = useState(() => {
     if (!districtName) return false
     try {
-      if (sessionStorage.getItem(`cached_district_v2_${districtName}`)) return false
+      if (sessionStorage.getItem(`cached_district_v3_${districtName}`)) return false
     } catch {}
     return !getDistrictSummary(districtName)
   })
@@ -174,24 +176,91 @@ export const DistrictDashboard: React.FC = () => {
   const [selectedMBWork, setSelectedMBWork] = useState<any | null>(null)
   const [verifiedMBWorks, setVerifiedMBWorks] = useState<number[]>([])
   const [worksStatusFilter, setWorksStatusFilter] = useState<'all' | 'recommended' | 'completed' | 'active'>('all')
+  const selectedAc = acParam
   const [worksSearch, setWorksSearch] = useState('')
   const [worksPage, setWorksPage] = useState(1)
   const [worksPageSize, setWorksPageSize] = useState<number | 'all'>(30)
 
-  const works = data?.works || []
+  const works = React.useMemo(() => (Array.isArray(data?.works) ? data.works : []), [data?.works])
   const anomalies = data?.anomalies || []
   const idas = data?.idas || []
   const mpsList = data?.mps || []
 
+  const UNSPECIFIED_SEGMENT = 'District-Wide / Unspecified'
+
+  const assemblySegments: any[] = React.useMemo(() => {
+    const raw =
+      Array.isArray(summary.assembly_segments) && summary.assembly_segments.length > 0
+        ? summary.assembly_segments
+        : (summary.assemblies || [])
+    const seen = new Set<string>()
+    return raw.filter((ac: any) => {
+      const k = String(ac?.ac_name || '').trim().toLowerCase()
+      if (!k || seen.has(k)) return false
+      seen.add(k)
+      return true
+    })
+  }, [summary.assembly_segments, summary.assemblies])
+
+  const { segmentCounts, unspecifiedCount } = React.useMemo(() => {
+    const counts: Record<string, number> = {}
+    assemblySegments.forEach((ac: any) => {
+      const k = String(ac.ac_name || '').trim().toLowerCase()
+      if (k) counts[k] = 0
+    })
+    let unspec = 0
+    if (works.length > 0) {
+      works.forEach((w: any) => {
+        const seg = typeof w.assembly_segment === 'string' ? w.assembly_segment.trim() : ''
+        const segLower = seg.toLowerCase()
+        if (segLower && segLower !== UNSPECIFIED_SEGMENT.toLowerCase() && segLower in counts) {
+          counts[segLower] += 1
+        } else {
+          unspec += 1
+        }
+      })
+    } else {
+      assemblySegments.forEach((ac: any) => {
+        const k = String(ac.ac_name || '').trim().toLowerCase()
+        if (k) counts[k] = Number(ac.count ?? 0)
+      })
+      unspec = Number(summary.unspecifiedWorksCount ?? 0)
+    }
+    return { segmentCounts: counts, unspecifiedCount: unspec }
+  }, [works, assemblySegments, summary.unspecifiedWorksCount])
+
+  const handleSelectAc = (acName: string) => {
+    const nextAc = selectedAc && selectedAc.toLowerCase() === acName.toLowerCase() ? '' : acName
+    setWorksPage(1)
+    setActiveTab('works')
+    const nextParams = new URLSearchParams(searchParams)
+    if (nextAc) {
+      nextParams.set('ac', nextAc)
+    } else {
+      nextParams.delete('ac')
+    }
+    setSearchParams(nextParams, { replace: true })
+  }
+
   const qClean = worksSearch.trim().toLowerCase()
-  const { filteredWorks, activeCount, completedCountInLedger, recommendedCountInLedger } = React.useMemo(() => {
+  const { acScopedWorks, filteredWorks, activeCount, completedCountInLedger, recommendedCountInLedger } = React.useMemo(() => {
     let act = 0
     let comp = 0
     let rec = 0
+    const scoped: any[] = []
     const filtered: any[] = []
+    const acTarget = selectedAc.trim().toLowerCase()
 
     for (let i = 0; i < works.length; i++) {
       const w = works[i]
+      if (acTarget) {
+        const wSeg = (typeof w.assembly_segment === 'string' && w.assembly_segment.trim())
+          ? w.assembly_segment.trim().toLowerCase()
+          : UNSPECIFIED_SEGMENT.toLowerCase()
+        if (wSeg !== acTarget) continue
+      }
+      scoped.push(w)
+
       const st = String(w.status || '').toLowerCase()
       const isComp = st.includes('completed')
       const isRec = st.includes('recommended')
@@ -199,8 +268,8 @@ export const DistrictDashboard: React.FC = () => {
       else if (isRec) rec++
       else act++
 
-      if (worksStatusFilter === 'completed' && !isComp) continue
       if (worksStatusFilter === 'recommended' && !isRec) continue
+      if (worksStatusFilter === 'completed' && !isComp) continue
       if (worksStatusFilter === 'active' && (isComp || isRec)) continue
 
       if (!qClean) {
@@ -213,14 +282,15 @@ export const DistrictDashboard: React.FC = () => {
       const mp = String(w.mpName || '').toLowerCase()
       const cat = String(w.category || '').toLowerCase()
       const agency = String(w.implementingAgency || w.implementing_agency || '').toLowerCase()
+      const seg = String(w.assembly_segment || '').toLowerCase()
 
-      if (wId.includes(qClean) || desc.includes(qClean) || mp.includes(qClean) || cat.includes(qClean) || agency.includes(qClean)) {
+      if (wId.includes(qClean) || desc.includes(qClean) || mp.includes(qClean) || cat.includes(qClean) || agency.includes(qClean) || seg.includes(qClean)) {
         filtered.push(w)
       }
     }
 
-    return { filteredWorks: filtered, activeCount: act, completedCountInLedger: comp, recommendedCountInLedger: rec }
-  }, [works, worksStatusFilter, qClean])
+    return { acScopedWorks: scoped, filteredWorks: filtered, activeCount: act, completedCountInLedger: comp, recommendedCountInLedger: rec }
+  }, [works, worksStatusFilter, qClean, selectedAc])
 
   const certifyMB = (workId: number) => {
     setVerifiedMBWorks((prev) => [...prev, workId])
@@ -242,25 +312,23 @@ export const DistrictDashboard: React.FC = () => {
       if (typeof window !== 'undefined') {
         try {
           sessionStorage.removeItem(`cached_district_${districtName}`)
-          hasCached = Boolean(sessionStorage.getItem(`cached_district_v2_${districtName}`))
+          sessionStorage.removeItem(`cached_district_v2_${districtName}`)
+          hasCached = Boolean(sessionStorage.getItem(`cached_district_v3_${districtName}`))
         } catch {}
       }
       if (!hasCached) {
         setLoading(true)
       }
       try {
-        const res = await fetch(`/api/districts/${encodeURIComponent(districtName)}`)
-        if (res.ok) {
-          const json = await res.json()
-          if (json.data) {
-            setData(json.data)
-            try {
-              localStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data))
-              sessionStorage.setItem(`cached_district_v2_${districtName}`, JSON.stringify(json.data))
-            } catch {}
-            setLoading(false)
-            return
-          }
+        const json = await fetchPrefetchedJson(`/api/districts/${encodeURIComponent(districtName)}`)
+        if (json?.data) {
+          setData(json.data)
+          try {
+            localStorage.setItem(`cached_district_v3_${districtName}`, JSON.stringify(json.data))
+            sessionStorage.setItem(`cached_district_v3_${districtName}`, JSON.stringify(json.data))
+          } catch {}
+          setLoading(false)
+          return
         }
       } catch (err) {
         console.error('Failed to load district report from API, synthesizing benchmark records:', err)
@@ -577,6 +645,85 @@ export const DistrictDashboard: React.FC = () => {
         />
       </div>
 
+      {/* Vidhan Sabha Assembly Segments Partition (All India Districts) */}
+      {(assemblySegments.length > 0 || unspecifiedCount > 0) && (
+        <div className="rounded-2xl p-4 bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-[var(--text-secondary)]">
+              <MapPin size={13} className="text-[var(--brand-primary)]" />
+              <span>Vidhan Sabha Assembly Segments ({formatNum(assemblySegments.length)})</span>
+              {selectedAc && (
+                <button
+                  onClick={() => handleSelectAc(selectedAc)}
+                  className="ml-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] text-[10px] font-bold normal-case hover:bg-[var(--brand-primary)]/20 transition cursor-pointer"
+                >
+                  <span>Filtered: {selectedAc}</span>
+                  <X size={11} />
+                </button>
+              )}
+            </div>
+            <span className="text-[11px] text-[var(--text-tertiary)]">
+              {works.length > 0 && summary.totalWorks > works.length
+                ? `Showing ${formatNum(works.length)} of ${formatNum(summary.totalWorks)} detailed records`
+                : 'Click any segment to filter district works'}
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {assemblySegments.map((ac: any) => {
+              const name = String(ac.ac_name || '')
+              const cnt = segmentCounts[name.toLowerCase()] ?? 0
+              const isSelected = selectedAc.toLowerCase() === name.toLowerCase()
+              return (
+                <button
+                  key={name}
+                  onClick={() => handleSelectAc(name)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition flex items-center gap-1.5 cursor-pointer ${
+                    isSelected
+                      ? 'bg-[var(--brand-primary)] text-white border-[var(--brand-primary)] shadow-xs'
+                      : 'bg-[var(--surface-alt)] text-[var(--text-primary)] border-[var(--border-primary)] hover:border-[var(--brand-primary)]'
+                  }`}
+                >
+                  <span>{name}</span>
+                  <span
+                    className={`px-1.5 py-0.5 rounded-md text-[10px] tabular-nums ${
+                      isSelected
+                        ? 'bg-white/20 text-white'
+                        : cnt > 0
+                        ? 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'
+                        : 'bg-[var(--surface-primary)] text-[var(--text-tertiary)]'
+                    }`}
+                  >
+                    {formatNum(cnt)}
+                  </span>
+                </button>
+              )
+            })}
+            {unspecifiedCount > 0 && (
+              <button
+                onClick={() => handleSelectAc(UNSPECIFIED_SEGMENT)}
+                title="District-wide schemes or works without a single localized Vidhan Sabha tag"
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition flex items-center gap-1.5 cursor-pointer ${
+                  selectedAc.toLowerCase() === UNSPECIFIED_SEGMENT.toLowerCase()
+                    ? 'bg-amber-600 text-white border-amber-600 shadow-xs'
+                    : 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/30 hover:border-amber-500'
+                }`}
+              >
+                <span>{UNSPECIFIED_SEGMENT}</span>
+                <span
+                  className={`px-1.5 py-0.5 rounded-md text-[10px] tabular-nums ${
+                    selectedAc.toLowerCase() === UNSPECIFIED_SEGMENT.toLowerCase()
+                      ? 'bg-white/20 text-white'
+                      : 'bg-amber-500/15 text-amber-700 dark:text-amber-300'
+                  }`}
+                >
+                  {formatNum(unspecifiedCount)}
+                </span>
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Navigation Tabs */}
       <div className="flex items-center gap-2 border-b border-[var(--border-primary)] pb-1 overflow-x-auto">
         <button
@@ -681,7 +828,7 @@ export const DistrictDashboard: React.FC = () => {
                             : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                         }`}
                       >
-                        All ({works.length})
+                        All ({acScopedWorks.length})
                       </button>
                       <button
                         onClick={() => {
@@ -790,6 +937,17 @@ export const DistrictDashboard: React.FC = () => {
                                     <div className="line-clamp-2 break-words text-xs">
                                       {w.work_description || w.workDescription || w.description || 'Civil Works Project'}
                                     </div>
+                                    {w.assembly_segment && (
+                                      <span
+                                        className={`mt-1 inline-block px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
+                                          w.assembly_segment === UNSPECIFIED_SEGMENT
+                                            ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20'
+                                            : 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border-[var(--brand-primary)]/20'
+                                        }`}
+                                      >
+                                        {w.assembly_segment}
+                                      </span>
+                                    )}
                                   </td>
                                   <td className="p-3 font-extrabold tabular-nums text-[var(--neutral-950)] text-right whitespace-nowrap">
                                     ₹{formatNum((w.cost / 100000).toFixed(2))} {t('unit.lakh')}

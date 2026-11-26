@@ -42,8 +42,19 @@ def get_constituency_detail(name: str, db: Session = Depends(get_db)):
                 ac_info = acs[0]
         if ac_info:
             target_pc = ac_info.get("pc_name", "").strip().upper()
+            target_state = ac_info.get("state", "").strip()
             if target_pc:
-                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc]
+                state_match = (
+                    df_mps[
+                        (df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc) &
+                        (df_mps["state"].astype(str).str.strip().str.lower() == target_state.lower())
+                    ]
+                    if target_state
+                    else df_mps.iloc[0:0]
+                )
+                match = state_match if not state_match.empty else df_mps[
+                    df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc
+                ]
                 if not match.empty:
                     matched_via_ac = ac_info
 
@@ -90,14 +101,17 @@ def get_constituency_detail(name: str, db: Session = Depends(get_db)):
 
     # Retrieve assembly segments
     from webapi.services.assembly_service import get_assemblies_by_pc
-    assemblies = get_assemblies_by_pc(pc_name)
+    from webapi.services.assembly_segment_resolver import assign_segments_for_pc
+    assemblies = get_assemblies_by_pc(pc_name, state=state_name)
 
-    # Query works from SQLite
+    # Query all works from SQLite for this PC (scoped by state to avoid cross-state PC collisions)
+    pc_filter = func.lower(Work.mp_constituency) == pc_name.lower()
+    if state_name:
+        pc_filter = pc_filter & (func.lower(Work.state) == state_name.lower())
     works_query = db.query(Work).filter(
-        (func.lower(Work.mp_constituency) == pc_name.lower()) |
-        (func.lower(Work.mp_name) == mp_name.lower())
+        pc_filter | (func.lower(func.trim(Work.mp_name)) == mp_name.strip().lower())
     )
-    db_works = works_query.limit(300).all()
+    db_works = works_query.all()
 
     # Calculate categories & agencies
     sector_map: Dict[str, Dict[str, Any]] = {}
@@ -155,6 +169,11 @@ def get_constituency_detail(name: str, db: Session = Depends(get_db)):
     red_flag_count = len(flags_list)
     red_flag_pct = round((red_flag_count / max(1, len(works_list))) * 100, 1)
 
+    # Deterministically partition works across Vidhan Sabha assembly segments
+    works_list, assembly_segments, unspecified_count = assign_segments_for_pc(
+        pc_name, assemblies, works_list, pc_state=state_name
+    )
+
     # Sort breakdowns
     sector_breakdown = sorted(list(sector_map.values()), key=lambda x: x["amount"], reverse=True)
     agency_breakdown = sorted(list(agency_map.values()), key=lambda x: x["amount"], reverse=True)[:10]
@@ -189,7 +208,9 @@ def get_constituency_detail(name: str, db: Session = Depends(get_db)):
                 "party": str(row.get("party", "")),
                 "house": str(row.get("house", "Lok Sabha"))
             },
-            "assemblies": assemblies
+            "assemblies": assembly_segments,
+            "assembly_segments": [dict(s) for s in assembly_segments],
+            "unspecifiedWorksCount": unspecified_count,
         },
         "sectorBreakdown": sector_breakdown,
         "agencyBreakdown": agency_breakdown,

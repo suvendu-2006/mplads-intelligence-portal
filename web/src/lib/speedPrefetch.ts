@@ -10,6 +10,44 @@
 
 const PREFETCHED_ROUTES = new Set<string>()
 const PREFETCHED_APIS = new Set<string>()
+const PREFETCH_JSON_TTL_MS = 5 * 60 * 1000
+const MAX_PREFETCH_JSON_CACHE = 60
+const PREFETCH_JSON_CACHE = new Map<string, { ts: number; data?: any; promise?: Promise<any> }>()
+
+function primeJsonFetch(url: string): Promise<any> {
+  const now = Date.now()
+  const existing = PREFETCH_JSON_CACHE.get(url)
+  if (existing && now - existing.ts < PREFETCH_JSON_TTL_MS) {
+    if (existing.data !== undefined) return Promise.resolve(existing.data)
+    if (existing.promise) return existing.promise
+  }
+
+  const p = fetch(url)
+    .then(async (res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      const json = await res.json()
+      PREFETCH_JSON_CACHE.set(url, { ts: Date.now(), data: json })
+      if (PREFETCH_JSON_CACHE.size > MAX_PREFETCH_JSON_CACHE) {
+        const oldestKey = PREFETCH_JSON_CACHE.keys().next().value
+        if (oldestKey) PREFETCH_JSON_CACHE.delete(oldestKey)
+      }
+      return json
+    })
+    .catch((err) => {
+      PREFETCH_JSON_CACHE.delete(url)
+      throw err
+    })
+
+  PREFETCH_JSON_CACHE.set(url, { ts: now, promise: p })
+  return p
+}
+
+/**
+ * Fetch JSON while reusing in-flight or recently completed hover/idle prefetch responses.
+ */
+export function fetchPrefetchedJson(url: string): Promise<any> {
+  return primeJsonFetch(url)
+}
 
 // Route component loaders with all canonical aliases
 export const ROUTE_LOADERS: Record<string, () => Promise<any>> = {
@@ -106,11 +144,6 @@ function prefetchApiForPath(path: string) {
     if (mpMatch) {
       const mpId = decodeURIComponent(mpMatch[1])
       apiUrl = `/api/mps/${encodeURIComponent(mpId)}`
-      const worksUrl = `/api/mps/${encodeURIComponent(mpId)}/works?page=1&page_size=30`
-      if (!PREFETCHED_APIS.has(worksUrl)) {
-        PREFETCHED_APIS.add(worksUrl)
-        fetch(worksUrl).catch(() => {})
-      }
     }
 
     const distMatch = path.match(/^\/districts?\/([^/]+)/)
@@ -128,7 +161,7 @@ function prefetchApiForPath(path: string) {
 
   if (apiUrl && !PREFETCHED_APIS.has(apiUrl)) {
     PREFETCHED_APIS.add(apiUrl)
-    fetch(apiUrl).catch(() => {})
+    primeJsonFetch(apiUrl).catch(() => {})
   }
 }
 
@@ -168,15 +201,15 @@ export function initGlobalLinkPrefetcher() {
     const queue = [
       () => {
         import('../pages/BrowseStates').catch(() => {})
-        fetch('/api/states?sort=red_pct&order=desc').catch(() => {})
+        primeJsonFetch('/api/states?sort=red_pct&order=desc').catch(() => {})
       },
       () => {
         import('../pages/BrowseMPs').catch(() => {})
-        fetch('/api/mps?page=1&page_size=50&sort=allocated&order=desc').catch(() => {})
+        primeJsonFetch('/api/mps?page=1&page_size=50&sort=allocated&order=desc').catch(() => {})
       },
       () => {
         import('../pages/DistrictDashboard').catch(() => {})
-        fetch('/api/districts?page=1&page_size=50&sort=total_works&order=desc').catch(() => {})
+        primeJsonFetch('/api/districts?page=1&page_size=50&sort=total_works&order=desc').catch(() => {})
       },
       () => {
         import('../pages/StateDetail').catch(() => {})

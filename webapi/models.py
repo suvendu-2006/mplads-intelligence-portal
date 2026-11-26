@@ -200,6 +200,8 @@ class MPWorkItem(BaseModel):
     cost: float
     category: Optional[str] = None
     district: Optional[str] = None
+    location: Optional[str] = None
+    assembly_segment: Optional[str] = None
     implementing_agency: Optional[str] = None
     implementingAgency: Optional[str] = None
     status: str

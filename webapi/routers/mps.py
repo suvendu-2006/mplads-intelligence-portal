@@ -207,11 +207,22 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         ac_info = get_mp_by_assembly_name(id)
         if ac_info:
             target_pc = ac_info.get("pc_name", "").strip().upper()
+            target_state = ac_info.get("state", "").strip()
             target_mp_id = ac_info.get("mp_id", "").strip()
             if target_mp_id and target_mp_id != "vacant":
                 match = df_mps[df_mps["id"].astype(str) == target_mp_id]
             if match.empty and target_pc:
-                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc]
+                state_match = (
+                    df_mps[
+                        (df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc) &
+                        (df_mps["state"].astype(str).str.strip().str.lower() == target_state.lower())
+                    ]
+                    if target_state
+                    else df_mps.iloc[0:0]
+                )
+                match = state_match if not state_match.empty else df_mps[
+                    df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc
+                ]
             if not match.empty:
                 matched_via_ac = ac_info
 
@@ -222,11 +233,22 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         if ac_results:
             first_ac = ac_results[0]
             target_pc = first_ac.get("pc_name", "").strip().upper()
+            target_state = first_ac.get("state", "").strip()
             target_mp_id = first_ac.get("mp_id", "").strip()
             if target_mp_id and target_mp_id != "vacant":
                 match = df_mps[df_mps["id"].astype(str) == target_mp_id]
             if match.empty and target_pc:
-                match = df_mps[df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc]
+                state_match = (
+                    df_mps[
+                        (df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc) &
+                        (df_mps["state"].astype(str).str.strip().str.lower() == target_state.lower())
+                    ]
+                    if target_state
+                    else df_mps.iloc[0:0]
+                )
+                match = state_match if not state_match.empty else df_mps[
+                    df_mps["constituency"].astype(str).str.strip().str.upper() == target_pc
+                ]
             if not match.empty:
                 matched_via_ac = first_ac
 
@@ -277,8 +299,12 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
     }
 
     from webapi.services.assembly_service import get_assemblies_by_pc
+    from webapi.services.assembly_segment_resolver import assign_segments_for_pc
     mp_const_name = str(row.get("constituency", "")).strip().upper()
-    all_acs_in_pc = get_assemblies_by_pc(mp_const_name)
+    state_str = str(row.get("state", "")).strip()
+    house_str = str(row.get("house", "")).strip().lower()
+    is_rs = "rajya" in house_str or "rajya sabha" in mp_const_name.lower() or mp_const_name.lower() in ["sitting rajya sabha", "nominated"]
+    all_acs_in_pc = [] if is_rs else get_assemblies_by_pc(mp_const_name, state=state_str)
     
     warnings = []
     if matched_via_ac:
@@ -318,20 +344,19 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         summary_dict["unspentAmount"] = round(summary_dict["allocatedAmount"] - summary_dict["totalExpenditure"], 2)
 
     constituency_str = str(row.get("constituency", "")).strip()
-    state_str = str(row.get("state", "")).strip()
 
-    house_str = str(row.get("house", "")).strip().lower()
-    is_rs = "rajya" in house_str or "rajya sabha" in constituency_str.lower() or constituency_str.lower() in ["sitting rajya sabha", "nominated"]
-
-    # Query works matching by MP name OR by constituency district in state (Lok Sabha only)
-    name_filter = func.lower(Work.mp_name) == mp_name.lower()
+    # Query works matching by MP name OR by constituency/district in state (Lok Sabha only)
+    name_filter = func.lower(func.trim(Work.mp_name)) == mp_name.strip().lower()
     if not is_rs and constituency_str and state_str and constituency_str.lower() not in ["sitting rajya sabha", "rajya sabha", "nominated"]:
-        geo_filter = (func.lower(Work.district) == constituency_str.lower()) & (func.lower(Work.state) == state_str.lower())
+        geo_filter = (
+            (func.lower(Work.mp_constituency) == constituency_str.lower()) |
+            (func.lower(Work.district) == constituency_str.lower())
+        ) & (func.lower(Work.state) == state_str.lower())
         work_query_filter = name_filter | geo_filter
     else:
         work_query_filter = name_filter
 
-    db_works = db.query(Work).filter(work_query_filter).order_by(Work.cost.desc()).limit(150).all()
+    db_works = db.query(Work).filter(work_query_filter).order_by(Work.cost.desc()).limit(1000).all()
     work_ids = [w.work_id for w in db_works]
 
     # Flags for these works
@@ -343,8 +368,23 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
         ).group_by(Anomaly.work_id).all()
         flag_counts = {wid: cnt for wid, cnt in anom_counts}
 
+    raw_works_for_seg = [
+        {
+            "work_description": w.work_description or "",
+            "location": w.location or "",
+            "district": w.district or constituency_str,
+            "implementing_agency": w.implementing_agency or "",
+        }
+        for w in db_works
+    ]
+    _, assembly_segments, unspecified_count = assign_segments_for_pc(
+        mp_const_name, all_acs_in_pc, raw_works_for_seg, pc_state=state_str
+    )
+    summary_dict["assembly_segments"] = assembly_segments
+    summary_dict["unspecifiedWorksCount"] = unspecified_count
+
     work_items = []
-    for w in db_works:
+    for w, seg_w in zip(db_works, raw_works_for_seg):
         fc = flag_counts.get(w.work_id, 0)
         is_done = "complete" in (w.status or "").lower()
         del_days = 0 if is_done else int((w.work_id * 17) % 65 + 15)
@@ -358,6 +398,8 @@ def get_mp_detail(id: str, db: Session = Depends(get_db)):
             cost=float(w.cost or 0.0),
             category=w.category or "Public Infrastructure",
             district=w.district or constituency_str,
+            location=w.location or constituency_str,
+            assembly_segment=seg_w["assembly_segment"],
             implementing_agency=w.implementing_agency or "District Authority",
             implementingAgency=w.implementing_agency or "District Authority",
             status=w.status or "completed",

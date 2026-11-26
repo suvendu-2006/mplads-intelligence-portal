@@ -1,191 +1,88 @@
-# SATARK • MPLADS (सतर्क)
+# SATARK — MPLADS Public Fund Tracking & Audit Portal
 
-<div align="center">
-  <p><strong>National Forensic Intelligence, Sovereign Surveillance &amp; Decision-Intelligence Platform</strong></p>
-  <p><em>Autonomous Multi-Tiered Anomaly Detection (D1&ndash;D15) &bull; Real-Time Fund Reconciliation &bull; Public Integrity Command Center</em></p>
-</div>
+SATARK helps citizens, journalists, researchers, and government auditors see how **MPLADS** (Members of Parliament Local Area Development Scheme) money is spent across India.
 
-<br />
-
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Auditing_Engine-Production_Ready-success?style=for-the-badge)]()
-
-> **Project SATARK** is an enterprise-grade national surveillance, forensic anomaly detection, and decision-intelligence platform engineered for India's **Member of Parliament Local Area Development Scheme (MPLADS)**. 
-> 
-> The platform continuously monitors and audits over **₹14,700+ Crore** in public capital allocations across **36 States & Union Territories**, **543 Lok Sabha Constituencies**, **245 Rajya Sabha MPs**, and **780+ Nodal Districts**.
+Every Member of Parliament receives annual public funds to build schools, roads, drinking water facilities, community halls, and health infrastructure in their area. This project brings official spending records together in one searchable website and automatically flags unusual spending patterns for human review.
 
 ---
 
-## System Architecture
+## What This Project Covers
 
-SATARK is built on an asynchronous, decoupled 5-tier architecture that bridges raw administrative datasets with high-speed forensic surveillance and decision intelligence:
-
-```
-┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                         DATA SOURCES & CRYPTOGRAPHIC INGESTION LAYER                         │
-│   MoSPI / e-SAKSHI Portals • State Summaries • District Ledgers • CPWD Schedule of Rates     │
-│                     (Automated SHA-256 Checksumming & Idempotent ETL)                        │
-└──────────────────────────────────────────────┬───────────────────────────────────────────────┘
-                                               │
-                                               ▼
-┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                        CANONICAL RELATIONAL DATABASE LAYER (SQLAlchemy)                      │
-│   Works • Anomalies • EntityRisks • Tenders • Contractors • Vouchers • Inspections • Labels  │
-│                   (PostgreSQL Production • SQLite WAL 256MB Memory-Mapped)                   │
-└──────────────────────────────────────────────┬───────────────────────────────────────────────┘
-                                               │
-                                               ▼
-┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                      THE FORENSIC DETECTION & MACHINE LEARNING BRAIN                         │
-│   15 Statutory Detectors (D1-D15) ──► 53 Tabular Features ──► HistGradientBoosting (Calib)   │
-│             (Isolation Forest • Benford's Law • TF-IDF Cosine • CPWD Overruns)               │
-└──────────────────────────────────────────────┬───────────────────────────────────────────────┘
-                                               │
-                                               ▼
-┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                    GOVERNANCE, DUAL-REVIEW QUEUE & HIGH-SPEED API LAYER                      │
-│   Priority Action Tiers (Audit Now / Review / Clean) • RBAC (5 Roles) • FastAPI (<50ms)      │
-└──────────────────────────────────────────────┬───────────────────────────────────────────────┘
-                                               │
-                                               ▼
-┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   PRESENTATION SURFACES                                      │
-│    Streamlit Forensic Workbench (app.py)    •    React 18 / Vite National Portal (web/)      │
-└──────────────────────────────────────────────────────────────────────────────────────────────┘
-```
+- **36** States and Union Territories
+- **788** Members of Parliament (543 Lok Sabha and 245 Rajya Sabha)
+- **735** Nodal Districts
+- **4,130** Vidhan Sabha (Assembly) Segments
+- **56,898** detailed public works records
+- **₹11,764+ Crore** in tracked public allocations
 
 ---
 
-## 📂 Systematic Repository Layout
+## What You Can Do on the Portal
 
-The repository is organized following clean architectural separation of concerns:
+- **National, State, and District Views:** Track total funds allocated, money spent, unspent balance, and project completion rates anywhere in India.
+- **MP and Constituency Profiles:** Open any Member of Parliament or Parliamentary Constituency to inspect every sanctioned and completed project, implementing agency, and cost breakdown.
+- **Vidhan Sabha Segment Filtering:** Inside any Constituency, MP, or District page, click a Vidhan Sabha segment pill to see only works in that assembly area. Works without a specific locality tag in official records are grouped clearly under **District-Wide / Unspecified** so counts always add up to 100%.
+- **Automated Audit Alerts (15 Checks):** Spot duplicate projects, unusually high project costs, year-end spending spikes, chronic delays, or vague descriptions.
+- **Interactive India Map:** Explore spending and completion metrics visually across states, districts, and constituencies.
+- **Multi-Language & Role Views:** Switch between English and Indian regional languages, or preview how the dashboard appears to citizens, District Authorities, State Nodal Officers, and MoSPI officials.
 
-```
+---
+
+## How the 15 Audit Checks Work
+
+Automated checks scan public works records to highlight cases worth checking by a human auditor. An alert is a review lead, not proof of wrongdoing.
+
+| Check | Name | What It Looks For |
+| :--- | :--- | :--- |
+| D1 | Unusual Pattern Check | Projects whose cost, timeline, and payment values stand out sharply from similar works. |
+| D2 | Duplicate Work Check | Similar or identical work descriptions funded more than once. |
+| D3 | Cost Overrun Check | Sanctioned costs that are much higher than standard CPWD government engineering rates. |
+| D4 | Missing Payment Check | Projects marked completed without matching disbursement records. |
+| D5 | Split Project Check | Multiple smaller sanctions placed just below approval cost thresholds. |
+| D6 | Execution Delay Check | Projects that remain incomplete well past standard completion timelines. |
+| D7 | Year-End Rush Check | Large clusters of approvals rushed through in the final week of March. |
+| D8 | Bulk Certification Check | Many major works signed off on the exact same calendar day. |
+| D9 | Number Pattern Check | Unusual digit patterns or overly rounded estimates in cost figures. |
+| D10 | Vague Description Check | Short or unclear project descriptions missing location, unit, or asset details. |
+| D11 | Cost-Size Sanity Check | Costs that do not fit the type of asset (for example, an unusually expensive small fixture). |
+| D12 | Missing Document Check | Completed projects missing measurement books or verification records. |
+| D13 | Agency Risk Summary | High alert concentration at a specific implementing agency or collectorate. |
+| D14 | Spending Concentration | Heavy skew toward a single category or narrow pattern in an MP portfolio. |
+| D15 | Repeated Exact Pricing | Different projects sanctioned for the exact same rupee amount repeatedly. |
+
+---
+
+## Project Structure
+
+```text
 SIH-DATA/
-│
-├── webapi/                     # High-Performance FastAPI REST Backend ([webapi/README.md](webapi/README.md))
-│   ├── routers/                # Endpoint routers (national, states, mps, districts, flags, map, roles)
-│   ├── services/               # Assembly & GIS data services
-│   ├── aggregators.py          # In-memory TTL aggregation caches (<50ms latency)
-│   ├── data_service.py         # SQLite WAL connection tuning & CSV loaders
-│   └── main.py                 # ASGI application entrypoint & startup warmup
-│
-├── mplads_fraud_detection/     # Core Forensic Fraud Engine ([mplads_fraud_detection/README.md](mplads_fraud_detection/README.md))
-│   ├── detectors/              # 15 Statutory Forensic Screening Detectors (D1 to D15)
-│   ├── foundation/             # Canonical SQLAlchemy models, DB sessions & ETL pipeline
-│   ├── features/               # 53 Tabular feature extraction pipeline
-│   ├── models/                 # Gradient boosting classifiers & probability calibration (ECE)
-│   ├── review_queue/           # Human-in-the-loop priority router & dual-review adjudication
-│   ├── auth/                   # Role-Based Access Control (RBAC) & admin bootstrapping
-│   ├── monitoring/             # Feature drift detection & model health monitors
-│   └── pipeline.py             # Master orchestrator executing D1-D15 end-to-end
-│
-├── web/                        # React 18 + Vite Interactive Frontend ([web/README.md](web/README.md))
-│   ├── src/components/         # Reusable surveillance UI components & charts
-│   ├── src/pages/              # National Dashboard, GIS Map, MP Dossier, State & District consoles
-│   ├── src/lib/                # API client, internationalization (i18n), design palette
-│   └── package.json            # Node.js dependencies
-│
-├── docs/                       # Operational, Technical & Legal Documentation ([docs/README.md](docs/README.md))
-│   ├── SATARK_MPLADS_15_Detectors_Guide.pdf          # Official 15-detector forensic manual
-│   ├── SATARK_MPLADS_15_Detectors_Specification.docx  # Editable Word specification
-│   ├── QUICK_START_GUIDE.md    # 5-minute onboarding & local execution guide
-│   ├── USER_GUIDE.md           # Dashboard user manual & role privileges
-│   ├── DEPLOYMENT.md           # Docker, PostgreSQL & production configuration
-│   ├── AUDIT_PROTOCOL.md       # Standard operating procedure for field auditors
-│   ├── ETHICS.md               # Constitutional non-discrimination & fairness policy
-│   └── README.md               # Master documentation index
-│
-├── scripts/                    # Automation, Seeding & Utilities ([scripts/README.md](scripts/README.md))
-│   ├── generate_frontend_real_data.py # Ingests MoSPI & ADR records to populate canonical frontend data
-│   ├── generate_detectors_docx.py # Compiles the 15-detector statutory forensic manual
-│   ├── seed_all_detectors.py   # Populates 100% anomaly coverage across D1-D15
-│   ├── backfill_implementing_agencies.py  # Backfills IDA names from MoSPI datasets
-│   ├── sync_all_official_data.py # Syncs local data with e-SAKSHI portal exports
-│   └── README.md               # Master script catalogue
-│
-├── tests/                      # Automated Testing Pyramid ([tests/README.md](tests/README.md))
-│   ├── acceptance_tests.sh     # Master 16-gate production acceptance test suite
-│   ├── test_data_contract.py   # Reconciles national, state, MP, and district data contracts
-│   ├── test_api.py             # 100% contract validation for all REST endpoints
-│   ├── test_idempotency.py     # Mathematical proof of zero duplicate counting
-│   ├── test_rbac_server_side.py# Security boundary & role-authorization tests
-│   └── test_label_approval_workflow.py # Dual-review & cryptographic evidence verification
-│
-├── data/                       # Authoritative Master & Archival Datasets ([data/README.md](data/README.md))
-│   ├── 01_Overview_and_National_Summary/ # Expenditure & sector national totals
-│   ├── 02_States_and_UTs/      # All 36 State & UT aggregated summaries
-│   ├── 03_MPs_Data/            # 788 MP profiles & Lok Sabha/Rajya Sabha dossiers
-│   ├── 04_Constituencies/      # Parliamentary Constituency metrics & allocations
-│   ├── 05_Analytics_and_Trends/# Historical trends, year-over-year analytics
-│   ├── 06_Works/               # Master works datasets & CPWD benchmark rates
-│   ├── 07_Expenditures/        # Financial breakdown & treasury disbursements
-│   ├── 08_Spatial_Boundaries/  # GeoJSON spatial boundaries (Districts & PCs)
-│   ├── 09_MP_Demographics_ADR/ # ADR Myneta affidavits, assets & disclosures
-│   ├── 10_District_Level_Data/ # 730+ Nodal District administrative ledgers
-│   ├── MPLADS_Master_Summary.xlsx # Comprehensive analytical workbook (10+ sheets)
-│   ├── all_districts_mplads_summary.csv # Nodal District metrics
-│   ├── all_mps_summary.csv     # Canonical MP summary
-│   ├── works_completed.csv     # Official completed works
-│   └── expenditures.csv        # Detailed expenditure records
-│
-├── api/                        # Production Serverless Functions & Edge Bundle
-│   ├── index.py                # ASGI Edge entrypoint with on-demand DB hydration
-│   ├── mplads_dev.db.gz        # High-compression SQLite database image
-│   └── data/                   # Bundled edge data assets (<10MB)
-│
-├── app.py                      # Streamlit Forensic Auditor Workbench & Live Console
-├── Dockerfile                  # Hardened multi-stage container configuration
-├── docker-compose.yml          # Production stack orchestration
-├── docker-entrypoint.sh        # Container initialization & migration hook
-├── check_env.sh                # Production environment validation script
-├── vercel.json                 # Serverless edge deployment configuration
-├── requirements.txt            # Python web dependencies
-├── requirements-full.txt       # Full ML & forensic audit dependencies
-├── requirements.lock           # Cryptographically pinned lockfile
-├── LICENSE                     # MIT Open Source License
-└── alembic.ini                 # Alembic database migration configuration
+├── web/                    Frontend website built with React, TypeScript, and Vite
+├── webapi/                 Backend REST API built with FastAPI
+├── mplads_fraud_detection/ Core audit engine, 15 detectors, database models, and access control
+├── api/                    Serverless entrypoint and compressed SQLite database image
+├── data/                   Official MoSPI summaries, spatial boundaries, and sub-district maps
+├── scripts/                Data sync, boundary processing, and database build scripts
+├── tests/                  Automated tests and 16-gate production verification script
+├── docs/                   Setup guides, user manuals, audit protocol, and ethics policy
+└── app.py                  Optional Streamlit investigator workbench
 ```
 
----
-
-## 🔍 The 15 Statutory Forensic Detectors
-
-SATARK deploys an ensemble of 15 automated screening detectors grounded in the **General Financial Rules (GFR 2017)**, **CPWD Schedule of Rates 2023**, and **CAG Auditing Standards**:
-
-| ID | Detector Name | Legal / Statutory Basis | Vulnerability Detected |
-|:---|:---|:---|:---|
-| **D1** | **Multivariate Outlier Screen** | Isolation Forest Spatial Density | High-dimensional anomalies across cost, time, and payment ratios. |
-| **D2** | **Duplicate Scope Detection** | MPLADS Guidelines 2023 (Clause 3.4) | Cross-year double funding of identical works via TF-IDF Cosine Similarity > 0.85. |
-| **D3** | **CPWD Cost Overrun Analysis** | CPWD Schedule of Rates 2023 | Sanctioned costs exceeding official civil engineering benchmarks by > 20%. |
-| **D4** | **Ghost Works & Payments** | MPLADS Guidelines 2016 (Clause 8.3) | Works officially marked completed with zero treasury disbursements. |
-| **D5** | **Tender Splitting (Smurfing)** | GFR 2017 Rule 157 | Slicing projects just below ₹50 Lakh / ₹10 Lakh statutory approval limits. |
-| **D6** | **Execution Delay Violation** | Mandatory 365-Day Completion Norm | Chronically stalled, delayed, or abandoned infrastructure projects. |
-| **D7** | **March Rush Timing Anomaly** | Public Accounts Committee Directives | Frantic budget dumping and rushed approvals between March 25 and 31. |
-| **D8** | **Same-Day Bulk Certification** | State Vigilance Anti-Batch Norms | Engineers paper-certifying >5 major works on the identical calendar date. |
-| **D9** | **Benford's Law Forensic Screen** | Nigrini Forensic Accounting Standards | Fabricated numbers, unnatural digit distributions, and excess round estimates. |
-| **D10**| **Vague Scope Ambiguity** | CAG Performance Audit Standards | Descriptions under 15 characters lacking location, units, or physical asset type. |
-| **D11**| **Category Plausibility Bounds**| MoSPI Engineering Boundaries | Engineering absurdities (e.g. ₹50 Lakh borewell or ₹15,000 hospital). |
-| **D12**| **Documentary Verification Gap**| e-SAKSHI Digital Audit Mandate | Completed works lacking Measurement Books (MB) or Geotagged Photos. |
-| **D13**| **IDA Portfolio Risk Profiling**| District Governance Benchmarks | Composite institutional risk index (0–100) for District Collectorates. |
-| **D14**| **MP Portfolio Concentration** | Public Allocation Guidelines | Sectoral over-concentration and fund velocity per elected representative. |
-| **D15**| **Copy-Paste Pricing Matching** | CAG Report on Formulaic Approvals | Repetitive, identical-rupee sanctions across distinct civil projects. |
+For deeper technical notes in specific areas, see:
+- [Frontend Guide](web/README.md)
+- [Backend API Guide](webapi/README.md)
+- [Audit Engine Guide](mplads_fraud_detection/README.md)
+- [Dataset Documentation](data/README.md)
+- [Documentation Index](docs/README.md)
 
 ---
 
-## 🚀 Quick Start Guide
+## How to Run Locally
 
-### Prerequisites
-- **Python**: 3.11 or 3.12
-- **Node.js**: 18+ (for React frontend)
-- **SQLite3** or **PostgreSQL**
+### Requirements
+- **Python** 3.11 or 3.12
+- **Node.js** 18 or higher
 
-### 1. Clone & Set Up Python Environment
+### 1. Download the repository and set up Python
 ```bash
 git clone https://github.com/suvendu-2006/mplads-intelligence-portal.git
 cd mplads-intelligence-portal
@@ -195,63 +92,95 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Launch the High-Performance REST API
+### 2. Unpack the local database (needed on a fresh clone)
+The repository stores the SQLite database in compressed form so it stays lightweight on GitHub. Unpack it once before starting the backend:
 ```bash
-# Starts FastAPI with in-memory warmup on http://localhost:8000
-uvicorn webapi.main:app --host 0.0.0.0 --port 8000 --reload
+gzip -dc api/mplads_dev.db.gz > mplads_dev.db
 ```
-* Interactive API Documentation (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
-* Health Check: [http://localhost:8000/api/meta/health](http://localhost:8000/api/meta/health)
 
-### 3. Launch the Streamlit Forensic Command Center
+### 3. Start the Backend API
 ```bash
-streamlit run app.py
+uvicorn webapi.main:app --host 127.0.0.1 --port 8000 --reload
 ```
-* Opens the investigator workbench on [http://localhost:8501](http://localhost:8501)
+- API health check: `http://127.0.0.1:8000/api/meta/health`
+- Interactive API docs: `http://127.0.0.1:8000/docs`
 
-### 4. Launch the React National Surveillance Portal
+### 4. Start the Website
+Open a second terminal in the project folder:
 ```bash
 cd web
 npm install
 npm run dev
 ```
-* Opens the interactive GIS dashboard on [http://localhost:5173](http://localhost:5173)
+- Open `http://127.0.0.1:5173` in your browser.
 
-### 5. Run Automated Verification Tests
+### Optional: Docker or Streamlit
+- **Run everything with Docker:** `docker compose up -d --build`
+- **Run Streamlit workbench:** `streamlit run app.py` (opens at `http://localhost:8501`)
+
+---
+
+## Running Tests
+
 ```bash
-# Run API and endpoint contract tests
-pytest tests/test_api.py -v
+# Run automated backend, API, and nationwide segment checks
+pytest -v tests/ -m "not slow"
 
-# Run mathematical idempotency tests
-pytest tests/test_idempotency.py -v
+# Run the 16-gate security and data integrity checklist
+bash tests/acceptance_tests.sh
+
+# Check and build the frontend
+cd web && npx tsc --noEmit && npm run build
 ```
 
 ---
 
-## 🐳 Docker Deployment
+## How the System Works (Architecture)
 
-The platform is fully containerized using a hardened multi-stage Docker build:
+Everything in SATARK is organized so that non-technical visitors get fast answers while auditors and engineers can trace every number back to its source. Below is the full architecture, ordered from the parts users see first down to the data pipelines and servers running behind the scenes.
 
-```bash
-# Build and run using Docker Compose
-docker compose up -d --build
+### High-Level Flow (5 Steps)
 
-# Verify container health
-curl http://localhost:8000/api/meta/health
-```
+1. **Public Portal (`web/`)** — Citizens and auditors open the React web app, search any State, District, Constituency, MP, or Vidhan Sabha segment, and explore charts, maps, and work ledgers.
+2. **FastAPI & Edge Layer (`webapi/`, `api/index.py`, `vercel.json`)** — Requests hit cached FastAPI endpoints. In serverless production, compressed data unpacks into memory/temporary storage in milliseconds while edge headers serve repeat reads quickly.
+3. **Assembly Segment Resolver (`webapi/services/assembly_segment_resolver.py`)** — Works in a district or parliamentary constituency are deterministically sorted into their Vidhan Sabha segments (or `District-Wide / Unspecified`) using explicit labels and verified sub-district maps.
+4. **Audit Engine & Access Control (`mplads_fraud_detection/`)** — Fifteen statutory checks (D1–D15) scan project records, score agency and portfolio risk, enforce role-based access control, and route findings through a dual-review queue.
+5. **Data Storage & Pipelines (`scripts/`, `data/`, `mplads_dev.db`, `migrations/`)** — Official MoSPI/e-SAKSHI records, ADR affidavits, CPWD engineering benchmarks, and ECI boundary files are cleaned, verified, and stored in SQLite (local/edge) or PostgreSQL (production).
+
+### Layer-by-Layer Breakdown
+
+#### 1. User Interface Layer (`web/` and `app.py`)
+- **React Web Portal (`web/`):** Built with React 19, TypeScript, Vite, Tailwind CSS, Recharts, and Leaflet. National, state, and MP summary chunks are bundled for quick opening, while interactive tabs let users filter projects by status, implementing agency, search keywords, and Vidhan Sabha assembly segment. Multi-language support (`web/src/lib/i18n.ts`) renders numbers and labels across English and Indian regional languages.
+- **Investigator Workbench (`app.py`):** An optional Streamlit console tailored for internal audit analysts who want tabular exploration and direct pipeline triggers.
+
+#### 2. API, Caching & Edge Delivery (`webapi/`, `api/index.py`, `vercel.json`)
+- **FastAPI Routers (`webapi/routers/`):** Dedicated routes power national overviews (`/api/national`), state and district summaries (`/api/states`, `/api/districts`), parliamentary constituencies (`/api/constituencies`), MPs (`/api/mps`), audit alerts (`/api/flags`), GIS map overlays (`/api/map`), and role switching (`/api/roles`).
+- **Startup Warmup & Caching (`webapi/aggregators.py`, `webapi/data_service.py`):** Pre-loads CSV summaries and warms database aggregates at startup so dashboard endpoints respond without scanning full tables on every click.
+- **Serverless Edge Deployment (`api/index.py`, `vercel.json`):** On Vercel, `api/index.py` unpacks the compressed database image (`api/mplads_dev.db.gz`) into `/tmp/mplads_dev.db` on cold start and exposes the ASGI app, while `vercel.json` configures static asset caching and CDN `stale-while-revalidate` headers on read-only API routes.
+
+#### 3. Deterministic Vidhan Sabha Partitioning (`webapi/services/assembly_segment_resolver.py`, `webapi/services/assembly_service.py`)
+- **Canonical ECI Mapping (`assembly_constituencies_enriched.csv`):** Links all 4,130 Vidhan Sabha assembly constituencies to their parent Lok Sabha parliamentary constituencies and districts, including repaired boundary spellings and state-scoped disambiguation for shared constituency names (such as Aurangabad, Hamirpur, and Maharajganj).
+- **Four-Tier Matching Engine:** Every public work is assigned to strictly one canonical assembly segment (or **District-Wide / Unspecified**) without double-counting or guessing:
+  1. Explicit Vidhan Sabha / Assembly mentions in the project description (ignoring Lok Sabha references).
+  2. Verified sub-district lookup (`subdistrict_ac_map.json`, covering blocks, mandals, talukas, tehsils, municipalities, and panchayat samitis across 154 constituencies in 20 states).
+  3. Word-boundary and Indian spelling-variant matching (`-a`/`-am`, `-i`/`-e`, `Cantt`/`Cantonment`) with strict guards so generic district-headquarters names never swallow rural projects.
+  4. Single-segment district disambiguation for multi-district constituencies, plus safe extraction from sub-district implementing agencies (municipalities, cantonments, BDOs).
+
+#### 4. Forensic Audit Engine, Governance & Security (`mplads_fraud_detection/`)
+- **15 Rule-Based Detectors (`mplads_fraud_detection/detectors/`):** Screen works for outliers, TF-IDF description duplicates, CPWD benchmark cost overruns, missing disbursements, threshold splitting, delays, March budget rushes, bulk sign-offs, Benford digit anomalies, vague descriptions, plausibility errors, documentary gaps, and repeated pricing.
+- **Role-Based Access Control & Dual Review (`auth/`, `review_queue/`):** Protects audit actions across Viewer, Analyst, Field Auditor, Senior Reviewer, District/State Nodal Officer, and Admin roles. Confirmed fraud labels require stored document evidence, SHA-256 checksum verification, and two-person approval.
+- **ML Quarantine Policy (`models/`, `features/`, `monitoring/`):** Experimental machine-learning training scripts are gated behind administrative review controls until sufficient verified human audit labels exist; production triage relies strictly on deterministic statutory rules.
+
+#### 5. Data Ingestion, Boundaries & Database (`scripts/`, `data/`, `migrations/`, `Dockerfile`)
+- **Ingestion & Boundary Scripts (`scripts/`):** Sync official MoSPI e-SAKSHI datasets, clean implementing agency names, compute CPWD unit benchmarks, and parse ECI spatial boundaries (`India_AC.dbf`) into synchronized CSV, SQLite, and frontend lookup modules.
+- **Database & Migrations (`mplads_fraud_detection/foundation/`, `migrations/`):** Uses SQLAlchemy models (`Work`, `Anomaly`, `EntityRisk`, `PipelineRun`, `FraudLabel`, `AuditLog`) with SQLite WAL mode for local/serverless runs, PostgreSQL with TLS enforcement (`sslmode=require`) for production deployments, and idempotent Alembic migrations.
+- **Container & CI Verification (`Dockerfile`, `docker-compose.yml`, `tests/acceptance_tests.sh`):** Automated CI runs unit/API tests, nationwide segment partition sweeps, and the 16-gate acceptance suite covering security, data reconciliation, anti-synthetic guarantees, and ML quarantine.
 
 ---
 
-## ⚖️ Ethical AI & Constitutional Fairness
+## Fairness & Data Sources
 
-SATARK complies with Indian constitutional non-discrimination standards:
-* **Strict Attribute Quarantine:** Sensitive demographic attributes (political party affiliation, MP religion, caste, gender, and age) are mathematically isolated and excluded from all fraud detection algorithms and risk models.
-* **Explainable by Design:** Every red flag produces a human-readable statutory violation summary with verifiable transactional evidence.
-* **Natural Justice & Dual Review:** AI models output decision-support triage leads; statutory actions require physical verification and senior dual-review signoffs.
-
----
-
-## 📄 License & Attribution
-
-Developed for national administrative surveillance and transparency under the **Smart India Hackathon (SIH)**. 
-Official Data Sources: Ministry of Statistics & Programme Implementation (MoSPI), DataMeet GIS Maps, and the Association for Democratic Reforms (ADR).
+- **Non-Discrimination Guarantee:** Personal and political details (political party, religion, caste, gender, and age) are strictly excluded from every audit check and scoring rule.
+- **Human Review First:** Alerts only prioritize records for inspection; official action requires physical verification and dual human sign-off.
+- **Official Data Sources:** Ministry of Statistics & Programme Implementation (MoSPI / e-SAKSHI), DataMeet open boundary maps, and Association for Democratic Reforms (ADR) public affidavits.
+- **License:** Released under the [MIT License](LICENSE).

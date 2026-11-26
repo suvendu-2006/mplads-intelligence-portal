@@ -295,7 +295,7 @@ Mananthavady (St),17,WAYANAD,4,Kerala,Wayanad,Priyanka Gandhi Vadra,6a932b5bcd94
 Kannur,11,KANNUR,2,Kerala,Kannur,Shri Kumbakudi Sudhakaran,6a932b5bcd944524379edf73,Lok Sabha
 Dharmadam,12,KANNUR,2,Kerala,Kannur,Shri Kumbakudi Sudhakaran,6a932b5bcd944524379edf73,Lok Sabha
 Kuthuparamba,14,VADAKARA,3,Kerala,Kannur,SHAFI PARAMBIL,6a932b5bcd944524379edf54,Lok Sabha
-Sulthanbathery (S,18,WAYANAD,4,Kerala,Wayanad,Priyanka Gandhi Vadra,6a932b5bcd944524379edf04,Lok Sabha
+Sulthanbathery (St),18,WAYANAD,4,Kerala,Wayanad,Priyanka Gandhi Vadra,6a932b5bcd944524379edf04,Lok Sabha
 Thalassery,13,VADAKARA,3,Kerala,Kannur,SHAFI PARAMBIL,6a932b5bcd944524379edf54,Lok Sabha
 Nadapuram,22,VADAKARA,3,Kerala,Kozhikode,SHAFI PARAMBIL,6a932b5bcd944524379edf54,Lok Sabha
 Kalpetta,19,WAYANAD,4,Kerala,Wayanad,Priyanka Gandhi Vadra,6a932b5bcd944524379edf04,Lok Sabha
@@ -325,7 +325,7 @@ Mankada,39,MALAPPURAM,6,Kerala,Malappuram,E.T. MOHAMMED BASHEER,6a932b5bcd944524
 Perinthalmanna,38,MALAPPURAM,6,Kerala,Malappuram,E.T. MOHAMMED BASHEER,6a932b5bcd944524379ede54,Lok Sabha
 Kottakkal,46,PONNANI,7,Kerala,Malappuram,DR. M.P ABDUSSAMAD SAMADANI,6a932b5bcd944524379ede44,Lok Sabha
 Tanur,44,PONNANI,7,Kerala,Malappuram,DR. M.P ABDUSSAMAD SAMADANI,6a932b5bcd944524379ede44,Lok Sabha
-Kongad(Sc),53,PALAKKAD,8,Kerala,Palakkad,Vellalath Kochukrishnan Nair Sreekandan,6a932b5bcd944524379edfbb,Lok Sabha
+Kongad (Sc),53,PALAKKAD,8,Kerala,Palakkad,Vellalath Kochukrishnan Nair Sreekandan,6a932b5bcd944524379edfbb,Lok Sabha
 Tirur,45,PONNANI,7,Kerala,Malappuram,DR. M.P ABDUSSAMAD SAMADANI,6a932b5bcd944524379ede44,Lok Sabha
 Ottappalam,52,PALAKKAD,8,Kerala,Palakkad,Vellalath Kochukrishnan Nair Sreekandan,6a932b5bcd944524379edfbb,Lok Sabha
 Shornur,51,PALAKKAD,8,Kerala,Palakkad,Vellalath Kochukrishnan Nair Sreekandan,6a932b5bcd944524379edfbb,Lok Sabha
@@ -346,7 +346,7 @@ Nemmara,59,ALATHUR,9,Kerala,Palakkad,K RADHAKRISHNAN,6a932b5bcd944524379ede87,Lo
 Manalur,64,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
 Ollur,66,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
 Thrissur,67,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
-Nattika(Sc),68,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
+Nattika (Sc),68,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
 Puthukkad,71,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
 Chalakudy,72,CHALAKUDY,11,Kerala,Thrissur,Shri Benny Behanan,6a932b5bcd944524379edf67,Lok Sabha
 Irinjalakuda,70,THRISSUR,10,Kerala,Thrissur,SURESH GOPI,6a932b5bcd944524379edfa4,Lok Sabha
@@ -414,7 +414,7 @@ Aruvikkara,136,ATTINGAL,19,Kerala,Thiruvananthapuram,Adv Adoor Prakash,6a932b5bc
 Nedumangad,130,ATTINGAL,19,Kerala,Thiruvananthapuram,Adv Adoor Prakash,6a932b5bcd944524379eddb5,Lok Sabha
 Kazhakoottam,132,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
 Parassala,137,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
-Vattiyoorkavu(Sc),133,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
+Vattiyoorkavu (Sc),133,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
 Kattakkada,138,ATTINGAL,19,Kerala,Thiruvananthapuram,Adv Adoor Prakash,6a932b5bcd944524379eddb5,Lok Sabha
 Thiruvananthapura,134,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
 Nemom,135,THIRUVANANTHAPURAM,20,Kerala,Thiruvananthapuram,Dr Shashi Tharoor,6a932b5bcd944524379ede3e,Lok Sabha
@@ -432,20 +432,20 @@ Katpadi,40,ARAKKONAM,7,Tamil Nadu,Vellore,S. Jagathrakshakan,6a932b5bcd944524379
 Avadi,6,TIRUVALLUR,1,Tamil Nadu,Thiruvallur,Sasikanth Senthil,6a932b5bcd944524379edf4c,Lok Sabha
 Sholingur,39,ARAKKONAM,7,Tamil Nadu,Vellore,S. Jagathrakshakan,6a932b5bcd944524379edf3c,Lok Sabha
 Perambur,12,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
-Dr.Radhakrishnan Naga,11,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
+Dr.Radhakrishnan Nagar,11,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
 Ambattur,8,SRIPERUMBUDUR,5,Tamil Nadu,Thiruvallur,Thalikkottai Rajuthevar Baalu,6a932b5bcd944524379edfac,Lok Sabha
 Kolathur,13,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
-Kilvaithinankuppam(Sc,45,VELLORE,8,Tamil Nadu,Vellore,D M Kathir Anand,6a932b5bcd944524379ede20,Lok Sabha
+Kilvaithinankuppam (Sc),45,VELLORE,8,Tamil Nadu,Vellore,D M Kathir Anand,6a932b5bcd944524379ede20,Lok Sabha
 Royapuram,17,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
 Villivakkam,14,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
-Thiru-Vi-Ka-Nagar(Sc),15,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
+Thiru-Vi-Ka-Nagar (Sc),15,CHENNAI NORTH,2,Tamil Nadu,Chennai,Kalanidhi Veeraswamy,6a932b5bcd944524379ede8e,Lok Sabha
 Maduravoyal,7,SRIPERUMBUDUR,5,Tamil Nadu,Thiruvallur,Thalikkottai Rajuthevar Baalu,6a932b5bcd944524379edfac,Lok Sabha
 Harbour,18,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
 Anna Nagar,21,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
 Egmore (Sc),16,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
 Gudiyattam (Sc),46,VELLORE,8,Tamil Nadu,Vellore,D M Kathir Anand,6a932b5bcd944524379ede20,Lok Sabha
 Virugampakkam,22,CHENNAI SOUTH,3,Tamil Nadu,Chennai,T Sumathy (A) Thamizhachi Thangapandian,6a932b5bcd944524379edfa8,Lok Sabha
-Chepauk-Thiruvalliken,19,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
+Chepauk-Thiruvallikeni,19,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
 Thousand Lights,20,CHENNAI CENTRAL,4,Tamil Nadu,Chennai,Thiru Dayanidhi Maran,6a932b5bcd944524379edfaf,Lok Sabha
 Sriperumbudur (Sc),29,SRIPERUMBUDUR,5,Tamil Nadu,Kancheepuram,Thalikkottai Rajuthevar Baalu,6a932b5bcd944524379edfac,Lok Sabha
 Thiyagarayanagar,24,CHENNAI SOUTH,3,Tamil Nadu,Chennai,T Sumathy (A) Thamizhachi Thangapandian,6a932b5bcd944524379edfa8,Lok Sabha
@@ -481,17 +481,17 @@ Krishnagiri,53,KRISHNAGIRI,9,Tamil Nadu,Krishnagiri,GOPINATH K,6a932b5bcd9445243
 Vandavasi (Sc),69,ARANI,12,Tamil Nadu,Tiruvannamalai,THARANIVENTHAN M S,6a932b5bcd944524379edfae,Lok Sabha
 Chengam (Sc),62,TIRUVANNAMALAI,11,Tamil Nadu,Tiruvannamalai,CN Annadurai,6a932b5bcd944524379ede1f,Lok Sabha
 Cheyyur (Sc),34,KANCHEEPURAM,6,Tamil Nadu,Kancheepuram,Ganesan Selvam,6a932b5bcd944524379ede5d,Lok Sabha
-Palacodu,57,DHAR,10,Madhya Pradesh,Dharmapuri,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
+Palacodu,57,DHARAMAPURI,10,Tamil Nadu,Dharmapuri,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
 Uthangarai (Sc),51,KRISHNAGIRI,9,Tamil Nadu,Krishnagiri,GOPINATH K,6a932b5bcd944524379ede65,Lok Sabha
 Vandavasi (Sc),70,ARANI,12,Tamil Nadu,Viluppuram,THARANIVENTHAN M S,6a932b5bcd944524379edfae,Lok Sabha
 Kilpennathur,64,TIRUVANNAMALAI,11,Tamil Nadu,Tiruvannamalai,CN Annadurai,6a932b5bcd944524379ede1f,Lok Sabha
 Mailam,71,ARANI,12,Tamil Nadu,Viluppuram,THARANIVENTHAN M S,6a932b5bcd944524379edfae,Lok Sabha
-Pennagaram,58,DHAR,10,Madhya Pradesh,Dharmapuri,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
+Pennagaram,58,DHARAMAPURI,10,Tamil Nadu,Dharmapuri,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
 Tindivanam (Sc),72,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
 Tiruvannamalai,63,TIRUVANNAMALAI,11,Tamil Nadu,Tiruvannamalai,CN Annadurai,6a932b5bcd944524379ede1f,Lok Sabha
-Harur (Sc),61,DHAR,10,Madhya Pradesh,Dharmapuri,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
-Pappireddippatti,60,DHAR,10,Madhya Pradesh,Dharmapuri,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
-Dharmapuri,59,DHAR,10,Madhya Pradesh,Dharmapuri,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
+Harur (Sc),61,DHARAMAPURI,10,Tamil Nadu,Dharmapuri,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
+Pappireddippatti,60,DHARAMAPURI,10,Tamil Nadu,Dharmapuri,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
+Dharmapuri,59,DHARAMAPURI,10,Tamil Nadu,Dharmapuri,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
 Vanur (Sc),73,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
 Vikravandi,75,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
 Tirukkoyilur,76,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
@@ -499,7 +499,7 @@ Rishivandiyam,78,KALLAKURICHI,14,Tamil Nadu,Viluppuram,MALAIYARASAN D,6a932b5bcd
 Sankarapuram,79,KALLAKURICHI,14,Tamil Nadu,Viluppuram,MALAIYARASAN D,6a932b5bcd944524379edebf,Lok Sabha
 Omalur,84,SALEM,15,Tamil Nadu,Salem,SELVAGANAPATHI T M,6a932b5bcd944524379edf52,Lok Sabha
 Anthiyur,105,TIRUPPUR,18,Tamil Nadu,Erode,K Subbarayan,6a932b5bcd944524379ede88,Lok Sabha
-Mettur,85,DHAR,10,Madhya Pradesh,Salem,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
+Mettur,85,DHARAMAPURI,10,Tamil Nadu,Salem,MANI. A.,6a932b5bcd944524379edec2,Lok Sabha
 Viluppuram,74,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
 Yercaud (St),83,KALLAKURICHI,14,Tamil Nadu,Salem,MALAIYARASAN D,6a932b5bcd944524379edebf,Lok Sabha
 Ulundurpettai,77,VILUPPURAM,13,Tamil Nadu,Viluppuram,D Ravikumar,6a932b5bcd944524379ede21,Lok Sabha
@@ -508,7 +508,7 @@ Bhavanisagar,107,NILGIRIS,19,Tamil Nadu,Erode,Andimuthu Raja,6a932b5bcd944524379
 Panruti,154,CUDDALORE,26,Tamil Nadu,Cuddalore,M.K. VISHNUPRASAD,6a932b5bcd944524379edeb5,Lok Sabha
 Edappadi,86,SALEM,15,Tamil Nadu,Salem,SELVAGANAPATHI T M,6a932b5bcd944524379edf52,Lok Sabha
 Kallakurichi (Sc),80,KALLAKURICHI,14,Tamil Nadu,Viluppuram,MALAIYARASAN D,6a932b5bcd944524379edebf,Lok Sabha
-Attur(Sc),82,KALLAKURICHI,14,Tamil Nadu,Salem,MALAIYARASAN D,6a932b5bcd944524379edebf,Lok Sabha
+Attur (Sc),82,KALLAKURICHI,14,Tamil Nadu,Salem,MALAIYARASAN D,6a932b5bcd944524379edebf,Lok Sabha
 Gudalur (Sc),109,NILGIRIS,19,Tamil Nadu,The Nilgiris,Andimuthu Raja,6a932b5bcd944524379eddcd,Lok Sabha
 Neyveli,153,CUDDALORE,26,Tamil Nadu,Cuddalore,M.K. VISHNUPRASAD,6a932b5bcd944524379edeb5,Lok Sabha
 Salem (West),88,SALEM,15,Tamil Nadu,Salem,SELVAGANAPATHI T M,6a932b5bcd944524379edf52,Lok Sabha
@@ -530,10 +530,10 @@ Chidambaram,158,CHIDAMBARAM,27,Tamil Nadu,Cuddalore,Thirumaa Valavan Thol,6a932b
 Tiruchengodu,96,NAMAKKAL,16,Tamil Nadu,Namakkal,V S Matheswaran,6a932b5bcd944524379edfb6,Lok Sabha
 Perambalur (Sc),147,PERAMBALUR,25,Tamil Nadu,Perambalur,ARUN NEHRU,6a932b5bcd944524379edddd,Lok Sabha
 Kumarapalayam,97,ERODE,17,Tamil Nadu,Namakkal,K E PRAKASH,6a932b5bcd944524379ede86,Lok Sabha
-Senthamangalam(St),93,NAMAKKAL,16,Tamil Nadu,Namakkal,V S Matheswaran,6a932b5bcd944524379edfb6,Lok Sabha
+Senthamangalam (St),93,NAMAKKAL,16,Tamil Nadu,Namakkal,V S Matheswaran,6a932b5bcd944524379edfb6,Lok Sabha
 Erode (West),99,ERODE,17,Tamil Nadu,Erode,K E PRAKASH,6a932b5bcd944524379ede86,Lok Sabha
 Mettuppalayam,111,NILGIRIS,19,Tamil Nadu,Coimbatore,Andimuthu Raja,6a932b5bcd944524379eddcd,Lok Sabha
-Kattumannarkoil(Sc),159,CHIDAMBARAM,27,Tamil Nadu,Cuddalore,Thirumaa Valavan Thol,6a932b5bcd944524379edfb0,Lok Sabha
+Kattumannarkoil (Sc),159,CHIDAMBARAM,27,Tamil Nadu,Cuddalore,Thirumaa Valavan Thol,6a932b5bcd944524379edfb0,Lok Sabha
 Perundurai,103,TIRUPPUR,18,Tamil Nadu,Erode,K Subbarayan,6a932b5bcd944524379ede88,Lok Sabha
 Namakkal,94,NAMAKKAL,16,Tamil Nadu,Namakkal,V S Matheswaran,6a932b5bcd944524379edfb6,Lok Sabha
 Paramathi-Velur,95,NAMAKKAL,16,Tamil Nadu,Namakkal,V S Matheswaran,6a932b5bcd944524379edfb6,Lok Sabha
@@ -558,15 +558,15 @@ Poompuhar,162,MAYILADUTHURAI,28,Tamil Nadu,Nagapattinam,SUDHA R,6a932b5bcd944524
 Manachanallur,144,PERAMBALUR,25,Tamil Nadu,Tiruchirappalli,ARUN NEHRU,6a932b5bcd944524379edddd,Lok Sabha
 Aravakurichi,134,KARUR,23,Tamil Nadu,Karur,Smt S Jothimani,6a932b5bcd944524379edf91,Lok Sabha
 Thondamuthur,119,POLLACHI,21,Tamil Nadu,Coimbatore,ESWARASAMY K,6a932b5bcd944524379ede56,Lok Sabha
-Coimbatore(North),118,COIMBATORE,20,Tamil Nadu,Coimbatore,GANAPATHY RAJKUMAR P,6a932b5bcd944524379ede5c,Lok Sabha
+Coimbatore (North),118,COIMBATORE,20,Tamil Nadu,Coimbatore,GANAPATHY RAJKUMAR P,6a932b5bcd944524379ede5c,Lok Sabha
 Lalgudi,143,PERAMBALUR,25,Tamil Nadu,Tiruchirappalli,ARUN NEHRU,6a932b5bcd944524379edddd,Lok Sabha
 Singanallur,121,COIMBATORE,20,Tamil Nadu,Coimbatore,GANAPATHY RAJKUMAR P,6a932b5bcd944524379ede5c,Lok Sabha
 Karur,135,KARUR,23,Tamil Nadu,Karur,Smt S Jothimani,6a932b5bcd944524379edf91,Lok Sabha
-Coimbatore(South),120,COIMBATORE,20,Tamil Nadu,Coimbatore,GANAPATHY RAJKUMAR P,6a932b5bcd944524379ede5c,Lok Sabha
+Coimbatore (South),120,COIMBATORE,20,Tamil Nadu,Coimbatore,GANAPATHY RAJKUMAR P,6a932b5bcd944524379ede5c,Lok Sabha
 Kumbakonam,171,MAYILADUTHURAI,28,Tamil Nadu,Thanjavur,SUDHA R,6a932b5bcd944524379edf9a,Lok Sabha
 Kinathukadavu,122,POLLACHI,21,Tamil Nadu,Coimbatore,ESWARASAMY K,6a932b5bcd944524379ede56,Lok Sabha
 Papanasam,172,MAYILADUTHURAI,28,Tamil Nadu,Thanjavur,SUDHA R,6a932b5bcd944524379edf9a,Lok Sabha
-Krishnarayapuram(Sc),136,KARUR,23,Tamil Nadu,Karur,Smt S Jothimani,6a932b5bcd944524379edf91,Lok Sabha
+Krishnarayapuram (Sc),136,KARUR,23,Tamil Nadu,Karur,Smt S Jothimani,6a932b5bcd944524379edf91,Lok Sabha
 Kulithalai,137,PERAMBALUR,25,Tamil Nadu,Karur,ARUN NEHRU,6a932b5bcd944524379edddd,Lok Sabha
 Dharapuram (Sc),101,ERODE,17,Tamil Nadu,Erode,K E PRAKASH,6a932b5bcd944524379ede86,Lok Sabha
 Pollachi,123,POLLACHI,21,Tamil Nadu,Coimbatore,ESWARASAMY K,6a932b5bcd944524379ede56,Lok Sabha
@@ -588,8 +588,8 @@ Manapparai,138,KARUR,23,Tamil Nadu,Tiruchirappalli,Smt S Jothimani,6a932b5bcd944
 Viralimalai,179,KARUR,23,Tamil Nadu,Pudukkottai,Smt S Jothimani,6a932b5bcd944524379edf91,Lok Sabha
 Madathukulam,126,POLLACHI,21,Tamil Nadu,Coimbatore,ESWARASAMY K,6a932b5bcd944524379ede56,Lok Sabha
 Valparai (Sc),124,POLLACHI,21,Tamil Nadu,Coimbatore,ESWARASAMY K,6a932b5bcd944524379ede56,Lok Sabha
-Gandharvakottai(Sc),178,TIRUCHIRAPPALLI,24,Tamil Nadu,Pudukkottai,DURAI VAIKO,6a932b5bcd944524379ede50,Lok Sabha
-Thiruthuraipoondi(Sc),166,NAGAPATTINAM,29,Tamil Nadu,Thiruvarur,SELVARAJ V,6a932b5bcd944524379edf53,Lok Sabha
+Gandharvakottai (Sc),178,TIRUCHIRAPPALLI,24,Tamil Nadu,Pudukkottai,DURAI VAIKO,6a932b5bcd944524379ede50,Lok Sabha
+Thiruthuraipoondi (Sc),166,NAGAPATTINAM,29,Tamil Nadu,Thiruvarur,SELVARAJ V,6a932b5bcd944524379edf53,Lok Sabha
 Vedaranyam,165,NAGAPATTINAM,29,Tamil Nadu,Nagapattinam,SELVARAJ V,6a932b5bcd944524379edf53,Lok Sabha
 Pudukkottai,180,TIRUCHIRAPPALLI,24,Tamil Nadu,Pudukkottai,DURAI VAIKO,6a932b5bcd944524379ede50,Lok Sabha
 Palani,127,DINDIGUL,22,Tamil Nadu,Dindigul,SACHITHANANTHAM R,6a932b5bcd944524379edf3d,Lok Sabha
@@ -606,7 +606,7 @@ Nilakkottai (Sc),130,DINDIGUL,22,Tamil Nadu,Dindigul,SACHITHANANTHAM R,6a932b5bc
 Periyakulam,199,THENI,33,Tamil Nadu,Theni,THANGA TAMILSELVAN,6a932b5bcd944524379edfad,Lok Sabha
 Aranthangi,183,RAMANATHAPURAM,35,Tamil Nadu,Pudukkottai,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
 Bodinayakanur,200,THENI,33,Tamil Nadu,Theni,THANGA TAMILSELVAN,6a932b5bcd944524379edfad,Lok Sabha
-Sholavandan(Sc),190,THENI,33,Tamil Nadu,Madurai,THANGA TAMILSELVAN,6a932b5bcd944524379edfad,Lok Sabha
+Sholavandan (Sc),190,THENI,33,Tamil Nadu,Madurai,THANGA TAMILSELVAN,6a932b5bcd944524379edfad,Lok Sabha
 Karaikudi,184,SIVAGANGA,31,Tamil Nadu,Sivaganga,Shri Karti P Chidambaram,6a932b5bcd944524379edf72,Lok Sabha
 Andipatti,198,THENI,33,Tamil Nadu,Theni,THANGA TAMILSELVAN,6a932b5bcd944524379edfad,Lok Sabha
 Madurai East,189,MADURAI,32,Tamil Nadu,Madurai,S Venkatesan,6a932b5bcd944524379edf3b,Lok Sabha
@@ -620,9 +620,9 @@ Thiruparankundram,195,VIRUDHUNAGAR,34,Tamil Nadu,Madurai,Manickam Tagore B,6a932
 Madurai Central,193,MADURAI,32,Tamil Nadu,Madurai,S Venkatesan,6a932b5bcd944524379edf3b,Lok Sabha
 Madurai South,192,MADURAI,32,Tamil Nadu,Madurai,S Venkatesan,6a932b5bcd944524379edf3b,Lok Sabha
 Tiruvadanai,210,RAMANATHAPURAM,35,Tamil Nadu,Ramanathapuram,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
-Manamadurai(Sc),187,SIVAGANGA,31,Tamil Nadu,Sivaganga,Shri Karti P Chidambaram,6a932b5bcd944524379edf72,Lok Sabha
+Manamadurai (Sc),187,SIVAGANGA,31,Tamil Nadu,Sivaganga,Shri Karti P Chidambaram,6a932b5bcd944524379edf72,Lok Sabha
 Tiruchuli,208,RAMANATHAPURAM,35,Tamil Nadu,Virudhunagar,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
-Srivilliputhur(Sc),203,TENKASI,37,Tamil Nadu,Virudhunagar,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
+Srivilliputhur (Sc),203,TENKASI,37,Tamil Nadu,Virudhunagar,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Virudhunagar,206,VIRUDHUNAGAR,34,Tamil Nadu,Virudhunagar,Manickam Tagore B,6a932b5bcd944524379edec3,Lok Sabha
 Paramakudi (Sc),209,RAMANATHAPURAM,35,Tamil Nadu,Ramanathapuram,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
 Aruppukkottai,207,VIRUDHUNAGAR,34,Tamil Nadu,Virudhunagar,Manickam Tagore B,6a932b5bcd944524379edec3,Lok Sabha
@@ -630,14 +630,14 @@ Sivakasi,205,VIRUDHUNAGAR,34,Tamil Nadu,Virudhunagar,Manickam Tagore B,6a932b5bc
 Rajapalayam,202,TENKASI,37,Tamil Nadu,Virudhunagar,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Mudhukulathur,212,RAMANATHAPURAM,35,Tamil Nadu,Ramanathapuram,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
 Sattur,204,VIRUDHUNAGAR,34,Tamil Nadu,Virudhunagar,Manickam Tagore B,6a932b5bcd944524379edec3,Lok Sabha
-Vasudevanallur(Sc),220,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
+Vasudevanallur (Sc),220,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Ramanathapuram,211,RAMANATHAPURAM,35,Tamil Nadu,Ramanathapuram,Kani K Navas,6a932b5bcd944524379ede99,Lok Sabha
 Vilathikulam,213,THOOTHUKKUDI,36,Tamil Nadu,Thoothukkudi,Kanimozhi Karunanidhi,6a932b5bcd944524379ede9a,Lok Sabha
-Sankarankovil(Sc),219,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
+Sankarankovil (Sc),219,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Kovilpatti,218,THOOTHUKKUDI,36,Tamil Nadu,Thoothukkudi,Kanimozhi Karunanidhi,6a932b5bcd944524379ede9a,Lok Sabha
 Kadayanallur,221,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Tenkasi,222,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
-Ottapidaram(Sc),217,THOOTHUKKUDI,36,Tamil Nadu,Thoothukkudi,Kanimozhi Karunanidhi,6a932b5bcd944524379ede9a,Lok Sabha
+Ottapidaram (Sc),217,THOOTHUKKUDI,36,Tamil Nadu,Thoothukkudi,Kanimozhi Karunanidhi,6a932b5bcd944524379ede9a,Lok Sabha
 Tirunelveli,224,TIRUNELVELI,38,Tamil Nadu,Tirunelveli,ROBERT BRUCE C,6a932b5bcd944524379edf35,Lok Sabha
 Alangulam,223,TENKASI,37,Tamil Nadu,Tirunelveli,DR RANI SRI KUMAR,6a932b5bcd944524379ede3d,Lok Sabha
 Ambasamudram,225,TIRUNELVELI,38,Tamil Nadu,Tirunelveli,ROBERT BRUCE C,6a932b5bcd944524379edf35,Lok Sabha
@@ -677,7 +677,7 @@ Nagrakata (St),21,ALIPURDUARS,2,West Bengal,Jalpaiguri,MANOJ TIGGA,6a932b5bcd944
 Kalimpong,22,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
 Darjeeling,23,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
 Kurseong,24,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
-Matigara-Naxalbari(Sc),25,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
+Matigara-Naxalbari (Sc),25,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
 Siliguri,26,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
 Phansidewa (St),27,DARJEELING,4,West Bengal,Darjiling,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
 Chopra,28,DARJEELING,4,West Bengal,Uttar Dinajpur,Raju Bista,6a932b5bcd944524379edf21,Lok Sabha
@@ -692,7 +692,7 @@ Itahar,36,BALURGHAT,6,West Bengal,Uttar Dinajpur,Dr Sukanta Majumdar,6a932b5bcd9
 Kushmandi (Sc),37,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
 Kumarganj,38,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
 Balurghat,39,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
-Tapan(St),40,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
+Tapan (St),40,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
 Gangarampur (Sc),41,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
 Harirampur,42,BALURGHAT,6,West Bengal,Dakshin Dinajpur,Dr Sukanta Majumdar,6a932b5bcd944524379ede3f,Lok Sabha
 Habibpur (St),43,MALDAHA UTTAR,7,West Bengal,Maldah,Khagen Murmu,6a932b5bcd944524379ede9f,Lok Sabha
@@ -741,7 +741,7 @@ Krishnanagar Dakshin,85,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bc
 Santipur,86,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
 Ranaghat Uttar Paschim,87,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
 Krishnaganj (Sc),88,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
-Ranaghat Uttar Purba(Sc),89,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
+Ranaghat Uttar Purba (Sc),89,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
 Ranaghat Dakshin (Sc),90,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
 Chakdaha,91,RANAGHAT,13,West Bengal,Nadia,Jagannath Sarkar,6a932b5bcd944524379ede76,Lok Sabha
 Kalyani (Sc),92,BANGAON,14,West Bengal,Nadia,Shri Shantanu Thakur,6a932b5bcd944524379edf7c,Lok Sabha
@@ -779,21 +779,21 @@ Sandeshkhali (St),123,BASIRHAT,18,West Bengal,North 24 Parganas,SK NURUL ISLAM,6
 Basirhat Dakshin,124,BASIRHAT,18,West Bengal,North 24 Parganas,SK NURUL ISLAM,6a932b5bcd944524379edf87,Lok Sabha
 Basirhat Uttar,125,BASIRHAT,18,West Bengal,North 24 Parganas,SK NURUL ISLAM,6a932b5bcd944524379edf87,Lok Sabha
 Hingalganj (Sc),126,BASIRHAT,18,West Bengal,North 24 Parganas,SK NURUL ISLAM,6a932b5bcd944524379edf87,Lok Sabha
-Gosaba (Sc),127,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
-Basanti (Sc),128,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
-Kultali (Sc),129,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
+Gosaba (Sc),127,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
+Basanti (Sc),128,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
+Kultali (Sc),129,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
 Patharpratima,130,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Kakdwip,131,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Sagar,132,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Kulpi,133,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Raidighi,134,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Mandirbazar (Sc),135,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
-Jaynagar (Sc),136,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
-Baruipur Purba(Sc),137,JADAVPUR,22,West Bengal,South 24 Parganas,SAYANI GHOSH,6a932b5bcd944524379edf50,Lok Sabha
-Canning Paschim(Sc),138,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
-Canning Purba,139,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
+Jaynagar (Sc),136,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
+Baruipur Purba (Sc),137,JADAVPUR,22,West Bengal,South 24 Parganas,SAYANI GHOSH,6a932b5bcd944524379edf50,Lok Sabha
+Canning Paschim (Sc),138,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
+Canning Purba,139,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
 Baruipur Paschim,140,JADAVPUR,22,West Bengal,South 24 Parganas,SAYANI GHOSH,6a932b5bcd944524379edf50,Lok Sabha
-Magrahat Purba(Sc),141,JAYNAGAR,19,West Bengal,South 24 Parganas,Shri Nagendra Ray (2023-29),6a932b5ecd944524379ee269,Rajya Sabha
+Magrahat Purba (Sc),141,JOYNAGAR,19,West Bengal,South 24 Parganas,Pratima Mondal,6a932b5bcd944524379edf00,Lok Sabha
 Magrahat Paschim,142,MATHURAPUR,20,West Bengal,South 24 Parganas,BAPI HALDAR,6a932b5bcd944524379eddf7,Lok Sabha
 Diamond Harbour,143,DIAMOND HARBOUR,21,West Bengal,South 24 Parganas,Shri Abhishek Banerjee,6a932b5bcd944524379edf60,Lok Sabha
 Falta,144,DIAMOND HARBOUR,21,West Bengal,South 24 Parganas,Shri Abhishek Banerjee,6a932b5bcd944524379edf60,Lok Sabha
@@ -849,7 +849,7 @@ Saptagram,193,HOOGHLY,28,West Bengal,Hugli,RACHNA BANERJEE,6a932b5bcd944524379ed
 Chanditala,194,SREERAMPUR,27,West Bengal,Hugli,Kalyan Banerjee,6a932b5bcd944524379ede92,Lok Sabha
 Jangipara,195,SREERAMPUR,27,West Bengal,Hugli,Kalyan Banerjee,6a932b5bcd944524379ede92,Lok Sabha
 Haripal,196,ARAMBAG,29,West Bengal,Hugli,BAG MITALI,6a932b5bcd944524379eddee,Lok Sabha
-Dhanekhali(Sc),197,HOOGHLY,28,West Bengal,Hugli,RACHNA BANERJEE,6a932b5bcd944524379edf0c,Lok Sabha
+Dhanekhali (Sc),197,HOOGHLY,28,West Bengal,Hugli,RACHNA BANERJEE,6a932b5bcd944524379edf0c,Lok Sabha
 Tarakeswar,198,ARAMBAG,29,West Bengal,Hugli,BAG MITALI,6a932b5bcd944524379eddee,Lok Sabha
 Pursurah,199,ARAMBAG,29,West Bengal,Hugli,BAG MITALI,6a932b5bcd944524379eddee,Lok Sabha
 Arambag (Sc),200,ARAMBAG,29,West Bengal,Hugli,BAG MITALI,6a932b5bcd944524379eddee,Lok Sabha
@@ -898,7 +898,7 @@ Purulia,242,PURULIA,35,West Bengal,Puruliya,Shri Jyotirmay Singh Mahato,6a932b5b
 Manbazar (St),243,PURULIA,35,West Bengal,Puruliya,Shri Jyotirmay Singh Mahato,6a932b5bcd944524379edf71,Lok Sabha
 Kashipur,244,PURULIA,35,West Bengal,Puruliya,Shri Jyotirmay Singh Mahato,6a932b5bcd944524379edf71,Lok Sabha
 Para (Sc),245,PURULIA,35,West Bengal,Puruliya,Shri Jyotirmay Singh Mahato,6a932b5bcd944524379edf71,Lok Sabha
-Raghunathpur(Sc),246,BANKURA,36,West Bengal,Puruliya,ARUP CHAKRABORTY,6a932b5bcd944524379edddf,Lok Sabha
+Raghunathpur (Sc),246,BANKURA,36,West Bengal,Puruliya,ARUP CHAKRABORTY,6a932b5bcd944524379edddf,Lok Sabha
 Saltora (Sc),247,BANKURA,36,West Bengal,Bankura,ARUP CHAKRABORTY,6a932b5bcd944524379edddf,Lok Sabha
 Chhatna,248,BANKURA,36,West Bengal,Bankura,ARUP CHAKRABORTY,6a932b5bcd944524379edddf,Lok Sabha
 Ranibandh (St),249,BANKURA,36,West Bengal,Bankura,ARUP CHAKRABORTY,6a932b5bcd944524379edddf,Lok Sabha
@@ -990,7 +990,7 @@ Sircilla,29,KARIMNAGAR,3,Telangana,Karimnagar,Sanjay Kumar Bandi,6a932b5bcd94452
 Yellareddy,15,ZAHIRABAD,5,Telangana,Nizamabad,SURESH KUMAR SHETKAR,6a932b5bcd944524379edfa6,Lok Sabha
 Karimnagar,26,KARIMNAGAR,3,Telangana,Karimnagar,Sanjay Kumar Bandi,6a932b5bcd944524379edf45,Lok Sabha
 Araku Valley (St),147,ARAKU,18,Andhra Pradesh,Visakhapatnam,Gumma Thanuja Rani,6a932b5bcd944524379ede67,Lok Sabha
-Bhupalpalle,108,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Bhupalpalle,108,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Kamareddy,16,ZAHIRABAD,5,Telangana,Nizamabad,SURESH KUMAR SHETKAR,6a932b5bcd944524379edfa6,Lok Sabha
 Manakondur (Sc),30,KARIMNAGAR,3,Telangana,Karimnagar,Sanjay Kumar Bandi,6a932b5bcd944524379edf45,Lok Sabha
 Gajapathinagaram,135,VIZIANAGARAM,20,Andhra Pradesh,Vizianagaram,Appalanaidu Kalisetti,6a932b5bcd944524379eddda,Lok Sabha
@@ -1002,33 +1002,33 @@ Cheepurupalle,134,VIZIANAGARAM,20,Andhra Pradesh,Vizianagaram,Appalanaidu Kalise
 Husnabad,32,KARIMNAGAR,3,Telangana,Karimnagar,Sanjay Kumar Bandi,6a932b5bcd944524379edf45,Lok Sabha
 Siddipet,33,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
 Dubbak,41,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
-Parkal,104,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Parkal,104,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Medak,34,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
 Nellimarla,136,VIZIANAGARAM,20,Andhra Pradesh,Vizianagaram,Appalanaidu Kalisetti,6a932b5bcd944524379eddda,Lok Sabha
 Srungavarapukota,138,VISAKHAPATNAM,21,Andhra Pradesh,Vizianagaram,Sribharat MathuKumli,6a932b5bcd944524379edf98,Lok Sabha
 Vizianagaram,137,VIZIANAGARAM,20,Andhra Pradesh,Vizianagaram,Appalanaidu Kalisetti,6a932b5bcd944524379eddda,Lok Sabha
-Waradhanapet (Sc),107,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Waradhanapet (Sc),107,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Pinapaka (St),110,MAHABUBABAD,16,Telangana,Khammam,BALRAM NAIK PORIKA,6a932b5bcd944524379eddf3,Lok Sabha
 Paderu (St),148,ARAKU,18,Andhra Pradesh,Visakhapatnam,Gumma Thanuja Rani,6a932b5bcd944524379ede67,Lok Sabha
 Madugula,146,ANAKAPALLE,22,Andhra Pradesh,Visakhapatnam,C.M.RAMESH,6a932b5bcd944524379ede10,Lok Sabha
 Narsampet,103,MAHABUBABAD,16,Telangana,Warangal,BALRAM NAIK PORIKA,6a932b5bcd944524379eddf3,Lok Sabha
 Andole (Sc),36,ZAHIRABAD,5,Telangana,Medak,SURESH KUMAR SHETKAR,6a932b5bcd944524379edfa6,Lok Sabha
-Ghanpur (Station) (Sc),99,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Ghanpur (Station) (Sc),99,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Gajwel,42,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
 Bhimili,139,VISAKHAPATNAM,21,Andhra Pradesh,Visakhapatnam,Sribharat MathuKumli,6a932b5bcd944524379edf98,Lok Sabha
 Jangoan,98,BHONGIR,14,Telangana,Warangal,CHAMALA KIRAN KUMAR REDDY,6a932b5bcd944524379ede13,Lok Sabha
 Narsapur,37,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
-Warangal West,105,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Warangal West,105,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Zahirabad (Sc),38,ZAHIRABAD,5,Telangana,Medak,SURESH KUMAR SHETKAR,6a932b5bcd944524379edfa6,Lok Sabha
-Warangal East,106,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
-Rampachodavaram(St),172,ARAKU,18,Andhra Pradesh,East Godavari,Gumma Thanuja Rani,6a932b5bcd944524379ede67,Lok Sabha
+Warangal East,106,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
+Rampachodavaram (St),172,ARAKU,18,Andhra Pradesh,East Godavari,Gumma Thanuja Rani,6a932b5bcd944524379ede67,Lok Sabha
 Mahabubabad (St),102,MAHABUBABAD,16,Telangana,Warangal,BALRAM NAIK PORIKA,6a932b5bcd944524379eddf3,Lok Sabha
 Chodavaram,145,ANAKAPALLE,22,Andhra Pradesh,Visakhapatnam,C.M.RAMESH,6a932b5bcd944524379ede10,Lok Sabha
 Pendurthi,150,ANAKAPALLE,22,Andhra Pradesh,Visakhapatnam,C.M.RAMESH,6a932b5bcd944524379ede10,Lok Sabha
 Kothagudem,117,KHAMMAM,17,Telangana,Khammam,RAMASAHAYAM RAGHURAM REDDY,6a932b5bcd944524379edf26,Lok Sabha
 Alair,97,BHONGIR,14,Telangana,Nalgonda,CHAMALA KIRAN KUMAR REDDY,6a932b5bcd944524379ede13,Lok Sabha
 Patancheru,40,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
-Palakurthi,100,WARANGAL,15,Andhra Pradesh,Warangal,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Palakurthi,100,WARANGEL,15,Telangana,Warangal,KADIYAM KAVYA,6a932b5bcd944524379ede8b,Lok Sabha
 Sangareddy,39,MEDAK,6,Telangana,Medak,MADHAVANENI RAGHUNANDAN RAO,6a932b5bcd944524379edeb7,Lok Sabha
 Anakapalle,149,ANAKAPALLE,22,Andhra Pradesh,Visakhapatnam,C.M.RAMESH,6a932b5bcd944524379ede10,Lok Sabha
 Yellandu (St),111,MAHABUBABAD,16,Telangana,Khammam,BALRAM NAIK PORIKA,6a932b5bcd944524379eddf3,Lok Sabha
@@ -1039,7 +1039,7 @@ Visakhapatnam East,140,VISAKHAPATNAM,21,Andhra Pradesh,Visakhapatnam,Sribharat M
 Visakhapatnam West,143,VISAKHAPATNAM,21,Andhra Pradesh,Visakhapatnam,Sribharat MathuKumli,6a932b5bcd944524379edf98,Lok Sabha
 Gajuwaka,144,VISAKHAPATNAM,21,Andhra Pradesh,Visakhapatnam,Sribharat MathuKumli,6a932b5bcd944524379edf98,Lok Sabha
 Visakhapatnam South,141,VISAKHAPATNAM,21,Andhra Pradesh,Visakhapatnam,Sribharat MathuKumli,6a932b5bcd944524379edf98,Lok Sabha
-Vicarabad (Sc),55,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Vicarabad (Sc),55,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
 Yelamanchili,151,ANAKAPALLE,22,Andhra Pradesh,Visakhapatnam,C.M.RAMESH,6a932b5bcd944524379ede10,Lok Sabha
 Quthbullapur,45,MALKAJGIRI,7,Telangana,Rangareddi,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
 Bhongir,94,BHONGIR,14,Telangana,Nalgonda,CHAMALA KIRAN KUMAR REDDY,6a932b5bcd944524379ede13,Lok Sabha
@@ -1048,14 +1048,14 @@ Aswaraopeta (St),118,KHAMMAM,17,Telangana,Khammam,RAMASAHAYAM RAGHURAM REDDY,6a9
 Dornakal (St),101,MAHABUBABAD,16,Telangana,Warangal,BALRAM NAIK PORIKA,6a932b5bcd944524379eddf3,Lok Sabha
 Malkajgiri,44,MALKAJGIRI,7,Telangana,Rangareddi,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
 Wyra (St),115,KHAMMAM,17,Telangana,Khammam,RAMASAHAYAM RAGHURAM REDDY,6a932b5bcd944524379edf26,Lok Sabha
-Chevella (Sc),53,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
-Serilingampally,52,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Chevella (Sc),53,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
+Serilingampally,52,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
 Kukatpalle,46,MALKAJGIRI,7,Telangana,Rangareddi,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
 Thungathurthi (Sc),96,BHONGIR,14,Telangana,Nalgonda,CHAMALA KIRAN KUMAR REDDY,6a932b5bcd944524379ede13,Lok Sabha
 Tuni,154,KAKINADA,23,Andhra Pradesh,East Godavari,TANGELLA UDAY SRINIVAS,6a932b5bcd944524379edfa9,Lok Sabha
 Uppal,47,MALKAJGIRI,7,Telangana,Rangareddi,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
-Secunderabad Cantt. (Sc,71,MALKAJGIRI,7,Telangana,Hyderabad,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
-Tandur,56,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Secunderabad Cantt. (Sc),71,MALKAJGIRI,7,Telangana,Hyderabad,EATALA RAJENDER,6a932b5bcd944524379ede55,Lok Sabha
+Tandur,56,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
 Sanathnagar,62,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Secunderabad,70,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Amberpet,59,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
@@ -1063,7 +1063,7 @@ Polavaram (St),186,ELURU,27,Andhra Pradesh,West Godavari,Putta Mahesh Kumar,6a93
 Jubilee Hills,61,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Musheerabad,57,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Prathipadu,155,KAKINADA,23,Andhra Pradesh,East Godavari,TANGELLA UDAY SRINIVAS,6a932b5bcd944524379edfa9,Lok Sabha
-Rajendranagar,51,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Rajendranagar,51,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
 Nampally,63,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Khairatabad,60,SECUNDERABAD,8,Telangana,Hyderabad,Kishan Reddy Gangapuram,6a932b5bcd944524379edea4,Lok Sabha
 Karwan,64,HYDERABAD,9,Telangana,Hyderabad,Asaduddin Owaisi,6a932b5bcd944524379edde2,Lok Sabha
@@ -1079,8 +1079,8 @@ Lal Bahadur Nagar,49,MALKAJGIRI,7,Telangana,Rangareddi,EATALA RAJENDER,6a932b5bc
 Yakutpura,68,HYDERABAD,9,Telangana,Hyderabad,Asaduddin Owaisi,6a932b5bcd944524379edde2,Lok Sabha
 Munugode,93,BHONGIR,14,Telangana,Nalgonda,CHAMALA KIRAN KUMAR REDDY,6a932b5bcd944524379ede13,Lok Sabha
 Chandrayangutta,67,HYDERABAD,9,Telangana,Hyderabad,Asaduddin Owaisi,6a932b5bcd944524379edde2,Lok Sabha
-Pargi,54,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
-Maheswaram,50,CHEVELLA,10,Andhra Pradesh,Rangareddi,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Pargi,54,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
+Maheswaram,50,CHELVELLA,10,Telangana,Rangareddi,KONDA VISHWESHWAR REDDY,6a932b5bcd944524379edea6,Lok Sabha
 Suryapet,91,NALGONDA,13,Telangana,Nalgonda,KUNDURU RAGHUVEER,6a932b5bcd944524379edeae,Lok Sabha
 Sathupalle (Sc),116,KHAMMAM,17,Telangana,Khammam,RAMASAHAYAM RAGHURAM REDDY,6a932b5bcd944524379edf26,Lok Sabha
 Kodad,90,NALGONDA,13,Telangana,Nalgonda,KUNDURU RAGHUVEER,6a932b5bcd944524379edeae,Lok Sabha
@@ -1113,7 +1113,7 @@ Mummidivaram,162,AMALAPURAM,24,Andhra Pradesh,East Godavari,GM Harish Balayogi,6
 Narayanpet,73,MAHABUBNAGAR,11,Telangana,Mahbubnagar,ARUNA. D. K,6a932b5bcd944524379eddde,Lok Sabha
 Mylavaram,201,VIJAYAWADA,29,Andhra Pradesh,Krishna,Sivanath Kesineni,6a932b5bcd944524379edf86,Lok Sabha
 Mandapeta,167,AMALAPURAM,24,Andhra Pradesh,East Godavari,GM Harish Balayogi,6a932b5bcd944524379ede63,Lok Sabha
-Tadepalligudem,181,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Tadepalligudem,181,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Kakinada City,160,KAKINADA,23,Andhra Pradesh,East Godavari,TANGELLA UDAY SRINIVAS,6a932b5bcd944524379edfa9,Lok Sabha
 Nidadavole,174,RAJAHMUNDRY,25,Andhra Pradesh,West Godavari,Daggubati Purandeshwari,6a932b5bcd944524379ede22,Lok Sabha
 Mahbubnagar,74,MAHABUBNAGAR,11,Telangana,Mahbubnagar,ARUNA. D. K,6a932b5bcd944524379eddde,Lok Sabha
@@ -1122,7 +1122,7 @@ Ungutur,182,ELURU,27,Andhra Pradesh,West Godavari,Putta Mahesh Kumar,6a932b5bcd9
 Nandigama (Sc),202,VIJAYAWADA,29,Andhra Pradesh,Krishna,Sivanath Kesineni,6a932b5bcd944524379edf86,Lok Sabha
 Ramachandrapuram,161,AMALAPURAM,24,Andhra Pradesh,East Godavari,GM Harish Balayogi,6a932b5bcd944524379ede63,Lok Sabha
 Pedakurapadu,204,NARASARAOPET,31,Andhra Pradesh,Guntur,Lavu Sri Krishna Devarayalu,6a932b5bcd944524379edeb0,Lok Sabha
-Tanuku,180,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Tanuku,180,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Achampet (Sc),82,NAGARKURNOOL,12,Telangana,Mahbubnagar,DR.MALLU RAVI,6a932b5bcd944524379ede4e,Lok Sabha
 Nagarkurnool,81,NAGARKURNOOL,12,Telangana,Mahbubnagar,DR.MALLU RAVI,6a932b5bcd944524379ede4e,Lok Sabha
 Makthal,77,MAHABUBNAGAR,11,Telangana,Mahbubnagar,ARUNA. D. K,6a932b5bcd944524379eddde,Lok Sabha
@@ -1132,14 +1132,14 @@ Gurajala,219,NARASARAOPET,31,Andhra Pradesh,Guntur,Lavu Sri Krishna Devarayalu,6
 Gannavaram,190,MACHILIPATNAM,28,Andhra Pradesh,Krishna,Balashowry Vallabbhaneni,6a932b5bcd944524379eddf2,Lok Sabha
 Gannavaram (Sc),165,AMALAPURAM,24,Andhra Pradesh,East Godavari,GM Harish Balayogi,6a932b5bcd944524379ede63,Lok Sabha
 Kaikalur,192,ELURU,27,Andhra Pradesh,Krishna,Putta Mahesh Kumar,6a932b5bcd944524379edf09,Lok Sabha
-Achanta,175,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
-Undi,179,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Achanta,175,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
+Undi,179,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Wanaparthy,78,NAGARKURNOOL,12,Telangana,Mahbubnagar,DR.MALLU RAVI,6a932b5bcd944524379ede4e,Lok Sabha
 Macherla,220,NARASARAOPET,31,Andhra Pradesh,Guntur,Lavu Sri Krishna Devarayalu,6a932b5bcd944524379edeb0,Lok Sabha
-Bhimavaram,178,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Bhimavaram,178,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Amalapuram (Sc),163,AMALAPURAM,24,Andhra Pradesh,East Godavari,GM Harish Balayogi,6a932b5bcd944524379ede63,Lok Sabha
 Tadikonda (Sc),205,GUNTUR,30,Andhra Pradesh,Guntur,Dr Chandra Sekhar Pemmasani,6a932b5bcd944524379ede37,Lok Sabha
-Palacole,176,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Palacole,176,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Vijayawada Central,199,VIJAYAWADA,29,Andhra Pradesh,Krishna,Sivanath Kesineni,6a932b5bcd944524379edf86,Lok Sabha
 Gudivada,191,MACHILIPATNAM,28,Andhra Pradesh,Krishna,Balashowry Vallabbhaneni,6a932b5bcd944524379eddf2,Lok Sabha
 Vijayawada West,198,VIJAYAWADA,29,Andhra Pradesh,Krishna,Sivanath Kesineni,6a932b5bcd944524379edf86,Lok Sabha
@@ -1149,7 +1149,7 @@ Penamaluru,197,MACHILIPATNAM,28,Andhra Pradesh,Krishna,Balashowry Vallabbhaneni,
 Vijayawada East,200,VIJAYAWADA,29,Andhra Pradesh,Krishna,Sivanath Kesineni,6a932b5bcd944524379edf86,Lok Sabha
 Mangalagiri,206,GUNTUR,30,Andhra Pradesh,Guntur,Dr Chandra Sekhar Pemmasani,6a932b5bcd944524379ede37,Lok Sabha
 Sattenapalle,217,NARASARAOPET,31,Andhra Pradesh,Guntur,Lavu Sri Krishna Devarayalu,6a932b5bcd944524379edeb0,Lok Sabha
-Narasapuram,177,NARSAPURAM,26,Andhra Pradesh,West Godavari,Shri Meda Raghunadha Reddy (2024-30),6a932b5ecd944524379ee264,Rajya Sabha
+Narasapuram,177,NARASAPURAM,26,Andhra Pradesh,West Godavari,Bhupathiraju Srinivasa varma,6a932b5bcd944524379ede05,Lok Sabha
 Pedana,193,MACHILIPATNAM,28,Andhra Pradesh,Krishna,Balashowry Vallabbhaneni,6a932b5bcd944524379eddf2,Lok Sabha
 Kollapur,85,NAGARKURNOOL,12,Telangana,Mahbubnagar,DR.MALLU RAVI,6a932b5bcd944524379ede4e,Lok Sabha
 Gadwal,79,NAGARKURNOOL,12,Telangana,Mahbubnagar,DR.MALLU RAVI,6a932b5bcd944524379ede4e,Lok Sabha
@@ -1398,8 +1398,8 @@ Kalyanpur (Sc),131,SAMASTIPUR,23,Bihar,Samastipur,SHAMBHAVI,6a932b5bcd944524379e
 Gaura Bauram,79,DARBHANGA,14,Bihar,Darbhanga,Mr Gopal Jee Thakur,6a932b5bcd944524379eded4,Lok Sabha
 Sakra (Sc),92,MUZAFFARPUR,15,Bihar,Muzaffarpur,RAJ BHUSHAN CHOUDHARY,6a932b5bcd944524379edf13,Lok Sabha
 Ekma,113,MAHARAJGANJ,19,Bihar,Saran,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
-Kasba,58,PURNIA,12,Bihar,Purnia,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
-Banmankhi (Sc),59,PURNIA,12,Bihar,Purnia,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
+Kasba,58,PURNEA,12,Bihar,Purnia,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
+Banmankhi (Sc),59,PURNEA,12,Bihar,Purnia,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
 Vaishali,125,VAISHALI,16,Bihar,Vaishali,Smt Veena Devi,6a932b5bcd944524379edf97,Lok Sabha
 Amnour,120,SARAN,20,Bihar,Saran,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sabha
 Baisi,57,KISHANGANJ,10,Bihar,Purnia,Dr Mohammad Jawed,6a932b5bcd944524379ede3b,Lok Sabha
@@ -1408,7 +1408,7 @@ Warisnagar,132,SAMASTIPUR,23,Bihar,Samastipur,SHAMBHAVI,6a932b5bcd944524379edf55
 Marhaura,117,SARAN,20,Bihar,Saran,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sabha
 Samastipur,133,SAMASTIPUR,23,Bihar,Samastipur,SHAMBHAVI,6a932b5bcd944524379edf55,Lok Sabha
 Bihariganj,71,MADHEPURA,13,Bihar,Madhepura,Dinesh Chandra Yadav,6a932b5bcd944524379ede33,Lok Sabha
-Dhamdaha,61,PURNIA,12,Bihar,Purnia,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
+Dhamdaha,61,PURNEA,12,Bihar,Purnia,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
 Saharsa,75,MADHEPURA,13,Bihar,Saharsa,Dinesh Chandra Yadav,6a932b5bcd944524379ede33,Lok Sabha
 Balrampur,65,KATIHAR,11,Bihar,Katihar,TARIQ ANWAR,6a932b5bcd944524379edfab,Lok Sabha
 Mahua,126,HAJIPUR,21,Bihar,Vaishali,CHIRAG PASWAN,6a932b5bcd944524379ede1e,Lok Sabha
@@ -1420,12 +1420,12 @@ Parsa,121,SARAN,20,Bihar,Saran,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sa
 Morwa,135,UJJARPUR,22,Bihar,Samastipur,Nityanand Rai,6a932b5bcd944524379edee8,Lok Sabha
 Simri Bakhtiarpur,76,KHAGARIA,25,Bihar,Saharsa,RAJESH VERMA,6a932b5bcd944524379edf1a,Lok Sabha
 Sonbarsha (Sc),74,MADHEPURA,13,Bihar,Saharsa,Dinesh Chandra Yadav,6a932b5bcd944524379ede33,Lok Sabha
-Purnia,62,PURNIA,12,Bihar,Purnia,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
+Purnia,62,PURNEA,12,Bihar,Purnia,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
 Garkha (Sc),119,SARAN,20,Bihar,Saran,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sabha
 Hasanpur,140,KHAGARIA,25,Bihar,Samastipur,RAJESH VERMA,6a932b5bcd944524379edf1a,Lok Sabha
 Ujiarpur,134,UJJARPUR,22,Bihar,Samastipur,Nityanand Rai,6a932b5bcd944524379edee8,Lok Sabha
 Chapra,118,SARAN,20,Bihar,Saran,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sabha
-Rupauli,60,PURNIA,12,Bihar,Purnia,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
+Rupauli,60,PURNEA,12,Bihar,Purnia,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
 Sarairanjan,136,UJJARPUR,22,Bihar,Samastipur,Nityanand Rai,6a932b5bcd944524379edee8,Lok Sabha
 Kadwa,64,KATIHAR,11,Bihar,Katihar,TARIQ ANWAR,6a932b5bcd944524379edfab,Lok Sabha
 Bibhutipur,138,UJJARPUR,22,Bihar,Samastipur,Nityanand Rai,6a932b5bcd944524379edee8,Lok Sabha
@@ -1434,7 +1434,7 @@ Cheria Bariarpur,141,BEGUSARAI,24,Bihar,Begusarai,Giriraj Singh,6a932b5bcd944524
 Hajipur,123,HAJIPUR,21,Bihar,Vaishali,CHIRAG PASWAN,6a932b5bcd944524379ede1e,Lok Sabha
 Sonepur,122,SARAN,20,Bihar,Vaishali,Rajiv Pratap Rudy,6a932b5bcd944524379edf1c,Lok Sabha
 Mahnar,129,HAJIPUR,21,Bihar,Vaishali,CHIRAG PASWAN,6a932b5bcd944524379ede1e,Lok Sabha
-Korha (Sc),69,PURNIA,12,Bihar,Katihar,Dr. Faiyaz Ahmad (2022-28),6a932b5ecd944524379ee1f6,Rajya Sabha
+Korha (Sc),69,PURNEA,12,Bihar,Katihar,RAJESH RANJAN ALIAS PAPPU YADAV,6a932b5bcd944524379edf19,Lok Sabha
 Katihar,63,KATIHAR,11,Bihar,Katihar,TARIQ ANWAR,6a932b5bcd944524379edfab,Lok Sabha
 Alauli (Sc),148,KHAGARIA,25,Bihar,Khagaria,RAJESH VERMA,6a932b5bcd944524379edf1a,Lok Sabha
 Bakhri (Sc),147,BEGUSARAI,24,Bihar,Begusarai,Giriraj Singh,6a932b5bcd944524379ede62,Lok Sabha
@@ -1520,7 +1520,7 @@ Goh,219,KARAKAT,35,Bihar,Aurangabad,RAJA RAM SINGH,6a932b5bcd944524379edf15,Lok 
 Belhar,163,BANKA,27,Bihar,Banka,Giridhari Yadav,6a932b5bcd944524379ede61,Lok Sabha
 Jhajha,242,JAMUI,40,Bihar,Jamui,ARUN BHARTI,6a932b5bcd944524379edddb,Lok Sabha
 Atri,233,JAHANABAD,36,Bihar,Gaya,SURENDRA PRASAD YADAV,6a932b5bcd944524379edfa3,Lok Sabha
-Tikari,231,AURANGABAD,37,Maharashtra,Gaya,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
+Tikari,231,AURANGABAD,37,Bihar,Gaya,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
 Belaganj,232,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
 Dehri,212,KARAKAT,35,Bihar,Rohtas,RAJA RAM SINGH,6a932b5bcd944524379edf15,Lok Sabha
 Sikandra (Sc),240,JAMUI,40,Bihar,Jamui,ARUN BHARTI,6a932b5bcd944524379edddb,Lok Sabha
@@ -1533,31 +1533,31 @@ Gobindpur,238,NAWADA,39,Bihar,Nawada,VIVEK THAKUR,6a932b5bcd944524379edfc8,Lok S
 Katoria (St),162,BANKA,27,Bihar,Banka,Giridhari Yadav,6a932b5bcd944524379ede61,Lok Sabha
 Hisua,236,NAWADA,39,Bihar,Nawada,VIVEK THAKUR,6a932b5bcd944524379edfc8,Lok Sabha
 Wazirganj,234,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
-Rafiganj,224,AURANGABAD,37,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
-Aurangabad,223,AURANGABAD,37,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
-Gurua,225,AURANGABAD,37,Maharashtra,Gaya,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
+Rafiganj,224,AURANGABAD,37,Bihar,Aurangabad,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
+Aurangabad,223,AURANGABAD,37,Bihar,Aurangabad,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
+Gurua,225,AURANGABAD,37,Bihar,Gaya,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
 Rajauli (Sc),235,NAWADA,39,Bihar,Nawada,VIVEK THAKUR,6a932b5bcd944524379edfc8,Lok Sabha
 Gaya Town,230,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
 Chakai,243,JAMUI,40,Bihar,Jamui,ARUN BHARTI,6a932b5bcd944524379edddb,Lok Sabha
 Bodh Gaya (Sc),229,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
 Barachatti (Sc),228,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
-Kutumba (Sc),222,AURANGABAD,37,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
+Kutumba (Sc),222,AURANGABAD,37,Bihar,Aurangabad,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
 Sherghati,226,GAYA,38,Bihar,Gaya,JITAN RAM MANJHI,6a932b5bcd944524379ede7d,Lok Sabha
-Imamganj (Sc),227,AURANGABAD,37,Maharashtra,Gaya,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
+Imamganj (Sc),227,AURANGABAD,37,Bihar,Gaya,ABHAY KUMAR SINHA,6a932b5bcd944524379eddb0,Lok Sabha
 Kochadhaman,55,KISHANGANJ,10,Bihar,Kishanganj,Dr Mohammad Jawed,6a932b5bcd944524379ede3b,Lok Sabha
-Ramanujganj (St),7,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Pratappur (St),6,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Bharatpur-Sonhat (S,1,KORBA,4,Chhattisgarh,Koriya,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
-Bhatgaon,5,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Samri (St),8,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Ramanujganj (St),7,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
+Pratappur (St),6,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
+Bharatpur-Sonhat (St),1,KORBA,4,Chhattisgarh,Koriya,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
+Bhatgaon,5,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
+Samri (St),8,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
 Baikunthpur,3,KORBA,4,Chhattisgarh,Koriya,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
-Premnagar,4,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Lundra (St),9,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Premnagar,4,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
+Lundra (St),9,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
 Manendragarh,2,KORBA,4,Chhattisgarh,Koriya,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
 Jashpur (St),12,RAIGARH,2,Chhattisgarh,Jashpur,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
-Ambikapur,10,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Ambikapur,10,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
 Marwahi (St),24,KORBA,4,Chhattisgarh,Bilaspur,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
-Sitapur (St),11,SURGUJA,1,Chhattisgarh,Surguja,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Sitapur (St),11,SARGUJA,1,Chhattisgarh,Surguja,CHINTAMANI MAHARAJ,6a932b5bcd944524379ede1d,Lok Sabha
 Pali-Tanakhar (St),23,KORBA,4,Chhattisgarh,Korba,Jyotsna Charandas Mahant,6a932b5bcd944524379ede85,Lok Sabha
 Kunkuri (St),13,RAIGARH,2,Chhattisgarh,Jashpur,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
 Pathalgaon (St),14,RAIGARH,2,Chhattisgarh,Jashpur,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
@@ -1571,28 +1571,28 @@ Korba,21,KORBA,4,Chhattisgarh,Korba,Jyotsna Charandas Mahant,6a932b5bcd944524379
 Beltara,31,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
 Masturi (Sc),32,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
 Takhatpur,28,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
-Akaltara,33,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Akaltara,33,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Dharamjaigarh (St),19,RAIGARH,2,Chhattisgarh,Raigarh,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
 Kharsia,18,RAIGARH,2,Chhattisgarh,Raigarh,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
 Mungeli (Sc),27,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
-Sakti,35,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Sakti,35,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Bilaspur,30,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
-Janjgir-Champa,34,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Janjgir-Champa,34,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Bilha,29,BILASPUR,5,Chhattisgarh,Bilaspur,TOKHAN SAHU,6a932b5bcd944524379edfb1,Lok Sabha
 Nawagarh (Sc),70,DURG,7,Chhattisgarh,Durg,Vijay Baghel,6a932b5bcd944524379edfbc,Lok Sabha
 Pandariya,71,RAJNANDGAON,6,Chhattisgarh,Kawardha,Santosh Pandey,6a932b5bcd944524379edf49,Lok Sabha
-Jaijaipur,37,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Chandrapur,36,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
-Pamgarh (Sc),38,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Janjgir - Champa,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Jaijaipur,37,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
+Chandrapur,36,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
+Pamgarh (Sc),38,JANJGIR CHAMPA,3,Chhattisgarh,Janjgir - Champa,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Raigarh,16,RAIGARH,2,Chhattisgarh,Raigarh,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
 Saja,68,DURG,7,Chhattisgarh,Durg,Vijay Baghel,6a932b5bcd944524379edfbc,Lok Sabha
 Bhatapara,46,RAIPUR,8,Chhattisgarh,Raipur,BRIJMOHAN AGRAWAL,6a932b5bcd944524379ede0d,Lok Sabha
 Khairagarh,73,RAJNANDGAON,6,Chhattisgarh,Rajnandgaon,Santosh Pandey,6a932b5bcd944524379edf49,Lok Sabha
 Bemetara,69,DURG,7,Chhattisgarh,Durg,Vijay Baghel,6a932b5bcd944524379edfbc,Lok Sabha
 Baloda Bazar,45,RAIPUR,8,Chhattisgarh,Raipur,BRIJMOHAN AGRAWAL,6a932b5bcd944524379ede0d,Lok Sabha
-Kasdol,44,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Raipur,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Kasdol,44,JANJGIR CHAMPA,3,Chhattisgarh,Raipur,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Sarangarh (Sc),17,RAIGARH,2,Chhattisgarh,Raigarh,RADHE SHYAM RATHIYA,6a932b5bcd944524379edf0f,Lok Sabha
-Bilaigarh (Sc),43,JANJGIR-CHAMPA (SC,3,Chhattisgarh,Raipur,Smt. Ranjeet Ranjan (2022-28),6a932b5ecd944524379ee2c7,Rajya Sabha
+Bilaigarh (Sc),43,JANJGIR CHAMPA,3,Chhattisgarh,Raipur,KAMLESH JANGDE,6a932b5bcd944524379ede96,Lok Sabha
 Saraipali (Sc),39,MAHASAMUND,9,Chhattisgarh,Mahasamund,ROOP KUMARI CHOUDHARY,6a932b5bcd944524379edf37,Lok Sabha
 Basna,40,MAHASAMUND,9,Chhattisgarh,Mahasamund,ROOP KUMARI CHOUDHARY,6a932b5bcd944524379edf37,Lok Sabha
 Dharsiwa,47,RAIPUR,8,Chhattisgarh,Raipur,BRIJMOHAN AGRAWAL,6a932b5bcd944524379ede0d,Lok Sabha
@@ -1643,20 +1643,20 @@ Mundka,8,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,
 Badli,5,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
 Rohini,13,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
 Rithala,6,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
-Adarsh Nagar,4,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
-Shalimar Bagh,14,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Adarsh Nagar,4,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
+Shalimar Bagh,14,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Timarpur,3,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
 Mustafabad,69,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
 Kirari,9,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
 Mangol Puri (Sc),12,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
-Model Town,18,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Model Town,18,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Gokalpur (Sc),68,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
-Sultan Pur Majra(Sc),10,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
-Wazirpur,17,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
-Tri Nagar,16,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
-Shakur Basti,15,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Sultan Pur Majra (Sc),10,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379edfcb,Lok Sabha
+Wazirpur,17,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
+Tri Nagar,16,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
+Shakur Basti,15,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Ghonda,66,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
-Chandni Chowk,20,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Chandni Chowk,20,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Babarpur,67,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
 Rohtas Nagar,64,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
 Seemapuri (Sc),63,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
@@ -1664,7 +1664,7 @@ Nangloi Jat,11,NORTH WEST DELHI,5,Delhi,,Yogendra Chandoliya,6a932b5bcd944524379
 Shahdara,62,EAST DELHI,3,Delhi,,Harsh Malhotra,6a932b5bcd944524379ede6e,Lok Sabha
 Seelam Pur,65,NORTH EAST DELHI,2,Delhi,,Manoj Tiwari,6a932b5bcd944524379edecb,Lok Sabha
 Najafgarh,35,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
-Sadar Bazar,19,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Sadar Bazar,19,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Vikaspuri,31,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
 Madipur (Sc),26,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
 Moti Nagar,25,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lok Sabha
@@ -1674,11 +1674,11 @@ Karol Bagh (Sc),23,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lo
 Vishwas Nagar,59,EAST DELHI,3,Delhi,,Harsh Malhotra,6a932b5bcd944524379ede6e,Lok Sabha
 Rajouri Garden,27,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
 Tilak Nagar,29,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
-Ballimaran,22,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Ballimaran,22,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Krishna Nagar,60,EAST DELHI,3,Delhi,,Harsh Malhotra,6a932b5bcd944524379ede6e,Lok Sabha
 Rajinder Nagar,39,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lok Sabha
 Jangpura,41,EAST DELHI,3,Delhi,,Harsh Malhotra,6a932b5bcd944524379ede6e,Lok Sabha
-Matia Mahal,21,CHANDNI CHOWK,1,Delhi,,Shri Narain Dass Gupta (2024-30),6a932b5ecd944524379ee26a,Rajya Sabha
+Matia Mahal,21,CHANDINI CHOWK,1,Delhi,,Praveen Khandelwal,6a932b5bcd944524379edf01,Lok Sabha
 Hari Nagar,28,WEST DELHI,6,Delhi,,Kamaljeet Sehrawat,6a932b5bcd944524379ede95,Lok Sabha
 New Delhi,40,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lok Sabha
 Laxmi Nagar,58,EAST DELHI,3,Delhi,,Harsh Malhotra,6a932b5bcd944524379ede6e,Lok Sabha
@@ -1700,7 +1700,7 @@ Malviya Nagar,43,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lok 
 Mehrauli,45,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
 Greater Kailash,50,NEW DELHI,4,Delhi,,Bansuri Swaraj,6a932b5bcd944524379eddf6,Lok Sabha
 Tughlakabad,52,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
-Ambedkar Nagar(Sc),48,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
+Ambedkar Nagar (Sc),48,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
 Badarpur,53,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
 Deoli (Sc),47,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
 Sangam Vihar,49,SOUTH DELHI,7,Delhi,,Ramvir Singh Bidhuri,6a932b5bcd944524379edf2c,Lok Sabha
@@ -1751,7 +1751,7 @@ Dhanera,9,BANASKANTHA,2,Gujarat,Banas Kantha,GENIBEN NAGAJI THAKOR,6a932b5bcd944
 Danta (St),10,BANASKANTHA,2,Gujarat,Banas Kantha,GENIBEN NAGAJI THAKOR,6a932b5bcd944524379ede60,Lok Sabha
 Deodar,14,BANASKANTHA,2,Gujarat,Banas Kantha,GENIBEN NAGAJI THAKOR,6a932b5bcd944524379ede60,Lok Sabha
 Deesa,13,BANASKANTHA,2,Gujarat,Banas Kantha,GENIBEN NAGAJI THAKOR,6a932b5bcd944524379ede60,Lok Sabha
-Khedbrahma(St),29,SABARKANTHA,5,Gujarat,Sabar Kantha,SHOBHANABEN MAHENDRASINH BARAIYA,6a932b5bcd944524379edf5d,Lok Sabha
+Khedbrahma (St),29,SABARKANTHA,5,Gujarat,Sabar Kantha,SHOBHANABEN MAHENDRASINH BARAIYA,6a932b5bcd944524379edf5d,Lok Sabha
 Palanpur,12,BANASKANTHA,2,Gujarat,Banas Kantha,GENIBEN NAGAJI THAKOR,6a932b5bcd944524379ede60,Lok Sabha
 Vadgam (Sc),11,PATAN,3,Gujarat,Banas Kantha,Bharatsinhji Shankarji Dabhi,6a932b5bcd944524379eddfe,Lok Sabha
 Kankrej,15,PATAN,3,Gujarat,Banas Kantha,Bharatsinhji Shankarji Dabhi,6a932b5bcd944524379eddfe,Lok Sabha
@@ -1770,7 +1770,7 @@ Visnagar,22,MAHESANA,4,Gujarat,Mahesana,HARIBHAI PATEL,6a932b5bcd944524379ede6c,
 Vijapur,26,MAHESANA,4,Gujarat,Mahesana,HARIBHAI PATEL,6a932b5bcd944524379ede6c,Lok Sabha
 Becharaji,23,MAHESANA,4,Gujarat,Mahesana,HARIBHAI PATEL,6a932b5bcd944524379ede6c,Lok Sabha
 Himatnagar,27,SABARKANTHA,5,Gujarat,Sabar Kantha,SHOBHANABEN MAHENDRASINH BARAIYA,6a932b5bcd944524379edf5d,Lok Sabha
-Gandhidham(Sc),5,KACHCHH,1,Gujarat,Kachchh,Vinod Chavda,6a932b5bcd944524379edfc0,Lok Sabha
+Gandhidham (Sc),5,KACHCHH,1,Gujarat,Kachchh,Vinod Chavda,6a932b5bcd944524379edfc0,Lok Sabha
 Mahesana,25,MAHESANA,4,Gujarat,Mahesana,HARIBHAI PATEL,6a932b5bcd944524379ede6c,Lok Sabha
 Anjar,4,KACHCHH,1,Gujarat,Kachchh,Vinod Chavda,6a932b5bcd944524379edfc0,Lok Sabha
 Modasa,31,SABARKANTHA,5,Gujarat,Sabar Kantha,SHOBHANABEN MAHENDRASINH BARAIYA,6a932b5bcd944524379edf5d,Lok Sabha
@@ -1783,9 +1783,9 @@ Kadi (Sc),24,MAHESANA,4,Gujarat,Mahesana,HARIBHAI PATEL,6a932b5bcd944524379ede6c
 Mandvi,2,KACHCHH,1,Gujarat,Kachchh,Vinod Chavda,6a932b5bcd944524379edfc0,Lok Sabha
 Lunawada,122,PANCHMAHAL,18,Gujarat,Panch Mahals,RAJPALSINH MAHENDRASINH JADAV,6a932b5bcd944524379edf20,Lok Sabha
 Santrampur,123,DAHOD,19,Gujarat,Panch Mahals,Jaswantsinh Sumanbhai Bhabhor,6a932b5bcd944524379ede7c,Lok Sabha
-Gandhinagar(South),35,AHMEDABAD EAST,7,Gujarat,Gandhinagar,Hasmukh Bhai Soma Bhai Patel,6a932b5bcd944524379ede6f,Lok Sabha
+Gandhinagar (South),35,AHMEDABAD EAST,7,Gujarat,Gandhinagar,Hasmukh Bhai Soma Bhai Patel,6a932b5bcd944524379ede6f,Lok Sabha
 Kalol,38,GANDHINAGAR,6,Gujarat,Gandhinagar,Shri Amit Shah,6a932b5bcd944524379edf62,Lok Sabha
-Gandhinagar(North),36,GANDHINAGAR,6,Gujarat,Gandhinagar,Shri Amit Shah,6a932b5bcd944524379edf62,Lok Sabha
+Gandhinagar (North),36,GANDHINAGAR,6,Gujarat,Gandhinagar,Shri Amit Shah,6a932b5bcd944524379edf62,Lok Sabha
 Dhrangadhra,64,SURENDRANAGAR,9,Gujarat,Surendranagar,CHANDUBHAI CHHAGANBHAI SHIHORA,6a932b5bcd944524379ede17,Lok Sabha
 Dahegam,34,AHMEDABAD EAST,7,Gujarat,Gandhinagar,Hasmukh Bhai Soma Bhai Patel,6a932b5bcd944524379ede6f,Lok Sabha
 Morbi,65,KACHCHH,1,Gujarat,Rajkot,Vinod Chavda,6a932b5bcd944524379edfc0,Lok Sabha
@@ -1834,8 +1834,8 @@ Anand,112,ANAND,16,Gujarat,Anand,Mitesh Rameshbhai Bakabhai Patel,6a932b5bcd9445
 Anklav,110,ANAND,16,Gujarat,Anand,Mitesh Rameshbhai Bakabhai Patel,6a932b5bcd944524379eded0,Lok Sabha
 Halol,128,CHHOTA UDAIPUR,21,Gujarat,Panch Mahals,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
 Khambhat,108,ANAND,16,Gujarat,Anand,Mitesh Rameshbhai Bakabhai Patel,6a932b5bcd944524379eded0,Lok Sabha
-Chhota Udaipur (St,137,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
-Rajkot Rural(Sc),71,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
+Chhota Udaipur (St),137,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
+Rajkot Rural (Sc),71,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
 Rajkot South,70,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
 Vaghodia,136,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
 Rajkot West,69,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
@@ -1844,9 +1844,9 @@ Botad,107,BHAVNAGAR,15,Gujarat,Bhavnagar,NIMUBEN JAYANTIBHAI BAMBHANIYA,6a932b5b
 Rajkot East,68,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
 Jasdan,72,RAJKOT,10,Gujarat,Rajkot,PARSHOTTAMBHAI RUPALA,6a932b5bcd944524379edeee,Lok Sabha
 Sayajigunj,142,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
-Sankheda(St),139,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
+Sankheda (St),139,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
 Padra,146,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
-Vadodara City(Sc),141,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
+Vadodara City (Sc),141,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
 Raopura,144,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
 Akota,143,VADODARA,20,Gujarat,Vadodara,DR. HEMANG JOSHI,6a932b5bcd944524379ede40,Lok Sabha
 Jetpur (St),138,CHHOTA UDAIPUR,21,Gujarat,Vadodara,JASHUBHAI BHILUBHAI RATHVA,6a932b5bcd944524379ede7b,Lok Sabha
@@ -1876,7 +1876,7 @@ Gariadhar,101,AMRELI,14,Gujarat,Bhavnagar,BHARATBHAI MANUBHAI SUTARIYA,6a932b5bc
 Bharuch,153,BHARUCH,22,Gujarat,Bharuch,Mansukhbhai Dhanjibhai Vasava,6a932b5bcd944524379edecc,Lok Sabha
 Dhari,94,AMRELI,14,Gujarat,Amreli,BHARATBHAI MANUBHAI SUTARIYA,6a932b5bcd944524379eddfd,Lok Sabha
 Savarkundla,97,AMRELI,14,Gujarat,Amreli,BHARATBHAI MANUBHAI SUTARIYA,6a932b5bcd944524379eddfd,Lok Sabha
-Dediapada(St),149,BHARUCH,22,Gujarat,Narmada,Mansukhbhai Dhanjibhai Vasava,6a932b5bcd944524379edecc,Lok Sabha
+Dediapada (St),149,BHARUCH,22,Gujarat,Narmada,Mansukhbhai Dhanjibhai Vasava,6a932b5bcd944524379edecc,Lok Sabha
 Ankleshwar,154,BHARUCH,22,Gujarat,Bharuch,Mansukhbhai Dhanjibhai Vasava,6a932b5bcd944524379edecc,Lok Sabha
 Keshod,88,PORBANDAR,11,Gujarat,Junagadh,DR. MANSUKH MANDAVIYA,6a932b5bcd944524379ede45,Lok Sabha
 Talaja,100,BHAVNAGAR,15,Gujarat,Bhavnagar,NIMUBEN JAYANTIBHAI BAMBHANIYA,6a932b5bcd944524379edee5,Lok Sabha
@@ -1927,7 +1927,7 @@ Indri,20,KARNAL,5,Haryana,Karnal,MANOHAR LAL,6a932b5bcd944524379edec8,Lok Sabha
 Kalanwali (Sc),42,SIRSA,3,Haryana,Sirsa,SELJA,6a932b5bcd944524379edf51,Lok Sabha
 Kaithal,17,KURUKSHETRA,2,Haryana,Kaithal,NAVEEN JINDAL,6a932b5bcd944524379edee2,Lok Sabha
 Pundri,18,KURUKSHETRA,2,Haryana,Kaithal,NAVEEN JINDAL,6a932b5bcd944524379edee2,Lok Sabha
-Nilokheri(Sc),19,KARNAL,5,Haryana,Karnal,MANOHAR LAL,6a932b5bcd944524379edec8,Lok Sabha
+Nilokheri (Sc),19,KARNAL,5,Haryana,Karnal,MANOHAR LAL,6a932b5bcd944524379edec8,Lok Sabha
 Kalayat,16,KURUKSHETRA,2,Haryana,Kaithal,NAVEEN JINDAL,6a932b5bcd944524379edee2,Lok Sabha
 Narwana (Sc),38,SIRSA,3,Haryana,Jind,SELJA,6a932b5bcd944524379edf51,Lok Sabha
 Tohana,39,SIRSA,3,Haryana,Fatehabad,SELJA,6a932b5bcd944524379edf51,Lok Sabha
@@ -1961,26 +1961,26 @@ Garhi Sampla-Kilo,61,ROHTAK,7,Haryana,Rohtak,DEEPENDER SINGH HOODA,6a932b5bcd944
 Bawani Khera (Sc),59,HISAR,4,Haryana,Bhiwani,JAI PARKASH,6a932b5bcd944524379ede78,Lok Sabha
 Meham,60,ROHTAK,7,Haryana,Rohtak,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Rai,29,SONEPAT,6,Haryana,Sonipat,SATPAL BRAHAMCHARI,6a932b5bcd944524379edf4d,Lok Sabha
-Loharu,54,BHIWANI - MAHENDRAGARH,8,Haryana,Bhiwani,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Loharu,54,BHIWANI MAHENDRAGARH,8,Haryana,Bhiwani,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Sonipat,31,SONEPAT,6,Haryana,Sonipat,SATPAL BRAHAMCHARI,6a932b5bcd944524379edf4d,Lok Sabha
 Kharkhauda (Sc),30,SONEPAT,6,Haryana,Sonipat,SATPAL BRAHAMCHARI,6a932b5bcd944524379edf4d,Lok Sabha
-Tosham,58,BHIWANI - MAHENDRAGARH,8,Haryana,Bhiwani,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Tosham,58,BHIWANI MAHENDRAGARH,8,Haryana,Bhiwani,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Kalanaur (Sc),63,ROHTAK,7,Haryana,Rohtak,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Rohtak,62,ROHTAK,7,Haryana,Rohtak,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Bahadurgarh,64,ROHTAK,7,Haryana,Jhajjar,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Beri,67,ROHTAK,7,Haryana,Jhajjar,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
-Bhiwani,57,BHIWANI - MAHENDRAGARH,8,Haryana,Bhiwani,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
-Dadri,56,BHIWANI - MAHENDRAGARH,8,Haryana,Bhiwani,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Bhiwani,57,BHIWANI MAHENDRAGARH,8,Haryana,Bhiwani,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
+Dadri,56,BHIWANI MAHENDRAGARH,8,Haryana,Bhiwani,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Jhajjar (Sc),66,ROHTAK,7,Haryana,Jhajjar,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Badli,65,ROHTAK,7,Haryana,Jhajjar,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
-Badhra,55,BHIWANI - MAHENDRAGARH,8,Haryana,Bhiwani,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Badhra,55,BHIWANI MAHENDRAGARH,8,Haryana,Bhiwani,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Badshahpur,76,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
 Pataudi (Sc),75,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
 Tigaon,90,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
 Gurgaon,77,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
-Mahendragarh,69,BHIWANI - MAHENDRAGARH,8,Haryana,Mahendragarh,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Mahendragarh,69,BHIWANI MAHENDRAGARH,8,Haryana,Mahendragarh,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Badkhal,87,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
-Ateli,68,BHIWANI - MAHENDRAGARH,8,Haryana,Mahendragarh,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Ateli,68,BHIWANI MAHENDRAGARH,8,Haryana,Mahendragarh,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Kosli,73,ROHTAK,7,Haryana,Rewari,DEEPENDER SINGH HOODA,6a932b5bcd944524379ede27,Lok Sabha
 Sohna,78,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
 Faridabad,89,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
@@ -1992,8 +1992,8 @@ Bawal (Sc),72,GURGAON,9,Haryana,Rewari,Rao Inderjit Singh,6a932b5bcd944524379edf
 Hathin,82,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
 Palwal,84,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
 Nuh,79,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
-Narnaul,70,BHIWANI - MAHENDRAGARH,8,Haryana,Mahendragarh,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
-Nangal Chaudhry,71,BHIWANI - MAHENDRAGARH,8,Haryana,Mahendragarh,Shri Subhash Barala (2024-30),6a932b5ecd944524379ee2a9,Rajya Sabha
+Narnaul,70,BHIWANI MAHENDRAGARH,8,Haryana,Mahendragarh,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
+Nangal Chaudhry,71,BHIWANI MAHENDRAGARH,8,Haryana,Mahendragarh,Shri  Dharambir Singh,6a932b5bcd944524379edf5f,Lok Sabha
 Hodal (Sc),83,FARIDABAD,10,Haryana,Faridabad,Krishan Pal Gurjar,6a932b5bcd944524379edea9,Lok Sabha
 Ferozepur Jhirka,80,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
 Punahana,81,GURGAON,9,Haryana,Gurgaon,Rao Inderjit Singh,6a932b5bcd944524379edf2e,Lok Sabha
@@ -2061,7 +2061,7 @@ Chopal,60,SHIMLA,4,Himachal Pradesh,Shimla,Suresh Kumar Kashyap,6a932b5bcd944524
 Doon,52,SHIMLA,4,Himachal Pradesh,Solan,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
 Kasauli (Sc),54,SHIMLA,4,Himachal Pradesh,Solan,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
 Pachhad (Sc),55,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
-Sri Renukaji (Sc,57,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
+Sri Renukaji (Sc),57,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
 Shillai,59,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
 Nahan,56,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
 Paonta Sahib,58,SHIMLA,4,Himachal Pradesh,Sirmaur,Suresh Kumar Kashyap,6a932b5bcd944524379edfa5,Lok Sabha
@@ -2167,7 +2167,7 @@ Basavakalyan,47,BIDAR,7,Karnataka,Bidar,SAGAR ESHWAR KHANDRE,6a932b5bcd944524379
 Bidar South,49,BIDAR,7,Karnataka,Bidar,SAGAR ESHWAR KHANDRE,6a932b5bcd944524379edf3e,Lok Sabha
 Homnabad,48,BIDAR,7,Karnataka,Bidar,SAGAR ESHWAR KHANDRE,6a932b5bcd944524379edf3e,Lok Sabha
 Aland,46,BIDAR,7,Karnataka,Gulbarga,SAGAR ESHWAR KHANDRE,6a932b5bcd944524379edf3e,Lok Sabha
-Gulbarga Rural(Sc),43,GULBARGA,5,Karnataka,Gulbarga,RADHAKRISHNA,6a932b5bcd944524379edf0e,Lok Sabha
+Gulbarga Rural (Sc),43,GULBARGA,5,Karnataka,Gulbarga,RADHAKRISHNA,6a932b5bcd944524379edf0e,Lok Sabha
 Chincholi (Sc),42,BIDAR,7,Karnataka,Gulbarga,SAGAR ESHWAR KHANDRE,6a932b5bcd944524379edf3e,Lok Sabha
 Nagthan (Sc),31,BIJAPUR,4,Karnataka,Bijapur,Ramesh Chandappa Jigajinagi,6a932b5bcd944524379edf2a,Lok Sabha
 Gulbarga Dakshin,44,GULBARGA,5,Karnataka,Gulbarga,RADHAKRISHNA,6a932b5bcd944524379edf0e,Lok Sabha
@@ -2235,13 +2235,13 @@ Hubli-Dharwad- West,74,DHARWAD,11,Karnataka,Dharwad,Pralhad Venkatesh Joshi,6a93
 Hubli-Dharwad-Central,73,DHARWAD,11,Karnataka,Dharwad,Pralhad Venkatesh Joshi,6a932b5bcd944524379edefb,Lok Sabha
 Kampli (St),91,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
 Koppal,64,KOPPAL,8,Karnataka,Koppal,K. RAJASHEKAR BASAVARAJ HITNAL,6a932b5bcd944524379ede8a,Lok Sabha
-Hubli-Dharwad-East(Sc),72,DHARWAD,11,Karnataka,Dharwad,Pralhad Venkatesh Joshi,6a932b5bcd944524379edefb,Lok Sabha
+Hubli-Dharwad-East (Sc),72,DHARWAD,11,Karnataka,Dharwad,Pralhad Venkatesh Joshi,6a932b5bcd944524379edefb,Lok Sabha
 Kundgol,70,DHARWAD,11,Karnataka,Dharwad,Pralhad Venkatesh Joshi,6a932b5bcd944524379edefb,Lok Sabha
 Vijayanagara,90,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
 Shirahatti (Sc),65,HAVERI,10,Karnataka,Gadag,BASAVARAJ BOMMAI,6a932b5bcd944524379eddf8,Lok Sabha
 Bellary (St),93,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
 Sandur (St),95,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
-Hagaribommanahalli(Sc),89,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
+Hagaribommanahalli (Sc),89,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
 Yellapur,81,UTTARA KANNADA,12,Karnataka,Uttara Kannada,VISHWESHWAR HEGDE KAGERI,6a932b5bcd944524379edfc7,Lok Sabha
 Shiggaon,83,DHARWAD,11,Karnataka,Haveri,Pralhad Venkatesh Joshi,6a932b5bcd944524379edefb,Lok Sabha
 Bellary City,94,BELLARY,9,Karnataka,Bellary,E. TUKARAM,6a932b5bcd944524379ede53,Lok Sabha
@@ -2281,15 +2281,15 @@ Shimoga,113,SHIMOGA,14,Karnataka,Shimoga,Shri B Y Raghavendra,6a932b5bcd94452437
 Hosadurga,101,CHITRADURGA,18,Karnataka,Chitradurga,GOVIND MAKTHAPPA KARJOL,6a932b5bcd944524379ede66,Lok Sabha
 Bhadravati,112,SHIMOGA,14,Karnataka,Shimoga,Shri B Y Raghavendra,6a932b5bcd944524379edf66,Lok Sabha
 Tarikere,126,UDUPI CHIKMAGALUR,15,Karnataka,Chikmagalur,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
-Bagepalli,140,CHIKKABALLAPUR,27,Karnataka,Kolar,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Bagepalli,140,CHIKBALLAPUR,27,Karnataka,Kolar,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Madhugiri,138,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
 Sringeri,123,UDUPI CHIKMAGALUR,15,Karnataka,Chikmagalur,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
 Chiknayakanhalli,128,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
 Kadur,127,HASSAN,16,Karnataka,Chikmagalur,SHREYAS. M. PATEL,6a932b5bcd944524379edf5e,Lok Sabha
-Gauribidanur,139,CHIKKABALLAPUR,27,Karnataka,Kolar,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Gauribidanur,139,CHIKBALLAPUR,27,Karnataka,Kolar,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Kundapura,119,UDUPI CHIKMAGALUR,15,Karnataka,Udupi,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
 Koratagere (Sc),134,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
-Chikkaballapur,141,CHIKKABALLAPUR,27,Karnataka,Kolar,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Chikkaballapur,141,CHIKBALLAPUR,27,Karnataka,Kolar,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Sidlaghatta,142,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Chintamani,143,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Udupi,120,UDUPI CHIKMAGALUR,15,Karnataka,Udupi,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
@@ -2300,21 +2300,21 @@ Arsikere,194,HASSAN,16,Karnataka,Hassan,SHREYAS. M. PATEL,6a932b5bcd944524379edf
 Srinivaspur,144,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Tumkur Rural,133,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
 Kapu,121,UDUPI CHIKMAGALUR,15,Karnataka,Udupi,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
-Doddaballapur,180,CHIKKABALLAPUR,27,Karnataka,Bangalore Rural,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Doddaballapur,180,CHIKBALLAPUR,27,Karnataka,Bangalore Rural,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Mudigere (Sc),124,UDUPI CHIKMAGALUR,15,Karnataka,Chikmagalur,KOTA SRINIVAS POOJARY,6a932b5bcd944524379edea7,Lok Sabha
 Tiptur,129,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
-Devanahalli (Sc),179,CHIKKABALLAPUR,27,Karnataka,Bangalore Rural,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Devanahalli (Sc),179,CHIKBALLAPUR,27,Karnataka,Bangalore Rural,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Belur,195,HASSAN,16,Karnataka,Hassan,SHREYAS. M. PATEL,6a932b5bcd944524379edf5e,Lok Sabha
 Tumkur City,132,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
-Nelamangala (Sc),181,CHIKKABALLAPUR,27,Karnataka,Bangalore Rural,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Nelamangala (Sc),181,CHIKBALLAPUR,27,Karnataka,Bangalore Rural,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Turuvekere,130,TUMKUR,19,Karnataka,Tumkur,V. SOMANNA,6a932b5bcd944524379edfb7,Lok Sabha
 Mulbagal (Sc),145,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Kolar,148,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Belthangady,200,DAKSHINA KANNADA,17,Karnataka,Dakshina Kannada,CAPTAIN BRIJESH CHOWTA,6a932b5bcd944524379ede11,Lok Sabha
 Hassan,196,HASSAN,16,Karnataka,Hassan,SHREYAS. M. PATEL,6a932b5bcd944524379edf5e,Lok Sabha
 Moodabidri,201,DAKSHINA KANNADA,17,Karnataka,Dakshina Kannada,CAPTAIN BRIJESH CHOWTA,6a932b5bcd944524379ede11,Lok Sabha
-Hosakote,178,CHIKKABALLAPUR,27,Karnataka,Bangalore Rural,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
-Yelahanka,150,CHIKKABALLAPUR,27,Karnataka,Bangalore,Shri Jaggesh (2022-28),6a932b5ecd944524379ee246,Rajya Sabha
+Hosakote,178,CHIKBALLAPUR,27,Karnataka,Bangalore Rural,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
+Yelahanka,150,CHIKBALLAPUR,27,Karnataka,Bangalore,DR.K.SUDHAKAR,6a932b5bcd944524379ede4d,Lok Sabha
 Shravanabelagola,193,HASSAN,16,Karnataka,Hassan,SHREYAS. M. PATEL,6a932b5bcd944524379edf5e,Lok Sabha
 Holenarasipur,197,HASSAN,16,Karnataka,Hassan,SHREYAS. M. PATEL,6a932b5bcd944524379edf5e,Lok Sabha
 Magadi,182,BANGALORE RURAL,23,Karnataka,Bangalore Rural,DR C N MANJUNATH,6a932b5bcd944524379ede36,Lok Sabha
@@ -2330,17 +2330,17 @@ Malur,149,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok 
 Dasarahalli,155,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
 Nagamangala,191,MANDYA,20,Karnataka,Mandya,H.D. KUMARASWAMY,6a932b5bcd944524379ede6a,Lok Sabha
 K.R.Pura,151,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
-Kolar Gold Field(Sc),146,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
+Kolar Gold Field (Sc),146,KOLAR,28,Karnataka,Kolar,M. MALLESH BABU,6a932b5bcd944524379edeb4,Lok Sabha
 Rajarajeshwarinagar,154,BANGALORE RURAL,23,Karnataka,Bangalore,DR C N MANJUNATH,6a932b5bcd944524379ede36,Lok Sabha
 Yeshvanthapura,153,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
 Sarvagnanagar,160,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
 Hebbal,158,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
 Malleshwaram,157,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
-Pulakeshinagar(Sc),159,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
+Pulakeshinagar (Sc),159,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
 Mahalakshmi Layout,156,BANGALORE NORTH,24,Karnataka,Bangalore,SHOBHA KARANDLAJE,6a932b5bcd944524379edf5c,Lok Sabha
 Mangalore,204,DAKSHINA KANNADA,17,Karnataka,Dakshina Kannada,CAPTAIN BRIJESH CHOWTA,6a932b5bcd944524379ede11,Lok Sabha
 Shivajinagar,162,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
-C.V. Raman Nagar(Sc),161,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
+C.V. Raman Nagar (Sc),161,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
 Gandhi Nagar,164,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
 Rajaji Nagar,165,BANGALORE CENTRAL,25,Karnataka,Bangalore,P C Mohan,6a932b5bcd944524379edeeb,Lok Sabha
 Govindraj Nagar,166,BANGALORE SOUTH,26,Karnataka,Bangalore,Shri LS Tejasvi Surya,6a932b5bcd944524379edf74,Lok Sabha
@@ -2378,7 +2378,7 @@ Chamaraja,217,MYSORE,21,Karnataka,Mysore,YADUVEER KRISHNADATTA CHAMARAJA WADIYAR
 Varuna,219,CHAMARAJANAGAR,22,Karnataka,Mysore,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
 Narasimharaja,218,MYSORE,21,Karnataka,Mysore,YADUVEER KRISHNADATTA CHAMARAJA WADIYAR,6a932b5bcd944524379edfca,Lok Sabha
 Krishnaraja,216,MYSORE,21,Karnataka,Mysore,YADUVEER KRISHNADATTA CHAMARAJA WADIYAR,6a932b5bcd944524379edfca,Lok Sabha
-Heggadadevankote(St),213,CHAMARAJANAGAR,22,Karnataka,Mysore,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
+Heggadadevankote (St),213,CHAMARAJANAGAR,22,Karnataka,Mysore,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
 Hanur,221,CHAMARAJANAGAR,22,Karnataka,Chamrajnagar,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
 Kollegal (Sc),222,CHAMARAJANAGAR,22,Karnataka,Chamrajnagar,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
 Nanjangud (Sc),214,CHAMARAJANAGAR,22,Karnataka,Mysore,SUNIL BOSE,6a932b5bcd944524379edfa0,Lok Sabha
@@ -2538,7 +2538,7 @@ Anuppur (St),87,SHAHDOL,12,Madhya Pradesh,Anuppur,Smt Himadri Singh,6a932b5bcd94
 Jabalpur Cantt.,99,JABALPUR,13,Madhya Pradesh,Jabalpur,ASHISH DUBEY,6a932b5bcd944524379edde3,Lok Sabha
 Jabalpur Uttar,98,JABALPUR,13,Madhya Pradesh,Jabalpur,ASHISH DUBEY,6a932b5bcd944524379edde3,Lok Sabha
 Depalpur,203,INDORE,26,Madhya Pradesh,Indore,Shankar Lalwani,6a932b5bcd944524379edf56,Lok Sabha
-Jabalpur Purba(Sc),97,JABALPUR,13,Madhya Pradesh,Jabalpur,ASHISH DUBEY,6a932b5bcd944524379edde3,Lok Sabha
+Jabalpur Purba (Sc),97,JABALPUR,13,Madhya Pradesh,Jabalpur,ASHISH DUBEY,6a932b5bcd944524379edde3,Lok Sabha
 Jabalpur Paschim,100,JABALPUR,13,Madhya Pradesh,Jabalpur,ASHISH DUBEY,6a932b5bcd944524379edde3,Lok Sabha
 Hatpipliya,172,DEWAS,21,Madhya Pradesh,Dewas,Mahendra Singh Solanky,6a932b5bcd944524379edeb9,Lok Sabha
 Sanwer (Sc),211,INDORE,26,Madhya Pradesh,Indore,Shankar Lalwani,6a932b5bcd944524379edf56,Lok Sabha
@@ -2551,7 +2551,7 @@ Gadarwara,121,HOSHANGABAD,17,Madhya Pradesh,Narsimhapur,DARSHAN SINGH CHOUDHARY,
 Budhni,156,VIDISHA,18,Madhya Pradesh,Sehore,SHIVRAJ SINGH CHOUHAN,6a932b5bcd944524379edf5b,Lok Sabha
 Pipariya (Sc),139,HOSHANGABAD,17,Madhya Pradesh,Hoshangabad,DARSHAN SINGH CHOUDHARY,6a932b5bcd944524379ede26,Lok Sabha
 Khategaon,173,VIDISHA,18,Madhya Pradesh,Dewas,SHIVRAJ SINGH CHOUHAN,6a932b5bcd944524379edf5b,Lok Sabha
-Lakhnadon(St),117,MANDLA,14,Madhya Pradesh,Seoni,Faggan Singh Kulaste,6a932b5bcd944524379ede57,Lok Sabha
+Lakhnadon (St),117,MANDLA,14,Madhya Pradesh,Seoni,Faggan Singh Kulaste,6a932b5bcd944524379ede57,Lok Sabha
 Sohagpur,138,HOSHANGABAD,17,Madhya Pradesh,Hoshangabad,DARSHAN SINGH CHOUDHARY,6a932b5bcd944524379ede26,Lok Sabha
 Indore-1,204,INDORE,26,Madhya Pradesh,Indore,Shankar Lalwani,6a932b5bcd944524379edf56,Lok Sabha
 Dhar,201,DHAR,25,Madhya Pradesh,Dhar,SAVITRI THAKUR,6a932b5bcd944524379edf4f,Lok Sabha
@@ -2599,7 +2599,7 @@ Betul,131,BETUL,29,Madhya Pradesh,Betul,Durga Das Uikey,6a932b5bcd944524379ede51
 Balaghat,111,BALAGHAT,15,Madhya Pradesh,Balaghat,BHARTI PARDHI,6a932b5bcd944524379eddff,Lok Sabha
 Pandhurna (St),128,CHHINDWARA,16,Madhya Pradesh,Chhindwara,BUNTY VIVEK SAHU,6a932b5bcd944524379ede0e,Lok Sabha
 Pansemal (St),189,KHARGONE,27,Madhya Pradesh,Barwani,Gajendra Singh Patel,6a932b5bcd944524379ede5a,Lok Sabha
-Bhagwanpura(St),186,KHARGONE,27,Madhya Pradesh,West Nimar,Gajendra Singh Patel,6a932b5bcd944524379ede5a,Lok Sabha
+Bhagwanpura (St),186,KHARGONE,27,Madhya Pradesh,West Nimar,Gajendra Singh Patel,6a932b5bcd944524379ede5a,Lok Sabha
 Saunsar,125,CHHINDWARA,16,Madhya Pradesh,Chhindwara,BUNTY VIVEK SAHU,6a932b5bcd944524379ede0e,Lok Sabha
 Sendhawa (St),187,KHARGONE,27,Madhya Pradesh,Barwani,Gajendra Singh Patel,6a932b5bcd944524379ede5a,Lok Sabha
 Multai,129,BETUL,29,Madhya Pradesh,Betul,Durga Das Uikey,6a932b5bcd944524379ede51,Lok Sabha
@@ -2634,7 +2634,7 @@ Kamthi,58,RAMTEK,9,Maharashtra,Nagpur,Shyamkumar,6a932b5bcd944524379edf85,Lok Sa
 Amalner,15,JALGAON,3,Maharashtra,Jalgaon,SMITA UDAY WAGH,6a932b5bcd944524379edf88,Lok Sabha
 Jalgaon (Jamod),27,BULDHANA,5,Maharashtra,Buldana,Prataprao Jadhav,6a932b5bcd944524379edeff,Lok Sabha
 Muktainagar,20,RAVER,4,Maharashtra,Jalgaon,Smt Raksha Nikhil Khadse,6a932b5bcd944524379edf90,Lok Sabha
-Arjuni Morgaon(Sc),63,BHANDARA-GONDIYA,11,Maharashtra,Gondiya,DR. PRASHANT YADAORAO PADOLE,6a932b5bcd944524379ede48,Lok Sabha
+Arjuni Morgaon (Sc),63,BHANDARA-GONDIYA,11,Maharashtra,Gondiya,DR. PRASHANT YADAORAO PADOLE,6a932b5bcd944524379ede48,Lok Sabha
 Akot,28,AKOLA,6,Maharashtra,Akola,ANUP SANJAY DHOTRE,6a932b5bcd944524379eddd7,Lok Sabha
 Teosa,39,AMRAVATI,7,Maharashtra,Amravati,BALWANT BASWANT WANKHADE,6a932b5bcd944524379eddf4,Lok Sabha
 Jalgaon Rural,14,JALGAON,3,Maharashtra,Jalgaon,SMITA UDAY WAGH,6a932b5bcd944524379edf88,Lok Sabha
@@ -2716,7 +2716,7 @@ Kopargaon,219,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932
 Pusad,81,YAVATMAL-WASHIM,14,Maharashtra,Yavatmal,Sanjay Uttamrao Deshmukh,6a932b5bcd944524379edf47,Lok Sabha
 Boisar (St),131,PALGHAR,22,Maharashtra,Thane,DR. HEMANT VISHNU SAVARA,6a932b5bcd944524379ede41,Lok Sabha
 Jalna,101,JALNA,18,Maharashtra,Jalna,KALYAN VAIJINATHRAO KALE,6a932b5bcd944524379ede93,Lok Sabha
-Aurangabadwest(Sc),108,AURANGABAD,19,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
+Aurangabadwest (Sc),108,AURANGABAD,19,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
 Hingoli,94,HINGOLI,15,Maharashtra,Hingoli,AASHTIKAR PATIL NAGESH BAPURAO,6a932b5bcd944524379eddae,Lok Sabha
 Aurangabad Central,107,AURANGABAD,19,Maharashtra,Aurangabad,BHUMARE SANDIPANRAO ASARAM,6a932b5bcd944524379ede04,Lok Sabha
 Chandrapur (Sc),71,CHANDRAPUR,13,Maharashtra,Chandrapur,DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU,6a932b5bcd944524379ede2d,Lok Sabha
@@ -2726,13 +2726,13 @@ Aheri (St),69,GADCHIROLI-CHIMUR,12,Maharashtra,Gadchiroli,DR. KIRSAN NAMDEO,6a93
 Partur,99,PARBHANI,17,Maharashtra,Jalna,Sanjay Haribhau Jadhav,6a932b5bcd944524379edf43,Lok Sabha
 Umarkhed (Sc),82,HINGOLI,15,Maharashtra,Yavatmal,AASHTIKAR PATIL NAGESH BAPURAO,6a932b5bcd944524379eddae,Lok Sabha
 Shirdi,218,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932b5bcd944524379ede01,Lok Sabha
-Bhiwandi Rural(St),134,BHIWANDI,23,Maharashtra,Thane,BALYA MAMA SURESH GOPINATH MHATRE,6a932b5bcd944524379eddf5,Lok Sabha
+Bhiwandi Rural (St),134,BHIWANDI,23,Maharashtra,Thane,BALYA MAMA SURESH GOPINATH MHATRE,6a932b5bcd944524379eddf5,Lok Sabha
 Kalamnuri,93,HINGOLI,15,Maharashtra,Hingoli,AASHTIKAR PATIL NAGESH BAPURAO,6a932b5bcd944524379eddae,Lok Sabha
 Paithan,110,JALNA,18,Maharashtra,Aurangabad,KALYAN VAIJINATHRAO KALE,6a932b5bcd944524379ede93,Lok Sabha
 Kinwat,83,HINGOLI,15,Maharashtra,Nanded,AASHTIKAR PATIL NAGESH BAPURAO,6a932b5bcd944524379eddae,Lok Sabha
 Akole (St),216,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932b5bcd944524379ede01,Lok Sabha
 Jintur,95,PARBHANI,17,Maharashtra,Parbhani,Sanjay Haribhau Jadhav,6a932b5bcd944524379edf43,Lok Sabha
-Shrirampur(Sc),220,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932b5bcd944524379ede01,Lok Sabha
+Shrirampur (Sc),220,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932b5bcd944524379ede01,Lok Sabha
 Rajura,70,CHANDRAPUR,13,Maharashtra,Chandrapur,DHANORKAR PRATIBHA SURESH ALIAS BALUBHAU,6a932b5bcd944524379ede2d,Lok Sabha
 Ghansawangi,100,PARBHANI,17,Maharashtra,Jalna,Sanjay Haribhau Jadhav,6a932b5bcd944524379edf43,Lok Sabha
 Sangamner,217,SHIRDI,38,Maharashtra,Ahmadnagar,BHAUSAHEB RAJARAM WAKCHAURE,6a932b5bcd944524379ede01,Lok Sabha
@@ -2748,7 +2748,7 @@ Bhiwandi West,136,BHIWANDI,23,Maharashtra,Thane,BALYA MAMA SURESH GOPINATH MHATR
 Bhiwandi East,137,BHIWANDI,23,Maharashtra,Thane,BALYA MAMA SURESH GOPINATH MHATRE,6a932b5bcd944524379eddf5,Lok Sabha
 Junnar,195,SHIRUR,36,Maharashtra,Pune,Amol Ramsing Kolhe,6a932b5bcd944524379eddc7,Lok Sabha
 Mira Bhayandar,145,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
-Ovala ?Majiwada,146,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
+Ovala-Majiwada,146,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
 Georai,228,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Kalyan West,138,BHIWANDI,23,Maharashtra,Thane,BALYA MAMA SURESH GOPINATH MHATRE,6a932b5bcd944524379eddf5,Lok Sabha
 Thane,148,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
@@ -2767,7 +2767,7 @@ Dombivali,143,KALYAN,24,Maharashtra,Thane,Shrikant Eknath Shinde,6a932b5bcd94452
 Ambernath (Sc),140,KALYAN,24,Maharashtra,Thane,Shrikant Eknath Shinde,6a932b5bcd944524379edf81,Lok Sabha
 Charkop,161,MUMBAI NORTH,26,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
 Kandivali East,160,MUMBAI NORTH,26,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Mulund,155,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
+Mulund,155,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
 Malad West,162,MUMBAI NORTH,26,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
 Dindoshi,159,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARAM WAIKAR,6a932b5bcd944524379edf31,Lok Sabha
 Airoli,150,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
@@ -2775,48 +2775,48 @@ Goregaon,163,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARA
 Ambegaon,196,SHIRUR,36,Maharashtra,Pune,Amol Ramsing Kolhe,6a932b5bcd944524379eddc7,Lok Sabha
 Jogeshwari East,158,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARAM WAIKAR,6a932b5bcd944524379edf31,Lok Sabha
 Versova,164,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARAM WAIKAR,6a932b5bcd944524379edf31,Lok Sabha
-Bhandup West,157,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Bhokar,85,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
+Bhandup West,157,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
+Bhokar,85,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
 Andheri East,166,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARAM WAIKAR,6a932b5bcd944524379edf31,Lok Sabha
 Majalgaon,229,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Andheri West,165,MUMBAI NORTH WEST,27,Maharashtra,Mumbai (Suburban),RAVINDRA DATTARAM WAIKAR,6a932b5bcd944524379edf31,Lok Sabha
-Chandivali,168,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Vikhroli,156,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Vile Parle,167,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
+Chandivali,168,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
+Vikhroli,156,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
+Vile Parle,167,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
 Panvel,188,MAVAL,33,Maharashtra,Raigarh,Shrirang Appa Barne,6a932b5bcd944524379edf84,Lok Sabha
 Belapur,151,THANE,25,Maharashtra,Thane,NARESH GANPAT MHASKE,6a932b5bcd944524379edee1,Lok Sabha
-Ghatkopar East,170,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
+Ghatkopar East,170,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
 Karjat,189,MAVAL,33,Maharashtra,Raigarh,Shrirang Appa Barne,6a932b5bcd944524379edf84,Lok Sabha
-Ghatkopar West,169,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
+Ghatkopar West,169,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
 Gangakhed,97,PARBHANI,17,Maharashtra,Parbhani,Sanjay Haribhau Jadhav,6a932b5bcd944524379edf43,Lok Sabha
-Vandre West,177,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Kalina,175,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
+Vandre West,177,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
+Kalina,175,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
 Ashti,231,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Shrigonda,226,AHMEDNAGAR,37,Maharashtra,Ahmadnagar,NILESH DNYANDEV LANKE,6a932b5bcd944524379edee4,Lok Sabha
-Vandre East,176,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Nanded North,86,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
-Kurla (Sc),174,MUMBAI NORTH,29,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Mankhurd Shivaji Nagar,171,MUMBAI NORTH,28,Maharashtra,Mumbai (Suburban),Piyush Vedprakash Goyal,6a932b5bcd944524379edef4,Lok Sabha
-Chembur,173,MUMBAI SOUTH,30,Maharashtra,Mumbai (Suburban),Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
-Sion Koliwada,179,MUMBAI SOUTH,30,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
-Dharavi (Sc),178,MUMBAI SOUTH,30,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
-Anushakti Nagar,172,MUMBAI SOUTH,30,Maharashtra,Mumbai (Suburban),Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
+Vandre East,176,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
+Nanded North,86,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
+Kurla (Sc),174,MUMBAI NORTH-CENTRAL,29,Maharashtra,Mumbai (Suburban),GAIKWAD VARSHA EKNATH,6a932b5bcd944524379ede59,Lok Sabha
+Mankhurd Shivaji Nagar,171,MUMBAI NORTH EAST,28,Maharashtra,Mumbai (Suburban),SANJAY DINA PATIL,6a932b5bcd944524379edf42,Lok Sabha
+Chembur,173,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai (Suburban),ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
+Sion Koliwada,179,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai,ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
+Dharavi (Sc),178,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai,ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
+Anushakti Nagar,172,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai (Suburban),ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
 Ahmednagar,225,AHMEDNAGAR,37,Maharashtra,Ahmadnagar,NILESH DNYANDEV LANKE,6a932b5bcd944524379edee4,Lok Sabha
-Mahim,181,MUMBAI SOUTH,30,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
+Mahim,181,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai,ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
 Khed Alandi,197,SHIRUR,36,Maharashtra,Pune,Amol Ramsing Kolhe,6a932b5bcd944524379eddc7,Lok Sabha
-Wadala,180,MUMBAI SOUTH,30,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
+Wadala,180,MUMBAI SOUTH CENTRAL,30,Maharashtra,Mumbai,ANIL YESHWANT DESAI,6a932b5bcd944524379eddd1,Lok Sabha
 Worli,182,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
 Shivadi,183,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
 Beed,230,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Uran,190,MAVAL,33,Maharashtra,Raigarh,Shrirang Appa Barne,6a932b5bcd944524379edf84,Lok Sabha
 Byculla,184,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
-Nanded South,87,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
+Nanded South,87,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
 Malabar Hill,185,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
 Mumbadevi,186,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
 Colaba,187,MUMBAI SOUTH,31,Maharashtra,Mumbai,Arvind Ganpat Sawant,6a932b5bcd944524379edde1,Lok Sabha
 Parli,233,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Maval,204,MAVAL,33,Maharashtra,Pune,Shrirang Appa Barne,6a932b5bcd944524379edf84,Lok Sabha
-Naigaon,89,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
+Naigaon,89,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
 Loha,88,LATUR,41,Maharashtra,Nanded,DR KALGE SHIVAJI BANDAPPA,6a932b5bcd944524379ede3a,Lok Sabha
 Pen,191,RAIGAD,32,Maharashtra,Raigarh,Sunil Dattatray Tatkare,6a932b5bcd944524379edfa1,Lok Sabha
 Alibag,192,RAIGAD,32,Maharashtra,Raigarh,Sunil Dattatray Tatkare,6a932b5bcd944524379edfa1,Lok Sabha
@@ -2824,8 +2824,8 @@ Shirur,198,SHIRUR,36,Maharashtra,Pune,Amol Ramsing Kolhe,6a932b5bcd944524379eddc
 Kaij (Sc),232,BEED,39,Maharashtra,Bid,BAJRANG MANOHAR SONWANE,6a932b5bcd944524379eddf0,Lok Sabha
 Karjat Jamkhed,227,AHMEDNAGAR,37,Maharashtra,Ahmadnagar,NILESH DNYANDEV LANKE,6a932b5bcd944524379edee4,Lok Sabha
 Pimpri (Sc),206,MAVAL,33,Maharashtra,Pune,Shrirang Appa Barne,6a932b5bcd944524379edf84,Lok Sabha
-Deglur (Sc),90,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
-Mukhed,91,NANDED,16,Maharashtra,Nanded,CHAVAN VASANTRAO BALWANTRAO,6a932b5bcd944524379ede19,Lok Sabha
+Deglur (Sc),90,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
+Mukhed,91,NANDED,16,Maharashtra,Nanded,Ravindra Vasantrao Chavan,6a932b5bcd944524379edf33,Lok Sabha
 Bhor,203,BARAMATI,35,Maharashtra,Pune,Smt Supriya Sadanand Sule,6a932b5bcd944524379edf96,Lok Sabha
 Ahmadpur,236,LATUR,41,Maharashtra,Latur,DR KALGE SHIVAJI BANDAPPA,6a932b5bcd944524379ede3a,Lok Sabha
 Bhosari,207,SHIRUR,36,Maharashtra,Pune,Amol Ramsing Kolhe,6a932b5bcd944524379eddc7,Lok Sabha
@@ -2871,33 +2871,33 @@ Sangole,253,MADHA,43,Maharashtra,Solapur,MOHITE PATIL DHAIRYASHEEL RAJSINH,6a932
 Solapur City North,248,SOLAPUR,42,Maharashtra,Solapur,PRANITI SUSHILKUMAR SHINDE,6a932b5bcd944524379edefc,Lok Sabha
 Solapur South,251,SOLAPUR,42,Maharashtra,Solapur,PRANITI SUSHILKUMAR SHINDE,6a932b5bcd944524379edefc,Lok Sabha
 Karad North,259,SATARA,45,Maharashtra,Satara,SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE,6a932b5bcd944524379edf82,Lok Sabha
-Chiplun,265,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Ratnagiri,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Chiplun,265,RATNAGIRI-SINDHUDURG,46,Maharashtra,Ratnagiri,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Patan,261,SATARA,45,Maharashtra,Satara,SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE,6a932b5bcd944524379edf82,Lok Sabha
 Khanapur,286,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
 Solapur City Central,249,SOLAPUR,42,Maharashtra,Solapur,PRANITI SUSHILKUMAR SHINDE,6a932b5bcd944524379edefc,Lok Sabha
 Palus-Kadegaon,285,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
-Ratnagiri,266,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Ratnagiri,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Ratnagiri,266,RATNAGIRI-SINDHUDURG,46,Maharashtra,Ratnagiri,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Karad South,260,SATARA,45,Maharashtra,Satara,SHRIMANT CHH UDAYANRAJE PRATAPSINHAMAHARAJ BHONSLE,6a932b5bcd944524379edf82,Lok Sabha
 Shirala,284,HATKANANGLE,48,Maharashtra,Sangli,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Jat,288,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
 Shahuwadi,277,HATKANANGLE,48,Maharashtra,Kolhapur,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Islampur,283,HATKANANGLE,48,Maharashtra,Sangli,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Tasgaon-Kavathe Mahankal,287,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
-Rajapur,267,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Ratnagiri,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Rajapur,267,RATNAGIRI-SINDHUDURG,46,Maharashtra,Ratnagiri,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Miraj (Sc),281,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
 Sangli,282,SANGLI,44,Maharashtra,Sangli,VISHAL,6a932b5bcd944524379edfc4,Lok Sabha
-Hatkanangle(Sc),278,HATKANANGLE,48,Maharashtra,Kolhapur,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
+Hatkanangle (Sc),278,HATKANANGLE,48,Maharashtra,Kolhapur,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Shirol,280,HATKANANGLE,48,Maharashtra,Kolhapur,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Karvir,275,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
 Kolhapur North,276,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
 Ichalkaranji,279,HATKANANGLE,48,Maharashtra,Kolhapur,Dhairyasheel Sambhajirao Mane,6a932b5bcd944524379ede2c,Lok Sabha
 Kolhapur South,274,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
-Kankavli,268,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Sindhudurg,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Kankavli,268,RATNAGIRI-SINDHUDURG,46,Maharashtra,Sindhudurg,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Radhanagari,272,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
 Kagal,273,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
-Kudal,269,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Sindhudurg,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Kudal,269,RATNAGIRI-SINDHUDURG,46,Maharashtra,Sindhudurg,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Chandgad,271,KOLHAPUR,47,Maharashtra,Kolhapur,CHHATRAPATI SHAHU SHAHAJI,6a932b5bcd944524379ede1b,Lok Sabha
-Sawantwadi,270,RATNAGIRI ?SINDHUDUR,46,Maharashtra,Sindhudurg,Shri Chandrakant Damodar Handore (2024-30),6a932b5ecd944524379ee22b,Rajya Sabha
+Sawantwadi,270,RATNAGIRI-SINDHUDURG,46,Maharashtra,Sindhudurg,NARAYAN TATU RANE,6a932b5bcd944524379ededf,Lok Sabha
 Chingai,45,OUTER MANIPUR,2,Manipur,Ukhrul,ALFRED KANNGAM S ARTHUR,6a932b5bcd944524379eddc1,Lok Sabha
 Mao,48,OUTER MANIPUR,2,Manipur,Senapati,ALFRED KANNGAM S ARTHUR,6a932b5bcd944524379eddc1,Lok Sabha
 Tadubi,49,OUTER MANIPUR,2,Manipur,Senapati,ALFRED KANNGAM S ARTHUR,6a932b5bcd944524379eddc1,Lok Sabha
@@ -2928,7 +2928,7 @@ Andro,7,INNER MANIPUR,1,Manipur,Imphal East,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944
 Nungba,54,OUTER MANIPUR,2,Manipur,Tamenglong,ALFRED KANNGAM S ARTHUR,6a932b5bcd944524379eddc1,Lok Sabha
 Thongju,5,INNER MANIPUR,1,Manipur,Imphal East,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
 Singjamei,13,INNER MANIPUR,1,Manipur,Imphal East,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
-Naoriya Pakhanglak*,21,INNER MANIPUR,1,Manipur,Imphal West,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
+Naoriya Pakhanglak,21,INNER MANIPUR,1,Manipur,Imphal West,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
 Jiribam,40,OUTER MANIPUR,2,Manipur,Imphal East,ALFRED KANNGAM S ARTHUR,6a932b5bcd944524379eddc1,Lok Sabha
 Langthabal,20,INNER MANIPUR,1,Manipur,Imphal East,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
 Keirao,6,INNER MANIPUR,1,Manipur,Imphal East,ANGOMCHA BIMOL AKOIJAM,6a932b5bcd944524379eddcf,Lok Sabha
@@ -2977,7 +2977,7 @@ Resubelpara (St),39,TURA,2,Meghalaya,East Garo Hills,SALENG A SANGMA,6a932b5bcd9
 Raksamgre (St),44,TURA,2,Meghalaya,West Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Tikrikila (St),45,TURA,2,Meghalaya,West Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Mairang (St),30,SHILLONG,1,Meghalaya,West Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
-Rambrai Jyrngam (St,33,SHILLONG,1,Meghalaya,West Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
+Rambrai Jyrngam (St),33,SHILLONG,1,Meghalaya,West Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
 Phulbari,46,TURA,2,Meghalaya,West Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Umroi (St),12,SHILLONG,1,Meghalaya,Ri Bhoi,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
 Mawthadraishan (St),31,SHILLONG,1,Meghalaya,West Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
@@ -2988,7 +2988,7 @@ Songsak (St),41,TURA,2,Meghalaya,East Garo Hills,SALENG A SANGMA,6a932b5bcd94452
 Dadenggre (St),49,TURA,2,Meghalaya,West Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Rongjeng (St),42,TURA,2,Meghalaya,East Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Sohing (St),23,SHILLONG,1,Meghalaya,East Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
-Mawryngkneng(St),13,SHILLONG,1,Meghalaya,East Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
+Mawryngkneng (St),13,SHILLONG,1,Meghalaya,East Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
 Selsella (St),48,TURA,2,Meghalaya,West Garo Hills,SALENG A SANGMA,6a932b5bcd944524379edf3f,Lok Sabha
 Raliang (St),3,SHILLONG,1,Meghalaya,Jaintia Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
 Mawlai (St),15,SHILLONG,1,Meghalaya,East Khasi Hills,ANDREW J. SYNGKON,6a932b5bcd944524379eddce,Lok Sabha
@@ -3039,15 +3039,15 @@ Aizawl East-I,13,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd9445
 Aizawl West-I (St),15,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Aizawl North-I (St),10,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Dampa (St),2,MIZORAM,1,Mizoram,Mamit,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
-Aizawl North-Iii (S,12,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
-Aizawl North-Ii (St,11,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
+Aizawl North-Iii (St),12,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
+Aizawl North-Ii (St),11,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Aizawl West-Ii (St),16,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Tawi (St),9,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Aizawl East-Ii (St),14,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Aizawl South-I (St),18,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
-Aizawl West-Iii (St,17,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
-Aizawl South-Iii (S,20,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
-Aizawl South-Ii (St,19,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
+Aizawl West-Iii (St),17,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
+Aizawl South-Iii (St),20,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
+Aizawl South-Ii (St),19,MIZORAM,1,Mizoram,Aizawl,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Tuikum (St),27,MIZORAM,1,Mizoram,Serchhip,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Champhai South (St),24,MIZORAM,1,Mizoram,Champhai,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
 Tuichang (St),22,MIZORAM,1,Mizoram,Champhai,RICHARD VANLALHMANGAIHA,6a932b5bcd944524379edf34,Lok Sabha
@@ -3154,7 +3154,7 @@ Mahakalapada,100,KENDRAPARA,15,Odisha,Kendrapara,BAIJAYANT PANDA,6a932b5bcd94452
 Barabati-Cuttack,90,CUTTACK,14,Odisha,Cuttack,Shri Bhartruhari Mahtab,6a932b5bcd944524379edf68,Lok Sabha
 Banki,88,CUTTACK,14,Odisha,Cuttack,Shri Bhartruhari Mahtab,6a932b5bcd944524379edf68,Lok Sabha
 Jatani,115,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
-Bhubaneswar(Uttar),113,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
+Bhubaneswar (Uttar),113,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
 Narla,81,KALAHANDI,11,Odisha,Kalahandi,MALVIKA DEVI,6a932b5bcd944524379edec0,Lok Sabha
 Tirtol (Sc),102,JAGATSINGHPUR,16,Odisha,Jagatsinghapur,BIBHU PRASAD TARAI,6a932b5bcd944524379ede07,Lok Sabha
 Khariar,72,KALAHANDI,11,Odisha,Nuapada,MALVIKA DEVI,6a932b5bcd944524379edec0,Lok Sabha
@@ -3164,7 +3164,7 @@ Paradeep,101,JAGATSINGHPUR,16,Odisha,Jagatsinghapur,BIBHU PRASAD TARAI,6a932b5bc
 Niali (Sc),92,JAGATSINGHPUR,16,Odisha,Cuttack,BIBHU PRASAD TARAI,6a932b5bcd944524379ede07,Lok Sabha
 Cuttack Sadar (Sc),93,CUTTACK,14,Odisha,Cuttack,Shri Bhartruhari Mahtab,6a932b5bcd944524379edf68,Lok Sabha
 Jayadev (Sc),111,PURI,17,Odisha,Khordha,SAMBIT PATRA,6a932b5bcd944524379edf40,Lok Sabha
-Bhubaneswar(Madhya),112,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
+Bhubaneswar (Madhya),112,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
 Jagatsinghpur,104,JAGATSINGHPUR,16,Odisha,Jagatsinghapur,BIBHU PRASAD TARAI,6a932b5bcd944524379ede07,Lok Sabha
 Ekamra-Bhubaneshwar,114,BHUBANESWAR,18,Odisha,Khordha,Smt Aparajita Sarangi,6a932b5bcd944524379edf8a,Lok Sabha
 G. Udayagiri (St),83,KANDHAMAL,13,Odisha,Kandhamal,SUKANTA KUMAR PANIGRAHI,6a932b5bcd944524379edf9d,Lok Sabha
@@ -3242,7 +3242,7 @@ Nedungadu (Sc),24,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944
 Karaikal North,26,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944524379edfb8,Lok Sabha
 Thirunallar,25,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944524379edfb8,Lok Sabha
 Karaikal South,27,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944524379edfb8,Lok Sabha
-Neravy- T.R. Pattin,28,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944524379edfb8,Lok Sabha
+Neravy- T.R. Pattinam,28,PUDUCHERRY,1,Puducherry,Karaikal,Vaithilingam Ve,6a932b5bcd944524379edfb8,Lok Sabha
 Sujanpur,1,GURDASPUR,1,Punjab,Gurdaspur,SUKHJINDER SINGH RANDHAWA,6a932b5bcd944524379edf9f,Lok Sabha
 Bhoa (Sc),2,GURDASPUR,1,Punjab,Gurdaspur,SUKHJINDER SINGH RANDHAWA,6a932b5bcd944524379edf9f,Lok Sabha
 Pathankot,3,GURDASPUR,1,Punjab,Gurdaspur,SUKHJINDER SINGH RANDHAWA,6a932b5bcd944524379edf9f,Lok Sabha
@@ -3258,7 +3258,7 @@ Raja Sansi,12,AMRITSAR,2,Punjab,Amritsar,Shri Gurjeet Singh Aujla,6a932b5bcd9445
 Majitha,13,AMRITSAR,2,Punjab,Amritsar,Shri Gurjeet Singh Aujla,6a932b5bcd944524379edf6b,Lok Sabha
 Batala,7,GURDASPUR,1,Punjab,Gurdaspur,SUKHJINDER SINGH RANDHAWA,6a932b5bcd944524379edf9f,Lok Sabha
 Urmar,41,HOSHIARPUR,5,Punjab,Hoshiarpur,DR. RAJ KUMAR CHABBEWAL,6a932b5bcd944524379ede49,Lok Sabha
-Sri Hargobindpur (S,8,HOSHIARPUR,5,Punjab,Gurdaspur,DR. RAJ KUMAR CHABBEWAL,6a932b5bcd944524379ede49,Lok Sabha
+Sri Hargobindpur (Sc),8,HOSHIARPUR,5,Punjab,Gurdaspur,DR. RAJ KUMAR CHABBEWAL,6a932b5bcd944524379ede49,Lok Sabha
 Sham Chaurasi (Sc),42,HOSHIARPUR,5,Punjab,Hoshiarpur,DR. RAJ KUMAR CHABBEWAL,6a932b5bcd944524379ede49,Lok Sabha
 Attari (Sc),20,AMRITSAR,2,Punjab,Amritsar,Shri Gurjeet Singh Aujla,6a932b5bcd944524379edf6b,Lok Sabha
 Amritsar West (Sc),16,AMRITSAR,2,Punjab,Amritsar,Shri Gurjeet Singh Aujla,6a932b5bcd944524379edf6b,Lok Sabha
@@ -3312,7 +3312,7 @@ Kharar,52,ANANDPUR SAHIB,6,Punjab,Rupnagar,MALVINDER SINGH KANG,6a932b5bcd944524
 Atam Nagar,62,LUDHIANA,7,Punjab,Ludhiana,AMRINDER SINGH RAJA WARRING,6a932b5bcd944524379eddc9,Lok Sabha
 Ludhiana South,61,LUDHIANA,7,Punjab,Ludhiana,AMRINDER SINGH RAJA WARRING,6a932b5bcd944524379eddc9,Lok Sabha
 Dharamkot,74,FARIDKOT,9,Punjab,Moga,SARABJEET SINGH KHALSA,6a932b5bcd944524379edf4b,Lok Sabha
-Nihal Singhwala (Sc,71,FARIDKOT,9,Punjab,Moga,SARABJEET SINGH KHALSA,6a932b5bcd944524379edf4b,Lok Sabha
+Nihal Singhwala (Sc),71,FARIDKOT,9,Punjab,Moga,SARABJEET SINGH KHALSA,6a932b5bcd944524379edf4b,Lok Sabha
 Faridkot,87,FARIDKOT,9,Punjab,Faridkot,SARABJEET SINGH KHALSA,6a932b5bcd944524379edf4b,Lok Sabha
 Payal (Sc),67,FATEHGARH SAHIB,8,Punjab,Ludhiana,Shri Amar Singh,6a932b5bcd944524379edf61,Lok Sabha
 Raikot (Sc),69,FATEHGARH SAHIB,8,Punjab,Ludhiana,Shri Amar Singh,6a932b5bcd944524379edf61,Lok Sabha
@@ -3365,14 +3365,14 @@ Karanpur,3,GANGANAGAR,1,Rajasthan,Ganganagar,KULDEEP INDORA,6a932b5bcd944524379e
 Ganganagar,2,GANGANAGAR,1,Rajasthan,Ganganagar,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
 Sangaria,7,GANGANAGAR,1,Rajasthan,Hanumangarh,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
 Hanumangarh,8,GANGANAGAR,1,Rajasthan,Hanumangarh,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
-Raisinghnagar(Sc),5,GANGANAGAR,1,Rajasthan,Ganganagar,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
+Raisinghnagar (Sc),5,GANGANAGAR,1,Rajasthan,Ganganagar,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
 Pilibanga (Sc),9,GANGANAGAR,1,Rajasthan,Hanumangarh,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
 Suratgarh,4,GANGANAGAR,1,Rajasthan,Ganganagar,KULDEEP INDORA,6a932b5bcd944524379edead,Lok Sabha
 Nohar,10,CHURU,3,Rajasthan,Hanumangarh,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
 Anupgarh (Sc),6,BIKANER,2,Rajasthan,Ganganagar,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
 Bhadra,11,CHURU,3,Rajasthan,Hanumangarh,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
 Lunkaransar,16,BIKANER,2,Rajasthan,Bikaner,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
-Khajuwala(Sc),12,BIKANER,2,Rajasthan,Bikaner,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
+Khajuwala (Sc),12,BIKANER,2,Rajasthan,Bikaner,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
 Sadulpur,19,CHURU,3,Rajasthan,Churu,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
 Taranagar,20,CHURU,3,Rajasthan,Churu,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
 Sardarshahar,21,CHURU,3,Rajasthan,Churu,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
@@ -3397,7 +3397,7 @@ Nawalgarh,29,JHUNJHUNU,4,Rajasthan,Jhunjhunun,BRIJENDRA SINGH OLA,6a932b5bcd9445
 Mundawar,61,ALWAR,8,Rajasthan,Alwar,BHUPENDER YADAV,6a932b5bcd944524379ede06,Lok Sabha
 Udaipurwati,30,JHUNJHUNU,4,Rajasthan,Jhunjhunun,BRIJENDRA SINGH OLA,6a932b5bcd944524379ede0c,Lok Sabha
 Dungargarh,17,BIKANER,2,Rajasthan,Bikaner,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
-Sujangarh(Sc),24,CHURU,3,Rajasthan,Churu,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
+Sujangarh (Sc),24,CHURU,3,Rajasthan,Churu,Rahul Kaswan,6a932b5bcd944524379edf11,Lok Sabha
 Lachhmangarh,33,SIKAR,5,Rajasthan,Sikar,AMRARAM,6a932b5bcd944524379eddc8,Lok Sabha
 Neema Ka Thana,38,SIKAR,5,Rajasthan,Sikar,AMRARAM,6a932b5bcd944524379eddc8,Lok Sabha
 Nokha,18,BIKANER,2,Rajasthan,Bikaner,Shri Arjun Ram Meghwal,6a932b5bcd944524379edf64,Lok Sabha
@@ -3444,26 +3444,26 @@ Osian,125,PALI,15,Rajasthan,Jodhpur,Shri PP Chaudhary,6a932b5bcd944524379edf78,L
 Dausa,88,DAUSA,11,Rajasthan,Dausa,MURARI LAL MEENA,6a932b5bcd944524379eded9,Lok Sabha
 Pushkar,99,AJMER,13,Rajasthan,Ajmer,Bhagirath Chaudhary,6a932b5bcd944524379eddfa,Lok Sabha
 Vidhyadhar Nagar,50,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
-Bhopalgarh(Sc),126,PALI,15,Rajasthan,Jodhpur,Shri PP Chaudhary,6a932b5bcd944524379edf78,Lok Sabha
+Bhopalgarh (Sc),126,PALI,15,Rajasthan,Jodhpur,Shri PP Chaudhary,6a932b5bcd944524379edf78,Lok Sabha
 Shergarh,124,JODHPUR,16,Rajasthan,Jodhpur,Gajendra Singh Shekhawat,6a932b5bcd944524379ede5b,Lok Sabha
 Bassi (St),57,DAUSA,11,Rajasthan,Jaipur,MURARI LAL MEENA,6a932b5bcd944524379eded9,Lok Sabha
 Bayana (Sc),76,BHARATPUR,9,Rajasthan,Bharatpur,SANJNA JATAV,6a932b5bcd944524379edf48,Lok Sabha
 Sikrai (Sc),87,DAUSA,11,Rajasthan,Dausa,MURARI LAL MEENA,6a932b5bcd944524379eded9,Lok Sabha
 Dudu (Sc),45,AJMER,13,Rajasthan,Jaipur,Bhagirath Chaudhary,6a932b5bcd944524379eddfa,Lok Sabha
-Todabhim(St),81,KARAULI ?DHOLPUR,10,Rajasthan,Karauli,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
+Todabhim (St),81,KARAULI-DHOLPUR,10,Rajasthan,Karauli,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
 Merta (Sc),111,RAJSAMAND,22,Rajasthan,Nagaur,MAHIMA KUMARI MEWAR,6a932b5bcd944524379edebc,Lok Sabha
 Bagru (Sc),56,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
-Rajakhera,80,KARAULI ?DHOLPUR,10,Rajasthan,Dhaulpur,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
-Bari,78,KARAULI ?DHOLPUR,10,Rajasthan,Dhaulpur,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
+Rajakhera,80,KARAULI-DHOLPUR,10,Rajasthan,Dhaulpur,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
+Bari,78,KARAULI-DHOLPUR,10,Rajasthan,Dhaulpur,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
 Kishangarh,98,AJMER,13,Rajasthan,Ajmer,Bhagirath Chaudhary,6a932b5bcd944524379eddfa,Lok Sabha
-Dholpur,79,KARAULI ?DHOLPUR,10,Rajasthan,Dhaulpur,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
-Hindaun (Sc),82,KARAULI ?DHOLPUR,10,Rajasthan,Karauli,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
-Baseri (Sc),77,KARAULI ?DHOLPUR,10,Rajasthan,Dhaulpur,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
-Karauli,83,KARAULI ?DHOLPUR,10,Rajasthan,Karauli,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
+Dholpur,79,KARAULI-DHOLPUR,10,Rajasthan,Dhaulpur,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
+Hindaun (Sc),82,KARAULI-DHOLPUR,10,Rajasthan,Karauli,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
+Baseri (Sc),77,KARAULI-DHOLPUR,10,Rajasthan,Dhaulpur,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
+Karauli,83,KARAULI-DHOLPUR,10,Rajasthan,Karauli,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
 Chaksu (Sc),58,DAUSA,11,Rajasthan,Jaipur,MURARI LAL MEENA,6a932b5bcd944524379eded9,Lok Sabha
 Lalsot (St),89,DAUSA,11,Rajasthan,Dausa,MURARI LAL MEENA,6a932b5bcd944524379eded9,Lok Sabha
 Sheo,134,BARMER,17,Rajasthan,Barmer,UMMEDA RAM BENIWAL,6a932b5bcd944524379edfb4,Lok Sabha
-Bamanwas(St),91,TONK-SAWAI MADHOPUR,12,Rajasthan,Sawai Madhopur,HARISH CHANDRA MEENA,6a932b5bcd944524379ede6d,Lok Sabha
+Bamanwas (St),91,TONK-SAWAI MADHOPUR,12,Rajasthan,Sawai Madhopur,HARISH CHANDRA MEENA,6a932b5bcd944524379ede6d,Lok Sabha
 Luni,130,JODHPUR,16,Rajasthan,Jodhpur,Gajendra Singh Shekhawat,6a932b5bcd944524379ede5b,Lok Sabha
 Bilara (Sc),131,PALI,15,Rajasthan,Jodhpur,Shri PP Chaudhary,6a932b5bcd944524379edf78,Lok Sabha
 Malpura,94,TONK-SAWAI MADHOPUR,12,Rajasthan,Tonk,HARISH CHANDRA MEENA,6a932b5bcd944524379ede6d,Lok Sabha
@@ -3477,7 +3477,7 @@ Sardarpura,127,JODHPUR,16,Rajasthan,Jodhpur,Gajendra Singh Shekhawat,6a932b5bcd9
 Ajmer South (Sc),101,AJMER,13,Rajasthan,Ajmer,Bhagirath Chaudhary,6a932b5bcd944524379eddfa,Lok Sabha
 Gangapur,90,TONK-SAWAI MADHOPUR,12,Rajasthan,Sawai Madhopur,HARISH CHANDRA MEENA,6a932b5bcd944524379ede6d,Lok Sabha
 Pachpadra,137,BARMER,17,Rajasthan,Barmer,UMMEDA RAM BENIWAL,6a932b5bcd944524379edfb4,Lok Sabha
-Sapotra (St),84,KARAULI ?DHOLPUR,10,Rajasthan,Karauli,Shri Mukul Wasnik (2022-28),6a932b5ecd944524379ee268,Rajya Sabha
+Sapotra (St),84,KARAULI-DHOLPUR,10,Rajasthan,Karauli,BHAJAN LAL JATAV,6a932b5bcd944524379eddfb,Lok Sabha
 Jodhpur,128,JODHPUR,16,Rajasthan,Jodhpur,Gajendra Singh Shekhawat,6a932b5bcd944524379ede5b,Lok Sabha
 Sawai Madhopur,92,TONK-SAWAI MADHOPUR,12,Rajasthan,Sawai Madhopur,HARISH CHANDRA MEENA,6a932b5bcd944524379ede6d,Lok Sabha
 Barmer,135,BARMER,17,Rajasthan,Barmer,UMMEDA RAM BENIWAL,6a932b5bcd944524379edfb4,Lok Sabha
@@ -3495,10 +3495,10 @@ Asind,177,BHILWARA,23,Rajasthan,Bhilwara,DAMODAR AGARWAL,6a932b5bcd944524379ede2
 Marwar Junction,119,PALI,15,Rajasthan,Pali,Shri PP Chaudhary,6a932b5bcd944524379edf78,Lok Sabha
 Ahore,141,JALORE,18,Rajasthan,Jalor,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sabha
 Bhim,173,RAJSAMAND,22,Rajasthan,Rajsamand,MAHIMA KUMARI MEWAR,6a932b5bcd944524379edebc,Lok Sabha
-Shahpura(Sc),181,BHILWARA,23,Rajasthan,Bhilwara,DAMODAR AGARWAL,6a932b5bcd944524379ede24,Lok Sabha
+Shahpura (Sc),181,BHILWARA,23,Rajasthan,Bhilwara,DAMODAR AGARWAL,6a932b5bcd944524379ede24,Lok Sabha
 Chohtan (Sc),140,BARMER,17,Rajasthan,Barmer,UMMEDA RAM BENIWAL,6a932b5bcd944524379edfb4,Lok Sabha
 Hindoli,184,BHILWARA,23,Rajasthan,Bundi,DAMODAR AGARWAL,6a932b5bcd944524379ede24,Lok Sabha
-Keshoraipatan(Sc),185,KOTA,24,Rajasthan,Bundi,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
+Keshoraipatan (Sc),185,KOTA,24,Rajasthan,Bundi,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
 Gudha Malani,139,BARMER,17,Rajasthan,Barmer,UMMEDA RAM BENIWAL,6a932b5bcd944524379edfb4,Lok Sabha
 Pipalda,187,KOTA,24,Rajasthan,Kota,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
 Mandal,178,BHILWARA,23,Rajasthan,Bhilwara,DAMODAR AGARWAL,6a932b5bcd944524379ede24,Lok Sabha
@@ -3519,80 +3519,80 @@ Sanchore,144,JALORE,18,Rajasthan,Jalor,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sab
 Rajsamand,175,RAJSAMAND,22,Rajasthan,Rajsamand,MAHIMA KUMARI MEWAR,6a932b5bcd944524379edebc,Lok Sabha
 Ladpura,191,KOTA,24,Rajasthan,Kota,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
 Kota North,189,KOTA,24,Rajasthan,Kota,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
-Kapasan(Sc),167,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
+Kapasan (Sc),167,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Raniwara,145,JALORE,18,Rajasthan,Jalor,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sabha
-Gogunda(St),149,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Gogunda (St),149,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
 Kota South,190,KOTA,24,Rajasthan,Kota,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
 Ramganj Mandi (Sc),192,KOTA,24,Rajasthan,Kota,Om Birla,6a932b5bcd944524379edee9,Lok Sabha
 Nathdwara,176,RAJSAMAND,22,Rajasthan,Rajsamand,MAHIMA KUMARI MEWAR,6a932b5bcd944524379edebc,Lok Sabha
-Baran?Atru (Sc),195,JHALAWAR-BARAN,25,Rajasthan,Baran,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
+Baran-Atru (Sc),195,JHALAWAR-BARAN,25,Rajasthan,Baran,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
 Chittorgarh,169,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Pindwara Abu (St),147,JALORE,18,Rajasthan,Sirohi,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sabha
 Begun,168,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Mavli,154,CHITTORGARH,21,Rajasthan,Udaipur,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
-Reodar(Sc),148,JALORE,18,Rajasthan,Sirohi,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sabha
+Reodar (Sc),148,JALORE,18,Rajasthan,Sirohi,LUMBARAM,6a932b5bcd944524379edeb3,Lok Sabha
 Chhabra,196,JHALAWAR-BARAN,25,Rajasthan,Baran,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
 Khanpur,199,JHALAWAR-BARAN,25,Rajasthan,Jhalawar,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
-Jhadol(St),150,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Jhadol (St),150,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
 Vallabhnagar,155,CHITTORGARH,21,Rajasthan,Udaipur,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Nimbahera,170,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Bari Sadri,171,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
-Udaipur Rural(St),152,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Udaipur Rural (St),152,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
 Udaipur,153,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
 Jhalrapatan,198,JHALAWAR-BARAN,25,Rajasthan,Jhalawar,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
-Salumber(St),156,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Salumber (St),156,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
 Dag (Sc),197,JHALAWAR-BARAN,25,Rajasthan,Jhalawar,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
 Manohar Thana,200,JHALAWAR-BARAN,25,Rajasthan,Jhalawar,Dushyant Singh,6a932b5bcd944524379ede52,Lok Sabha
-Dhariawad(St),157,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
-Kherwara(St),151,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
-Pratapgarh(St),172,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
+Dhariawad (St),157,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Kherwara (St),151,UDAIPUR,19,Rajasthan,Udaipur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
+Pratapgarh (St),172,CHITTORGARH,21,Rajasthan,Chittaurgarh,Chandra Prakash Joshi,6a932b5bcd944524379ede15,Lok Sabha
 Aspur (St),159,UDAIPUR,19,Rajasthan,Dungarpur,MANNA LAL RAWAT,6a932b5bcd944524379edec7,Lok Sabha
-Dungarpur(St),158,BANSWARA,20,Rajasthan,Dungarpur,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
+Dungarpur (St),158,BANSWARA,20,Rajasthan,Dungarpur,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
 Ghatol (St),162,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
-Sagwara(St),160,BANSWARA,20,Rajasthan,Dungarpur,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
+Sagwara (St),160,BANSWARA,20,Rajasthan,Dungarpur,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
 Chorasi (St),161,BANSWARA,20,Rajasthan,Dungarpur,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
 Garhi (St),163,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
-Banswara(St),164,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
-Bagidora(St),165,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
-Kushalgarh(St),166,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
+Banswara (St),164,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
+Bagidora (St),165,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
+Kushalgarh (St),166,BANSWARA,20,Rajasthan,Banswara,RAJ KUMAR ROAT,6a932b5bcd944524379edf14,Lok Sabha
 Sanganer,55,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
 Malviya Nagar,54,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
 Kishan Pole,52,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
 Adarsh Nagar,53,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
 Hawa Mahal,49,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
 Civil Lines,51,JAIPUR,7,Rajasthan,Jaipur,MANJU SHARMA,6a932b5bcd944524379edec6,Lok Sabha
-Lachen Mangan(Bl),31,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Djongu(Bl),30,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Kabi Lungchuk(Bl),29,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Barfung(Bl),9,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Yoksam-Tashiding(Bl),1,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Kabi Lungchuk(Bl),29,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Tumen-Lingi(Bl),16,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Tumen-Lingi(Bl),16,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Lachen Mangan (Bl),31,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Djongu (Bl),30,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Kabi Lungchuk (Bl),29,SIKKIM,1,Sikkim,North,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Barfung (Bl),9,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Yoksam-Tashiding (Bl),1,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Kabi Lungchuk (Bl),29,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Tumen-Lingi (Bl),16,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Tumen-Lingi (Bl),16,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Upper Burtuk,28,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Shyari(Bl),23,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Shyari (Bl),23,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Yangthang,2,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Gangtok(Bl),27,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Gangtok (Bl),27,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Rangang-Yangang,15,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Martam-Rumtek (Bl),24,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Upper Tadong,25,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Arithang,26,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Khamdong-Singtam,17,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Namcheybung,22,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Gnathang-Machong(Bl),21,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Gnathang-Machong (Bl),21,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Maneybung-Dentam,3,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Gyalshing-Barnyak,4,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Temi-Namphing,14,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Chujachen,20,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Rinchenpong(Bl),5,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Rinchenpong (Bl),5,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Rhenock,19,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-West Pendam(Sc),18,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+West Pendam (Sc),18,SIKKIM,1,Sikkim,East,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Poklok-Kamrang,10,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Namthang-Rateypani,13,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Namchi-Singhithang,11,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Salghari-Zoom (Sc),8,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Soreong-Chakung,7,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
-Daramdin(Bl),6,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
+Daramdin (Bl),6,SIKKIM,1,Sikkim,West,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Melli,12,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Salghari-Zoom (Sc),8,SIKKIM,1,Sikkim,South,Indra Hang Subba,6a932b5bcd944524379ede71,Lok Sabha
 Kadamtala - Kurti,54,TRIPURA EAST,2,Tripura,North Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
@@ -3612,14 +3612,14 @@ Karamchhara (St),48,TRIPURA EAST,2,Tripura,Dhalai,KRITI DEVI DEBBARMAN,6a932b5bc
 Kanchanpur (St),60,TRIPURA EAST,2,Tripura,North Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Khowai,25,TRIPURA EAST,2,Tripura,West Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Simna (St),1,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
-Ramchandraghat(St),24,TRIPURA EAST,2,Tripura,West Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
+Ramchandraghat (St),24,TRIPURA EAST,2,Tripura,West Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Ambassa (St),47,TRIPURA EAST,2,Tripura,Dhalai,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Kalyanpur-Pramodenagar,27,TRIPURA EAST,2,Tripura,West Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Chhawmanu (St),49,TRIPURA EAST,2,Tripura,Dhalai,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Mohanpur,2,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Bamutia (Sc),3,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Krishnapur (St),29,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
-Mandaibazar(St),11,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
+Mandaibazar (St),11,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Teliamura,28,TRIPURA EAST,2,Tripura,West Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Barjala (Sc),4,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Khayerpur,5,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
@@ -3644,7 +3644,7 @@ Boxanagar,20,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd9445
 Matarbari,32,TRIPURA WEST,1,Tripura,South Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Nalchar (Sc),21,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Radhakishorepur,31,TRIPURA WEST,1,Tripura,South Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
-Kakraban-Salgarah(Sc),33,TRIPURA WEST,1,Tripura,South Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
+Kakraban-Salgarah (Sc),33,TRIPURA WEST,1,Tripura,South Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Karbook (St),43,TRIPURA EAST,2,Tripura,South Tripura,KRITI DEVI DEBBARMAN,6a932b5bcd944524379edeac,Lok Sabha
 Sonamura,22,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
 Dhanpur,23,TRIPURA WEST,1,Tripura,West Tripura,BIPLAB KUMAR DEB,6a932b5bcd944524379ede0a,Lok Sabha
@@ -3671,7 +3671,7 @@ Mussoorie,22,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5b
 Sahaspur,17,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
 Tehri,13,TEHRI GARHWAL,1,Uttarakhand,Tehri Garhwal,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
 Raipur,19,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
-Rajpur Road (Sc,20,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
+Rajpur Road (Sc),20,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
 Deoprayag,10,GARHWAL,2,Uttarakhand,Tehri Garhwal,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
 Karnprayag,6,GARHWAL,2,Uttarakhand,Chamoli,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
 Dehradun Cantt.,21,TEHRI GARHWAL,1,Uttarakhand,Dehradun,Mala Rajya Laxmi Shah,6a932b5bcd944524379edebd,Lok Sabha
@@ -3685,7 +3685,7 @@ Srinagar,38,GARHWAL,2,Uttarakhand,Garhwal,ANIL BALUNI,6a932b5bcd944524379eddd0,L
 Pauri (Sc),37,GARHWAL,2,Uttarakhand,Garhwal,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
 Rishikesh,24,HARDWAR,5,Uttarakhand,Dehradun,TRIVENDRA SINGH RAWAT,6a932b5bcd944524379edfb2,Lok Sabha
 Yamkeshwar,36,GARHWAL,2,Uttarakhand,Garhwal,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
-B.H.E.L. Ranipu,26,HARDWAR,5,Uttarakhand,Hardwar,TRIVENDRA SINGH RAWAT,6a932b5bcd944524379edfb2,Lok Sabha
+B.H.E.L. Ranipur,26,HARDWAR,5,Uttarakhand,Hardwar,TRIVENDRA SINGH RAWAT,6a932b5bcd944524379edfb2,Lok Sabha
 Chaubattakhal,39,GARHWAL,2,Uttarakhand,Garhwal,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
 Bhagwanpur (Sc),28,HARDWAR,5,Uttarakhand,Hardwar,TRIVENDRA SINGH RAWAT,6a932b5bcd944524379edfb2,Lok Sabha
 Bageshwar (Sc),47,ALMORA,3,Uttarakhand,Bageshwar,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
@@ -3708,28 +3708,28 @@ Ranikhet,50,ALMORA,3,Uttarakhand,Almora,Ajay Tamta,6a932b5bcd944524379eddbd,Lok 
 Almora,52,ALMORA,3,Uttarakhand,Almora,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
 Pithoragarh,44,ALMORA,3,Uttarakhand,Pithoragarh,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
 Jageshwar,53,ALMORA,3,Uttarakhand,Almora,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
-Nainital (Sc),58,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Nainital,Vacant,vacant,Lok Sabha
+Nainital (Sc),58,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Nainital,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
 Ramnagar,61,GARHWAL,2,Uttarakhand,Nainital,ANIL BALUNI,6a932b5bcd944524379eddd0,Lok Sabha
-Bhimtal,57,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Nainital,Vacant,vacant,Lok Sabha
+Bhimtal,57,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Nainital,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
 Lohaghat,54,ALMORA,3,Uttarakhand,Champawat,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
-Kaladhungi,60,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Nainital,Vacant,vacant,Lok Sabha
-Jaspur,62,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
+Kaladhungi,60,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Nainital,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Jaspur,62,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
 Champawat,55,ALMORA,3,Uttarakhand,Champawat,Ajay Tamta,6a932b5bcd944524379eddbd,Lok Sabha
-Kashipur,63,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Bajpur (Sc),64,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Lalkuwa,56,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Nainital,Vacant,vacant,Lok Sabha
-Haldwani,59,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Nainital,Vacant,vacant,Lok Sabha
-Gadarpur,65,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Khatima,70,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Sitarganj,68,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Rudrapur,66,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Kichha,67,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
-Nanak Matta (St,69,NAINITAL-UDHAMSINGH NAG,4,Uttarkhand,Udham Singh Nagar,Vacant,vacant,Lok Sabha
+Kashipur,63,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Bajpur (Sc),64,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Lalkuwa,56,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Nainital,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Haldwani,59,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Nainital,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Gadarpur,65,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Khatima,70,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Sitarganj,68,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Rudrapur,66,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Kichha,67,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
+Nanak Matta (St),69,NAINITAL UDHAM SINGH NAG.,4,Uttarakhand,Udham Singh Nagar,Ajay Bhatt,6a932b5bcd944524379eddbb,Lok Sabha
 Behat,1,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
 Nakur,2,KAIRANA,2,Uttar Pradesh,Saharanpur,IQRA CHOUDHARY,6a932b5bcd944524379ede72,Lok Sabha
 Saharanpur,4,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
 Saharanpur Nagar,3,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
-Rampur Maniharan(Sc),6,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
+Rampur Maniharan (Sc),6,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
 Deoband,5,SAHARANPUR,1,Uttar Pradesh,Saharanpur,IMRAN MASOOD,6a932b5bcd944524379ede70,Lok Sabha
 Gangoh,7,KAIRANA,2,Uttar Pradesh,Saharanpur,IQRA CHOUDHARY,6a932b5bcd944524379ede72,Lok Sabha
 Najibabad,17,NAGINA,5,Uttar Pradesh,Bijnor,CHANDRA SHEKHAR,6a932b5bcd944524379ede16,Lok Sabha
@@ -3880,7 +3880,7 @@ Mahmoodabad,151,SITAPUR,30,Uttar Pradesh,Sitapur,RAKESH RATHOR,6a932b5bcd9445243
 Shohratgarh,302,DOMARIYAGANJ,60,Uttar Pradesh,Siddharthnagar,Jagdambika Pal,6a932b5bcd944524379ede77,Lok Sabha
 Mainpuri,107,MAINPURI,21,Uttar Pradesh,Mainpuri,Smt Dimple Yadav,6a932b5bcd944524379edf8b,Lok Sabha
 Kaiserganj,288,KAISERGANJ,57,Uttar Pradesh,Bahraich,KARAN BHUSHAN SINGH,6a932b5bcd944524379ede9c,Lok Sabha
-Nautanwa,316,MAHARAJGANJ,63,Bihar,Maharajganj,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
+Nautanwa,316,MAHARAJGANJ,63,Uttar Pradesh,Maharajganj,Pankaj Chowdhary,6a932b5bcd944524379edeec,Lok Sabha
 Farrukhabad,194,FARRUKHABAD,40,Uttar Pradesh,Farrukhabad,Mukesh Rajput,6a932b5bcd944524379eded7,Lok Sabha
 Kapilvastu (Sc),303,DOMARIYAGANJ,60,Uttar Pradesh,Siddharthnagar,Jagdambika Pal,6a932b5bcd944524379ede77,Lok Sabha
 Bhongaon,108,MAINPURI,21,Uttar Pradesh,Mainpuri,Smt Dimple Yadav,6a932b5bcd944524379edf8b,Lok Sabha
@@ -3888,7 +3888,7 @@ Etmadpur,86,AGRA,18,Uttar Pradesh,Agra,Prof SP Singh Baghel,6a932b5bcd944524379e
 Mehnaun,295,GONDA,59,Uttar Pradesh,Gonda,Kirti Vardhan Singh,6a932b5bcd944524379edea3,Lok Sabha
 Sidhauli (Sc),152,MOHANLALGANJ,34,Uttar Pradesh,Sitapur,R.K. CHAUDHARY,6a932b5bcd944524379edf0a,Lok Sabha
 Itwa,305,DOMARIYAGANJ,60,Uttar Pradesh,Siddharthnagar,Jagdambika Pal,6a932b5bcd944524379ede77,Lok Sabha
-Siswa,317,MAHARAJGANJ,63,Bihar,Maharajganj,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
+Siswa,317,MAHARAJGANJ,63,Uttar Pradesh,Maharajganj,Pankaj Chowdhary,6a932b5bcd944524379edeec,Lok Sabha
 Sandi (Sc),158,HARDOI,31,Uttar Pradesh,Hardoi,Jai Prakash,6a932b5bcd944524379ede79,Lok Sabha
 Tundla (Sc),95,FIROZABAD,20,Uttar Pradesh,Firozabad,AKSHAYA YADAV,6a932b5bcd944524379eddc0,Lok Sabha
 Bhojpur,195,FARRUKHABAD,40,Uttar Pradesh,Farrukhabad,Mukesh Rajput,6a932b5bcd944524379eded7,Lok Sabha
@@ -3896,11 +3896,11 @@ Utraula,293,GONDA,59,Uttar Pradesh,Balrampur,Kirti Vardhan Singh,6a932b5bcd94452
 Karhal,110,MAINPURI,21,Uttar Pradesh,Mainpuri,Smt Dimple Yadav,6a932b5bcd944524379edf8b,Lok Sabha
 Katra Bazar,297,KAISERGANJ,57,Uttar Pradesh,Gonda,KARAN BHUSHAN SINGH,6a932b5bcd944524379ede9c,Lok Sabha
 Balamau (Sc),160,MISRIKH,32,Uttar Pradesh,Hardoi,Ashok Kumar Rawat,6a932b5bcd944524379edde4,Lok Sabha
-Maharajganj (Sc),318,MAHARAJGANJ,63,Bihar,Maharajganj,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
+Maharajganj (Sc),318,MAHARAJGANJ,63,Uttar Pradesh,Maharajganj,Pankaj Chowdhary,6a932b5bcd944524379edeec,Lok Sabha
 Kursi,266,BARABANKI,53,Uttar Pradesh,Barabanki,TANUJ PUNIA,6a932b5bcd944524379edfaa,Lok Sabha
 Fatehpur Sikri,91,FATEHPUR SIKRI,19,Uttar Pradesh,Agra,Rajkumar Chahar,6a932b5bcd944524379edf1e,Lok Sabha
 Agra Rural (Sc),90,FATEHPUR SIKRI,19,Uttar Pradesh,Agra,Rajkumar Chahar,6a932b5bcd944524379edf1e,Lok Sabha
-Pharenda,315,MAHARAJGANJ,63,Bihar,Maharajganj,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
+Pharenda,315,MAHARAJGANJ,63,Uttar Pradesh,Maharajganj,Pankaj Chowdhary,6a932b5bcd944524379edeec,Lok Sabha
 Ram Nagar,267,BARABANKI,53,Uttar Pradesh,Barabanki,TANUJ PUNIA,6a932b5bcd944524379edfaa,Lok Sabha
 Khadda,329,KUSHI NAGAR,65,Uttar Pradesh,Kushinagar,Vijay Kumar Dubey,6a932b5bcd944524379edfbd,Lok Sabha
 Domariyaganj,306,DOMARIYAGANJ,60,Uttar Pradesh,Siddharthnagar,Jagdambika Pal,6a932b5bcd944524379ede77,Lok Sabha
@@ -3929,7 +3929,7 @@ Tarabganj,299,KAISERGANJ,57,Uttar Pradesh,Gonda,KARAN BHUSHAN SINGH,6a932b5bcd94
 Kheragarh,92,FATEHPUR SIKRI,19,Uttar Pradesh,Agra,Rajkumar Chahar,6a932b5bcd944524379edf1e,Lok Sabha
 Malihabad (Sc),168,MOHANLALGANJ,34,Uttar Pradesh,Lucknow,R.K. CHAUDHARY,6a932b5bcd944524379edf0a,Lok Sabha
 Menhdawal,312,SANT KABIR NAGAR,62,Uttar Pradesh,Sant Kabir Nagar,LAXMIKANT PAPPU NISHAD,6a932b5bcd944524379edeb1,Lok Sabha
-Paniyra,319,MAHARAJGANJ,63,Bihar,Maharajganj,Shri Janardan Singh Sigriwal,6a932b5bcd944524379edf6e,Lok Sabha
+Paniyra,319,MAHARAJGANJ,63,Uttar Pradesh,Maharajganj,Pankaj Chowdhary,6a932b5bcd944524379edeec,Lok Sabha
 Tirwa,197,KANNAUJ,42,Uttar Pradesh,Kannauj,AKHILESH YADAV,6a932b5bcd944524379eddbf,Lok Sabha
 Padrauna,330,KUSHI NAGAR,65,Uttar Pradesh,Kushinagar,Vijay Kumar Dubey,6a932b5bcd944524379edfbd,Lok Sabha
 Zaidpur (Sc),269,BARABANKI,53,Uttar Pradesh,Barabanki,TANUJ PUNIA,6a932b5bcd944524379edfaa,Lok Sabha
@@ -4033,7 +4033,7 @@ Shahganj,365,JAUNPUR,73,Uttar Pradesh,Jaunpur,BABU SINGH KUSHWAHA,6a932b5bcd9445
 Belthara Road (Sc),357,SALEMPUR,71,Uttar Pradesh,Ballia,RAMASHANKAR RAJBHAR,6a932b5bcd944524379edf27,Lok Sabha
 Nizamabad,348,LALGANJ,68,Uttar Pradesh,Azamgarh,DAROGA PRASAD SAROJ,6a932b5bcd944524379ede25,Lok Sabha
 Rampur Khas,244,PRATAPGARH,39,Uttar Pradesh,Pratapgarh,DR. S P SINGH,6a932b5bcd944524379ede4b,Lok Sabha
-Hamirpur,228,HAMIRPUR,47,Himachal Pradesh,Hamirpur,Anurag Singh Thakur,6a932b5bcd944524379eddd9,Lok Sabha
+Hamirpur,228,HAMIRPUR,47,Uttar Pradesh,Hamirpur,AJENDRA SINGH LODHI,6a932b5bcd944524379eddbe,Lok Sabha
 Sikanderpur,359,SALEMPUR,71,Uttar Pradesh,Ballia,RAMASHANKAR RAJBHAR,6a932b5bcd944524379edf27,Lok Sabha
 Bindki,239,FATEHPUR,49,Uttar Pradesh,Fatehpur,NARESH CHANDRA UTTAM PATEL,6a932b5bcd944524379edee0,Lok Sabha
 Mubarakpur,346,AZAMGARH,69,Uttar Pradesh,Azamgarh,DHARMENDRA YADAV,6a932b5bcd944524379ede2f,Lok Sabha
@@ -4056,11 +4056,11 @@ Mehnagar (Sc),352,AZAMGARH,69,Uttar Pradesh,Azamgarh,DHARMENDRA YADAV,6a932b5bcd
 Bairia,363,BALLIA,72,Uttar Pradesh,Ballia,SANATAN PANDEY,6a932b5bcd944524379edf41,Lok Sabha
 Lalganj (Sc),351,LALGANJ,68,Uttar Pradesh,Azamgarh,DAROGA PRASAD SAROJ,6a932b5bcd944524379ede25,Lok Sabha
 Raniganj,250,PRATAPGARH,39,Uttar Pradesh,Pratapgarh,DR. S P SINGH,6a932b5bcd944524379ede4b,Lok Sabha
-Rath (Sc),229,HAMIRPUR,47,Himachal Pradesh,Hamirpur,Anurag Singh Thakur,6a932b5bcd944524379eddd9,Lok Sabha
+Rath (Sc),229,HAMIRPUR,47,Uttar Pradesh,Hamirpur,AJENDRA SINGH LODHI,6a932b5bcd944524379eddbe,Lok Sabha
 Babaganj (Sc),245,KAUSHAMBI,50,Uttar Pradesh,Pratapgarh,PUSHPENDRA SAROJ,6a932b5bcd944524379edf08,Lok Sabha
 Ayah Shah,241,FATEHPUR,49,Uttar Pradesh,Fatehpur,NARESH CHANDRA UTTAM PATEL,6a932b5bcd944524379edee0,Lok Sabha
 Phephana,360,BALLIA,72,Uttar Pradesh,Ballia,SANATAN PANDEY,6a932b5bcd944524379edf41,Lok Sabha
-Tindwari,232,HAMIRPUR,47,Himachal Pradesh,Banda,Anurag Singh Thakur,6a932b5bcd944524379eddd9,Lok Sabha
+Tindwari,232,HAMIRPUR,47,Uttar Pradesh,Banda,AJENDRA SINGH LODHI,6a932b5bcd944524379eddbe,Lok Sabha
 Malhani,367,JAUNPUR,73,Uttar Pradesh,Jaunpur,BABU SINGH KUSHWAHA,6a932b5bcd944524379eddec,Lok Sabha
 Zahoorabad,377,BALLIA,72,Uttar Pradesh,Ghazipur,SANATAN PANDEY,6a932b5bcd944524379edf41,Lok Sabha
 Jangipur (Sc),376,GHAZIPUR,75,Uttar Pradesh,Ghazipur,AFZAL ANSARI,6a932b5bcd944524379eddb9,Lok Sabha
@@ -4083,10 +4083,10 @@ Mariyahu,370,MACHHLISHAHR,74,Uttar Pradesh,Jaunpur,PRIYA SAROJ,6a932b5bcd9445243
 Pratappur,257,BHADOHI,78,Uttar Pradesh,Allahabad,VINOD KUMAR BIND,6a932b5bcd944524379edfc1,Lok Sabha
 Babina,222,JHANSI,46,Uttar Pradesh,Jhansi,Anurag Sharma,6a932b5bcd944524379eddd8,Lok Sabha
 Ghazipur,375,GHAZIPUR,75,Uttar Pradesh,Ghazipur,AFZAL ANSARI,6a932b5bcd944524379eddb9,Lok Sabha
-Mahoba,230,HAMIRPUR,47,Himachal Pradesh,Mahoba,Anurag Singh Thakur,6a932b5bcd944524379eddd9,Lok Sabha
+Mahoba,230,HAMIRPUR,47,Uttar Pradesh,Mahoba,AJENDRA SINGH LODHI,6a932b5bcd944524379eddbe,Lok Sabha
 Phulpur,256,PHULPUR,51,Uttar Pradesh,Allahabad,PRAVEEN PATEL,6a932b5bcd944524379edf02,Lok Sabha
 Chail,253,KAUSHAMBI,50,Uttar Pradesh,Kaushambi,PUSHPENDRA SAROJ,6a932b5bcd944524379edf08,Lok Sabha
-Charkhari,231,HAMIRPUR,47,Himachal Pradesh,Mahoba,Anurag Singh Thakur,6a932b5bcd944524379eddd9,Lok Sabha
+Charkhari,231,HAMIRPUR,47,Uttar Pradesh,Mahoba,AJENDRA SINGH LODHI,6a932b5bcd944524379eddbe,Lok Sabha
 Pindra,384,MACHHLISHAHR,74,Uttar Pradesh,Varanasi,PRIYA SAROJ,6a932b5bcd944524379edf03,Lok Sabha
 Ajagara (Sc),385,CHANDAULI,76,Uttar Pradesh,Varanasi,VIRENDRA SINGH,6a932b5bcd944524379edfc3,Lok Sabha
 Jhansi Nagar,223,JHANSI,46,Uttar Pradesh,Jhansi,Anurag Sharma,6a932b5bcd944524379eddd8,Lok Sabha

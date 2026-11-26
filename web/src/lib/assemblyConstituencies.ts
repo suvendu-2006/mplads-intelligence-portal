@@ -2380,7 +2380,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf54"
   },
   {
-    "ac": "Sulthanbathery (S",
+    "ac": "Sulthanbathery (St)",
     "pc": "WAYANAD",
     "state": "Kerala",
     "district": "Wayanad",
@@ -2620,7 +2620,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede44"
   },
   {
-    "ac": "Kongad(Sc)",
+    "ac": "Kongad (Sc)",
     "pc": "PALAKKAD",
     "state": "Kerala",
     "district": "Palakkad",
@@ -2788,7 +2788,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfa4"
   },
   {
-    "ac": "Nattika(Sc)",
+    "ac": "Nattika (Sc)",
     "pc": "THRISSUR",
     "state": "Kerala",
     "district": "Thrissur",
@@ -3332,7 +3332,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede3e"
   },
   {
-    "ac": "Vattiyoorkavu(Sc)",
+    "ac": "Vattiyoorkavu (Sc)",
     "pc": "THIRUVANANTHAPURAM",
     "state": "Kerala",
     "district": "Thiruvananthapuram",
@@ -3476,7 +3476,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede8e"
   },
   {
-    "ac": "Dr.Radhakrishnan Naga",
+    "ac": "Dr.Radhakrishnan Nagar",
     "pc": "CHENNAI NORTH",
     "state": "Tamil Nadu",
     "district": "Chennai",
@@ -3500,7 +3500,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede8e"
   },
   {
-    "ac": "Kilvaithinankuppam(Sc",
+    "ac": "Kilvaithinankuppam (Sc)",
     "pc": "VELLORE",
     "state": "Tamil Nadu",
     "district": "Vellore",
@@ -3524,7 +3524,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfaf"
   },
   {
-    "ac": "Thiru-Vi-Ka-Nagar(Sc)",
+    "ac": "Thiru-Vi-Ka-Nagar (Sc)",
     "pc": "CHENNAI NORTH",
     "state": "Tamil Nadu",
     "district": "Chennai",
@@ -3580,7 +3580,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfa8"
   },
   {
-    "ac": "Chepauk-Thiruvalliken",
+    "ac": "Chepauk-Thiruvallikeni",
     "pc": "CHENNAI CENTRAL",
     "state": "Tamil Nadu",
     "district": "Chennai",
@@ -3869,11 +3869,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Palacodu",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Dharmapuri",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Uthangarai (Sc)",
@@ -3909,11 +3909,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Pennagaram",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Dharmapuri",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Tindivanam (Sc)",
@@ -3933,27 +3933,27 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Harur (Sc)",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Dharmapuri",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Pappireddippatti",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Dharmapuri",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Dharmapuri",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Dharmapuri",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Vanur (Sc)",
@@ -4013,11 +4013,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Mettur",
-    "pc": "DHAR",
-    "state": "Madhya Pradesh",
+    "pc": "DHARAMAPURI",
+    "state": "Tamil Nadu",
     "district": "Salem",
-    "mpName": "SAVITRI THAKUR",
-    "mpId": "6a932b5bcd944524379edf4f"
+    "mpName": "MANI. A.",
+    "mpId": "6a932b5bcd944524379edec2"
   },
   {
     "ac": "Viluppuram",
@@ -4084,7 +4084,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edebf"
   },
   {
-    "ac": "Attur(Sc)",
+    "ac": "Attur (Sc)",
     "pc": "KALLAKURICHI",
     "state": "Tamil Nadu",
     "district": "Salem",
@@ -4260,7 +4260,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede86"
   },
   {
-    "ac": "Senthamangalam(St)",
+    "ac": "Senthamangalam (St)",
     "pc": "NAMAKKAL",
     "state": "Tamil Nadu",
     "district": "Namakkal",
@@ -4284,7 +4284,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddcd"
   },
   {
-    "ac": "Kattumannarkoil(Sc)",
+    "ac": "Kattumannarkoil (Sc)",
     "pc": "CHIDAMBARAM",
     "state": "Tamil Nadu",
     "district": "Cuddalore",
@@ -4484,7 +4484,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede56"
   },
   {
-    "ac": "Coimbatore(North)",
+    "ac": "Coimbatore (North)",
     "pc": "COIMBATORE",
     "state": "Tamil Nadu",
     "district": "Coimbatore",
@@ -4516,7 +4516,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf91"
   },
   {
-    "ac": "Coimbatore(South)",
+    "ac": "Coimbatore (South)",
     "pc": "COIMBATORE",
     "state": "Tamil Nadu",
     "district": "Coimbatore",
@@ -4548,7 +4548,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf9a"
   },
   {
-    "ac": "Krishnarayapuram(Sc)",
+    "ac": "Krishnarayapuram (Sc)",
     "pc": "KARUR",
     "state": "Tamil Nadu",
     "district": "Karur",
@@ -4724,7 +4724,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede56"
   },
   {
-    "ac": "Gandharvakottai(Sc)",
+    "ac": "Gandharvakottai (Sc)",
     "pc": "TIRUCHIRAPPALLI",
     "state": "Tamil Nadu",
     "district": "Pudukkottai",
@@ -4732,7 +4732,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede50"
   },
   {
-    "ac": "Thiruthuraipoondi(Sc)",
+    "ac": "Thiruthuraipoondi (Sc)",
     "pc": "NAGAPATTINAM",
     "state": "Tamil Nadu",
     "district": "Thiruvarur",
@@ -4868,7 +4868,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfad"
   },
   {
-    "ac": "Sholavandan(Sc)",
+    "ac": "Sholavandan (Sc)",
     "pc": "THENI",
     "state": "Tamil Nadu",
     "district": "Madurai",
@@ -4980,7 +4980,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede99"
   },
   {
-    "ac": "Manamadurai(Sc)",
+    "ac": "Manamadurai (Sc)",
     "pc": "SIVAGANGA",
     "state": "Tamil Nadu",
     "district": "Sivaganga",
@@ -4996,7 +4996,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede99"
   },
   {
-    "ac": "Srivilliputhur(Sc)",
+    "ac": "Srivilliputhur (Sc)",
     "pc": "TENKASI",
     "state": "Tamil Nadu",
     "district": "Virudhunagar",
@@ -5060,7 +5060,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec3"
   },
   {
-    "ac": "Vasudevanallur(Sc)",
+    "ac": "Vasudevanallur (Sc)",
     "pc": "TENKASI",
     "state": "Tamil Nadu",
     "district": "Tirunelveli",
@@ -5084,7 +5084,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede9a"
   },
   {
-    "ac": "Sankarankovil(Sc)",
+    "ac": "Sankarankovil (Sc)",
     "pc": "TENKASI",
     "state": "Tamil Nadu",
     "district": "Tirunelveli",
@@ -5116,7 +5116,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede3d"
   },
   {
-    "ac": "Ottapidaram(Sc)",
+    "ac": "Ottapidaram (Sc)",
     "pc": "THOOTHUKKUDI",
     "state": "Tamil Nadu",
     "district": "Thoothukkudi",
@@ -5436,7 +5436,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf21"
   },
   {
-    "ac": "Matigara-Naxalbari(Sc)",
+    "ac": "Matigara-Naxalbari (Sc)",
     "pc": "DARJEELING",
     "state": "West Bengal",
     "district": "Darjiling",
@@ -5556,7 +5556,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede3f"
   },
   {
-    "ac": "Tapan(St)",
+    "ac": "Tapan (St)",
     "pc": "BALURGHAT",
     "state": "West Bengal",
     "district": "Dakshin Dinajpur",
@@ -5948,7 +5948,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede76"
   },
   {
-    "ac": "Ranaghat Uttar Purba(Sc)",
+    "ac": "Ranaghat Uttar Purba (Sc)",
     "pc": "RANAGHAT",
     "state": "West Bengal",
     "district": "Nadia",
@@ -6253,27 +6253,27 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Gosaba (Sc)",
-    "pc": "JAYNAGAR",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Basanti (Sc)",
-    "pc": "JAYNAGAR",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Kultali (Sc)",
-    "pc": "JAYNAGAR",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Patharpratima",
@@ -6325,14 +6325,14 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Jaynagar (Sc)",
-    "pc": "JAYNAGAR",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
-    "ac": "Baruipur Purba(Sc)",
+    "ac": "Baruipur Purba (Sc)",
     "pc": "JADAVPUR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
@@ -6340,20 +6340,20 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf50"
   },
   {
-    "ac": "Canning Paschim(Sc)",
-    "pc": "JAYNAGAR",
+    "ac": "Canning Paschim (Sc)",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Canning Purba",
-    "pc": "JAYNAGAR",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Baruipur Paschim",
@@ -6364,12 +6364,12 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf50"
   },
   {
-    "ac": "Magrahat Purba(Sc)",
-    "pc": "JAYNAGAR",
+    "ac": "Magrahat Purba (Sc)",
+    "pc": "JOYNAGAR",
     "state": "West Bengal",
     "district": "South 24 Parganas",
-    "mpName": "Shri Nagendra Ray (2023-29)",
-    "mpId": "6a932b5ecd944524379ee269"
+    "mpName": "Pratima Mondal",
+    "mpId": "6a932b5bcd944524379edf00"
   },
   {
     "ac": "Magrahat Paschim",
@@ -6812,7 +6812,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddee"
   },
   {
-    "ac": "Dhanekhali(Sc)",
+    "ac": "Dhanekhali (Sc)",
     "pc": "HOOGHLY",
     "state": "West Bengal",
     "district": "Hugli",
@@ -7204,7 +7204,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf71"
   },
   {
-    "ac": "Raghunathpur(Sc)",
+    "ac": "Raghunathpur (Sc)",
     "pc": "BANKURA",
     "state": "West Bengal",
     "district": "Puruliya",
@@ -7941,11 +7941,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhupalpalle",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Kamareddy",
@@ -8037,11 +8037,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Parkal",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Medak",
@@ -8077,11 +8077,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Waradhanapet (Sc)",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Pinapaka (St)",
@@ -8125,11 +8125,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ghanpur (Station) (Sc)",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Gajwel",
@@ -8165,11 +8165,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Warangal West",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Zahirabad (Sc)",
@@ -8181,14 +8181,14 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Warangal East",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
-    "ac": "Rampachodavaram(St)",
+    "ac": "Rampachodavaram (St)",
     "pc": "ARAKU",
     "state": "Andhra Pradesh",
     "district": "East Godavari",
@@ -8245,11 +8245,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Palakurthi",
-    "pc": "WARANGAL",
-    "state": "Andhra Pradesh",
+    "pc": "WARANGEL",
+    "state": "Telangana",
     "district": "Warangal",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KADIYAM KAVYA",
+    "mpId": "6a932b5bcd944524379ede8b"
   },
   {
     "ac": "Sangareddy",
@@ -8333,11 +8333,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Vicarabad (Sc)",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Yelamanchili",
@@ -8405,19 +8405,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Chevella (Sc)",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Serilingampally",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Kukatpalle",
@@ -8452,7 +8452,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede55"
   },
   {
-    "ac": "Secunderabad Cantt. (Sc",
+    "ac": "Secunderabad Cantt. (Sc)",
     "pc": "MALKAJGIRI",
     "state": "Telangana",
     "district": "Hyderabad",
@@ -8461,11 +8461,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Tandur",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Sanathnagar",
@@ -8525,11 +8525,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Rajendranagar",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Nampally",
@@ -8653,19 +8653,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Pargi",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Maheswaram",
-    "pc": "CHEVELLA",
-    "state": "Andhra Pradesh",
+    "pc": "CHELVELLA",
+    "state": "Telangana",
     "district": "Rangareddi",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "KONDA VISHWESHWAR REDDY",
+    "mpId": "6a932b5bcd944524379edea6"
   },
   {
     "ac": "Suryapet",
@@ -8925,11 +8925,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Tadepalligudem",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Kakinada City",
@@ -8997,11 +8997,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Tanuku",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Achampet (Sc)",
@@ -9077,19 +9077,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Achanta",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Undi",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Wanaparthy",
@@ -9109,11 +9109,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhimavaram",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Amalapuram (Sc)",
@@ -9133,11 +9133,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Palacole",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Vijayawada Central",
@@ -9213,11 +9213,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Narasapuram",
-    "pc": "NARSAPURAM",
+    "pc": "NARASAPURAM",
     "state": "Andhra Pradesh",
     "district": "West Godavari",
-    "mpName": "Shri Meda Raghunadha Reddy (2024-30)",
-    "mpId": "6a932b5ecd944524379ee264"
+    "mpName": "Bhupathiraju Srinivasa varma",
+    "mpId": "6a932b5bcd944524379ede05"
   },
   {
     "ac": "Pedana",
@@ -11205,19 +11205,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kasba",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Purnia",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Banmankhi (Sc)",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Purnia",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Vaishali",
@@ -11285,11 +11285,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Dhamdaha",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Purnia",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Saharsa",
@@ -11381,11 +11381,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Purnia",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Purnia",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Garkha (Sc)",
@@ -11421,11 +11421,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Rupauli",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Purnia",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Sarairanjan",
@@ -11493,11 +11493,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Korha (Sc)",
-    "pc": "PURNIA",
+    "pc": "PURNEA",
     "state": "Bihar",
     "district": "Katihar",
-    "mpName": "Dr. Faiyaz Ahmad (2022-28)",
-    "mpId": "6a932b5ecd944524379ee1f6"
+    "mpName": "RAJESH RANJAN ALIAS PAPPU YADAV",
+    "mpId": "6a932b5bcd944524379edf19"
   },
   {
     "ac": "Katihar",
@@ -12182,10 +12182,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Tikari",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Gaya",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Belaganj",
@@ -12286,26 +12286,26 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Rafiganj",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Aurangabad",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Aurangabad",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Aurangabad",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Gurua",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Gaya",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Rajauli (Sc)",
@@ -12350,10 +12350,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Kutumba (Sc)",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Aurangabad",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Sherghati",
@@ -12366,10 +12366,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Imamganj (Sc)",
     "pc": "AURANGABAD",
-    "state": "Maharashtra",
+    "state": "Bihar",
     "district": "Gaya",
-    "mpName": "BHUMARE SANDIPANRAO ASARAM",
-    "mpId": "6a932b5bcd944524379ede04"
+    "mpName": "ABHAY KUMAR SINHA",
+    "mpId": "6a932b5bcd944524379eddb0"
   },
   {
     "ac": "Kochadhaman",
@@ -12381,22 +12381,22 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ramanujganj (St)",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Pratappur (St)",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
-    "ac": "Bharatpur-Sonhat (S",
+    "ac": "Bharatpur-Sonhat (St)",
     "pc": "KORBA",
     "state": "Chhattisgarh",
     "district": "Koriya",
@@ -12405,19 +12405,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhatgaon",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Samri (St)",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Baikunthpur",
@@ -12429,19 +12429,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Premnagar",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Lundra (St)",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Manendragarh",
@@ -12461,11 +12461,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ambikapur",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Marwahi (St)",
@@ -12477,11 +12477,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Sitapur (St)",
-    "pc": "SURGUJA",
+    "pc": "SARGUJA",
     "state": "Chhattisgarh",
     "district": "Surguja",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "CHINTAMANI MAHARAJ",
+    "mpId": "6a932b5bcd944524379ede1d"
   },
   {
     "ac": "Pali-Tanakhar (St)",
@@ -12589,11 +12589,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Akaltara",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Dharamjaigarh (St)",
@@ -12621,11 +12621,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Sakti",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Bilaspur",
@@ -12637,11 +12637,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Janjgir-Champa",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Bilha",
@@ -12669,27 +12669,27 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Jaijaipur",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Chandrapur",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Pamgarh (Sc)",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Janjgir - Champa",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Raigarh",
@@ -12741,11 +12741,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kasdol",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Raipur",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Sarangarh (Sc)",
@@ -12757,11 +12757,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bilaigarh (Sc)",
-    "pc": "JANJGIR-CHAMPA (SC",
+    "pc": "JANJGIR CHAMPA",
     "state": "Chhattisgarh",
     "district": "Raipur",
-    "mpName": "Smt. Ranjeet Ranjan (2022-28)",
-    "mpId": "6a932b5ecd944524379ee2c7"
+    "mpName": "KAMLESH JANGDE",
+    "mpId": "6a932b5bcd944524379ede96"
   },
   {
     "ac": "Saraipali (Sc)",
@@ -13103,7 +13103,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Nerela",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13111,7 +13111,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Bawana (Sc)",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13119,7 +13119,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Burari",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13127,7 +13127,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Karawal Nagar",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13135,7 +13135,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Mundka",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13143,7 +13143,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Badli",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13151,7 +13151,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Rohini",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13159,31 +13159,31 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Rithala",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
   {
     "ac": "Adarsh Nagar",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Shalimar Bagh",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Timarpur",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13191,7 +13191,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Mustafabad",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13199,7 +13199,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Kirari",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13207,79 +13207,79 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Mangol Puri (Sc)",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
   {
     "ac": "Model Town",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Gokalpur (Sc)",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
   {
-    "ac": "Sultan Pur Majra(Sc)",
+    "ac": "Sultan Pur Majra (Sc)",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
   {
     "ac": "Wazirpur",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Tri Nagar",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Shakur Basti",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Ghonda",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
   {
     "ac": "Chandni Chowk",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Babarpur",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13287,7 +13287,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Rohtas Nagar",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13295,7 +13295,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Seemapuri (Sc)",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13303,7 +13303,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Nangloi Jat",
     "pc": "NORTH WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Yogendra Chandoliya",
     "mpId": "6a932b5bcd944524379edfcb"
   },
@@ -13311,7 +13311,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Shahdara",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13319,7 +13319,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Seelam Pur",
     "pc": "NORTH EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Manoj Tiwari",
     "mpId": "6a932b5bcd944524379edecb"
   },
@@ -13327,23 +13327,23 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Najafgarh",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
   {
     "ac": "Sadar Bazar",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Vikaspuri",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13351,7 +13351,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Madipur (Sc)",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13359,7 +13359,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Moti Nagar",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13367,7 +13367,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Gandhi Nagar",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13375,7 +13375,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Patel Nagar (Sc)",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13383,7 +13383,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Karol Bagh (Sc)",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13391,7 +13391,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Vishwas Nagar",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13399,7 +13399,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Rajouri Garden",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13407,23 +13407,23 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Tilak Nagar",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
   {
     "ac": "Ballimaran",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Krishna Nagar",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13431,7 +13431,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Rajinder Nagar",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13439,23 +13439,23 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Jangpura",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
   {
     "ac": "Matia Mahal",
-    "pc": "CHANDNI CHOWK",
+    "pc": "CHANDINI CHOWK",
     "state": "Delhi",
-    "district": "nan",
-    "mpName": "Shri Narain Dass Gupta (2024-30)",
-    "mpId": "6a932b5ecd944524379ee26a"
+    "district": "",
+    "mpName": "Praveen Khandelwal",
+    "mpId": "6a932b5bcd944524379edf01"
   },
   {
     "ac": "Hari Nagar",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13463,7 +13463,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "New Delhi",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13471,7 +13471,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Laxmi Nagar",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13479,7 +13479,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Matiala",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13487,7 +13487,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Janakpuri",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13495,7 +13495,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Delhi Cantt",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13503,7 +13503,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Uttam Nagar",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13511,7 +13511,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Patparganj",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13519,7 +13519,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Kondli (Sc)",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13527,7 +13527,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Dwarka",
     "pc": "WEST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Kamaljeet Sehrawat",
     "mpId": "6a932b5bcd944524379ede95"
   },
@@ -13535,7 +13535,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Palam",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13543,7 +13543,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Trilokpuri (Sc)",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13551,7 +13551,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "R.K. Puram",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13559,7 +13559,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Kasturba Nagar",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13567,7 +13567,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Bijwasan",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13575,7 +13575,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Okhla",
     "pc": "EAST DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Harsh Malhotra",
     "mpId": "6a932b5bcd944524379ede6e"
   },
@@ -13583,7 +13583,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Kalkaji",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13591,7 +13591,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Malviya Nagar",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13599,7 +13599,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Mehrauli",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13607,7 +13607,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Greater Kailash",
     "pc": "NEW DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Bansuri Swaraj",
     "mpId": "6a932b5bcd944524379eddf6"
   },
@@ -13615,15 +13615,15 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Tughlakabad",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
   {
-    "ac": "Ambedkar Nagar(Sc)",
+    "ac": "Ambedkar Nagar (Sc)",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13631,7 +13631,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Badarpur",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13639,7 +13639,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Deoli (Sc)",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13647,7 +13647,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Sangam Vihar",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -13655,7 +13655,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "ac": "Chhatarpur",
     "pc": "SOUTH DELHI",
     "state": "Delhi",
-    "district": "nan",
+    "district": "",
     "mpName": "Ramvir Singh Bidhuri",
     "mpId": "6a932b5bcd944524379edf2c"
   },
@@ -14028,7 +14028,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede60"
   },
   {
-    "ac": "Khedbrahma(St)",
+    "ac": "Khedbrahma (St)",
     "pc": "SABARKANTHA",
     "state": "Gujarat",
     "district": "Sabar Kantha",
@@ -14180,7 +14180,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf5d"
   },
   {
-    "ac": "Gandhidham(Sc)",
+    "ac": "Gandhidham (Sc)",
     "pc": "KACHCHH",
     "state": "Gujarat",
     "district": "Kachchh",
@@ -14284,7 +14284,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede7c"
   },
   {
-    "ac": "Gandhinagar(South)",
+    "ac": "Gandhinagar (South)",
     "pc": "AHMEDABAD EAST",
     "state": "Gujarat",
     "district": "Gandhinagar",
@@ -14300,7 +14300,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf62"
   },
   {
-    "ac": "Gandhinagar(North)",
+    "ac": "Gandhinagar (North)",
     "pc": "GANDHINAGAR",
     "state": "Gujarat",
     "district": "Gandhinagar",
@@ -14692,7 +14692,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eded0"
   },
   {
-    "ac": "Chhota Udaipur (St",
+    "ac": "Chhota Udaipur (St)",
     "pc": "CHHOTA UDAIPUR",
     "state": "Gujarat",
     "district": "Vadodara",
@@ -14700,7 +14700,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede7b"
   },
   {
-    "ac": "Rajkot Rural(Sc)",
+    "ac": "Rajkot Rural (Sc)",
     "pc": "RAJKOT",
     "state": "Gujarat",
     "district": "Rajkot",
@@ -14772,7 +14772,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede40"
   },
   {
-    "ac": "Sankheda(St)",
+    "ac": "Sankheda (St)",
     "pc": "CHHOTA UDAIPUR",
     "state": "Gujarat",
     "district": "Vadodara",
@@ -14788,7 +14788,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede7b"
   },
   {
-    "ac": "Vadodara City(Sc)",
+    "ac": "Vadodara City (Sc)",
     "pc": "VADODARA",
     "state": "Gujarat",
     "district": "Vadodara",
@@ -15028,7 +15028,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddfd"
   },
   {
-    "ac": "Dediapada(St)",
+    "ac": "Dediapada (St)",
     "pc": "BHARUCH",
     "state": "Gujarat",
     "district": "Narmada",
@@ -15436,7 +15436,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edee2"
   },
   {
-    "ac": "Nilokheri(Sc)",
+    "ac": "Nilokheri (Sc)",
     "pc": "KARNAL",
     "state": "Haryana",
     "district": "Karnal",
@@ -15709,11 +15709,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Loharu",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Bhiwani",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Sonipat",
@@ -15733,11 +15733,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Tosham",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Bhiwani",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Kalanaur (Sc)",
@@ -15773,19 +15773,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhiwani",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Bhiwani",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Dadri",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Bhiwani",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Jhajjar (Sc)",
@@ -15805,11 +15805,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Badhra",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Bhiwani",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Badshahpur",
@@ -15845,11 +15845,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Mahendragarh",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Mahendragarh",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Badkhal",
@@ -15861,11 +15861,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ateli",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Mahendragarh",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Kosli",
@@ -15957,19 +15957,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Narnaul",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Mahendragarh",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Nangal Chaudhry",
-    "pc": "BHIWANI - MAHENDRAGARH",
+    "pc": "BHIWANI MAHENDRAGARH",
     "state": "Haryana",
     "district": "Mahendragarh",
-    "mpName": "Shri Subhash Barala (2024-30)",
-    "mpId": "6a932b5ecd944524379ee2a9"
+    "mpName": "Shri  Dharambir Singh",
+    "mpId": "6a932b5bcd944524379edf5f"
   },
   {
     "ac": "Hodal (Sc)",
@@ -16508,7 +16508,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfa5"
   },
   {
-    "ac": "Sri Renukaji (Sc",
+    "ac": "Sri Renukaji (Sc)",
     "pc": "SHIMLA",
     "state": "Himachal Pradesh",
     "district": "Sirmaur",
@@ -17356,7 +17356,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf3e"
   },
   {
-    "ac": "Gulbarga Rural(Sc)",
+    "ac": "Gulbarga Rural (Sc)",
     "pc": "GULBARGA",
     "state": "Karnataka",
     "district": "Gulbarga",
@@ -17900,7 +17900,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede8a"
   },
   {
-    "ac": "Hubli-Dharwad-East(Sc)",
+    "ac": "Hubli-Dharwad-East (Sc)",
     "pc": "DHARWAD",
     "state": "Karnataka",
     "district": "Dharwad",
@@ -17948,7 +17948,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede53"
   },
   {
-    "ac": "Hagaribommanahalli(Sc)",
+    "ac": "Hagaribommanahalli (Sc)",
     "pc": "BELLARY",
     "state": "Karnataka",
     "district": "Bellary",
@@ -18269,11 +18269,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bagepalli",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Kolar",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Madhugiri",
@@ -18309,11 +18309,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Gauribidanur",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Kolar",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Kundapura",
@@ -18333,11 +18333,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Chikkaballapur",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Kolar",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Sidlaghatta",
@@ -18421,11 +18421,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Doddaballapur",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Bangalore Rural",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Mudigere (Sc)",
@@ -18445,11 +18445,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Devanahalli (Sc)",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Bangalore Rural",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Belur",
@@ -18469,11 +18469,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Nelamangala (Sc)",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Bangalore Rural",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Turuvekere",
@@ -18525,19 +18525,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Hosakote",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Bangalore Rural",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Yelahanka",
-    "pc": "CHIKKABALLAPUR",
+    "pc": "CHIKBALLAPUR",
     "state": "Karnataka",
     "district": "Bangalore",
-    "mpName": "Shri Jaggesh (2022-28)",
-    "mpId": "6a932b5ecd944524379ee246"
+    "mpName": "DR.K.SUDHAKAR",
+    "mpId": "6a932b5bcd944524379ede4d"
   },
   {
     "ac": "Shravanabelagola",
@@ -18660,7 +18660,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf5c"
   },
   {
-    "ac": "Kolar Gold Field(Sc)",
+    "ac": "Kolar Gold Field (Sc)",
     "pc": "KOLAR",
     "state": "Karnataka",
     "district": "Kolar",
@@ -18708,7 +18708,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf5c"
   },
   {
-    "ac": "Pulakeshinagar(Sc)",
+    "ac": "Pulakeshinagar (Sc)",
     "pc": "BANGALORE NORTH",
     "state": "Karnataka",
     "district": "Bangalore",
@@ -18740,7 +18740,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edeeb"
   },
   {
-    "ac": "C.V. Raman Nagar(Sc)",
+    "ac": "C.V. Raman Nagar (Sc)",
     "pc": "BANGALORE CENTRAL",
     "state": "Karnataka",
     "district": "Bangalore",
@@ -19044,7 +19044,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfca"
   },
   {
-    "ac": "Heggadadevankote(St)",
+    "ac": "Heggadadevankote (St)",
     "pc": "CHAMARAJANAGAR",
     "state": "Karnataka",
     "district": "Mysore",
@@ -20324,7 +20324,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf56"
   },
   {
-    "ac": "Jabalpur Purba(Sc)",
+    "ac": "Jabalpur Purba (Sc)",
     "pc": "JABALPUR",
     "state": "Madhya Pradesh",
     "district": "Jabalpur",
@@ -20428,7 +20428,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf5b"
   },
   {
-    "ac": "Lakhnadon(St)",
+    "ac": "Lakhnadon (St)",
     "pc": "MANDLA",
     "state": "Madhya Pradesh",
     "district": "Seoni",
@@ -20812,7 +20812,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede5a"
   },
   {
-    "ac": "Bhagwanpura(St)",
+    "ac": "Bhagwanpura (St)",
     "pc": "KHARGONE",
     "state": "Madhya Pradesh",
     "district": "West Nimar",
@@ -21092,7 +21092,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf90"
   },
   {
-    "ac": "Arjuni Morgaon(Sc)",
+    "ac": "Arjuni Morgaon (Sc)",
     "pc": "BHANDARA-GONDIYA",
     "state": "Maharashtra",
     "district": "Gondiya",
@@ -21748,7 +21748,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede93"
   },
   {
-    "ac": "Aurangabadwest(Sc)",
+    "ac": "Aurangabadwest (Sc)",
     "pc": "AURANGABAD",
     "state": "Maharashtra",
     "district": "Aurangabad",
@@ -21828,7 +21828,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede01"
   },
   {
-    "ac": "Bhiwandi Rural(St)",
+    "ac": "Bhiwandi Rural (St)",
     "pc": "BHIWANDI",
     "state": "Maharashtra",
     "district": "Thane",
@@ -21876,7 +21876,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf43"
   },
   {
-    "ac": "Shrirampur(Sc)",
+    "ac": "Shrirampur (Sc)",
     "pc": "SHIRDI",
     "state": "Maharashtra",
     "district": "Ahmadnagar",
@@ -22004,7 +22004,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edee1"
   },
   {
-    "ac": "Ovala ?Majiwada",
+    "ac": "Ovala-Majiwada",
     "pc": "THANE",
     "state": "Maharashtra",
     "district": "Thane",
@@ -22157,11 +22157,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Mulund",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Malad West",
@@ -22221,19 +22221,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhandup West",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Bhokar",
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Andheri East",
@@ -22261,27 +22261,27 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Chandivali",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Vikhroli",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Vile Parle",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Panvel",
@@ -22301,11 +22301,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ghatkopar East",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Karjat",
@@ -22317,11 +22317,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ghatkopar West",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Gangakhed",
@@ -22333,19 +22333,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Vandre West",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Kalina",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Ashti",
@@ -22365,67 +22365,67 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Vandre East",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Nanded North",
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Kurla (Sc)",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH-CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "GAIKWAD VARSHA EKNATH",
+    "mpId": "6a932b5bcd944524379ede59"
   },
   {
     "ac": "Mankhurd Shivaji Nagar",
-    "pc": "MUMBAI NORTH",
+    "pc": "MUMBAI NORTH EAST",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Piyush Vedprakash Goyal",
-    "mpId": "6a932b5bcd944524379edef4"
+    "mpName": "SANJAY DINA PATIL",
+    "mpId": "6a932b5bcd944524379edf42"
   },
   {
     "ac": "Chembur",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Sion Koliwada",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Dharavi (Sc)",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Anushakti Nagar",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai (Suburban)",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Ahmednagar",
@@ -22437,11 +22437,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Mahim",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Khed Alandi",
@@ -22453,11 +22453,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Wadala",
-    "pc": "MUMBAI SOUTH",
+    "pc": "MUMBAI SOUTH CENTRAL",
     "state": "Maharashtra",
     "district": "Mumbai",
-    "mpName": "Arvind Ganpat Sawant",
-    "mpId": "6a932b5bcd944524379edde1"
+    "mpName": "ANIL YESHWANT DESAI",
+    "mpId": "6a932b5bcd944524379eddd1"
   },
   {
     "ac": "Worli",
@@ -22504,8 +22504,8 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Malabar Hill",
@@ -22552,8 +22552,8 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Loha",
@@ -22616,16 +22616,16 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Mukhed",
     "pc": "NANDED",
     "state": "Maharashtra",
     "district": "Nanded",
-    "mpName": "CHAVAN VASANTRAO BALWANTRAO",
-    "mpId": "6a932b5bcd944524379ede19"
+    "mpName": "Ravindra Vasantrao Chavan",
+    "mpId": "6a932b5bcd944524379edf33"
   },
   {
     "ac": "Bhor",
@@ -22989,11 +22989,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Chiplun",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Ratnagiri",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Patan",
@@ -23029,11 +23029,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Ratnagiri",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Ratnagiri",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Karad South",
@@ -23085,11 +23085,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Rajapur",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Ratnagiri",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Miraj (Sc)",
@@ -23108,7 +23108,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfc4"
   },
   {
-    "ac": "Hatkanangle(Sc)",
+    "ac": "Hatkanangle (Sc)",
     "pc": "HATKANANGLE",
     "state": "Maharashtra",
     "district": "Kolhapur",
@@ -23157,11 +23157,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kankavli",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Sindhudurg",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Radhanagari",
@@ -23181,11 +23181,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kudal",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Sindhudurg",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Chandgad",
@@ -23197,11 +23197,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Sawantwadi",
-    "pc": "RATNAGIRI ?SINDHUDUR",
+    "pc": "RATNAGIRI-SINDHUDURG",
     "state": "Maharashtra",
     "district": "Sindhudurg",
-    "mpName": "Shri Chandrakant Damodar Handore (2024-30)",
-    "mpId": "6a932b5ecd944524379ee22b"
+    "mpName": "NARAYAN TATU RANE",
+    "mpId": "6a932b5bcd944524379ededf"
   },
   {
     "ac": "Chingai",
@@ -23444,7 +23444,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddcf"
   },
   {
-    "ac": "Naoriya Pakhanglak*",
+    "ac": "Naoriya Pakhanglak",
     "pc": "INNER MANIPUR",
     "state": "Manipur",
     "district": "Imphal West",
@@ -23836,7 +23836,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddce"
   },
   {
-    "ac": "Rambrai Jyrngam (St",
+    "ac": "Rambrai Jyrngam (St)",
     "pc": "SHILLONG",
     "state": "Meghalaya",
     "district": "West Khasi Hills",
@@ -23924,7 +23924,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddce"
   },
   {
-    "ac": "Mawryngkneng(St)",
+    "ac": "Mawryngkneng (St)",
     "pc": "SHILLONG",
     "state": "Meghalaya",
     "district": "East Khasi Hills",
@@ -24332,7 +24332,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf34"
   },
   {
-    "ac": "Aizawl North-Iii (S",
+    "ac": "Aizawl North-Iii (St)",
     "pc": "MIZORAM",
     "state": "Mizoram",
     "district": "Aizawl",
@@ -24340,7 +24340,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf34"
   },
   {
-    "ac": "Aizawl North-Ii (St",
+    "ac": "Aizawl North-Ii (St)",
     "pc": "MIZORAM",
     "state": "Mizoram",
     "district": "Aizawl",
@@ -24380,7 +24380,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf34"
   },
   {
-    "ac": "Aizawl West-Iii (St",
+    "ac": "Aizawl West-Iii (St)",
     "pc": "MIZORAM",
     "state": "Mizoram",
     "district": "Aizawl",
@@ -24388,7 +24388,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf34"
   },
   {
-    "ac": "Aizawl South-Iii (S",
+    "ac": "Aizawl South-Iii (St)",
     "pc": "MIZORAM",
     "state": "Mizoram",
     "district": "Aizawl",
@@ -24396,7 +24396,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf34"
   },
   {
-    "ac": "Aizawl South-Ii (St",
+    "ac": "Aizawl South-Ii (St)",
     "pc": "MIZORAM",
     "state": "Mizoram",
     "district": "Aizawl",
@@ -25252,7 +25252,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf8a"
   },
   {
-    "ac": "Bhubaneswar(Uttar)",
+    "ac": "Bhubaneswar (Uttar)",
     "pc": "BHUBANESWAR",
     "state": "Odisha",
     "district": "Khordha",
@@ -25332,7 +25332,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf40"
   },
   {
-    "ac": "Bhubaneswar(Madhya)",
+    "ac": "Bhubaneswar (Madhya)",
     "pc": "BHUBANESWAR",
     "state": "Odisha",
     "district": "Khordha",
@@ -25956,7 +25956,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfb8"
   },
   {
-    "ac": "Neravy- T.R. Pattin",
+    "ac": "Neravy- T.R. Pattinam",
     "pc": "PUDUCHERRY",
     "state": "Puducherry",
     "district": "Karaikal",
@@ -26084,7 +26084,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede49"
   },
   {
-    "ac": "Sri Hargobindpur (S",
+    "ac": "Sri Hargobindpur (Sc)",
     "pc": "HOSHIARPUR",
     "state": "Punjab",
     "district": "Gurdaspur",
@@ -26516,7 +26516,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf4b"
   },
   {
-    "ac": "Nihal Singhwala (Sc",
+    "ac": "Nihal Singhwala (Sc)",
     "pc": "FARIDKOT",
     "state": "Punjab",
     "district": "Moga",
@@ -26940,7 +26940,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edead"
   },
   {
-    "ac": "Raisinghnagar(Sc)",
+    "ac": "Raisinghnagar (Sc)",
     "pc": "GANGANAGAR",
     "state": "Rajasthan",
     "district": "Ganganagar",
@@ -26996,7 +26996,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf64"
   },
   {
-    "ac": "Khajuwala(Sc)",
+    "ac": "Khajuwala (Sc)",
     "pc": "BIKANER",
     "state": "Rajasthan",
     "district": "Bikaner",
@@ -27196,7 +27196,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf64"
   },
   {
-    "ac": "Sujangarh(Sc)",
+    "ac": "Sujangarh (Sc)",
     "pc": "CHURU",
     "state": "Rajasthan",
     "district": "Churu",
@@ -27572,7 +27572,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec6"
   },
   {
-    "ac": "Bhopalgarh(Sc)",
+    "ac": "Bhopalgarh (Sc)",
     "pc": "PALI",
     "state": "Rajasthan",
     "district": "Jodhpur",
@@ -27620,12 +27620,12 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddfa"
   },
   {
-    "ac": "Todabhim(St)",
-    "pc": "KARAULI ?DHOLPUR",
+    "ac": "Todabhim (St)",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Karauli",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Merta (Sc)",
@@ -27645,19 +27645,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Rajakhera",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Dhaulpur",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Bari",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Dhaulpur",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Kishangarh",
@@ -27669,35 +27669,35 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Dholpur",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Dhaulpur",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Hindaun (Sc)",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Karauli",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Baseri (Sc)",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Dhaulpur",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Karauli",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Karauli",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Chaksu (Sc)",
@@ -27724,7 +27724,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edfb4"
   },
   {
-    "ac": "Bamanwas(St)",
+    "ac": "Bamanwas (St)",
     "pc": "TONK-SAWAI MADHOPUR",
     "state": "Rajasthan",
     "district": "Sawai Madhopur",
@@ -27837,11 +27837,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Sapotra (St)",
-    "pc": "KARAULI ?DHOLPUR",
+    "pc": "KARAULI-DHOLPUR",
     "state": "Rajasthan",
     "district": "Karauli",
-    "mpName": "Shri Mukul Wasnik (2022-28)",
-    "mpId": "6a932b5ecd944524379ee268"
+    "mpName": "BHAJAN LAL JATAV",
+    "mpId": "6a932b5bcd944524379eddfb"
   },
   {
     "ac": "Jodhpur",
@@ -27980,7 +27980,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edebc"
   },
   {
-    "ac": "Shahpura(Sc)",
+    "ac": "Shahpura (Sc)",
     "pc": "BHILWARA",
     "state": "Rajasthan",
     "district": "Bhilwara",
@@ -28004,7 +28004,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede24"
   },
   {
-    "ac": "Keshoraipatan(Sc)",
+    "ac": "Keshoraipatan (Sc)",
     "pc": "KOTA",
     "state": "Rajasthan",
     "district": "Bundi",
@@ -28172,7 +28172,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edee9"
   },
   {
-    "ac": "Kapasan(Sc)",
+    "ac": "Kapasan (Sc)",
     "pc": "CHITTORGARH",
     "state": "Rajasthan",
     "district": "Chittaurgarh",
@@ -28188,7 +28188,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edeb3"
   },
   {
-    "ac": "Gogunda(St)",
+    "ac": "Gogunda (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28220,7 +28220,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edebc"
   },
   {
-    "ac": "Baran?Atru (Sc)",
+    "ac": "Baran-Atru (Sc)",
     "pc": "JHALAWAR-BARAN",
     "state": "Rajasthan",
     "district": "Baran",
@@ -28260,7 +28260,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede15"
   },
   {
-    "ac": "Reodar(Sc)",
+    "ac": "Reodar (Sc)",
     "pc": "JALORE",
     "state": "Rajasthan",
     "district": "Sirohi",
@@ -28284,7 +28284,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede52"
   },
   {
-    "ac": "Jhadol(St)",
+    "ac": "Jhadol (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28316,7 +28316,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede15"
   },
   {
-    "ac": "Udaipur Rural(St)",
+    "ac": "Udaipur Rural (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28340,7 +28340,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede52"
   },
   {
-    "ac": "Salumber(St)",
+    "ac": "Salumber (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28364,7 +28364,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede52"
   },
   {
-    "ac": "Dhariawad(St)",
+    "ac": "Dhariawad (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28372,7 +28372,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec7"
   },
   {
-    "ac": "Kherwara(St)",
+    "ac": "Kherwara (St)",
     "pc": "UDAIPUR",
     "state": "Rajasthan",
     "district": "Udaipur",
@@ -28380,7 +28380,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec7"
   },
   {
-    "ac": "Pratapgarh(St)",
+    "ac": "Pratapgarh (St)",
     "pc": "CHITTORGARH",
     "state": "Rajasthan",
     "district": "Chittaurgarh",
@@ -28396,7 +28396,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec7"
   },
   {
-    "ac": "Dungarpur(St)",
+    "ac": "Dungarpur (St)",
     "pc": "BANSWARA",
     "state": "Rajasthan",
     "district": "Dungarpur",
@@ -28412,7 +28412,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf14"
   },
   {
-    "ac": "Sagwara(St)",
+    "ac": "Sagwara (St)",
     "pc": "BANSWARA",
     "state": "Rajasthan",
     "district": "Dungarpur",
@@ -28436,7 +28436,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf14"
   },
   {
-    "ac": "Banswara(St)",
+    "ac": "Banswara (St)",
     "pc": "BANSWARA",
     "state": "Rajasthan",
     "district": "Banswara",
@@ -28444,7 +28444,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf14"
   },
   {
-    "ac": "Bagidora(St)",
+    "ac": "Bagidora (St)",
     "pc": "BANSWARA",
     "state": "Rajasthan",
     "district": "Banswara",
@@ -28452,7 +28452,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edf14"
   },
   {
-    "ac": "Kushalgarh(St)",
+    "ac": "Kushalgarh (St)",
     "pc": "BANSWARA",
     "state": "Rajasthan",
     "district": "Banswara",
@@ -28508,7 +28508,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edec6"
   },
   {
-    "ac": "Lachen Mangan(Bl)",
+    "ac": "Lachen Mangan (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "North",
@@ -28516,7 +28516,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Djongu(Bl)",
+    "ac": "Djongu (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "North",
@@ -28524,7 +28524,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Kabi Lungchuk(Bl)",
+    "ac": "Kabi Lungchuk (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "North",
@@ -28532,7 +28532,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Barfung(Bl)",
+    "ac": "Barfung (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "South",
@@ -28540,7 +28540,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Yoksam-Tashiding(Bl)",
+    "ac": "Yoksam-Tashiding (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "West",
@@ -28548,7 +28548,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Kabi Lungchuk(Bl)",
+    "ac": "Kabi Lungchuk (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28556,7 +28556,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Tumen-Lingi(Bl)",
+    "ac": "Tumen-Lingi (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28564,7 +28564,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Tumen-Lingi(Bl)",
+    "ac": "Tumen-Lingi (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "South",
@@ -28580,7 +28580,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Shyari(Bl)",
+    "ac": "Shyari (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28596,7 +28596,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Gangtok(Bl)",
+    "ac": "Gangtok (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28652,7 +28652,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Gnathang-Machong(Bl)",
+    "ac": "Gnathang-Machong (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28692,7 +28692,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Rinchenpong(Bl)",
+    "ac": "Rinchenpong (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "West",
@@ -28708,7 +28708,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "West Pendam(Sc)",
+    "ac": "West Pendam (Sc)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "East",
@@ -28756,7 +28756,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede71"
   },
   {
-    "ac": "Daramdin(Bl)",
+    "ac": "Daramdin (Bl)",
     "pc": "SIKKIM",
     "state": "Sikkim",
     "district": "West",
@@ -28916,7 +28916,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede0a"
   },
   {
-    "ac": "Ramchandraghat(St)",
+    "ac": "Ramchandraghat (St)",
     "pc": "TRIPURA EAST",
     "state": "Tripura",
     "district": "West Tripura",
@@ -28972,7 +28972,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede0a"
   },
   {
-    "ac": "Mandaibazar(St)",
+    "ac": "Mandaibazar (St)",
     "pc": "TRIPURA WEST",
     "state": "Tripura",
     "district": "West Tripura",
@@ -29172,7 +29172,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede0a"
   },
   {
-    "ac": "Kakraban-Salgarah(Sc)",
+    "ac": "Kakraban-Salgarah (Sc)",
     "pc": "TRIPURA WEST",
     "state": "Tripura",
     "district": "South Tripura",
@@ -29388,7 +29388,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379edebd"
   },
   {
-    "ac": "Rajpur Road (Sc",
+    "ac": "Rajpur Road (Sc)",
     "pc": "TEHRI GARHWAL",
     "state": "Uttarakhand",
     "district": "Dehradun",
@@ -29500,7 +29500,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379eddd0"
   },
   {
-    "ac": "B.H.E.L. Ranipu",
+    "ac": "B.H.E.L. Ranipur",
     "pc": "HARDWAR",
     "state": "Uttarakhand",
     "district": "Hardwar",
@@ -29685,11 +29685,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Nainital (Sc)",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Nainital",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Ramnagar",
@@ -29701,11 +29701,11 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Bhimtal",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Nainital",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Lohaghat",
@@ -29717,19 +29717,19 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kaladhungi",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Nainital",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Jaspur",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Champawat",
@@ -29741,83 +29741,83 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   },
   {
     "ac": "Kashipur",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Bajpur (Sc)",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Lalkuwa",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Nainital",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Haldwani",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Nainital",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Gadarpur",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Khatima",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Sitarganj",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Rudrapur",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Kichha",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
-    "ac": "Nanak Matta (St",
-    "pc": "NAINITAL-UDHAMSINGH NAG",
-    "state": "Uttarkhand",
+    "ac": "Nanak Matta (St)",
+    "pc": "NAINITAL UDHAM SINGH NAG.",
+    "state": "Uttarakhand",
     "district": "Udham Singh Nagar",
-    "mpName": "Vacant",
-    "mpId": "vacant"
+    "mpName": "Ajay Bhatt",
+    "mpId": "6a932b5bcd944524379eddbb"
   },
   {
     "ac": "Behat",
@@ -29852,7 +29852,7 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
     "mpId": "6a932b5bcd944524379ede70"
   },
   {
-    "ac": "Rampur Maniharan(Sc)",
+    "ac": "Rampur Maniharan (Sc)",
     "pc": "SAHARANPUR",
     "state": "Uttar Pradesh",
     "district": "Saharanpur",
@@ -31062,10 +31062,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Nautanwa",
     "pc": "MAHARAJGANJ",
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "district": "Maharajganj",
-    "mpName": "Shri Janardan Singh Sigriwal",
-    "mpId": "6a932b5bcd944524379edf6e"
+    "mpName": "Pankaj Chowdhary",
+    "mpId": "6a932b5bcd944524379edeec"
   },
   {
     "ac": "Farrukhabad",
@@ -31126,10 +31126,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Siswa",
     "pc": "MAHARAJGANJ",
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "district": "Maharajganj",
-    "mpName": "Shri Janardan Singh Sigriwal",
-    "mpId": "6a932b5bcd944524379edf6e"
+    "mpName": "Pankaj Chowdhary",
+    "mpId": "6a932b5bcd944524379edeec"
   },
   {
     "ac": "Sandi (Sc)",
@@ -31190,10 +31190,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Maharajganj (Sc)",
     "pc": "MAHARAJGANJ",
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "district": "Maharajganj",
-    "mpName": "Shri Janardan Singh Sigriwal",
-    "mpId": "6a932b5bcd944524379edf6e"
+    "mpName": "Pankaj Chowdhary",
+    "mpId": "6a932b5bcd944524379edeec"
   },
   {
     "ac": "Kursi",
@@ -31222,10 +31222,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Pharenda",
     "pc": "MAHARAJGANJ",
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "district": "Maharajganj",
-    "mpName": "Shri Janardan Singh Sigriwal",
-    "mpId": "6a932b5bcd944524379edf6e"
+    "mpName": "Pankaj Chowdhary",
+    "mpId": "6a932b5bcd944524379edeec"
   },
   {
     "ac": "Ram Nagar",
@@ -31454,10 +31454,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Paniyra",
     "pc": "MAHARAJGANJ",
-    "state": "Bihar",
+    "state": "Uttar Pradesh",
     "district": "Maharajganj",
-    "mpName": "Shri Janardan Singh Sigriwal",
-    "mpId": "6a932b5bcd944524379edf6e"
+    "mpName": "Pankaj Chowdhary",
+    "mpId": "6a932b5bcd944524379edeec"
   },
   {
     "ac": "Tirwa",
@@ -32286,10 +32286,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Hamirpur",
     "pc": "HAMIRPUR",
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "district": "Hamirpur",
-    "mpName": "Anurag Singh Thakur",
-    "mpId": "6a932b5bcd944524379eddd9"
+    "mpName": "AJENDRA SINGH LODHI",
+    "mpId": "6a932b5bcd944524379eddbe"
   },
   {
     "ac": "Sikanderpur",
@@ -32470,10 +32470,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Rath (Sc)",
     "pc": "HAMIRPUR",
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "district": "Hamirpur",
-    "mpName": "Anurag Singh Thakur",
-    "mpId": "6a932b5bcd944524379eddd9"
+    "mpName": "AJENDRA SINGH LODHI",
+    "mpId": "6a932b5bcd944524379eddbe"
   },
   {
     "ac": "Babaganj (Sc)",
@@ -32502,10 +32502,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Tindwari",
     "pc": "HAMIRPUR",
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "district": "Banda",
-    "mpName": "Anurag Singh Thakur",
-    "mpId": "6a932b5bcd944524379eddd9"
+    "mpName": "AJENDRA SINGH LODHI",
+    "mpId": "6a932b5bcd944524379eddbe"
   },
   {
     "ac": "Malhani",
@@ -32686,10 +32686,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Mahoba",
     "pc": "HAMIRPUR",
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "district": "Mahoba",
-    "mpName": "Anurag Singh Thakur",
-    "mpId": "6a932b5bcd944524379eddd9"
+    "mpName": "AJENDRA SINGH LODHI",
+    "mpId": "6a932b5bcd944524379eddbe"
   },
   {
     "ac": "Phulpur",
@@ -32710,10 +32710,10 @@ export const ASSEMBLY_CONSTITUENCIES: AssemblyItem[] = [
   {
     "ac": "Charkhari",
     "pc": "HAMIRPUR",
-    "state": "Himachal Pradesh",
+    "state": "Uttar Pradesh",
     "district": "Mahoba",
-    "mpName": "Anurag Singh Thakur",
-    "mpId": "6a932b5bcd944524379eddd9"
+    "mpName": "AJENDRA SINGH LODHI",
+    "mpId": "6a932b5bcd944524379eddbe"
   },
   {
     "ac": "Pindra",

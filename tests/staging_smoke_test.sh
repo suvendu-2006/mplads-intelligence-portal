@@ -82,9 +82,9 @@ from sqlalchemy import create_engine, text
 db_url = os.environ['DATABASE_URL']
 engine = create_engine(db_url, connect_args={'sslmode': 'require'})
 with engine.connect() as conn:
-    res = conn.execute(text('SELECT version(), ssl_is_used()')).fetchone()
+    res = conn.execute(text('SELECT version(), (SELECT ssl FROM pg_stat_ssl WHERE pid = pg_backend_pid())')).fetchone()
     print(f'    ✓ Connected to: {res[0][:30]}...')
-    print(f'    ✓ TLS Active (ssl_is_used): {res[1]}')
+    print(f'    ✓ TLS Active (pg_stat_ssl.ssl): {res[1]}')
     assert res[1] is True, 'TLS connection was not active!'
     tables = conn.execute(text(\"SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'\")).fetchall()
     table_names = [t[0] for t in tables]

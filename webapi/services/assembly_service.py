@@ -5,6 +5,7 @@ mapping them to parent Parliamentary Constituencies (Lok Sabha) and sitting MPs.
 """
 
 import os
+import re
 import sqlite3
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -12,10 +13,124 @@ import pandas as pd
 
 _df_assembly = None
 _assembly_index = {}
+_assembly_norm_index = {}
 _pc_to_assemblies = {}
+_pc_norm_to_assemblies = {}
+_pc_alnum_to_assemblies = {}
+
+_PC_SUFFIX_RE = re.compile(
+    r"\s*\(\s*(?:sc|st|s\.c\.|s\.t\.|s)\s*\)?$",
+    flags=re.IGNORECASE,
+)
+
+# Bidirectional canonical PC spelling/renaming aliases
+_PC_ALIAS_EQUIV: Dict[str, str] = {
+    "DHARMAPURI": "DHARAMAPURI",
+    "DHARAMAPURI": "DHARMAPURI",
+    "CHANDNI CHOWK": "CHANDINI CHOWK",
+    "CHANDINI CHOWK": "CHANDNI CHOWK",
+    "CHEVELLA": "CHELVELLA",
+    "CHELVELLA": "CHEVELLA",
+    "CHIKKABALLAPUR": "CHIKBALLAPUR",
+    "CHIKBALLAPUR": "CHIKKABALLAPUR",
+    "CHIKKBALLAPUR": "CHIKBALLAPUR",
+    "JAYNAGAR": "JOYNAGAR",
+    "JOYNAGAR": "JAYNAGAR",
+    "NARSAPURAM": "NARASAPURAM",
+    "NARASAPURAM": "NARSAPURAM",
+    "PURNIA": "PURNEA",
+    "PURNEA": "PURNIA",
+    "SURGUJA": "SARGUJA",
+    "SARGUJA": "SURGUJA",
+    "WARANGAL": "WARANGEL",
+    "WARANGEL": "WARANGAL",
+    "GAUHATI": "GUWAHATI",
+    "GUWAHATI": "GAUHATI",
+    "SONIPAT": "SONEPAT",
+    "SONEPAT": "SONIPAT",
+    "BATHINDA": "BHATINDA",
+    "BHATINDA": "BATHINDA",
+    "PONDICHERRY": "PUDUCHERRY",
+    "PUDUCHERRY": "PONDICHERRY",
+    "UJIARPUR": "UJJARPUR",
+    "UJJARPUR": "UJIARPUR",
+    "ANANTNAG": "ANANTANAG",
+    "ANANTANAG": "ANANTNAG",
+    "THIRUVANANTHAPURAM": "THIRUVANANTHAPURA",
+    "THIRUVANANTHAPURA": "THIRUVANANTHAPURAM",
+    "MAHABUBNAGAR": "MAHBUBNAGAR",
+    "MAHBUBNAGAR": "MAHABUBNAGAR",
+    "MANGALDOI": "DARRANG UDALGURI",
+    "DARRANG UDALGURI": "MANGALDOI",
+    "KALIABOR": "KAZIRANGA",
+    "KAZIRANGA": "KALIABOR",
+    "TEZPUR": "SONITPUR",
+    "SONITPUR": "TEZPUR",
+    "AUTONOMOUS DISTRICT": "DIPHU",
+    "DIPHU": "AUTONOMOUS DISTRICT",
+    "NAINITAL UDHAM SINGH NAG": "NAINITAL UDHAMSINGH NAGAR",
+    "NAINITAL UDHAMSINGH NAG": "NAINITAL UDHAM SINGH NAG",
+    "NAINITAL UDHAM SINGH NAGAR": "NAINITAL UDHAM SINGH NAG",
+    "NAINITAL UDHAMSINGH NAGAR": "NAINITAL UDHAM SINGH NAG",
+    "RATNAGIRI SINDHUDUR": "RATNAGIRI SINDHUDURG",
+    "RATNAGIRI SINDHUDURG": "RATNAGIRI SINDHUDUR",
+    "BHIWANI MAHENDRAGARH": "BHIWANI MAHENDRAGARH",
+    "GURGAON": "GURUGRAM",
+    "GURUGRAM": "GURGAON",
+    "BANGALORE RURAL": "BENGALURU RURAL",
+    "BENGALURU RURAL": "BANGALORE RURAL",
+    "BANGALORE NORTH": "BENGALURU NORTH",
+    "BENGALURU NORTH": "BANGALORE NORTH",
+    "BANGALORE CENTRAL": "BENGALURU CENTRAL",
+    "BENGALURU CENTRAL": "BANGALORE CENTRAL",
+    "BANGALORE SOUTH": "BENGALURU SOUTH",
+    "BENGALURU SOUTH": "BANGALORE SOUTH",
+}
+
+_STATE_ALIAS_EQUIV: Dict[str, str] = {
+    "ORISSA": "ODISHA",
+    "PONDICHERRY": "PUDUCHERRY",
+    "UTTARANCHAL": "UTTARAKHAND",
+    "JAMMU & KASHMIR": "JAMMU AND KASHMIR",
+    "NCT OF DELHI": "DELHI",
+    "ANDAMAN & NICOBAR ISLANDS": "ANDAMAN AND NICOBAR ISLANDS",
+    "DADRA & NAGAR HAVELI": "DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+    "DAMAN & DIU": "DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+}
+
+
+def _normalize_pc_key(name: str) -> str:
+    if not name:
+        return ""
+    cleaned = _PC_SUFFIX_RE.sub("", str(name).strip()).upper()
+    cleaned = re.sub(r"[^A-Z0-9]+", " ", cleaned).strip()
+    return cleaned
+
+
+def _normalize_state(state: str) -> str:
+    s = re.sub(r"[^A-Z0-9]+", " ", str(state or "").strip().upper()).strip()
+    return _STATE_ALIAS_EQUIV.get(s, s)
+
+
+def _filter_by_state(records: List[Dict], state: Optional[str]) -> List[Dict]:
+    if not state or not records:
+        return records
+    target_state = _normalize_state(state)
+    if not target_state:
+        return records
+    matched = [r for r in records if _normalize_state(r.get("state", "")) == target_state]
+    return matched if matched else records
+
+
+def reload_assembly_data():
+    """Force reload of assembly CSV/SQLite cache."""
+    global _df_assembly
+    _df_assembly = None
+    return _load_assembly_data()
+
 
 def _load_assembly_data():
-    global _df_assembly, _assembly_index, _pc_to_assemblies
+    global _df_assembly, _assembly_index, _assembly_norm_index, _pc_to_assemblies, _pc_norm_to_assemblies, _pc_alnum_to_assemblies
     if _df_assembly is not None:
         return _df_assembly
 
@@ -69,7 +184,10 @@ def _load_assembly_data():
 
     # Pre-build lookup dictionaries for O(1) response times
     _assembly_index = {}
+    _assembly_norm_index = {}
     _pc_to_assemblies = {}
+    _pc_norm_to_assemblies = {}
+    _pc_alnum_to_assemblies = {}
 
     for _, row in _df_assembly.iterrows():
         ac_name = str(row.get("ac_name", "")).strip()
@@ -86,21 +204,29 @@ def _load_assembly_data():
             "district": str(row.get("district", "")),
             "mp_name": str(row.get("mp_name", "")),
             "mp_id": str(row.get("mp_id", "")),
-            "house": str(row.get("house", "Lok Sabha"))
+            "house": str(row.get("house", "Lok Sabha")),
         }
-        if ac_lower not in _assembly_index:
-            _assembly_index[ac_lower] = []
-        _assembly_index[ac_lower].append(record)
+        _assembly_index.setdefault(ac_lower, []).append(record)
+
+        ac_norm = _normalize_pc_key(ac_name).lower()
+        if ac_norm:
+            _assembly_norm_index.setdefault(ac_norm, []).append(record)
 
         if pc_name:
-            if pc_name not in _pc_to_assemblies:
-                _pc_to_assemblies[pc_name] = []
-            _pc_to_assemblies[pc_name].append(record)
+            _pc_to_assemblies.setdefault(pc_name, []).append(record)
+            pc_norm = _normalize_pc_key(pc_name)
+            if pc_norm:
+                _pc_norm_to_assemblies.setdefault(pc_norm, []).append(record)
+                alnum = pc_norm.replace(" ", "")
+                if alnum:
+                    _pc_alnum_to_assemblies.setdefault(alnum, []).append(record)
 
     return _df_assembly
 
+
 # Initialize on module import
 _load_assembly_data()
+
 
 def search_assembly_constituencies(query: str, limit: int = 10) -> List[Dict]:
     """
@@ -130,6 +256,7 @@ def search_assembly_constituencies(query: str, limit: int = 10) -> List[Dict]:
     results = exact_matches + prefix_matches + substring_matches
     return results[:limit]
 
+
 def get_mp_by_assembly_name(ac_name: str) -> Optional[Dict]:
     """
     Exact case-insensitive lookup of an Assembly Constituency.
@@ -149,23 +276,144 @@ def get_mp_by_assembly_name(ac_name: str) -> Optional[Dict]:
     if clean_q in _assembly_index:
         return _assembly_index[clean_q][0]
 
+    norm_q = _normalize_pc_key(ac_name).lower()
+    if norm_q in _assembly_norm_index:
+        return _assembly_norm_index[norm_q][0]
+
     return None
 
-def get_assemblies_by_pc(pc_name: str) -> List[Dict]:
+
+def get_assemblies_by_pc(pc_name: str, state: Optional[str] = None) -> List[Dict]:
     """
     Retrieve all Assembly Constituencies associated with a Parliamentary Constituency.
+    Handles punctuation, (Sc)/(St) suffixes, and known PC spelling aliases.
     """
     _load_assembly_data()
-    pc_upper = pc_name.strip().upper()
-    return _pc_to_assemblies.get(pc_upper, [])
-
-def get_assemblies_by_district(district: str) -> List[Dict]:
-    """
-    Retrieve all Assembly Constituencies in a given District.
-    """
-    _load_assembly_data()
-    d_lower = district.strip().lower()
-    if not d_lower or _df_assembly is None:
+    if not pc_name:
         return []
-    matches = _df_assembly[_df_assembly["district"].astype(str).str.lower() == d_lower]
-    return matches.to_dict(orient="records")
+
+    pc_upper = pc_name.strip().upper()
+    if pc_upper in _pc_to_assemblies:
+        return _filter_by_state(_pc_to_assemblies[pc_upper], state)
+
+    pc_norm = _normalize_pc_key(pc_upper)
+    if pc_norm in _pc_norm_to_assemblies:
+        return _filter_by_state(_pc_norm_to_assemblies[pc_norm], state)
+
+    alias = _PC_ALIAS_EQUIV.get(pc_norm)
+    if alias and alias in _pc_norm_to_assemblies:
+        return _filter_by_state(_pc_norm_to_assemblies[alias], state)
+
+    # Punctuation/space-collapsed match (e.g., BHIWANI MAHENDRAGARH vs BHIWANIMAHENDRAGARH)
+    alnum = pc_norm.replace(" ", "")
+    if len(alnum) > 4 and alnum in _pc_alnum_to_assemblies:
+        return _filter_by_state(_pc_alnum_to_assemblies[alnum], state)
+
+    return []
+
+
+def get_assemblies_by_district(
+    district: str,
+    state: Optional[str] = None,
+    fallback_pcs: Optional[List[str]] = None,
+) -> List[Dict]:
+    """
+    Retrieve Assembly Constituencies in a given District (with state scoping,
+    punctuation/historical district aliases, and fallback to covered PCs).
+    """
+    _load_assembly_data()
+    if not district or _df_assembly is None or _df_assembly.empty:
+        return []
+
+    dist_aliases = {
+        "GURUGRAM": "GURGAON",
+        "GURGAON": "GURUGRAM",
+        "PRAYAGRAJ": "ALLAHABAD",
+        "ALLAHABAD": "PRAYAGRAJ",
+        "AYODHYA": "FAIZABAD",
+        "FAIZABAD": "AYODHYA",
+        "KALABURAGI": "GULBARGA",
+        "GULBARGA": "KALABURAGI",
+        "BELAGAVI": "BELGAUM",
+        "BELGAUM": "BELAGAVI",
+        "TUMAKURU": "TUMKUR",
+        "TUMKUR": "TUMAKURU",
+        "SHIVAMOGGA": "SHIMOGA",
+        "SHIMOGA": "SHIVAMOGGA",
+        "BALLARI": "BELLARY",
+        "BELLARY": "BALLARI",
+        "VIJAYAPURA": "BIJAPUR",
+        "BIJAPUR": "VIJAYAPURA",
+        "BENGALURU": "BANGALORE",
+        "BANGALORE": "BENGALURU",
+        "BENGALURU URBAN": "BANGALORE",
+        "BENGALURU RURAL": "BANGALORE RURAL",
+        "MYSURU": "MYSORE",
+        "MYSORE": "MYSURU",
+        "MANGALURU": "MANGALORE",
+        "MANGALORE": "MANGALURU",
+        "CHHATRAPATI SAMBHAJINAGAR": "AURANGABAD",
+        "DHARASHIV": "OSMANABAD",
+        "OSMANABAD": "DHARASHIV",
+        "AHILYANAGAR": "AHMEDNAGAR",
+        "AHMEDNAGAR": "AHILYANAGAR",
+        "PURBI CHAMPARAN": "PURBA CHAMPARAN",
+        "EAST CHAMPARAN": "PURBA CHAMPARAN",
+        "WEST CHAMPARAN": "PASHCHIM CHAMPARAN",
+        "PASCHIM CHAMPARAN": "PASHCHIM CHAMPARAN",
+        "SPS NELLORE": "NELLORE",
+        "SRI POTTI SRIRAMULU NELLORE": "NELLORE",
+        "YSR": "KADAPA",
+        "YSR KADAPA": "KADAPA",
+        "CUDDAPAH": "KADAPA",
+        "KHERI": "LAKHIMPUR KHERI",
+        "NUH": "MEWAT",
+        "MEWAT": "NUH",
+        "AHMADABAD": "AHMEDABAD",
+        "AHMEDABAD": "AHMADABAD",
+        "MUMBAI SUBURBAN": "MUMBAI SUBURBAN",
+        "KHORDHA": "KHURDA",
+        "KHURDA": "KHORDHA",
+        "BALASORE": "BALESHWAR",
+        "BALESHWAR": "BALASORE",
+        "KEONJHAR": "KENDUJHAR",
+        "KENDUJHAR": "KEONJHAR",
+        "KATAKA": "CUTTACK",
+        "CUTTACK": "KATAKA",
+        "NAYAGADA": "NAYAGARH",
+        "NAYAGARH": "NAYAGADA",
+        "PONDICHERRY": "PUDUCHERRY",
+        "PUDUCHERRY": "PONDICHERRY",
+    }
+
+    d_norm = _normalize_pc_key(district)
+    candidates = [d_norm]
+    if d_norm in dist_aliases:
+        candidates.append(dist_aliases[d_norm])
+    cand_set = set(candidates)
+
+    dist_series = _df_assembly["district"].fillna("").astype(str)
+    mask = dist_series.apply(lambda v: _normalize_pc_key(v) in cand_set)
+    matches = _df_assembly[mask]
+
+    if not matches.empty:
+        records = matches.to_dict(orient="records")
+        filtered = _filter_by_state(records, state)
+        if filtered:
+            return filtered
+
+    # Fallback: newly created districts may map directly via covered PCs
+    if fallback_pcs:
+        seen_ac = set()
+        pc_records: List[Dict] = []
+        for pc in fallback_pcs:
+            for rec in get_assemblies_by_pc(pc, state=state):
+                key = (rec.get("ac_name"), rec.get("pc_name"))
+                if key not in seen_ac:
+                    seen_ac.add(key)
+                    pc_records.append(rec)
+        if pc_records:
+            return pc_records
+
+    # Last fallback: district matches PC name directly
+    return get_assemblies_by_pc(district, state=state)

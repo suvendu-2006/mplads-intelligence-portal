@@ -7,7 +7,7 @@ import json
 import pandas as pd
 
 def main():
-    df = pd.read_csv("data/assembly_constituencies_enriched.csv")
+    df = pd.read_csv("data/assembly_constituencies_enriched.csv").fillna("")
     
     items = []
     for _, row in df.iterrows():

@@ -34,6 +34,7 @@ import { useToastStore } from '../store/useToastStore'
 import { ALL_36_STATES_OVERVIEW } from '../lib/allStatesData'
 import { STATE_DISTRICTS_MAP } from '../lib/stateDistricts'
 import { getDistrictsForState } from '../lib/allDistrictsData'
+import { fetchPrefetchedJson } from '../lib/speedPrefetch'
 
 const UNION_TERRITORIES = [
   'Andaman And Nicobar Islands',
@@ -213,20 +214,17 @@ export const StateDetail: React.FC = () => {
         setLoading(true)
       }
       try {
-        const resState = await fetch(`/api/states/${encodeURIComponent(state)}`)
-        if (resState.ok) {
-          const jsonState = await resState.json()
-          if (jsonState.data) {
-            setData(jsonState.data)
-            if (typeof window !== 'undefined') {
-              try {
-                localStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
-                sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
-              } catch {}
-            }
-            setLoading(false)
-            return
+        const jsonState = await fetchPrefetchedJson(`/api/states/${encodeURIComponent(state)}`)
+        if (jsonState?.data) {
+          setData(jsonState.data)
+          if (typeof window !== 'undefined') {
+            try {
+              localStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
+              sessionStorage.setItem(`cached_state_${state}`, JSON.stringify(jsonState.data))
+            } catch {}
           }
+          setLoading(false)
+          return
         }
       } catch (err) {
         console.error('Failed to load state detail from API, using master benchmark fallback:', err)

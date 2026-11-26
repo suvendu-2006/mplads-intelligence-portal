@@ -46,16 +46,82 @@ import {
 } from 'recharts'
 import { ALL_MP_SEATS } from '../lib/allMpsData'
 import { getConstituencySummary } from '../lib/allConstituenciesData'
-import { findAssemblyConstituencies } from '../lib/assemblyConstituencies'
+import { findAssemblyConstituencies, getACsByPC } from '../lib/assemblyConstituencies'
+import { fetchPrefetchedJson } from '../lib/speedPrefetch'
 import { useTranslation, translateState, translateConstituency, translateMP } from '../lib/i18n'
 import { useStore } from '../store/useStore'
+
+const UNSPECIFIED_SEGMENT = 'District-Wide / Unspecified'
+
+function normalizeAcBase(name: string): string {
+  return (name || '')
+    .replace(/\s*\((?:sc|st|s\.c\.|s\.t\.|s)\)?$/i, '')
+    .replace(/[^\w\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase()
+}
+
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function resolveWorkSegmentFallback(
+  w: any,
+  assemblies: Array<{ ac_name?: string; district?: string }>,
+  pcName: string
+): string {
+  const desc = String(w.description || w.work_description || w.workDescription || '').toLowerCase()
+  const rawLoc = String(w.location || '').trim()
+  const rawDistrict = String(w.district || '').trim()
+  const normPc = normalizeAcBase(pcName)
+  const normWorkDist = normalizeAcBase(rawDistrict)
+  const normLoc = normalizeAcBase(rawLoc)
+  const isGenericLoc =
+    !normLoc ||
+    normLoc === normPc ||
+    normLoc === normWorkDist ||
+    normLoc === `dist ${normWorkDist}` ||
+    normLoc === `${normWorkDist} district` ||
+    normLoc === `district ${normWorkDist}`
+  const searchableText = isGenericLoc ? desc : `${desc} ${rawLoc.toLowerCase()}`
+
+  const candidates = assemblies
+    .map((a) => ({
+      acName: String(a.ac_name || '').trim(),
+      base: normalizeAcBase(String(a.ac_name || ''))
+    }))
+    .filter((c) => c.acName && c.base)
+    .sort((a, b) => b.base.length - a.base.length)
+
+  for (const { acName, base } of candidates) {
+    const pattern = escapeRegExp(base).replace(/\s+/g, '\\s+')
+    const isNamesake = base === normPc || (normWorkDist !== '' && base === normWorkDist)
+    if (isNamesake) {
+      const contextRe = new RegExp(
+        `(?:\\b${pattern}\\s+(?:municipality|municipal|nagar\\s+palika|city|town|ward|block|assembly|vidhan\\s+sabha|ac)\\b|\\b(?:municipality|municipal|block|ward)\\s+${pattern}\\b)`,
+        'i'
+      )
+      if (contextRe.test(searchableText)) return acName
+    } else {
+      const boundaryRe = new RegExp(`\\b${pattern}\\b`, 'i')
+      if (boundaryRe.test(searchableText)) return acName
+    }
+  }
+  return UNSPECIFIED_SEGMENT
+}
 
 function getSafeSessionConstituency(name: string | undefined): any {
   if (!name || typeof window === 'undefined') return null
   const clean = name.trim()
   try {
-    const saved = localStorage.getItem(`cached_constituency_${clean}`) || sessionStorage.getItem(`cached_constituency_${clean}`)
-    if (saved) return JSON.parse(saved)
+    const saved = localStorage.getItem(`cached_constituency_v2_${clean}`) || sessionStorage.getItem(`cached_constituency_v2_${clean}`)
+    if (saved) {
+      const parsed = JSON.parse(saved)
+      if (parsed?.summary && Array.isArray(parsed.summary.assembly_segments)) {
+        return parsed
+      }
+    }
   } catch {}
 
   const pcSum = getConstituencySummary(clean)
@@ -77,7 +143,9 @@ function getSafeSessionConstituency(name: string | undefined): any {
     const compRate = pcSum ? pcSum.completionRate : (matchedSeat ? matchedSeat.completionRate : 0.0)
     const util = pcSum ? pcSum.utilizationPercentage : (matchedSeat ? matchedSeat.utilizationPercentage : 0.0)
 
-    const assemblies = findAssemblyConstituencies(constName, 20).map(a => ({
+    const pcAcs = getACsByPC(constName)
+    const assembliesSource = pcAcs.length > 0 ? pcAcs : findAssemblyConstituencies(constName, 20)
+    const assemblies = assembliesSource.map(a => ({
       ac_name: a.ac,
       ac_no: '',
       district: a.district || '',
@@ -112,7 +180,9 @@ function getSafeSessionConstituency(name: string | undefined): any {
           party: '',
           house: pcSum.house
         } : null),
-        assemblies
+        assemblies,
+        assembly_segments: assemblies,
+        unspecifiedWorksCount: 0
       },
       sectorBreakdown: [],
       agencyBreakdown: [],
@@ -144,18 +214,31 @@ export const ConstituencyDetail: React.FC = () => {
   const [workPage, setWorkPage] = useState(1)
   const [workPageSize, setWorkPageSize] = useState<number | 'all'>(30)
   const [chartKey, setChartKey] = useState(0)
+  const [prevName, setPrevName] = useState(name)
+  const [prevAcParam, setPrevAcParam] = useState(acParam)
+
+  if (name !== prevName) {
+    setPrevName(name)
+    setPrevAcParam(acParam)
+    const nextSeed = getSafeSessionConstituency(name)
+    setData(nextSeed)
+    setLoading(!nextSeed)
+    setActiveTab('overview')
+    setWorkFilter('all')
+    setWorkSearch('')
+    setCategoryFilter('all')
+    setWorkPage(1)
+    setSelectedAc(acParam)
+  } else if (acParam !== prevAcParam) {
+    setPrevAcParam(acParam)
+    setSelectedAc(acParam)
+    setWorkPage(1)
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => setChartKey(1), 50)
     return () => clearTimeout(timer)
   }, [])
-
-  // Sync acParam to selectedAc
-  useEffect(() => {
-    if (acParam) {
-      setSelectedAc(acParam)
-    }
-  }, [acParam])
 
   useEffect(() => {
     async function loadConstituency() {
@@ -167,21 +250,22 @@ export const ConstituencyDetail: React.FC = () => {
       }
 
       try {
-        const res = await fetch(`/api/constituencies/${encodeURIComponent(cleanName)}`)
-        if (res.ok) {
-          const json = await res.json()
-          if (json?.data) {
-            setData(json.data)
-            try {
-              localStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data))
-              sessionStorage.setItem(`cached_constituency_${cleanName}`, JSON.stringify(json.data))
-            } catch {}
-            if (json.data?.summary?.matched_assembly_constituency && !acParam) {
-              setSelectedAc(json.data.summary.matched_assembly_constituency)
-            }
-            setLoading(false)
-            return
+        const json = await fetchPrefetchedJson(`/api/constituencies/${encodeURIComponent(cleanName)}`)
+        if (json?.data) {
+          setData(json.data)
+          try {
+            localStorage.setItem(`cached_constituency_v2_${cleanName}`, JSON.stringify(json.data))
+            sessionStorage.setItem(`cached_constituency_v2_${cleanName}`, JSON.stringify(json.data))
+          } catch {}
+          const currentAcParam = typeof window !== 'undefined'
+            ? (new URLSearchParams(window.location.search).get('ac') || '')
+            : ''
+          if (json.data?.summary?.matched_assembly_constituency && !currentAcParam) {
+            setSelectedAc(json.data.summary.matched_assembly_constituency)
+            setWorkPage(1)
           }
+          setLoading(false)
+          return
         }
       } catch (err) {
         console.log('API fetch failed, trying fallback:', err)
@@ -195,7 +279,7 @@ export const ConstituencyDetail: React.FC = () => {
       setLoading(false)
     }
     loadConstituency()
-  }, [name, acParam])
+  }, [name])
 
   if (loading) {
     return <LoadingSkeleton rows={6} height="h-32" />
@@ -229,13 +313,100 @@ export const ConstituencyDetail: React.FC = () => {
   const remainedWorks = summary.remainedWorksCount || Math.max(0, totalWorks - completedWorks)
   const completionRate = summary.completionRate || (totalWorks > 0 ? ((completedWorks / totalWorks) * 100).toFixed(1) : 0)
 
-  const assembliesList: any[] = summary.assemblies || []
+  const rawAssembliesList: any[] =
+    Array.isArray(summary.assembly_segments) && summary.assembly_segments.length > 0
+      ? summary.assembly_segments
+      : (summary.assemblies || [])
 
-  const worksRecCount = works.filter((w: any) => (w.status || '').toLowerCase().includes('recommended')).length
-  const worksCompCount = works.filter((w: any) => (w.status || '').toLowerCase().includes('completed')).length
+  const seenAcKeys = new Set<string>()
+  const assembliesList: any[] = rawAssembliesList.filter((ac: any) => {
+    const k = String(ac?.ac_name || '').trim().toLowerCase()
+    if (!k || seenAcKeys.has(k)) return false
+    seenAcKeys.add(k)
+    return true
+  })
+
+  const canonicalAcByLower: Record<string, string> = {}
+  assembliesList.forEach((ac: any) => {
+    const acName = String(ac.ac_name || '').trim()
+    if (acName) canonicalAcByLower[acName.toLowerCase()] = acName
+  })
+
+  const hasExplicitSegments = works.some(
+    (w: any) => typeof w.assembly_segment === 'string' && w.assembly_segment.trim().length > 0
+  )
+
+  const getResolvedWorkSegment = (w: any): string => {
+    const explicit = typeof w.assembly_segment === 'string' ? w.assembly_segment.trim() : ''
+    if (explicit) {
+      if (explicit.toLowerCase() === UNSPECIFIED_SEGMENT.toLowerCase()) return UNSPECIFIED_SEGMENT
+      return canonicalAcByLower[explicit.toLowerCase()] || explicit
+    }
+    if (!hasExplicitSegments) {
+      return resolveWorkSegmentFallback(w, assembliesList, summary.name || '')
+    }
+    return UNSPECIFIED_SEGMENT
+  }
+
+  const segmentCounts: Record<string, number> = {}
+  assembliesList.forEach((ac: any) => {
+    const k = String(ac.ac_name || '').trim().toLowerCase()
+    if (k) segmentCounts[k] = 0
+  })
+  let unspecifiedCount = 0
+
+  if (works.length > 0) {
+    works.forEach((w: any) => {
+      const seg = getResolvedWorkSegment(w)
+      const segLower = seg.toLowerCase()
+      if (segLower !== UNSPECIFIED_SEGMENT.toLowerCase() && segLower in segmentCounts) {
+        segmentCounts[segLower] += 1
+      } else {
+        unspecifiedCount += 1
+      }
+    })
+  } else {
+    assembliesList.forEach((ac: any) => {
+      const k = String(ac.ac_name || '').trim().toLowerCase()
+      if (k) segmentCounts[k] = Number(ac.count ?? 0)
+    })
+    unspecifiedCount = Number(summary.unspecifiedWorksCount ?? 0)
+  }
+
+  const matchesSelectedAc = (w: any, targetAc: string): boolean => {
+    const q = targetAc.trim().toLowerCase()
+    if (!q) return true
+    if (typeof w.assembly_segment === 'string' && w.assembly_segment.trim().length > 0) {
+      return w.assembly_segment.trim().toLowerCase() === q
+    }
+    if (!hasExplicitSegments) {
+      const resolved = resolveWorkSegmentFallback(w, assembliesList, summary.name || '')
+      if (q === UNSPECIFIED_SEGMENT.toLowerCase() || q in canonicalAcByLower) {
+        return resolved.toLowerCase() === q
+      }
+      const base = normalizeAcBase(targetAc)
+      if (!base) return false
+      const desc = String(w.description || w.work_description || w.workDescription || '').toLowerCase()
+      const rawLoc = String(w.location || '').trim()
+      const normPc = normalizeAcBase(summary.name || '')
+      const normWorkDist = normalizeAcBase(String(w.district || ''))
+      const normLoc = normalizeAcBase(rawLoc)
+      const isGenericLoc = !normLoc || normLoc === normPc || normLoc === normWorkDist
+      const searchable = isGenericLoc ? desc : `${desc} ${rawLoc.toLowerCase()}`
+      return new RegExp(`\\b${escapeRegExp(base).replace(/\s+/g, '\\s+')}\\b`, 'i').test(searchable)
+    }
+    return q === UNSPECIFIED_SEGMENT.toLowerCase()
+  }
+
+  const acScopedWorks = selectedAc
+    ? works.filter((w: any) => matchesSelectedAc(w, selectedAc))
+    : works
+
+  const worksRecCount = acScopedWorks.filter((w: any) => (w.status || '').toLowerCase().includes('recommended')).length
+  const worksCompCount = acScopedWorks.filter((w: any) => (w.status || '').toLowerCase().includes('completed')).length
 
   // Works filtering logic
-  const filteredWorks = works.filter((w: any) => {
+  const filteredWorks = acScopedWorks.filter((w: any) => {
     const st = (w.status || '').toLowerCase()
     const isComp = st.includes('completed')
     const isRec = st.includes('recommended')
@@ -248,13 +419,6 @@ export const ConstituencyDetail: React.FC = () => {
     // Category filter
     if (categoryFilter !== 'all' && (w.category || '').toLowerCase() !== categoryFilter.toLowerCase()) return false
 
-    // Assembly filter
-    if (selectedAc) {
-      const matchLoc = (w.location || '').toLowerCase().includes(selectedAc.toLowerCase())
-      const matchDesc = (w.description || '').toLowerCase().includes(selectedAc.toLowerCase())
-      if (!matchLoc && !matchDesc) return false
-    }
-
     // Search query
     if (workSearch.trim()) {
       const q = workSearch.toLowerCase()
@@ -262,7 +426,8 @@ export const ConstituencyDetail: React.FC = () => {
       const inDesc = (w.description || '').toLowerCase().includes(q)
       const inLoc = (w.location || '').toLowerCase().includes(q)
       const inAgency = (w.implementing_agency || '').toLowerCase().includes(q)
-      if (!inId && !inDesc && !inLoc && !inAgency) return false
+      const inSeg = (w.assembly_segment || '').toLowerCase().includes(q)
+      if (!inId && !inDesc && !inLoc && !inAgency && !inSeg) return false
     }
 
     return true
@@ -370,14 +535,21 @@ export const ConstituencyDetail: React.FC = () => {
         <div className="p-4 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 animate-in fade-in duration-200">
           <div className="flex items-center gap-3">
             <div>
-              <div className="text-xs font-bold text-[var(--text-primary)] flex items-center gap-1.5">
+              <div className="text-xs font-bold text-[var(--text-primary)] flex flex-wrap items-center gap-1.5">
                 <span>Assembly Segment (Vidhan Sabha): <strong>{selectedAc}</strong></span>
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[var(--surface-alt)] text-[var(--text-secondary)] border border-[var(--border-primary)]">
-                  Part of {summary.name} Lok Sabha
+                  {selectedAc === UNSPECIFIED_SEGMENT ? `${summary.name} District-Wide` : `Part of ${summary.name} Lok Sabha`}
                 </span>
+                {works.length > 0 && (
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/20 tabular-nums">
+                    {formatNum(acScopedWorks.length)} of {formatNum(works.length)} detailed works
+                  </span>
+                )}
               </div>
               <p className="text-[11px] text-[var(--text-secondary)] mt-0.5">
-                Viewing developmental works and fund utilization allocated for this assembly segment.
+                {selectedAc === UNSPECIFIED_SEGMENT
+                  ? 'Viewing district-wide projects and works without a specific localized Vidhan Sabha segment tag.'
+                  : 'Viewing developmental works and fund utilization allocated for this assembly segment.'}
               </p>
             </div>
           </div>
@@ -385,8 +557,9 @@ export const ConstituencyDetail: React.FC = () => {
             onClick={() => {
               setSelectedAc('')
               setSearchParams({}, { replace: true })
+              setWorkPage(1)
             }}
-            className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-bold transition shrink-0"
+            className="px-3 py-1.5 rounded-xl bg-[var(--surface-primary)] border border-[var(--border-primary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-bold transition shrink-0 cursor-pointer"
           >
             Clear Segment Filter &times;
           </button>
@@ -442,45 +615,115 @@ export const ConstituencyDetail: React.FC = () => {
       </div>
 
       {/* Interactive Assembly Segments Grid (Vidhan Sabha ACs) */}
-      {assembliesList.length > 0 && (
+      {(assembliesList.length > 0 || unspecifiedCount > 0) && (
         <div className="p-4 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] shadow-sm space-y-2.5">
-          <div className="flex items-center justify-between">
-            <div className="text-xs font-black uppercase tracking-wider text-[var(--text-tertiary)] flex items-center gap-1.5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="text-xs font-black uppercase tracking-wider text-[var(--text-tertiary)] flex flex-wrap items-center gap-2">
               <span>Vidhan Sabha Assembly Segments ({assembliesList.length})</span>
+              {works.length > 0 && works.length < totalWorks && (
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold normal-case tracking-normal bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                  Showing {formatNum(works.length)} of {formatNum(totalWorks)} detailed records
+                </span>
+              )}
             </div>
-            <span className="text-[10px] text-[var(--text-tertiary)]">Click any segment to filter works</span>
+            <div className="flex items-center gap-2">
+              {selectedAc && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedAc('')
+                    setSearchParams({}, { replace: true })
+                    setWorkPage(1)
+                  }}
+                  className="text-[10px] font-bold text-rose-500 hover:underline cursor-pointer"
+                >
+                  Clear Segment
+                </button>
+              )}
+              <span className="text-[10px] text-[var(--text-tertiary)]">Click any segment to filter works</span>
+            </div>
           </div>
           <div className="flex flex-wrap gap-1.5">
-            {assembliesList.map((ac: any) => {
-              const isSelected = selectedAc.toLowerCase() === (ac.ac_name || '').toLowerCase()
+            {(() => {
+              const handleToggleSegment = (targetAc: string) => {
+                const isSelected = selectedAc.toLowerCase() === targetAc.toLowerCase()
+                if (isSelected) {
+                  setSelectedAc('')
+                  setSearchParams({}, { replace: true })
+                  setWorkPage(1)
+                } else {
+                  setSelectedAc(targetAc)
+                  setSearchParams({ ac: targetAc }, { replace: true })
+                  setWorkPage(1)
+                  setActiveTab('works')
+                }
+              }
               return (
-                <button
-                  key={ac.ac_name}
-                  onClick={() => {
-                    if (isSelected) {
-                      setSelectedAc('')
-                      setSearchParams({}, { replace: true })
-                    } else {
-                      setSelectedAc(ac.ac_name)
-                      setSearchParams({ ac: ac.ac_name }, { replace: true })
-                      setActiveTab('works')
-                    }
-                  }}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition border ${
-                    isSelected
-                      ? 'bg-[var(--brand-primary)] text-white border-[var(--brand-primary)] shadow-sm'
-                      : 'bg-[var(--surface-alt)] hover:bg-[var(--border-primary)]/60 text-[var(--text-secondary)] hover:text-[var(--text-primary)] border-[var(--border-primary)]'
-                  }`}
-                >
-                  <span>{ac.ac_name}</span>
-                  {ac.district && (
-                    <span className={`ml-1.5 text-[10px] opacity-75 font-normal`}>
-                      ({ac.district})
-                    </span>
-                  )}
-                </button>
+                <>
+                  {assembliesList.map((ac: any) => {
+                    const isSelected = selectedAc.toLowerCase() === (ac.ac_name || '').toLowerCase()
+                    const count = segmentCounts[(ac.ac_name || '').toLowerCase()] ?? 0
+                    return (
+                      <button
+                        key={ac.ac_name}
+                        type="button"
+                        onClick={() => handleToggleSegment(ac.ac_name)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition border inline-flex items-center gap-1.5 cursor-pointer ${
+                          isSelected
+                            ? 'bg-[var(--brand-primary)] text-white border-[var(--brand-primary)] shadow-sm'
+                            : 'bg-[var(--surface-alt)] hover:bg-[var(--border-primary)]/60 text-[var(--text-secondary)] hover:text-[var(--text-primary)] border-[var(--border-primary)]'
+                        }`}
+                      >
+                        <span>{ac.ac_name}</span>
+                        {ac.district && (
+                          <span className="text-[10px] opacity-75 font-normal">
+                            ({ac.district})
+                          </span>
+                        )}
+                        <span
+                          className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold tabular-nums ${
+                            isSelected
+                              ? 'bg-white/20 text-white'
+                              : count > 0
+                                ? 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)]'
+                                : 'bg-[var(--surface-primary)] text-[var(--text-tertiary)]'
+                          }`}
+                        >
+                          {formatNum(count)}
+                        </span>
+                      </button>
+                    )
+                  })}
+                  {unspecifiedCount > 0 && (() => {
+                    const isUnspecSelected = selectedAc.toLowerCase() === UNSPECIFIED_SEGMENT.toLowerCase()
+                    return (
+                      <button
+                        key={UNSPECIFIED_SEGMENT}
+                        type="button"
+                        onClick={() => handleToggleSegment(UNSPECIFIED_SEGMENT)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold transition border inline-flex items-center gap-1.5 cursor-pointer ${
+                          isUnspecSelected
+                            ? 'bg-amber-600 text-white border-amber-600 shadow-sm'
+                            : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-500/30 border-dashed'
+                        }`}
+                        title="District-wide schemes or works without a single localized Vidhan Sabha tag"
+                      >
+                        <span>District-Wide / Unspecified</span>
+                        <span
+                          className={`px-1.5 py-0.5 rounded-full text-[10px] font-bold tabular-nums ${
+                            isUnspecSelected
+                              ? 'bg-white/20 text-white'
+                              : 'bg-amber-500/20 text-amber-900 dark:text-amber-200'
+                          }`}
+                        >
+                          {formatNum(unspecifiedCount)}
+                        </span>
+                      </button>
+                    )
+                  })()}
+                </>
               )
-            })}
+            })()}
           </div>
         </div>
       )}
@@ -623,7 +866,7 @@ export const ConstituencyDetail: React.FC = () => {
       )}
 
       {/* TAB 2: Developmental Works Explorer */}
-      {activeTab === 'works' && (
+      {effectiveTab === 'works' && (
         <div className="space-y-4">
           {/* Filters Bar */}
           <div className="p-4 rounded-2xl bg-[var(--surface-primary)] border border-[var(--border-primary)] flex flex-wrap items-center justify-between gap-3">
@@ -644,7 +887,7 @@ export const ConstituencyDetail: React.FC = () => {
 
               <div className="flex items-center gap-1 bg-[var(--surface-alt)] p-1 rounded-xl border border-[var(--border-primary)]">
                 {[
-                  { id: 'all', label: `All (${works.length})` },
+                  { id: 'all', label: `All (${acScopedWorks.length})` },
                   { id: 'recommended', label: `${t('status.recommended')} (${worksRecCount})` },
                   { id: 'completed', label: `${t('status.completed')} (${worksCompCount})` },
                 ].map((tab) => (
@@ -696,8 +939,16 @@ export const ConstituencyDetail: React.FC = () => {
               </div>
             </div>
 
-            <div className="text-xs text-[var(--text-secondary)] font-semibold">
-              Showing <strong className="text-[var(--text-primary)]">{filteredWorks.length}</strong> works
+            <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--text-secondary)] font-semibold">
+              <span>
+                Showing <strong className="text-[var(--text-primary)]">{formatNum(filteredWorks.length)}</strong>
+                {selectedAc ? <> of <strong className="text-[var(--text-primary)]">{formatNum(acScopedWorks.length)}</strong> in {selectedAc}</> : <> works</>}
+              </span>
+              {works.length > 0 && works.length < totalWorks && (
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                  Showing {formatNum(works.length)} of {formatNum(totalWorks)} detailed records
+                </span>
+              )}
             </div>
           </div>
 
@@ -750,7 +1001,18 @@ export const ConstituencyDetail: React.FC = () => {
                                 </span>
                               </td>
                               <td className="p-3.5 text-[var(--text-secondary)] break-words leading-snug" title={w.location}>
-                                {w.location}
+                                <div>{w.location}</div>
+                                {w.assembly_segment && (
+                                  <span
+                                    className={`inline-block mt-1 px-1.5 py-0.5 rounded text-[10px] font-semibold border ${
+                                      w.assembly_segment === UNSPECIFIED_SEGMENT
+                                        ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/20'
+                                        : 'bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border-[var(--brand-primary)]/20'
+                                    }`}
+                                  >
+                                    {w.assembly_segment}
+                                  </span>
+                                )}
                               </td>
                               <td className="p-3.5 font-bold text-[var(--text-primary)] tabular-nums text-right whitespace-nowrap">
                                 ₹{formatNum(Number(w.cost || 0).toLocaleString('en-IN'))}
@@ -907,7 +1169,8 @@ export const ConstituencyDetail: React.FC = () => {
                 isNew: true,
                 implementing_agency: newWork.implementing_agency || 'District Collectorate / RES Wing',
                 location: newWork.location || summary.name,
-                category: newWork.category || 'General Civil Works'
+                category: newWork.category || 'General Civil Works',
+                assembly_segment: newWork.assembly_segment || selectedAc || UNSPECIFIED_SEGMENT
               },
               ...(prev.works || [])
             ]
